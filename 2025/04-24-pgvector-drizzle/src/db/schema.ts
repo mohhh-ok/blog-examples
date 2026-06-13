@@ -1,11 +1,11 @@
-import { index, integer, pgTable, varchar, vector } from "drizzle-orm/pg-core";
+import { index, integer, pgTable, text, vector } from "drizzle-orm/pg-core";
 import { EMBEDDING_DIMENSIONS } from '../constants';
 
 export const postsTable = pgTable(
   "posts",
   {
     id: integer().primaryKey().generatedAlwaysAsIdentity(),
-    content: varchar({ length: 255 }).notNull(),
+    content: text().notNull(),
     embedding: vector({ dimensions: EMBEDDING_DIMENSIONS }).notNull(),
   },
   (table) => [

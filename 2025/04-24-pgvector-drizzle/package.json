@@ -4,21 +4,19 @@
   "type": "module",
   "scripts": {
     "db:push": "drizzle-kit push",
-    "insert": "tsx src/insert.ts",
-    "search": "tsx src/main.ts",
-    "search:l1": "tsx src/main-l1.ts"
+    "reseed": "tsx src/insert.ts",
+    "search": "tsx src/main.ts"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "drizzle-orm": "^0.36.0",
-    "openai": "^4.65.0",
-    "pg": "^8.13.0"
+    "dotenv": "^16.6.1",
+    "drizzle-orm": "^0.36.4",
+    "pg": "^8.21.0"
   },
   "devDependencies": {
-    "@types/node": "^22.7.0",
-    "@types/pg": "^8.11.10",
-    "drizzle-kit": "^0.28.0",
-    "tsx": "^4.19.0",
-    "typescript": "^5.6.0"
+    "@types/node": "^22.19.21",
+    "@types/pg": "^8.20.0",
+    "drizzle-kit": "^0.28.1",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
   }
 }
