@@ -5,7 +5,8 @@
   "scripts": {
     "db:push": "drizzle-kit push",
     "reseed": "tsx src/insert.ts",
-    "search": "tsx src/main.ts"
+    "search": "tsx src/main.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "dotenv": "^16.6.1",
