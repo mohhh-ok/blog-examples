@@ -1,0 +1,79 @@
+[
+  {
+    "lang": "ja",
+    "expected": "皆さん、こんにちは。本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。",
+    "got": "お待ちしております。",
+    "detected": "ja",
+    "prob": 1,
+    "bigram_sim": 0.021,
+    "wer": 1.0,
+    "cer": 0.864,
+    "elapsed": 7.39
+  },
+  {
+    "lang": "en",
+    "expected": "Hello everyone. Today, I'd like to introduce a new feature. Thank you for joining us.",
+    "got": "Hello everyone, today I'd like to introduce a new feature. Thank you for joining us.",
+    "detected": "en",
+    "prob": 1,
+    "bigram_sim": 1.0,
+    "wer": 0.0,
+    "cer": 0.0,
+    "elapsed": 8.78
+  },
+  {
+    "lang": "zh",
+    "expected": "大家好，今天我将为大家介绍一项新功能，感谢您的参与。",
+    "got": "大家好,今天我将为大家介绍一项新功能,感谢您的参与",
+    "detected": "zh",
+    "prob": 1,
+    "bigram_sim": 1.0,
+    "wer": 0.0,
+    "cer": 0.0,
+    "elapsed": 8.66
+  },
+  {
+    "lang": "ko",
+    "expected": "여러분 안녕하세요. 오늘은 새로운 기능을 소개해 드리겠습니다. 잘 부탁드립니다.",
+    "got": "띠오, 띠오키오스, 셰오아춘아에드, 고유도바셰이웨이치오, 팅중웨이, 제찬",
+    "detected": "ko",
+    "prob": 1,
+    "bigram_sim": 0.0,
+    "wer": 1.0,
+    "cer": 0.878,
+    "elapsed": 11.03
+  },
+  {
+    "lang": "fr",
+    "expected": "Bonjour à tous. Aujourd'hui, je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention.",
+    "got": "Pas de déteste, aujourd'hui, je vais vous expliquer cette nouvelle fonctionnalité, merci de votre attention.",
+    "detected": "fr",
+    "prob": 1,
+    "bigram_sim": 0.663,
+    "wer": 0.312,
+    "cer": 0.235,
+    "elapsed": 9.18
+  },
+  {
+    "lang": "es",
+    "expected": "Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.",
+    "got": "Hola, soy el presentador Inan Nueva Fontana. Muchas gracias por su atención.",
+    "detected": "es",
+    "prob": 1,
+    "bigram_sim": 0.676,
+    "wer": 0.562,
+    "cer": 0.294,
+    "elapsed": 8.66
+  },
+  {
+    "lang": "de",
+    "expected": "Hallo zusammen. Heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit.",
+    "got": "Hallo Schusterleister, ich erinnere an die neue Funktion 4. Vielen Dank für eure Aufmerksamkeit.",
+    "detected": "de",
+    "prob": 1,
+    "bigram_sim": 0.731,
+    "wer": 0.533,
+    "cer": 0.302,
+    "elapsed": 9.55
+  }
+]

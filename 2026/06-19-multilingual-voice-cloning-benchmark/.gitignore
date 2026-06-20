@@ -1,6 +1,12 @@
-reference/
-output/
-results/
+# 参照音声: 公開する ref.wav のみ track
+reference/*
+!reference/.gitkeep
+!reference/ref.wav
+
+# 生成音声 (output/) と検証結果 (results/) は track する
+# ライセンスは output/LICENSE.md を参照
+
+# venvs / 中間ファイル / secrets は除外
 envs/
 processed/
 .env

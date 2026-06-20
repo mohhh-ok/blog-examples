@@ -1,0 +1,79 @@
+[
+  {
+    "lang": "ja",
+    "expected": "皆さん、こんにちは。本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。",
+    "got": "皆さんこんにちは。本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。",
+    "detected": "ja",
+    "prob": 1,
+    "bigram_sim": 0.929,
+    "wer": 0.5,
+    "cer": 0.023,
+    "elapsed": 8.8
+  },
+  {
+    "lang": "en",
+    "expected": "Hello everyone. Today, I'd like to introduce a new feature. Thank you for joining us.",
+    "got": "Hello everyone, today I'd like to introduce a new feature. Thank you for joining us.",
+    "detected": "en",
+    "prob": 1,
+    "bigram_sim": 1.0,
+    "wer": 0.0,
+    "cer": 0.0,
+    "elapsed": 8.04
+  },
+  {
+    "lang": "zh",
+    "expected": "大家好，今天我将为大家介绍一项新功能，感谢您的参与。",
+    "got": "大家好,今天我将为大家介绍已相信功能,感谢您的参与",
+    "detected": "zh",
+    "prob": 1,
+    "bigram_sim": 0.704,
+    "wer": 0.333,
+    "cer": 0.12,
+    "elapsed": 8.68
+  },
+  {
+    "lang": "ko",
+    "expected": "여러분 안녕하세요. 오늘은 새로운 기능을 소개해 드리겠습니다. 잘 부탁드립니다.",
+    "got": "여러분 안녕하세요. 오늘은 새로운 기능을 소개해드리겠습니다. 잘 부탁드립니다.",
+    "detected": "ko",
+    "prob": 1,
+    "bigram_sim": 0.925,
+    "wer": 0.222,
+    "cer": 0.024,
+    "elapsed": 8.06
+  },
+  {
+    "lang": "fr",
+    "expected": "Bonjour à tous. Aujourd'hui, je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention.",
+    "got": "Bonjour à tous, aujourd'hui je vais vous présenter une nouvelle fonctionnalité, merci de votre attention.",
+    "detected": "fr",
+    "prob": 1,
+    "bigram_sim": 1.0,
+    "wer": 0.0,
+    "cer": 0.0,
+    "elapsed": 8.57
+  },
+  {
+    "lang": "es",
+    "expected": "Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.",
+    "got": "Hola a todos, hoy les voy a presentar una nueva función, muchas gracias por su atención.",
+    "detected": "es",
+    "prob": 1,
+    "bigram_sim": 1.0,
+    "wer": 0.0,
+    "cer": 0.0,
+    "elapsed": 8.13
+  },
+  {
+    "lang": "de",
+    "expected": "Hallo zusammen. Heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit.",
+    "got": "Hallo zusammen, heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit.",
+    "detected": "de",
+    "prob": 1,
+    "bigram_sim": 1.0,
+    "wer": 0.0,
+    "cer": 0.0,
+    "elapsed": 8.65
+  }
+]

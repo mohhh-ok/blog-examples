@@ -1,0 +1,28 @@
+model,lang,bigram_sim,wer,cer,got
+elevenlabs,ja,0.929,0.5,0.023,皆さんこんにちは。本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。
+elevenlabs,en,1.0,0.0,0.0,"Hello everyone, today I'd like to introduce a new feature. Thank you for joining us."
+elevenlabs,zh,0.704,0.333,0.12,"大家好,今天我将为大家介绍已相信功能,感谢您的参与"
+elevenlabs,ko,0.925,0.222,0.024,여러분 안녕하세요. 오늘은 새로운 기능을 소개해드리겠습니다. 잘 부탁드립니다.
+elevenlabs,fr,1.0,0.0,0.0,"Bonjour à tous, aujourd'hui je vais vous présenter une nouvelle fonctionnalité, merci de votre attention."
+elevenlabs,es,1.0,0.0,0.0,"Hola a todos, hoy les voy a presentar una nueva función, muchas gracias por su atención."
+elevenlabs,de,1.0,0.0,0.0,"Hallo zusammen, heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit."
+f5_tts,ja,0.021,1.0,0.864,お待ちしております。
+f5_tts,en,1.0,0.0,0.0,"Hello everyone, today I'd like to introduce a new feature. Thank you for joining us."
+f5_tts,zh,1.0,0.0,0.0,"大家好,今天我将为大家介绍一项新功能,感谢您的参与"
+f5_tts,ko,0.0,1.0,0.878,"띠오, 띠오키오스, 셰오아춘아에드, 고유도바셰이웨이치오, 팅중웨이, 제찬"
+f5_tts,fr,0.663,0.312,0.235,"Pas de déteste, aujourd'hui, je vais vous expliquer cette nouvelle fonctionnalité, merci de votre attention."
+f5_tts,es,0.676,0.562,0.294,"Hola, soy el presentador Inan Nueva Fontana. Muchas gracias por su atención."
+f5_tts,de,0.731,0.533,0.302,"Hallo Schusterleister, ich erinnere an die neue Funktion 4. Vielen Dank für eure Aufmerksamkeit."
+openvoice,ja,0.773,0.5,0.114,皆さん、今日は本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。
+openvoice,en,1.0,0.0,0.0,"Hello everyone, today, I'd like to introduce a new feature. Thank you for joining us."
+openvoice,zh,0.731,0.667,0.08,"大家好,今天我将为大家介绍一下新功能感谢您的参与"
+openvoice,ko,0.857,0.111,0.049,여러분 안녕하세요. 오늘은 새로운 디넴을 소개해 드리겠습니다. 잘 부탁드립니다.
+openvoice,fr,1.0,0.0,0.0,"Bonjour à tous, aujourd'hui je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention."
+openvoice,es,1.0,0.0,0.0,Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.
+xtts,ja,0.8,1.0,0.091,みなさんこんにちは 本日は新しい機能についてご紹介しますどうぞよろしくお願いいたします
+xtts,en,1.0,0.0,0.0,"Hello everyone. Today, I'd like to introduce a new feature. Thank you for joining us."
+xtts,zh,1.0,0.0,0.0,"大家好,今天我将为大家介绍一项新功能,感谢您的参与。"
+xtts,ko,0.632,0.444,0.415,여러분 안녕하세요 지지연의 플레임 대통령 오늘은 새로운 체험인행을 소개해 드리겠습니다. 잘 부탁드립니다.
+xtts,fr,1.0,0.0,0.0,"Bonjour à tous. Aujourd'hui, je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention."
+xtts,es,1.0,0.0,0.0,Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.
+xtts,de,1.0,0.0,0.0,Hallo zusammen. Heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit.
