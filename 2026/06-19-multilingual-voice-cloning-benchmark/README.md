@@ -142,6 +142,7 @@ python scripts/summarize.py
 | f5_tts    | 0.02 | 1.00 | 1.00 | 0.00 | 0.66 | 0.68 | 0.73 |
 | xtts      | 0.80 | 1.00 | 1.00 | 0.63 | 1.00 | 1.00 | 1.00 |
 | openvoice | 0.77 | 1.00 | 0.73 | 0.86 | 1.00 | 1.00 |  -   |
+| elevenlabs| 0.93 | 1.00 | 0.70 | 0.93 | 1.00 | 1.00 | 1.00 |
 ```
 
 (数値は bigram Jaccard。詳細は「実測結果」セクション)
@@ -169,13 +170,14 @@ python scripts/summarize.py
 | f5_tts    | 0.02 | 1.00 | 1.00 | 0.00 | 0.66 | 0.68 | 0.73 |
 | xtts      | 0.80 | 1.00 | 1.00 | 0.63 | 1.00 | 1.00 | 1.00 |
 | openvoice | 0.77 | 1.00 | 0.73 | 0.86 | 1.00 | 1.00 |  -   |
-| sbv2      | 未計測 (fine-tune 必須・参照音声不足) |
-| elevenlabs| 未計測 (API キーに IVC 権限なし) |
+| elevenlabs| 0.93 | 1.00 | 0.70 | 0.93 | 1.00 | 1.00 | 1.00 |
+| sbv2      | 対象外 (fine-tune 前提・GPU 必須・別ベンチ枠として見送り) |
 
 **ざっくりの結論**:
 
-- 多言語ゼロショットクローンの**第一候補は XTTS-v2**。今回の 7 言語すべてで実用ライン。ja は CER 0.09 で内容一致、ko だけ中盤に幻聴フレーズが入る
-- **OpenVoice v2 は ko で今回ベスト** (bigram 0.86)。ja/zh は単語ズレが入るが、ko 重視のユースケースなら XTTS より上。MIT ライセンスで商用利用可
+- 内容一致の**総合ベストは ElevenLabs (eleven_multilingual_v2)**。7 言語中 5 言語で CER 0.00、ja は句読点欠落のみ (CER 0.02)、ko は今回ベスト (CER 0.02、xtts/openvoice より上)、zh だけ「一项新」→「已相信」の単語幻聴あり。クローズド API なので参考値だが、ゼロショットクローンの上限を示す数字としては明確
+- OSS で多言語クローンするなら**第一候補は XTTS-v2**。7 言語すべてで実用ライン、ja は CER 0.09 で内容一致、ko だけ中盤に幻聴フレーズが入る
+- **OpenVoice v2 は ko で OSS 内ベスト** (bigram 0.86)。ja/zh は単語ズレが入るが、ko 重視のユースケースなら XTTS より上。MIT ライセンスで商用利用可
 - **F5-TTS は en/zh 専用**と割り切るべき。fr/es/de は意味は通るが幻聴ワード混入、ja/ko は完全破綻
 
 各モデルの詳細表と所感は以下。
@@ -241,22 +243,52 @@ de は MeloTTS が未対応なのでスキップ。
 
 ### Style-Bert-VITS2 JP-Extra
 
-今回の実走では**未計測**。理由:
+今回のベンチでは**対象外として見送り**。当初は「日本語の上限を示す参考値」として並べる予定だったが、実走前提を満たさないことが分かったため除外した。経緯:
 
-- SBV2 はゼロショットクローンではなく **fine-tune 前提**で、推奨参照音声は 1〜3 分。手元の素材は 10 秒 `ref.wav` のみで学習に不足
-- CPU での 100 epoch 学習は数時間オーダー。このベンチの環境 (macOS CPU) で他モデルと同じ即時計測の枠に乗らない
-- ベンチの設計上、「ゼロショット同士の横比較」が一次目的なので fine-tune 必須の SBV2 は別軸の参考値として後追い
+- **方式が違う**: SBV2 はゼロショットではなく **fine-tune 前提**。他 4 モデルは「ref.wav 1 本を投げて即生成」だが、SBV2 は参照音声で学習を回す必要がある。同じ「同一参照音声・同一プロンプト」の枠に物理的に乗らない
+- **参照音声の要件が一桁違う**: 推奨 1〜3 分。今回の `ref.wav` (10 秒) では不足。台本を書き直して録り直すことは可能だが、その瞬間に「同一参照音声で並べる」というベンチの一次目的が崩れる
+- **学習環境が違う**: 100 epoch 学習は GPU 前提。macOS CPU では数時間オーダーで現実的でない。Colab T4 / 自前 GPU を用意すれば回せるが、これも他モデルと「同じ環境で叩く」原則から外れる
 
-参照音声を 1 分以上揃えられたら `envs/sbv2.md` の手順で学習し、`scripts/generate_style_bert_vits2.py` を回せば日本語の「fine-tune ベースライン」を取れる。
+実装と env ドキュメントは `scripts/generate_style_bert_vits2.py` / `envs/sbv2.md` に残してあるので、上記前提を許容できる場合は SBV2 単体で「日本語 fine-tune ベースライン」として動かせる。
 
-### ElevenLabs
+外部評価値が必要な場合は、第三者査読の比較論文 [arxiv:2505.17320](https://arxiv.org/abs/2505.17320) (Aoki et al. 2025, IEEE 採録) が参考になる（キャラクター演技音声 10〜15 分で fine-tune した SBV2JE が overall WER 0.04、MOS 4.37 で人間原音と統計的有意差なし）。ただし当該論文は ASR・データセット・指標いずれも本ベンチと別物のため、本ベンチの数字とは並べないこと。
 
-今回の実走では**未計測**。理由:
+### ElevenLabs (eleven_multilingual_v2)
 
-- 手元の API キーが `create_instant_voice_clone` 権限を持っていない（API 経由のクローン作成は 401 `missing_permissions` で拒否）
-- アカウントには事前にクローン済みの voice が無く、プリセット (premade/professional) しか無い。プリセット音声で生成しても「ボイスクローンのベンチ」として他モデルと並ばない
+`ref.wav` を Instant Voice Clone でアップロードして `voice_id` を取得、`eleven_multilingual_v2` で 7 言語生成。
 
-IVC 権限付きキーが用意できるか、ダッシュボードから手動で `ref.wav` をアップロードして `voice_id` を取得できれば、`.env` に `ELEVENLABS_VOICE_ID` を追加して `scripts/generate_elevenlabs.py` を回せる。
+| lang | bigram | CER | WER | got (抜粋) | 所感 |
+|---|---:|---:|---:|---|---|
+| en | 1.00 | 0.00 | 0.00 | Hello everyone, today I'd like to introduce a new feature… | 完璧 |
+| fr | 1.00 | 0.00 | 0.00 | Bonjour à tous, aujourd'hui je vais vous présenter une nouvelle fonctionnalité… | 完璧 |
+| es | 1.00 | 0.00 | 0.00 | Hola a todos, hoy les voy a presentar una nueva función… | 完璧 |
+| de | 1.00 | 0.00 | 0.00 | Hallo zusammen, heute stelle ich Ihnen eine neue Funktion vor… | 完璧 |
+| ja | 0.93 | 0.02 | 0.50 | 皆さんこんにちは。本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。 | 「皆さん、こんにちは」の読点欠落のみ。CER 0.02 は実質完璧 |
+| ko | 0.93 | 0.02 | 0.22 | 여러분 안녕하세요. 오늘은 새로운 기능을 소개해드리겠습니다. 잘 부탁드립니다. | 「소개해 드리겠습니다」のスペース欠落のみ。**今回最良の ko** (xtts 0.63 / openvoice 0.86 と差) |
+| zh | 0.70 | 0.12 | 0.33 | 大家好,今天我将为大家介绍已相信功能,感谢您的参与 | 「一项新」→「已相信」の単語幻聴。他の音節は一致 |
+
+→ **eleven_multilingual_v2 は 7 言語中 5 言語で CER 0.00、ja/ko も実質完璧**。zh のみ単語レベルの幻聴が混入。生成は API 経由で 1 言語あたり 1〜4 秒（ja は前処理込みで少し長い）と CPU 推論勢より一桁速い。
+
+クローズド商用 API なので OSS との並列で「上限ライン」として参照する位置付け。プラン (Starter 以上) と従量課金が必要なのでベンチを回すのは有償。
+
+セットアップ:
+
+```bash
+python3.12 -m venv envs/elevenlabs
+source envs/elevenlabs/bin/activate
+pip install elevenlabs python-dotenv
+
+# .env に ELEVENLABS_API_KEY / ELEVENLABS_VOICE_ID / ELEVENLABS_MODEL_ID を設定
+# voice_id はダッシュボードの Voice Lab で ref.wav をアップロードして取得、
+# または API: curl -X POST -H "xi-api-key: $KEY" -F "name=ref" -F "files=@reference/ref.wav" https://api.elevenlabs.io/v1/voices/add
+
+python scripts/generate_elevenlabs.py
+```
+
+注意点:
+- **Free プランは IVC 不可**。API でも `paid_plan_required` で蹴られる。Starter ($5/mo) 以上が必要
+- IVC は 10 秒程度の参照音声 1 本で voice 化できる。アップロード即座に voice_id が発行され、追加学習なしで `text_to_speech.convert` に使える
+- モデル ID は `eleven_multilingual_v2` を使用。`eleven_v3` (alpha) も同じ API 形状で呼べるがプラン制限あり
 
 ## ライセンスと公開時の注意
 
