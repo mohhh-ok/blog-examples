@@ -1,0 +1,21 @@
+# 参照音声: 06-19 の ref.wav は symlink で持ってきている。本リポでは別 track 不要
+reference/*
+!reference/.gitkeep
+
+# 生成音声 (output/) と検証結果 (results/) は track する
+# ライセンスは output/LICENSE.md を参照
+
+# venvs / clone した repo / 中間ファイル / secrets は除外
+# envs/*.md は track するため、ディレクトリのみ明示的に ignore
+envs/cosyvoice-venv/
+envs/CosyVoice/
+envs/OpenVoice/
+envs/openvoice/
+envs/cartesia/
+envs/fish/
+envs/azure/
+envs/elevenlabs/
+processed/
+.env
+__pycache__/
+*.pyc
