@@ -9,6 +9,7 @@ multilingual zero-shot voice clone、9 言語 (zh/en/ja/ko/de/es/fr/it/ru) + 18+
 - Python 3.10 推奨 (公式 README に明記)。本リポは pyenv の 3.11.8 で動作確認
 - Mac (CPU 推論) で動く。**本リポは Mac CPU のみ前提**。GPU 検証は別プロジェクトで扱う
 - ディスク 〜10GB (model 0.5B + Matcha-TTS 等の依存)
+- **weights は `/Volumes/UGREEN_1TB/models/cosyvoice/` に集約**し、プロジェクト側からは `envs/CosyVoice/pretrained_models/` 配下の symlink で参照する (内蔵 SSD 温存。実行前にマウントガード必須)
 
 ## GPU 対応の方針 (本リポでは触らない)
 
@@ -68,10 +69,22 @@ pip install --no-build-isolation -r requirements.txt
 # 3. pretrained_models をダウンロード (~6GB、30〜90 分)
 # Fun-CosyVoice 3.0 (multilingual zero-shot, 9 言語)
 # llm.rl.pt は RL 強化版で base 推論には不要なのでスキップする
+# weights は UGREEN_1TB に集約し、プロジェクト側は symlink で参照する。
+[ -d /Volumes/UGREEN_1TB/models ] || { echo "UGREEN_1TB not mounted"; exit 1; }
+mkdir -p /Volumes/UGREEN_1TB/models/cosyvoice pretrained_models
 python -c "from modelscope import snapshot_download; \
   snapshot_download('FunAudioLLM/Fun-CosyVoice3-0.5B-2512', \
-    local_dir='pretrained_models/Fun-CosyVoice3-0.5B', \
+    local_dir='/Volumes/UGREEN_1TB/models/cosyvoice/Fun-CosyVoice3-0.5B', \
     ignore_file_pattern=['llm.rl.pt'])"
+ln -sf /Volumes/UGREEN_1TB/models/cosyvoice/Fun-CosyVoice3-0.5B \
+  pretrained_models/Fun-CosyVoice3-0.5B
+
+# CosyVoice 2 を併用する場合 (本ベンチでは JA 用に v2 も使う)
+# python -c "from modelscope import snapshot_download; \
+#   snapshot_download('iic/CosyVoice2-0.5B', \
+#     local_dir='/Volumes/UGREEN_1TB/models/cosyvoice/CosyVoice2-0.5B')"
+# ln -sf /Volumes/UGREEN_1TB/models/cosyvoice/CosyVoice2-0.5B \
+#   pretrained_models/CosyVoice2-0.5B
 
 cd ../..
 ```

@@ -12,6 +12,7 @@ voice clone (3秒の参照音声) + 10 言語 (zh / en / ja / ko / de / fr / ru 
 - Mac (Apple Silicon, MPS バックエンド) で動作する。**本リポは M2 24GB Mac MPS のみ前提**。CUDA / CPU-only は別プロジェクトのスコープ
 - ディスク **~2.3GB** (0.6B-Base のみで完結。speech_tokenizer は base に同梱されており、別 repo `Qwen3-TTS-Tokenizer-12Hz` は推論には不要)
 - 1.7B-Base を追加 DL する場合は別途 +~6GB
+- **weights は `/Volumes/UGREEN_1TB/models/qwen3-tts/` に集約**し、プロジェクト側からは `envs/pretrained_models/` 配下の symlink で参照する (内蔵 SSD 温存。実行前にマウントガード必須)
 
 ## モデル選定 (本リポ)
 
@@ -66,13 +67,22 @@ pip install -U qwen-tts
 pip install soundfile 'huggingface_hub[cli]'
 
 # 3. HuggingFace から weights を取得 (modelscope より日本からは速い、CosyVoice 検証で実証済み)
+#    weights は UGREEN_1TB に集約し、プロジェクト側からは symlink で参照する。
+#    内蔵 SSD を温存するため。マウント前提を満たさない場合は ext storage を mount してから走らせる。
+[ -d /Volumes/UGREEN_1TB/models ] || { echo "UGREEN_1TB not mounted"; exit 1; }
+mkdir -p /Volumes/UGREEN_1TB/models/qwen3-tts pretrained_models
+
 #    0.6B-Base のみで OK。speech_tokenizer は同梱されている。
 huggingface-cli download Qwen/Qwen3-TTS-12Hz-0.6B-Base \
-  --local-dir pretrained_models/Qwen3-TTS-12Hz-0.6B-Base
+  --local-dir /Volumes/UGREEN_1TB/models/qwen3-tts/Qwen3-TTS-12Hz-0.6B-Base
+ln -sf /Volumes/UGREEN_1TB/models/qwen3-tts/Qwen3-TTS-12Hz-0.6B-Base \
+  pretrained_models/Qwen3-TTS-12Hz-0.6B-Base
 
 # 1.7B-Base は 0.6B で品質不足だった場合に DL する
 # huggingface-cli download Qwen/Qwen3-TTS-12Hz-1.7B-Base \
-#   --local-dir pretrained_models/Qwen3-TTS-12Hz-1.7B-Base
+#   --local-dir /Volumes/UGREEN_1TB/models/qwen3-tts/Qwen3-TTS-12Hz-1.7B-Base
+# ln -sf /Volumes/UGREEN_1TB/models/qwen3-tts/Qwen3-TTS-12Hz-1.7B-Base \
+#   pretrained_models/Qwen3-TTS-12Hz-1.7B-Base
 
 cd ..
 ```
