@@ -1,0 +1,68 @@
+[
+  {
+    "lang": "ja",
+    "expected": "皆さん、こんにちは。本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。",
+    "got": "皆さん、今日は本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。",
+    "detected": "ja",
+    "prob": 1,
+    "bigram_sim": 0.773,
+    "wer": 0.5,
+    "cer": 0.114,
+    "elapsed": 9.82
+  },
+  {
+    "lang": "en",
+    "expected": "Hello everyone. Today, I'd like to introduce a new feature. Thank you for joining us.",
+    "got": "Hello everyone, today, I'd like to introduce a new feature. Thank you for joining us.",
+    "detected": "en",
+    "prob": 1,
+    "bigram_sim": 1.0,
+    "wer": 0.0,
+    "cer": 0.0,
+    "elapsed": 8.94
+  },
+  {
+    "lang": "zh",
+    "expected": "大家好，今天我将为大家介绍一项新功能，感谢您的参与。",
+    "got": "大家好,今天我将为大家介绍一下新功能感谢您的参与",
+    "detected": "zh",
+    "prob": 1,
+    "bigram_sim": 0.731,
+    "wer": 0.667,
+    "cer": 0.08,
+    "elapsed": 9.22
+  },
+  {
+    "lang": "ko",
+    "expected": "여러분 안녕하세요. 오늘은 새로운 기능을 소개해 드리겠습니다. 잘 부탁드립니다.",
+    "got": "여러분 안녕하세요. 오늘은 새로운 디넴을 소개해 드리겠습니다. 잘 부탁드립니다.",
+    "detected": "ko",
+    "prob": 1,
+    "bigram_sim": 0.857,
+    "wer": 0.111,
+    "cer": 0.049,
+    "elapsed": 9.17
+  },
+  {
+    "lang": "fr",
+    "expected": "Bonjour à tous. Aujourd'hui, je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention.",
+    "got": "Bonjour à tous, aujourd'hui je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention.",
+    "detected": "fr",
+    "prob": 1,
+    "bigram_sim": 1.0,
+    "wer": 0.0,
+    "cer": 0.0,
+    "elapsed": 8.61
+  },
+  {
+    "lang": "es",
+    "expected": "Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.",
+    "got": "Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.",
+    "detected": "es",
+    "prob": 1,
+    "bigram_sim": 1.0,
+    "wer": 0.0,
+    "cer": 0.0,
+    "elapsed": 8.34
+  }
+]

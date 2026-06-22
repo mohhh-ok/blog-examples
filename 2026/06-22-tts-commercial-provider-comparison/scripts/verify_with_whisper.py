@@ -22,7 +22,7 @@ OUT = ROOT / "output"
 RESULTS = ROOT / "results"
 RESULTS.mkdir(exist_ok=True)
 
-MODELS = ["cartesia", "fish", "azure_personal", "cosyvoice3", "openvoice_v2", "elevenlabs"]
+MODELS = ["cartesia", "fish", "azure_personal", "cosyvoice2", "cosyvoice3", "openvoice_v2", "elevenlabs"]
 
 
 def normalize(s: str) -> str:

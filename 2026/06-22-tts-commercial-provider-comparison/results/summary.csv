@@ -1,0 +1,14 @@
+model,lang,bigram_sim,wer,cer,got
+cosyvoice3,ja,0.5,1.0,0.25,皆さんこんちいっかいマロは新しい機能についてご誠意しますどうぞよろしくお願いいたします
+cosyvoice3,en,1.0,0.0,0.0,"Hello everyone. Today, I'd like to introduce a new feature. Thank you for joining us."
+cosyvoice3,zh,1.0,0.0,0.0,"大家好,今天我将为大家介绍一项新功能,感谢您的参与"
+cosyvoice3,ko,0.925,0.222,0.024,여러분 안녕하세요. 오늘은 새로운 기능을 소개해드리겠습니다. 잘 부탁드립니다.
+cosyvoice3,fr,1.0,0.0,0.0,"Bonjour à tous. Aujourd'hui, je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention."
+cosyvoice3,es,0.967,0.062,0.047,"Hola a todos, hoy voy a presentar una nueva función. Muchas gracias por su atención."
+cosyvoice3,de,0.787,0.267,0.125,"Hallo zusammen, heute stelle ich Ihnen eine neue Funktion für Bienenrankfühler aufmerksamkeit."
+openvoice_v2,ja,0.773,0.5,0.114,皆さん、今日は本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。
+openvoice_v2,en,1.0,0.0,0.0,"Hello everyone, today, I'd like to introduce a new feature. Thank you for joining us."
+openvoice_v2,zh,0.731,0.667,0.08,"大家好,今天我将为大家介绍一下新功能感谢您的参与"
+openvoice_v2,ko,0.857,0.111,0.049,여러분 안녕하세요. 오늘은 새로운 디넴을 소개해 드리겠습니다. 잘 부탁드립니다.
+openvoice_v2,fr,1.0,0.0,0.0,"Bonjour à tous, aujourd'hui je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention."
+openvoice_v2,es,1.0,0.0,0.0,Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.

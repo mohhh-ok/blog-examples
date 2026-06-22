@@ -7,8 +7,37 @@ multilingual zero-shot voice clone、9 言語 (zh/en/ja/ko/de/es/fr/it/ru) + 18+
 ## 環境
 
 - Python 3.10 推奨 (公式 README に明記)。本リポは pyenv の 3.11.8 で動作確認
-- Mac (CPU/MPS) で動く。CUDA があれば GPU 推論可。
+- Mac (CPU 推論) で動く。**本リポは Mac CPU のみ前提**。GPU 検証は別プロジェクトで扱う
 - ディスク 〜10GB (model 0.5B + Matcha-TTS 等の依存)
+
+## GPU 対応の方針 (本リポでは触らない)
+
+`generate_cosyvoice3.py` は CPU 固定で書いてある。GPU 化は本プロジェクトのスコープ外。
+理由を残しておく:
+
+- CosyVoice 3 の device 判定は `cuda if torch.cuda.is_available() else cpu` の二択。
+  Apple Silicon の **MPS パスは無い** ので、Mac では CPU しか選べない
+- fp16 / TensorRT / vLLM などの最適化フラグは CUDA 専用 (`load_vllm=False`,
+  `load_trt=False`, `fp16=False` を明示)
+- CUDA GPU を使う場合は本リポではなく別プロジェクト (production 想定) で
+  Modal / RunPod / Lambda / Colab A100 などにデプロイして検証する
+- 本プロジェクトの目的は「商用 voice clone provider の品質比較」なので、
+  推論速度は判定基準に入れていない (slot 上限・単価・WER のみで判定)
+
+## DL に時間がかかることについて
+
+`pretrained_models/Fun-CosyVoice3-0.5B` は **~6GB 強**。modelscope.cn 経由で
+日本から落とすと、ファイルによって速度が **200kB/s〜5MB/s と最大 25 倍ぶれる**
+(本リポの実走で確認)。トータル **30 分〜90 分**を見込んでおくこと。
+
+時間短縮の選択肢:
+
+- **HuggingFace ミラーから DL**: `huggingface-cli download FunAudioLLM/Fun-CosyVoice3-0.5B-2512 \
+  --local-dir pretrained_models/Fun-CosyVoice3-0.5B` で modelscope と同じ重みが取れる。
+  日本からは HF の方が速いことが多い
+- **`llm.rl.pt` をスキップ**: RL 強化版 (~1.89GB)。base 推論には不要なので
+  `ignore_file_pattern=['llm.rl.pt']` を `snapshot_download()` に渡すと
+  ~30 分節約できる。品質比較する場合のみ DL する
 
 ## 手順
 
@@ -36,11 +65,13 @@ git submodule update --init --recursive
 pip install 'numpy==1.26.4' 'torch==2.3.1' 'torchaudio==2.3.1'
 pip install --no-build-isolation -r requirements.txt
 
-# 3. pretrained_models をダウンロード
+# 3. pretrained_models をダウンロード (~6GB、30〜90 分)
 # Fun-CosyVoice 3.0 (multilingual zero-shot, 9 言語)
+# llm.rl.pt は RL 強化版で base 推論には不要なのでスキップする
 python -c "from modelscope import snapshot_download; \
   snapshot_download('FunAudioLLM/Fun-CosyVoice3-0.5B-2512', \
-    local_dir='pretrained_models/Fun-CosyVoice3-0.5B')"
+    local_dir='pretrained_models/Fun-CosyVoice3-0.5B', \
+    ignore_file_pattern=['llm.rl.pt'])"
 
 cd ../..
 ```
