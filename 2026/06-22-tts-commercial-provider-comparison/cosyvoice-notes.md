@@ -1,8 +1,10 @@
-# 検証中間まとめ (2026-06-22)
+# CosyVoice 2 / 3 検証ノート (2026-06-22)
 
-API 3 種 (Cartesia / Fish Audio / Azure Personal Voice) は API key 取得待ちのため未測定。
-self-host 系 (CosyVoice 2 / CosyVoice 3 / OpenVoice v2) の実測で **想定外のトレードオフ** と
-**フレームワーク側のバグ** が見えてきたので、判明している事実を整理する。
+本ベンチで CosyVoice 2 と Fun-CosyVoice 3 を Mac CPU で実走した結果のまとめ。
+**想定外のトレードオフ** と **フレームワーク側のバグ** が見えてきたので、判明している事実を整理する。
+
+他の provider (Cartesia / Fish Audio / Azure / OpenVoice v2 / ElevenLabs) との横断比較は
+別ドキュメントで扱う予定。本書は **CosyVoice 専用の深堀りノート**。
 
 ## TL;DR
 
