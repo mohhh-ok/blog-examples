@@ -8,7 +8,7 @@
     "bigram_sim": 0.929,
     "wer": 0.5,
     "cer": 0.023,
-    "elapsed": 9.27
+    "elapsed": 9.4
   },
   {
     "lang": "en",
@@ -19,7 +19,7 @@
     "bigram_sim": 1.0,
     "wer": 0.0,
     "cer": 0.0,
-    "elapsed": 8.41
+    "elapsed": 8.45
   },
   {
     "lang": "zh",
@@ -30,7 +30,7 @@
     "bigram_sim": 1.0,
     "wer": 0.0,
     "cer": 0.0,
-    "elapsed": 8.86
+    "elapsed": 8.87
   },
   {
     "lang": "ko",
@@ -41,7 +41,7 @@
     "bigram_sim": 0.925,
     "wer": 0.222,
     "cer": 0.024,
-    "elapsed": 8.11
+    "elapsed": 8.49
   },
   {
     "lang": "fr",
@@ -52,7 +52,7 @@
     "bigram_sim": 0.484,
     "wer": 0.688,
     "cer": 0.324,
-    "elapsed": 11.94
+    "elapsed": 12.49
   },
   {
     "lang": "es",
@@ -63,7 +63,7 @@
     "bigram_sim": 0.833,
     "wer": 0.188,
     "cer": 0.165,
-    "elapsed": 8.38
+    "elapsed": 8.44
   },
   {
     "lang": "de",
@@ -74,6 +74,6 @@
     "bigram_sim": 0.079,
     "wer": 1.0,
     "cer": 0.875,
-    "elapsed": 7.35
+    "elapsed": 7.24
   }
 ]

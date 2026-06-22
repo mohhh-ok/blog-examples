@@ -8,7 +8,7 @@
     "bigram_sim": 0.773,
     "wer": 0.5,
     "cer": 0.114,
-    "elapsed": 9.82
+    "elapsed": 9.22
   },
   {
     "lang": "en",
@@ -19,7 +19,7 @@
     "bigram_sim": 1.0,
     "wer": 0.0,
     "cer": 0.0,
-    "elapsed": 8.94
+    "elapsed": 8.38
   },
   {
     "lang": "zh",
@@ -30,7 +30,7 @@
     "bigram_sim": 0.731,
     "wer": 0.667,
     "cer": 0.08,
-    "elapsed": 9.22
+    "elapsed": 8.64
   },
   {
     "lang": "ko",
@@ -41,7 +41,7 @@
     "bigram_sim": 0.857,
     "wer": 0.111,
     "cer": 0.049,
-    "elapsed": 9.17
+    "elapsed": 8.42
   },
   {
     "lang": "fr",
@@ -52,7 +52,7 @@
     "bigram_sim": 1.0,
     "wer": 0.0,
     "cer": 0.0,
-    "elapsed": 8.61
+    "elapsed": 9.35
   },
   {
     "lang": "es",
@@ -63,6 +63,6 @@
     "bigram_sim": 1.0,
     "wer": 0.0,
     "cer": 0.0,
-    "elapsed": 8.34
+    "elapsed": 8.66
   }
 ]

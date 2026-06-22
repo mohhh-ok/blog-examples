@@ -1,4 +1,11 @@
 model,lang,bigram_sim,wer,cer,got
+cosyvoice2,ja,0.929,0.5,0.023,皆さんこんにちは 本日は新しい機能についてご紹介します どうぞよろしくお願いいたします
+cosyvoice2,en,1.0,0.0,0.0,Hello everyone. Today I'd like to introduce a new feature. Thank you for joining us.
+cosyvoice2,zh,1.0,0.0,0.0,"大家好,今天我将为大家介绍一项新功能,感谢您的参与"
+cosyvoice2,ko,0.925,0.222,0.024,여러분 안녕하세요. 오늘은 새로운 기능을 소개해드리겠습니다. 잘 부탁드립니다.
+cosyvoice2,fr,0.484,0.688,0.324,HOMORU TASU AGO TANPO JE VEUX VOUS PRÉSENTER UNE VEUX FUNCIONNALITÉ MARCI DEVOTO ATTENTION
+cosyvoice2,es,0.833,0.188,0.165,"Hola, todos hoy les voy a presentar una nueva fuki. Muchas gracias por su oro."
+cosyvoice2,de,0.079,1.0,0.875,HALA HIT STAY 1
 cosyvoice3,ja,0.5,1.0,0.25,皆さんこんちいっかいマロは新しい機能についてご誠意しますどうぞよろしくお願いいたします
 cosyvoice3,en,1.0,0.0,0.0,"Hello everyone. Today, I'd like to introduce a new feature. Thank you for joining us."
 cosyvoice3,zh,1.0,0.0,0.0,"大家好,今天我将为大家介绍一项新功能,感谢您的参与"
@@ -12,3 +19,10 @@ openvoice_v2,zh,0.731,0.667,0.08,"大家好,今天我将为大家介绍一下新
 openvoice_v2,ko,0.857,0.111,0.049,여러분 안녕하세요. 오늘은 새로운 디넴을 소개해 드리겠습니다. 잘 부탁드립니다.
 openvoice_v2,fr,1.0,0.0,0.0,"Bonjour à tous, aujourd'hui je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention."
 openvoice_v2,es,1.0,0.0,0.0,Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.
+qwen3_tts,ja,0.86,1.0,0.045,皆さんこんにちは 本日は新しい機能についてご紹介しますどうぞよろしくお願いいたします
+qwen3_tts,en,1.0,0.0,0.0,"Hello everyone, today I'd like to introduce a new feature. Thank you for joining us."
+qwen3_tts,zh,0.5,0.667,0.2,"大家好,今天我再为大家介绍一款新货的感谢您的参与"
+qwen3_tts,ko,0.925,0.222,0.024,여러분 안녕하세요. 오늘은 새로운 기능을 소개해드리겠습니다. 잘 부탁드립니다.
+qwen3_tts,fr,1.0,0.0,0.0,"Bonjour à tous, aujourd'hui je vais vous présenter une nouvelle fonctionnalité, merci de votre attention."
+qwen3_tts,es,1.0,0.0,0.0,"Hola a todos, hoy les voy a presentar una nueva función. Muchas gracias por su atención."
+qwen3_tts,de,1.0,0.0,0.0,"Hallo zusammen, heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit."
