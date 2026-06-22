@@ -157,14 +157,115 @@ zh が必要な場合のみ CosyVoice 3 を併用する。
 - `results/qwen3_tts.json` — Whisper large-v3 評価 (CER / WER / bigram)
 - `results/summary.{csv,md}` — 全モデル × 全言語サマリ (qwen3_tts 行追加済み)
 
+## Cloud Run GPU 運用コスト試算
+
+本番展開は **Cloud Run GPU (NVIDIA L4, Tier 1 Tokyo region) 前提**。Mac MPS は検証用で、production GPU では bfloat16 化 (issue #333 は MPS 限定なので CUDA では適用可) で更に高速化見込み。
+
+### per-second 単価 (L4 最小構成)
+
+L4 を使う場合 vCPU 4 + memory 16 GiB が最小要件 (Cloud Run 規約)。
+
+| 項目 | 単価 | 最小構成 |
+|---|---:|---|
+| GPU (L4, no zonal redundancy) | $0.000187 / sec | 1 |
+| vCPU (instance-based billing) | $0.000018 / sec | 4 必須 |
+| Memory | $0.000002 / GiB-sec | 16 GiB 必須 |
+| **合計** | **$0.000291 / sec** | ≈ **$1.05 / 時 / $756 / 月** (min=1 換算) |
+
+### per-request 単価 (200 chars = 7 sec audio)
+
+L4 の RTF 推定は **0.5〜0.7** (公式 H100 値 0.288 の 1.7〜2.4 倍時間)。concurrency 6 まで batch 可能で per-req 時間は 1/6 弱まで圧縮できる。
+
+| シナリオ | 1 req の active sec | per req $ | per req JPY (150円換算) |
+|---|---:|---:|---:|
+| concurrency 1, RTF 0.7 (悲観) | 4.9 sec | $0.00143 | **0.21 円** |
+| concurrency 1, RTF 0.5 (中央) | 3.5 sec | $0.00102 | **0.15 円** |
+| concurrency 6 batch, RTF 0.5 | 0.58 sec | $0.00017 | **0.025 円** |
+
+### min-instances=1 (常時 warm) での per-req 按分
+
+GPU は scale-to-zero すると **cold start ~30 秒** (model load 2.3GB) を伴うため、interactive SaaS では `min-instances=1` 固定が現実解。固定費 $756/月 をリクエスト数で按分:
+
+| 月間 req | 月額 (固定) | per req JPY |
+|---:|---:|---:|
+| 1,000 | $756 | 113 円 (論外) |
+| 10,000 | $756 | **11.4 円** |
+| 30,000 | $756 | **3.8 円** |
+| 100,000 | $756 | **1.14 円** |
+| 300,000 | $756 | **0.38 円** |
+| 500,000 | $756 | **0.23 円** |
+
+### API provider との per-req 比較 (200 chars)
+
+| provider | per req | JPY | vs Qwen3 (batch 6) |
+|---|---:|---:|---:|
+| ElevenLabs Scale | $0.024〜0.040 | 3.6〜6 円 | **140〜240x 高** |
+| PlayHT 2.0 | $0.006 | 0.9 円 | 35x 高 |
+| Cartesia PAYG | $0.010 | 1.5 円 | 60x 高 |
+| Fish Audio S2 Pro | $0.003 | 0.45 円 | 18x 高 |
+| Azure Personal Voice | $0.005 | 0.7 円 | 28x 高 |
+| **Cloud Run L4 (batch 6)** | **$0.00017** | **0.025 円** | (基準) |
+| Cloud Run L4 (concurrency 1) | $0.001 | 0.15 円 | 6x 高 (自社内比較) |
+
+### 損益分岐 (vs Fish Audio API)
+
+Fish Audio は API として最安だが (B2B で地政学要件に引っかかる場合は採用不可)。
+
+| 月間 req | Cloud Run 固定 | Fish Audio | 勝者 |
+|---:|---:|---:|---|
+| 10,000 | $756 | **$30** | Fish が 25x 安 |
+| 30,000 | $756 | **$90** | Fish が 8x 安 |
+| 100,000 | $756 | **$300** | Fish が 2.5x 安 |
+| 300,000 | **$756** | $900 | **Cloud Run 逆転** (1.2x 安) |
+| 500,000 | **$756** | $1,500 | Cloud Run が 2x 安 |
+| 1,000,000 | **$756** | $3,000 | Cloud Run が 4x 安 |
+
+**non-interactive job (batch mode)** は別系統で、どんな規模でも Cloud Run が圧勝 ($0.025 円/req)。
+
+### egress / 補助コスト
+
+| 項目 | per req 上乗せ |
+|---|---:|
+| wav 24kHz mono float32 (7s = ~700KB) egress | +0.13 円 |
+| **MP3 64kbps (7s = ~56KB) egress** | **+0.01 円** |
+| GCS / Cloud Storage cache (任意) | 微々 |
+| Cloud Logging / Monitoring | base 無料枠あり |
+
+**MP3 化前提なら egress 込みでも 1 円切るのは確実**。
+
+### 結論: per-req 0.15〜1.14 円のレンジ
+
+| 状況 | per req |
+|---|---:|
+| concurrency 6 batch (非同期 job) | **0.025〜0.05 円** |
+| 月 100k req + min=1 interactive | **1.14 円** |
+| 月 300k req + min=1 interactive | **0.38 円** |
+| 月 10k req + min=1 interactive | 11.4 円 (この規模では API の方が安い) |
+
+ElevenLabs Scale ($0.024〜0.040 / req) と比べて **140〜240 倍安い世界**。これが意味するのは:
+- 100k req/月のサービスで **年間 ~$24,000 浮く** (vs ElevenLabs)
+- **per-user 課金が現実的になる** — ユーザー 1 人当たり 10 req/月で 1.5 円弱、サブスク料金内に余裕で押し込める
+- **多言語サポートのコストが事実上タダ** — UI 言語切替やローカライズ施策の意思決定が変わる
+
+ElevenLabs 想定で「TTS コスト高いから機能制限しよう」と考えていた制約は、Qwen3-TTS + Cloud Run 採用で原則消える。
+
+### Caveats
+
+- **L4 上の RTF は実測していない推定値**。production 投入前に実機ベンチ必須
+- **bfloat16 化 (CUDA) で 1.5〜2x 速くなる**見込みだが未検証。Cloud Run L4 で実走すると更に安くなる可能性
+- **concurrency 6 batch 前提は VRAM 24GB の L4 で安全圏のはず** (0.6B モデルなら) が、実 VRAM 占有も未計測
+- 1.7B-Base にすると VRAM・推論時間とも 2〜3 倍。scale-to-zero ケースで $150〜200/月程度に上振れ
+- Cloud Run 以外の選択肢 (GCE 直で L4 spot $0.28/時、A10G オンプレ等) で更に半額狙えるが運用負荷増
+
 ## 結論 (本ベンチの判定基準照合)
 
 1. ✓ **JP CER 0.045** — ElevenLabs +3pt 以内ライン超え (主指標クリア)
 2. ✓ **Apache 2.0 商用 OK** — License 解釈リスク無し
 3. ✓ **slot 無制限** (self-host)
-4. ✓ **単価** = 自社 GPU/CPU コストのみ (Mac MPS で 1 言語 ~20 秒 / 0.6B)
+4. ✓ **単価** = Cloud Run L4 想定で **per req 0.15〜1.14 円**、月 300k req 以上で Fish Audio API に逆転勝ち
+5. ✓ **地政学** — GCP Tokyo region で self-host すれば中国本土を経由しない (README の判定基準 5)
 
-**zh を主要 言語に含めない限り、本ベンチで採用候補筆頭**。
+**zh を主要言語に含めない限り、本ベンチで採用候補筆頭**。
 CosyVoice 3 (前処理必要) / CosyVoice 2 (他言語崩壊) の弱点をどちらも持たない。
 ElevenLabs より声質保持が強いので、「自分の声を多言語で使いたい」用途では本モデルの方が
 ユーザー体験的に優れる可能性がある (要 voice similarity 計測で裏付け)。
