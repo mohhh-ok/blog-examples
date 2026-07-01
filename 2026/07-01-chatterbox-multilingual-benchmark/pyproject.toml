@@ -1,0 +1,19 @@
+[project]
+name = "chatterbox-multilingual-benchmark"
+version = "0.0.1"
+description = "Chatterbox Multilingual v3 を 06-22 の 7 言語 voice clone ベンチと同じ枠組みで再検証"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "chatterbox-tts>=0.1.4",
+    "torch>=2.4",
+    "torchaudio>=2.4",
+    "soundfile>=0.12",
+    "librosa>=0.10",
+    "faster-whisper>=1.0",
+    "jiwer>=3.0",
+    "numpy<2.0",
+    "setuptools<81",
+]
+
+[tool.uv]
+python-preference = "only-managed"

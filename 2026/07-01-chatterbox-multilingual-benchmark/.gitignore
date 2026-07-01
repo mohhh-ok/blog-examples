@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.python-version
+output/**/*.wav
+output/**/*.mp3
+output/**/*.flac
+.cache/
+models/
+*.log
+.DS_Store

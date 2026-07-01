@@ -1,0 +1,8 @@
+model,lang,bigram_sim,wer,cer,got
+chatterbox,ja,0.75,0.75,0.136,皆さん今日は本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。
+chatterbox,en,1.0,0.0,0.0,hello everyone today i'd like to introduce a new feature thank you for joining us
+chatterbox,zh,1.0,0.0,0.0,"大家好,今天我将为大家介绍一项新功能,感谢您的参与"
+chatterbox,ko,0.925,0.222,0.024,여러분 안녕하세요. 오늘은 새로운 기능을 소개해드리겠습니다. 잘 부탁드립니다.
+chatterbox,fr,1.0,0.0,0.0,"Bonjour à tous, aujourd'hui je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention."
+chatterbox,es,1.0,0.0,0.0,"Hola a todos, hoy les voy a presentar una nueva función. Muchas gracias por su atención."
+chatterbox,de,1.0,0.0,0.0,"Hallo zusammen, heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit."
