@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+input.mp4
+output/*.mp4
+output/*.pth
+output/first_frame_mask.png

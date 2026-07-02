@@ -1,0 +1,26 @@
+[project]
+name = "matting-halo-comparison"
+version = "0.1.0"
+description = "RVM vs MatAnyone 2 green background halo A/B on Mac M2 MPS"
+requires-python = ">=3.11"
+dependencies = [
+  "torch>=2.4",
+  "torchvision",
+  "numpy>=1.21",
+  "opencv-python>=4.8",
+  "Pillow>=9.5",
+  "av>=0.5.2",
+  "tqdm",
+  "einops",
+  "hydra-core>=1.3.2",
+  "imageio==2.25.0",
+  "imageio[ffmpeg]",
+  "huggingface_hub==0.36.2",
+  "safetensors",
+  "kornia",
+  "easydict",
+  "requests",
+  "gitpython>=3.1",
+  "thinplate@git+https://github.com/cheind/py-thin-plate-spline",
+  "pims",
+]
