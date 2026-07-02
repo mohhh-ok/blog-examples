@@ -47,4 +47,14 @@ python run.py
 
 ## 結論（記事参照）
 
-RVM も MatAnyone 2 もグリーンバック入力に対しては同レベル（edge ΔG ≒ +12）の緑カブりを残します。fgr の chroma green bias はモデル固有ではなく matting アプローチの構造的問題で、halo を確実に消すなら matting 後段の despill 処理が必要です。
+緑バック入力に対しては両モデルとも edge ΔG ≒ +12 の緑カブりを残します。ただし追加検証として natural background の talking head を通すと:
+
+- **RVM**: ΔG −5.5（緑カブりが消える、わずかに赤紫寄り）
+- **MatAnyone 2**: ΔG +13（緑バック時と変わらず、推論スクリプトの `bgr = [120, 255, 155]` が edge に染み出してる副作用）
+
+つまり緑バック halo の正体は:
+
+- RVM 側は **撮影時の物理的 green spill**（緑光が被写体に回り込む反射光）
+- MatAnyone 2 側は上記に加えて **推論スクリプトのハードコード緑塗り**の残り
+
+なのでモデル差し替えでは緑 halo は消えず、matting 後段の despill（`G = min(G, (R+B)/2)`）を alpha-gated で入れるのが実務解です。詳細は記事参照。
