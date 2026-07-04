@@ -1,0 +1,1 @@
+{"provider": "cloudrun", "model": "whisper", "mode": "warm", "fire_start_epoch_ms": 1783155964801, "wall_seconds": {"fire_to_done": 0.26350075}, "http_status": 500, "response": "Internal Server Error"}

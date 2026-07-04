@@ -1,0 +1,19 @@
+# Cloud Build for SDXL image. Weight bake が入るので E2_HIGHCPU_32 + 200GB disk.
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --file=docker/sdxl/Dockerfile
+      - --tag=${_AR_HOST}/${PROJECT_ID}/${_AR_REPO}/sdxl:${_TAG}
+      - .
+images:
+  - ${_AR_HOST}/${PROJECT_ID}/${_AR_REPO}/sdxl:${_TAG}
+options:
+  machineType: E2_HIGHCPU_32
+  diskSizeGb: 200
+  logging: CLOUD_LOGGING_ONLY
+substitutions:
+  _AR_HOST: us-central1-docker.pkg.dev
+  _AR_REPO: cold-start-bench
+  _TAG: latest
+timeout: 3600s

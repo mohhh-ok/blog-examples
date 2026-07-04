@@ -1,0 +1,31 @@
+# Lightweight SDXL image — no weight bake. Weights are downloaded to
+# /runpod-volume/sdxl by the handler on first cold (auto-seed) so the volume can
+# be shared across RunPod worker starts. Reduces image size from ~15GB to ~4GB.
+FROM pytorch/pytorch:2.11.0-cuda12.8-cudnn9-runtime
+
+ENV PYTHONUNBUFFERED=1 \
+    HF_HOME=/hf-cache \
+    HF_HUB_DISABLE_TELEMETRY=1 \
+    HF_HUB_ENABLE_HF_TRANSFER=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir --break-system-packages \
+        diffusers==0.31.0 \
+        transformers==4.46.3 \
+        accelerate==1.1.1 \
+        safetensors==0.4.5 \
+        hf_transfer==0.1.8 \
+        huggingface_hub==0.26.5 \
+        fastapi==0.115.5 \
+        uvicorn==0.32.1 \
+        pydantic==2.10.3 \
+        runpod==1.7.7
+
+COPY handlers/sdxl_handler.py /app/handler.py
+
+CMD ["python", "/app/handler.py"]
