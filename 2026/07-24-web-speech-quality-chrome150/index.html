@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Web Speech API quality 検証 (Chrome 150)</title>
+<style>
+  body { font-family: sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+  button { font-size: 1rem; padding: .5rem 1rem; margin-right: .5rem; }
+  pre { background: #f4f4f4; padding: 1rem; min-height: 12rem; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<h1>Web Speech API quality 検証</h1>
+<p>
+  Chrome 150 で追加された <code>SpeechRecognitionOptions.quality</code>(デフォルト <code>"command"</code>)の影響を確認する最小ページ。
+  ボタンを押してマイクを許可し、英語で一言(例: "hello")話す。
+</p>
+<p>
+  <button id="btn-default">quality 未指定で認識</button>
+  <button id="btn-dictation">quality: "dictation" で認識</button>
+</p>
+<pre id="log"></pre>
+<script>
+const logEl = document.getElementById("log");
+function log(msg) {
+  const t = new Date().toTimeString().slice(0, 8);
+  logEl.textContent += `[${t}] ${msg}\n`;
+}
+
+function run(quality) {
+  const Ctor = window.webkitSpeechRecognition ?? window.SpeechRecognition;
+  if (!Ctor) { log("SpeechRecognition 非対応ブラウザ"); return; }
+
+  const rec = new Ctor();
+  rec.lang = "en-US";
+  rec.interimResults = true;
+
+  // ここが本題。Chrome 150 からデフォルトが "command"(限定語彙)になり、
+  // 自由文は interim すら返らなくなる。"dictation" を明示すると従来どおり動く。
+  log(`"quality" in rec = ${"quality" in rec}(初期値: ${JSON.stringify(rec.quality)})`);
+  if (quality) {
+    rec.quality = quality;
+    log(`quality = "${quality}" を設定`);
+  } else {
+    log("quality 未指定(ブラウザデフォルト)");
+  }
+
+  // パイプラインのどこまで進むかを全部見る
+  for (const ev of ["start", "audiostart", "soundstart", "speechstart",
+                    "speechend", "soundend", "audioend", "nomatch", "end"]) {
+    rec[`on${ev}`] = () => log(`on${ev}`);
+  }
+  rec.onerror = (e) => log(`onerror: ${e.error}`);
+  rec.onresult = (e) => {
+    let text = "";
+    let isFinal = false;
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      text += e.results[i][0].transcript;
+      if (e.results[i].isFinal) isFinal = true;
+    }
+    log(`onresult(${isFinal ? "final" : "interim"}): "${text}"`);
+  };
+
+  rec.start();
+}
+
+document.getElementById("btn-default").addEventListener("click", () => run(""));
+document.getElementById("btn-dictation").addEventListener("click", () => run("dictation"));
+</script>
+</body>
+</html>

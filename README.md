@@ -7,6 +7,7 @@
 ## 一覧
 
 - [2025/04-24-pgvector-drizzle](./2025/04-24-pgvector-drizzle/) — Postgres + pgvector + Drizzle + OpenAI embedding で意味検索（cosine / L1）
+- [2026/07-24-web-speech-quality-chrome150](./2026/07-24-web-speech-quality-chrome150/) — Chrome 150 の `SpeechRecognitionOptions.quality`(デフォルト "command")で onresult が返らなくなる問題の最小再現
 
 ## Secret スキャン
 
