@@ -63,3 +63,7 @@ uv run python scripts/summarize.py
 - [Chatterbox Multilingual (Resemble AI)](https://www.resemble.ai/learn/models/chatterbox-multilingual)
 - [06-22 多言語 voice clone ベンチ](../06-22-tts-commercial-provider-comparison/README.md)
 - [06-22 Qwen3-TTS 詳細ノート](../06-22-tts-commercial-provider-comparison/qwen3-tts-notes.md)
+
+## 依存関係のセキュリティについて
+
+`uv.lock` は**記事執筆時点 (2026-07) のベンチ環境をそのまま再現するためのスナップショット**であり、意図的に更新していません (torch / transformers / diffusers は chatterbox 側の固定制約と密結合で、更新するとベンチ自体が再現できなくなる)。このため Dependabot が指摘する既知脆弱性が含まれます。ローカルの隔離環境で、信頼できるモデルのみを対象に実行してください。サーバーとして公開する用途を想定したコードではありません。
