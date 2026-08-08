@@ -1,0 +1,25 @@
+{
+  "name": "myapp",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
+  "remoteUser": "node",
+  "runArgs": [
+    "--cap-add=NET_ADMIN",
+    "--cap-add=NET_RAW"
+  ],
+  "postCreateCommand": "sudo chown node:node node_modules .pnpm-store && sudo chown -R node:node /home/node/.claude && sudo corepack enable && CI=true pnpm install --frozen-lockfile",
+  "postStartCommand": "sudo cp .devcontainer/init-firewall.sh /usr/local/bin/init-firewall.sh && sudo /usr/local/bin/init-firewall.sh",
+  "mounts": [
+    "source=myapp-claude-config,target=/home/node/.claude,type=volume",
+    "source=myapp-node-modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=myapp-pnpm-store,target=${containerWorkspaceFolder}/.pnpm-store,type=volume"
+  ],
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/node/.claude",
+    "npm_config_store_dir": "/workspaces/myapp/.pnpm-store"
+  }
+}
