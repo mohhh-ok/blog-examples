@@ -1,0 +1,296 @@
+{
+  "model": "s2.1-pro",
+  "reference_id": "0d0664bd2c5f4999bdbb3eeff58c127d",
+  "ref_file": "ref.wav",
+  "ref_text": "本日はお忙しい中お越しいただき、誠にありがとうございます。それでは、プロジェクトの進捗状況について、簡単にご説明させていただきます。",
+  "same_text": "本日は晴天に恵まれ、公園には多くの家族連れが訪れています。午後からは気温が上がり、木陰で休む人の姿も見られました。明日も同じような穏やかな天気が続く見込みです。",
+  "varied_texts": [
+    "駅前の商店街では、朝から新鮮な野菜や果物を求める人々で賑わっています。店主たちは威勢のよい掛け声で客を迎え、通りには活気があふれていました。夕方には特売が始まり、さらに多くの買い物客が訪れる見込みです。",
+    "新しい図書館は、静かな環境と豊富な蔵書で多くの利用者に親しまれています。窓際の閲覧席からは中庭の緑が眺められ、読書に最適な空間となっています。週末には子ども向けの読み聞かせ会も開かれる予定です。",
+    "今年の夏祭りは、三年ぶりに花火大会が開催されることになりました。会場周辺では屋台の準備が進み、地元の人々の期待も高まっています。当日は混雑が予想されるため、公共交通機関の利用が呼びかけられています。",
+    "山頂からの眺めは素晴らしく、遠くの海岸線まではっきりと見渡すことができました。澄んだ空気の中、登山者たちはしばらく景色に見入っていました。下山の際には、足元に十分注意するよう案内が出ています。",
+    "料理教室では、旬の食材を使った家庭料理の作り方を学ぶことができます。講師が丁寧に手順を説明し、参加者は和やかな雰囲気で調理を楽しんでいました。来月からは初心者向けの新しいコースも始まるそうです。",
+    "それでは、次の議題に移りたいと思います。資料の三ページ目をご覧ください。",
+    "この新しい機能を使えば、作業時間を大幅に短縮することができます。",
+    "ご質問ありがとうございます。その点については、後ほど詳しくご説明いたします。",
+    "まずは全体の流れを確認してから、細かい設定に進んでいきましょう。",
+    "本日のポイントは三つあります。順番にひとつずつ見ていきましょう。"
+  ],
+  "tts_params": {
+    "temperature": 0.7,
+    "top_p": 0.7,
+    "note": "SDK defaults, 両条件共通"
+  },
+  "records": [
+    {
+      "name": "a_same1",
+      "condition": "a",
+      "text_chars": 80,
+      "latency_sec": 4.083,
+      "duration_sec": 13.096,
+      "samplerate": 44100,
+      "bytes": 1155116
+    },
+    {
+      "name": "b_same1",
+      "condition": "b",
+      "text_chars": 80,
+      "latency_sec": 4.298,
+      "duration_sec": 13.235,
+      "samplerate": 44100,
+      "bytes": 1167404
+    },
+    {
+      "name": "a_same2",
+      "condition": "a",
+      "text_chars": 80,
+      "latency_sec": 4.208,
+      "duration_sec": 13.514,
+      "samplerate": 44100,
+      "bytes": 1191980
+    },
+    {
+      "name": "b_same2",
+      "condition": "b",
+      "text_chars": 80,
+      "latency_sec": 3.786,
+      "duration_sec": 13.282,
+      "samplerate": 44100,
+      "bytes": 1171500
+    },
+    {
+      "name": "a_same3",
+      "condition": "a",
+      "text_chars": 80,
+      "latency_sec": 4.222,
+      "duration_sec": 13.421,
+      "samplerate": 44100,
+      "bytes": 1183788
+    },
+    {
+      "name": "b_same3",
+      "condition": "b",
+      "text_chars": 80,
+      "latency_sec": 3.693,
+      "duration_sec": 12.817,
+      "samplerate": 44100,
+      "bytes": 1130540
+    },
+    {
+      "name": "a_same4",
+      "condition": "a",
+      "text_chars": 80,
+      "latency_sec": 3.84,
+      "duration_sec": 12.91,
+      "samplerate": 44100,
+      "bytes": 1138732
+    },
+    {
+      "name": "b_same4",
+      "condition": "b",
+      "text_chars": 80,
+      "latency_sec": 3.636,
+      "duration_sec": 12.632,
+      "samplerate": 44100,
+      "bytes": 1114156
+    },
+    {
+      "name": "a_same5",
+      "condition": "a",
+      "text_chars": 80,
+      "latency_sec": 3.89,
+      "duration_sec": 12.91,
+      "samplerate": 44100,
+      "bytes": 1138732
+    },
+    {
+      "name": "b_same5",
+      "condition": "b",
+      "text_chars": 80,
+      "latency_sec": 3.656,
+      "duration_sec": 12.91,
+      "samplerate": 44100,
+      "bytes": 1138732
+    },
+    {
+      "name": "a_text1",
+      "condition": "a",
+      "text_chars": 101,
+      "latency_sec": 4.988,
+      "duration_sec": 16.746,
+      "samplerate": 44100,
+      "bytes": 1477060
+    },
+    {
+      "name": "b_text1",
+      "condition": "b",
+      "text_chars": 101,
+      "latency_sec": 4.184,
+      "duration_sec": 15.801,
+      "samplerate": 44100,
+      "bytes": 1393686
+    },
+    {
+      "name": "a_text2",
+      "condition": "a",
+      "text_chars": 97,
+      "latency_sec": 4.94,
+      "duration_sec": 16.208,
+      "samplerate": 44100,
+      "bytes": 1429548
+    },
+    {
+      "name": "b_text2",
+      "condition": "b",
+      "text_chars": 97,
+      "latency_sec": 4.277,
+      "duration_sec": 16.208,
+      "samplerate": 44100,
+      "bytes": 1429548
+    },
+    {
+      "name": "a_text3",
+      "condition": "a",
+      "text_chars": 99,
+      "latency_sec": 4.423,
+      "duration_sec": 16.115,
+      "samplerate": 44100,
+      "bytes": 1421356
+    },
+    {
+      "name": "b_text3",
+      "condition": "b",
+      "text_chars": 99,
+      "latency_sec": 4.735,
+      "duration_sec": 16.486,
+      "samplerate": 44100,
+      "bytes": 1454124
+    },
+    {
+      "name": "a_text4",
+      "condition": "a",
+      "text_chars": 96,
+      "latency_sec": 4.445,
+      "duration_sec": 14.303,
+      "samplerate": 44100,
+      "bytes": 1261612
+    },
+    {
+      "name": "b_text4",
+      "condition": "b",
+      "text_chars": 96,
+      "latency_sec": 4.765,
+      "duration_sec": 15.511,
+      "samplerate": 44100,
+      "bytes": 1368108
+    },
+    {
+      "name": "a_text5",
+      "condition": "a",
+      "text_chars": 97,
+      "latency_sec": 4.607,
+      "duration_sec": 15.186,
+      "samplerate": 44100,
+      "bytes": 1339436
+    },
+    {
+      "name": "b_text5",
+      "condition": "b",
+      "text_chars": 97,
+      "latency_sec": 4.248,
+      "duration_sec": 15.464,
+      "samplerate": 44100,
+      "bytes": 1364012
+    },
+    {
+      "name": "a_text6",
+      "condition": "a",
+      "text_chars": 36,
+      "latency_sec": 1.975,
+      "duration_sec": 5.108,
+      "samplerate": 44100,
+      "bytes": 450604
+    },
+    {
+      "name": "b_text6",
+      "condition": "b",
+      "text_chars": 36,
+      "latency_sec": 1.846,
+      "duration_sec": 5.759,
+      "samplerate": 44100,
+      "bytes": 507948
+    },
+    {
+      "name": "a_text7",
+      "condition": "a",
+      "text_chars": 32,
+      "latency_sec": 1.878,
+      "duration_sec": 4.876,
+      "samplerate": 44100,
+      "bytes": 430124
+    },
+    {
+      "name": "b_text7",
+      "condition": "b",
+      "text_chars": 32,
+      "latency_sec": 1.504,
+      "duration_sec": 4.923,
+      "samplerate": 44100,
+      "bytes": 434220
+    },
+    {
+      "name": "a_text8",
+      "condition": "a",
+      "text_chars": 38,
+      "latency_sec": 1.906,
+      "duration_sec": 5.294,
+      "samplerate": 44100,
+      "bytes": 466988
+    },
+    {
+      "name": "b_text8",
+      "condition": "b",
+      "text_chars": 38,
+      "latency_sec": 1.858,
+      "duration_sec": 5.712,
+      "samplerate": 44100,
+      "bytes": 503852
+    },
+    {
+      "name": "a_text9",
+      "condition": "a",
+      "text_chars": 32,
+      "latency_sec": 1.854,
+      "duration_sec": 4.551,
+      "samplerate": 44100,
+      "bytes": 401452
+    },
+    {
+      "name": "b_text9",
+      "condition": "b",
+      "text_chars": 32,
+      "latency_sec": 1.872,
+      "duration_sec": 4.876,
+      "samplerate": 44100,
+      "bytes": 430124
+    },
+    {
+      "name": "a_text10",
+      "condition": "a",
+      "text_chars": 32,
+      "latency_sec": 1.868,
+      "duration_sec": 4.69,
+      "samplerate": 44100,
+      "bytes": 413740
+    },
+    {
+      "name": "b_text10",
+      "condition": "b",
+      "text_chars": 32,
+      "latency_sec": 1.516,
+      "duration_sec": 4.365,
+      "samplerate": 44100,
+      "bytes": 385068
+    }
+  ]
+}
