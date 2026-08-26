@@ -1,0 +1,438 @@
+{
+  "ref_vs_lang_similarity": {
+    "ja": 0.9245,
+    "en": 0.8818,
+    "zh": 0.8705,
+    "ko": 0.9038,
+    "fr": 0.8813,
+    "es": 0.9062,
+    "de": 0.9029
+  },
+  "ref_vs_lang_stats": {
+    "mean": 0.8959,
+    "std": 0.0187,
+    "min": 0.8705,
+    "max": 0.9245
+  },
+  "inter_lang_similarity": {
+    "ja-en": 0.8501,
+    "ja-zh": 0.9003,
+    "ja-ko": 0.898,
+    "ja-fr": 0.8875,
+    "ja-es": 0.9253,
+    "ja-de": 0.912,
+    "en-zh": 0.7991,
+    "en-ko": 0.855,
+    "en-fr": 0.8961,
+    "en-es": 0.8086,
+    "en-de": 0.8433,
+    "zh-ko": 0.8781,
+    "zh-fr": 0.8093,
+    "zh-es": 0.9047,
+    "zh-de": 0.8759,
+    "ko-fr": 0.858,
+    "ko-es": 0.8924,
+    "ko-de": 0.8717,
+    "fr-es": 0.8435,
+    "fr-de": 0.8698,
+    "es-de": 0.9072
+  },
+  "inter_lang_stats": {
+    "mean": 0.8708,
+    "std": 0.0356,
+    "min": 0.7991,
+    "max": 0.9253
+  },
+  "ja_vs_other_similarity": {
+    "ja-en": 0.8501,
+    "ja-zh": 0.9003,
+    "ja-ko": 0.898,
+    "ja-fr": 0.8875,
+    "ja-es": 0.9253,
+    "ja-de": 0.912
+  },
+  "ja_vs_other_stats": {
+    "mean": 0.8955,
+    "std": 0.0257,
+    "min": 0.8501,
+    "max": 0.9253
+  },
+  "cross_set_similarity": {
+    "ja-text1": 0.912,
+    "ja-text2": 0.9139,
+    "ja-text3": 0.9251,
+    "ja-text4": 0.9111,
+    "ja-text5": 0.9243,
+    "en-text1": 0.8487,
+    "en-text2": 0.8466,
+    "en-text3": 0.8576,
+    "en-text4": 0.8771,
+    "en-text5": 0.8453,
+    "zh-text1": 0.91,
+    "zh-text2": 0.8652,
+    "zh-text3": 0.8711,
+    "zh-text4": 0.8749,
+    "zh-text5": 0.8934,
+    "ko-text1": 0.8928,
+    "ko-text2": 0.8873,
+    "ko-text3": 0.8575,
+    "ko-text4": 0.9138,
+    "ko-text5": 0.8759,
+    "fr-text1": 0.8873,
+    "fr-text2": 0.8928,
+    "fr-text3": 0.8963,
+    "fr-text4": 0.9148,
+    "fr-text5": 0.8653,
+    "es-text1": 0.9101,
+    "es-text2": 0.9008,
+    "es-text3": 0.9069,
+    "es-text4": 0.8808,
+    "es-text5": 0.9053,
+    "de-text1": 0.9259,
+    "de-text2": 0.9333,
+    "de-text3": 0.9232,
+    "de-text4": 0.9152,
+    "de-text5": 0.9376
+  },
+  "cross_set_stats": {
+    "mean": 0.8943,
+    "std": 0.0261,
+    "min": 0.8453,
+    "max": 0.9376
+  },
+  "durations_sec": [
+    6.502,
+    5.573,
+    4.551,
+    5.573,
+    6.316,
+    5.805,
+    6.177
+  ],
+  "duration_stats": {
+    "mean": 5.7853,
+    "std": 0.6535,
+    "min": 4.551,
+    "max": 6.502
+  },
+  "per_lang": {
+    "ja": {
+      "duration_sec": 6.502,
+      "samplerate": 44100,
+      "rms": 0.10888,
+      "f0_mean_hz": 109.45,
+      "f0_median_hz": 105.03,
+      "voiced_frames": 273
+    },
+    "en": {
+      "duration_sec": 5.573,
+      "samplerate": 44100,
+      "rms": 0.13787,
+      "f0_mean_hz": 111.94,
+      "f0_median_hz": 114.21,
+      "voiced_frames": 272
+    },
+    "zh": {
+      "duration_sec": 4.551,
+      "samplerate": 44100,
+      "rms": 0.1243,
+      "f0_mean_hz": 102.48,
+      "f0_median_hz": 102.04,
+      "voiced_frames": 229
+    },
+    "ko": {
+      "duration_sec": 5.573,
+      "samplerate": 44100,
+      "rms": 0.09351,
+      "f0_mean_hz": 107.76,
+      "f0_median_hz": 106.56,
+      "voiced_frames": 300
+    },
+    "fr": {
+      "duration_sec": 6.316,
+      "samplerate": 44100,
+      "rms": 0.11367,
+      "f0_mean_hz": 111.58,
+      "f0_median_hz": 110.64,
+      "voiced_frames": 364
+    },
+    "es": {
+      "duration_sec": 5.805,
+      "samplerate": 44100,
+      "rms": 0.12087,
+      "f0_mean_hz": 101.11,
+      "f0_median_hz": 100.87,
+      "voiced_frames": 259
+    },
+    "de": {
+      "duration_sec": 6.177,
+      "samplerate": 44100,
+      "rms": 0.11808,
+      "f0_mean_hz": 101.12,
+      "f0_median_hz": 100.29,
+      "voiced_frames": 297
+    }
+  },
+  "language_verification": {
+    "status": "done",
+    "model": "faster-whisper small (cpu, int8)",
+    "results": {
+      "ja": {
+        "detected_language": "ja",
+        "language_probability": 0.9966,
+        "transcript": "みなさんこんにちは。本日は新しい機能についてご紹介します。 どうぞよろしくお願いいたします。",
+        "matches_target": true
+      },
+      "en": {
+        "detected_language": "en",
+        "language_probability": 0.8211,
+        "transcript": "Hello everyone, today I would like to introduce a new feature. Thank you for joining us.",
+        "matches_target": true
+      },
+      "zh": {
+        "detected_language": "zh",
+        "language_probability": 0.9916,
+        "transcript": "今天我将为大家介绍一项新功能感谢您的参与",
+        "matches_target": true
+      },
+      "ko": {
+        "detected_language": "ko",
+        "language_probability": 0.901,
+        "transcript": "여러분 안녕하세요 오늘은 새로운 기능을 소개해드리겠습니다. 잘 부탁드립니다.",
+        "matches_target": true
+      },
+      "fr": {
+        "detected_language": "fr",
+        "language_probability": 0.9582,
+        "transcript": "Bonjour à tous. Aujourd'hui, je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention.",
+        "matches_target": true
+      },
+      "es": {
+        "detected_language": "es",
+        "language_probability": 0.9972,
+        "transcript": "Hola a todos, hoy les voy a presentar una nueva función. Muchas gracias por su atención.",
+        "matches_target": true
+      },
+      "de": {
+        "detected_language": "de",
+        "language_probability": 0.9844,
+        "transcript": "Hallo zusammen. Heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit.",
+        "matches_target": true
+      }
+    }
+  },
+  "similarity_matrix": {
+    "labels": [
+      "ref",
+      "ja",
+      "en",
+      "zh",
+      "ko",
+      "fr",
+      "es",
+      "de",
+      "text1",
+      "text2",
+      "text3",
+      "text4",
+      "text5"
+    ],
+    "values": [
+      [
+        1.0,
+        0.9245,
+        0.8818,
+        0.8705,
+        0.9038,
+        0.8813,
+        0.9062,
+        0.9029,
+        0.9214,
+        0.9249,
+        0.928,
+        0.938,
+        0.9251
+      ],
+      [
+        0.9245,
+        1.0,
+        0.8501,
+        0.9003,
+        0.898,
+        0.8875,
+        0.9253,
+        0.912,
+        0.912,
+        0.9139,
+        0.9251,
+        0.9111,
+        0.9243
+      ],
+      [
+        0.8818,
+        0.8501,
+        1.0,
+        0.7991,
+        0.855,
+        0.8961,
+        0.8086,
+        0.8433,
+        0.8487,
+        0.8466,
+        0.8576,
+        0.8771,
+        0.8453
+      ],
+      [
+        0.8705,
+        0.9003,
+        0.7991,
+        1.0,
+        0.8781,
+        0.8093,
+        0.9047,
+        0.8759,
+        0.91,
+        0.8652,
+        0.8711,
+        0.8749,
+        0.8934
+      ],
+      [
+        0.9038,
+        0.898,
+        0.855,
+        0.8781,
+        1.0,
+        0.858,
+        0.8924,
+        0.8717,
+        0.8928,
+        0.8873,
+        0.8575,
+        0.9138,
+        0.8759
+      ],
+      [
+        0.8813,
+        0.8875,
+        0.8961,
+        0.8093,
+        0.858,
+        1.0,
+        0.8435,
+        0.8698,
+        0.8873,
+        0.8928,
+        0.8963,
+        0.9148,
+        0.8653
+      ],
+      [
+        0.9062,
+        0.9253,
+        0.8086,
+        0.9047,
+        0.8924,
+        0.8435,
+        1.0,
+        0.9072,
+        0.9101,
+        0.9008,
+        0.9069,
+        0.8808,
+        0.9053
+      ],
+      [
+        0.9029,
+        0.912,
+        0.8433,
+        0.8759,
+        0.8717,
+        0.8698,
+        0.9072,
+        1.0,
+        0.9259,
+        0.9333,
+        0.9232,
+        0.9152,
+        0.9376
+      ],
+      [
+        0.9214,
+        0.912,
+        0.8487,
+        0.91,
+        0.8928,
+        0.8873,
+        0.9101,
+        0.9259,
+        1.0,
+        0.9676,
+        0.9623,
+        0.9526,
+        0.9623
+      ],
+      [
+        0.9249,
+        0.9139,
+        0.8466,
+        0.8652,
+        0.8873,
+        0.8928,
+        0.9008,
+        0.9333,
+        0.9676,
+        1.0,
+        0.9606,
+        0.9464,
+        0.9599
+      ],
+      [
+        0.928,
+        0.9251,
+        0.8576,
+        0.8711,
+        0.8575,
+        0.8963,
+        0.9069,
+        0.9232,
+        0.9623,
+        0.9606,
+        1.0,
+        0.9339,
+        0.9547
+      ],
+      [
+        0.938,
+        0.9111,
+        0.8771,
+        0.8749,
+        0.9138,
+        0.9148,
+        0.8808,
+        0.9152,
+        0.9526,
+        0.9464,
+        0.9339,
+        1.0,
+        0.9245
+      ],
+      [
+        0.9251,
+        0.9243,
+        0.8453,
+        0.8934,
+        0.8759,
+        0.8653,
+        0.9053,
+        0.9376,
+        0.9623,
+        0.9599,
+        0.9547,
+        0.9245,
+        1.0
+      ]
+    ]
+  }
+}

@@ -91,6 +91,32 @@ export FISH_AUDIO_API_KEY=...
 .venv/bin/python scripts/make_report_noreftext_varied.py > output/report-noreftext-varied.md
 ```
 
+## 第 5 弾: 多言語テスト
+
+日本語話者の同一 reference から 7 言語 (ja / en / zh / ko / fr / es / de) のテキストを
+各 1 回生成し、「言語をまたいでも同じクローン声が出るか」を第 2 弾 (日本語異文 5 本)
+ベースラインと比較する。条件は第 1・2 弾と同じ標準形 (ref_text あり)。生成テキストは
+`2026/06-19-multilingual-voice-cloning-benchmark/prompts.py` と同一。
+
+- 測定: ref vs 各言語（7）、言語間全 21 ペア (ja–他言語 6 ペアは個別記録)、
+  クロスセット 言語×第 2 弾 text の 35 ペア、ref + 7 言語の 8x8 類似度行列
+  ヒートマップ（webp）、尺・F0・RMS
+- 言語検証: faster-whisper (small・CPU) で各 wav の言語判定 + 書き起こし
+- 前提: 第 2 弾の `output/varied/` が存在すること
+
+```bash
+uv pip install --python .venv/bin/python faster-whisper  # 言語検証用に追加
+
+export FISH_AUDIO_API_KEY=...
+.venv/bin/python scripts/generate_multilingual.py   # output/multilingual/<lang>.wav + generation.json
+.venv/bin/python scripts/measure_multilingual.py    # output/multilingual/results.json + similarity_heatmap_multilingual.webp
+.venv/bin/python scripts/make_report_multilingual.py > output/report-multilingual.md
+```
+
+注意: resemblyzer の VoiceEncoder は英語中心のデータセットで学習されており、言語を
+またいだ類似度には声質変化・音素体系差・encoder の言語バイアスが混ざる
+(report-multilingual.md の「指標の限界」参照)。
+
 ## 構成
 
 - `scripts/generate.py` — Fish API で 5 trial 生成（レイテンシ・尺を記録）
@@ -104,5 +130,8 @@ export FISH_AUDIO_API_KEY=...
 - `scripts/generate_noreftext_varied.py` — 第 4 弾: 書き起こしなしで異テキスト 5 種を各 1 回生成
 - `scripts/measure_noreftext_varied.py` — 第 4 弾: 類似度 4 群・11x11 ヒートマップ・F0・RMS
 - `scripts/make_report_noreftext_varied.py` — 第 4 弾: report-noreftext-varied.md の組み立て
+- `scripts/generate_multilingual.py` — 第 5 弾: 7 言語を各 1 回生成
+- `scripts/measure_multilingual.py` — 第 5 弾: 類似度群・8x8 ヒートマップ・F0・RMS・言語検証 (faster-whisper)
+- `scripts/make_report_multilingual.py` — 第 5 弾: report-multilingual.md の組み立て
 - `reference/` — reference audio（git 管理外）
-- `output/` — 生成音声と測定結果（第 2 弾は `output/varied/`、第 3 弾は `output/noreftext/`、第 4 弾は `output/noreftext_varied/`。ライセンスは `output/LICENSE.md`）
+- `output/` — 生成音声と測定結果（第 2 弾は `output/varied/`、第 3 弾は `output/noreftext/`、第 4 弾は `output/noreftext_varied/`、第 5 弾は `output/multilingual/`。ライセンスは `output/LICENSE.md`）

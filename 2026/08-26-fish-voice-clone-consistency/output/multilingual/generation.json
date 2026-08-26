@@ -1,0 +1,86 @@
+{
+  "model": "s2.1-pro",
+  "ref_file": "ref.wav",
+  "ref_text": "本日はお忙しい中お越しいただき、誠にありがとうございます。それでは、プロジェクトの進捗状況について、簡単にご説明させていただきます。",
+  "num_langs_requested": 7,
+  "num_langs_succeeded": 7,
+  "langs": [
+    {
+      "lang": "ja",
+      "file": "ja.wav",
+      "text": "皆さん、こんにちは。本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。",
+      "text_chars": 45,
+      "latency_sec": 2.309,
+      "duration_sec": 6.502,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 573484
+    },
+    {
+      "lang": "en",
+      "file": "en.wav",
+      "text": "Hello everyone. Today, I'd like to introduce a new feature. Thank you for joining us.",
+      "text_chars": 85,
+      "latency_sec": 1.677,
+      "duration_sec": 5.573,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 491564
+    },
+    {
+      "lang": "zh",
+      "file": "zh.wav",
+      "text": "大家好，今天我将为大家介绍一项新功能，感谢您的参与。",
+      "text_chars": 26,
+      "latency_sec": 1.648,
+      "duration_sec": 4.551,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 401452
+    },
+    {
+      "lang": "ko",
+      "file": "ko.wav",
+      "text": "여러분 안녕하세요. 오늘은 새로운 기능을 소개해 드리겠습니다. 잘 부탁드립니다.",
+      "text_chars": 44,
+      "latency_sec": 1.848,
+      "duration_sec": 5.573,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 491564
+    },
+    {
+      "lang": "fr",
+      "file": "fr.wav",
+      "text": "Bonjour à tous. Aujourd'hui, je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention.",
+      "text_chars": 106,
+      "latency_sec": 1.942,
+      "duration_sec": 6.316,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 557100
+    },
+    {
+      "lang": "es",
+      "file": "es.wav",
+      "text": "Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.",
+      "text_chars": 88,
+      "latency_sec": 1.949,
+      "duration_sec": 5.805,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 512044
+    },
+    {
+      "lang": "de",
+      "file": "de.wav",
+      "text": "Hallo zusammen. Heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit.",
+      "text_chars": 99,
+      "latency_sec": 2.029,
+      "duration_sec": 6.177,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 544812
+    }
+  ]
+}
