@@ -1,0 +1,56 @@
+{
+  "model": "s2.1-pro",
+  "ref_file": "ref.wav",
+  "ref_text": "",
+  "ref_text_note": "SDK の ReferenceAudio.text は必須フィールドのため空文字列を渡した (書き起こし省略条件)",
+  "gen_text": "本日は晴天に恵まれ、公園には多くの家族連れが訪れています。午後からは気温が上がり、木陰で休む人の姿も見られました。明日も同じような穏やかな天気が続く見込みです。",
+  "num_trials_requested": 5,
+  "num_trials_succeeded": 5,
+  "trials": [
+    {
+      "trial": 1,
+      "file": "trial1.wav",
+      "latency_sec": 4.651,
+      "duration_sec": 13.003,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1146924
+    },
+    {
+      "trial": 2,
+      "file": "trial2.wav",
+      "latency_sec": 4.181,
+      "duration_sec": 11.981,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1056812
+    },
+    {
+      "trial": 3,
+      "file": "trial3.wav",
+      "latency_sec": 4.02,
+      "duration_sec": 12.121,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1069100
+    },
+    {
+      "trial": 4,
+      "file": "trial4.wav",
+      "latency_sec": 3.811,
+      "duration_sec": 11.146,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 983084
+    },
+    {
+      "trial": 5,
+      "file": "trial5.wav",
+      "latency_sec": 3.855,
+      "duration_sec": 12.91,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1138732
+    }
+  ]
+}

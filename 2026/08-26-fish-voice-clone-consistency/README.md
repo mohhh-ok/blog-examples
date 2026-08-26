@@ -55,6 +55,24 @@ export FISH_AUDIO_API_KEY=...
 異テキスト間の類似度差には声質変化と音素内容差の両方が混ざる（report-varied.md の
 「指標の限界」参照）。
 
+## 第 3 弾: 書き起こし省略テスト
+
+第 1 弾と完全同一条件（同一 reference + 同一テキスト 5 回）で、`ReferenceAudio` の
+書き起こしテキストだけを渡さずに生成し、ref_text の有無が忠実度・再現性に効くかを
+第 1 弾ベースラインと比較する。fish-audio-sdk の `ReferenceAudio.text` は必須フィールドの
+ため、省略ではなく空文字列 `""` を渡す。
+
+- 測定: ref vs 各 noref（5）、noref 間全 10 ペア、クロスセット noref×trial の 25 ペア、
+  ref + trial1..5 + noref1..5 の 11x11 類似度行列ヒートマップ（webp）、尺・F0・RMS
+- 前提: 第 1 弾の `output/trial1..5.wav` と `output/results.json` が存在すること
+
+```bash
+export FISH_AUDIO_API_KEY=...
+.venv/bin/python scripts/generate_noreftext.py   # output/noreftext/trial1..5.wav + generation.json
+.venv/bin/python scripts/measure_noreftext.py    # output/noreftext/results.json + similarity_heatmap_noreftext.webp
+.venv/bin/python scripts/make_report_noreftext.py > output/report-noreftext.md
+```
+
 ## 構成
 
 - `scripts/generate.py` — Fish API で 5 trial 生成（レイテンシ・尺を記録）
@@ -62,5 +80,8 @@ export FISH_AUDIO_API_KEY=...
 - `scripts/generate_varied.py` — 第 2 弾: 異テキスト 5 種を各 1 回生成
 - `scripts/measure_varied.py` — 第 2 弾: 4 群の類似度・11x11 ヒートマップ・F0
 - `scripts/make_report_varied.py` — 第 2 弾: report-varied.md の組み立て
+- `scripts/generate_noreftext.py` — 第 3 弾: 書き起こしなしで 5 trial 生成
+- `scripts/measure_noreftext.py` — 第 3 弾: 4 群の類似度・11x11 ヒートマップ・F0・RMS
+- `scripts/make_report_noreftext.py` — 第 3 弾: report-noreftext.md の組み立て
 - `reference/` — reference audio（git 管理外）
-- `output/` — 生成音声と測定結果（第 2 弾は `output/varied/`。ライセンスは `output/LICENSE.md`）
+- `output/` — 生成音声と測定結果（第 2 弾は `output/varied/`、第 3 弾は `output/noreftext/`。ライセンスは `output/LICENSE.md`）
