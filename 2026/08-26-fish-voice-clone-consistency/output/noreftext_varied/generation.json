@@ -1,0 +1,65 @@
+{
+  "model": "s2.1-pro",
+  "ref_file": "ref.wav",
+  "ref_text": "",
+  "ref_text_note": "SDK の ReferenceAudio.text は必須フィールドのため空文字列を渡した (書き起こし省略条件)",
+  "num_texts_requested": 5,
+  "num_texts_succeeded": 5,
+  "texts": [
+    {
+      "text_id": 1,
+      "file": "text1.wav",
+      "text": "駅前の商店街では、朝から新鮮な野菜や果物を求める人々で賑わっています。店主たちは威勢のよい掛け声で客を迎え、通りには活気があふれていました。夕方には特売が始まり、さらに多くの買い物客が訪れる見込みです。",
+      "text_chars": 101,
+      "latency_sec": 5.214,
+      "duration_sec": 16.312,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1438788
+    },
+    {
+      "text_id": 2,
+      "file": "text2.wav",
+      "text": "新しい図書館は、静かな環境と豊富な蔵書で多くの利用者に親しまれています。窓際の閲覧席からは中庭の緑が眺められ、読書に最適な空間となっています。週末には子ども向けの読み聞かせ会も開かれる予定です。",
+      "text_chars": 97,
+      "latency_sec": 4.856,
+      "duration_sec": 15.186,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1339436
+    },
+    {
+      "text_id": 3,
+      "file": "text3.wav",
+      "text": "今年の夏祭りは、三年ぶりに花火大会が開催されることになりました。会場周辺では屋台の準備が進み、地元の人々の期待も高まっています。当日は混雑が予想されるため、公共交通機関の利用が呼びかけられています。",
+      "text_chars": 99,
+      "latency_sec": 4.293,
+      "duration_sec": 15.511,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1368108
+    },
+    {
+      "text_id": 4,
+      "file": "text4.wav",
+      "text": "山頂からの眺めは素晴らしく、遠くの海岸線まではっきりと見渡すことができました。澄んだ空気の中、登山者たちはしばらく景色に見入っていました。下山の際には、足元に十分注意するよう案内が出ています。",
+      "text_chars": 96,
+      "latency_sec": 3.854,
+      "duration_sec": 12.26,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1081388
+    },
+    {
+      "text_id": 5,
+      "file": "text5.wav",
+      "text": "料理教室では、旬の食材を使った家庭料理の作り方を学ぶことができます。講師が丁寧に手順を説明し、参加者は和やかな雰囲気で調理を楽しんでいました。来月からは初心者向けの新しいコースも始まるそうです。",
+      "text_chars": 97,
+      "latency_sec": 4.395,
+      "duration_sec": 13.7,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1208364
+    }
+  ]
+}
