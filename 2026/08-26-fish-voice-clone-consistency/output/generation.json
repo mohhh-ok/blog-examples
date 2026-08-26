@@ -1,0 +1,55 @@
+{
+  "model": "s2.1-pro",
+  "ref_file": "ref.wav",
+  "ref_text": "本日はお忙しい中お越しいただき、誠にありがとうございます。それでは、プロジェクトの進捗状況について、簡単にご説明させていただきます。",
+  "gen_text": "本日は晴天に恵まれ、公園には多くの家族連れが訪れています。午後からは気温が上がり、木陰で休む人の姿も見られました。明日も同じような穏やかな天気が続く見込みです。",
+  "num_trials_requested": 5,
+  "num_trials_succeeded": 5,
+  "trials": [
+    {
+      "trial": 1,
+      "file": "trial1.wav",
+      "latency_sec": 6.237,
+      "duration_sec": 13.142,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1159212
+    },
+    {
+      "trial": 2,
+      "file": "trial2.wav",
+      "latency_sec": 4.034,
+      "duration_sec": 12.585,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1110060
+    },
+    {
+      "trial": 3,
+      "file": "trial3.wav",
+      "latency_sec": 4.166,
+      "duration_sec": 12.91,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1138732
+    },
+    {
+      "trial": 4,
+      "file": "trial4.wav",
+      "latency_sec": 4.014,
+      "duration_sec": 12.771,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1126444
+    },
+    {
+      "trial": 5,
+      "file": "trial5.wav",
+      "latency_sec": 4.65,
+      "duration_sec": 13.421,
+      "samplerate": 44100,
+      "channels": 1,
+      "bytes": 1183788
+    }
+  ]
+}

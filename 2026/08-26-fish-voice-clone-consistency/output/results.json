@@ -1,0 +1,143 @@
+{
+  "ref_vs_trial_similarity": {
+    "trial1": 0.9064,
+    "trial2": 0.9211,
+    "trial3": 0.904,
+    "trial4": 0.9252,
+    "trial5": 0.9249
+  },
+  "ref_vs_trial_stats": {
+    "mean": 0.9163,
+    "std": 0.0103,
+    "min": 0.904,
+    "max": 0.9252
+  },
+  "inter_trial_similarity": {
+    "trial1-trial2": 0.9468,
+    "trial1-trial3": 0.9597,
+    "trial1-trial4": 0.9434,
+    "trial1-trial5": 0.9322,
+    "trial2-trial3": 0.9582,
+    "trial2-trial4": 0.9641,
+    "trial2-trial5": 0.9372,
+    "trial3-trial4": 0.9554,
+    "trial3-trial5": 0.912,
+    "trial4-trial5": 0.9404
+  },
+  "inter_trial_stats": {
+    "mean": 0.9449,
+    "std": 0.0156,
+    "min": 0.912,
+    "max": 0.9641
+  },
+  "durations_sec": [
+    13.142,
+    12.585,
+    12.91,
+    12.771,
+    13.421
+  ],
+  "duration_stats": {
+    "mean": 12.9658,
+    "std": 0.3257,
+    "min": 12.585,
+    "max": 13.421
+  },
+  "per_trial": {
+    "trial1": {
+      "duration_sec": 13.142,
+      "samplerate": 44100,
+      "f0_mean_hz": 102.06,
+      "f0_median_hz": 101.75,
+      "voiced_frames": 674
+    },
+    "trial2": {
+      "duration_sec": 12.585,
+      "samplerate": 44100,
+      "f0_mean_hz": 100.52,
+      "f0_median_hz": 99.14,
+      "voiced_frames": 524
+    },
+    "trial3": {
+      "duration_sec": 12.91,
+      "samplerate": 44100,
+      "f0_mean_hz": 102.62,
+      "f0_median_hz": 101.45,
+      "voiced_frames": 584
+    },
+    "trial4": {
+      "duration_sec": 12.771,
+      "samplerate": 44100,
+      "f0_mean_hz": 100.27,
+      "f0_median_hz": 98.0,
+      "voiced_frames": 626
+    },
+    "trial5": {
+      "duration_sec": 13.421,
+      "samplerate": 44100,
+      "f0_mean_hz": 101.33,
+      "f0_median_hz": 100.29,
+      "voiced_frames": 643
+    }
+  },
+  "similarity_matrix": {
+    "labels": [
+      "ref",
+      "trial1",
+      "trial2",
+      "trial3",
+      "trial4",
+      "trial5"
+    ],
+    "values": [
+      [
+        1.0,
+        0.9064,
+        0.9211,
+        0.904,
+        0.9252,
+        0.9249
+      ],
+      [
+        0.9064,
+        1.0,
+        0.9468,
+        0.9597,
+        0.9434,
+        0.9322
+      ],
+      [
+        0.9211,
+        0.9468,
+        1.0,
+        0.9582,
+        0.9641,
+        0.9372
+      ],
+      [
+        0.904,
+        0.9597,
+        0.9582,
+        1.0,
+        0.9554,
+        0.912
+      ],
+      [
+        0.9252,
+        0.9434,
+        0.9641,
+        0.9554,
+        1.0,
+        0.9404
+      ],
+      [
+        0.9249,
+        0.9322,
+        0.9372,
+        0.912,
+        0.9404,
+        1.0
+      ]
+    ]
+  }
+}
