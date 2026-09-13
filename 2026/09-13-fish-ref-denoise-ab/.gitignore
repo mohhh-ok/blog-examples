@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.local
+output/
+smoke/
+*.log
+.DS_Store

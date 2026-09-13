@@ -1,0 +1,102 @@
+{
+  "F1_loud_clean": {
+    "speaker": "F1",
+    "variant": "loud_clean",
+    "sampleRate": 48000,
+    "durationSec": 15,
+    "maxVolumeDb": -4,
+    "meanVolumeDb": -17.9,
+    "noiseFloorDb": -27.145943,
+    "snrDb": 23.145943,
+    "lufsIntegrated": -16.5,
+    "wouldDenoise": true
+  },
+  "F1_quiet_clean": {
+    "speaker": "F1",
+    "variant": "quiet_clean",
+    "sampleRate": 48000,
+    "durationSec": 15,
+    "maxVolumeDb": -14,
+    "meanVolumeDb": -27.9,
+    "noiseFloorDb": -37.145904,
+    "snrDb": 23.145904,
+    "lufsIntegrated": -26.4,
+    "wouldDenoise": true
+  },
+  "F1_loud_noise": {
+    "speaker": "F1",
+    "variant": "loud_noise",
+    "sampleRate": 48000,
+    "durationSec": 15,
+    "maxVolumeDb": -2.2,
+    "meanVolumeDb": -16.9,
+    "noiseFloorDb": -22.62831,
+    "snrDb": 20.42831,
+    "lufsIntegrated": -17.2,
+    "wouldDenoise": true,
+    "postNoiseMaxVolumeDb": -2.2
+  },
+  "F1_quiet_noise": {
+    "speaker": "F1",
+    "variant": "quiet_noise",
+    "sampleRate": 48000,
+    "durationSec": 15,
+    "maxVolumeDb": -12.2,
+    "meanVolumeDb": -26.9,
+    "noiseFloorDb": -32.628233,
+    "snrDb": 20.428233000000002,
+    "lufsIntegrated": -27.2,
+    "wouldDenoise": true,
+    "postNoiseMaxVolumeDb": -12.2
+  },
+  "M1_loud_clean": {
+    "speaker": "M1",
+    "variant": "loud_clean",
+    "sampleRate": 48000,
+    "durationSec": 15,
+    "maxVolumeDb": -4,
+    "meanVolumeDb": -17.7,
+    "noiseFloorDb": -38.114826,
+    "snrDb": 34.114826,
+    "lufsIntegrated": -16.8,
+    "wouldDenoise": false
+  },
+  "M1_quiet_clean": {
+    "speaker": "M1",
+    "variant": "quiet_clean",
+    "sampleRate": 48000,
+    "durationSec": 15,
+    "maxVolumeDb": -14,
+    "meanVolumeDb": -27.7,
+    "noiseFloorDb": -48.114868,
+    "snrDb": 34.114868,
+    "lufsIntegrated": -26.8,
+    "wouldDenoise": false
+  },
+  "M1_loud_noise": {
+    "speaker": "M1",
+    "variant": "loud_noise",
+    "sampleRate": 48000,
+    "durationSec": 15,
+    "maxVolumeDb": -1.4,
+    "meanVolumeDb": -16.8,
+    "noiseFloorDb": -23.596421,
+    "snrDb": 22.196421,
+    "lufsIntegrated": -17.4,
+    "wouldDenoise": true,
+    "postNoiseMaxVolumeDb": -1.4
+  },
+  "M1_quiet_noise": {
+    "speaker": "M1",
+    "variant": "quiet_noise",
+    "sampleRate": 48000,
+    "durationSec": 15,
+    "maxVolumeDb": -11.4,
+    "meanVolumeDb": -26.8,
+    "noiseFloorDb": -33.596418,
+    "snrDb": 22.196418,
+    "lufsIntegrated": -27.4,
+    "wouldDenoise": true,
+    "postNoiseMaxVolumeDb": -11.4
+  }
+}

@@ -1,0 +1,699 @@
+{
+  "totalRecords": 960,
+  "cells": [
+    {
+      "key": "F1_loud_clean|long|D",
+      "n": 20,
+      "ngCount": 2,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 51.060680500000004,
+      "durationMaxSec": 60.842993
+    },
+    {
+      "key": "F1_loud_clean|long|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 48.4832655,
+      "durationMaxSec": 56.610249
+    },
+    {
+      "key": "F1_loud_clean|long|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 51.2464395,
+      "durationMaxSec": 78.576327
+    },
+    {
+      "key": "F1_loud_clean|short|D",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 1,
+      "overflowCount": 1,
+      "errorCount": 0,
+      "durationMedianSec": 3.599093,
+      "durationMaxSec": 47.554467
+    },
+    {
+      "key": "F1_loud_clean|short|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.599093,
+      "durationMaxSec": 3.947392
+    },
+    {
+      "key": "F1_loud_clean|short|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.8545125000000002,
+      "durationMaxSec": 5.24771
+    },
+    {
+      "key": "F1_loud_noise|long|D",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 1,
+      "overflowCount": 1,
+      "errorCount": 0,
+      "durationMedianSec": 45.326201999999995,
+      "durationMaxSec": 107.090431
+    },
+    {
+      "key": "F1_loud_noise|long|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 44.535872999999995,
+      "durationMaxSec": 51.03746
+    },
+    {
+      "key": "F1_loud_noise|long|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 45.5111115,
+      "durationMaxSec": 50.480181
+    },
+    {
+      "key": "F1_loud_noise|short|D",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 1,
+      "overflowCount": 1,
+      "errorCount": 0,
+      "durationMedianSec": 3.274014,
+      "durationMaxSec": 13.421134
+    },
+    {
+      "key": "F1_loud_noise|short|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.3436735,
+      "durationMaxSec": 3.808073
+    },
+    {
+      "key": "F1_loud_noise|short|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.5526530000000003,
+      "durationMaxSec": 4.551111
+    },
+    {
+      "key": "F1_quiet_clean|long|D",
+      "n": 20,
+      "ngCount": 2,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 48.808344500000004,
+      "durationMaxSec": 61.25424
+    },
+    {
+      "key": "F1_quiet_clean|long|N",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 1,
+      "overflowCount": 1,
+      "errorCount": 0,
+      "durationMedianSec": 48.715465,
+      "durationMaxSec": 132.725261
+    },
+    {
+      "key": "F1_quiet_clean|long|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 49.4352835,
+      "durationMaxSec": 52.430658
+    },
+    {
+      "key": "F1_quiet_clean|short|D",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 1,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.366893,
+      "durationMaxSec": 5.01551
+    },
+    {
+      "key": "F1_quiet_clean|short|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 1,
+      "errorCount": 0,
+      "durationMedianSec": 3.691973,
+      "durationMaxSec": 13.699773
+    },
+    {
+      "key": "F1_quiet_clean|short|R",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.738413,
+      "durationMaxSec": 4.226032
+    },
+    {
+      "key": "F1_quiet_noise|long|D",
+      "n": 20,
+      "ngCount": 4,
+      "collapseCount": 1,
+      "overflowCount": 1,
+      "errorCount": 0,
+      "durationMedianSec": 45.39678,
+      "durationMaxSec": 132.771701
+    },
+    {
+      "key": "F1_quiet_noise|long|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 45.046712,
+      "durationMaxSec": 49.830023
+    },
+    {
+      "key": "F1_quiet_noise|long|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 45.97551,
+      "durationMaxSec": 50.433741
+    },
+    {
+      "key": "F1_quiet_noise|short|D",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.204354,
+      "durationMaxSec": 3.715193
+    },
+    {
+      "key": "F1_quiet_noise|short|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.599093,
+      "durationMaxSec": 3.993832
+    },
+    {
+      "key": "F1_quiet_noise|short|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.5526530000000003,
+      "durationMaxSec": 4.504671
+    },
+    {
+      "key": "M1_loud_clean|long|D",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 47.554467,
+      "durationMaxSec": 57.121088
+    },
+    {
+      "key": "M1_loud_clean|long|N",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 46.2077095,
+      "durationMaxSec": 56.56381
+    },
+    {
+      "key": "M1_loud_clean|long|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 47.8801245,
+      "durationMaxSec": 53.870295
+    },
+    {
+      "key": "M1_loud_clean|short|D",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.3204535,
+      "durationMaxSec": 3.900952
+    },
+    {
+      "key": "M1_loud_clean|short|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 1,
+      "errorCount": 0,
+      "durationMedianSec": 3.691973,
+      "durationMaxSec": 12.770975
+    },
+    {
+      "key": "M1_loud_clean|short|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.506213,
+      "durationMaxSec": 4.226032
+    },
+    {
+      "key": "M1_loud_noise|long|D",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 43.699955,
+      "durationMaxSec": 47.940884
+    },
+    {
+      "key": "M1_loud_noise|long|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 43.839274,
+      "durationMaxSec": 47.554467
+    },
+    {
+      "key": "M1_loud_noise|long|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 43.9089345,
+      "durationMaxSec": 50.526621
+    },
+    {
+      "key": "M1_loud_noise|short|D",
+      "n": 20,
+      "ngCount": 3,
+      "collapseCount": 2,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.366893,
+      "durationMaxSec": 5.34059
+    },
+    {
+      "key": "M1_loud_noise|short|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.366893,
+      "durationMaxSec": 3.761633
+    },
+    {
+      "key": "M1_loud_noise|short|R",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.274014,
+      "durationMaxSec": 3.854512
+    },
+    {
+      "key": "M1_quiet_clean|long|D",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 47.1829475,
+      "durationMaxSec": 64.830113
+    },
+    {
+      "key": "M1_quiet_clean|long|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 48.181405999999996,
+      "durationMaxSec": 70.031383
+    },
+    {
+      "key": "M1_quiet_clean|long|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 45.929069999999996,
+      "durationMaxSec": 49.585034
+    },
+    {
+      "key": "M1_quiet_clean|short|D",
+      "n": 20,
+      "ngCount": 2,
+      "collapseCount": 1,
+      "overflowCount": 1,
+      "errorCount": 0,
+      "durationMedianSec": 3.390113,
+      "durationMaxSec": 16.439728
+    },
+    {
+      "key": "M1_quiet_clean|short|N",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 1,
+      "overflowCount": 2,
+      "errorCount": 0,
+      "durationMedianSec": 3.459773,
+      "durationMaxSec": 47.554467
+    },
+    {
+      "key": "M1_quiet_clean|short|R",
+      "n": 20,
+      "ngCount": 2,
+      "collapseCount": 2,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.482993,
+      "durationMaxSec": 4.133152
+    },
+    {
+      "key": "M1_quiet_noise|long|D",
+      "n": 20,
+      "ngCount": 1,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 44.884172500000005,
+      "durationMaxSec": 60.139683
+    },
+    {
+      "key": "M1_quiet_noise|long|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 42.353196999999994,
+      "durationMaxSec": 48.111746
+    },
+    {
+      "key": "M1_quiet_noise|long|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 44.2340135,
+      "durationMaxSec": 49.551383
+    },
+    {
+      "key": "M1_quiet_noise|short|D",
+      "n": 20,
+      "ngCount": 2,
+      "collapseCount": 1,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.274014,
+      "durationMaxSec": 7.430385
+    },
+    {
+      "key": "M1_quiet_noise|short|N",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.274014,
+      "durationMaxSec": 4.179592
+    },
+    {
+      "key": "M1_quiet_noise|short|R",
+      "n": 20,
+      "ngCount": 0,
+      "collapseCount": 0,
+      "overflowCount": 0,
+      "errorCount": 0,
+      "durationMedianSec": 3.274014,
+      "durationMaxSec": 3.900952
+    }
+  ],
+  "pooled": {
+    "n": {
+      "N": 320,
+      "D": 320,
+      "R": 320
+    },
+    "comparisons": {
+      "N_vs_D": {
+        "pValue": 0.0002154297134260523,
+        "a": 3,
+        "b": 317,
+        "c": 21,
+        "d": 299
+      },
+      "N_vs_R": {
+        "pValue": 1,
+        "a": 3,
+        "b": 317,
+        "c": 4,
+        "d": 316
+      },
+      "R_vs_D": {
+        "pValue": 0.0007264130117779373,
+        "a": 4,
+        "b": 316,
+        "c": 21,
+        "d": 299
+      }
+    }
+  },
+  "byVariant": {
+    "loud_clean": {
+      "n": {
+        "N": 80,
+        "D": 80,
+        "R": 80
+      },
+      "comparisons": {
+        "N_vs_D": {
+          "pValue": 0.36706325361538394,
+          "a": 1,
+          "b": 79,
+          "c": 4,
+          "d": 76
+        },
+        "N_vs_R": {
+          "pValue": 0.9999999999999981,
+          "a": 1,
+          "b": 79,
+          "c": 0,
+          "d": 80
+        },
+        "R_vs_D": {
+          "pValue": 0.12029804110083729,
+          "a": 0,
+          "b": 80,
+          "c": 4,
+          "d": 76
+        }
+      }
+    },
+    "loud_noise": {
+      "n": {
+        "N": 80,
+        "D": 80,
+        "R": 80
+      },
+      "comparisons": {
+        "N_vs_D": {
+          "pValue": 0.05860673797220554,
+          "a": 0,
+          "b": 80,
+          "c": 5,
+          "d": 75
+        },
+        "N_vs_R": {
+          "pValue": 0.9999999999999981,
+          "a": 0,
+          "b": 80,
+          "c": 1,
+          "d": 79
+        },
+        "R_vs_D": {
+          "pValue": 0.2098499327391857,
+          "a": 1,
+          "b": 79,
+          "c": 5,
+          "d": 75
+        }
+      }
+    },
+    "quiet_clean": {
+      "n": {
+        "N": 80,
+        "D": 80,
+        "R": 80
+      },
+      "comparisons": {
+        "N_vs_D": {
+          "pValue": 0.4426073168935575,
+          "a": 2,
+          "b": 78,
+          "c": 5,
+          "d": 75
+        },
+        "N_vs_R": {
+          "pValue": 1,
+          "a": 2,
+          "b": 78,
+          "c": 3,
+          "d": 77
+        },
+        "R_vs_D": {
+          "pValue": 0.7194821137307245,
+          "a": 3,
+          "b": 77,
+          "c": 5,
+          "d": 75
+        }
+      }
+    },
+    "quiet_noise": {
+      "n": {
+        "N": 80,
+        "D": 80,
+        "R": 80
+      },
+      "comparisons": {
+        "N_vs_D": {
+          "pValue": 0.013626619009038088,
+          "a": 0,
+          "b": 80,
+          "c": 7,
+          "d": 73
+        },
+        "N_vs_R": {
+          "pValue": 1,
+          "a": 0,
+          "b": 80,
+          "c": 0,
+          "d": 80
+        },
+        "R_vs_D": {
+          "pValue": 0.013626619009038088,
+          "a": 0,
+          "b": 80,
+          "c": 7,
+          "d": 73
+        }
+      }
+    }
+  },
+  "byScript": {
+    "long": {
+      "n": {
+        "N": 160,
+        "D": 160,
+        "R": 160
+      },
+      "comparisons": {
+        "N_vs_D": {
+          "pValue": 0.019897240680444853,
+          "a": 2,
+          "b": 158,
+          "c": 11,
+          "d": 149
+        },
+        "N_vs_R": {
+          "pValue": 0.49843260188080474,
+          "a": 2,
+          "b": 158,
+          "c": 0,
+          "d": 160
+        },
+        "R_vs_D": {
+          "pValue": 0.0008175394941741686,
+          "a": 0,
+          "b": 160,
+          "c": 11,
+          "d": 149
+        }
+      }
+    },
+    "short": {
+      "n": {
+        "N": 160,
+        "D": 160,
+        "R": 160
+      },
+      "comparisons": {
+        "N_vs_D": {
+          "pValue": 0.010410002892485386,
+          "a": 1,
+          "b": 159,
+          "c": 10,
+          "d": 150
+        },
+        "N_vs_R": {
+          "pValue": 0.3710629629262831,
+          "a": 1,
+          "b": 159,
+          "c": 4,
+          "d": 156
+        },
+        "R_vs_D": {
+          "pValue": 0.1698995196918428,
+          "a": 4,
+          "b": 156,
+          "c": 10,
+          "d": 150
+        }
+      }
+    }
+  }
+}
