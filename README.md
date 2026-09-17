@@ -10,6 +10,7 @@
 - [2026/07-24-web-speech-quality-chrome150](./2026/07-24-web-speech-quality-chrome150/) — Chrome 150 の `SpeechRecognitionOptions.quality`(デフォルト "command")で onresult が返らなくなる問題の最小再現
 
 - [2026/09-13-fish-ref-denoise-ab](./2026/09-13-fish-ref-denoise-ab/) — Fish Audio S2 の zero-shot voice clone で、参照音声に DeepFilterNet 3 の denoise を通すと出力が崩れるかの A/B（N/D/R 3 条件 × ref 8 変種 × 台本 2 種 × n=20、Fisher 正確検定）
+- [2026/09-17-jev-character](./2026/09-17-jev-character/) — TypeSafe の System One モデル Jev に自由入力の性格文・状況・来客を渡し、反応（近寄る／様子見／隠れる）の確率分布を受け取ってコード側でサイコロを振る
 
 ## Secret スキャン
 
