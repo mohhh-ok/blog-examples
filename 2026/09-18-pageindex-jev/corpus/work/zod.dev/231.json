@@ -1,0 +1,77 @@
+{
+  "page": "Zod 4 migration guide and release notes. Breaking changes listed from highest to lowest impact. Install zod@^4.0.0. Error customization APIs unified under `error` parameter replacing deprecated message, invalid_type_error, required_error, errorMap. ZodError changes: issue formats streamlined, error map precedence changed, .format() and .flatten() deprecated for z.treeifyError(), .formErrors and .errors removed, .addIssue(s) deprecated. Type-specific changes: z.number() no infinite values, .int() safe integers only, z.string() formats as top-level functions, UUID stricter, base64url no padding. z.coerce input type unknown, missing keys error. .default() short-circuits on undefined (vs Zod 3 parsing), .prefault() for pre-parse default. z.object() defaults applied in optional fields, .strict()/.passthrough() deprecated for strictObject/looseObject, .merge() deprecated for .extend(), z.unknown/any required. z.array().nonempty() type changed, z.promise() deprecated. z.function() result no longer Zod schema, uses input/output, implements/implementAsync. .refine() ignores type predicates, ctx.path removed. Release notes: 14x faster strings, 7x faster arrays, 6.5x faster objects, 100x reduction in tsc instantiations, 57% smaller bundle (Zod 4 vs 3), 85% smaller with Zod Mini. New features: metadata registries, JSON Schema conversion, recursive objects, file schemas, internationalization, template literals, number formats (int32, uint32, int64, uint64, float32, float64), stringbool, discriminated union improvements, multi-value literals, refinements in schemas, .overwrite() method.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Error customization APIs unified under error parameter. Replaces message parameter (deprecated but still supported). Drops invalid_type_error and required_error - use error parameter with issue.input check instead. Drops errorMap renamed to error. Error functions can return plain string (not {message: string}), or undefined to yield to next error map. Supports error: function(issue) pattern."
+    },
+    {
+      "index": 1,
+      "manifest": "ZodError issue formats streamlined. Issue subtypes: $ZodIssueInvalidType, $ZodIssueTooBig, $ZodIssueTooSmall, $ZodIssueInvalidStringFormat, $ZodIssueNotMultipleOf, $ZodIssueUnrecognizedKeys, $ZodIssueInvalidValue, $ZodIssueInvalidUnion, $ZodIssueInvalidKey (new), $ZodIssueInvalidElement (new), $ZodIssueCustom. Old types removed/merged. All issues conform to $ZodIssueBase interface. Error map precedence changed - schema-level error maps take precedence over .parse() error maps. .format() and .flatten() methods deprecated for z.treeifyError(). .formErrors removed. .errors alias removed, use .issues. .addIssue(s) deprecated, push to issues array instead."
+    },
+    {
+      "index": 2,
+      "manifest": "z.number() changes: no infinite values (POSITIVE_INFINITY/NEGATIVE_INFINITY invalid), .safe() deprecated behaves like .int() no longer accepts floats, .int() accepts safe integers only within Number.MIN_SAFE_INTEGER to Number.MAX_SAFE_INTEGER range."
+    },
+    {
+      "index": 3,
+      "manifest": "z.string() updates: email, uuid, url, etc. moved to top-level functions (z.email(), z.uuid(), z.url(), z.emoji(), z.base64(), z.base64url(), z.nanoid(), z.cuid(), z.cuid2(), z.ulid(), z.ipv4(), z.ipv6(), z.cidrv4(), z.cidrv6(), z.iso.date(), z.iso.time(), z.iso.datetime(), z.iso.duration()). Method forms deprecated. UUID stricter per RFC 9562/4122 (variant bits must be 10), z.guid() for permissive UUID-like. Base64url no padding no longer allowed. .ip() dropped, use separate .ipv4() and .ipv6(). .ipv6() validation via URL constructor (stricter). .cidr() dropped, use .cidrv4() and .cidrv6(). Custom email regexes: z.email({pattern: z.regexes.html5Email}), z.regexes.rfc5322Email, z.regexes.unicodeEmail."
+    },
+    {
+      "index": 4,
+      "manifest": "z.coerce updates: input type now unknown (was string for coerce.string). Missing key on object with coerce field now errors - use .default() to declare fallback. Example: z.coerce.boolean() on missing key throws instead of defaulting to false."
+    },
+    {
+      "index": 5,
+      "manifest": ".default() behavior changed: if input undefined, short-circuits and returns default value (must be assignable to output type). Zod 3 parsed default value against input type. z.prefault() (pre-parse default) replicates Zod 3 behavior - parses default value before returning."
+    },
+    {
+      "index": 6,
+      "manifest": "z.object() changes: defaults applied within optional fields (Zod 3 had defaults not apply in optional), .strict() and .passthrough() deprecated for z.strictObject() and z.looseObject() functions, .strict() and .passthrough() remain for backwards compatibility, .strip() deprecated (was default behavior), .nonstrict() long-deprecated removed, .deepPartial() removed (deprecated in v3), z.unknown() and z.any() no longer key optional in inferred types, parse-time check added (v4.4.0+), use .optional() for key that may be absent, .merge() deprecated for .extend() (better TypeScript performance), .extend() preferred with .shape destructuring syntax."
+    },
+    {
+      "index": 7,
+      "manifest": "z.nativeEnum() deprecated in favor of z.enum(). z.enum() overloaded to support enum-like input. z.enum(Color) accepts native enums. ColorSchema.enum.Red canonical API. ColorSchema.Enum and ColorSchema.Values removed."
+    },
+    {
+      "index": 8,
+      "manifest": "z.array() changes: .nonempty() type changed - now behaves like .min(1) with inferred type string[] (not [string, ...string[]]). Old behavior use z.tuple([z.string()], z.string()) for [string, ...string[]] type."
+    },
+    {
+      "index": 9,
+      "manifest": "z.promise() deprecated. Rarely necessary - await before parsing with Zod. z.function() removed need for z.promise() in async functions."
+    },
+    {
+      "index": 10,
+      "manifest": "z.function() no longer Zod schema. Acts as standalone function factory. API changed: upfront input/output schemas instead of .args() and .returns() methods. Syntax: z.function({input: [...], output: ...}). .implement() and .implementAsync() methods for defining functions. .implementAsync() for async functions."
+    },
+    {
+      "index": 11,
+      "manifest": ".refine() changes: ignores type predicates (type narrowing no longer works), drops ctx.path (not eagerly evaluated), drops function as second argument pattern. Use error parameter instead for custom messages."
+    },
+    {
+      "index": 12,
+      "manifest": "z.ostring(), z.onumber(), etc. undocumented convenience methods removed."
+    },
+    {
+      "index": 13,
+      "manifest": "z.literal() drops symbol support (symbols not literal values, not comparable with ===)."
+    },
+    {
+      "index": 14,
+      "manifest": "Static .create() factories dropped (z.ZodString.create()). Use standalone factory functions instead."
+    },
+    {
+      "index": 15,
+      "manifest": "z.record() changes: drops single argument usage (z.record(z.string()) invalid), requires two arguments z.record(z.string(), z.string()). Improves enum support: z.record(z.enum(['a','b','c']), z.number()) now exhaustive {a: number; b: number; c: number} not partial. z.partialRecord() for optional keys."
+    },
+    {
+      "index": 16,
+      "manifest": "z.intersection() throws regular Error on merge conflict (Zod 3 threw ZodError with invalid_intersection_types issue). Unmergable results indicate structural schema problem not validation error."
+    },
+    {
+      "index": 17,
+      "manifest": "Internal changes: ZodType generics changed from <Output, Def, Input=Output> to <Output=unknown, Input=unknown>, Def generic removed. Input defaults to unknown not Output. z.ZodTypeAny eliminated, use z.ZodType. z.core subpackage added for shared utilities. ._def moved to ._zod.def. ZodEffects dropped - refinements live in schemas, stored in checks array. ZodTransform added for transforms. ZodPreprocess dropped, z.preprocess() returns ZodPipe. ZodBranded dropped, branding via direct type modification."
+    }
+  ]
+}

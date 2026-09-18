@@ -1,0 +1,50 @@
+{
+  "page": "Migration guide from rolldown-vite (Vite 7 with Rolldown) to Vite 8.\n- rolldown-vite: technical preview release for Rolldown integrated Vite v6 & v7\n- Vite 8 uses Rolldown and Oxc instead of esbuild and Rollup\n- Default browser target changes: Chrome 107→111, Edge 107→111, Firefox 104→114, Safari 16.0→16.4\n- Baseline Widely Available feature sets as of 2026-01-01 (two and a half years old)\n- Gradual migration: rolldown-vite package for intermediate step\n- Undo rolldown-vite in package.json devDependencies, update to vite ^8.0.0\n- Dependency optimizer: now uses Rolldown instead of esbuild\n- optimizeDeps.esbuildOptions deprecated, convert to optimizeDeps.rolldownOptions automatically\n- JavaScript transforms: Oxc instead of esbuild\n- esbuild option deprecated, convert to oxc option automatically\n- esbuild.jsx → oxc.jsx transformations\n- esbuild.supported not supported by Oxc, see oxc-project/oxc#15373\n- Oxc doesn't support lowering native decorators yet, waiting for spec, see oxc-project/oxc#9170\n- Babel/SWC workaround available for decorators\n- esbuild optional dependency now, install if plugins use transformWithEsbuild\n- transformWithEsbuild deprecated, use transformWithOxc instead\n- Oxc Minifier for JavaScript minification\n- build.minify: 'esbuild' deprecated, switch back option available (install esbuild)\n- CSS Minification: Lightning CSS by default instead of esbuild\n- build.cssMinify: 'esbuild' option available (install esbuild)\n- Consistent CommonJS interop for default imports\n- Module type support auto detection by Rolldown\n- build.rollupOptions → build.rolldownOptions\n- worker.rollupOptions → worker.rolldownOptions\n- build.commonjsOptions now no-op\n- build.dynamicImportVarsOptions.warnOnError now no-op\n- resolve.alias[].customResolver deprecated, use custom plugin with resolveId hook\n- import.meta.hot.accept with URL no longer supported, pass id instead\nHow do I migrate from Vite 7 to 8? What changed with bundler tools? How do I handle esbuild deprecation? What's the Oxc minifier? How do I migrate CSS minification?"
+,
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Default browser target updates in Vite 8.\n- Chrome: 107 → 111\n- Edge: 107 → 111\n- Firefox: 104 → 114\n- Safari: 16.0 → 16.4\n- Baseline Widely Available: 2026-01-01\n- Released about two and a half years ago\nWhat are the new default browser targets?"
+    },
+    {
+      "index": 1,
+      "manifest": "Rolldown integration and dependency optimizer changes.\n- Vite 8 uses Rolldown (https://rolldown.rs/) and Oxc (https://oxc.rs/)\n- Replaces esbuild and Rollup\n- rolldown-vite: intermediate step for gradual migration from Vite 7\n- Dependency optimizer: Rolldown instead of esbuild\n- optimizeDeps.esbuildOptions deprecated, auto-converts to optimizeDeps.rolldownOptions\n- Conversion mappings: minify, treeShaking, define, loader, preserveSymlinks, resolveExtensions, mainFields, conditions, keepNames, platform, plugins\n- configResolved hook: access config.optimizeDeps.rolldownOptions\nHow does Rolldown replace esbuild and Rollup?"
+    },
+    {
+      "index": 2,
+      "manifest": "JavaScript transforms with Oxc.\n- Oxc replaces esbuild for JavaScript transformation\n- esbuild option deprecated, auto-converts to oxc option\n- jsx transformations: preserve, automatic (runtime), transform/classic (pragma/pragmaFrag)\n- jsxImportSource → oxc.jsx.importSource\n- jsxFactory → oxc.jsx.pragma\n- jsxFragment → oxc.jsx.pragmaFrag\n- jsxDev → oxc.jsx.development\n- jsxSideEffects → oxc.jsx.pure\n- define, banner, footer options conversion\n- esbuild.supported not supported by Oxc (oxc-project/oxc#15373)\n- Native decorators: not supported, waiting for spec (oxc-project/oxc#9170)\n- Babel/SWC workaround: @rolldown/plugin-babel or @rollup/plugin-swc\n- @babel/plugin-proposal-decorators version: '2023-11'\nHow do I migrate esbuild options to Oxc?"
+    },
+    {
+      "index": 4,
+      "manifest": "JavaScript minification with Oxc.\n- Oxc Minifier for JavaScript minification\n- build.minify: 'esbuild' deprecated, install esbuild as devDependency if needed\n- esbuild.minify* options → build.rolldownOptions.output.minify\n- esbuild.drop → build.rolldownOptions.output.minify.compress.drop*\n- Property mangling not supported by Oxc (mangleProps, reserveProps, mangleQuoted, mangleCache) (oxc-project/oxc#15375)\n- Minifier assumptions differ: see esbuild vs Oxc comparison\nHow do I handle JavaScript minification changes?"
+    },
+    {
+      "index": 5,
+      "manifest": "CSS minification with Lightning CSS.\n- Lightning CSS: default CSS minifier instead of esbuild\n- build.cssMinify: 'esbuild' option available (install esbuild)\n- Better syntax lowering\n- CSS bundle size might increase slightly\nHow do I handle CSS minification changes?"
+    },
+    {
+      "index": 6,
+      "manifest": "CommonJS interop consistency changes.\n- Default import from CJS: consistent behavior across dev and build\n- Conditions for default = module.exports: .mjs/.mts file, package.json type: 'module', __esModule not set to true\n- Otherwise: default = module.exports.default\n- Previous behavior different in dev vs build\n- legacy.inconsistentCjsInterop: true: restore old behavior (deprecated)\n- Report affected packages to package author\n- Link to Rolldown docs for context\nHow do I handle CJS interop changes?"
+    },
+    {
+      "index": 7,
+      "manifest": "Removed module resolution format sniffing.\n- browser and module fields no longer used heuristically\n- Always respects resolve.mainFields order\n- Use resolve.alias or package manager patches (patch-package, pnpm patch) if needed\nWhat changed with module resolution?"
+    },
+    {
+      "index": 8,
+      "manifest": "Require calls for externalized modules.\n- require() calls for externalized modules now preserved\n- No longer converted to import statements\n- esmExternalRequirePlugin available for conversion if needed\n- Re-exported from vite or rolldown/builtin-plugins\nHow do I handle externalized module requires?"
+    },
+    {
+      "index": 9,
+      "manifest": "import.meta.url in UMD/IIFE.\n- No longer polyfilled in UMD/IIFE output\n- Replaced with undefined by default\n- Use define option with build.rolldownOptions.output.intro for custom behavior\nHow do I handle import.meta.url in UMD/IIFE?"
+    },
+    {
+      "index": 10,
+      "manifest": "Removed and deprecated Rollup options.\n- build.rollupOptions.watch.chokidar removed, migrate to build.rolldownOptions.watch.watcher\n- build.rollupOptions.output.manualChunks: object form removed, function form deprecated\n- build.rolldownOptions.codeSplitting: more flexible replacement\n- build() throws BundleError instead of raw error, access .errors array\n- Module type support and auto detection by Rolldown\n- moduleType: 'js' for custom loaders\n- build.rollupOptions → build.rolldownOptions (deprecated)\n- worker.rollupOptions → worker.rolldownOptions (deprecated)\n- build.commonjsOptions (no-op)\n- build.dynamicImportVarsOptions.warnOnError (no-op)\n- resolve.alias[].customResolver (deprecated, use plugin with resolveId hook)\nWhat Rollup options were removed or deprecated?"
+    },
+    {
+      "index": 11,
+      "manifest": "Advanced breaking changes for plugin authors.\n- Extglobs not yet supported (rolldown-vite#365)\n- TypeScript legacy namespace: partial support only\n- define: no object reference sharing (each variable gets copy)\n- bundle object changes: no assignment (use this.emitFile), reference not shared across hooks, structuredClone errors\n- Parallel hooks work as sequential (Rolldown limitation)\n- 'use strict' not injected sometimes\n- ES5 and below transformation not supported with plugin-legacy (rolldown-vite#452)\n- Passing same browser multiple versions to build.target: now errors\n- Rolldown missing features: system format, amd format, shouldTransformCachedModule, resolveImportMeta, renderDynamicImport, resolveFileUrl hooks\n- parseAst/parseAstAsync deprecated, use parseSync/parse instead\n- Comments removed before renderChunk hook (after in Rollup)\n- Comments outside removal scope moved (not removed like Rollup)\nWhat advanced changes affect plugin authors?"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "page": "TanStack Start integration for running Elysia in server routes. Create src/routes/api.$.ts file. Define Elysia server with prefix '/api'. Export Route via createFileRoute with server.handlers object. Handlers: GET handle, POST handle. Elysia runs on /api. Support additional HTTP methods via server.handlers. Use treaty from @elysia/eden and createIsomorphicFn from @tanstack/react-start.\nQuestions: How do you run Elysia on TanStack Start? What file naming convention is used? How do you configure handlers?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Eden Treaty setup for end-to-end type safety. Use createIsomorphicFn() to create separate instances for server and client. Server: treaty(app).api calls Elysia directly without HTTP. Client: treaty<typeof app>('localhost:3000').api makes HTTP requests. Automatic switching based on runtime environment. Provides full type safety.\nQuestions: How do you set up isomorphic functions? What is the difference between server and client calls?"
+    },
+    {
+      "index": 1,
+      "manifest": "Loader data fetching before component render. TanStack Start supports Loader to fetch data before rendering. Example: createFileRoute with loader property calling getTreaty().get(). Use Route.useLoaderData() in component. On SSR, loader runs on server without HTTP overhead. On client navigation, makes HTTP request to endpoint. Ensures data availability before render.\nQuestions: How do you fetch data with Loaders? When does it run server vs client? Why avoid HTTP overhead?"
+    },
+    {
+      "index": 2,
+      "manifest": "React Query integration for client-side data fetching. useQuery hook with queryKey and queryFn: getTreaty().get(). Compatible with React Query features: caching, pagination, infinite queries, refetching. Provides client-side data management.\nQuestions: How do you integrate React Query? What features are supported?"
+    }
+  ]
+}

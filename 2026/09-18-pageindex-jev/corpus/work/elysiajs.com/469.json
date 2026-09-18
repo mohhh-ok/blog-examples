@@ -1,0 +1,9 @@
+{
+  "page": "Macro - reusable route options for reducing repetition. Macro is reusable route option with type soundness, similar to function but as route option. Solves problem of repeating same options (cookie, beforeHandle) across routes. Example: .macro('auth', { cookie, beforeHandle }), then .post('/user', handler, { auth: true }). Macro inlines properties to route.\nQuestions: What is macro? How do you define it? How do you use it?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Assignment task: define macro for Fibonacci number check. Solution: .macro('isFibonacci', { body: t.Number(), beforeHandle({ body, status }) { if(!isFibonacci(body)) return status(418) } }). Use via { isFibonacci: true } in route. Enforces type and short-circuits via status.\nQuestions: How do you define macro with schema? How do you enforce types?"
+    }
+  ]
+}

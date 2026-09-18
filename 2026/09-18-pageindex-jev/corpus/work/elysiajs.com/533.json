@@ -1,0 +1,29 @@
+{
+  "page": "OpenTelemetry integration for Elysia. Install @elysia/opentelemetry plugin. One-line config, span names from function names, lifecycle grouping, code wrapping for specific parts, Server-Sent Event and streaming support, compatible with any OpenTelemetry library. Export to Jaeger, Zipkin, New Relic, Axiom. Core functions: opentelemetry(), record, getCurrentSpan, setAttributes. Utilities for observability: getTracer, record for manual span wrapping. Named functions important for trace understanding. OpenTelemetry SDK runs under Elysia's request span. Bun bunfig.toml preload for instrumentation setup. Production deployment needs external modules. npm package versions: @elysia/opentelemetry ^1.2.0, @opentelemetry/instrumentation-pg ^0.52.0, elysia ^1.2.25. How to set up OpenTelemetry with Elysia? How to record custom spans? How to export telemetry data? How to instrument external libraries? How to deploy with bundlers?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "OpenTelemetry SDK application to Elysia server. Separate SDK from server routes. Gettracer and record utilities. Record is label for code shown in trace, handles auto-closing and exception capture. Similar to startActiveSpan. Function names become span names for better trace understanding. Named vs arrow functions for trace clarity. How does record wrap code? What does getTracer return?"
+    },
+    {
+      "index": 1,
+      "manifest": "Record utility from @elysia/opentelemetry. Equivalent to OpenTelemetry startActiveSpan. Auto-closes and captures exceptions. Label for code section shown in trace. Usage: record('database.query', () => { db.query(...) }). Handles span lifecycle automatically."
+    },
+    {
+      "index": 2,
+      "manifest": "getCurrentSpan utility to get current request span outside handler. From @elysia/opentelemetry. Uses AsyncLocalStorage. setAttributes to set span attributes with key-value pairs. getspan().setAttributes() for custom attributes. How to access span from utility functions?"
+    },
+    {
+      "index": 3,
+      "manifest": "setAttributes utility syntax sugar for getCurrentSpan().setAttributes. Sets custom attributes on current span. Accepts object with string keys and values. Usage in utilities outside handlers."
+    },
+    {
+      "index": 4,
+      "manifest": "Configuration reference for OpenTelemetry plugin. See /plugins/opentelemetry for options. Plugin-specific settings for integration."
+    },
+    {
+      "index": 5,
+      "manifest": "Instrumentations advanced concept. SDK must run before importing instrumented modules. PgInstrumentation example. Bun setup: src/instrumentation.ts with opentelemetry and instrumentations. bunfig.toml preload for module setup. Production build with bun build --compile --external flag. node_modules directory required at runtime. Package.json dependencies vs devDependencies. Versions: pg ^8.15.6. bun install --production for production setup. What is instrumentation preloading? Why external modules for bundling?"
+    }
+  ]
+}

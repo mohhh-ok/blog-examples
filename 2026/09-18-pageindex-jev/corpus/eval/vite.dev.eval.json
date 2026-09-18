@@ -1,0 +1,74 @@
+[
+  {
+    "id": "309",
+    "path": ["vite.dev", "Environment API", "Formalizing Environments"],
+    "question": "Before Vite 6, how many implicit Environments existed and what were they called?",
+    "answer": "Two: `client`, and optionally `ssr`."
+  },
+  {
+    "id": "200",
+    "path": ["vite.dev", "Troubleshooting", "Others", "Cross drive links on Windows"],
+    "question": "What Windows command can create a virtual drive link that causes cross-drive-link problems with Vite?",
+    "answer": "The `subst` command."
+  },
+  {
+    "id": "163",
+    "path": ["vite.dev", "Server-Side Rendering (SSR)", "SSR Externals"],
+    "question": "Which config option should you add a linked dependency to if you want to test it as if it weren't linked during SSR?",
+    "answer": "`ssr.external`"
+  },
+  {
+    "id": "303",
+    "path": ["vite.dev", "Configuring Vite", "Config Intellisense"],
+    "question": "What JSDoc annotation gives IDE intellisense for a plain JS Vite config object without using `defineConfig`?",
+    "answer": "`/** @type {import('vite').UserConfig} */`"
+  },
+  {
+    "id": "18",
+    "path": ["vite.dev", "Project Philosophy", "An Active Ecosystem"],
+    "question": "What tool does the Vite team use to run CI for major ecosystem projects against selected PRs?",
+    "answer": "`vite-ecosystem-ci`"
+  },
+  {
+    "id": "371",
+    "path": ["vite.dev", "Shared Options", "css.postcss"],
+    "question": "What is the type signature of the `css.postcss` Vite config option?",
+    "answer": "`string | (postcss.ProcessOptions & { plugins?: postcss.AcceptedPlugin[] })`"
+  },
+  {
+    "id": "262",
+    "path": ["vite.dev", "Plugin API", "Chunk Import Map Information"],
+    "question": "What is the default filename of the import map emitted to the bundle when `build.chunkImportMap` is enabled?",
+    "answer": "`importmap.json`"
+  },
+  {
+    "id": "322",
+    "path": ["vite.dev", "Environment API for Plugins", "Accessing the Current Environment in Hooks"],
+    "question": "What property do Vite plugin hooks now expose in their context to access the current environment, replacing the old `ssr` boolean parameter?",
+    "answer": "`this.environment`"
+  },
+  {
+    "id": "473",
+    "path": ["vite.dev", "Worker Options", "worker.plugins"],
+    "question": "What is the type signature of Vite's `worker.plugins` option?",
+    "answer": "`() => (Plugin | Plugin[])[]`"
+  },
+  {
+    "id": "272",
+    "path": ["vite.dev", "HMR API", "`hot.dispose(cb)`"],
+    "question": "Which Vite HMR API call should a self-accepting module use to clean up persistent side effects created by its updated copy?",
+    "answer": "`import.meta.hot.dispose(cb)`"
+  },
+  {
+    "id": "245",
+    "path": ["vite.dev", "Plugin API", "Vite Specific Hooks", "`configureServer`"],
+    "question": "How can a Vite plugin inject middleware to run after Vite's internal middlewares are installed, from within `configureServer`?",
+    "answer": "By returning a function from `configureServer`; that returned function is called after the internal middlewares are installed."
+  },
+  {
+    "id": "425",
+    "path": ["vite.dev", "Build Options", "build.rolldownOptions"],
+    "question": "Why is it recommended to set the top-level `input` option instead of `build.rolldownOptions.input`?",
+    "answer": "Because the top-level `input` option is also used in dev, whereas `build.rolldownOptions.input` only overrides it for build."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "page": "React Email library integration with Elysia and Bun. JSX components for email creation. Installation: bun add -d react-email, bun add @react-email/components react react-dom. Bun direct JSX import. TypeScript jsconfig with jsx: react. Tailwind styling in emails. PreviewProps for email playground preview. Email preview command: bun email. Rendering: renderToStaticMarkup from react-dom/server. Multiple providers: Nodemailer, Resend, AWS SES, Sendgrid. Email template structure src/emails directory. How to create email templates? How to send emails? Which providers integrate?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Installation. bun add -d react-email, bun add @react-email/components react react-dom. Email script in package.json: 'email': 'email dev --dir src/emails'. Directory: src/emails. TypeScript: jsx: react in tsconfig.json. Setup for email development."
+    },
+    {
+      "index": 1,
+      "manifest": "First email template. File src/emails/otp.tsx. Tailwind, Section, Text components from @react-email/components. PreviewProps for playground. Elysia handler returns email route. How to structure email components?"
+    },
+    {
+      "index": 2,
+      "manifest": "Preview command: bun email. Browser window shows preview. Playground visualization."
+    },
+    {
+      "index": 3,
+      "manifest": "Sending email with renderToStaticMarkup. Nodemailer: nodemailer.createTransport, transporter.sendMail. Resend: new Resend API. AWS SES: SES client, credentials. Sendgrid: setApiKey, send method. Integration examples. Multiple providers supported."
+    }
+  ]
+}

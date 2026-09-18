@@ -1,0 +1,17 @@
+{
+  "page": "- Pretty JSON Middleware: enables JSON pretty-print for JSON response bodies\n- Activated by adding a `?pretty` query param to the URL; the JSON response gets formatted with indentation\n- Import: `import { Hono } from 'hono'`, `import { prettyJSON } from 'hono/pretty-json'`\n- Usage: `app.use(prettyJSON())`, optionally with options like `prettyJSON({ space: 4 })`\n- Options: `space` (number, default `2`) controls indentation spaces; `query` (string, default `pretty`) sets the query parameter name; `force` (boolean, default `false`) always prettifies JSON regardless of the query parameter\n- Questions answered: How do I pretty-print JSON responses in Hono? What query parameter triggers pretty JSON? How do I change the indentation size? How do I always force pretty JSON output? How do I rename the pretty query parameter?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- Import statements for Pretty JSON Middleware\n- `import { Hono } from 'hono'`\n- `import { prettyJSON } from 'hono/pretty-json'`\n- Answers: How do I import the Pretty JSON Middleware?"
+    },
+    {
+      "index": 1,
+      "manifest": "- Basic usage of Pretty JSON Middleware\n- `const app = new Hono()`\n- `app.use(prettyJSON())` registers the middleware; options can be passed, e.g. `prettyJSON({ space: 4 })`\n- Example route: `app.get('/', (c) => { return c.json({ message: 'Hono!' }) })`\n- Answers: How do I enable Pretty JSON Middleware? How do I pass options like custom indentation to prettyJSON()?"
+    },
+    {
+      "index": 2,
+      "manifest": "- `space`: `number`, optional, default `2` — number of spaces used for indentation\n- `query`: `string`, optional, default `pretty` — the name of the query string parameter that triggers prettifying\n- `force`: `boolean`, optional, default `false` — when `true`, JSON responses are always prettified regardless of the query parameter\n- Answers: What is the default indentation for pretty JSON? How do I rename the `pretty` query param? How do I force pretty JSON always, without a query param? What are the configuration options for Pretty JSON Middleware?"
+    }
+  ]
+}

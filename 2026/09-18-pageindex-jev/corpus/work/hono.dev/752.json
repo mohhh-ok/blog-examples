@@ -1,0 +1,21 @@
+{
+  "page": "Presets: Hono provides routers for specific purposes. Constructor accepts router option. Presets handle common use cases without manual specification. All presets export same Hono class, only router differs. Interchangeable usage. Three presets: hono (default SmartRouter), hono/quick (LinearRouter+TrieRouter), hono/tiny (PatternRouter only).",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "hono preset: import from 'hono'. Uses SmartRouter with RegExpRouter and TrieRouter. Recommended for most use cases."
+    },
+    {
+      "index": 1,
+      "manifest": "hono/quick preset: import from 'hono/quick'. Uses SmartRouter with LinearRouter and TrieRouter. Designed for initialization per request."
+    },
+    {
+      "index": 2,
+      "manifest": "hono/tiny preset: import from 'hono/tiny'. Uses PatternRouter only. Smallest router for resource-limited environments."
+    },
+    {
+      "index": 3,
+      "manifest": "Preset selection table: hono for Deno/Bun/Node.js long-life servers, Fastly Compute, Cloudflare Workers, Deno Deploy. hono/quick for per-request initialization environments. hono/tiny for limited resource environments."
+    }
+  ]
+}

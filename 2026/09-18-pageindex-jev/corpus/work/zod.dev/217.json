@@ -1,0 +1,21 @@
+{
+  "page": "Zod Mini tree-shakable variant of Zod with functional API. Import from zod/mini or @zod/mini standalone package. Same functionality as regular Zod but using functions instead of methods for tree-shaking. Example: z.nullable(z.optional(z.string())) vs z.string().optional().nullable(). Bundle size reduction: 64% smaller for simple boolean parse (2.12kb vs 5.91kb gzipped). Tree-shaking removes unused code; bundlers cannot remove unused methods but can remove unused functions. Use cases: frontend with slow mobile connections. Not recommended for backend or if bundle size < 10kb not significant. Less discoverable DX than regular Zod. Base class ZodMiniType extends core.$ZodType. Questions: What is Zod Mini? How much smaller is bundle? When should I use Zod Mini? What checks are available? What methods does ZodMiniType have?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Tree-shaking or dead-code elimination. Regular Zod schemas provide convenience methods bundlers cannot remove. Zod Mini uses top-level functions which bundlers can tree-shake. Example regular Zod: z.string().min(5).max(10).trim() becomes z.string().check(z.minLength(5), z.maxLength(10), z.trim()). Bundle sizes: simple boolean parse with Zod Mini 2.12kb gzipped vs Zod 5.91kb (64% reduction). Object schema with Zod Mini 4.0kb vs Zod 13.1kb (69% reduction). Provides understanding of relative bundle sizes."
+    },
+    {
+      "index": 1,
+      "manifest": "Use regular Zod unless very strict bundle size constraints. Bundle size on scale of Zod (5-10kb) only meaningful for frontend optimizing for slow mobile in rural/developing areas. Backend development: bundle size not meaningful even on Lambda - 17kb gzipped Zod adds only ~0.6ms cold start. DX: Mini API more verbose, less discoverable, harder to discover methods via Intellisense than chained APIs. Cannot quickly build schemas with chained methods. Internet speed: round trip to server (100-200ms) dwells download time for 10kb. Only on slow 3G (sub-1Mbps) does extra 10kb become significant."
+    },
+    {
+      "index": 2,
+      "manifest": "ZodMiniType base class for all Mini schemas, extends z.core.$ZodType. Parse methods: parse, parseAsync, safeParse, safeParseAsync (same as regular Zod). .check() method passes checks as arguments: z.minLength(5), z.maxLength(10), z.refine(), z.trim(). Check functions: z.lt(value), z.lte/z.maximum(value), z.gt(value), z.gte/z.minimum(value), z.positive(), z.negative(), z.nonpositive(), z.nonnegative(), z.multipleOf(value), z.maxSize(value), z.minSize(value), z.size(value), z.maxLength(value), z.minLength(value), z.length(value), z.regex(regex), z.lowercase(), z.uppercase(), z.includes(value), z.startsWith(value), z.endsWith(value), z.property(key, schema), z.mime(value). Custom checks: z.refine(), z.check() (replaces superRefine). Mutations (no type change): z.overwrite(value => newValue), z.normalize(), z.trim(), z.toLowerCase(), z.toUpperCase(). Metadata: z.meta(), z.describe(). Other methods: .register() for registries, .brand() for branded types, .clone(def) for cloning schemas."
+    },
+    {
+      "index": 3,
+      "manifest": "No default locale. Regular Zod loads English (en) locale automatically. Zod Mini does not load locale to reduce bundle size when error messages unnecessary, localized to non-English, or customized. Default issue message: 'Invalid input'. Load English locale with z.config(z.locales.en()). Refer to Locales docs for localization."
+    }
+  ]
+}

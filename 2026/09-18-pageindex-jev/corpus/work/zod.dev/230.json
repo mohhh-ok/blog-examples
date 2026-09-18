@@ -1,0 +1,4 @@
+{
+  "page": "Zod (zod/v4) flagship library of Zod ecosystem. Balances developer experience and bundle size for majority of applications. Maps one-to-one to TypeScript's type system. Chainable, autocomplete-friendly method-based API. All schemas extend z.ZodType base class which extends z.$ZodType from zod/v4/core. Methods for parsing: parse, safeParse, parseAsync, safeParseAsync. Refinements: refine, superRefine (deprecated), overwrite. Wrappers: optional, nonoptional, nullable, nullish, default, array, or, transform, catch, pipe, readonly. Metadata: register, describe, meta. Utilities: check, clone, brand, isOptional, isNullable. For strict bundle size constraints, use Zod Mini. Questions: How do I define schemas? How to parse data? What methods are available? How to add refinements? How to transform schemas?",
+  "sections": []
+}

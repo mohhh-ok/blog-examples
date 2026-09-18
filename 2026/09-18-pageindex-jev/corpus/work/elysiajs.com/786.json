@@ -1,0 +1,13 @@
+{
+  "page": "Validation error custom messages. Elysia.t for validation with error property. Error overrides default message. Validation detail information: type, on, value, property, message, summary, found, expected, errors array. Custom error wrapper in validationDetail function. Brings back validation detail while having custom message. validationDetail import from elysia. How to customize error messages? How to show validation details?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Validation detail default information. Type validation. On params/body/query. Value actual value. Property path. Message custom or default. Summary expected format. Found actual found. Expected schema expected. Errors array of error objects. When custom error provided, detail overridden."
+    },
+    {
+      "index": 1,
+      "manifest": "Assignment exercise. Extend Elysia context. Custom error message on schema."
+    }
+  ]
+}

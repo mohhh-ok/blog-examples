@@ -1,0 +1,65 @@
+{
+  "page": "OpenAPI patterns and advanced usage. Elysia has first-class OpenAPI support and follows spec by default. Install plugin: `bun add @elysia/openapi`. Register: .use(openapi()). Access at /openapi - Scalar UI with generated docs from server. Or access raw spec at /openapi/json.\nQuestions: How do you generate OpenAPI docs? Where are docs available? How do you access raw spec?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "OpenAPI from types generation. Optional but recommended. Two approaches: runtime schema (default) or TypeScript types (Type Gen via fromTypes). Specify root file exporting Elysia instance. Import generator: `openapi({ references: fromTypes() })`. File path from project root provided to generator. Elysia reads type of exported instance to generate documentation. Co-exists with runtime schema - runtime takes precedence.\nQuestions: How do you generate from types? What is co-existence? Which takes precedence?"
+    },
+    {
+      "index": 1,
+      "manifest": "Production environment Type Gen. Pre-generate .d.ts declaration file for type access. Use in openapi config: `fromTypes(process.env.NODE_ENV === 'production' ? 'dist/index.d.ts' : 'src/index.ts')`. Provides type declaration for bundled/executable Elysia.\nQuestions: How do you handle Type Gen in production? What file format is needed?"
+    },
+    {
+      "index": 2,
+      "manifest": "Explicit types caveat for Type Gen. Works best with implicit types. Explicit types may cause generator resolution failure. Solution: use Prettify helper to inline type: `type Prettify<T> = { [K in keyof T]: T[K] } & {}`. Apply to function return type: `function getUser(): Prettify<User>`. Inlines type for proper generation.\nQuestions: What explicit types issue? How do you fix it? What is Prettify?"
+    },
+    {
+      "index": 3,
+      "manifest": "Root path configuration for Type Gen. Unreliable to guess project root, especially monorepo. Provide path explicitly in fromTypes options: `fromTypes('src/index.ts', { projectRoot: path.join('..', import.meta.dir) })`. Ensures generator runs correctly.\nQuestions: Why specify root path? How do you set it?"
+    },
+    {
+      "index": 4,
+      "manifest": "Custom tsconfig.json handling for Type Gen. Multiple tsconfig.json files require specifying correct file for type generation. Configure in fromTypes options: `fromTypes('src/index.ts', { tsconfigPath: 'tsconfig.dts.json' })`. Path reference from project root.\nQuestions: How do you specify custom tsconfig? Why needed?"
+    },
+    {
+      "index": 5,
+      "manifest": "Standard schema with OpenAPI mapping. Elysia uses native method from each schema to convert to OpenAPI. If schema doesn't provide native method, use mapJsonSchema: { zod: toJSONSchema }, { valibot: toJsonSchema }, { effect: JSONSchema.make }. Supports Zod, Valibot, Effect with different conversion methods.\nQuestions: How do you map schemas? What schemas are supported? What converters are needed?"
+    },
+    {
+      "index": 6,
+      "manifest": "Route description via detail field. Use detail property to explicitly describe route following OpenAPI V3 spec. Example: summary, description, tags. Description properties: on field values, on body object for overall description. Auto-completion and type-safety included.\nQuestions: How do you describe routes? What detail properties exist?"
+    },
+    {
+      "index": 7,
+      "manifest": "Response headers annotation via withHeader. Wrap schema with withHeader: `withHeader(t.Literal('Hi'), { 'x-powered-by': t.Literal('Elysia') })`. Annotation only - doesn't enforce actual headers. Manually set headers: `set.headers['x-powered-by'] = 'Elysia'`.\nQuestions: How do you annotate headers? What must you do manually?"
+    },
+    {
+      "index": 8,
+      "manifest": "Hide route from Swagger page. Set detail.hide: true in route config. Example: detail: { hide: true }. Route not shown in documentation.\nQuestions: How do you hide routes? When should you hide?"
+    },
+    {
+      "index": 9,
+      "manifest": "Tags for endpoint grouping. Define available tags in openapi config: documentation.tags array with name and description. Assign endpoints to tags via detail.tags: ['App']. Separates endpoints into groups. Can use tags on instance or group via Elysia constructor or .group().\nQuestions: How do you group endpoints? How do you define tags? How assign tags?"
+    },
+    {
+      "index": 10,
+      "manifest": "Models for schema reuse. Use reference model via .model() to define reusable schemas. Reference by string name in route: response: { 200: 'User' }. Schemas listed in Components section. Simplifies documentation.\nQuestions: How do you use models? What is Components section?"
+    },
+    {
+      "index": 11,
+      "manifest": "Guard for applying documentation to routes. Use guard with detail property: .guard({ detail: { description: 'Require user logged in' } }, (app) => app.get().post()). Applies detail to all routes in guard.\nQuestions: How do you use guard with detail?"
+    },
+    {
+      "index": 12,
+      "manifest": "Change OpenAPI endpoint path via config. Default path: /openapi. Customize: .use(openapi({ path: '/v2/openapi' })). Changes endpoint URL.\nQuestions: How do you customize endpoint path?"
+    },
+    {
+      "index": 13,
+      "manifest": "Customize OpenAPI info. Set documentation.info properties: title, version. Useful for: adding title, setting API version, adding description, explaining tags. Example: { title: 'Elysia Documentation', version: '1.0.0' }.\nQuestions: How do you customize info? What properties matter?"
+    },
+    {
+      "index": 14,
+      "manifest": "Security configuration for API endpoints. Define security schemes in documentation.components.securitySchemes. Example: bearerAuth with type 'http', scheme 'bearer', bearerFormat 'JWT'. Apply to controller: detail { security: [{ bearerAuth: [] }] }. Ensures endpoints require valid JWT.\nQuestions: How do you define security? How apply to routes?"
+    }
+  ]
+}

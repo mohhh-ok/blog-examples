@@ -1,0 +1,25 @@
+{
+  "page": "Your first route introduction. Website request requires path and method. Route determines resource. HTTP verbs: GET, POST, DELETE. Route definition: HTTP method call, path argument, handler function. .get(), .post(), .delete() methods. .listen() for server startup. Routes grouped by prefix. Static paths /elysia. Dynamic paths /friends/:name?. Wildcards /flame-chasers/*. Optional parameters with ?. How to define routes? What are route types? How to create first route?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Routing concepts. Path types 3 types: static, dynamic, wildcards. Static hardcoded strings. Dynamic :param captures values. Wildcards * rest of path."
+    },
+    {
+      "index": 1,
+      "manifest": "Static path hardcoded /hello, /hi. No variable capture."
+    },
+    {
+      "index": 2,
+      "manifest": "Dynamic path /id/:id captures value. /id/:name?optional. Optional path parameters."
+    },
+    {
+      "index": 3,
+      "manifest": "Wildcards /id/* capture rest. Params['*'] access."
+    },
+    {
+      "index": 4,
+      "manifest": "Assignment exercise. 3 paths: static /elysia, dynamic /friends/:name?, wildcard /flame-chasers/*. Response handlers for each."
+    }
+  ]
+}

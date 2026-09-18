@@ -1,0 +1,77 @@
+{
+  "page": "HonoRequest: wraps Request object, accessible from c.req. Provides methods for accessing request data: param(), query(), queries(), header(), parseBody(), json(), text(), arrayBuffer(), blob(), formData(), valid(). Properties: routePath (deprecated), matchedRoutes (deprecated), path, url, method, raw. Clone request with cloneRawRequest() after body consumed. Single file upload to body['foo'], multiple use body['foo[]'], all option for multiple fields, dot notation for structured parsing.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "param(): get path parameter value or all params. c.req.param('id') returns single, c.req.param() returns all as object."
+    },
+    {
+      "index": 1,
+      "manifest": "query(): get querystring parameter value or all params. c.req.query('q') returns single, c.req.query() returns all as object."
+    },
+    {
+      "index": 2,
+      "manifest": "queries(): get multiple querystring values for same key. c.req.queries('tags') returns string[] for /search?tags=A&tags=B."
+    },
+    {
+      "index": 3,
+      "manifest": "header(): get request header value. c.req.header('User-Agent') gets single header. c.req.header() without args returns all headers with lowercase keys. Must use exact case for uppercase headers."
+    },
+    {
+      "index": 4,
+      "manifest": "parseBody(): parse multipart/form-data or application/x-www-form-urlencoded. Single file: body['foo'] is (string | File), last uploaded used. Multiple files: body['foo[]'] always (string | File)[]. all option parses multiple fields with same name. dot option structures output with dot notation."
+    },
+    {
+      "index": 5,
+      "manifest": "json(): parse application/json request body."
+    },
+    {
+      "index": 6,
+      "manifest": "text(): parse text/plain request body."
+    },
+    {
+      "index": 7,
+      "manifest": "arrayBuffer(): parse body as ArrayBuffer."
+    },
+    {
+      "index": 8,
+      "manifest": "blob(): parse body as Blob."
+    },
+    {
+      "index": 9,
+      "manifest": "formData(): parse body as FormData."
+    },
+    {
+      "index": 10,
+      "manifest": "valid(): get validated data from middleware validators. Targets: form, json, query, header, cookie, param. See validation guide for usage."
+    },
+    {
+      "index": 11,
+      "manifest": "routePath: deprecated in v4.8.0, use routePath() from Route Helper. Returns registered path like /posts/:id."
+    },
+    {
+      "index": 12,
+      "manifest": "matchedRoutes: deprecated in v4.8.0, use matchedRoutes() from Route Helper. Returns matched routes for debugging with handler name, method, path."
+    },
+    {
+      "index": 13,
+      "manifest": "path: request pathname string, e.g., /about/me."
+    },
+    {
+      "index": 14,
+      "manifest": "url: full request URL string, e.g., http://localhost:8787/about/me."
+    },
+    {
+      "index": 15,
+      "manifest": "method: HTTP method string, e.g., GET."
+    },
+    {
+      "index": 16,
+      "manifest": "raw: raw Request object from Fetch API. For Cloudflare Workers access c.req.raw.cf?.hostMetadata?."
+    },
+    {
+      "index": 17,
+      "manifest": "cloneRawRequest(): clone raw Request object after body consumption. Works after validators/methods consumed body. Enables reading body multiple times."
+    }
+  ]
+}

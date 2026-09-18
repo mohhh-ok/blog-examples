@@ -1,0 +1,17 @@
+{
+  "page": "Validation data validation out of box. Elysia.t schema definition. t.Object with properties. Ensures correct data format. 422 Unprocessable Entity on mismatch. Validation property: body, query, params, headers, cookie, response. Type inference from schema. OpenAPI documentation generated. How to validate data? What validation types? How to define schema?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Validation type properties. Body HTTP message validation. Query URL parameters. Params path parameters. Headers request headers. Cookie request cookie. Response handler return value. Each type with schema definition."
+    },
+    {
+      "index": 1,
+      "manifest": "Response validation. Response schema for return value type checking. Status-specific response: 200, 418 different schemas. Status code validation."
+    },
+    {
+      "index": 2,
+      "manifest": "Assignment exercise. Define schema using t.Object. Body property with validation. Name String field."
+    }
+  ]
+}

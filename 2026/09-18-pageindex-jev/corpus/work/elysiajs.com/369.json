@@ -1,0 +1,17 @@
+{
+  "page": "Welcome and introduction to Elysia playground. Elysia is ergonomic backend TypeScript framework for developer experience and performance. Unique features: performance comparable to Golang, extraordinary TypeScript support with type soundness, built around OpenAPI, end-to-end type safety like tRPC, Web Standards support (runs on Cloudflare Workers, Deno, Bun, Node.js), designed for humans first. Can run directly in browser. Check API docs in left sidebar.\nQuestions: What is Elysia? What are key features? Where can you run Elysia?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Elysia characteristics: ergonomic framework, Bun-based backend, TypeScript first, spectacular performance, extraordinary type support, OpenAPI built-in, end-to-end type safety, Web Standards, designed for humans. Once users learn framework concepts, find it intuitive to work with.\nQuestions: What makes Elysia different? What is type soundness?"
+    },
+    {
+      "index": 1,
+      "manifest": "Playground structure: 3 sections divided as left (documentation/task), top-right (code editor), bottom-right (preview/output/console). Interactive learning environment for getting familiar with Elysia.\nQuestions: How is the playground organized?"
+    },
+    {
+      "index": 2,
+      "manifest": "Assignment task: modify code to respond with 'Hello Elysia!' instead of 'Hello World!'. Change content inside .get method. Solution: change 'Hello World!' to 'Hello Elysia!' in get route. Demonstrates route modification.\nQuestions: How do you modify handler responses?"
+    }
+  ]
+}

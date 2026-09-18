@@ -1,0 +1,45 @@
+{
+  "page": "Vite dependency pre-bundling/optimization options (dev only unless noted). Related: Dependency Pre-Bundling guide. optimizeDeps.entries (string|string[]): custom entry points detect dependencies pre-bundle. Default: crawl .html files (ignore node_modules, build.outDir, __tests__, coverage). Top-level input or build.rolldownOptions.input: crawl instead. tinyglobby patterns or array project root relative. Overwrites default inference. node_modules, build.outDir default ignored when optimizeDeps.entries explicitly defined. Other folders: ignore pattern initial ! prefix. node_modules not ignored patterns explicitly include. optimizeDeps.exclude (string[]): dependencies exclude pre-bundling. CommonJS not excluded (warning). ESM excluded nested CommonJS: add CommonJS optimizeDeps.include. Example: 'esm-dep > cjs-dep'. optimizeDeps.include (string[]): linked packages node_modules not pre-bundled force. Experimental: deep imports trailing glob pattern pre-bundle all once avoid constant re-bundling. Give feedback #15833. Example: 'my-lib/components/**/*.vue'. optimizeDeps.rolldownOptions (Omit<RolldownOptions> + {output?: Omit<RolldownOutputOptions>}): Rolldown dep scanning/optimization options. Certain omitted: bundle, entryPoints, external, write, watch, outdir, outfile, outbase, outExtension, metafile. plugins merged Vite dep plugin. optimizeDeps.esbuildOptions (Omit<EsbuildBuildOptions>, deprecated): esbuild options (bundle, entryPoints, external, write, watch, outdir, outfile, outbase, outExtension, metafile omitted). Converted optimizeDeps.rolldownOptions internally, use instead. optimizeDeps.force (boolean): true force dependency pre-bundling, ignore previously cached. optimizeDeps.noDiscovery (boolean, default false): true disable automatic discovery, optimizeDeps.include dependencies optimize. CJS-only must optimizeDeps.include dev. optimizeDeps.holdUntilCrawlEnd (boolean, default true, experimental): enabled hold first optimized deps results all static imports crawled cold start. Avoids full-page reloads new dependencies discovery trigger common chunks. All dependencies scanner + include found: better disable parallel browser process requests. Give feedback #15834. optimizeDeps.disabled (boolean|'build'|'dev', default 'build', deprecated, experimental): Vite 5.1 dep pre-bundling build removed. true/'dev' disable optimizer, false/'build' leave optimizer dev enabled. Disable completely: optimizeDeps.noDiscovery: true disallow automatic discovery, optimizeDeps.include undefined/empty. Warning: optimizing build experimental feature, projects removed @rollup/plugin-commonjs build.commonjsOptions: {include: []}. If so warning re-enable support CJS packages bundling. optimizeDeps.needsInterop (string[], experimental): ESM interop force when importing. Vite proper detection, different dependency combinations may prebundle differently. needsInterop add speed cold start avoid full-page reloads. Warning received suggest add package name array config.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "optimizeDeps.entries type string|string[]. Custom entry points detect dependencies pre-bundle. Default: .html crawl (ignore node_modules, build.outDir, __tests__, coverage). Top-level input or build.rolldownOptions.input: crawl. tinyglobby patterns array project root relative. Overwrites default inference. node_modules, build.outDir default ignored when optimizeDeps.entries explicitly defined. Other folders ignore: initial ! pattern prefix. node_modules not ignored patterns explicitly include string."
+    },
+    {
+      "index": 1,
+      "manifest": "optimizeDeps.exclude type string[]. Dependencies exclude pre-bundling. CommonJS not excluded warning. ESM excluded nested CommonJS: add optimizeDeps.include. Example: 'esm-dep > cjs-dep'."
+    },
+    {
+      "index": 2,
+      "manifest": "optimizeDeps.include type string[]. Linked packages node_modules not pre-bundled force. Experimental: deep imports trailing glob pattern pre-bundle all once avoid constant re-bundling. Feedback #15833. Example: 'my-lib/components/**/*.vue'."
+    },
+    {
+      "index": 3,
+      "manifest": "optimizeDeps.rolldownOptions type Omit<RolldownOptions, 'input'|'logLevel'|'output'> & {output?: Omit<RolldownOutputOptions, 'format'|'sourcemap'|'dir'|'banner'>}. Rolldown dep scanning/optimization options. Certain omitted: bundle, entryPoints, external, write, watch, outdir, outfile, outbase, outExtension, metafile. plugins merged Vite dep plugin."
+    },
+    {
+      "index": 4,
+      "manifest": "optimizeDeps.esbuildOptions type Omit<EsbuildBuildOptions, 'bundle'|'entryPoints'|'external'|'write'|'watch'|'outdir'|'outfile'|'outbase'|'outExtension'|'metafile'> deprecated. Converted optimizeDeps.rolldownOptions internally, use instead."
+    },
+    {
+      "index": 5,
+      "manifest": "optimizeDeps.force type boolean. true force dependency pre-bundling, ignore cached optimized."
+    },
+    {
+      "index": 6,
+      "manifest": "optimizeDeps.noDiscovery type boolean default false. true automatic dependency discovery disable, optimizeDeps.include dependencies optimize. CJS-only must optimizeDeps.include dev."
+    },
+    {
+      "index": 7,
+      "manifest": "optimizeDeps.holdUntilCrawlEnd type boolean default true experimental. Enabled: first optimized deps results hold all static imports crawled cold start. Avoids full-page reloads new dependencies discovery trigger common chunks. All dependencies scanner + include found: disable better parallel browser process requests. Feedback #15834."
+    },
+    {
+      "index": 8,
+      "manifest": "optimizeDeps.disabled type boolean|'build'|'dev' default 'build' deprecated experimental. Vite 5.1 dep pre-bundling build removed. true/'dev' disable optimizer, false/'build' leave dev optimizer enabled. Disable completely: optimizeDeps.noDiscovery: true disallow automatic discovery, optimizeDeps.include undefined/empty. Warning: optimizing build experimental, projects removed @rollup/plugin-commonjs build.commonjsOptions: {include: []} must re-enable support CJS packages bundling."
+    },
+    {
+      "index": 9,
+      "manifest": "optimizeDeps.needsInterop type string[] experimental. ESM interop force importing. Vite proper detection, different dependency combinations may prebundle differently. needsInterop add speed cold start avoid full-page reloads. Warning received suggest add package config array."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "page": "Static plugin for serving static files/folders. Install @elysia/static. Config: assets default 'public', prefix default '/public', ignorePatterns default [], staticLimit default 1024, alwaysStatic default false, headers default {}, indexHTML default false. Default folder 'public' with '/public' prefix. Supports nested directories. Available paths: /public/file.png. File helper for single files.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Config options. Assets folder path default 'public'. Prefix registration path default '/public'. IgnorePatterns list of files to ignore. StaticLimit 1024 router registration limit. AlwaysStatic boolean skip limit. Headers object for response headers. IndexHTML boolean serve index.html for unmatched requests."
+    },
+    {
+      "index": 1,
+      "manifest": "Common patterns."
+    },
+    {
+      "index": 2,
+      "manifest": "Single file with file() helper. Alternative to static plugin. file('public/takodachi.png'). Simpler for single files."
+    }
+  ]
+}

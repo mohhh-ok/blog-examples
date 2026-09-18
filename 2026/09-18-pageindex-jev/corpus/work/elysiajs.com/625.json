@@ -1,0 +1,49 @@
+{
+  "page": "Routing fundamental concept. Request path and method determine resource. HTTP verbs: GET, POST, PUT, PATCH, DELETE. Path types: static, dynamic, wildcards. Static paths hardcoded strings. Dynamic paths with colon :id parameter. Wildcards with asterisk * for rest of path. Path priority: static > dynamic > wildcards. HTTP methods: GET retrieves data, POST creates, PUT replaces, PATCH modifies, DELETE removes. Custom HTTP methods with .route(). All method for any HTTP verb. Path grouping with prefix. How to define routes? What are path types? How to group routes?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Path types grouping. Static: hardcoded strings /hello, /hi. Dynamic: :id captures values. Wildcards: * matches rest. All three combinable."
+    },
+    {
+      "index": 1,
+      "manifest": "Static path hardcoded string location. /hello, /hi examples. No variable capture."
+    },
+    {
+      "index": 2,
+      "manifest": "Dynamic path with colon parameter /id/:id. Capture value segment. Examples: /id/1, /id/123, /id/anything. Multiple parameters /id/:id/:name. Optional parameter /id/:id? with question mark."
+    },
+    {
+      "index": 3,
+      "manifest": "Optional path parameters question mark ?. /id/:id? makes parameter optional. Matches /id/ and /id/value."
+    },
+    {
+      "index": 4,
+      "manifest": "Wildcards asterisk * for capturing rest of path. /id/* captures everything after /id/. Params['*'] accesses captured value."
+    },
+    {
+      "index": 5,
+      "manifest": "Path priority ranking. Static first, dynamic second, wildcards third. If both static and dynamic, static resolves first."
+    },
+    {
+      "index": 6,
+      "manifest": "HTTP verbs and methods. GET retrieves data. POST creates/submits payload. PUT replaces resource. PATCH partial modifications. DELETE removes resource. .get(), .post(), .put(), .patch(), .delete() methods."
+    },
+    {
+      "index": 7,
+      "manifest": ".route() for custom HTTP methods. .route('M-SEARCH', '/m-search', handler). RFC 7231 case-sensitive. UPPERCASE convention. Method, path, function, hook parameters."
+    },
+    {
+      "index": 8,
+      "manifest": ".all() method for any HTTP verb. Single path handler for all methods. GET, POST, DELETE, etc. same handler."
+    },
+    {
+      "index": 9,
+      "manifest": ".handle() programmatic testing. Process actual request sent to server. Behaves like real request. Returns Response object. For unit testing."
+    },
+    {
+      "index": 10,
+      "manifest": ".group() path prefix grouping. Multiple routes sharing prefix. /user prefix groups /sign-in, /sign-up, /profile. Optional guard parameter for validation."
+    }
+  ]
+}

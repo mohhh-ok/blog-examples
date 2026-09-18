@@ -1,0 +1,21 @@
+{
+  "page": "Formatting and converting Zod errors from ZodError objects. Utilities for transforming error output: treeifyError() converts errors to nested object mirroring schema structure; prettifyError() generates human-readable formatted string; flattenError() for flat schemas returns formErrors and fieldErrors; deprecated formatError() also available. Error objects contain code (invalid_type, unrecognized_keys), path array, message string, expected value. Use optional chaining (?.) to safely access nested error properties. Tasks: convert ZodError to useful formats, access errors at specific paths, display errors to users. For arrays access items property, for objects access properties. All methods documented with code examples showing parsing invalid data.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "z.treeifyError() function converts ZodError to nested object structure. Result mirrors original schema with errors array at each level. Access nested errors via properties (for objects) and items (for arrays) properties. Tree structure includes errors field with messages, properties object for object fields, items array for array elements. Use optional chaining (?.) to safely traverse. Flattens error structure into traversable hierarchy. Useful for accessing errors at particular paths in complex nested schemas."
+    },
+    {
+      "index": 1,
+      "manifest": "z.prettifyError() function generates human-readable string representation of errors. Returns formatted string with checkmark symbols (✖) for each error. Shows error messages on separate lines. Includes path information shown with arrow notation (→ at fieldname). For array items shows index notation like favoriteNumbers[1]. Single function call converts entire ZodError to readable output suitable for display or logging."
+    },
+    {
+      "index": 2,
+      "manifest": "z.formatError() - DEPRECATED. Use z.treeifyError() instead. Converts error to nested object with _errors arrays. Structure has top-level _errors field and properties matching schema fields. Array indices shown as string keys. Same nested traversal pattern as treeifyError() but uses _errors field name instead of errors field. Optional chaining required to safely access nested properties."
+    },
+    {
+      "index": 3,
+      "manifest": "z.flattenError() function for flat single-level schemas. Returns object with formErrors array (top-level errors where path is empty) and fieldErrors object mapping field names to error string arrays. Example: formErrors contains unrecognized_keys message, fieldErrors has username and favoriteNumbers keys with their respective error messages. Provides clean shallow structure alternative to nested treeifyError(). More convenient for single-level schemas."
+    }
+  ]
+}

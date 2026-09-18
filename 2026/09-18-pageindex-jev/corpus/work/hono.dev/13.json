@@ -1,0 +1,1 @@
+{"page": "Third-party middleware definition and overview. Middleware not bundled within the Hono package. Typically leverages external libraries for extended functionality. Contrast to built-in middleware included directly in Hono. Questions: What is third-party middleware? How does it differ from built-in? Where is it hosted? How to use external middleware?", "sections": []}

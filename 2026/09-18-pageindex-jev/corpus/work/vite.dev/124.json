@@ -1,0 +1,61 @@
+{
+  "page": "Deploying a Static Site: guides assume default build output dist (configurable via build.outDir), npm usage, local dev dependency Vite with build/preview scripts in package.json. vite preview intended for preview, not production server. Building: npm run build outputs dist folder, deploy to preferred platform (GitHub Pages, Netlify, Vercel, Cloudflare, Firebase, Surge, Azure, Render, Flightcontrol, xmit, Zephyr, EdgeOne). Testing locally: npm run preview server starts at http://localhost:4173, check production build locally, --port flag configurable port. GitHub Pages: update vite.config.js base (https://<USERNAME>.github.io/ or custom domain: base '/'), https://<USERNAME>.github.io/<REPO>/: base '/<REPO>/'. GitHub Pages: Settings → Pages, Source dropdown → GitHub Actions. GitHub Actions workflow .github/workflows/deploy.yml automates build/deploy on main push. GitLab Pages: GitLab CI base configuration similar, .gitlab-ci.yml config. Netlify CLI: netlify-cli install, netlify init, netlify deploy (--prod for production). Netlify Git: import project, choose branch/output dir, deploy. Vercel CLI: vercel install, vercel command, auto-detects Vite. Vercel Git: import project, auto-detects Vite settings. Cloudflare Workers: @cloudflare/vite-plugin install, Environment API, server-side code runs in Workers runtime. Cloudflare Pages Git: git push, dashboard, Pages option, framework preset select, deploy. Firebase: firebase-tools install, firebase.json + .firebaserc config, firebase deploy. Surge: surge install, npm run build, surge dist. Azure Static Web Apps: SWA Extension VS Code, create Static Web App, designation, folder/build location, GitHub Action created. Render: create account, New Static Site, GitHub/GitLab/public repo connect, project name/branch, build commands, publish directory dist. Flightcontrol, xmit, Zephyr Cloud, EdgeOne: follow instructions/guides.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Building app: npm run build builds app (vite build command). Default build output: dist folder (configurable build.outDir). Deploy dist to preferred platform. Assumptions: default build location dist, npm usage, vite local dev dependency, build/preview scripts in package.json. Testing locally: npm run preview tests locally. vite preview starts static web server, dist files served at http://localhost:4173. Production build check locally before deploy. Port configuration: --port flag customize (package.json script example: vite preview --port 8080). Why test locally? What preview command limitations?"
+    },
+    {
+      "index": 1,
+      "manifest": "GitHub Pages deployment: Update vite config base. https://<USERNAME>.github.io/ or custom domain: base '/' or omit (defaults '/'). https://<USERNAME>.github.io/<REPO>/: base '/<REPO>/'. Enable GitHub Pages: Settings → Pages, Source dropdown → GitHub Actions. GitHub Actions workflow required (Vite build step necessary). Create .github/workflows/deploy.yml. Sample workflow: node setup, npm ci, npm run build, artifact upload dist, deploy pages (checkout, node setup, dependencies, build, pages config, artifact upload, deploy action). On push main branch triggers deployment. Workflow actions: checkout, setup-node, configure-pages, upload-pages-artifact, deploy-pages. How to set up GitHub Actions? When update base config?"
+    },
+    {
+      "index": 2,
+      "manifest": "GitLab Pages + GitLab CI: set base in vite.config.js. https://<USERNAME or GROUP>.gitlab.io/: omit base (default '/'). https://<USERNAME or GROUP>.gitlab.io/<REPO>/: base '/<REPO>/'. Create .gitlab-ci.yml root project with content. image: node:lts, pages stage (deploy), cache configuration (package-lock.json key, node_modules path), script (npm install, npm run build, cp dist to public), artifacts paths (public), rules (CI_COMMIT_BRANCH == CI_DEFAULT_BRANCH). Automation: build/deploy on content changes."
+    },
+    {
+      "index": 3,
+      "manifest": "Netlify deployment: Netlify CLI method—netlify-cli install -g, netlify init create site, netlify deploy. Preview URL shared, --prod flag for production. Netlify Git method—push code to git repo (GitHub, GitLab, BitBucket, Azure DevOps), app.netlify.com/start import project, choose branch/output dir/env vars, deploy. Preview deployments on PR, production deployments on main branch."
+    },
+    {
+      "index": 4,
+      "manifest": "Vercel deployment: Vercel CLI method—vercel install -g, vercel command deploy, detects Vite auto-enables correct settings. Application deployed (e.g., vite-vue-template.vercel.app). Vercel Git method—push to git repo, vercel.com/new import Vite project, auto-detects Vite settings, deployed (e.g., vite-vue-template.vercel.app). Preview deployments on branches, production on main. Git integration reference."
+    },
+    {
+      "index": 5,
+      "manifest": "Cloudflare deployment: Cloudflare Workers—@cloudflare/vite-plugin install, defineConfig plugin add, wrangler.jsonc name config. npm run build → npx wrangler deploy. Environment API: server-side code runs Workers runtime dev/deploy. Add backend APIs: Vite application secure Cloudflare resource communication. Workers runtime dev, alongside frontend deploy. Cloudflare Vite plugin tutorial complete walkthrough. Cloudflare Pages Git—vite.new to preview. Pages gives deployment without Wrangler. Git integration: push to git repo (GitHub, GitLab), Cloudflare dashboard account, Workers & Pages select, Create New Project, Pages, Git select, project deploy begin, framework preset or build command/output directory, save deploy. Application deployed https://<PROJECTNAME>.pages.dev/. Preview deployments on branches, production main. Custom domains + settings Pages. Cloudflare Pages Git Integration reference."
+    },
+    {
+      "index": 6,
+      "manifest": "Google Firebase: firebase-tools install -g. Create firebase.json hosting config (public: dist, rewrites /* to /index.html SPA). Create .firebaserc default project. npm run build → firebase deploy. Configuration example showing structure."
+    },
+    {
+      "index": 7,
+      "manifest": "Surge deployment: surge install -g, npm run build, surge dist deploys. Custom domain: surge dist yourdomain.com. Simple one-command deployment."
+    },
+    {
+      "index": 8,
+      "manifest": "Azure Static Web Apps: Azure account + subscription, GitHub code, SWA Extension VS Code. Extension install VS Code, app root navigate, Static Web Apps extension open, Azure sign in, + create Static Web App. Wizard: app name, framework preset, app root (/), build location (/dist). GitHub action .github folder created. Action builds/deploys app (watch Actions tab progress). Browse Website button final window success."
+    },
+    {
+      "index": 9,
+      "manifest": "Render deployment: create Render account (dashboard.render.com/register), Dashboard New, Static Site. GitHub/GitLab account connect or public repo. Project name + branch designation. Build command: npm install && npm run build. Publish directory: dist. Create Static Site. Application deployed https://<PROJECTNAME>.onrender.com/. Auto-deploy on commit (configurable). Custom domain add possible."
+    },
+    {
+      "index": 10,
+      "manifest": "Flightcontrol: deploy static site Flightcontrol, instructions reference (www.flightcontrol.dev Vite examples)."
+    },
+    {
+      "index": 11,
+      "manifest": "xmit Static Site Hosting: deploy static site xmit, quickstart guide (xmit.dev Vite guide)."
+    },
+    {
+      "index": 12,
+      "manifest": "Zephyr Cloud: deployment platform integrates build process, global edge distribution (module federation + applications). Different approach: integrates directly Vite build, dev server run auto-deploys Zephyr. Vite deployment guide steps."
+    },
+    {
+      "index": 13,
+      "manifest": "EdgeOne Pages: deploy static site EdgeOne Pages, instructions (pages.edgeone.ai/document/vite)."
+    }
+  ]
+}

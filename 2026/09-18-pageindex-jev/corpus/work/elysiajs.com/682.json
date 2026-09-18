@@ -1,0 +1,9 @@
+{
+  "page": "Unit testing with Elysia.handle() method. Web Standard Request/Response classes. Request simulates HTTP. Bun test runner with bun:test module. Jest-like API. Test file: test/index.test.ts. describe, expect, it functions from bun:test. Handle method processes actual request. Valid URL required http://localhost/. Eden Treaty for end-to-end type safety testing. Treaty test setup. How to test with handle? How to write unit tests? How to use Eden for testing?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Eden Treaty test. Treaty type-safe client for testing. const api = treaty(app). await api.route.method() for type-safe requests. Data destructuring from response. How to test with treaty?"
+    }
+  ]
+}

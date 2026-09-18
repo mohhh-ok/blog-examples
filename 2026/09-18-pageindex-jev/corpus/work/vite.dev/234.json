@@ -1,0 +1,70 @@
+{
+  "page": "Vite plugin API guide for extending Rolldown's plugin interface with Vite-specific options. Write plugins once for dev and build.\n- Plugin authoring: check Features guide and community plugins before creating\n- Inline plugins in vite.config.js, no need for separate package\n- vite-plugin-inspect: inspect intermediate plugin state at localhost:5173/__inspect/\n- Rolldown plugin documentation recommended first read\n- Compatible Rollup plugins: implement as Vite plugins if meeting criteria\n- Rolldown Plugin naming: 'rolldown-plugin-' prefix, include 'rolldown-plugin' and 'vite-plugin' keywords\n- Vite-only plugin naming: 'vite-plugin-' prefix, include 'vite-plugin' keyword\n- Framework-specific: 'vite-plugin-vue-', 'vite-plugin-react-', 'vite-plugin-svelte-' prefixes\n- Plugin config: devDependencies, plugins array option\n- Falsy plugins ignored (easy activation/deactivation)\n- Plugin presets: multiple plugins as single element, flattened internally\n- Factory function pattern: return plugin object, accept options for customization\n- Hook filters (Rolldown feature): filter pattern for performance, backward compatible\n- Rolldown hooks: options, buildStart, resolveId, load, transform, buildEnd, closeBundle\n- Vite-specific hooks: config, configResolved, configureServer, configurePreviewServer, closeServer, closePreviewServer, transformIndexHtml, handleHotUpdate\n- Vite hooks types: async, sequential, parallel kinds\n- Plugin context meta: this.meta.viteVersion\n- Per-environment hooks: resolveId, load, transform (all per-environment)\n- Global hooks: config, configResolved, configureServer, configurePreviewServer, etc.\n- Path normalization: POSIX separators (/) for id comparisons\n- normalizePath utility from 'vite' module\n- Virtual modules convention: 'virtual:' prefix, \\0 encoding\n- Hook filter feature: Rolldown/Rollup 4.38.0+ and Vite 6.3.0+\n- @rolldown/pluginutils: createFilter, exactRegex, prefixRegex exports\n- Output bundle metadata: viteMetadata.importedCss, viteMetadata.importedAssets\n- Asset emission: this.emitFile({ type: 'asset', ... }), import.meta.ROLLDOWN_FILE_URL_<id>\n- CSS/HTML tokens: __VITE_ASSET__<id>__ for non-JS positions\n- Plugin ordering: enforce 'pre'/'post' properties\n- Conditional application: apply property for 'serve' or 'build' command\n- Chunk import map (experimental): build.chunkImportMap option\n- importmap.json: import map output file\n- Server to client: server.ws.send, hot.on event listeners\n- Client to server: hot.send, server.ws.on event listeners\n- Custom event typing: CustomEventMap interface extension\n- Rolldown compatibility: moduleParsed hook not used, doesn't rely on specific options\nHow do I write a Vite plugin? What are Rolldown hooks? What are Vite-specific hooks? How do I handle virtual modules? How do I apply plugins conditionally? How do I communicate between server and client?"
+,
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Plugin authoring best practices.\n- Check Features guide for existing solutions\n- Review community plugins: Rollup compatible and Vite-specific\n- vite-plugin-inspect: debug plugin state at localhost:5173/__inspect__/\n- Read Rolldown plugin documentation first\n- Inline plugins in vite.config.js (no separate package needed initially)\n- Share plugins after validation\nHow do I start authoring a Vite plugin?"
+    },
+    {
+      "index": 1,
+      "manifest": "Plugin naming conventions.\n- Compatible Rolldown plugins: 'rolldown-plugin-' prefix, include 'rolldown-plugin' and 'vite-plugin' keywords\n- Vite-only plugins: 'vite-plugin-' prefix, include 'vite-plugin' keyword, document why Vite-only\n- Framework-specific: 'vite-plugin-vue-', 'vite-plugin-react-', 'vite-plugin-svelte-' prefixes\n- Exposes plugins to broader ecosystem\nHow do I name my Vite plugin?"
+    },
+    {
+      "index": 2,
+      "manifest": "Plugin configuration and usage.\n- plugins: devDependencies\n- plugins array in config\n- Falsy plugins: ignored for easy activation/deactivation\n- Plugin presets: return array of plugins, flattened internally\n- Factory function pattern: accept options for customization\nHow do I configure and use plugins?"
+    },
+    {
+      "index": 3,
+      "manifest": "Simple plugin examples.\n- Transforming custom file types: fileRegex pattern, transform hook with filter and handler\n- Return { code, map }\n- Importing virtual files: exactRegex, virtual module ID, resolveId filter, load filter\n- __VITE_ASSET__<id>__ encoding during dev as /@id/__x00__<id>\n- Decoded before plugin hooks\nHow do I create simple plugins?"
+    },
+    {
+      "index": 4,
+      "manifest": "Rolldown build hooks.\n- Called during dev by plugin container\n- Per-environment hooks: resolveId, load, transform\n- Server start hooks: options, buildStart\n- Module request hooks: resolveId, load, transform\n- Server close hooks: buildEnd, closeBundle\n- moduleParsed: not called in dev (Vite avoids full AST parses)\n- Output generation hooks: not called in dev (except closeBundle)\n- importer value: may be absolute path for generic index.html\n- SSR-specific plugin logic available\nWhat Rolldown hooks are available?"
+    },
+    {
+      "index": 5,
+      "manifest": "Vite-specific plugin hooks.\n- config: modify Vite config before resolution, async/sequential/global, return partial or mutate\n- configResolved: read final resolved config, async/parallel/global, store config for later use\n- configureServer: configure dev server, async/sequential/global, add middlewares, store server instance\n- Post middleware: return function called after internal middlewares\n- configurePreviewServer: configure preview server, async/sequential/global, same as configureServer\n- closeServer: called on restart or close, async/parallel/global, dispose resources, reason: 'restart'/'close'\n- closePreviewServer: preview only, async/parallel/global, no reason parameter\n- transformIndexHtml: transform HTML entry (index.html), async/sequential/per-environment\n- Receives HTML string and context\n- Return: transformed HTML, tag descriptors, or object with both\n- order: 'pre'/'post' for hook timing\n- Tag injectTo: 'head', 'body', 'head-prepend', 'body-prepend'\n- handleHotUpdate: custom HMR update handling, async/sequential/per-environment\n- Receives HmrContext with file, timestamp, modules, read(), server\n- Can filter modules, return empty array for full reload or custom HMR\nWhat Vite-specific hooks are available?"
+    },
+    {
+      "index": 6,
+      "manifest": "Plugin context metadata.\n- this.meta.viteVersion: Vite version string (e.g., '8.0.0')\n- this.meta.rolldownVersion: Rolldown version (Rolldown-powered Vite only, e.g., Vite 8+)\n- Detect Rolldown-powered Vite for conditional logic\nWhat metadata is available in plugin context?"
+    },
+    {
+      "index": 7,
+      "manifest": "Output bundle metadata (build).\n- Rolldown augments output with Vite-specific viteMetadata\n- Available in: RenderedChunk, OutputChunk, OutputAsset\n- Fields: viteMetadata.importedCss (Set<string>), viteMetadata.importedAssets (Set<string>)\n- Use in renderChunk, generateBundle, writeBundle hooks\n- Inspect emitted CSS and assets without relying on build.manifest\nHow do I access output bundle metadata?"
+    },
+    {
+      "index": 8,
+      "manifest": "Referencing emitted assets from plugins.\n- this.emitFile({ type: 'asset', name, source }): returns referenceId\n- JavaScript: import.meta.ROLLDOWN_FILE_URL_<referenceId> expression\n- Append query/hash with string concatenation\n- CSS/HTML: __VITE_ASSET__<referenceId>__ token\n- Append query/hash right after token\nHow do I emit assets from plugins?"
+    },
+    {
+      "index": 9,
+      "manifest": "Plugin ordering and conditional application.\n- enforce: 'pre'/'post' property for plugin order\n- Order: Alias → pre-enforce plugins → Vite core → no-enforce → build plugins → post-enforce → post-build plugins\n- Separate from hook ordering (hook order attribute as usual)\n- apply: 'build'/'serve' for conditional application\n- Function form: apply(config, { command }) for precise control\n- return command === 'build' && !config.build.ssr\nHow do I order plugins and apply them conditionally?"
+    },
+    {
+      "index": 10,
+      "manifest": "Rolldown/Rollup plugin compatibility.\n- Vite plugins work with Rolldown/Rollup plugins if:\n- Not using moduleParsed hook\n- Not relying on Rolldown-specific options (transform.inject)\n- No tight coupling between bundle-phase and output-phase hooks\n- Build-only plugins: specify under build.rolldownOptions.plugins\n- Works like Vite plugin with enforce: 'post' and apply: 'build'\n- Augment existing plugins with Vite properties using spread syntax\nHow do I ensure Rolldown/Rollup plugin compatibility?"
+    },
+    {
+      "index": 11,
+      "manifest": "Path normalization for plugins.\n- Vite normalizes to POSIX separators (/) with volume in Windows\n- Rollup keeps paths untouched (win32 separators in Windows)\n- normalizePath utility from 'vite' module\n- normalizes to POSIX separators\n- Use before comparing paths against resolved ids\n- Rollup plugins use @rollup/pluginutils normalizePath internally\nHow do I normalize paths in plugins?"
+    },
+    {
+      "index": 12,
+      "manifest": "Hook filters for performance.\n- Rolldown hook filter feature: specify patterns for hook invocation\n- Reduces communication overhead between Rust and JavaScript\n- Supported in Rollup 4.38.0+ and Vite 6.3.0+\n- @rolldown/pluginutils: createFilter, exactRegex, prefixRegex\n- Also available from rolldown/filter\n- Backward compatible: check inside hook handler too\n- Example: transform hook with filter { id: /\\.js$/ }\nHow do hook filters improve performance?"
+    },
+    {
+      "index": 13,
+      "manifest": "Chunk import map information (experimental).\n- build.chunkImportMap option: use unique ID for each chunk instead of file path\n- Import map output: chunk ID to file path mapping\n- Access in generateBundle or writeBundle hooks\n- Import map name: build.rolldownOptions.experimental.chunkImportMap.fileName (defaults to 'importmap.json')\n- Parse as JSON from bundle\nHow do I access chunk import map information?"
+    },
+    {
+      "index": 14,
+      "manifest": "Client-server communication in plugins.\n- Server to client: server.ws.send, hot.on on client\n- Client to server: hot.send, server.ws.on on server\n- Prefix event names to avoid collisions\n- Client-side usage: if (import.meta.hot) guard\n- Custom event typing: extend CustomEventMap interface in .d.ts\n- import 'vite/types/customEvent.d.ts'\n- InferCustomEventPayload<T> for type inference\nHow do I implement server-client communication?"
+    },
+    {
+      "index": 15,
+      "manifest": "Virtual modules convention.\n- Virtual module ID prefix: 'virtual:'\n- Resolved ID: \\0 prepended (encoded as /@id/__x00__ in dev)\n- exactRegex utility for precise matching\n- Load handler returns module code\n- Client-side: normal ESM import syntax\nHow do I create virtual modules?"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": "Nuxt integration using community plugin nuxt-elysia. Installation: `bun add elysia @elysia/eden` and `bun add -d nuxt-elysia`. Add to Nuxt config modules. Configure nitro preset to 'Bun' (required - tells Nitro to use Bun instead of Node.js). Create api.ts in project root exporting default Elysia. Use Eden Treaty in Nuxt app with $api.\nQuestions: How do you integrate Elysia with Nuxt? What is the nitro preset? How do you use Eden?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Prefix customization via nuxt-elysia config. Default mount path: /_api. Customize via nuxtElysia.path: '/api'. Changes mount point to /api instead of /_api. Refer to nuxt-elysia GitHub for additional configuration options.\nQuestions: What is default Elysia mount path? How do you change prefix?"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "page": "SvelteKit integration for running Elysia on server routes. Create src/routes/[...slugs]/+server.ts file. Define Elysia server. Export fallback function calling app.handle(request). Treat as normal SvelteKit server route.\nQuestions: How do you run Elysia with SvelteKit? What file structure is needed? How do you export routes?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Prefix configuration for non-root routing. If Elysia server placed in src/routes/api/[...slugs]/+server.ts, annotate prefix as /api via `new Elysia({ prefix: '/api' })`. Ensures proper routing regardless of placement location.\nQuestions: When do you set prefix? How does it ensure correct routing?"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "page": "Zod Core sub-package exports core classes and utilities for extension by other packages. Import from zod/v4/core. Not intended for direct use but designed for extensibility. Exports: $ZodType base class, schema subclasses ($ZodString, $ZodObject, $ZodArray, etc.), $ZodCheck base class with check subclasses, $ZodError and $ZodIssue types, utility functions. Union type $ZodTypes combines all first-party schema subclasses. Schema classes contain only _zod property with internals. Parsing via top-level functions z.parse, z.safeParse, z.parseAsync, z.safeParseAsync. Checks are post-parsing refinements stored in def.checks array. Error handling with $ZodError and issue subtypes. Questions: What is Zod Core? How to extend Zod? How to parse with Core? What are checks? How to handle errors? What schema types exist?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "$ZodType is base class for all Zod schemas, accepts Output and Input generic parameters. Contains single _zod property with internals. $ZodTypes is union of all first-party schema subclasses: $ZodString, $ZodNumber, $ZodBigInt, $ZodBoolean, $ZodDate, $ZodSymbol, $ZodUndefined, $ZodNull, $ZodAny, $ZodUnknown, $ZodNever, $ZodVoid, $ZodArray, $ZodObject, $ZodUnion (includes $ZodDiscriminatedUnion), $ZodIntersection, $ZodTuple, $ZodRecord, $ZodMap, $ZodSet, $ZodLiteral, $ZodEnum, $ZodPromise, $ZodLazy, $ZodOptional, $ZodDefault, $ZodTemplateLiteral, $ZodCustom, $ZodTransform, $ZodNonOptional, $ZodReadonly, $ZodNaN, $ZodPipe (includes $ZodCodec, $ZodPreprocess), $ZodSuccess, $ZodCatch, $ZodFile. String format subclasses of $ZodString: $ZodStringFormat and subtypes $ZodGUID, $ZodUUID, $ZodEmail, $ZodURL, $ZodEmoji, $ZodNanoID, $ZodCUID, $ZodCUID2, $ZodULID, $ZodXID, $ZodKSUID, $ZodISODateTime, $ZodISODate, $ZodISOTime, $ZodISODuration, $ZodIPv4, $ZodIPv6, $ZodCIDRv4, $ZodCIDRv6, $ZodBase64, $ZodBase64URL, $ZodE164, $ZodJWT."
+    },
+    {
+      "index": 1,
+      "manifest": "All schemas contain single _zod property. _zod.def contains schema definition object (JSON-serializable), completely describing schema. _zod.def.type is string: string, object, array, etc. _zod.def.checks is array of checks applied after parsing. _zod.input and _zod.output are virtual properties storing inferred input/output types. _zod.run() is internal parser implementation. For traversing schemas, cast to $ZodTypes and use def property to discriminate between classes using switch on def.type. $ZodStringFormatTypes union includes all string format subclasses. String format checks exist as subclasses with .def.format property for nested discrimination."
+    },
+    {
+      "index": 2,
+      "manifest": "Top-level parsing functions since schema classes have no methods: z.parse(schema, data), z.safeParse(schema, data), z.parseAsync(schema, data), z.safeParseAsync(schema, data). No instance methods on $ZodType - all parsing through module-level functions. Core classes minimal to allow extensibility."
+    },
+    {
+      "index": 3,
+      "manifest": "Checks are post-parsing refinements stored in schema.def.checks array. Do not affect inferred type. Base class $ZodCheck with single generic parameter T. _zod.def contains check definition object describing the check completely. _zod.def.check is string representing check type: min_length, less_than, string_format, etc. _zod.check() contains validation logic. $ZodChecks union: $ZodCheckLessThan, $ZodCheckGreaterThan, $ZodCheckMultipleOf, $ZodCheckNumberFormat, $ZodCheckBigIntFormat, $ZodCheckMaxSize, $ZodCheckMinSize, $ZodCheckSizeEquals, $ZodCheckMaxLength, $ZodCheckMinLength, $ZodCheckLengthEquals, $ZodCheckProperty, $ZodCheckMimeType, $ZodCheckOverwrite, $ZodCheckStringFormat. $ZodStringFormatChecks subclasses overlap with string format types and implement both $ZodCheck and $ZodType interfaces."
+    },
+    {
+      "index": 4,
+      "manifest": "$ZodError base class for all errors. Does NOT extend built-in Error class - instanceof Error returns false. Implements Error interface. zod package provides subclass ZodError with convenience methods. zod/mini uses $ZodError directly. Contains issues property array of $ZodIssue objects."
+    },
+    {
+      "index": 5,
+      "manifest": "$ZodIssue objects extend $ZodIssueBase interface with code (string), input (unknown), path (PropertyKey array), message (string). Issue subtypes: $ZodIssueInvalidType, $ZodIssueTooBig, $ZodIssueTooSmall, $ZodIssueInvalidStringFormat, $ZodIssueNotMultipleOf, $ZodIssueUnrecognizedKeys, $ZodIssueInvalidUnion, $ZodIssueInvalidKey, $ZodIssueInvalidElement, $ZodIssueInvalidValue, $ZodIssueCustom."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "page": "Breaking changes in Vite including API deprecations, removals, and changes. Most changes can be opt-in using the future option in Vite config.\n- Planned changes: this.environment in hooks, HMR hotUpdate plugin hook, SSR using ModuleRunner API\n- Considering changes: Per-environment APIs, Shared plugins during build\n- Experimental label available in Vite GitHub Discussions\n- Breaking changes guidance from deprecation or usage warnings\n- future option in shared-options.md config\n- Framework and plugin authors reached out for changes\n- Planned deprecations with guidance\n- Not all changes listed, check Experimental Label for full list\nWhat breaking changes are planned for Vite? How do I opt-in to future changes? What changes are being considered?"
+,
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Planned breaking changes for next major version.\n- this.environment in Hooks\n- HMR hotUpdate Plugin Hook\n- SSR Using ModuleRunner API\n- Deprecation/usage warnings guide users\nWhat changes are planned for future Vite versions?"
+    },
+    {
+      "index": 1,
+      "manifest": "Changes being considered as experimental.\n- Move to Per-environment APIs\n- Shared Plugins During Build\n- Experimental APIs to improve patterns\n- Not recommended yet, gather feedback\n- Check GitHub Discussions for full list\n- Not all changes listed here\nWhat changes are experimental and under consideration?"
+    },
+    {
+      "index": 2,
+      "manifest": "Past changes (no longer relevant).\n- No past changes listed yet in current version\nAre there past changes documented?"
+    }
+  ]
+}

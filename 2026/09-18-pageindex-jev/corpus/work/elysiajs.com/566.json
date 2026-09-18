@@ -1,0 +1,29 @@
+{
+  "page": "Plugin decoupling concept. Elysia instance runs independently or as part of another. Decorate method for adding properties. Plugin inheritance: state, decorate, NOT lifecycle. Type inference automatic. Key concept: dependency. Independent instances communicate through explicit dependency declaration. Deduplication by name and seed. Global vs explicit dependency distinction. Global plugins: CORS, compress, helmet, logging. Explicit plugins: macro, state, model, auth, database. Config function wrapper pattern. Guard for multiple routes. Scope levels: local, scoped, global. Lazy load and deferred modules. Async plugins. Module registration testing with await app.modules. How to declare plugin dependencies? What is scope isolation? How does deduplication work? When use global vs explicit?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Dependency declaration in plugins. Instances independent, must explicitly declare dependencies. Dependency injection pattern. Uses .use() to apply dependencies. Example: auth plugin with Auth.getProfile, auth.model, main.use(auth), main.get '/profile' access Auth. How to structure dependencies?"
+    },
+    {
+      "index": 1,
+      "manifest": "Scope lifecycle isolation. Encapsulated within instance. Not shared with other instances. Local default scope applies to instance and descendants. Scoped applies to parent, current, descendants. Global applies to all. Scope casting with 'as' parameter. Guard scope merging. Descendant default behavior. Global hook propagation. Scope table: local/scoped/global per child/current/parent/main."
+    },
+    {
+      "index": 2,
+      "manifest": "Plugin configuration via function wrapper. Function accepts Elysia parameter. Behavior as normal plugin when passed to .use(). Property assignment directly to main instance. Performance: Elysia creates 10k instances milliseconds. New instance better type inference than functional callback."
+    },
+    {
+      "index": 3,
+      "manifest": "Guard applies hook and schema to multiple routes. Guard parameters: schema, beforeHandle, response. Routes under guard inherit validation. Grouped guard with prefix, guard, scope. Guard schema co-existence. Override vs standalone schema type. Schema: 'standalone' for co-existing schemas. How does guard apply schemas?"
+    },
+    {
+      "index": 4,
+      "manifest": "Scope casting for parent instance application. Inline as parameter for single hook. Guard as for multiple hooks. Instance as() method. Local to scoped to global scope lifting. How to apply scope to parent instance?"
+    },
+    {
+      "index": 5,
+      "manifest": "Lazy load deferred modules for heavy async operations. Async plugins blocking server startup. Deferred module async function. Lazy-load with import() for sync or async. await app.modules for deferred registration. Testing with await app.modules ensures registration before server starts."
+    }
+  ]
+}

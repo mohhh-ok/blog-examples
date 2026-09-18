@@ -1,0 +1,13 @@
+{
+  "page": "HTTPException: custom Hono Error for fatal errors, simplifies error responses. Throw with status code and message or custom response. Use cause option for arbitrary error data. Handle uncaught HTTPExceptions with app.onError() using instanceof check and getResponse() method. Returns Response created from status and message/custom response. Warning: getResponse not Context-aware, must manually apply Context headers to response.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Throwing HTTPExceptions: new HTTPException(status, options). Basic: { message: string } for text responses. Custom response: { res: Response } for other types/headers. Cause option: { cause: any } for arbitrary error data."
+    },
+    {
+      "index": 1,
+      "manifest": "Handling HTTPExceptions: use app.onError(err, c). Check instanceof HTTPException. Call err.getResponse() to return generated Response. For other errors, log and return generic 500. Warning: getResponse() lacks Context awareness - manually apply Context headers to new Response if needed."
+    }
+  ]
+}

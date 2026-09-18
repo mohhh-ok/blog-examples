@@ -1,0 +1,17 @@
+{
+  "page": "- ConnInfo Helper: gets connection information for a request, such as the client's remote address\n- Import varies per runtime, all providing `getConnInfo`: `hono/cloudflare-workers` (Cloudflare Workers), `hono/deno` (Deno), `hono/bun` (Bun), `hono/vercel` (Vercel), `hono/aws-lambda` (AWS Lambda), `hono/netlify` (Netlify), `hono/lambda-edge` (Lambda@Edge), `@hono/node-server/conninfo` (Node.js)\n- Usage: `const info = getConnInfo(c)` returns a `ConnInfo` object; example returns `info.remote.address` as text\n- Type definitions: `AddressType = 'IPv6' | 'IPv4' | undefined`; `NetAddrInfo` has optional `transport` (`tcp | udp`), `port` (number), `address` (string), `addressType` (AddressType); `ConnInfo` interface has a `remote: NetAddrInfo` field\n- Questions answered: How do I get the client's IP address in Hono? Which import path do I use for getConnInfo on different runtimes/platforms? What does the ConnInfo type look like? What is the AddressType for IPv4 vs IPv6?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- Import statements for ConnInfo Helper, one per runtime, all exporting `getConnInfo`\n- Cloudflare Workers: `import { getConnInfo } from 'hono/cloudflare-workers'`\n- Deno: `import { getConnInfo } from 'hono/deno'`\n- Bun: `import { getConnInfo } from 'hono/bun'`\n- Vercel: `import { getConnInfo } from 'hono/vercel'`\n- AWS Lambda: `import { getConnInfo } from 'hono/aws-lambda'`\n- Netlify: `import { getConnInfo } from 'hono/netlify'`\n- Lambda@Edge: `import { getConnInfo } from 'hono/lambda-edge'`\n- Node.js: `import { getConnInfo } from '@hono/node-server/conninfo'`\n- Answers: Which package do I import getConnInfo from for Deno, Bun, Node.js, Vercel, AWS Lambda, Lambda@Edge, or Netlify?"
+    },
+    {
+      "index": 1,
+      "manifest": "- `const info = getConnInfo(c)` returns a `ConnInfo` object\n- Example: `app.get('/', (c) => { const info = getConnInfo(c); return c.text(`Your remote address is ${info.remote.address}`) })`\n- Answers: How do I get the client's remote address in a Hono route handler?"
+    },
+    {
+      "index": 2,
+      "manifest": "- `AddressType = 'IPv6' | 'IPv4' | undefined`\n- `NetAddrInfo` type: optional `transport` (`tcp | udp`) transport protocol type; optional `port` (`number`) transport port number; `address` (`string`); `addressType` (`AddressType`) host name type; the union allows either a full address/addressType pair or an empty object\n- `ConnInfo` interface: `remote: NetAddrInfo` remote connection information\n- Answers: What fields does the ConnInfo type contain? What is the type of remote.address? What values can addressType take? Does the transport field distinguish tcp vs udp?"
+    }
+  ]
+}

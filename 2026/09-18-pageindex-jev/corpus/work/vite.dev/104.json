@@ -1,0 +1,25 @@
+{
+  "page": "Static Asset Handling: importing static assets returns resolved public URL when served. Development: /src/img.png. Production: /assets/img.2d8efhg.png (hashed). Similar to webpack file-loader, supports absolute/relative paths. CSS url() handled same way. Vue SFC templates auto-convert asset refs to imports. Common types auto-detected (image, media, font), extendable via assetsInclude option. Assets included in build graph, receive hashed filenames, processed by plugins for optimization. Smaller than assetsInlineLimit inlined as base64 data URLs. Git LFS placeholders auto-excluded from inlining. TypeScript needs vite/client for static asset import type recognition. Explicit URL imports: ?url suffix imports unincluded assets as URL (Paint Worklets example). Explicit inline/no-inline: ?inline or ?no-inline suffixes. Importing as string: ?raw suffix. Web workers: ?worker or ?sharedworker suffixes, ?inline for base64. Public directory: assets never in source, must retain exact filename, root path serving (/icon.png format). Directory defaults to <root>/public, configurable via publicDir option. Use root absolute paths. Prefer importing unless public directory guarantees needed. new URL(import.meta.url) pattern: native ESM feature combining URL constructor with import.meta.url for resolved static asset URLs. Template literal support for dynamic URLs.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Importing asset as URL: static asset import returns resolved public URL. Development: /src/img.png. Production: /assets/img.2d8efhg.png (hashed). Webpack file-loader behavior similar. Difference: absolute/relative paths both supported. CSS url() handling identical. Vue SFC template asset refs auto-converted to imports. Common image, media, font filetypes auto-detected as assets. assetsInclude option extends list. Assets in build graph included, hashed names, plugin processing for optimization. assetsInlineLimit (bytes, default 4096) smaller inlined as base64 data URLs. Git LFS placeholders excluded from inlining (don't contain actual content). TypeScript vite/client include required for static asset import type recognition."
+    },
+    {
+      "index": 1,
+      "manifest": "Explicit URL imports: ?url suffix explicitly imports as URL. Assets not in internal list or assetsInclude can use suffix. Example: Houdini Paint Worklet URL import. CSS.paintWorklet.addModule(workletURL) usage. Explicit inline handling: ?inline or ?no-inline suffixes. Force inlining or no-inlining behavior. Example imports with both suffixes."
+    },
+    {
+      "index": 2,
+      "manifest": "Importing as string: ?raw suffix imports assets as strings. Example: shader.glsl raw import. Script as worker: ?worker or ?sharedworker suffix. Separate chunk production build. new Worker() constructor usage. SharedWorker example. Inlined as base64: ?worker&inline suffix. Web Workers section reference for details."
+    },
+    {
+      "index": 3,
+      "manifest": "Public directory: special directory for assets never referenced source code (robots.txt), must retain exact filename, don't want import-first URL requirement. Place in public directory under project root. Dev serve at root path /. Copied to dist root as-is. Default <root>/public, configurable publicDir option. Reference public assets using root absolute path (public/icon.png as /icon.png). Choosing imports vs public: prefer importing assets unless public directory guarantees needed. Guarantee benefits: no import needed, exact filename retained."
+    },
+    {
+      "index": 4,
+      "manifest": "new URL(url, import.meta.url): native ESM feature. import.meta.url exposes current module URL. Native URL constructor creates full resolved URL of static asset using relative JS path. Example: const imgUrl = new URL('./img.png', import.meta.url).href. Native browser support (Vite no processing dev). Dynamic URLs via template literals supported. getImageUrl(name) function example with ./dir/${name}.png pattern. Production transforms: Vite transforms URLs correct location after bundling/hashing. URL string must static for analysis (imagePath variable won't transform—runtime error if build.target unsupported import.meta.url). Transform detail: getImageUrl transforms to module imports object reference. SSR pattern limitation: doesn't work with Server-Side Rendering (import.meta.url different semantics Node.js vs browser, server bundle can't pre-determine client host URL)."
+    }
+  ]
+}

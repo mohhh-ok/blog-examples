@@ -1,0 +1,21 @@
+{
+  "page": "JSON Schema conversion in Zod (introduced zod@4.0). Convert between JSON Schema and Zod schemas. JSON Schema standard widely used in OpenAPI and structured outputs for AI. Functions: z.fromJSONSchema() converts JSON Schema to Zod schema, z.toJSONSchema() converts Zod schema to JSON Schema. Unrepresentable types: bigint, int64, symbol, undefined, void, date, map, set, transform, nan, custom, multipleOf(0). Options for conversion: target version, metadata, unrepresentable handling, cycles, reused schemas, uri, override. Metadata stored in registries with z.globalRegistry. Questions: How to convert JSON Schema to Zod? How to convert Zod to JSON Schema? How to handle cycles? How to customize JSON Schema output? What types can't be represented?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "z.fromJSONSchema() function (experimental - not stable API, likely to change). Converts JSON Schema objects to Zod schemas. Takes JSON Schema with type, properties, required fields. Example: object type with name string and age number properties. Experimental status noted - implementation may change in future releases."
+    },
+    {
+      "index": 1,
+      "manifest": "z.toJSONSchema() converts Zod schemas to JSON Schema. Supports JSON Schema Draft 2020-12 (default), Draft 07, Draft 04, OpenAPI 3.0. Parameters interface: target (schema version), metadata (registry for schema metadata), unrepresentable (throw|any|function for unsupported types), cycles (ref|throw), reused (ref|inline), uri (custom $ref URI function). All Zod schema checks convert to closest JSON Schema equivalents. Unrepresentable types include: bigint, int64, symbol, undefined, void, date, map, set, transform, nan, custom, multipleOf(0). Metadata overrides Zod-generated keywords. io parameter selects input or output type representation. override callback modifies generated JSON Schema directly."
+    },
+    {
+      "index": 2,
+      "manifest": "Conversion details. String formats: email, iso.datetime (with format date-time), iso.date (format date), iso.duration (format duration), ipv4, ipv6, uuid, guid (format uuid), url (format uri), base64 (contentEncoding). Unsupported string formats use pattern: iso.time, base64url, cuid, emoji, nanoid, cuid2, ulid, cidrv4, cidrv6, mac, currencyCode. Numeric types: z.number() -> type number, z.float32/float64 with exclusiveMinimum/exclusiveMaximum, z.int() -> type integer, z.int32() with exclusiveMinimum/exclusiveMaximum. Object schemas: z.object() has additionalProperties false by default. z.looseObject() never sets additionalProperties false. z.strictObject() always sets additionalProperties false. File schemas: z.file() converts to type string with format binary and contentEncoding binary. File size and MIME checks represented with contentMediaType and minLength/maxLength. Nullability: z.null() becomes type null. z.nullable() adds null to accepted types. z.optional() unchanged, decorated with optional annotation."
+    },
+    {
+      "index": 3,
+      "manifest": "Registries for multiple interlinked JSON Schemas. Pass registry to z.toJSONSchema() to output multiple schemas. All schemas must have registered id property. z.globalRegistry methods: add(schema, {id: string}). Default $ref URIs are simple relative paths. uri option converts id to fully-qualified URI. Example: uri function generates https://example.com/{id}.json format. Registries used for organizing complex schema sets across multiple files or servers."
+    }
+  ]
+}

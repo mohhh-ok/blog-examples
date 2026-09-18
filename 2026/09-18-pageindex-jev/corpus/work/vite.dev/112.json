@@ -1,0 +1,41 @@
+{
+  "page": "Building for Production: run vite build command to deploy app. Default build entry: <root>/index.html. Output: application bundle suitable for static hosting (popularly hosted on GitHub Pages, Netlify, Vercel, etc). Browser compatibility default: Baseline Widely Available as of 2026-01-01 (Chrome 111+, Edge 111+, Firefox 114+, Safari 16.4+). Custom target via build.target (lowest: es2015). Lower targets require Chrome 64+, Firefox 67+, Safari 11.1+, Edge 79+ (native ESM dynamic import + import.meta support). Syntax transforms only (no polyfills by default), check cdnjs.cloudflare.com/polyfill for auto-generated. Legacy browsers: @vitejs/plugin-legacy auto-generates legacy chunks, ES feature polyfills, conditional loading in non-ESM browsers. Public base path: build.base config (command line: vite build --base=/my/public/path/). Auto-adjust JS imports, CSS url(), HTML asset refs. Dynamic URL concatenation: import.meta.env.BASE_URL variable (must be exact string, not ['BASE_URL']). Relative base: base: './' or '' makes URLs relative (import.meta required for older browsers—use legacy plugin). Customizing build: build config options, build.rolldownOptions for Rolldown options adjustment, multiple outputs, build plugins. Chunking: build.rolldownOptions.output.codeSplitting config (Rolldown docs manual code splitting). Framework-specific chunking documentation. Load error handling: vite:preloadError event fires on dynamic import failure (event.preventDefault() suppresses). Useful for new deployment (outdated assets deleted). Cache-Control: no-cache on HTML needed. Watch mode: --watch flag, build.watch WatcherOptions config.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Browser compatibility: production bundle default targets Baseline Widely Available as of fixed date (2026-01-01 for this major). Browser versions: Chrome 111+, Edge 111+, Firefox 114+, Safari 16.4+. Custom target via build.target config (lowest es2015). Lower targets minimum: Chrome 64+, Firefox 67+, Safari 11.1+, Edge 79+ (native ESM dynamic import, import.meta support required). Syntax transforms handled, polyfills not. cdnjs.cloudflare.com/polyfill auto-generates based on UserAgent. Legacy browser support: @vitejs/plugin-legacy auto-generates legacy chunks, ES feature polyfills. Conditional loading: legacy chunks only in non-ESM browsers."
+    },
+    {
+      "index": 1,
+      "manifest": "Public base path: nested public path deployment requires build.base config (auto-rewrites asset paths). Command line: vite build --base=/my/public/path/. JS imports adjusted, CSS url() adjusted, HTML asset refs adjusted. Dynamic URL edge case: import.meta.env.BASE_URL variable (must exact string for static replacement—import.meta.env['BASE_URL'] won't work). Relative base: base: './' or '' for relative URLs. Advanced base: experimental renderBuiltUrl (different paths deployed). Relative bases require import.meta support (legacy plugin for older browsers)."
+    },
+    {
+      "index": 2,
+      "manifest": "Customizing build: build config options reference. Rolldown options directly: build.rolldownOptions. Example: multiple Rolldown outputs, build plugins. How customize build process? What Rolldown options available?"
+    },
+    {
+      "index": 3,
+      "manifest": "Chunking strategy: build.rolldownOptions.output.codeSplitting controls chunk splitting. Rolldown manual code splitting docs reference. Framework-specific: framework docs for chunk configuration."
+    },
+    {
+      "index": 4,
+      "manifest": "Load error handling: vite:preloadError event fires dynamic import failure. event.payload contains original import error. event.preventDefault() suppresses throw. Example: window.addEventListener('vite:preloadError', ...) reload page. Scenario: new deployment deletes previous assets, old user visits trying import outdated chunk (deleted). Error occurs. Event useful addressing. Hosting service: set Cache-Control: no-cache on HTML file (old assets referenced otherwise)."
+    },
+    {
+      "index": 5,
+      "manifest": "Rebuild on files changes: --watch flag enables Rolldown watcher (vite build --watch). Or build.watch WatcherOptions config adjustment. Changes to bundled files trigger rebuild. Config changes or dependencies require build restart. Note: rebuilding on file changes (different from dev server HMR)."
+    },
+    {
+      "index": 6,
+      "manifest": "Multi-page app: multiple .html entry points. Example structure: index.html, nested/index.html. Dev navigation: /nested/ works as expected (normal static file server). Build: specify multiple HTML files via input object. Example config: input main (index.html), nested (nested/index.html). resolve(import.meta.dirname, ...) path resolution. import.meta.dirname root path. Different root requires root added to resolve arguments. Note: Vite ignores entry names, respects file resolved id for HTML asset generation (consistent dev server)."
+    },
+    {
+      "index": 7,
+      "manifest": "Library mode: browser-oriented library development uses index.html for smooth dev experience. Distribution bundling: build.lib config option. Externalize dependencies not bundling. Example: vue or react (external). Build.lib single/multiple entries config. Entry file exports: import Foo from './Foo.vue', export { Foo, Bar }. Running vite build: Rollup preset oriented libraries. Output formats: es + umd (single entry), es + cjs (multiple entries). Configurable via build.lib.formats. Output example. Recommended package.json single/multiple entries. CSS support: library imports CSS, bundled as single CSS file beside JS. build.lib.cssFileName configurable. Export CSS: package.json exports. File extensions: package.json type: module missing changes extensions (.js -> .mjs, .cjs -> .js). Environment variables: import.meta.env.* statically replaced production, process.env.* not (consumers can dynamically change). Undesirable: define: { 'process.env.NODE_ENV': '\"production\"' } static replace, or esm-env. Advanced: non-browser libraries or flows use tsdown or Rolldown directly."
+    },
+    {
+      "index": 8,
+      "manifest": "Advanced base options (experimental): deployed assets/public files may different paths (cache strategies different). Three deployment paths: entry HTML, hashed assets, public files. Single static base insufficient. experimental.renderBuiltUrl support advanced options (build). renderBuiltUrl(filename, { hostType }) function returns runtime code or relative. hostType: js or html distinguishes. Example: CDN URL for JS, relative for HTML. Context parameter context.type (public/other), context.hostId. Filename decoded URL, returned URL should decoded (encoding auto-handled). runtime object returns code rendered as-is (encoding handled). Preview/feedback encouraged (GitHub 13834)."
+    }
+  ]
+}

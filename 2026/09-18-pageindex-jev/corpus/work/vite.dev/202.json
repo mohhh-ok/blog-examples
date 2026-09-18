@@ -1,0 +1,29 @@
+{
+  "page": "Performance optimization guide for Vite: slow server starts, slow page loads, slow builds.\n- Browser setup: extensions interfere with requests and slow startup/reload\n- Incognito mode faster than regular profile\n- Dev-only profile without extensions recommended\n- Disable cache in browser dev tools while working with Vite server\n- Pre-bundled dependencies: hard caching, fast 304 responses\n- Community plugin performance varies, out of Vite's control\n- Large dependencies in plugins: dynamically import for faster startup\n- buildStart, config, configResolved hooks: don't run long operations (awaited during startup)\n- resolveId, load, transform hooks: check keyword/extension before full transformation\n- vite --debug plugin-transform or vite-plugin-inspect for measuring transform duration\n- Async operations give inaccurate timings, treat as rough estimate\n- vite --profile: visit site, press p+enter to record .cpuprofile, use speedscope.app\n- resolve.extensions default: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']\n- Explicit import paths faster than implicit resolution (6 filesystem checks example)\n- Narrow resolve.extensions list but ensure node_modules compatibility\n- this.resolve() hook: only call when needed\n- TypeScript: enable moduleResolution: 'bundler' and allowImportingTsExtensions: true\n- Barrel files: re-export pattern causes loading all files, import individual APIs instead\n- server.warmup option: pre-transform frequently used files\n- vite --debug transform: inspect transform durations\n- File watchers: watch for frequently used files\n- --open or server.open: auto warmup entry point\n- CSS vs Sass/Less/Stylus: use CSS for performance\n- SVG: import as strings/URLs instead of framework components\n- LightningCSS experimental support\nHow do I optimize server startup? How do I fix slow page loads? What's the best approach for plugins? How do I profile Vite? Why are barrel files bad? How do I warm up frequently used files?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Review browser setup for performance.\n- Browser extensions: interfere with requests, slow startup and reload\n- Create dev-only profile without extensions\n- Incognito mode faster than regular profile\n- Dev tools cache disable: big impact on startup and full-page reload\n- Hard caching of pre-bundled dependencies\n- Fast 304 responses for source code\nHow do browser extensions affect Vite performance?"
+    },
+    {
+      "index": 1,
+      "manifest": "Audit configured Vite plugins for performance issues.\n- Internal and official plugins optimized for least work\n- Code transformations: regex in dev, full parse in build\n- Community plugin performance varies\n- Large dependencies: dynamically import to reduce Node.js startup\n- vite-plugin-react#212, vite-plugin-pwa#244 examples\n- buildStart, config, configResolved hooks: avoid long operations (awaited during startup)\n- resolveId, load, transform hooks: check id/code before full transformation\n- Request waterfall: longer transform = more waterfall\n- vite --debug plugin-transform: measure transform duration\n- vite-plugin-inspect: inspect intermediate plugin state\n- Async operations: inaccurate timings, treat as rough estimate\n- vite --profile: record .cpuprofile, use speedscope.app for inspection\nHow do plugin hooks affect performance?"
+    },
+    {
+      "index": 2,
+      "manifest": "Reduce resolve operations for performance.\n- resolve.extensions default: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']\n- Import './Component.jsx' as './Component': 6 filesystem checks needed\n- Explicit import paths faster than implicit\n- Narrow resolve.extensions but ensure node_modules compatibility\n- this.resolve() in plugins: only call when needed\n- TypeScript: moduleResolution: 'bundler' and allowImportingTsExtensions: true\nHow do resolve operations impact performance?"
+    },
+    {
+      "index": 3,
+      "manifest": "Avoid barrel files for better performance.\n- Barrel files re-export APIs from same directory\n- import { slash } from './utils': loads all files even for single API\n- All files fetched and transformed due to side-effects\n- Load more files than required on initial page load\n- Solution: import individual APIs directly (e.g., './utils/slash.js')\n- GitHub issue #8237\nWhy are barrel files bad for performance?"
+    },
+    {
+      "index": 4,
+      "manifest": "Warm up frequently used files for better performance.\n- Dev server on-demand transformation: quick startup, only transform used files\n- Import graph only known after file transformation: waterfalls possible\n- Example: main.js → BigComponent.vue → big-utils.js → large-data.json\n- server.warmup option: pre-transform frequently used files\n- vite --debug transform: inspect logs to find frequently transformed files\n- Metrics example: /@vite/client 28.72ms, BigComponent.vue 62.95ms, big-utils.js 102.54ms\n- Only warm up frequently used files to avoid overload\n- --open or server.open: auto warmup entry point\nHow do I warm up frequently used files?"
+    },
+    {
+      "index": 5,
+      "manifest": "Use lesser or native tooling for performance.\n- Keeping Vite fast: reduce work on source files (JS/TS/CSS)\n- CSS instead of Sass/Less/Stylus (nesting via PostCSS/Lightning CSS)\n- SVG: import as strings/URLs instead of framework components (React, Vue, etc.)\n- Native tooling: LightningCSS experimental support\nHow do I use native tooling for better performance?"
+    }
+  ]
+}

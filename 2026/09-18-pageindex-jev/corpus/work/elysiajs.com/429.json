@@ -1,0 +1,85 @@
+{
+  "page": "Lifecycle events for request-response handling in multiple stages. Lifecycle divided into events: request, parse, transform, derive, beforeHandle, resolve, afterHandle, mapResponse, error, afterResponse. Designed to separate process into distinct phases based on responsibility without interference. Lifecycle follows specific order - visualization available at /assets/lifecycle-chart.svg.\nQuestions: What are lifecycle events? Why divide into phases? What is the execution order?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Lifecycle purpose: separate concerns into distinct phases. Example: detect HTML response and set Content-Type header automatically. Eliminates need to set header on every route. Lifecycle hooks apply automatically.\nQuestions: Why use lifecycle events? What problems do they solve?"
+    },
+    {
+      "index": 1,
+      "manifest": "Hook types: Local Hook (specific route), Interceptor Hook (every route after registration). Inline hook into route or use .on<Event> methods. Hook accepts same Context as handler.\nQuestions: What hook types exist? How do you use them?"
+    },
+    {
+      "index": 2,
+      "manifest": "Local hooks in route options. Example: get('/', () => 'html', { afterHandle({ responseValue, set }) { if isHtml(responseValue) set.headers['Content-Type'] = 'text/html; charset=utf8' } }). Affects single route. Response /: text/html, /hi: text/plain.\nQuestions: How do local hooks work? When do they apply?"
+    },
+    {
+      "index": 3,
+      "manifest": "Interceptor hooks via .on<Event> methods. Example: .onAfterHandle(). Applies to every handler after hook registration for current instance. All routes: /none, /, /hi. Route before hook: text/plain. Routes after hook: text/html.\nQuestions: How do interceptor hooks work? Which routes do they affect?"
+    },
+    {
+      "index": 4,
+      "manifest": "Order of code critical for lifecycle application. Events apply to routes AFTER registration. Put onError before plugin, plugin won't inherit onError. Console log 1 before route, 2 after - only 1 logs. Same applies to plugins. Exception: onRequest - global event independent of route.\nQuestions: Why does order matter? What is exception? How does onRequest differ?"
+    },
+    {
+      "index": 5,
+      "manifest": "Request event - first lifecycle event for every request. Provides minimal context to reduce overhead. Recommended scenarios: caching, rate limiter/IP lock, analytic, provide custom headers (CORS). PreContext with attributes: request (Request), set (Set), store, decorators. No derived value. Returning value uses response, skips rest of lifecycle.\nQuestions: When is onRequest executed? What context does it provide? When should you use it?"
+    },
+    {
+      "index": 6,
+      "manifest": "Parse event - body parser equivalent. Parses body; return value appends to Context.body. Continues iterating through parsers until body assigned or all executed. Default parsers: text/plain, application/json, multipart/form-data, application/x-www-form-urlencoded. Use onParse for custom body parser. Context adds contentType property. Example custom: if contentType === 'application/custom-type' return request.text().\nQuestions: What does parse do? What default parsers exist? How do you add custom parser?"
+    },
+    {
+      "index": 7,
+      "manifest": "Body parser selection ahead of time. Elysia determines body function by reading body type. Criteria: application/json if t.Object, multipart/form-data if t.Object 1-level deep with t.File, application/x-www-form-urlencoded if t.URLEncoded, text/plain for other primitives. Specify explicitly via parse shorthand: 'json', 'formdata', 'urlencoded', 'text', 'none', or full content-type. Skip parsing via parse: 'none' for third-party libraries (tRPC, orpc) where Body already used.\nQuestions: How does Elysia pick parser? What parse options exist? When skip parsing?"
+    },
+    {
+      "index": 8,
+      "manifest": "Custom parser registration. Use .parser('name', ({ request, contentType }) => ...return value...). Apply in parse via array: ['custom', 'json']. Multiple parsers attempted sequentially.\nQuestions: How do you register custom parsers?"
+    },
+    {
+      "index": 9,
+      "manifest": "Transform event - mutate context before validation. Recommended for: mutating existing context, derive based on onTransform with type support. Example: mutate params to numeric values via +params.id.\nQuestions: What does transform do? When should you use it?"
+    },
+    {
+      "index": 10,
+      "manifest": "Derive event - append new value to context before validation. Assigned once per request (unlike state/decorate assigned at startup). Can access Request properties: headers, query, body. Values unique per request, not shared. Recommend using resolve instead in most cases - executes after validation making it more secure.\nQuestions: When is derive assigned? What can it access? When use resolve instead?"
+    },
+    {
+      "index": 11,
+      "manifest": "Derive and transform queue. Both stored in same stack. onTransform executes first, then derive in same queue. Execution order shown in console log.\nQuestions: What queue order is used? How do derive and transform interact?"
+    },
+    {
+      "index": 12,
+      "manifest": "BeforeHandle event - after validation, before handler. Custom validation for specific requirements. Return value skips handler. Recommended for: restricted access (authorization, sign-in), custom request requirements. Example: check validateSession(session.value), return status(401) if invalid. Response: signed in -> Hi, not signed in -> Unauthorized.\nQuestions: When is beforeHandle executed? What can it do? When return value?"
+    },
+    {
+      "index": 13,
+      "manifest": "Guard for multiple beforeHandle application. Apply same beforeHandle to multiple routes. Example: guard({ beforeHandle: isSignIn }, (app) => app.get().post()). Creates encapsulated scope for beforeHandle.\nQuestions: What is guard? How do you use it?"
+    },
+    {
+      "index": 14,
+      "manifest": "Resolve event - append value after validation. Identical syntax to derive. Stored in same stack as beforeHandle. Executes after validation so more secure. Example: extract bearer from Authorization header. Guard resolve for encapsulation.\nQuestions: When does resolve execute? Why more secure than derive? How guard resolve?"
+    },
+    {
+      "index": 15,
+      "manifest": "AfterHandle event - after main handler, map returned value to proper response. Recommended for: transform requests into new value (compression, event stream), add custom headers based on response (Content-Type). Return value used as new response unless undefined. Iteration continues unlike beforeHandle. Example: detect HTML response, set content-type header.\nQuestions: When is afterHandle executed? What can it transform? When return value?"
+    },
+    {
+      "index": 16,
+      "manifest": "MapResponse event - after afterHandle, custom response mapping. Recommended for: compression, map value into Web Standard Response. Example: gzip compression via Bun.gzipSync, set Content-Encoding header, return new Response. After return value, next mapResponse iteration skipped. Elysia auto-merges set.headers - no manual append needed.\nQuestions: When is mapResponse executed? What transformations are common?"
+    },
+    {
+      "index": 17,
+      "manifest": "OnError event - error handling for lifecycle errors. Executes when error thrown in any lifecycle. Recommended for: custom error messages, fail-safe handling/retry, logging/analytics. Elysia catches all handler errors, classifies error code, pipes to onError. Example: return new Response(error.toString()). Must register before handler to apply. Error code examples: NOT_FOUND, PARSE, VALIDATION, INTERNAL_SERVER_ERROR, INVALID_COOKIE_SIGNATURE, INVALID_FILE_TYPE, UNKNOWN, number (HTTP status). If no response returned, uses error.name.\nQuestions: When is onError executed? What error codes exist? When return response?"
+    },
+    {
+      "index": 18,
+      "manifest": "Local error handling via guard. Scope error handler to specific routes via guard. Example: get('/', handler, { beforeHandle, error() { return 'Handled' } }).\nQuestions: How do you scope error handling?"
+    },
+    {
+      "index": 19,
+      "manifest": "AfterResponse event - after response sent to client. Recommended for: clean up response, logging/analytics. Example: log performance.now(). Similar to mapResponse, accepts responseValue (value returned from handler, not Web Response). Access set for headers/status returned. Does not require return value.\nQuestions: When is afterResponse executed? What cleanup can you do? Why use it?"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "page": "- Adapter Helper: provides a unified interface to interact with various runtimes/platforms\n- Import: `import { Hono } from 'hono'`, `import { env, getRuntimeKey } from 'hono/adapter'`\n- `env()` retrieves environment variables across runtimes beyond just Cloudflare Workers Bindings; usage `const { NAME } = env<{ NAME: string }>(c)`; can specify the runtime explicitly as a second argument, e.g. `env<{ NAME: string }>(c, 'workerd')`\n- Supported runtimes/platforms for `env()`: Cloudflare Workers (`wrangler.toml`/`wrangler.jsonc`), Deno (`Deno.env`, `.env` file), Bun (`Bun.env`, `process.env`), Node.js (`process.env`), Vercel, AWS Lambda, Lambda@Edge (env vars not supported, must use a Lambda@Edge event), Fastly Compute (ConfigStore), Netlify (Netlify Contexts)\n- `getRuntimeKey()` returns the identifier of the current runtime, e.g. `workerd` or `bun`\n- Available runtime keys: `workerd` (Cloudflare Workers), `deno`, `bun`, `node`, `edge-light` (Vercel Edge Functions), `fastly` (Fastly Compute), `other` (unknown runtimes); keys inspired by WinterCG's Runtime Keys\n- Questions answered: How do I read environment variables in a way that works across Cloudflare Workers, Node.js, Deno, and Bun? How do I detect which runtime my Hono app is running on? Are environment variables supported on Lambda@Edge? What runtime key identifies Bun or Cloudflare Workers?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- Import statements for Adapter Helper\n- `import { Hono } from 'hono'`\n- `import { env, getRuntimeKey } from 'hono/adapter'`\n- Answers: How do I import the Adapter Helper functions?"
+    },
+    {
+      "index": 1,
+      "manifest": "- `env()` retrieves environment variables across different runtimes, beyond Cloudflare Workers Bindings\n- Example: `const { NAME } = env<{ NAME: string }>(c)`; `NAME` is `process.env.NAME` on Node.js/Bun, or the value in `wrangler.toml` on Cloudflare\n- Supported runtimes/platforms: Cloudflare Workers (`wrangler.toml`, `wrangler.jsonc`), Deno (`Deno.env`, `.env` file), Bun (`Bun.env`, `process.env`), Node.js (`process.env`), Vercel (Environment Variables on Vercel), AWS Lambda (Environment Variables on AWS Lambda), Lambda@Edge (environment variables are NOT supported by Lambda@Edge; must use a Lambda@Edge event instead), Fastly Compute (ConfigStore), Netlify (Netlify Contexts)\n- Can specify the runtime explicitly as a second argument: `env<{ NAME: string }>(c, 'workerd')`\n- Answers: How do I read an environment variable that works on both Node.js and Cloudflare Workers? Does Lambda@Edge support environment variables? How do I manage env vars on Fastly Compute or Netlify? How do I force env() to read from a specific runtime?"
+    },
+    {
+      "index": 2,
+      "manifest": "- `getRuntimeKey()` returns the identifier string of the current runtime\n- Example: `if (getRuntimeKey() === 'workerd') { return c.text('You are on Cloudflare') } else if (getRuntimeKey() === 'bun') {...}`\n- Available runtime keys: `workerd` (Cloudflare Workers), `deno`, `bun`, `node`, `edge-light` (Vercel Edge Functions), `fastly` (Fastly Compute), `other` (unknown/unsupported runtimes)\n- Runtime keys are inspired by WinterCG's Runtime Keys proposal\n- Answers: How do I detect the current runtime in a Hono app? What string does getRuntimeKey() return for Bun or Cloudflare Workers? What is the 'other' runtime key used for?"
+    }
+  ]
+}

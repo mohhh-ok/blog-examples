@@ -1,0 +1,13 @@
+{
+  "page": "Vite 6 shared plugins during build alignment dev/build plugin pipelines. Feedback: GitHub discussions/16358. Future default change: builder.sharedConfigBuild introduced v6.0, feedback expected changing default future major once plugin ecosystem ready. Motivation: align dev build plugin pipelines. Migration guide: plugin state keyed current environment keep separate environments. Plugin form count transformed modules all environments: let transformedModules, buildStart() transformedModules = 0, transform(id) transformedModules++, buildEnd() console.log(transformedModules). Per-environment count: state Map<Environment, {count: number}>, perEnvironmentStartEndDuringDev: true, buildStart() state.set(this.environment, {count: 0}), transform(id) state.get(this.environment).count++, buildEnd() console.log(this.environment.name, state.get(this.environment).count). Simplify pattern: perEnvironmentState helper: function PerEnvironmentCountTransformedModulesPlugin() { const state = perEnvironmentState<{count: number}>(() => ({count: 0})), name: 'count-transformed-modules', perEnvironmentStartEndDuringDev: true, buildStart() state(this).count = 0, transform(id) state(this).count++, buildEnd() console.log(this.environment.name, state(this).count)}.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Motivation: align dev build plugin pipelines."
+    },
+    {
+      "index": 1,
+      "manifest": "Migration guide: plugin state keyed current environment keep separate. Count all: let transformedModules, buildStart() = 0, transform() ++, buildEnd() console.log(). Per-environment count: state Map<Environment, {count}>, perEnvironmentStartEndDuringDev: true, buildStart() state.set(this.environment, {count: 0}), transform() state.get(this.environment).count++, buildEnd() console.log(this.environment.name, state.get()count). Simplify perEnvironmentState helper: const state = perEnvironmentState(() => ({count: 0})), buildStart() state(this).count = 0, transform() state(this).count++, buildEnd() console.log(this.environment.name, state(this).count)."
+    }
+  ]
+}

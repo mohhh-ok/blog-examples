@@ -1,0 +1,53 @@
+{
+  "page": "Cookie handling with mutable signal. No get/set required. Extract cookie name, retrieve/update directly. Automatic encode/decode for object types. Reactive cookies with proxy-based access. Proxy objects never undefined. Single source of truth. Cookie schema validation with t.Cookie. Nullable cookie support with t.Optional. Cookie signature cryptographic hash. Sign/verify automatically. Cookie rotation and key migration. Unsigned to signed cookie transition. Cookie configuration: secret, domain, encode, expires, httpOnly, maxAge, path, priority, sameSite, secure. HTTP header management.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Reactivity for cookies. Mutable signal pattern. Auto-sync with headers. Proxy-dependent objects. .value property access. Cookie jar iteration over existing values only. Single source of truth."
+    },
+    {
+      "index": 1,
+      "manifest": "Cookie attributes. Assign property directly. Set multiple properties. Domain, httpOnly, sameSite, secure, path, maxAge, expires attributes. Domain: 'millennium.sh', httpOnly: true examples."
+    },
+    {
+      "index": 2,
+      "manifest": "Set method resets and overwrites properties. Multiple property update at once. Overwrite all properties."
+    },
+    {
+      "index": 3,
+      "manifest": "Add method updates without reset. Overwrite only defined properties. Partial update."
+    },
+    {
+      "index": 4,
+      "manifest": "Remove cookie. name.remove() or delete cookie.name. Deletion methods."
+    },
+    {
+      "index": 5,
+      "manifest": "Cookie schema validation. t.Cookie for strict type validation. Type inference for cookies. Example: t.Cookie({ name: t.Object({ id: t.Numeric(), name: t.String() }) })."
+    },
+    {
+      "index": 6,
+      "manifest": "Nullable cookie value. t.Optional for nullable cookie names. Allows undefined cookie value."
+    },
+    {
+      "index": 7,
+      "manifest": "Cookie signature cryptographic hash. Secret key and content hash. Verify authenticity and integrity. Prevents malicious modification. Sign/verify automatic."
+    },
+    {
+      "index": 8,
+      "manifest": "Cookie signature usage. Secret string: 'Fischl von Luftschloss Narfidort'. Sign array: ['profile']. t.Cookie with secrets and sign options."
+    },
+    {
+      "index": 9,
+      "manifest": "Constructor global cookie secret and sign. Elysia constructor: cookie: { secrets, sign: ['profile'] }. Apply globally to all routes. No inline repetition."
+    },
+    {
+      "index": 10,
+      "manifest": "Cookie rotation key migration. Secrets array multiple keys. Sign with newer, verify old signatures. Graceful key rotation. Array: ['Vengeance will be mine', 'Fischl von Luftschloss Narfidort']. First secret for new signs."
+    },
+    {
+      "index": 11,
+      "manifest": "Cookie config options. Secret key string or array for rotation. Domain RFC 6265, no default. Encode default encodeURIComponent. Expires Date object no default. HttpOnly boolean default false. MaxAge seconds number undefined. Path cookie path handler default. Priority low/medium/high. SameSite Strict/Lax/None. Secure boolean default false."
+    }
+  ]
+}

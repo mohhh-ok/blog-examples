@@ -1,0 +1,4 @@
+{
+  "page": "Web Standards foundation: Hono uses only Web Standards like Fetch API objects. Includes Request, Response, URL, URLSearchParam, Headers. Cloudflare Workers, Deno, Bun, Fastly Compute built on Web Standards. Hello World example runs same on multiple platforms. Same code runs on Cloudflare Workers, Deno, Bun, Fastly Compute, AWS Lambda, Node.js, Vercel edge-light, WebAssembly WASI, Netlify. WinterCG standardization for web-interoperability.",
+  "sections": []
+}

@@ -1,0 +1,9 @@
+{
+  "page": "Quick Start guide for Elysia TypeScript framework. Multiple runtime support: Bun optimized, Node.js supported, Web Standard. Bun runtime curl installation. Bun create elysia command for automatic setup. Node.js installation via brew/choco/apt/pacman. TypeScript and JavaScript setup options. Scripts: dev with auto-reload, build for production, start for production server. tsconfig.json with compilerOptions.strict=true. tsx for TypeScript Node.js development. Packages: elysia, @elysia/node, @types/node, typescript, @sinclair/typebox, openapi-types. Alternative: JavaScript without TypeScript. Web Standard runtime support. Custom runtime fetch handler export.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Setup guide for Node.js with TypeScript. TypeScript recommended for features. Install elysia @elysia/node tsx @types/node typescript. Dev command: tsx watch src/index.ts. Build command: tsc src/index.ts --outDir dist. Start command: NODE_ENV=production node dist/index.js. tsconfig.json init with strict mode. Packages versions recommended. Why TypeScript first?"
+    }
+  ]
+}

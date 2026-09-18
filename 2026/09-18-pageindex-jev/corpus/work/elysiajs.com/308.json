@@ -1,0 +1,25 @@
+{
+  "page": "Integration with Vercel AI SDK for response streaming. Elysia supports continuous streaming of ReadableStream and Response. Can return streams directly from AI SDKs. Example models: openai('gpt-5'). Works with streamText from 'ai' package. Supports textStream and toUIMessageStream().\nQuestions: How do you integrate with AI SDKs? What streaming methods are available? Which models are supported?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Response streaming with ReadableStream and Response. Return stream.textStream or stream.toUIMessageStream() directly. Elysia handles stream automatically. Example from ai SDK: streamText with model, system, prompt. Automatic stream handling regardless of type.\nQuestions: How do you stream responses from AI? What are textStream and toUIMessageStream?"
+    },
+    {
+      "index": 1,
+      "manifest": "Server-Sent Events for streaming via `sse` function. Wraps ReadableStream with sse(stream). Each chunk sent as SSE event. Works with textStream and toUIMessageStream(). Automatically formats as SSE.\nQuestions: How do you use SSE with AI streams?"
+    },
+    {
+      "index": 2,
+      "manifest": "Direct response return for type-unsafe streams. stream.toTextStreamResponse() or stream.toUIMessageStreamResponse() (uses SSE). When type safety not needed with Eden, use these methods. Returns Web Standard Response directly.\nQuestions: When should you use toTextStreamResponse?"
+    },
+    {
+      "index": 3,
+      "manifest": "Manual streaming control via async generator function. Syntax: `async function* () { for await (const data of stream.textStream) yield ... }`. Yields sse({ data, event: 'message' }). Full control over chunk handling. Final yield: `sse({ event: 'done' })`.\nQuestions: How do you manually control streaming?"
+    },
+    {
+      "index": 4,
+      "manifest": "Fetch for unsupported models. Use native fetch to make requests to AI APIs when SDK doesn't support model. Example OpenAI endpoint: https://api.openai.com/v1/chat/completions. POST with Content-Type: application/json. Requires Authorization header with Bearer token from OPENAI_API_KEY. Stream response directly. Elysia proxies with streaming support.\nQuestions: How do you stream from unsupported models? What headers are needed for OpenAI?"
+    }
+  ]
+}

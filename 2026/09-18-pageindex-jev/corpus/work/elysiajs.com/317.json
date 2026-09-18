@@ -1,0 +1,21 @@
+{
+  "page": "Cloudflare Workers experimental adapter for Elysia. Installation requires Wrangler for setup and development server. Add CloudflareAdapter from elysia/adapter/cloudflare-worker. Call .compile() before exporting app. Set compatibility_date to at least 2025-06-01 in wrangler config. Start dev server: wrangler dev at http://localhost:8787. No nodejs_compat flag needed - Elysia doesn't use Node.js built-in modules not supported by Cloudflare.\nQuestions: How do you run Elysia on Cloudflare Workers? What Wrangler setup is needed? What is the minimum compatibility date?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Known limitations: Elysia.file and Static Plugin don't work (no fs module support). OpenAPI Type Gen doesn't work (requires fs module). Can't define Response before server start. Can't inline values. Error example: .get('/', 'Hello Elysia') throws error. References to fs limitations on Cloudflare Workers.\nQuestions: What doesn't work on Cloudflare Workers? Why are fs-dependent features unavailable?"
+    },
+    {
+      "index": 1,
+      "manifest": "Static file serving via Cloudflare's built-in support instead of Static Plugin. Configure wrangler config with assets: { directory: 'public' }. Place files in public folder. Access paths: http://localhost:8787/filename or http://localhost:8787/subfolder/filename. Example structure: public/kyuukurarin.mp4, public/static/mika.webp accessible at /kyuukurarin.mp4, /static/mika.webp.\nQuestions: How do you serve static files? How are static paths configured?"
+    },
+    {
+      "index": 2,
+      "manifest": "Bindings for Cloudflare Workers resources. Import env from 'cloudflare:workers'. Access bindings: `await env.KV.get('key')`. Example KV store usage. See Cloudflare Workers: Bindings documentation for full details.\nQuestions: How do you use Cloudflare bindings? What resources are accessible?"
+    },
+    {
+      "index": 3,
+      "manifest": "AoT (Ahead of Time) compilation support since Elysia 1.4.7. Previously required `aot: false`. Cloudflare now supports function compilation during startup via compatibility flags. AoT provides better performance and accurate plugin encapsulation. No longer need `aot: false` flag (though still available if needed).\nQuestions: What is AoT compilation? When was it made available for Cloudflare Workers?"
+    }
+  ]
+}

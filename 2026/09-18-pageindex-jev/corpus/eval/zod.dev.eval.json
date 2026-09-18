@@ -1,0 +1,74 @@
+[
+  {
+    "id": "76",
+    "path": ["zod.dev", "Defining schemas", "Refinements", "`.refine()`"],
+    "question": "What should a refinement function do to signal failure, instead of throwing an error?",
+    "answer": "It should return a falsy value; thrown errors are not caught by Zod."
+  },
+  {
+    "id": "68",
+    "path": ["zod.dev", "Defining schemas", "Maps"],
+    "question": "What Zod Mini check enforces that a map schema contains exactly 5 entries?",
+    "answer": "`.check(z.size(5))`"
+  },
+  {
+    "id": "243",
+    "path": ["zod.dev", "Migration guide", "`ZodError`", "deprecates `.addIssue()` and `.addIssues()`"],
+    "question": "Now that `.addIssue()` is deprecated on `ZodError`, how should you add a new issue to an error?",
+    "answer": "Push it directly to the `err.issues` array, e.g. `myError.issues.push({ /* new issue */ })`."
+  },
+  {
+    "id": "126",
+    "path": ["zod.dev", "Codecs", "Useful codecs", "`utf8ToBytes`"],
+    "question": "What two schema types does the `utf8ToBytes` codec convert between?",
+    "answer": "`z.string()` and `z.instanceof(Uint8Array)`, using `TextEncoder`/`TextDecoder` to decode/encode."
+  },
+  {
+    "id": "289",
+    "path": ["zod.dev", "Migration guide", "Internal changes", "adds `ZodTransform`"],
+    "question": "What type does `z.string().transform(val => val)` return, now that transforms are a dedicated class?",
+    "answer": "`ZodPipe<ZodString, ZodTransform>`"
+  },
+  {
+    "id": "90",
+    "path": ["zod.dev", "Defining schemas", "Prefaults"],
+    "question": "What does `z.string().transform(val => val.length).prefault(\"tuna\")` return when parsing `undefined`?",
+    "answer": "4 — the prefault value \"tuna\" is parsed (and transformed) rather than short-circuited."
+  },
+  {
+    "id": "70",
+    "path": ["zod.dev", "Defining schemas", "Files"],
+    "question": "What does `fileSchema.min(10_000)` constrain on a Zod file schema?",
+    "answer": "The minimum `.size` in bytes of the File instance."
+  },
+  {
+    "id": "123",
+    "path": ["zod.dev", "Codecs", "Useful codecs", "`epochSecondsToDate`"],
+    "question": "What does `epochSecondsToDate.decode(1705314600)` return?",
+    "answer": "A JavaScript Date object (the codec multiplies the seconds by 1000)."
+  },
+  {
+    "id": "77",
+    "path": ["zod.dev", "Defining schemas", "Refinements", "`.refine()`", "`error`"],
+    "question": "In the `.refine()` custom error function example, what does `iss.input` represent when `myString.parse(\"OH NO\")` fails?",
+    "answer": "The value that failed validation — it is interpolated into the custom error message, producing `Too short: \"OH NO\"`."
+  },
+  {
+    "id": "113",
+    "path": ["zod.dev", "Codecs", "How encoding works", "Defaults and prefaults"],
+    "question": "What happens when you call `.encode(undefined)` on `z.string().default(\"hello\")`?",
+    "answer": "It throws a ZodError: \"Expected string, received undefined\" — defaults are only applied in the decode direction, not on encode."
+  },
+  {
+    "id": "29",
+    "path": ["zod.dev", "Defining schemas", "Dates"],
+    "question": "Does `z.date().safeParse(\"2022-01-12T06:15:00.000Z\")` succeed or fail?",
+    "answer": "It fails (success: false) — a string is not a Date instance."
+  },
+  {
+    "id": "221",
+    "path": ["zod.dev", "Zod Mini", "When (not) to use Zod Mini", "Backend development"],
+    "question": "According to the cited Lambda cold-start benchmark, how much extra cold-start time did a 128kb bundle add compared to the negligible 1kb baseline?",
+    "answer": "Only about 5ms (176ms vs 171ms)."
+  }
+]

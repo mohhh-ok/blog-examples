@@ -1,0 +1,21 @@
+{
+  "page": "Vite worker options (dev, build, and preview unless noted). worker.format ('es'|'iife', default 'iife'): worker bundle output format. worker.plugins (() => (Plugin|Plugin[])[]): Vite plugins apply worker bundles. Note: config.plugins dev only workers, configure here build instead. Function return new plugin instances parallel rolldown worker builds, modifying config.worker in config hook ignored. worker.rolldownOptions (RolldownOptions): Rolldown worker bundle build options. worker.rollupOptions (RolldownOptions, deprecated): worker.rolldownOptions alias, use worker.rolldownOptions.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "worker.format type 'es'|'iife' default 'iife'. Worker bundle output format."
+    },
+    {
+      "index": 1,
+      "manifest": "worker.plugins type () => (Plugin|Plugin[])[]. Vite plugins apply worker bundles. Note: config.plugins dev only, configure here build. Function return new plugin instances parallel rolldown worker builds. Modifying config.worker config hook ignored."
+    },
+    {
+      "index": 2,
+      "manifest": "worker.rolldownOptions type RolldownOptions. Rolldown worker bundle build options."
+    },
+    {
+      "index": 3,
+      "manifest": "worker.rollupOptions type RolldownOptions deprecated. worker.rolldownOptions alias, use worker.rolldownOptions."
+    }
+  ]
+}

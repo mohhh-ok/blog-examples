@@ -1,0 +1,121 @@
+{
+  "page": "Vite build options (unless noted only build). build.target (string|string[], default 'baseline-widely-available'): final bundle browser compatibility target. 'baseline-widely-available' Vite special value targets Baseline Widely Available date-fixed minimum versions (2026-01-01 this major = chrome111, edge111, firefox114, safari16.4, ios16.4). 'esnext' assumes native dynamic imports minimal transpiling. Oxc Transformer valid target: ES version (es2015), browser+version (chrome58), array multiple. Warning: features untranspilable by Oxc. See Oxc docs. Related: Browser Compatibility guide. build.modulePreload (boolean|{polyfill?: boolean, resolveDependencies?: ResolveModulePreloadDependenciesFn}, default {polyfill: true}): module preload polyfill auto-inject, per index.html entry proxy module. Custom entry via build.rolldownOptions.input: manually import 'vite/modulepreload-polyfill'. Library mode: polyfill NOT apply, avoid if dynamic import not native supported. Disable: {polyfill: false}. Dependencies compute by Vite, absolute path + base default, relative base ('', './') uses import.meta.url runtime. Fine-grained control experimental resolveDependencies function: (url, deps, {hostId, hostType: 'html'|'js'}) => string[] filters/injects dependencies modify paths. Deps relative build.outDir, return relative build.outDir. Further modification experimental renderBuiltUrl. build.polyfillModulePreload (boolean, default true, deprecated): use build.modulePreload.polyfill. Auto-inject module preload polyfill. build.outDir (string, default dist): output directory (relative project root). build.assetsDir (string, default assets): directory nest generated assets (relative build.outDir). Library mode NOT used. build.assetsInlineLimit (number|(filePath, content) => boolean|undefined, default 4096): threshold imported/referenced assets smaller base64 URL inline avoid extra http. 0 disable. Callback boolean return opt-in/-out, undefined default logic. Git LFS auto-excluded not file content. Note: build.lib ignores, always inline. build.cssCodeSplit (boolean, default true): enable/disable CSS code splitting. Enabled: async JS chunks CSS preserved chunks fetched together. Disabled: all project CSS extracted single. Note: build.lib default false. build.cssTarget (string|string[], default build.target): different browser CSS minification target JS transpilation. build.cssMinify: 'lightningcss' (default) option precedence css.lightningcss.targets minification step. Non-mainstream browsers only: Android WeChat WebView modern JS but not #RGBA hex colors, set chrome61 prevent rgba() → #RGBA transform. build.cssMinify (boolean|'lightningcss'|'esbuild', default 'lightningcss' or false if build.minify disabled client): CSS minification override default build.minify, JS/CSS separate config. Lightning CSS default, css.lightningcss configure. 'esbuild': esbuild install required (npm add -D esbuild). build.sourcemap (boolean|'inline'|'hidden', default false): production sourcemap generate. true separate sourcemap file, 'inline' data URI append output, 'hidden' suppress bundled file comments. build.chunkImportMap (boolean, default false, experimental): import maps feature optimize chunk cache efficiency. Related: Chunk Import Map Optimization guide. Note: import.meta.resolve support required (@vitejs/plugin-legacy older browser support). build.rolldownOptions (RolldownOptions): underlying Rolldown bundle customize directly. Options rolldown config file same, merged Vite internal. Instead build.rolldownOptions.input use top-level input recommended (dev also). build.rolldownOptions.input overrides top-level build. See Rolldown docs. build.rollupOptions (RolldownOptions, deprecated): build.rolldownOptions alias, use build.rolldownOptions. build.dynamicImportVarsOptions ({include?, exclude?}): dynamic imports variables transform. Related: Dynamic Import guide. build.lib ({entry?, name?, formats?, fileName?, cssFileName?}): library mode build. entry default top-level input required, name exposed global (formats includes 'umd'/'iife' required), default formats ['es', 'umd'] or ['es', 'cjs'] multiple entries. fileName package name default, (format, entryName) => string function, cssFileName file name CSS output. Defaults: fileName/cssFileName string then same value else package.json name. Related: Library Mode guide. Example: entry: ['src/main.js'], fileName: (format, entryName) => `my-lib-${entryName}.${format}.js`, cssFileName: 'my-lib-style'. build.license (boolean|{fileName?: string}, default false): .vite/license.md generate bundled dependencies licenses. fileName: license filename outDir relative, .json raw JSON metadata. Example JSON: name, version, identifier, text per dependency. Tip: rolldownOptions.output.postBanner inject comment top files. build.manifest (boolean|string, default false): non-hashed → hashed asset filename mapping manifest, server framework render correct links. String: manifest filepath outDir relative, true: .vite/manifest.json. Related: Backend Integration guide. viteMetadata output bundle metadata API inspect chunk/asset CSS/static assets. build.ssrManifest (boolean|string, default false): SSR manifest style links/asset preload directives production. String filepath outDir relative, true: .vite/ssr-manifest.json. Related: SSR guide. build.ssr (boolean|string, default false): SSR-oriented build produce. String: SSR entry direct specify, true: input/build.rolldownOptions.input. Related: SSR guide. build.emitAssets (boolean, default false): non-client builds static assets emit assumed client build part. Framework force emit other environments. Framework post-build merge responsibility. build.ssrEmitAssets (boolean, default false): SSR build static assets emit assumed client part. Framework force emit both client/SSR. Framework post-build merge. Replaced build.emitAssets when Environment API stable. build.minify (boolean|'oxc'|'terser'|'esbuild', default 'oxc' client 'false' SSR): false disable, specify minifier. Oxc default (30~90x faster terser, 0.5~2% worse compression). Benchmarks. 'esbuild' deprecated removed future. Note: 'es' format lib mode minify whitescape remove (pure annotations breaks tree-shaking). esbuild/Terser install (npm add -D esbuild, npm add -D terser). build.terserOptions (TerserOptions): additional minify options Terser. maxWorkers: number max workers spawn (default CPUs-1). Terser docs API reference. build.write (boolean, default true): false disk bundle write disable, programmatic build() post-processing before disk. build.emptyOutDir (boolean, default true if outDir inside root): outDir empty build. Warning outside root avoid delete. CLI --emptyOutDir explicit suppress. build.copyPublicDir (boolean, default true): publicDir files outDir copy build. false disable. build.reportCompressedSize (boolean, default true): gzip-compressed size report enable/disable. Large files compression slow, disable improve big project. build.chunkSizeWarningLimit (number, default 500): chunk size warning limit (kB). Uncompressed size compared (JS size execution time). build.watch (WatcherOptions|null, default null): set {} enable Rolldown watcher. Build-only plugins/integrations. WSL2: see server.watch notes.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "build.target type string|string[] default 'baseline-widely-available'. Browser compatibility target final bundle. 'baseline-widely-available': Vite special, Baseline Widely Available date-fixed (2026-01-01 this major = chrome111, edge111, firefox114, safari16.4, ios16.4). 'esnext': native dynamic import assume minimal transpile. Oxc Transformer: ES version (es2015), browser+version (chrome58), array. Warning if untranspilable. Oxc docs. Browser Compatibility guide."
+    },
+    {
+      "index": 1,
+      "manifest": "build.modulePreload type boolean|{polyfill?: boolean, resolveDependencies?: ResolveModulePreloadDependenciesFn} default {polyfill: true}. Module preload polyfill auto-inject per index.html entry. Custom entry build.rolldownOptions.input: manually import 'vite/modulepreload-polyfill'. Library mode: polyfill NOT apply, avoid if dynamic import native unsupported. Disable: {polyfill: false}. Dependencies: Vite compute, absolute path + base default, relative base uses import.meta.url runtime. Fine-grained resolveDependencies experimental: (url, deps, {hostId, hostType}) => string[] filter/inject modify paths. Deps relative outDir, return relative. Further renderBuiltUrl experimental."
+    },
+    {
+      "index": 2,
+      "manifest": "build.polyfillModulePreload type boolean default true deprecated. Use build.modulePreload.polyfill. Auto-inject module preload polyfill."
+    },
+    {
+      "index": 3,
+      "manifest": "build.outDir type string default dist. Output directory relative project root."
+    },
+    {
+      "index": 4,
+      "manifest": "build.assetsDir type string default assets. Directory nest generated assets relative outDir. Library mode NOT used."
+    },
+    {
+      "index": 5,
+      "manifest": "build.assetsInlineLimit type number|(filePath, content) => boolean|undefined default 4096. Threshold imported/referenced assets smaller base64 URL inline prevent extra http. 0 disable. Callback boolean opt-in/-out, undefined default. Git LFS auto-excluded. build.lib always inline regardless."
+    },
+    {
+      "index": 6,
+      "manifest": "build.cssCodeSplit type boolean default true. CSS code splitting enable/disable. Enabled: async JS chunks CSS preserved chunks fetched together. Disabled: all project CSS single extracted. build.lib default false."
+    },
+    {
+      "index": 7,
+      "manifest": "build.cssTarget type string|string[] default build.target. Different browser target CSS minification JS transpilation. build.cssMinify 'lightningcss' option precedence css.lightningcss.targets. Non-mainstream browsers: Android WeChat WebView modern JS no #RGBA hex, set chrome61 prevent rgba() transform."
+    },
+    {
+      "index": 8,
+      "manifest": "build.cssMinify type boolean|'lightningcss'|'esbuild' default 'lightningcss' or false if build.minify disabled. CSS minification override build.minify, JS/CSS separate. Lightning CSS default (css.lightningcss config), 'esbuild' install required (npm add -D esbuild)."
+    },
+    {
+      "index": 9,
+      "manifest": "build.sourcemap type boolean|'inline'|'hidden' default false. Production sourcemap generate. true separate file, 'inline' data URI append, 'hidden' suppress comments."
+    },
+    {
+      "index": 10,
+      "manifest": "build.chunkImportMap type boolean default false experimental. Import maps optimize chunk cache efficiency. Related: Chunk Import Map Optimization. import.meta.resolve required (@vitejs/plugin-legacy older browser)."
+    },
+    {
+      "index": 11,
+      "manifest": "build.rolldownOptions type RolldownOptions. Underlying Rolldown customize directly. Rolldown config same options, merged Vite internal. Recommend top-level input instead build.rolldownOptions.input (dev also). build.rolldownOptions.input overrides top-level build. Rolldown docs."
+    },
+    {
+      "index": 12,
+      "manifest": "build.rollupOptions type RolldownOptions deprecated. build.rolldownOptions alias, use build.rolldownOptions."
+    },
+    {
+      "index": 13,
+      "manifest": "build.dynamicImportVarsOptions type {include?, exclude?}. Dynamic imports variables transform. Dynamic Import guide."
+    },
+    {
+      "index": 14,
+      "manifest": "build.lib type {entry?, name?, formats?, fileName?, cssFileName?}. Library mode build. entry default top-level input required, name exposed global (umd/iife require), default formats ['es', 'umd'] or ['es', 'cjs'] multiple. fileName (format, entryName) => string function or package.json name default. cssFileName CSS output name, string then default fileName else package.json name. Library Mode guide."
+    },
+    {
+      "index": 15,
+      "manifest": "build.license type boolean|{fileName?: string} default false. .vite/license.md bundled dependencies licenses. fileName license filepath outDir relative, .json raw metadata. JSON: name, version, identifier, text per dependency. Tip: rolldownOptions.output.postBanner inject comment top files. License guide."
+    },
+    {
+      "index": 16,
+      "manifest": "build.manifest type boolean|string default false. Non-hashed → hashed asset filename mapping manifest, server framework render correct. String manifest filepath outDir relative, true .vite/manifest.json. Backend Integration guide. viteMetadata output bundle metadata inspect chunk/asset CSS."
+    },
+    {
+      "index": 17,
+      "manifest": "build.ssrManifest type boolean|string default false. SSR manifest style links/asset preload production. String filepath outDir relative, true .vite/ssr-manifest.json. SSR guide."
+    },
+    {
+      "index": 18,
+      "manifest": "build.ssr type boolean|string default false. SSR-oriented build. String SSR entry direct, true input/build.rolldownOptions.input. SSR guide."
+    },
+    {
+      "index": 19,
+      "manifest": "build.emitAssets type boolean default false. Non-client builds static assets emit assumed client. Framework force other environments. Post-build merge framework responsibility."
+    },
+    {
+      "index": 20,
+      "manifest": "build.ssrEmitAssets type boolean default false. SSR build static assets emit assumed client. Framework force both client/SSR. Post-build merge framework. Replaced build.emitAssets Environment API stable."
+    },
+    {
+      "index": 21,
+      "manifest": "build.minify type boolean|'oxc'|'terser'|'esbuild' default 'oxc' client false SSR. false disable, specify minifier. Oxc default (30~90x faster terser 0.5~2% worse), benchmarks. 'esbuild' deprecated removed. Note: 'es' format lib minify whitescape remove pure annotations tree-shaking break. Install (npm add -D esbuild, npm add -D terser)."
+    },
+    {
+      "index": 22,
+      "manifest": "build.terserOptions type TerserOptions. Additional minify options Terser. maxWorkers: number max workers (default CPUs-1). Terser API reference."
+    },
+    {
+      "index": 23,
+      "manifest": "build.write type boolean default true. false disk bundle write disable, programmatic build() post-processing before write."
+    },
+    {
+      "index": 24,
+      "manifest": "build.emptyOutDir type boolean default true if outDir inside root. outDir empty build. Warning outside root avoid delete. CLI --emptyOutDir explicit suppress."
+    },
+    {
+      "index": 25,
+      "manifest": "build.copyPublicDir type boolean default true. publicDir files outDir copy build. false disable."
+    },
+    {
+      "index": 26,
+      "manifest": "build.reportCompressedSize type boolean default true. gzip-compressed size report enable/disable. Large compression slow, disable big project."
+    },
+    {
+      "index": 27,
+      "manifest": "build.chunkSizeWarningLimit type number default 500. Chunk size warning (kB). Uncompressed size compared (JS size execution time)."
+    },
+    {
+      "index": 28,
+      "manifest": "build.watch type WatcherOptions|null default null. set {} Rolldown watcher enable. Build-only plugins/integrations. WSL2: server.watch notes."
+    }
+  ]
+}

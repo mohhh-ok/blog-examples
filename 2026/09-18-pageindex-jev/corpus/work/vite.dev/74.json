@@ -1,0 +1,21 @@
+{
+  "page": "Vite Command Line Interface: vite dev server, build, optimize, preview commands with extensive options. Dev server: vite [root] starts development server (aliases: vite dev, vite serve). Build: vite build [root] builds for production (target: baseline-widely-available, outDir: dist, assetsDir: assets, assetsInlineLimit: 4096, ssr, sourcemap, minify: oxc, manifest, ssrManifest, emptyOutDir, --watch). Optimize: vite optimize [root] pre-bundles dependencies (deprecated, auto). Preview: vite preview [root] locally preview production build at http://localhost:4173. Common options: --host, --port, --open, --cors, --strictPort, --force, -c/--config, --base, -l/--logLevel (info/warn/error/silent), --clearScreen, --configLoader (bundle/runner/native), --profile, -d/--debug, -f/--filter, -m/--mode, -h/--help, -v/--version. Dev-specific: --experimentalBundle. Build-specific: --target, --assetsDir, --ssr, --minify (oxc/terser/esbuild), --app. Preview-specific: --outDir. Config loader default: bundle (experimental: runner, native). Node.js profiling support via --profile flag.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Dev server command: vite [root]. Aliases: vite dev, vite serve. Starts Vite development server in current directory. Options: --host [host] (hostname string), --port <port> (number), --open [path] (boolean|string open browser), --cors (boolean enable CORS), --strictPort (exit if port in use), --force (ignore cache re-bundle), --experimentalBundle (experimental full bundle mode), -c/--config <file> (string), --base <path> (default /), -l/--logLevel (info|warn|error|silent), --clearScreen (boolean), --configLoader (bundle|runner|native, default bundle), --profile [name] (Node.js inspector, .cpuprofile output), -d/--debug [feat] (string|boolean show logs), -f/--filter <filter> (string), -m/--mode <mode> (env mode), -h/--help, -v/--version. What options most useful for development? How to debug dev server? What does --force do?"
+    },
+    {
+      "index": 1,
+      "manifest": "Build command: vite build [root]. Builds for production. Options: --target <target> (string, default baseline-widely-available transpile target), --outDir <dir> (string default dist), --assetsDir <dir> (string default assets, under outDir), --assetsInlineLimit <number> (bytes default 4096 static asset inline threshold), --ssr [entry] (string build SSR entry), --sourcemap [output] (boolean|inline|hidden, default false), --minify [minifier] (boolean|oxc|terser|esbuild, default oxc), --manifest [name] (boolean|string emit manifest json), --ssrManifest [name] (boolean|string emit SSR manifest), --emptyOutDir (boolean force empty when outside root), -w/--watch (rebuild on file changes), -c/--config <file>, --base <path>, -l/--logLevel, --clearScreen, --configLoader, --profile [name], -d/--debug [feat], -f/--filter, -m/--mode, -h/--help, --app (build all environments, experimental). How to build SSR? What's difference between manifest and ssrManifest? When use --watch flag?"
+    },
+    {
+      "index": 2,
+      "manifest": "Optimize command: vite optimize [root]. Pre-bundles dependencies. Deprecated: auto-runs, no manual call needed. Options: --force (ignore cache re-bundle), -c/--config <file>, --base <path>, -l/--logLevel, --clearScreen, --configLoader, -d/--debug [feat], -f/--filter, -m/--mode, -h/--help. Automatic dependency pre-bundling process."
+    },
+    {
+      "index": 3,
+      "manifest": "Preview command: vite preview [root]. Locally preview production build. Not production server (not designed for it). Starts server in build directory (default dist, configurable via build.outDir). Run vite build beforehand to ensure build up-to-date. Uses middleware based on configured appType. URL: http://localhost:4173 default. Options: --host [host] (string), --port <port> (number), --strictPort (boolean), --open [path] (boolean|string), --outDir <dir> (default dist), -c/--config <file>, --base <path>, -l/--logLevel, --clearScreen, --configLoader, -d/--debug [feat], -f/--filter, -m/--mode, -h/--help. Can configure port via --port flag or package.json script (e.g., vite preview --port 8080)."
+    }
+  ]
+}

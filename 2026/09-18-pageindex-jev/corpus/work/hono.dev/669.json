@@ -1,0 +1,21 @@
+{
+  "page": "Supabase Edge Functions deployment platform: open-source Firebase alternative with serverless functions. Built on Deno runtime for improved security. Supabase provides database, authentication, storage, and serverless functions. Edge functions are TypeScript running globally for performance. Setup requires Supabase CLI installation. Process: init project, create functions, run locally, deploy to production.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Prerequisites: install Supabase CLI. Commands: supabase init to initialize new project in directory. supabase functions new hello-world creates new edge function with specified name."
+    },
+    {
+      "index": 1,
+      "manifest": "Edit hello-world function in supabase/functions/hello-world/index.ts. Import Hono from jsr:@hono/hono. Create Hono app with basePath. Register GET /hello endpoint returning text response. Call Deno.serve(app.fetch)."
+    },
+    {
+      "index": 2,
+      "manifest": "Run locally with supabase start (start supabase stack) and supabase functions serve --no-verify-jwt (start watcher, bypass JWT verification). Make GET request to http://127.0.0.1:54321/functions/v1/hello-world/hello. Returns text response from handler."
+    },
+    {
+      "index": 3,
+      "manifest": "Deploy all edge functions: supabase functions deploy. Deploy individual function: supabase functions deploy hello-world. See Supabase docs for additional deployment methods."
+    }
+  ]
+}

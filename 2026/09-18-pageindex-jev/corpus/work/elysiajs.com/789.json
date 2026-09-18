@@ -1,0 +1,57 @@
+{
+  "page": "WebSocket real-time protocol for client-server communication. Direct connection for bidirectional messaging. Unlike HTTP no repeated requests. uWebSocket Bun under hood same API. .ws() method for WebSocket handler. Message, query, params, headers, cookie, response schema validation. Parsing stringified JSON messages. Configuration: idleTimeout default 120 seconds, perMessageDeflate default false, maxPayloadLength, backpressureLimit default 16MB, closeOnBackpressureLimit default false. Methods: open callback, message callback, close callback, drain callback. Middleware: parse, beforeHandle, transform, transformMessage. Additional headers. How to use WebSocket? What schema can validate? What handlers available?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "WebSocket message validation. Schema for message body. Query string validation. Params path validation. Headers request validation. Cookie request validation. Response return value validation. Same as normal routes. ws.data.query for schema access. Stringified JSON auto-parsed."
+    },
+    {
+      "index": 1,
+      "manifest": "Configuration options. IdleTimeout 120 seconds default connection close after no message. PerMessageDeflate false default compression. MaxPayloadLength message size limit. BackpressureLimit 16MB default buffered bytes. CloseOnBackpressureLimit false default don't close. Bun WebSocket configuration extension."
+    },
+    {
+      "index": 2,
+      "manifest": "Methods available for WebSocket. open(ws) new connection callback. message(ws, message) incoming message callback. close(ws) connection close callback. drain(ws, code, reason) ready for data callback."
+    },
+    {
+      "index": 3,
+      "manifest": "WebSocketHandler config. open new connection callback. message incoming message callback. close closing callback. drain server ready callback. Validate request before upgrade."
+    },
+    {
+      "index": 4,
+      "manifest": "open callback for new connection. ws ServerWebSocket with id, data Context."
+    },
+    {
+      "index": 5,
+      "manifest": "message callback for incoming WebSocket message. Message type based on schema.message default string."
+    },
+    {
+      "index": 6,
+      "manifest": "close callback for connection close. ws ServerWebSocket object."
+    },
+    {
+      "index": 7,
+      "manifest": "drain callback ready to accept data. Code number close code. Reason string close reason."
+    },
+    {
+      "index": 8,
+      "manifest": "parse middleware before connection upgrade."
+    },
+    {
+      "index": 9,
+      "manifest": "beforeHandle middleware before upgrade. Ideal for validation."
+    },
+    {
+      "index": 10,
+      "manifest": "transform middleware before validation."
+    },
+    {
+      "index": 11,
+      "manifest": "transformMessage middleware before WebSocket message validation."
+    },
+    {
+      "index": 12,
+      "manifest": "header additional headers before connection upgrade."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "page": "Server Timing API plugin for performance auditing. Install @elysia/server-timing. Appends Server-Timing header with log duration, function name, detail. Browser developer tools > Network > Timing to inspect. Config: enabled (default NODE_ENV !== 'production'), allow condition, trace lifecycle events. Trace types: request, parse, transform, beforeHandle, handle, afterHandle, total. Performance bottleneck auditing.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Config options. enabled boolean default NODE_ENV !== 'production'. allow undefined condition function. trace undefined lifecycle events array. Trace types: request, parse, transform, beforeHandle, handle, afterHandle, total durations."
+    },
+    {
+      "index": 1,
+      "manifest": "Common patterns for plugin usage."
+    },
+    {
+      "index": 2,
+      "manifest": "Allow condition disable on specific routes. Allow function returns boolean based on request URL. Disable on /no-trace path example."
+    }
+  ]
+}

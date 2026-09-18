@@ -1,0 +1,9 @@
+{
+  "page": "WinterTC standard for HTTP servers across Cloudflare, Deno, Vercel, others. Allows web servers to interoperate using Request and Response Web Standard APIs. Elysia is WinterTC compliant, optimized for Bun, supports other runtimes. Any WinterTC-compliant framework/code runs together. Examples: Elysia, Hono, Remix, Itty Router run together. Works on multiple runtimes: Bun, Deno, Vercel Edge, Cloudflare Worker, Netlify Edge.\nQuestions: What is WinterTC? Which frameworks comply? Which runtimes are supported?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Mount usage with fetch function. Pass fetch function to .mount(): .mount('/hono', hono.fetch). WinterTC-compliant frameworks supported: Hono, Nitro, H3, Next.js API Route, Nuxt API Route, SvelteKit API Route. Nested mounting: mount Elysia inside Hono inside Elysia via .mount() recursive nesting. Enables interoperable framework and runtime possibilities.\nQuestions: How do you mount? What frameworks are supported? Can you nest mounts?"
+    }
+  ]
+}

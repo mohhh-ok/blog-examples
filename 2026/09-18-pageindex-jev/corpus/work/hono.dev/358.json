@@ -1,0 +1,29 @@
+{
+  "page": "- Route Helper: provides enhanced routing information for debugging and middleware development, exposing details about matched routes and the current route\n- Import: `import { Hono } from 'hono'`, `import { matchedRoutes, routePath, baseRoutePath, basePath } from 'hono/route'`\n- `routePath(c)` returns the route path pattern registered for the current handler (e.g. `/posts/:id`); accepts an optional index parameter like `Array.prototype.at()`, e.g. `routePath(c, 0)` or `routePath(c, -1)`\n- `matchedRoutes(c)` returns an array of all routes (including middleware) that matched the current request, each with `method`, `path`, `handler`\n- `baseRoutePath(c)` returns the base path pattern of the current route as specified in routing (e.g. `/:sub`), also accepts an index parameter\n- `basePath(c)` returns the base path with embedded parameters from the actual request (e.g. `/api` for a request to `/api/posts/123`)\n- Works with sub-applications mounted via `app.route('/api', apiApp)`\n- Questions answered: How do I get the matched route pattern for the current request in Hono? How do I list all routes/middleware that matched a request? What's the difference between routePath and baseRoutePath? How do I get the base path with resolved parameters for a sub-application? Can I get the route path of an earlier matched middleware?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- Import statements for Route Helper\n- `import { Hono } from 'hono'`\n- `import { matchedRoutes, routePath, baseRoutePath, basePath } from 'hono/route'`\n- Answers: How do I import the Route Helper functions?"
+    },
+    {
+      "index": 1,
+      "manifest": "- Basic route information: `routePath(c)` returns the current route path (e.g. `/posts/:id`); `matchedRoutes(c)` returns an array of matched routes; example route `app.get('/posts/:id', (c) => c.json({ path: currentPath, totalRoutes: routes.length }))`\n- Sub-applications: mounting `apiApp` at `/api` via `app.route('/api', apiApp)`; inside `apiApp`, `routePath(c)` returns `/posts/:id`, `baseRoutePath(c)` returns `/api`, `basePath(c)` returns `/api` (with actual params)\n- Answers: How do I access the current route pattern inside a handler? How do route helper functions behave differently inside a mounted sub-application?"
+    },
+    {
+      "index": 2,
+      "manifest": "- Returns an array of all routes that matched the current request, including middleware\n- Example: `app.all('/api/*', middleware); app.get('/api/users/:id', handler)` — `matchedRoutes(c)` returns `[{ method: 'ALL', path: '/api/*', handler: [Function] }, { method: 'GET', path: '/api/users/:id', handler: [Function] }]`\n- Answers: How do I see every middleware and route handler that matched the current request? What shape does each entry in matchedRoutes() have (method, path, handler)?"
+    },
+    {
+      "index": 3,
+      "manifest": "- Returns the route path pattern registered for the current handler, e.g. `app.get('/posts/:id', (c) => console.log(routePath(c)))` logs `/posts/:id`\n- Supports an optional index parameter, similar to `Array.prototype.at()`, to get the route path at a specific matched position: `routePath(c, 0)` returns the first matched route (e.g. `/api/*`), `routePath(c, -1)` returns the last matched route (e.g. `/api/users/:id`)\n- Answers: How do I get the route pattern of the currently executing handler? How do I get the route pattern of an earlier-matched middleware using an index?"
+    },
+    {
+      "index": 4,
+      "manifest": "- Returns the base path pattern of the current route as specified in routing, e.g. a sub-app mounted at `/:sub` — `baseRoutePath(c)` inside the sub-app returns `/:sub`\n- Supports an optional index parameter like `Array.prototype.at()`: `baseRoutePath(c, 0)` returns the first matched base route (e.g. `/`), `baseRoutePath(c, -1)` returns the last matched base route (e.g. `/api`)\n- Answers: How do I get the base route pattern under which a sub-application was mounted? How do I get the base route path at a specific matched index?"
+    },
+    {
+      "index": 5,
+      "manifest": "- Returns the base path with embedded parameters resolved from the actual request, e.g. a sub-app mounted at `/:sub` handling a request to `/api/posts/123` — `basePath(c)` returns `/api`\n- Answers: How do I get the resolved base path (with actual parameter values) for the current request in a sub-application?"
+    }
+  ]
+}

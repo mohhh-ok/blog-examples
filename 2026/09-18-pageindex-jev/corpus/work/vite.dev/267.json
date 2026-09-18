@@ -1,0 +1,58 @@
+{
+  "page": "Manual HMR (Hot Module Replacement) API for client-side module updates. Exposed via import.meta.hot object. For server-side HMR handling, see handleHotUpdate plugin hook.\n- Conditional guard: if (import.meta.hot) required for tree-shaking in production\n- import.meta.hot: ViteHotContext interface\n- ViteHotContext methods: accept(), dispose(), prune(), invalidate(), on(), off(), send()\n- ModuleNamespace type from 'vite/types/hot.d.ts'\n- CustomEventName, InferCustomEventPayload from 'vite/types/customEvent.d.ts'\n- accept(): self-accept without callback\n- accept(cb): self-accept with callback receiving updated module\n- accept(dep, cb): accept specific dependency, dep is module path string\n- accept(deps, cb): accept array of dependencies\n- dispose(cb): cleanup persistent side effects\n- prune(cb): cleanup when module no longer imported\n- invalidate(message?): force propagate update to importers\n- on(event, cb): listen to HMR events\n- off(event, cb): remove event listener\n- send(event, data?): send custom event to server\n- HMR events: 'vite:beforeUpdate', 'vite:afterUpdate', 'vite:beforeFullReload', 'vite:beforePrune', 'vite:invalidate', 'vite:error', 'vite:ws:disconnect', 'vite:ws:connect'\n- data object: persisted across HMR instances, mutations visible to next instance\n- TypeScript: add 'vite/client' to tsconfig.json types\n- Backward compatibility: decline() is noop\n- User responsibility: implement HMR acceptance in frameworks not handling it\nHow do I implement HMR in my modules? What HMR events are available? How do I send custom events to the server? How do I dispose side effects during HMR?"
+,
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Required conditional guard for HMR.\n- if (import.meta.hot) guard: required for all HMR API usage\n- Allows tree-shaking in production\n- Code inside guard removed in production builds\nWhy is the conditional guard required?"
+    },
+    {
+      "index": 1,
+      "manifest": "TypeScript IntelliSense for HMR.\n- import.meta.hot type definitions in vite/client.d.ts\n- Add 'vite/client' to tsconfig.json compilerOptions.types\n- Enables TypeScript autocomplete and validation\nHow do I get TypeScript support for HMR?"
+    },
+    {
+      "index": 2,
+      "manifest": "Module self-acceptance with accept().\n- import.meta.hot.accept(callback): self-accept hot updates\n- Callback receives updated module (newModule)\n- HMR boundary: module marked as accepting updates\n- Module graph visualization: imports form edges\n- Vite doesn't swap original module: responsibility to handle re-exports\n- Simplified HMR: skip expensive proxy module generation\n- Importers up chain not notified of changes\n- Static analysis requirement: appear as import.meta.hot.accept( (whitespace-sensitive)\nHow do I make a module self-accepting?"
+    },
+    {
+      "index": 3,
+      "manifest": "Accepting updates from dependencies.\n- import.meta.hot.accept(dep, cb): accept specific dependency updates\n- dep: module path string (e.g., './foo.js')\n- Callback receives updated dependency module\n- Can accept array of deps: ['./foo.js', './bar.js']\n- Callback receives array of updated modules (non-null only for updated)\n- Array empty if update unsuccessful (syntax error)\nHow do I accept updates from specific dependencies?"
+    },
+    {
+      "index": 4,
+      "manifest": "Disposing side effects during HMR.\n- import.meta.hot.dispose(cb): cleanup persistent side effects\n- Called when updated copy is about to be replaced\n- Useful for cleaning up timers, subscriptions, etc.\nHow do I clean up side effects during HMR?"
+    },
+    {
+      "index": 5,
+      "manifest": "Pruning modules from page.\n- import.meta.hot.prune(cb): cleanup when module no longer imported\n- Compared to dispose(): for code that self-cleans on updates\n- Only needed cleanup when removed from page\n- Vite uses for .css imports\nWhen do I use prune instead of dispose?"
+    },
+    {
+      "index": 6,
+      "manifest": "Persistent data across HMR.\n- import.meta.hot.data: object persisted across HMR instances\n- Mutations visible to next module instance\n- One data object per module path\n- Re-assignment not supported (data = {...} doesn't work)\n- Mutate properties instead: hot.data.someValue = 'hello'\n- Cleared after hot.dispose/hot.prune callbacks complete\n- New empty object on re-import\nHow do I persist data across HMR?"
+    },
+    {
+      "index": 7,
+      "manifest": "Declining HMR (backward compatibility).\n- import.meta.hot.decline(): currently noop, backward compatibility\n- Indicate module not hot-updatable: use hot.invalidate() instead\nWhat does decline() do?"
+    },
+    {
+      "index": 8,
+      "manifest": "Invalidating self-accepting modules.\n- import.meta.hot.invalidate(message?): force update propagation to importers\n- Self-accepting module can't handle update at runtime\n- HMR server invalidates importers (as if not self-accepting)\n- Logs message in browser console and terminal\n- Pass message for context on why invalidation happened\n- Always call accept() first (or inside callback) for HMR listening\n- Recommend calling invalidate() within accept() callback\nHow do I invalidate a module?"
+    },
+    {
+      "index": 9,
+      "manifest": "Listening to HMR events.\n- import.meta.hot.on(event, cb): listen to HMR events\n- Automatic Vite events: 'vite:beforeUpdate', 'vite:afterUpdate', 'vite:beforeFullReload', 'vite:beforePrune', 'vite:invalidate', 'vite:error', 'vite:ws:disconnect', 'vite:ws:connect'\n- Custom events from plugins via handleHotUpdate\n- Payload type inferred from CustomEventMap\nWhat HMR events can I listen to?"
+    },
+    {
+      "index": 10,
+      "manifest": "Removing HMR event listeners.\n- import.meta.hot.off(event, cb): remove callback from event listeners\n- Same callback reference must be used\nHow do I remove event listeners?"
+    },
+    {
+      "index": 11,
+      "manifest": "Sending custom events to server.\n- import.meta.hot.send(event, data?): send custom event to server\n- Buffers data if not yet connected\n- Sent once connection established\n- See Client-server Communication in api-plugin.html for details\n- Typing custom events: extend CustomEventMap interface\nHow do I send custom events to the server?"
+    },
+    {
+      "index": 12,
+      "manifest": "Further HMR learning resources.\n- 'Hot Module Replacement is Easy' by Bjorn Lu blog post\n- Learn HMR implementation and use cases\nWhere can I learn more about HMR?"
+    }
+  ]
+}

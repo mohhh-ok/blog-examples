@@ -1,0 +1,25 @@
+{
+  "page": "Dependency Pre-Bundling: Vite automatically pre-bundles dependencies on first run before loading site locally. Transparent by default. Purpose: CommonJS/UMD compatibility (dev serves native ESM, must convert), performance improvement (many internal modules merged to single module). Smart import analysis converts named imports from CommonJS correctly (e.g., React). Lodash-es example (600+ internal modules) reduced to 1 HTTP request via pre-bundling. Dev-only optimization (not production). Automatic discovery via source crawling for bare imports, entry points for pre-bundle. Cache check before bundling. Page-embedded new dependency trigger re-run and reload if needed. Monorepos: linked packages from same repo auto-detected, not bundled, linked dep dependency list analyzed. ESM requirement for linked deps (or optimizeDeps.include). Customization: optimizeDeps config options control behavior. Caching: file system cache (node_modules/.vite), lockfile/patches/config/NODE_ENV determine re-run need, --force flag re-bundles, browser cache (HTTP headers, auto-invalidated by version query).",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Why pre-bundling: CommonJS/UMD compatibility—dev serves native ESM, dependencies shipped as CommonJS/UMD must convert. Smart import analysis: named imports from CommonJS work expected even dynamically assigned exports (React example: import React, { useState } from 'react'). Performance improvement—ESM deps with many internal modules converted to single module. Example lodash-es (600+ modules, 600+ requests) becomes single module, 1 request. Network congestion reduced. Pre-bundling dev-mode only. When is pre-bundling needed? Why CommonJS problematic for dev? How smart analysis works?"
+    },
+    {
+      "index": 1,
+      "manifest": "Automatic dependency discovery: existing cache absent, Vite crawls source code automatically discovering bare module imports (bare imports = expect node_modules resolution). Found imports used as entry points for pre-bundle. Rolldown performs pre-bundling (typically very fast). Server already started: new dependency import encountered not in cache, Vite re-runs dep bundling process, reloads page if needed. How does Vite know which deps to pre-bundle? When does Vite auto-discover fail? Can discovery be manual?"
+    },
+    {
+      "index": 2,
+      "manifest": "Monorepos/linked dependencies: monorepo setup, dependency may be linked package from same repo. Vite auto-detects deps not resolved from node_modules, treats linked as source code. Won't bundle linked, analyzes linked dependency list instead. Requirement: linked dep exported as ESM. If not: optimizeDeps.include config (add linked-dep). Example vite.config.js with optimizeDeps.include. Changing linked dep: restart with --force for changes to take effect. How to properly structure monorepo with Vite? When linked deps require bundling?"
+    },
+    {
+      "index": 3,
+      "manifest": "Customizing behavior: default discovery heuristics may undesirable. optimizeDeps config options control list. Include/exclude common use: import created by plugin transform, not directly discoverable source code. Server immediately re-bundles after start (discovered after browser requests file). Both include/exclude handle: include if large (many modules) or CommonJS, exclude if small valid ESM. Further customize via optimizeDeps.rolldownOptions (Rolldown plugin, special files handling, build target change). optimizeDeps config options documentation reference. What dependencies should be included vs excluded? How plugin transforms affect discovery?"
+    },
+    {
+      "index": 4,
+      "manifest": "Caching: file system cache in node_modules/.vite. Re-run need determined by sources: package manager lockfile content (package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lock, aube-lock.yaml, nub.lock), patches folder modification time, relevant vite.config.js fields, NODE_ENV value. Re-bundling only when above changed. Force re-bundle: --force flag start dev server, manually delete node_modules/.vite. Browser cache: resolved dependency requests strongly cached (HTTP headers max-age=31536000,immutable). Improve page reload performance dev. Once cached never hit dev server. Auto-invalidated if different version installed (package lockfile version change). Debug dependencies locally: disable browser cache (Network tab devtools), restart server --force, reload page."
+    }
+  ]
+}

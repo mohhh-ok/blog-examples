@@ -1,0 +1,29 @@
+{
+  "page": "Guidance for library authors building on top of Zod. Target Zod 4 only for new libraries. Zod 3 end-of-life: security and unambiguous bug fixes only, no new features. Consider Standard Schema for black-box validation accepting user-defined schemas. Peer dependency configuration: zod@^4.0.0. Import from zod/v4/core permalink subpath for stability across major versions. Support both Zod 3 and 4 with zod@^3.25.0 || ^4.0.0 peer range. Zod and Zod Mini share base interfaces from zod/v4/core. Differentiate Zod 3 vs 4 schemas at runtime using _zod property. Generic type parameters must extend $ZodType interface for proper type inference. Questions: Should I depend on Zod? How to set up peer dependencies? Which subpaths to import? How to support Zod 3? How to support Mini?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Determine if Zod dependency needed. For black-box validation libraries accepting user-defined schemas from any library, consider Standard Schema instead of Zod-specific. Standard Schema is shared interface implemented by most popular TypeScript validation libraries including Zod. Allows extracting inferred input/output types, validating inputs, getting standardized errors. If Zod-specific functionality needed, then add dependency."
+    },
+    {
+      "index": 1,
+      "manifest": "Peer dependency configuration. Include zod in peerDependencies as zod@^4.0.0. Also add zod to devDependencies during development. For existing libraries supporting Zod 3 users, see dual-support pattern. Peer dependency lets users bring their own Zod version."
+    },
+    {
+      "index": 2,
+      "manifest": "Import from zod/v4/core subpath - the permalink to Zod 4 stable forever across future major versions. Import statement: import * as z4 from 'zod/v4/core'. Only other permalink is zod/v3. Do not import from zod (changes between versions), zod/v4 (Classic only), zod/v4/mini (Mini only) - these prevent supporting both Zod and Zod Mini. Zod Core exports $-prefixed base classes extended by Classic and Mini. Core and mini internals identical, differ only in helper methods."
+    },
+    {
+      "index": 3,
+      "manifest": "Dual-support pattern for existing libraries. Widen peer dependency range to zod@^3.25.0 || ^4.0.0. Available since zod@3.25.0, no breaking changes between 3.24 and 3.25. Import both versions side-by-side: import * as z3 from 'zod/v3' and import * as z4 from 'zod/v4/core'. Differentiate at runtime checking _zod property - only defined on Zod 4 schemas. _def property used for Zod 3. Union types z3.ZodTypeAny | z4.$ZodType for schemas."
+    },
+    {
+      "index": 4,
+      "manifest": "Support Zod and Zod Mini simultaneously by importing only from zod/v4/core. This subpackage defines shared interfaces, classes, utilities between Zod and Mini. Constraint example: T extends z4.$ZodObject. Functions accepting z4.$ZodType schemas work with both implementations. Use z4.parse, z4.safeParse, z4.parseAsync, z4.safeParseAsync for parsing. $ZodType subclass has no methods - parsing methods in Classic/Mini but not Core."
+    },
+    {
+      "index": 5,
+      "manifest": "Accept user-defined schemas with proper type inference. Generic parameter must extend z4.$ZodType interface, not just be z4.$ZodType<T> - loses type information and subclass specifics. Correct: function<T extends z4.$ZodType>(schema: T). Constrain to specific subclass: T extends z4.$ZodObject. Constrain output type: T extends z4.$ZodType<string>. Use top-level z4.parse/z4.safeParse/z4.parseAsync/z4.safeParseAsync functions from Core."
+    }
+  ]
+}

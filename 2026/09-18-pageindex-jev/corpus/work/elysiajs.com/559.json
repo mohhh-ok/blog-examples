@@ -1,0 +1,13 @@
+{
+  "page": "Eden Treaty end-to-end type-safe client for Elysia server. Object representation for server interaction. Type safety, auto-completion, error handling. Export server type from Elysia instance. Import treaty function from @elysia/eden. Consume Elysia API on client with type safety. Example: const app = treaty<App>('localhost:3000'). Tree-like syntax using dot notation matching file system. HTTP methods: .get(), .post(), .delete(). Dynamic path parameters with function notation. Response destructuring: { data, error }. How to export server type? How to use treaty client? How to handle dynamic paths? What response format does treaty use?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Tree-like syntax for HTTP paths. Dot notation matches file system hierarchy. Static paths: .hi, .deep.nested. HTTP methods map: /=base, /hi=.hi, /deep/nested=.deep.nested. Combined with methods: /.get(), /hi.get(), /deep.nested.post(). How does dot notation work?"
+    },
+    {
+      "index": 1,
+      "manifest": "Dynamic path parameters. Cannot use dot notation alone for parameters. Function syntax for clarity: treaty.item({ name: 'Skadi' }).get(). Path table: /item=/item, /item/:name=.item({ name: 'Skadi' }), /item/:name/id=.item({ name: 'Skadi' }).id. Dynamic parameter function wrapper."
+    }
+  ]
+}

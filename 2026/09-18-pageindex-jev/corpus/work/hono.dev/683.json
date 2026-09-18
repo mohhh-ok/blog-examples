@@ -1,0 +1,29 @@
+{
+  "page": "WebAssembly with WASI deployment: portable sandboxed runtime for JavaScript/TypeScript. WebAssembly compiles to .wasm files. WASI enables filesystem, socket access beyond core WebAssembly. StarlingMonkey enables JavaScript WebAssembly components. Tools: jco builds/generates types/runs components, componentize-js turns ES modules into components, rolldown bundles. Hono works out-of-box with WASI. Dependencies: @bytecodealliance/jco, @bytecodealliance/componentize-js, @bytecodealliance/jco-std, rolldown.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Setup creates my-app directory, initializes project with npm/yarn/pnpm/bun init. Installs hono, @bytecodealliance/jco, @bytecodealliance/componentize-js, @bytecodealliance/jco-std, rolldown. Ensure type: module in package.json. Initialize TypeScript with tsc --init. Set tsconfig.json compilerOptions.module to nodenext."
+    },
+    {
+      "index": 1,
+      "manifest": "WIT setup: create wit/component.wit defining package example:hono, world component exporting wasi:http/incoming-handler@0.2.6. Run wkg wit fetch to populate wit/deps with WASI dependencies (wasi-cli, wasi-clocks, wasi-http, wasi-io, wasi-random versions 0.2.6)."
+    },
+    {
+      "index": 2,
+      "manifest": "Create src/component.ts: import Hono from hono, fire adapter from @bytecodealliance/jco-std/wasi/0.2.6/http/adapters/hono/server. Create Hono app, register GET /hello returning JSON. Call fire(app). Export incomingHandler."
+    },
+    {
+      "index": 3,
+      "manifest": "Build with rolldown (npx rolldown -c) or bun build to generate dist/component.js. Then run jco componentize with wit folder and input/output flags: npx jco componentize -w wit -o dist/component.wasm dist/component.js."
+    },
+    {
+      "index": 4,
+      "manifest": "Run WebAssembly component with WASI-enabled runtimes: wasmtime or jco serve. npx jco serve dist/component.wasm starts server on localhost:8000. Request /hello returns JSON response. jco serve is development only, not production recommended. jco transpile converts component for Node.js/browser."
+    },
+    {
+      "index": 5,
+      "manifest": "Resources: BytecodeAlliance Component Model book, jco codebase and examples (http-server-hono), jco book, componentize-js repository, StarlingMonkey codebase. Community: Bytecode Alliance Zulip (#jco channel), jco/componentize-js repositories."
+    }
+  ]
+}

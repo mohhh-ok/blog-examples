@@ -1,0 +1,37 @@
+{
+  "page": "Growing ecosystem of tools, libraries, and integrations built on or supporting Zod natively. Resources for learning Zod, API libraries, form integrations, code generation (Zod-to-X and X-to-Zod), mocking libraries, and utilities. Focus on Zod 4 support. Submission process for new libraries via Twitter (@colinhacks) or GitHub Discussions.\n- Total TypeScript Zod Tutorial by @mattpocockuk\n- Fixing TypeScript's Blindspot: Runtime Typechecking video by @jherr\n- Validate Environment Variables With Zod article\n- API libraries and frameworks with Zod support\n- Form integration libraries and frameworks\n- Zod-to-X code generation tools (OpenAPI, GraphQL, etc.)\n- X-to-Zod converters (JSON Schema, OpenAPI, etc.)\n- Mocking libraries for Zod schemas\n- Projects powered by Zod\n- Zod utilities and helper libraries\n- What tutorials are available for learning Zod?\n- Which libraries integrate with Zod?\n- How do I generate Zod schemas from OpenAPI or JSON Schema?\n- What form libraries support Zod?\n- Can I generate code from Zod schemas?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Learning resources for Zod. Total TypeScript Zod Tutorial by Matt Pocock. Runtime typechecking video by Jack Herrington. Environment variable validation guide."
+    },
+    {
+      "index": 1,
+      "manifest": "API libraries built on Zod. Libraries and frameworks with native Zod support for API development."
+    },
+    {
+      "index": 2,
+      "manifest": "Form integration libraries. Frameworks and libraries integrating Zod with form handling."
+    },
+    {
+      "index": 3,
+      "manifest": "Zod-to-X code generation. Tools converting Zod schemas to other formats (OpenAPI, GraphQL, JSON Schema, etc.)."
+    },
+    {
+      "index": 4,
+      "manifest": "X-to-Zod converters. Tools generating Zod schemas from other formats (JSON Schema, OpenAPI, Protocol Buffers, etc.)."
+    },
+    {
+      "index": 5,
+      "manifest": "Mocking libraries for Zod. Libraries generating mock data and test fixtures from Zod schemas."
+    },
+    {
+      "index": 6,
+      "manifest": "Projects powered by Zod. Applications and services built using Zod."
+    },
+    {
+      "index": 7,
+      "manifest": "Zod utilities and helpers. Third-party libraries providing extensions, convenience functions, and utilities for Zod schemas."
+    }
+  ]
+}

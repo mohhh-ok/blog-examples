@@ -1,0 +1,9 @@
+{
+  "page": "Unit testing with Elysia.fetch() method. Web Standard Request/Response like browser fetch. Actual request behavior not simulated. Takes Request returns Response. Example: app.fetch(new Request('http://localhost/')). then(res => res.text()). How to test applications? What is fetch method?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Assignment exercise. Click preview icon for request logging example. Logging demonstration."
+    }
+  ]
+}

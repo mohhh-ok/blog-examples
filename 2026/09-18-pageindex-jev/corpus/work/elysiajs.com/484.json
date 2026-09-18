@@ -1,0 +1,21 @@
+{
+  "page": "OpenAPI integration for automatic API documentation. Built around OpenAPI from ground up. Install plugin: `bun add @elysia/openapi`. Use plugin: .use(openapi()). Access documentation at /openapi - shows Scalar UI with generated documentation. Supports OpenAPI 3.0 specification with auto-completion. Unique feature: OpenAPI Type Gen infers schema directly from TypeScript types without manual annotation.\nQuestions: How do you enable OpenAPI? Where is documentation? What is Type Gen?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Detail field for API documentation following OpenAPI 3.0 spec. Example properties: summary (short operation description), description (verbose explanation), tags (route grouping), hide (hide from Swagger), deprecated. Provides auto-completion and type-safety by default.\nQuestions: What is detail field? What properties are available?"
+    },
+    {
+      "index": 1,
+      "manifest": "Reference model for reusable schema definitions. Define model: .model({ age: t.Object({ age: t.Number() }) }). Reference in route: body: 'age'. Shown in Components section of OpenAPI. Simplifies schema reuse.\nQuestions: How do you define models? How do you reference them?"
+    },
+    {
+      "index": 2,
+      "manifest": "OpenAPI Type Gen for automatic schema inference. Infers schema directly from TypeScript types without manual annotation. Unique to Elysia. Works with Drizzle ORM, Prisma queries. Apply fromTypes plugin before openapi: .use(openapi({ references: fromTypes() })). Browser environment limitation: requires fs module not available in web playground. Try locally with GitHub example.\nQuestions: What is Type Gen? How do you enable it? What is browser limitation?"
+    },
+    {
+      "index": 3,
+      "manifest": "Assignment: use preview to GET '/openapi' and see API documentation. Modify code to experiment and see documentation reflect changes.\nQuestions: How do you view OpenAPI docs?"
+    }
+  ]
+}

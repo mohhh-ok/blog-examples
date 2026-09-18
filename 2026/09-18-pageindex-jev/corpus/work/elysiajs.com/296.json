@@ -1,0 +1,17 @@
+{
+  "page": "Handler and context overview. Handler is resource/route function sending data to client. Can be function or literal value. Literal values useful for static resources like files. Inline values optimize performance. Context passed as only argument to handler, containing request information.\nQuestions: What is a handler in Elysia? What types of handlers exist? What is context?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Context stores per-request information: body (client-to-server data like form/JSON), query (query string as object after ?), params (path parameters), headers (HTTP headers like Content-Type). See Context documentation for full details.\nQuestions: What information does context contain? How do you access query parameters and headers?"
+    },
+    {
+      "index": 1,
+      "manifest": "Preview feature in editor section. Tiny navigator at top-left of preview window. Switch between path and method to see response. Click button to edit body and headers.\nQuestions: How do you preview handler results? How do you test different HTTP methods and bodies?"
+    },
+    {
+      "index": 2,
+      "manifest": "Assignment task: extract context parameters from handler. Solution: destructure body, query, headers from first parameter. Return object with extracted values: `{ query, body, headers }`.\nQuestions: How do you extract context parameters? What context properties can you destructure?"
+    }
+  ]
+}

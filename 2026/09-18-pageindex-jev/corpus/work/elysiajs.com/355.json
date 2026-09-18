@@ -1,0 +1,13 @@
+{
+  "page": "Prisma ORM integration for type-safe database operations. Provides way to define database schema and generates TypeScript types. Installation: `bun add @prisma/client prismabox prisma-adapter-bun-sqlite && bun add -d prisma`. Add prismabox generator to schema.prisma with properties: provider 'prismabox', typeboxImportDependencyName 'elysia', typeboxImportVariableName 't', inputModel true, output '../generated/prismabox'. Generates Elysia validation models automatically. Each model generates to separate file: User -> generated/prismabox/User.ts.\nQuestions: How do you integrate Prisma? What generator is needed? Where are models generated?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Prisma schema configuration for Prismabox generator. Generator block includes: provider 'prismabox', typeboxImportDependencyName 'elysia', typeboxImportVariableName 't', inputModel true, output path. Generates TypeBox models from Prisma schema. Note: Prisma 7+ uses prisma.config.ts for CLI datasource URL.\nQuestions: What is the generator block? What properties are required?"
+    },
+    {
+      "index": 1,
+      "manifest": "Using generated Prisma models in Elysia. Import PrismaBunSqlite adapter, PrismaClient from generated prisma, models from prismabox. Example models: UserPlain, UserPlainInputCreate. Use in route handlers and schemas. Example PUT route: body UserPlainInputCreate, response UserPlain. Example GET with 404: response { 200: UserPlain, 404: t.String() }.\nQuestions: How do you use generated models? What naming conventions apply?"
+    }
+  ]
+}

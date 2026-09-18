@@ -1,0 +1,185 @@
+{
+  "page": "Comprehensive guide to defining Zod schemas from primitives to complex nested types. Covers all schema types including objects, arrays, unions, discriminated unions, refinements, transforms, codecs, pipes, defaults, and type utilities. Includes branching for Zod and Zod Mini APIs.\n- Primitive types: string, number, bigint, boolean, symbol, undefined, null\n- Type coercion with z.coerce for strings, numbers, booleans, bigints, dates\n- Literal types (strings, numbers, bigints, booleans)\n- String validation: max, min, length, nonempty, regex, startsWith, endsWith, includes, uppercase, lowercase, trim, toLowerCase, toUpperCase, normalize\n- String formats: email, uuid, url, httpUrl, hostname, e164, emoji, base64, base64url, hex, jwt, nanoid, cuid, cuid2, ulid, ipv4, ipv6, mac, cidrv4, cidrv6, creditCard, currencyCode, iban, hash, iso.date, iso.time, iso.datetime, iso.duration\n- Email regex patterns: regexes.email, regexes.html5Email, regexes.rfc5322Email, regexes.unicodeEmail\n- UUID validation: z.uuid with version support (v1, v2, v3, v4, v5, v6, v7, v8), z.uuidv4, z.uuidv6, z.uuidv7, z.guid for RFC 9562\n- URL validation: z.url with hostname, protocol, normalize parameters\n- Phone numbers: z.e164 for E.164 format\n- ISO datetime: z.iso.datetime with offset, local, precision parameters\n- MAC addresses: z.mac with delimiter parameter\n- Credit card validation with Luhn checksum (12-19 digits)\n- Currency codes: ISO 4217 three-letter codes\n- IBAN: ISO 7064 MOD 97-10 checksum validation\n- Template literals: z.templateLiteral for dynamic string types\n- Number validation: gt, gte, lt, lte, positive, nonnegative, negative, nonpositive, multipleOf, step, z.nan\n- Integer validation: z.int, z.int32\n- BigInt validation with same constraints as numbers\n- Boolean validation: z.boolean\n- Date validation: z.date with .min and .max methods\n- Enums: z.enum with string arrays, object literals, TypeScript enums, .enum property, .exclude, .extract methods\n- Stringbool: z.stringbool parsing truthy/falsy strings, truthy: ['true','1','yes','on','y','enabled'], falsy: ['false','0','no','off','n','disabled'], case-insensitive by default\n- Optional schemas: z.optional, .unwrap, .exactOptional for exactOptionalPropertyTypes\n- Nullable schemas: z.nullable, .unwrap\n- Nullish: z.nullish for both optional and nullable\n- Unknown types: z.any, z.unknown\n- Never type: z.never\n- Objects: z.object, z.strictObject, z.looseObject, .catchall, .shape, .keyof, .extend, .safeExtend, .pick, .omit, .partial, .exactPartial, z.deepPartial, .required, symbol keys\n- Recursive objects with getters, cyclical input handling, z.memoizer for Zod Mini\n- Arrays: z.array, .unwrap, .nonempty, .min, .max, .length\n- Tuples: z.tuple with variadic rest arguments, .partial, .exactPartial\n- Unions: z.union, .options property\n- Exclusive unions: z.xor for mutual exclusivity, matches array\n- Discriminated unions: z.discriminatedUnion with discriminator key, nesting support, z.getDiscriminatedOption\n- Intersections: z.intersection, z.and\n- Records: z.record with key schema, numeric key validation, default values, z.partialRecord, z.looseRecord\n- Maps: z.map with .nonempty, .min, .max, .size\n- Sets: z.set with .nonempty, .min, .max, .size\n- Files: z.file with .min, .max, .mime (single or multiple types)\n- Promises: z.promise (deprecated)\n- Instanceof: z.instanceof for class validation, z.property, z.properties for property checks\n- Refinements: .refine with custom validation, error customization, abort flag, path parameter, async refinements, .when parameter, .superRefine, .check\n- Codecs: z.codec for bidirectional transformations with decode/encode\n- Pipes: z.pipe for schema composition, z.input, z.output utilities\n- Transforms: z.transform, .transform method, .preprocess, async transforms\n- Defaults: .default with static or function values\n- Prefaults: .prefault for pre-parse defaults\n- Catch: .catch with static or function fallback values\n- Branded types: .brand for nominal typing, directional branding (in/out/inout)\n- Readonly: .readonly for immutable structures\n- JSON: z.json for JSON-encodable values\n- Functions: z.function with input array/tuple and output schema, .implement, .implementAsync\n- Custom schemas: z.custom for third-party types\n- Apply: .apply for composing external functions\n- Matching existing types: z.toZod<T> for exact type matching\n- How do I define schemas for all JavaScript primitive types?\n- What validation methods are available for strings and numbers?\n- How do I create objects with required and optional properties?\n- How do I validate discriminated unions for type narrowing?\n- How do I add custom validation logic with refinements?\n- How do I transform data during validation with transforms and pipes?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Primitive type schemas in Zod. z.string, z.number, z.bigint, z.boolean, z.symbol, z.undefined, z.null. Type coercion variants: z.coerce.string, z.coerce.number, z.coerce.boolean, z.coerce.bigint using String(), Number(), Boolean(), BigInt() constructors. Input type narrowing with generic parameters for coercion schemas."
+    },
+    {
+      "index": 1,
+      "manifest": "Literal type schemas representing exact string, number, bigint, or boolean values. z.literal for single values. Multiple literals with array syntax. z.null and z.undefined for JavaScript literals. z.void equivalent to z.undefined. .values property to extract allowed values (Zod only)."
+    },
+    {
+      "index": 2,
+      "manifest": "String validation methods. Length constraints: .max, .min, .length, .nonempty (alias for .min(1)). Pattern matching: .regex, .startsWith, .endsWith, .includes. Case transformation: .uppercase, .lowercase. Other: .trim, .toLowerCase, .toUpperCase, .normalize for Unicode. Length measured in Unicode code points, not UTF-16."
+    },
+    {
+      "index": 3,
+      "manifest": "String format validation schemas. Email: z.email with pattern parameter and built-in regexes (email, html5Email, rfc5322Email, unicodeEmail). UUID: z.uuid with version parameter (v1-v8), z.uuidv4, z.uuidv6, z.uuidv7, z.guid for non-RFC UUIDs. URLs: z.url with hostname/protocol regex, z.httpUrl for HTTP/HTTPS only. Hostname, E.164 phone, emoji (single character), base64, base64url, hex, JWT, nanoid, cuid, cuid2, ulid. IP: z.ipv4, z.ipv6, z.cidrv4, z.cidrv6 for CIDR notation. MAC: z.mac with 48-bit IEEE 802 format, delimiter parameter. Credit card: 12-19 digits with Luhn checksum. Currency: ISO 4217 codes. IBAN: 2-letter country, 2 check digits, 11-30 alphanumeric with ISO 7064 MOD 97-10 checksum. Hash: z.hash('md5','sha1','sha256','sha384','sha512') with enc parameter (hex/base64/base64url). ISO datetime/date/time/duration. Custom formats: z.stringFormat."
+    },
+    {
+      "index": 4,
+      "manifest": "Template literal schemas introduced in zod@4.0. z.templateLiteral for dynamic string type definitions. Accepts string literals and schemas returning string|number|bigint|boolean|null|undefined. Supports unions from enum combinations."
+    },
+    {
+      "index": 5,
+      "manifest": "Number validation schemas using z.number for finite numbers (rejects NaN, Infinity). Methods: .gt, .gte (alias .min), .lt, .lte (alias .max), .positive (alias .gt(0)), .nonnegative, .negative, .nonpositive, .multipleOf (alias .step). z.nan for NaN-only validation. Aliases .step for .multipleOf."
+    },
+    {
+      "index": 6,
+      "manifest": "Integer validation. z.int restricts to safe integer range. z.int32 restricts to 32-bit range."
+    },
+    {
+      "index": 7,
+      "manifest": "BigInt validation schemas using z.bigint. Supports same constraint methods as numbers: .gt, .gte (.min), .lt, .lte (.max), .positive (.gt(0n)), .nonnegative, .negative, .nonpositive, .multipleOf (.step)."
+    },
+    {
+      "index": 8,
+      "manifest": "Boolean validation using z.boolean for true/false values."
+    },
+    {
+      "index": 9,
+      "manifest": "Date validation using z.date for Date instances. Rejects string dates. Custom error messages. Methods: .min and .max for date ranges. Zod Mini uses .check with z.minimum/z.maximum."
+    },
+    {
+      "index": 10,
+      "manifest": "Enum schemas using z.enum for fixed string values. Accepts string arrays, object literals, TypeScript enums. Properties: .enum returns enum-like object (Zod only, Zod Mini uses .def.entries). Methods: .exclude to create subset excluding values (Zod only), .extract to create subset including values (Zod only)."
+    },
+    {
+      "index": 11,
+      "manifest": "Stringbool schemas introduced in zod@4.0. z.stringbool parses string 'boolish' values to boolean. Default truthy: ['true','1','yes','on','y','enabled']. Default falsy: ['false','0','no','off','n','disabled']. Case-insensitive by default. Custom truthy/falsy arrays. Case sensitivity with case: 'sensitive' parameter."
+    },
+    {
+      "index": 12,
+      "manifest": "Optional schemas allowing undefined inputs. z.optional or .optional method. Returns ZodOptional wrapper. .unwrap extracts inner schema (Zod only, Zod Mini uses .def.innerType). .exactOptional for exactOptionalPropertyTypes behavior - absent key without explicit undefined."
+    },
+    {
+      "index": 13,
+      "manifest": "Nullable schemas allowing null inputs. z.nullable or .nullable method. Returns ZodNullable wrapper. .unwrap extracts inner schema (Zod only, Zod Mini uses .def.innerType)."
+    },
+    {
+      "index": 14,
+      "manifest": "Nullish schemas combining optional and nullable (allows both null and undefined). z.nullish for both conditions."
+    },
+    {
+      "index": 15,
+      "manifest": "Special types for unknown/any values. z.any allows any value (inferred type: any). z.unknown allows any value (inferred type: unknown). As object properties, both require the key to exist (use .optional for true optionality)."
+    },
+    {
+      "index": 16,
+      "manifest": "Never type schema. z.never rejects all values. No value will pass validation."
+    },
+    {
+      "index": 17,
+      "manifest": "Object schemas with z.object for property definitions. Default: all properties required. Strictness: z.object (strips unknown keys), z.strictObject (rejects unknown keys), z.looseObject (allows unknown keys). Methods: .shape to access inner schemas, .keyof to create enum from keys, .extend to add fields, .safeExtend for type-safe extension, .pick to select keys, .omit to remove keys, .partial to make fields optional, .exactPartial for exactOptionalPropertyTypes, z.deepPartial for recursive optionality, .required to make fields required. Symbol keys with unique symbols and type tracking."
+    },
+    {
+      "index": 18,
+      "manifest": "Recursive object types using getter syntax for lazy evaluation. Supports mutually recursive types. Cyclical inputs handled natively (Zod) or with z.memoizer registration (Zod Mini). Type inference errors resolved with type annotations on getters. Avoid nesting function calls and object-only recursion for best results."
+    },
+    {
+      "index": 19,
+      "manifest": "Array schemas using z.array for homogeneous arrays. .unwrap extracts element schema (Zod only, Zod Mini uses .def.element). Constraints: .nonempty (minimum 1 item), .min(n), .max(n), .length(n)."
+    },
+    {
+      "index": 20,
+      "manifest": "Tuple schemas for fixed-length heterogeneous arrays with different schemas per index. z.tuple accepts array of schemas. Variadic rest argument: z.tuple([schema1], schema2) for [schema1, ...schema2[]]. .partial makes elements optional (Zod only). .exactPartial for exactOptionalPropertyTypes behavior."
+    },
+    {
+      "index": 21,
+      "manifest": "Union schemas for 'OR' logic validating against multiple options. z.union checks options in order, returns first valid match. .options property extracts option schemas (Zod only, Zod Mini uses .def.options)."
+    },
+    {
+      "index": 22,
+      "manifest": "Exclusive unions (XOR) with z.xor requiring exactly one option to match. Fails if zero or multiple options match. Result has inclusive: false property with matches array. Object overlap detected (z.object strips keys); use .strict() to enforce mutual exclusivity."
+    },
+    {
+      "index": 23,
+      "manifest": "Discriminated unions with z.discriminatedUnion(discriminatorKey, [options]) for type narrowing. Uses discriminator key for efficient parsing (faster than naive z.union). Each option should be object schema with discriminator as z.literal, z.enum, z.null, or z.undefined. Supports nesting. z.getDiscriminatedOption(schema, value) retrieves single option."
+    },
+    {
+      "index": 24,
+      "manifest": "Intersection schemas for 'AND' logic combining type constraints. z.intersection represents A & B. Useful for intersecting objects; prefer .extend() over intersections for object merging (lacks methods like .pick, .omit)."
+    },
+    {
+      "index": 25,
+      "manifest": "Record schemas for key-value mappings Record<string,T>. z.record(keySchema, valueSchema) with keys assignable to string|number|symbol. Numeric keys validated as numeric strings. Default: exhaustiveness check for z.enum keys; use z.partialRecord to skip. z.looseRecord passes through non-matching keys. Value schema with .default, .prefault, .optional makes key optional on input."
+    },
+    {
+      "index": 26,
+      "manifest": "Map schemas for JavaScript Map<K,V> validation. z.map(keySchema, valueSchema). Constraints: .nonempty (minimum 1 item), .min(n), .max(n), .size(n). Zod Mini uses .check(z.minSize/z.maxSize/z.size)."
+    },
+    {
+      "index": 27,
+      "manifest": "Set schemas for JavaScript Set<T> validation. z.set(elementSchema). Constraints: .nonempty (minimum 1 item), .min(n), .max(n), .size(n). Zod Mini uses .check(z.minSize/z.maxSize/z.size)."
+    },
+    {
+      "index": 28,
+      "manifest": "File schemas for File instance validation. z.file with methods: .min(bytes), .max(bytes) for size constraints, .mime(type) or .mime([types]) for MIME type validation. Zod Mini uses .check(z.minSize/z.maxSize/z.mime)."
+    },
+    {
+      "index": 29,
+      "manifest": "Promise schemas (deprecated). z.promise validates Promise instances. Validation in two parts: sync Promise check, async attach validation to .then. Use .parseAsync/.safeParseAsync for async resolution. Not recommended; await before parsing instead."
+    },
+    {
+      "index": 30,
+      "manifest": "Instanceof schemas for class validation. z.instanceof(Class) checks class membership, returns exact object passed (no cloning). Works with built-in classes (RegExp, URL, Error). Methods: z.property(key, schema) for single property validation, z.properties(shape) for multiple properties (Zod) or spread syntax. .properties method on z.instanceof narrows inferred type."
+    },
+    {
+      "index": 31,
+      "manifest": "Custom validation with refinements for logic not covered by native APIs. .refine(fn) for custom checks returning truthy/falsy. Error customization: error string or function. Abort flag: abort: true stops on failure. Path parameter customizes error location. Async refinements with async functions (requires .parseAsync). .when for conditional refinement execution. .superRefine for multiple issues with full control. .check (low-level API) for manual issue creation and control flow."
+    },
+    {
+      "index": 32,
+      "manifest": "Codecs introduced in zod@4.1 for bidirectional transformations. z.codec(inputSchema, outputSchema, {decode, encode}) transforms between types. .decode (forward), .encode (backward). z.invertCodec swaps directions. Useful for network boundary conversions between JSON-friendly and rich JavaScript representations."
+    },
+    {
+      "index": 33,
+      "manifest": "Pipe schemas chaining multiple schemas. z.pipe(schemaA, schemaB) validates input with A then passes to B. Syntax: schemaA.pipe(schemaB). z.input(schema) and z.output(schema) replace pipes for reaching nested codecs (works inside objects, records, maps)."
+    },
+    {
+      "index": 34,
+      "manifest": "Transform schemas for unidirectional transformations accepting any input and transforming output. z.transform(fn) with optional ctx for custom error reporting returning z.NEVER on error. Async transforms with async functions. .transform() convenience method. .preprocess(fn, schema) transforms input before validation. Useful for coercion, normalization, derivation."
+    },
+    {
+      "index": 35,
+      "manifest": "Default values for schemas. .default(value) eagerly returns value if input undefined. .default(fn) re-executes function on each parse. Must be assignable to output type (short-circuits parsing)."
+    },
+    {
+      "index": 36,
+      "manifest": "Prefault values ('pre-parse defaults'). .prefault(value) returns value for undefined input but passes through parsing (not short-circuited). Must be assignable to input type. Useful for transforms and refinements on default values."
+    },
+    {
+      "index": 37,
+      "manifest": "Catch fallback values for validation errors. .catch(value) returns fallback on validation failure. .catch(fn) re-executes function on each error. Function receives ctx with error and input (Zod Mini) or error object (Zod)."
+    },
+    {
+      "index": 38,
+      "manifest": "Branded types for nominal typing simulation in structural TypeScript. .brand<'BrandName'>() attaches brand to type. Requires parsing to create branded values (static-only construct). Second generic parameter for direction: .brand<'Name','out'> (output branded, default), .brand<'Name','in'> (input branded), .brand<'Name','inout'> (both branded). Requires Zod 4.2+."
+    },
+    {
+      "index": 39,
+      "manifest": "Readonly schemas marking structures as immutable. .readonly or z.readonly(schema). Inferred type marked Readonly. Applies to objects, arrays, tuples, Set, Map. Uses Object.freeze to prevent runtime modifications. RuntimeError thrown on modification attempts."
+    },
+    {
+      "index": 40,
+      "manifest": "JSON schema for JSON-encodable values. z.json convenience API expanding to union of string, number, boolean, null, array, object with recursive definitions."
+    },
+    {
+      "index": 41,
+      "manifest": "Function schemas for Zod-validated function definitions. z.function({input: [schemas], output: schema}) with input as array or ZodTuple. Methods: .implement(fn) returns validated function, .implementAsync for async functions. Input-only validation: omit output field. Validates inputs/outputs, throws ZodError on failure."
+    },
+    {
+      "index": 42,
+      "manifest": "Custom schemas for third-party or unsupported types. z.custom<T>(validationFn) with optional error message. No validation if no function provided (dangerous). Error customization like .refine. Prefer z.instanceof for class instances, z.templateLiteral for template types."
+    },
+    {
+      "index": 43,
+      "manifest": "Apply method for incorporating external functions into schema chain. .apply(fn) calls function with schema. Additional arguments passed through. Enables composition of external validation logic."
+    },
+    {
+      "index": 44,
+      "manifest": "Type matching utility z.toZod<T>() ensuring schema output type exactly matches T. Returns schema unchanged after validation. Exact type equality check (errors on drift). Alternative to satisfies z.ZodType<T>. Enum targets stay nominal - plain literal unions don't satisfy."
+    }
+  ]
+}

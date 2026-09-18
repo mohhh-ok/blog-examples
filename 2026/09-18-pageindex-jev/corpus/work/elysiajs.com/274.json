@@ -1,0 +1,61 @@
+{
+  "page": "Handler function that processes HTTP requests and returns responses. Can be function returning value or literal value (string, file). Inline values allow Elysia to compile response ahead of time for performance optimization. Handler not a cache - lifecycle can still mutate response dynamically. Static resource optimization via inline values. Context available in handlers with request information unique per request.\nQuestions: What is a handler in Elysia? Can handlers return literal values? What are the benefits of inline handlers?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Context object contains request-specific information. Properties: body, query, params, headers, cookie, store, redirect, status, set, request, server. Context available only in route handlers. Property types: body (HTTP message/form/file), query (query string as object), params (path parameters), headers (HTTP headers), cookie (mutable signal store), store (global mutable state), set (response properties), redirect (redirect function), status (status code function), request (Web Standard Request), server (Bun server instance), path (request pathname).\nQuestions: What information does context contain? What properties are available in context?"
+    },
+    {
+      "index": 1,
+      "manifest": "Status function returns custom status code with type narrowing. Syntax: `status(code, value)`. Example: `status(418, 'Kirifuji Nagisa')`. Recommended over throwing for end-to-end type safety with Eden. Allows TypeScript type checking for return values. Auto-completion for status-based type narrowing.\nQuestions: How do you return custom status codes? Why use status function over throw?"
+    },
+    {
+      "index": 2,
+      "manifest": "Set mutable property forming response via Context.set. Syntax: `set.headers`, `set.status`. Set.headers accepts Object for append/delete. Lowercase headers recommended for consistency (e.g., 'x-powered-by' not 'X-Powered-By'). Set.status can accept numeric or string status code names. Unlike status function, set.status cannot infer return value type.\nQuestions: How do you set response headers? How do you set response status code?"
+    },
+    {
+      "index": 3,
+      "manifest": "Cookie handling with mutable store. Syntax: `cookie: { name }`. Getting value: `name.value`. Setting value: `name.value = 'New Value'`. No need for separate get/set - direct property access. See Patterns: Cookie for detailed usage.\nQuestions: How do you access cookies in context? How do you set cookies?"
+    },
+    {
+      "index": 4,
+      "manifest": "Redirect function for request redirection. Syntax: `redirect(url)` or `redirect(url, status)`. Default status: 301 or 302. Example: `redirect('https://youtu.be/...')`. Custom status example: `redirect('https://youtu.be/...', 302)`. Returned value not required when redirecting. Response comes from another resource.\nQuestions: How do you redirect requests? Can you set custom redirect status codes?"
+    },
+    {
+      "index": 5,
+      "manifest": "FormData and file responses. Return FormData by using `form` utility from handler. Syntax: `form({ name: 'value', images: [file(...), file(...)] })`. Can return single file via `file()` without form wrapper. Useful for file or multipart form data responses. Example file paths: 'nagi.web', 'mika.webp'.\nQuestions: How do you return form data? How do you return files from handlers?"
+    },
+    {
+      "index": 6,
+      "manifest": "Response streaming using generator functions with yield keyword. Syntax: `function* () { yield value }`. Yields response chunks sequentially. Example: yield 1, yield 2, yield 3. Automatic conversion of generator to stream response.\nQuestions: How do you stream responses? What syntax enables streaming?"
+    },
+    {
+      "index": 7,
+      "manifest": "Server-Sent Events (SSE) support via `sse` utility function. Syntax: `sse('value')` or `sse({ event, data })`. Automatically sets response headers to `text/event-stream`. Formats data as SSE event. Can be yielded in generator function. Headers can only be set before first chunk yielded. After first chunk, header mutation has no effect.\nQuestions: How do you implement Server-Sent Events? What headers does SSE require?"
+    },
+    {
+      "index": 8,
+      "manifest": "Conditional streaming - return without yield converts stream to normal response. Syntax: `if (...) return value; yield ...`. Allows conditional response type. Uses generator to determine stream or normal response at runtime.\nQuestions: How do you conditionally return stream or normal response?"
+    },
+    {
+      "index": 9,
+      "manifest": "Automatic stream cancellation when user cancels request. Generator function stops automatically if request cancelled before response complete.\nQuestions: What happens to streams when user cancels request?"
+    },
+    {
+      "index": 10,
+      "manifest": "Eden integration with stream responses. Interprets stream as AsyncGenerator. Usage: `for await (const chunk of data)`. Allows consuming stream with async iteration.\nQuestions: How does Eden work with streaming responses?"
+    },
+    {
+      "index": 11,
+      "manifest": "Request object from Web Standard Request API. Shared across Bun, Node, Deno, Cloudflare Worker, Vercel Edge Function. Access: `request.headers.get('header-name')`. Provides low-level request information.\nQuestions: What is the Web Standard Request? What information can you access?"
+    },
+    {
+      "index": 12,
+      "manifest": "Server instance available only with HTTP server running via listen(). Bun-only feature. Provides server information like port number. Usage: `server?.port`. Method `server?.requestIP(request)` gets request IP address. Returns null if server not running.\nQuestions: How do you access server information? How do you get request IP address?"
+    },
+    {
+      "index": 13,
+      "manifest": "Extending context via state, decorate, derive, resolve. Allows custom Context properties. See Extends Context patterns for detailed information.\nQuestions: How do you extend context with custom properties?"
+    }
+  ]
+}

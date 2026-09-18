@@ -1,0 +1,13 @@
+{
+  "page": "OpenTelemetry plugin config reference. Install @elysia/opentelemetry. BatchSpanProcessor, OTLPTraceExporter imports from @opentelemetry/sdk-trace-node, @opentelemetry/exporter-trace-otlp-proto. Collects spans from any OpenTelemetry-compatible library. Auto parent-child span application. Configuration options: autoDetectResources, contextManager, textMapPropagator, metricReader, views, instrumentations, resource, resourceDetectors, sampler, serviceName, spanProcessors, traceExporter, spanLimits. OTEL_NODE_RESOURCE_DETECTORS env var for resource detection. What config options does the plugin accept? Which exporters are compatible? What detectors are available?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Usage reference and utilities for OpenTelemetry. See /patterns/opentelemetry for full setup. Plugin usage documentation link."
+    },
+    {
+      "index": 1,
+      "manifest": "Config options for OpenTelemetry plugin. autoDetectResources boolean (default true) for automatic resource detection. contextManager (default AsyncHooksContextManager) for custom context. textMapPropagator (default CompositePropagator with W3C Trace Context and Baggage). metricReader for MeterProvider. views array of View instances for histogram bucket configuration. instrumentations array of Instrumentation instances, default getNodeAutoInstrumentations(). resource IResource for configuration. resourceDetectors array of Detector/DetectorSync (default: envDetector, processDetector, hostDetector). OTEL_NODE_RESOURCE_DETECTORS env values: env, host, os, process, serviceinstance, all, none. sampler for custom sampler. serviceName string for namespace. spanProcessors array of SpanProcessor. traceExporter SpanExporter with default OTLP HTTP protobuf. spanLimits for trace parameters. What does autoDetectResources do?"
+    }
+  ]
+}

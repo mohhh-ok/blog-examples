@@ -1,0 +1,41 @@
+{
+  "page": "Vite preview server options (unless noted only preview, mostly mirror server options). preview.host (string|boolean, default server.host): IP addresses server listen, 0.0.0.0 or true all addresses (LAN public), CLI --host 0.0.0.0 or --host. Note cases other servers respond, see server.host. preview.allowedHosts (string[]|true, default server.allowedHosts): hostnames Vite respond, see server.allowedHosts. preview.port (number, default 4173): server port specify, used port auto-try next. preview.strictPort (boolean, default server.strictPort): true exit used port instead auto-try. preview.https (https.ServerOptions, default server.https): TLS+HTTP/2 enable, see server.https. preview.open (boolean|string, default server.open): auto-open browser server start, string URL pathname, BROWSER env, BROWSER_ARGS flags, .env configure, see server.open. preview.proxy (Record<string, string|ProxyOptions>, default server.proxy): preview server custom proxy, see server.proxy. http-proxy-3 extends. preview.cors (boolean|CorsOptions, default server.cors): preview server CORS configure, see server.cors. preview.headers (OutgoingHttpHeaders): server response headers specify.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "preview.host type string|boolean default server.host. IP addresses server listen. 0.0.0.0 or true all (LAN public). CLI --host. Cases other servers respond: see server.host."
+    },
+    {
+      "index": 1,
+      "manifest": "preview.allowedHosts type string[]|true default server.allowedHosts. Hostnames Vite respond. See server.allowedHosts details."
+    },
+    {
+      "index": 2,
+      "manifest": "preview.port type number default 4173. Server port. Used port auto-try next possible. Example: server.port: 3030, preview.port: 8080."
+    },
+    {
+      "index": 3,
+      "manifest": "preview.strictPort type boolean default server.strictPort. true exit used port instead auto-try."
+    },
+    {
+      "index": 4,
+      "manifest": "preview.https type https.ServerOptions default server.https. TLS+HTTP/2 enable. See server.https."
+    },
+    {
+      "index": 5,
+      "manifest": "preview.open type boolean|string default server.open. Auto-open app browser server start. String URL pathname. BROWSER env (firefox), BROWSER_ARGS flags (--incognito), .env special variables. See open package. Example: open: '/docs/index.html'."
+    },
+    {
+      "index": 6,
+      "manifest": "preview.proxy type Record<string, string|ProxyOptions> default server.proxy. Preview server custom proxy. key: options. Key request path start proxy. key ^ RegExp. configure proxy instance. http-proxy-3 extends, options. See server.proxy."
+    },
+    {
+      "index": 7,
+      "manifest": "preview.cors type boolean|CorsOptions default server.cors. Preview server CORS. See server.cors."
+    },
+    {
+      "index": 8,
+      "manifest": "preview.headers type OutgoingHttpHeaders. Server response headers specify."
+    }
+  ]
+}

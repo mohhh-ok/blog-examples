@@ -1,0 +1,25 @@
+{
+  "page": "Using Vite Plugins: extend Vite via plugin system based on Rollup's design with Vite-specific options. Adding plugins: npm install to devDependencies, include in plugins array in vite.config.js. Example: @vitejs/plugin-legacy for legacy browser support. Plugins accepted individually or as presets (multiple plugins as single element). Falsy plugins ignored (easy activate/deactivate). Finding plugins: Features Guide covers built-in common patterns. Plugins Guide information. Vite Plugin Registry (registry.vite.dev/plugins) lists community npm plugins. Framework plugins maintained by framework teams; Vue/React official plugins in vite org. Plugin ordering: enforce modifier controls position (pre: before Vite core, default: after core, post: after build plugins). Conditional application: apply property applies only during serve or build ('serve' or 'build'). Building plugins: Plugins API Guide for documentation. Plugin ecosystem covers diverse use cases. Rollup plugin compatibility enables ecosystem reuse.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Adding plugins: npm install -D @vitejs/plugin-legacy. Include in plugins array in vite.config.js. Example config with legacy plugin and targets option (defaults, not IE 11). Plugins array accepts presets (multiple plugins as single element, useful complex features like framework integration). Flattened internally. Falsy plugins ignored (easy conditional activation/deactivation). What's difference between single plugin and preset? How to conditionally enable plugins? Why use presets?"
+    },
+    {
+      "index": 1,
+      "manifest": "Finding plugins: check Features Guide first (common patterns built-in, many Rollup cases covered in Vite already). Vite Plugin Registry (registry.vite.dev/plugins) community npm plugins listed. Official plugins in Plugins section. Framework plugins: each maintains own (Vue/React plugins in vite org maintained officially). Finding right plugin for needs. Awesome Vite lists community plugins. Most common cases likely covered. Plugin Registry search. When should plugin be used vs built-in feature? How to contribute plugin to registry?"
+    },
+    {
+      "index": 2,
+      "manifest": "Enforcing plugin ordering: enforce modifier controls position for Rollup plugin compatibility. Options: pre (invoke before Vite core plugins), default (invoke after Vite core), post (invoke after Vite build plugins). Implementation detail compatibility. Example with image plugin using enforce: pre. Plugins API Guide plugin-ordering section. What's order of plugin hooks? Which plugins run pre vs post? Do all plugins need enforce?"
+    },
+    {
+      "index": 3,
+      "manifest": "Conditional application: apply property applies plugin only during serve or build. Options: 'build' or 'serve'. Example: typescript2 plugin with apply: 'build'. Vite plugins invoked both serve+build by default. When plugin needed only during specific phase, use apply. Why separate build-only plugins? How does apply work with middleware mode?"
+    },
+    {
+      "index": 4,
+      "manifest": "Building plugins: Plugins API Guide documentation for creating plugins. Low-level API details. Plugin hooks and options. Framework integration patterns. Plugin development workflow. Testing plugins. Publishing plugins."
+    }
+  ]
+}

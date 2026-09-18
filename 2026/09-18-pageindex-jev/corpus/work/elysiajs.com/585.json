@@ -1,0 +1,21 @@
+{
+  "page": "Elysia plugins overview. Modular, lightweight design. Pre-built common pattern plugins. Official plugins: Bearer token retrieval, CORS, Cron, Eden, GraphQL Apollo, GraphQL Yoga, HTML, JWT, OpenAPI, OpenTelemetry, Server Timing, Static files. Community plugins: Create ElysiaJS, Lucia Auth, Clerk, Polyfills, Vite, Nuxt, Remix, OAuth2, Rate Limit, Logging libraries, Sentry integration, AWS Lambda, File-system routing. Complementary projects: prismabox for TypeBox schema generation. Project templates. Plugin ecosystem and integration options.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Official plugins maintained by Elysia team. Bearer for JWT authentication. CORS for cross-origin. Cron for job scheduling. Eden for type safety client. GraphQL Apollo and Yoga for GraphQL. HTML for responses. JWT for JWTs. OpenAPI for documentation. OpenTelemetry for observability. Server Timing for performance auditing. Static for file serving. Links and descriptions for each."
+    },
+    {
+      "index": 1,
+      "manifest": "Community plugins ecosystem. Create ElysiaJS scaffolding. Lucia Auth, Clerk authentication. Polyfills for Node.js/Deno. Vite server integration. Nuxt, Remix, Astro frameworks. OAuth 2.0, OAuth2 servers. Rate limiting. Logging: Logysia, Logestic, Logger. LINE integration. GraphQL Yoga. Lambda deployment. Decorators for TypeScript. Message packing, XML. Autoload, file-system routing. Multiple logging and compression options. Session management. Supabase integration. XSS protection. Helmet security. WebSocket Socket.IO. Health checks, CSRF, HTTPS. Circuit breaker. Extended features list."
+    },
+    {
+      "index": 2,
+      "manifest": "Complementary projects: prismabox generates TypeBox schemas from database models. Works with Elysia."
+    },
+    {
+      "index": 3,
+      "manifest": "Project templates: ElysiaTemplate with MVC, auto route, middleware. Template scaffolding option."
+    }
+  ]
+}

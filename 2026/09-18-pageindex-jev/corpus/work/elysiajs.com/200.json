@@ -1,0 +1,17 @@
+{
+  "page": "- Eden Treaty parameters: how to send a payload to the server via Eden Treaty's type-safe client methods\n- Methods accept up to 2 parameters: (1) `body`, (2) an additional parameters object with `query`, `headers`, `fetch`; both are type-safe and guided by TypeScript based on the Elysia server schema\n- Example: `const app = new Elysia().post('/user', ({ body }) => body, { body: t.Object({ name: t.String() }) })`; client `const api = treaty<typeof app>('localhost:3000')`; call `api.user.post({ name: 'Elysia' })` or with extra `{ headers: { authorization: 'Bearer 12345' }, query: { id: 2 } }`\n- If the method doesn't accept a body, the body param is omitted, leaving a single parameter\n- For GET or HEAD methods: only 1 parameter (additional params: `query`, `headers`, `fetch`), e.g. `api.hello.get({ headers: { hello: 'world' } })`\n- Empty body: pass `null` or `undefined` as body when body is optional/not needed but `query`/`headers` are required, e.g. `api.user.post(null, { query: { name: 'Ely' } })`\n- Fetch parameters: since Eden Treaty wraps `fetch`, valid Fetch API options (e.g. an AbortController's `signal`) can be passed via the `fetch` key, e.g. `api.hello.get({ fetch: { signal: controller.signal } })`\n- File Upload: pass `File`, `File[]`, `FileList`, or `Blob` to attach files; results in `content-type: multipart/form-data`; example uses `t.Files()` schema and `images.files!` from an input element\n- Questions answered: How many parameters do Eden Treaty methods accept and what are they? How do I send query params or headers with Eden Treaty? How do I call a POST endpoint with no body but with query params? How do I abort an Eden Treaty request? How do I upload a file using Eden Treaty?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- If the body is optional or not needed, but `query` or `headers` are required, pass the body as `null` or `undefined` instead of omitting the call\n- Example: server `app.post('/user', () => 'hi', { query: t.Object({ name: t.String() }) })`; client call `api.user.post(null, { query: { name: 'Ely' } })`\n- Answers: How do I call a POST method via Eden Treaty when there's no body but query params are required? What value do I pass for body when it's not needed?"
+    },
+    {
+      "index": 1,
+      "manifest": "- Eden Treaty is a fetch wrapper; any valid Fetch API parameters can be added by passing them to the `fetch` key\n- Example: create an `AbortController`, `setTimeout` to call `controller.abort()` after 5000ms, then call `api.hello.get({ fetch: { signal: controller.signal } })`, and `clearTimeout(cancelRequest)` afterward\n- Answers: How do I abort/cancel an Eden Treaty request? How do I pass a custom AbortSignal or other Fetch options to an Eden Treaty call?"
+    },
+    {
+      "index": 2,
+      "manifest": "- Accepted types for file attachment: `File`, `File[]`, `FileList`, `Blob`\n- Attaching a file results in `content-type` being `multipart/form-data`\n- Server example: `app.post('/image', ({ body: { image, title } }) => title, { body: t.Object({ title: t.String(), image: t.Files() }) })`\n- Client example: `const images = document.getElementById('images') as HTMLInputElement; const { data } = await api.image.post({ title: 'Misono Mika', image: images.files! })`\n- Answers: What types can I use to upload a file with Eden Treaty? What content-type is used when uploading a file? How do I define a file upload field on the server with t.Files()? How do I send a FileList from an HTML input via Eden Treaty?"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "page": "Vite 6 plugin hook `this.environment` for runtime-agnostic environment handling. Before: two environments (client, ssr), options.ssr boolean plugin hook argument resolveId, load, transform differentiate. Vite 6: any number named environments, this.environment plugin context interact. Affected scope: Vite plugin authors. Future deprecation planned: options.ssr deprecation future major, recommend migration new API, set future.removePluginHookSsrArgument 'warn' vite config identify usage. Feedback: GitHub discussions/16358. Motivation: this.environment allow hook implementation know current environment name, access environment config options (environment.config), module graph (environment.moduleGraph), transform pipeline (environment.transformRequest()). Environment instance available avoids dependency whole dev server (typically cached configureServer hook). Migration guide: existing plugins quick migrate, replace options.ssr argument this.environment.config.consumer === 'server' resolveId, load, transform hooks. Example migration: `const isSSR = options.ssr` → `const isSSR = this.environment.config.consumer === 'server'`. More robust long-term: handle multiple environments fine-grained environment options instead relying environment name. See Environment API plugins guide multiple environments.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Motivation for this.environment: plugin hook implementation know current environment name access environment config options (environment.config), module graph information (environment.moduleGraph), transform pipeline (environment.transformRequest()). Environment instance available avoids dependency whole dev server (cached configureServer hook startup). Flexibility interact environment current module processing."
+    },
+    {
+      "index": 1,
+      "manifest": "Migration guide quick existing plugins: replace options.ssr argument this.environment.config.consumer === 'server' resolveId, load, transform hooks. Example: `const isSSR = options.ssr` → `const isSSR = this.environment.config.consumer === 'server'`, if (isSSR) {...} else {...}. Robust long-term: plugin handle multiple environments fine-grained environment options instead relying environment name. See Environment API plugins guide multiple environments handling."
+    }
+  ]
+}

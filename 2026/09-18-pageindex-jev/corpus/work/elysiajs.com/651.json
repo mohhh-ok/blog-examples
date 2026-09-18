@@ -1,0 +1,13 @@
+{
+  "page": "Standalone schema for schema co-existence. Guard schema override by default. Standalone schema prevents override. Schema: 'standalone' option. Multiple validation libraries interoperability. Zod and Elysia.t work together. How to use standalone schema? How to merge schemas from different libraries?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Schema library interoperability. Standalone schemas from different validation libraries. Zod, Elysia.t, TypeBox usable together. Works interchangeably."
+    },
+    {
+      "index": 1,
+      "manifest": "Assignment with standalone schema. Define both age and name required. Guard schema: 'standalone' option. Route schema separate. Both validated together."
+    }
+  ]
+}

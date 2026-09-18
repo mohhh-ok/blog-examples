@@ -1,0 +1,161 @@
+{
+  "page": "Vite shared configuration options applying to dev, build, and preview. root (string, default process.cwd()): project root directory, where index.html located, absolute or relative path. base (string, default /): base public path for dev/production, valid: absolute pathname (/foo/), full URL (https://bar.com/foo/, origin part unused in dev), empty string or ./ (embedded deployment). mode (string, default 'development' for serve/'production' for build): overrides default mode for both serve and build, CLI --mode overrides. input (string|string[]|{[entryAlias: string]: string}): application entry points resolved relative to project root, default for build.rolldownOptions.input, build.lib.entry, build.ssr, optimizeDeps.entries when not explicitly set. define (Record<string, any>): global constant replacements during dev and static build replacement, Oxc's define feature, JSON-serializable values or single identifiers, automatic JSON.stringify for non-strings, TypeScript users add type declarations in vite-env.d.ts. plugins (PluginOption[]): array of plugins, falsy ignored, arrays flattened, promises resolved before running. publicDir (string|false, default 'public'): directory served as plain static assets at / dev and root of outDir build, files as-is without transform, false disables. cacheDir (string, default 'node_modules/.vite'): cache directory for pre-bundled deps and Vite-generated cache, improves performance, --force or manual delete regenerates, .vite when no package.json. resolve.alias: import/require value replacement, similar to @rollup/plugin-alias, order matters (first rules applied first), always use absolute paths for filesystem. resolve.dedupe: duplicate dependency copies force same resolution (monorepos), SSR+ESM workaround CJS outputs. resolve.conditions: conditional exports resolution conditions, module/browser/development|production defaults, style for CSS, sass/less preprocessor. resolve.mainFields: package.json entry point fields order, browser/module/jsnext:main/jsnext defaults, lower precedence than exports. resolve.extensions: import omit extension resolution order, .mjs/.js/.mts/.ts/.jsx/.tsx/.json default, NOT recommended omit custom types. resolve.preserveSymlinks: file identity via original path (not symlink resolution). resolve.tsconfigPaths: paths option resolution from tsconfig.json, files/include matching required, non-JS files explicit list, Less not supported. html.cspNonce: nonce placeholder for script/style tags and meta tag generation. html.additionalAssetSources: custom HTML elements/attributes as asset sources, HtmlAssetSource with srcAttributes, srcsetAttributes, filter function, custom web components support. css.modules: CSS modules behavior, postcss-modules options (getJSON, scopeBehaviour, globalModulePaths, exportGlobals, generateScopedName, hashPrefix, localsConvention), Lightning CSS has no effect. css.postcss: inline/custom search directory for PostCSS config, postcss-load-config library search supported config names, inline prevents other sources. css.preprocessorOptions: options per CSS preprocessor (sass/scss, less, styl/stylus), sass-embedded if installed, sass fallback, additionalData injection string or function (relative paths won't resolve, use absolute or aliases). css.preprocessorMaxWorkers (number|true, default true): max preprocessor threads, true = CPUs-1, 0 = main thread only. css.devSourcemap (boolean, default false, experimental): enable sourcemaps during dev. css.transformer ('postcss'|'lightningcss', default 'postcss', experimental): CSS processing engine, postcss-import duplicate @import different from browsers. css.lightningcss (experimental): Lightning CSS config, targets/include/exclude/drafts/nonStandard/pseudoClasses/unusedSymbols/cssModules options. json.namedExports (boolean, default true): named imports from .json. json.stringify (boolean|'auto', default 'auto'): JSON.parse(\"...\") transformation, 'auto' > 10kB threshold. oxc (OxcOptions|false): Oxc transformer customize JSX (runtime, pragma, pragmaFrag), include/exclude files, jsxInject auto-import, false disables. esbuild (deprecated, use oxc): converted to oxc internally. assetsInclude: picomatch patterns for static assets, return resolved URL string on import. logLevel ('info'|'warn'|'error'|'silent', default 'info'): console verbosity. customLogger (Logger): custom logger with info/warn/warnOnce/error/clearScreen/hasErrorLogged/hasWarned. clearScreen (boolean, default true): prevent terminal clear. envDir (string|false, default root): .env files load directory, false disables. envPrefix (string|string[], default VITE_): exposed to client via import.meta.env, never set '', leak risk. appType ('spa'|'mpa'|'custom', default 'spa'): SPA (HTML middleware, SPA fallback), MPA (HTML middleware), custom (no HTML middleware). devtools (boolean|DevToolsConfig, default false, experimental): devtools integration, @vitejs/devtools install required. tsconfig (string): TypeScript config file path, relative from root, automatic discovery preferred, overrides per-file tsconfig discovery. future (Record<string, 'warn'|undefined>): future breaking changes preview, migration preparation.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "root option type string default process.cwd(). Project root directory where index.html located. Absolute path or relative to current working directory. See Project Root guide."
+    },
+    {
+      "index": 1,
+      "manifest": "base option type string default /. Related: server.origin. Base public path dev or production. Valid values: absolute pathname /foo/, full URL https://bar.com/foo/ (origin unused dev same as /foo/), empty string or ./ (embedded deployment). See Public Base Path guide."
+    },
+    {
+      "index": 2,
+      "manifest": "mode option type string default 'development' serve, 'production' build. Specifying in config overrides both serve and build. CLI --mode option overrides. See Env Variables and Modes guide."
+    },
+    {
+      "index": 3,
+      "manifest": "input option type string|string[]|{[entryAlias: string]: string}. Entry points application resolved from project root. Default for build.rolldownOptions.input, build.lib.entry, build.ssr when not set, optimizeDeps.entries when not set. Useful non-index.html entry point. Example: input: 'src/main.ts'."
+    },
+    {
+      "index": 4,
+      "manifest": "define option type Record<string, any>. Global constant replacements dev and static build. Oxc define feature, JSON-serializable value (null, boolean, number, string, array, object) or single identifier. Non-string auto JSON.stringify. Example: __APP_VERSION__: JSON.stringify('v1.0.0'), __API_URL__: 'window.__backend_api_url'. TypeScript: add declare const declarations in vite-env.d.ts for type checks and intellisense."
+    },
+    {
+      "index": 5,
+      "manifest": "plugins option type (Plugin|Plugin[]|Promise<Plugin|Plugin[]>)[]. Plugins array, falsy ignored, arrays flattened, promises resolved before running. See Plugin API."
+    },
+    {
+      "index": 6,
+      "manifest": "publicDir option type string|false default 'public'. Directory served as plain static assets. Dev at /, build copied to outDir root, always as-is no transform. Absolute or relative project root. false disables. See The public Directory guide."
+    },
+    {
+      "index": 7,
+      "manifest": "cacheDir option type string default 'node_modules/.vite'. Cache files directory: pre-bundled deps, Vite-generated cache. Improves performance. --force flag or manual delete regenerates. Absolute or relative project root. .vite when no package.json."
+    },
+    {
+      "index": 8,
+      "manifest": "resolve.alias option type Record<string, string>|Array<{find: string|RegExp, replacement: string}>. Import/require value replacement. @rollup/plugin-alias similar. Entry order important, first rules applied first. Filesystem paths: always absolute. Relative: used as-is not resolved. Object format: key-value pairs (utils: '../../../utils'). Array format: {find, replacement} objects, RegExp find with replacement patterns ($1), example: /^(.*)\.js$/ → '$1.alias'. More advanced: see plugins guide."
+    },
+    {
+      "index": 9,
+      "manifest": "resolve.dedupe option type string[]. Duplicate dependency copies in app (hoisting, linked monorepos) force same resolution. SSR+ESM: doesn't work for ESM build outputs from build.rolldownOptions.output. CJS outputs workaround until ESM plugin support better. Example usage, monorepo setup."
+    },
+    {
+      "index": 10,
+      "manifest": "resolve.conditions option type string[] default ['module', 'browser', 'development|production'] (defaultClientConditions). Additional conditions resolving conditional exports from package.json exports field. Package exports example: {'.': {'import': './index.mjs', 'require': './index.js'}}. import/require/default always applied. style condition CSS imports, sass/less conditions preprocessors. development|production replaced with production or development based on NODE_ENV."
+    },
+    {
+      "index": 11,
+      "manifest": "resolve.mainFields option type string[] default ['browser', 'module', 'jsnext:main', 'jsnext'] (defaultClientMainFields). package.json fields trying package entry point. Lower precedence conditional exports: if exports resolves, mainFields ignored."
+    },
+    {
+      "index": 12,
+      "manifest": "resolve.extensions option type string[] default ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']. File extensions try for omit extension imports. NOT recommended omit custom types (.vue) - IDE and type support interference."
+    },
+    {
+      "index": 13,
+      "manifest": "resolve.preserveSymlinks option type boolean default false. Enabling: file identity original file path (without symlinks) instead real path (after symlinks). Related: esbuild#preserve-symlinks, webpack#resolve.symlinks."
+    },
+    {
+      "index": 14,
+      "manifest": "resolve.tsconfigPaths option type boolean default false. tsconfig.json paths option resolution. files/include matching required, non-JS files explicit list (src/**, src/**/*.css, src/**/*.scss example). Less NOT supported - paths doesn't apply inside .less files, use relative path or resolve.alias. Less only gives importing file directory not file."
+    },
+    {
+      "index": 15,
+      "manifest": "html.cspNonce option type string. Content Security Policy nonce placeholder script/style tags. Meta tag with nonce value generation."
+    },
+    {
+      "index": 16,
+      "manifest": "html.additionalAssetSources option type Record<string, HtmlAssetSource>. HtmlAssetSource: srcAttributes?: string[], srcsetAttributes?: string[], filter?: (data: {key, value, attributes}) => boolean. Additional HTML elements/attributes as asset sources, extends built-in (img src, video src, link href, etc). Custom web components support, data-* attributes support, srcset format support, filter function. Example: 'html-import': {srcAttributes: ['src']}, img: {srcAttributes: ['data-src-dark', 'data-src-light']}, 'my-picture': {srcsetAttributes: ['data-srcset']}, 'my-component': {srcAttributes: ['asset'], filter: ({attributes}) => attributes.type === 'image'}."
+    },
+    {
+      "index": 17,
+      "manifest": "css.modules option type CSSModulesOptions. getJSON?(cssFileName, json, outputFileName): void, scopeBehaviour: 'global'|'local', globalModulePaths?: RegExp[], exportGlobals?: boolean, generateScopedName?: string|((name, filename, css) => string), hashPrefix?: string, localsConvention?: 'camelCase'|'camelCaseOnly'|'dashes'|'dashesOnly'|((originalClassName, generatedClassName, inputFile) => string). Options passed postcss-modules. Lightning CSS enabled: no effect, use css.lightningcss.cssModules."
+    },
+    {
+      "index": 18,
+      "manifest": "css.postcss option type string|(postcss.ProcessOptions & {plugins?: postcss.AcceptedPlugin[]}). Inline PostCSS config or custom directory search for config (default project root). Inline format: postcss.config.js same, plugins array format only. postcss-load-config library, supported config file names only. Workspace root (project root if none) config search outside. Inline config: no other sources searched."
+    },
+    {
+      "index": 19,
+      "manifest": "css.preprocessorOptions option type Record<string, object>. CSS preprocessor options file extensions keys. sass/scss: sass-embedded if installed else sass, sass-embedded recommended performance, Options from Sass JS API. less: Options from less.org usage. styl/stylus: define only supported, object. Example: less: {math: 'parens-division'}, stylus: {define: {$specialColor: ...}}, scss: {importers: [...]}."
+    },
+    {
+      "index": 20,
+      "manifest": "css.preprocessorOptions[extension].additionalData option type string|((source, filename) => (string|{content, map?: SourceMap})). Extra code injection each style content. Includes actual styles duplicates in bundle. Example: scss: {additionalData: `$injectedColor: orange;`}. Relative paths won't resolve correctly (different directories) - use absolute or aliases."
+    },
+    {
+      "index": 21,
+      "manifest": "css.preprocessorMaxWorkers option type number|true default true. Max CSS preprocessor threads. true = CPUs-1, 0 = main thread only. May run main thread depending preprocessor options."
+    },
+    {
+      "index": 22,
+      "manifest": "css.devSourcemap option type boolean default false experimental. Enable sourcemaps dev."
+    },
+    {
+      "index": 23,
+      "manifest": "css.transformer option type 'postcss'|'lightningcss' default 'postcss' experimental. CSS processing engine select. Lightning CSS guide. postcss (postcss-import) duplicate @import different browser - see postcss/postcss-import#462."
+    },
+    {
+      "index": 24,
+      "manifest": "css.lightningcss option type experimental LightningCSS config. targets?: Targets, include?: Features, exclude?: Features, drafts?: Drafts, nonStandard?: NonStandard, pseudoClasses?: PseudoClasses, unusedSymbols?: string[], cssModules?: CSSModulesConfig. Full transform options: Lightning CSS repo index.d.ts."
+    },
+    {
+      "index": 25,
+      "manifest": "json.namedExports option type boolean default true. Named imports .json files support."
+    },
+    {
+      "index": 26,
+      "manifest": "json.stringify option type boolean|'auto' default 'auto'. true: JSON.parse(\"...\") transform significantly faster large JSON, 'auto': >10kB threshold v8 JSON cost rule."
+    },
+    {
+      "index": 27,
+      "manifest": "oxc option type OxcOptions|false. Oxc Transformer options extends. JSX customize: runtime: 'classic'|'automatic', pragma: default 'React', pragmaFrag: 'Fragment'. include/exclude files: regex, picomatch, array. jsxInject auto-import every Oxc-transformed file. false disables transformation."
+    },
+    {
+      "index": 28,
+      "manifest": "esbuild option type ESBuildOptions|false deprecated. Converted oxc internally. Use oxc instead."
+    },
+    {
+      "index": 29,
+      "manifest": "assetsInclude option type string|RegExp|(string|RegExp)[]. Related: Static Asset Handling. picomatch patterns static assets. Excluded plugin transform pipeline HTML/fetch/XHR referenced. JS import returns resolved URL string (enforce: 'pre' plugin override). Built-in asset types list: Vite constants. Example: assetsInclude: ['**/*.gltf']."
+    },
+    {
+      "index": 30,
+      "manifest": "logLevel option type 'info'|'warn'|'error'|'silent' default 'info'. Console output verbosity adjust."
+    },
+    {
+      "index": 31,
+      "manifest": "customLogger option type Logger interface. info(msg, options?), warn(msg, options?), warnOnce(msg, options?), error(msg, options?), clearScreen(type), hasErrorLogged(Error|RollupError), hasWarned. Custom logger log messages. createLogger() API Vite default logger get, customize. Example: filter empty CSS files warning."
+    },
+    {
+      "index": 32,
+      "manifest": "clearScreen option type boolean default true. Prevent Vite terminal screen clear logging. CLI --clearScreen false."
+    },
+    {
+      "index": 33,
+      "manifest": "envDir option type string|false default root. .env files load directory. Absolute or relative project root. false disables .env loading. See env files guide."
+    },
+    {
+      "index": 34,
+      "manifest": "envPrefix option type string|string[] default VITE_. SECURITY: never set '' - exposes all env vars leak risk, Vite throws error. Expose unprefixed: use define: {'import.meta.env.ENV_VARIABLE': JSON.stringify(process.env.ENV_VARIABLE)}. import.meta.env client expose."
+    },
+    {
+      "index": 35,
+      "manifest": "appType option type 'spa'|'mpa'|'custom' default 'spa'. SPA (Single Page Application): include HTML middleware, SPA fallback, sirv preview 'single': true. MPA (Multi Page Application): include HTML middleware. Custom: no HTML middleware, SSR, custom HTML handling. Related: server.middlewareMode, SSR guide."
+    },
+    {
+      "index": 36,
+      "manifest": "devtools option type boolean|DevToolsConfig default false experimental. Devtools integration enable, dev server and build analyze. @vitejs/devtools install required, @vitejs/devtools-vite inspect Vite, @vitejs/devtools-rolldown build analysis. Serve and build default, apply limit to either. Plugin config hooks can't change devtools. User config set. Type definitions when installed. Example: devtools: {apply: 'serve'}. See Vite DevTools."
+    },
+    {
+      "index": 37,
+      "manifest": "tsconfig option type string. TypeScript config file path used Vite. Relative project root. Unset: closest matching tsconfig.json per file Vite discovers. See TypeScript Compiler Options. Prefer automatic discovery - overrides per-file discovery misaligns language server. Remap imports: resolve.alias or package.json imports/exports prefer tsconfig paths. This only auto discovery can't identify intended config."
+    },
+    {
+      "index": 38,
+      "manifest": "future option type Record<string, 'warn'|undefined>. Future breaking changes preview prepare smooth migration next major. List updated, added, removed anytime new features developed. See Breaking Changes page details possible options."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "page": "Lifecycle hooks for request-response cycle. Hooks execute on specific events: request, beforeHandle, afterResponse, error. Custom logic at certain points. Register via 3rd argument of route method or via .on<Event> methods. Two hook types: local hooks (specific route) and interceptor hooks (every route after registration). Allows logging, authentication, etc.\nQuestions: What are lifecycle hooks? What events are available? What are hook types?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Hook categorization: Local Hook - executes on specific route only. Interceptor Hook - executes on every route after hook registered. Inline local hook into route handler. Interceptor hook via .on<Event> methods. Hook accepts same Context as handler.\nQuestions: What are hook types? When does each execute? How do you register?"
+    },
+    {
+      "index": 1,
+      "manifest": "Local hooks inlined in route options. Example: beforeHandle({ request, status }) in 3rd argument. Returns value skips handler execution. Useful for authentication returning 401. Can access request, status, other context properties.\nQuestions: How do you use local hooks? What can they access? When do they return values?"
+    },
+    {
+      "index": 2,
+      "manifest": "Interceptor hooks via .on<Event> methods. Apply to every handler after registration for current instance. Example: .onBeforeHandle(). Applies to routes defined after hook. Later routes also receive hook. Different from local hooks which affect single route.\nQuestions: How do interceptor hooks work? What is scope? Do all routes get them?"
+    },
+    {
+      "index": 3,
+      "manifest": "Assignment task: use beforeHandle hook to intercept requests. Solution: .onBeforeHandle(({ query: { name }, status }) => { if(!name) return status(401) }). Checks query parameter, returns 401 if missing. Applies to both /auth and /profile routes.\nQuestions: How do you check authentication? What status codes are useful?"
+    }
+  ]
+}

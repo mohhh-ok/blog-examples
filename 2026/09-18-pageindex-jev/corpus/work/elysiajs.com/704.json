@@ -1,0 +1,33 @@
+{
+  "page": "TypeBox schema (Elysia.t) for validation. Common patterns for types. Primitive types: String, Number, Boolean, Array, Object, Null, Literal. Basic TypeBox API similar to TypeScript. Runtime type validation. Type attributes: format, minimum, maximum, minItems, maxItems, additionalProperties. Union types for multiple types. Optional fields. Partial for all optional. Honorable mentions: Union, Optional, Partial. Elysia types: UnionEnum, File, Files, Cookie, Nullable, MaybeEmpty, Form, UInt8Array, ArrayBuffer, ObjectString, BooleanString, Numeric. Elysia behavior: Optional, Number to Numeric conversion, Boolean to BooleanString conversion.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Primitive types TypeScript-like. String, Number, Boolean, Array, Object, Null, Literal values. Attribute configuration JSON Schema 7. Format email. Minimum/maximum ranges. MinItems/maxItems array limits. AdditionalProperties object behavior."
+    },
+    {
+      "index": 1,
+      "manifest": "Honorable mentions patterns. Union for multiple types. Optional for undefined-able fields. Partial for all optional object fields."
+    },
+    {
+      "index": 2,
+      "manifest": "Elysia types extensions. UnionEnum for value set. File singular with type, minSize, maxSize. Files array of files. Cookie object-like with secrets, sign. Nullable null-only. MaybeEmpty null/undefined. Form FormData syntax sugar. UInt8Array buffer parsing. ArrayBuffer buffer parsing. ObjectString string parsing. BooleanString string boolean. Numeric numeric string conversion. MaybeEmpty union null undefined."
+    },
+    {
+      "index": 3,
+      "manifest": "Elysia type behavior differences. Optional field makes optional. Number becomes Numeric in route schema. Boolean becomes BooleanString in route schema. Not converted in nested Object. HTTP headers/query/params always strings."
+    },
+    {
+      "index": 4,
+      "manifest": "Optional field makes optional in route schema. Allows skipped query parameters. Different from TypeBox where marks object field optional."
+    },
+    {
+      "index": 5,
+      "manifest": "Number to Numeric automatic conversion. Route schema with Number converted to Numeric. Nested t.Object not converted. Handles string numbers in URL."
+    },
+    {
+      "index": 6,
+      "manifest": "Boolean to BooleanString conversion. Route schema Boolean becomes BooleanString. Nested not converted. Handles string booleans in query."
+    }
+  ]
+}

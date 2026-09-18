@@ -1,0 +1,77 @@
+{
+  "page": "OpenAPI Plugin configuration reference for auto-generating API documentation. Installation: `bun add @elysia/openapi`. Basic usage: .use(openapi()), .get(), .post(), then access /openapi (Scalar UI) or /openapi/json (raw spec). Plugin extends OpenAPI Operation Object. Detail field describes route information.\nQuestions: How do you install OpenAPI plugin? How do you generate docs? What formats are available?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Detail field structure following OpenAPI Operation Object. Used to describe route information. Properties: hide (hide from Swagger), deprecated (declare deprecated operation), description (verbose operation behavior), summary (short operation summary). Auto-completion and type-safety provided.\nQuestions: What is detail field? What properties are available?"
+    },
+    {
+      "index": 1,
+      "manifest": "detail.hide to hide route from Swagger page. Set detail.hide: true to hide. Example: { detail: { hide: true } }. Route not displayed in documentation.\nQuestions: How do you hide routes?"
+    },
+    {
+      "index": 2,
+      "manifest": "detail.deprecated, detail.description, detail.summary properties. Deprecated: declares operation deprecated. Description: verbose operation explanation. Summary: short operation summary.\nQuestions: What properties describe operations?"
+    },
+    {
+      "index": 3,
+      "manifest": "Config options accepted by plugin.\nQuestions: What config options exist?"
+    },
+    {
+      "index": 4,
+      "manifest": "enabled property - default true. Enable/disable plugin.\nQuestions: How do you disable plugin?"
+    },
+    {
+      "index": 5,
+      "manifest": "documentation property - OpenAPI info. Refers to OpenAPI v3.0.3 spec.\nQuestions: What info can you provide?"
+    },
+    {
+      "index": 6,
+      "manifest": "exclude property - exclude paths/methods from documentation.\nQuestions: What can you exclude?"
+    },
+    {
+      "index": 7,
+      "manifest": "exclude.methods - list of HTTP methods to exclude.\nQuestions: How do you exclude methods?"
+    },
+    {
+      "index": 8,
+      "manifest": "exclude.paths - list of paths to exclude.\nQuestions: How do you exclude paths?"
+    },
+    {
+      "index": 9,
+      "manifest": "exclude.staticFile - default true. Exclude static file routes from documentation.\nQuestions: How do you exclude static files?"
+    },
+    {
+      "index": 10,
+      "manifest": "exclude.tags - list of tags to exclude from documentation.\nQuestions: How do you exclude tags?"
+    },
+    {
+      "index": 11,
+      "manifest": "mapJsonSchema - custom mapping function from standard schema to OpenAPI schema. Example: toJsonSchema from @valibot/to-json-schema for Valibot mapping.\nQuestions: How do you map custom schemas? What schemas are supported?"
+    },
+    {
+      "index": 12,
+      "manifest": "path property - default '/openapi'. Endpoint to expose OpenAPI documentation frontend.\nQuestions: What is default documentation path? How customize?"
+    },
+    {
+      "index": 13,
+      "manifest": "provider property - default 'scalar'. OpenAPI frontend providers: Scalar, SwaggerUI, null (disable frontend).\nQuestions: What UI providers exist? How choose provider?"
+    },
+    {
+      "index": 14,
+      "manifest": "references - additional OpenAPI reference for each endpoint.\nQuestions: What are references?"
+    },
+    {
+      "index": 15,
+      "manifest": "scalar property - Scalar configuration. Refers to Scalar GitHub config. Self-hosted bundle option: cdn property overrides URI to bundle (cdn is Elysia override, not Scalar's). withDefaultFonts false disables Scalar's font CDN.\nQuestions: How do you configure Scalar? How self-host?"
+    },
+    {
+      "index": 16,
+      "manifest": "specPath property - default '/${path}/json'. Endpoint to expose OpenAPI spec in JSON format.\nQuestions: What is raw spec path? How customize?"
+    },
+    {
+      "index": 17,
+      "manifest": "swagger property - Swagger configuration. Refers to Swagger config documentation. Common patterns available for plugin usage.\nQuestions: How do you configure Swagger? What patterns exist?"
+    }
+  ]
+}

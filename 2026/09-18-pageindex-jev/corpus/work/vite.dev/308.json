@@ -1,0 +1,30 @@
+{
+  "page": "Environment API for Vite: formalizing client and server environments. Vite 6 introduces formal environments concept. Backward compatible with Vite 5.\n- Formalizes environments: client, ssr (optional)\n- Until Vite 5: two implicit environments (client, optional ssr)\n- New API: create multiple custom environments\n- Backward compatibility: Vite 5 config works seamlessly in Vite 6\n- Simple SPA/MPA: no new APIs exposed (client environment applied internally)\n- SSR apps: two environments (client: browser, ssr: Node/server runtime)\n- Dev server execution: server code runs in Node process (close to production)\n- Alternative runtimes: Cloudflare workerd, edge servers\n- Vite 6: configure app to map all production environments\n- Single dev server: run code in multiple environments concurrently\n- Source code transformed by Vite dev server\n- HTTP server, middlewares, resolved config, plugins shared\n- Independent dev environments per configuration\n- Each env matched to production environment\n- Module runner: fetches and evaluates transformed code\n- Environments configuration: build.sourcemap, optimizeDeps, server/edge specific options\n- build option: recursive config inheritance (child inherits parent)\n- top-level options apply to client environment\n- optimizeDeps: client environment only (doesn't work well for servers)\n- Badge marked options in reference docs\n- EnvironmentOptions: define, resolve, optimizeDeps, consumer, dev, build\n- DevEnvironmentOptions, BuildEnvironmentOptions: separate options per phase\n- UserConfig extends EnvironmentOptions\n- Backward compatibility: server.ssrLoadModule, server.moduleGraph available\n- During dev: client and ssr environments always present\n- During build: client always present, ssr optional (if configured)\n- Custom environments: runtime providers (e.g., Cloudflare Vite plugin)\n- API stable between major releases (with potential breaking changes later)\n- Target users: end users (simple config), plugin authors (extended APIs), frameworks (expose differently), runtime providers (custom environments)\nHow do I configure multiple environments? What are the different environment types? How is Vite 6 backward compatible? How do I create custom environments?"
+,
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Formalizing environments in Vite.\n- Vite 5: two implicit environments (client and ssr)\n- Vite 6: formal environments concept\n- New API: create multiple custom environments\n- Supports browser, Node server, edge server, other runtimes\n- Internal refactoring with backward compatibility focus\n- Smooth migration from Vite 5\nHow does Vite 6 formalize environments?"
+    },
+    {
+      "index": 1,
+      "manifest": "Closing gap between build and dev.\n- SPA/MPA: client environment only (implicit)\n- SSR app: two environments (client, ssr)\n- Dev: server code runs in Node process (production approximation)\n- Server runtimes: other JS runtimes (workerd, etc.) have different constraints\n- Modern apps: browser + node server + edge server\n- Vite 5 limitation: didn't represent multiple environments properly\n- Vite 6: dev server runs code in multiple environments concurrently\n- Source code transformed by shared Vite dev server\n- Independent dev environments: HTTP server, middlewares, resolved config, plugins shared\n- Each environment: configured to match production environment\n- Module runner: processes modules for specific runtime\nHow does Vite bridge dev and build environments?"
+    },
+    {
+      "index": 2,
+      "manifest": "Environments configuration.\n- SPA/MPA: no new APIs needed (backward compatible)\n- Internally: client environment configuration\n- Multiple environments: environments config option\n- Explicitly configure server, edge environments\n- Environment inheritance: child inherits top-level config\n- Small number of top-level options apply to client only (optimizeDeps marked with badge)\n- client environment: configure via top-level or environments.client\n- Recommend top-level config for client (simpler)\n- EnvironmentOptions interface: define, resolve, optimizeDeps, consumer, dev, build\n- DevEnvironmentOptions, BuildEnvironmentOptions: dev/build specific\n- optimizeDeps: dev-only but kept as top-level for backward compatibility\nHow do I configure multiple environments?"
+    },
+    {
+      "index": 3,
+      "manifest": "Custom environment instances.\n- Low-level configuration APIs for runtime providers\n- Runtime providers: offer environments with proper defaults\n- Can spawn processes/threads for dev module execution\n- Example: Cloudflare Vite plugin uses Environment API for workerd\n- customEnvironment helper: create custom environment instances\n- Example: ssr, edge, or custom named environments\nHow do I create custom environments?"
+    },
+    {
+      "index": 4,
+      "manifest": "Backward compatibility in Vite 6.\n- Current Vite server API: not deprecated, backward compatible with Vite 5\n- server.moduleGraph: mixed view of client and ssr module graphs\n- Backward compatible mixed module nodes: returned from methods\n- Same scheme for module nodes in handleHotUpdate\n- Don't switch to Environment API yet (ecosystem adoption first)\n- Framework and plugin support needed before widespread adoption\n- Future deprecations: this.environment in hooks, hotUpdate hook, ModuleRunner API, Per-environment APIs, Shared plugins\n- Upgrade path documented in changes section\nIs Vite 6 backward compatible with Vite 5?"
+    },
+    {
+      "index": 5,
+      "manifest": "Target users of Environment API.\n- End users: basic concepts for config\n- Plugin authors: extended API in Environment API Plugins Guide\n- Framework authors: Environment API Frameworks Guide for exposing environments\n- Runtime providers: Environment API Runtimes Guide for custom environments\nWho should use the Environment API?"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "page": "Macro - advanced reusable route options with full type safety. Similar to function with control over lifecycle, schema, context with full type safety. Macro property can be function or object. Function accepts parameter (string example). Object shorthand from Elysia 1.2.10+ - translates to function with boolean parameter, executes if true. Property shorthand example: isAuth object equivalent to isAuth(enabled: boolean) function.\nQuestions: What is macro? How do you define properties? What is property shorthand?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Property shorthand starting from Elysia 1.2.10. Macro property can be function or object. Object form: { resolve() { return { user } } }. Equivalent to function: function(enabled: boolean) { if(!enabled) return; return { resolve() { return { user } } } }. Simplifies macro definition for boolean-enabled properties.\nQuestions: What is property shorthand? How does it simplify macros?"
+    },
+    {
+      "index": 1,
+      "manifest": "Error handling in macro via return status. Syntax: return status(code, message). Example: return status(401, 'Unauthorized'). Recommended over throw for HTTP status codes and end-to-end type safety with Eden. If throw error, Elysia converts to 500 Internal Server Error. Ensure correct type inference for Eden and OpenAPI Type Gen.\nQuestions: How do you handle errors in macro? Why not throw? What methods return status?"
+    },
+    {
+      "index": 2,
+      "manifest": "Resolve function in macro for adding context properties. Returns object with new properties. Example: resolve() { return { user: 'Pardofelis' } } adds user to context. Useful for: perform authentication/add user, run database query/add data, add context property. Macro extension with resolve limited by TypeScript - named single macro works around limitation.\nQuestions: How do you add properties via resolve? What are use cases? How handle TypeScript limitations?"
+    },
+    {
+      "index": 3,
+      "manifest": "Macro schema for custom validation. Define schema in macro to ensure route uses correct types. Example: body: t.Object({ friends: t.Tuple([...]) }). Automatically validates and infers types. Co-exists with route schema seamlessly. Stack multiple macros with different schemas. Schema with lifecycle in same macro supported with named single macro only due to TypeScript.\nQuestions: How do you define macro schema? Can you stack schemas? What is TypeScript limitation?"
+    },
+    {
+      "index": 4,
+      "manifest": "Macro extension for building upon existing macros. Macro can extend other macros. Example: lilith macro extends fouco and sartre macros via { fouco: true, sartre: true, body: ... }. Allows building new macros from existing ones. Useful for composing functionality.\nQuestions: How do you extend macros? What is composition?"
+    },
+    {
+      "index": 5,
+      "manifest": "Macro deduplication preventing duplicate lifecycle execution. Automatically deduplicate lifecycle events - each executed once. Default seed uses property value. Override via seed property. Limited stack of 16 prevents infinite loop on circular dependency. If route already has OpenAPI detail, merges details with route detail taking precedence.\nQuestions: What is deduplication? How do you customize seed? What happens on circular dependency?"
+    }
+  ]
+}

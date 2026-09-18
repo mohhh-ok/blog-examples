@@ -1,0 +1,4 @@
+{
+  "page": "Developer experience importance in Hono: TypeScript support without transpilation required. Hono runs natively on Cloudflare Workers, Deno, Bun without transpiling TypeScript to JavaScript. Makes applications type-safe across multiple platforms.",
+  "sections": []
+}

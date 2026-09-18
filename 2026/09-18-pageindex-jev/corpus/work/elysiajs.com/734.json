@@ -1,0 +1,13 @@
+{
+  "page": "TypeScript first-class support in Elysia. No manual type annotations needed. Type inference from schemas. Zod, Valibot, ArkType, Effect Schema, Yup, Joi support. Schema to type conversion. typeof Type.static for TypeBox. z.infer for Zod. v.InferOutput for Valibot. typeof type.infer for ArkType. Type performance considerations. Perfetto UI for profiling. TypeScript trace generation. Sub app isolation for faster inference. Eden performance optimization. How to infer types from schema? How to profile type performance?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Type inference from schema. Elysia infers request/response types from schema provided. Zod, TypeBox, Valibot, ArkType supported. Schema library compatibility. Schema to TypeScript conversion. How to get types from schemas?"
+    },
+    {
+      "index": 1,
+      "manifest": "Type performance considerations. Local benchmark before release. Perfetto UI drag trace/trace.json. tsc --generateTrace trace for profiling. Identify slow inference bottlenecks. Sub app isolation for faster Eden types. Export sub app type instead of whole app. Frontend imports sub app. How to debug slow types?"
+    }
+  ]
+}

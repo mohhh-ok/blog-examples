@@ -1,0 +1,74 @@
+{
+  "page": "Vite JavaScript API reference. Fully typed, recommended to use TypeScript or JS type checking in VS Code. Covers async functions and type signatures.\n- createServer(inlineConfig?): Promise<ViteDevServer>\n- build(inlineConfig?): Promise<RolldownOutput | RolldownOutput[] | RolldownWatcher>\n- preview(inlineConfig?): Promise<PreviewServer>\n- resolveConfig(inlineConfig, command, defaultMode, defaultNodeEnv, isPreview): Promise<ResolvedConfig>\n- mergeConfig(defaults, overrides, isRoot): deep merge two configs\n- searchForWorkspaceRoot(current, root): find potential workspace root\n- loadEnv(mode, envDir, prefixes): load and merge .env files\n- normalizePath(id): normalize path to POSIX separators\n- transformWithOxc(code, filename, options?, inMap?): transform with Oxc\n- transformWithEsbuild(code, filename, options?, inMap?): deprecated, use transformWithOxc\n- loadConfigFromFile(configEnv, configFile?, configRoot, logLevel, customLogger): load config manually\n- preprocessCSS(code, filename, config): pre-process CSS files\n- version: Vite version string\n- rolldownVersion: Rolldown version string\n- esbuildVersion: backward compatibility only\n- rollupVersion: backward compatibility only\n- InlineConfig: configFile parameter for config file specification\n- ResolvedConfig: resolved user config with utilities (assetsInclude, logger)\n- ViteDevServer: server instance with config, middlewares, httpServer, watcher, ws, pluginContainer, moduleGraph\n- transformRequest: transform URL to module\n- transformIndexHtml: transform HTML\n- ssrLoadModule: load module for SSR\n- ssrFixStacktrace: fix SSR error stacktrace\n- reloadModule: trigger HMR reload\n- listen: start server\n- restart: restart server with optional forceOptimize\n- close: stop server\n- bindCLIShortcuts: bind CLI shortcuts\n- waitForRequestsIdle: wait for static imports (experimental)\n- PreviewServer: preview server with config, middlewares, httpServer\n- resolvedUrls: server URLs (URL-encoded)\n- printUrls: print server URLs\n- process.env.NODE_ENV: must match mode config\n- MODE in config: 'development' default\nHow do I create a dev server? How do I build programmatically? How do I preview a build? How do I load environment variables? How do I transform code with Oxc?"
+,
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "createServer: Starting dev server.\n- Signature: async function createServer(inlineConfig?: InlineConfig): Promise<ViteDevServer>\n- InlineConfig: configFile parameter\n- configFile: false disables auto-resolving\n- mode and configFile special parameters\n- Returns ViteDevServer instance\n- Example: server.listen(), server.printUrls(), server.bindCLIShortcuts()\n- Note: process.env.NODE_ENV must be set correctly with mode\n- Separate processes recommended for build and dev in same process\nHow do I create a Vite dev server?"
+    },
+    {
+      "index": 1,
+      "manifest": "InlineConfig interface.\n- Extends UserConfig with additional properties\n- configFile: specify config file or false to disable auto-resolve\nWhat's in InlineConfig?"
+    },
+    {
+      "index": 2,
+      "manifest": "ResolvedConfig interface.\n- Same properties as UserConfig (non-undefined)\n- utilities: assetsInclude (function), logger (object)\nWhat's in ResolvedConfig?"
+    },
+    {
+      "index": 3,
+      "manifest": "ViteDevServer interface.\n- config: ResolvedConfig\n- middlewares: Connect.Server for custom middlewares\n- httpServer: native Node http.Server (null in middleware mode)\n- watcher: Chokidar instance (FSWatcher)\n- ws: WebSocketServer for sending messages\n- pluginContainer: run plugin hooks on files\n- moduleGraph: import relationships, url→file mapping, HMR state\n- resolvedUrls: Vite CLI URLs (URL-encoded, null in middleware mode)\n- transformRequest(url, options?): resolve, load, transform URL\n- transformIndexHtml(url, html, originalUrl?): apply HTML transforms\n- ssrLoadModule(url, options?): load module for SSR, options.fixStacktrace\n- ssrFixStacktrace(error): fix SSR error stacktrace\n- reloadModule(module): trigger HMR reload\n- listen(port?, isRestart?): start server\n- restart(forceOptimize?): restart server\n- close(): stop server\n- bindCLIShortcuts(options?): bind CLI shortcuts\n- waitForRequestsIdle(ignoredId?): experimental, wait for static imports\nWhat's in ViteDevServer?"
+    },
+    {
+      "index": 4,
+      "manifest": "build: Programmatic build.\n- Signature: async function build(inlineConfig?: InlineConfig): Promise<RolldownOutput | RolldownOutput[] | RolldownWatcher>\n- Any valid user config options supported\n- mode and configFile special parameters\n- Example: root, base, build.rolldownOptions\nHow do I build Vite programmatically?"
+    },
+    {
+      "index": 5,
+      "manifest": "preview: Preview production build.\n- Signature: async function preview(inlineConfig?: InlineConfig): Promise<PreviewServer>\n- Serves production build locally\n- preview.port, preview.open options\n- Returns PreviewServer instance\nHow do I preview a production build?"
+    },
+    {
+      "index": 6,
+      "manifest": "PreviewServer interface.\n- config: ResolvedConfig\n- middlewares: Connect.Server\n- httpServer: native http.Server\n- resolvedUrls: server URLs (URL-encoded, null if not listening)\n- printUrls(): print URLs\n- bindCLIShortcuts(options?): bind CLI shortcuts\nWhat's in PreviewServer?"
+    },
+    {
+      "index": 7,
+      "manifest": "resolveConfig: Resolve config manually.\n- Signature: async function resolveConfig(inlineConfig, command, defaultMode, defaultNodeEnv, isPreview): Promise<ResolvedConfig>\n- command: 'build' or 'serve' (serve in dev and preview)\n- defaultMode: default 'development'\n- defaultNodeEnv: default 'development'\n- isPreview: optional flag\nHow do I resolve config programmatically?"
+    },
+    {
+      "index": 8,
+      "manifest": "mergeConfig: Merge two Vite configs.\n- Signature: function mergeConfig(defaults, overrides, isRoot): Record<string, any>\n- Deeply merge configs\n- isRoot: true (default) for root level, false for nested (e.g., build options)\n- null/undefined values skip (not merged)\n- Modify result directly for explicit value clearing\n- Config callback: call before mergeConfig\n- defineConfig helper can merge callback form with object form\nHow do I merge Vite configs?"
+    },
+    {
+      "index": 9,
+      "manifest": "searchForWorkspaceRoot: Find workspace root.\n- Signature: function searchForWorkspaceRoot(current, root): string\n- Searches for: workspaces field in package.json, lerna.json, pnpm-workspace.yaml\n- Fallback to root parameter\n- Used with server.fs.allow option\nHow do I find workspace root?"
+    },
+    {
+      "index": 10,
+      "manifest": "loadEnv: Load .env files.\n- Signature: function loadEnv(mode, envDir, prefixes): Record<string, string>\n- Load .env files in envDir (default: VITE_ prefix)\n- Merge with process.env\n- prefixes: string or string array (default: 'VITE_')\n- Set prefixes to '' to load all env regardless of prefix\n- Returns Record of env variables\nHow do I load environment variables?"
+    },
+    {
+      "index": 11,
+      "manifest": "normalizePath: Normalize path separators.\n- Signature: function normalizePath(id): string\n- Converts to POSIX separators (/)\n- Works cross-platform\n- Used for plugin path comparisons\nHow do I normalize paths?"
+    },
+    {
+      "index": 12,
+      "manifest": "transformWithOxc: Transform with Oxc.\n- Signature: async function transformWithOxc(code, filename, options?, inMap?): Promise<OxcTransformResult>\n- Transform JavaScript or TypeScript with Oxc Transformer\n- Useful for plugins matching Vite's internal transform\n- Returns result with code, map (source map), warnings\nHow do I transform code with Oxc?"
+    },
+    {
+      "index": 13,
+      "manifest": "transformWithEsbuild: Transform with esbuild (deprecated).\n- Signature: async function transformWithEsbuild(code, filename, options?, inMap?): Promise<ESBuildTransformResult>\n- Deprecated: use transformWithOxc instead\n- For plugins preferring esbuild\nHow do I transform code with esbuild?"
+    },
+    {
+      "index": 14,
+      "manifest": "loadConfigFromFile: Load config manually.\n- Signature: async function loadConfigFromFile(configEnv, configFile?, configRoot, logLevel, customLogger): Promise<{ path, config, dependencies } | null>\n- Load Vite config file manually with Rolldown\n- Returns config object or null if not found\n- includes dependencies list\nHow do I load config from file?"
+    },
+    {
+      "index": 15,
+      "manifest": "preprocessCSS: Pre-process CSS files (experimental).\n- Signature: async function preprocessCSS(code, filename, config): Promise<PreprocessCSSResult>\n- Supports: .css, .scss, .sass, .less, .styl, .stylus\n- Pre-processor inferred from filename extension\n- Returns: code, map (source map), modules (CSS modules), deps\n- .module.{ext}: treated as CSS module with class mapping\n- URL resolution in url() and image-set() not performed\n- Respective pre-processor must be installed\nHow do I pre-process CSS files?"
+    },
+    {
+      "index": 16,
+      "manifest": "Version exports.\n- version: current Vite version string (e.g., '8.0.0')\n- rolldownVersion: Rolldown version string (e.g., '1.0.0')\n- esbuildVersion: backward compatibility only\n- rollupVersion: backward compatibility only\nHow do I get version information?"
+    }
+  ]
+}

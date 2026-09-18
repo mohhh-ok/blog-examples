@@ -1,0 +1,13 @@
+{
+  "page": "Codecs for bidirectional transformations between input and output types introduced in zod@4.1. Sharing single schema across network boundaries for converting JSON-friendly formats to rich JavaScript representations. Forward parsing (input→output) and backward encoding (output→input).\n- Codecs as special schema types with bidirectional transformations\n- z.codec(inputSchema, outputSchema, {decode, encode})\n- .parse and .decode for forward transformation (input→output)\n- z.decode for strongly-typed input (unlike .parse with unknown)\n- .encode for backward transformation (output→input)\n- z.invertCodec to swap input/output and directions\n- Network boundary conversion between JSON and JavaScript types\n- Codec subtypes as pipes with interstitial transform logic\n- How do codecs work for data transformation?\n- When should I use codecs instead of transforms?\n- How do I encode/decode with a codec?\n- What are common codec implementations?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "How encoding works in Zod schemas and codec subtypes. Codecs encapsulate bidirectional transformations with decode and encode functions. Pipes chain schemas (forward: A→B, backward: B→A). Refinements execute both directions. Transforms are unidirectional (error if encountered during encode). Stringbool internally implemented as codec. Defaults/prefaults and .catch only apply forward. Mutating transforms (.trim, .toLowerCase) work both directions."
+    },
+    {
+      "index": 1,
+      "manifest": "Commonly-needed codec implementations. stringToNumber (parseFloat), stringToInt (parseInt), stringToBigInt (BigInt), numberToBigInt. Date conversions: isoDatetimeToDate, epochSecondsToDate, epochMillisToDate. JSON parsing with error handling. Byte conversions: utf8ToBytes, bytesToUtf8, base64ToBytes, base64urlToBytes, hexToBytes. URL: stringToURL, stringToHttpURL. URI component encoding/decoding. All provided as copy/paste implementations for customization."
+    }
+  ]
+}

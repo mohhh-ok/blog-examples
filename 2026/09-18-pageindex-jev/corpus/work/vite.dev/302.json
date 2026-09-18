@@ -1,0 +1,26 @@
+{
+  "page": "Vite configuration file loading and setup. Default file: vite.config.js/vite.config.ts. Config file auto-resolution from project root. Supports ESM modules via Node.js detection or package.json type field.\n- Config file naming: vite.config.js, vite.config.ts, vite.config.mjs, vite.config.mts\n- Default resolves from project root\n- ESM requirement: .mjs/.mts extension or 'type': 'module' in package.json\n- --config CLI option: specify config file (relative to cwd)\n- --configLoader native: use native runtime (requires Node 22.18+ for TypeScript)\n- --configLoader bundle: default, bundles config into temporary file\n- node_modules/.vite-temp: temporary directory for bundled config\n- defineConfig: helper for TypeScript intellisense\n- UserConfig type: JSDoc type hints alternative\n- Conditional config: command ('serve'/'build'), mode, isSsrBuild, isPreview\n- Async config: export async function\n- Environment variables: loadEnv helper for .env files\n- process.env in config: only existing vars (Vite defers .env* loading)\n- .env, .env.local, .env.[mode], .env.[mode].local files\n- import.meta.env: app-level constants with VITE_ prefix\n- Config debugging: --configLoader native for native execution\n- Breakpoint support: native loader\n- Bundled config source map: .vscode/settings.json resolveSourceMapLocations\n- Launch configuration: .vscode/launch.json resolveSourceMapLocations\nHow do I create a Vite config file? How do I use conditional config? How do I load environment variables in config? How do I debug the config file? What's the difference between serve and build mode?"
+,
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Config file intellisense.\n- JSDoc type hints: /** @type {import('vite').UserConfig} */\n- defineConfig helper: no JSDoc needed, recommended\n- TypeScript: vite.config.ts with defineConfig or satisfies UserConfig\n- Type definitions built-in\nHow do I get intellisense in config files?"
+    },
+    {
+      "index": 1,
+      "manifest": "Conditional configuration.\n- Export function with config environment parameter\n- Parameters: command ('serve'/'build'), mode, isSsrBuild, isPreview\n- command: 'serve' in dev (vite/vite dev/vite serve aliases)\n- command: 'build' when building for production\n- isSsrBuild and isPreview: optional flags\n- Compare explicitly against true/false (some tools pass undefined)\n- Example: if (command === 'serve') { ... } else { ... }\nHow do I use conditional config?"
+    },
+    {
+      "index": 2,
+      "manifest": "Async configuration.\n- Export async function for async operations\n- Wrapped with defineConfig for intellisense\n- const data = await asyncFunction()\n- Return config object\nHow do I use async config?"
+    },
+    {
+      "index": 3,
+      "manifest": "Using environment variables in config.\n- process.env: only existing vars available during config evaluation\n- .env* files: loaded after config resolution (deferred)\n- Depends on config options like root and envDir\n- loadEnv helper: manually load .env* files before config uses them\n- Signature: loadEnv(mode, process.cwd(), '')\n- Set third param to '' to load all env (ignore VITE_ prefix)\n- import.meta.env in app: auto-loaded with VITE_ prefix\n- JSON.stringify for define replacements\n- Example: __APP_ENV__: JSON.stringify(env.APP_ENV)\n- Conditional server.port based on env var\nHow do I use environment variables in config?"
+    },
+    {
+      "index": 4,
+      "manifest": "Debugging config file in VS Code.\n- vite --configLoader native: native execution (requires Node 22.18+)\n- Breakpoints work in original config file\n- Source maps generated for bundled config\n- Bundled config: node_modules/.vite-temp temporary directory\n- JavaScript Debug Terminal: add resolveSourceMapLocations in .vscode/settings.json\n- Include: ${workspaceFolder}/**, exclude: !**/node_modules/**, include: **/node_modules/.vite-temp/**\n- Run and Debug view: .vscode/launch.json configuration\n- runtimeArgs: ['exec', 'vite', '--configLoader', 'bundle']\n- sourceMaps: true, console: integratedTerminal\nHow do I debug Vite config file?"
+    }
+  ]
+}

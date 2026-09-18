@@ -1,0 +1,21 @@
+{
+  "page": "- Server-Timing Middleware: adds performance metrics to response headers via the Server-Timing header\n- Note: on Cloudflare Workers, timer metrics may be inaccurate since timers only show the time of the last I/O\n- Import: `import { Hono } from 'hono'`, `import { timing, setMetric, startTime, endTime, wrapTime } from 'hono/timing'`, `import type { TimingVariables } from 'hono/timing'`\n- Usage: `app.use(timing())`; custom metrics via `setMetric(c, 'region', 'europe-west3')` or with timing `setMetric(c, 'custom', 23.8, 'My custom Metric')`; timers via `startTime(c, 'db')` / `endTime(c, 'db')`, or wrap a promise with `wrapTime(c, 'db', promise)`\n- Conditionally enable timing per request via the `enabled` option function, e.g. only for POST requests\n- Options: `total` (boolean, default `true`), `enabled` (boolean or function, default `true`), `totalDescription` (string, default `Total Response Time`), `autoEnd` (boolean, controls whether `startTime()` ends automatically at request end), `crossOrigin` (boolean/string/function, default `false`, controls which origins can read the timing header)\n- Questions answered: How do I add Server-Timing headers in Hono? How do I add custom timing metrics? How do I disable timing for certain requests? Why are Cloudflare Workers timer metrics inaccurate? How do I allow cross-origin access to timing headers?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- Import statements for Server-Timing Middleware\n- `import { Hono } from 'hono'`\n- `import { timing, setMetric, startTime, endTime, wrapTime } from 'hono/timing'`\n- `import type { TimingVariables } from 'hono/timing'`\n- Answers: How do I import the Server-Timing Middleware and its helper functions?"
+    },
+    {
+      "index": 1,
+      "manifest": "- Specify `type Variables = TimingVariables` and `new Hono<{ Variables: Variables }>()` to type `c.get('metric')`\n- Register with `app.use(timing())`\n- `setMetric(c, 'region', 'europe-west3')` adds a custom metric without timing\n- `setMetric(c, 'custom', 23.8, 'My custom Metric')` adds a custom metric with a timing value (in milliseconds) and description\n- `startTime(c, 'db')` starts a named timer; `endTime(c, 'db')` ends it\n- `wrapTime(c, 'db', db.findMany(...))` wraps a Promise to time it automatically\n- Conditionally enabled example: `timing({ enabled: (c) => c.req.method === 'POST' })` applied with `app.use('*', ...)`\n- Answers: How do I add a custom named timer? How do I record a custom metric with a value and description? How do I wrap a promise to time it? How do I only enable timing for POST requests?"
+    },
+    {
+      "index": 2,
+      "manifest": "- Shows an example screenshot (`/images/timing-example.png`) of the Server-Timing output as seen in browser devtools\n- Answers: What does the Server-Timing Middleware output look like?"
+    },
+    {
+      "index": 3,
+      "manifest": "- `total`: `boolean`, optional, default `true` — show the total response time\n- `enabled`: `boolean | (c: Context) => boolean`, optional, default `true` — whether timings are added to headers\n- `totalDescription`: `string`, optional, default `Total Response Time` — description for the total response time metric\n- `autoEnd`: `boolean`, optional — whether `startTime()` should end automatically at the end of the request; if disabled, timers not manually ended are not shown\n- `crossOrigin`: `boolean | string | (c: Context) => boolean | string`, optional, default `false` — controls which origins can read the Timing-Allow-Origin header; `false` restricts to the current origin, `true` allows all origins, a string (comma-separated for multiple) allows specific domains\n- Answers: What is the default value of the `total` option? How do I set a custom description for total response time? What happens if autoEnd is disabled? How do I allow another domain to read Server-Timing headers via Timing-Allow-Origin?"
+    }
+  ]
+}

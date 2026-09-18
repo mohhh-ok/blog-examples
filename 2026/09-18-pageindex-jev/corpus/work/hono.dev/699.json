@@ -1,0 +1,9 @@
+{
+  "page": "Philosophy and concept of Hono: motivation for creating fast, versatile web framework. Works on multiple platforms (Cloudflare Workers, Deno, Bun). Uses Web Standard APIs only. Ecosystem includes GraphQL servers, Firebase auth, Sentry middleware, Node.js adapter. Goal is becoming Standard for Web Standards.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Motivation: needed good framework for Cloudflare Workers. Learned Trie tree router building. Friend created RegExpRouter ultra-fast router. Friend created Basic auth middleware. Web Standard APIs enabled Deno/Bun support. Ecosystem grew with GraphQL, Firebase, Sentry contributions. Became answer to 'is there Express for Bun?'. Goal: damn fast, makes many things possible, works anywhere, become Standard for Web Standards."
+    }
+  ]
+}

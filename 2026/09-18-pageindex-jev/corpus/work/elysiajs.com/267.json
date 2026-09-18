@@ -1,0 +1,17 @@
+{
+  "page": "GraphQL Yoga plugin for Elysia integration. Installation via `bun add @elysia/graphql-yoga`. Creates GraphQL endpoint at `/graphql` by default with GraphiQL UI. Supports custom resolvers, type inference via Mobius for type-safety, custom context objects. Optional peer dependencies: graphql, graphql-yoga. Main plugin function: `yoga()` with config options including typeDefs, resolvers, context, and path configuration.\nQuestions: How do you install and use GraphQL Yoga with Elysia? How can you add custom context to GraphQL resolvers? What is the default GraphQL endpoint path?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Resolver type inference using Mobius library. Automatic type-safety and auto-complete for resolver types inferred from typeDefs field. No manual type definitions needed for resolver functions.\nQuestions: How does Elysia infer types for GraphQL resolvers?"
+    },
+    {
+      "index": 1,
+      "manifest": "Adding custom context to resolver functions via `context` option. Context object passed to each resolver as third parameter. Example context property: name. Context parameter in resolver: `async (parent, args, context) => context.name`. Note: if context is function, type inference won't work properly.\nQuestions: How do you add context to GraphQL resolvers in Elysia?"
+    },
+    {
+      "index": 2,
+      "manifest": "Config extends GraphQL Yoga's createYoga options. Plugin option `path` with default value `/graphql` for GraphQL handler endpoint. Inline schema config supported at root level. Refers to GraphQL Yoga documentation for full options.\nQuestions: What is the default path for GraphQL endpoint? How do you customize the GraphQL endpoint path?"
+    }
+  ]
+}

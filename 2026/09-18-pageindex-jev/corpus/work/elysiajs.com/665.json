@@ -1,0 +1,17 @@
+{
+  "page": "HTTP status codes indicate server request handling. Default 200 OK for successful request. Common codes: 400 Bad Request, 422 Unprocessable Entity, 500 Internal Server Error. 404 Not Found for missing pages. Return status with status() function. Number or string status names. Headers with set.headers object. Redirect with redirect() function. Response context properties: status, redirect, set. How to return status codes? How to set headers? How to redirect?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Redirect request to another URL. redirect() function for URL redirection. Return redirect('https://elysiajs.com'). Set response location."
+    },
+    {
+      "index": 1,
+      "manifest": "Headers for response. set.headers object to set response headers. set.headers['x-powered-by'] = 'Elysia'. Multiple header setting. Response header context object."
+    },
+    {
+      "index": 2,
+      "manifest": "Assignment exercise. Set 418 status, redirect, headers. .get() with status(), redirect(), set.headers. .listen(3000)."
+    }
+  ]
+}

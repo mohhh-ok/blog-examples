@@ -1,0 +1,29 @@
+{
+  "page": "Vite SSR (Server-Side Rendering) options (dev and build unless noted). Related: SSR Externals guide. ssr.external (string[]|true): dependencies externalize transitive SSR. Default: all externalized except linked (HMR). true all including linked externalize. Note: explicitly listed (string[]) priority if ssr.noExternal also listed - external always priority if both. ssr.noExternal (string|RegExp|(string|RegExp)[]|true): dependencies prevent externalize SSR, bundled build. Default: linked not externalized (HMR). true: no externalized. Exceptions: explicitly ssr.external (string[]) priority externalize still. ssr.target: 'node' set Node.js built-ins also externalized. Note: both ssr.noExternal: true and ssr.external: true configured, ssr.noExternal takes priority no externalize. ssr.target (string, default 'node'): SSR server build target. 'node' or 'webworker'. ssr.resolve.conditions (string[], default ['module', 'node', 'development|production'] defaultServerConditions, ['module', 'browser', 'development|production'] defaultClientConditions ssr.target 'webworker'): plugin pipeline conditions used, non-externalized dependencies SSR build only affect. ssr.resolve.externalConditions affect externalized imports. Related: Resolve Conditions guide. ssr.resolve.externalConditions (string[], default ['node', 'module-sync']): conditions ssr import (ssrLoadModule) externalized direct dependencies (external Vite imported). Tip: Node --conditions flag same values dev/build consistent behavior. Example: ['node', 'custom'] run NODE_OPTIONS='--conditions custom' vite dev and NODE_OPTIONS=\"--conditions custom\" node ./dist/server.js build. ssr.resolve.mainFields (string[], default ['module', 'jsnext:main', 'jsnext']): package.json fields package entry point. Lower precedence conditional exports: exports resolves mainFields ignored. Non-externalized dependencies setting only affect.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "ssr.external type string[]|true. Externalize dependencies transitive SSR. Default: all externalized except linked (HMR). true all including linked. Note: explicitly (string[]) priority if ssr.noExternal listed - external always priority."
+    },
+    {
+      "index": 1,
+      "manifest": "ssr.noExternal type string|RegExp|(string|RegExp)[]|true. Dependencies prevent externalize SSR, bundled build. Default: linked not externalized (HMR). true no externalized. Exceptions: explicitly ssr.external (string[]) priority externalize still. ssr.target: 'node': Node.js built-ins also externalized. Note: both ssr.noExternal: true and ssr.external: true, ssr.noExternal takes priority no externalize."
+    },
+    {
+      "index": 2,
+      "manifest": "ssr.target type 'node'|'webworker' default 'node'. SSR server build target."
+    },
+    {
+      "index": 3,
+      "manifest": "ssr.resolve.conditions type string[] default ['module', 'node', 'development|production'] (defaultServerConditions) or ['module', 'browser', 'development|production'] (defaultClientConditions) ssr.target === 'webworker'. Plugin pipeline conditions used, non-externalized dependencies SSR build affect. ssr.resolve.externalConditions for externalized. Related: Resolve Conditions."
+    },
+    {
+      "index": 4,
+      "manifest": "ssr.resolve.externalConditions type string[] default ['node', 'module-sync']. Conditions ssr import (ssrLoadModule) externalized direct dependencies (external Vite). Tip: Node --conditions flag same values dev/build consistent. Example: ['node', 'custom'] run NODE_OPTIONS='--conditions custom' vite dev, NODE_OPTIONS=\"--conditions custom\" node ./dist/server.js build."
+    },
+    {
+      "index": 5,
+      "manifest": "ssr.resolve.mainFields type string[] default ['module', 'jsnext:main', 'jsnext']. package.json fields package entry point. Lower precedence conditional exports - exports resolves mainFields ignored. Non-externalized only."
+    }
+  ]
+}

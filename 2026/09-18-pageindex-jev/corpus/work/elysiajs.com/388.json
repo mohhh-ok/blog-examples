@@ -1,0 +1,21 @@
+{
+  "page": "JWT Plugin for JSON Web Token support. Installation: `bun add @elysia/jwt`. Use via .use(jwt({name, secret})). Two auth patterns: cookie-based (httpOnly, maxAge, path properties) and headers-based (Authorization header with Bearer prefix). config.name - custom function registration name for multiple JWT instances with different configs. config.secret - private key for signing. Extends config from jose library.\nQuestions: How do you use JWT plugin? What are auth patterns? How do you configure it?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "JWT config options: name (namespace name), secret (signing key), schema (strict type validation). Extends jose config: alg (algorithm, default HS256), iss (issuer), sub (subject), aud (audience), jti (JWT ID), nbf (not before time), exp (expiration time), iat (issued at), b64, kid (key ID hint), x5t (X.509 SHA-1 thumbprint), x5c (certificate chain), x5u (X.509 URL), jwk (JWK Set URL), typ (type), ctr (Content-Type). RFC references: RFC7519, RFC7797, RFC7515, RFC5280, RFC3986.\nQuestions: What config options are available? Which RFCs apply? What are common claims?"
+    },
+    {
+      "index": 1,
+      "manifest": "Handler methods: jwt.sign (async function) - signature `(payload: JWTPayloadSpec) => Promise<string>`, accepts JWT config values. jwt.verify - signature `(payload: string) => Promise<JWTPayloadSpec | false>`, returns payload or false if invalid. Payload type matches JWT config.\nQuestions: What methods does JWT provide? What do they return?"
+    },
+    {
+      "index": 2,
+      "manifest": "Pattern guidance for JWT usage, setCookie inheritance.\nQuestions: What are common JWT patterns?"
+    },
+    {
+      "index": 3,
+      "manifest": "Setting JWT expiration date via config. Example: exp: '7d' sets expiration to 7 days from now. Config inherits from setCookie values. exp value format: string like '7d'.\nQuestions: How do you set JWT expiration? What formats are supported?"
+    }
+  ]
+}

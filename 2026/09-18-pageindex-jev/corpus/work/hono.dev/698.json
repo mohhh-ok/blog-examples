@@ -1,0 +1,4 @@
+{
+  "page": "Middleware concept in Hono: Handler returns Response. Middleware executes before and after Handler with onion/layered structure. Middleware handles Request and Response. Example: X-Response-Time header middleware using performance.now() to measure request duration, sets header with time in milliseconds. Middleware written with app.use() taking async function with context and next callback.",
+  "sections": []
+}

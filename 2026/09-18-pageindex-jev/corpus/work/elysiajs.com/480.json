@@ -1,0 +1,9 @@
+{
+  "page": "Mount for interoperating with web frameworks built on Web Standard. Elysia.mount enables gradual migration or multi-framework use. Example: mount Hono at /hono via .mount('/hono', hono.fetch). Allows frameworks like Hono, H3, etc to run together. Useful for migration or mixed framework applications.\nQuestions: What is mount? How do you use it? What frameworks support it?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Assignment: use preview to GET '/hono' and verify Hono route. Modify code to experiment. Shows mount functionality with Hono framework.\nQuestions: How do you test mounted routes?"
+    }
+  ]
+}

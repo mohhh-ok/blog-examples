@@ -1,0 +1,45 @@
+{
+  "page": "Getting Started with Vite: fast, lightweight build tool for modern web projects. Core features: dev server with native ES modules and Hot Module Replacement (HMR) at ~50ms updates, production build with Rolldown bundler, sensible defaults out-of-box. Browser support: dev targets esnext (modern browsers), production targets Baseline Widely Available (Chrome 111+, Edge 111+, Firefox 114+, Safari 16.4+). Installation: Node.js 20.19+, 22.12+ required. Setup via npm create vite@latest, yarn create vite, pnpm create vite, bun create vite, deno init --npm vite. Framework templates: vanilla, vue, react, preact, lit, svelte, solid, qwik (JS/TS variants). Manual install: npm install -D vite, create index.html entry point, run vite dev. Project structure: index.html front-and-center as application entry point, part of module graph. Vite config: vite.config.js, supports plugins, CLI options (--port, --open, --force, -c, --base, --logLevel, --debug, --mode, --version). Create-vite supports --template flag, --no-interactive mode. Alternative root: vite serve some/sub/dir. Using unreleased commits via pkg.pr.new or git clone + pnpm link. Community resources: Discord, GitHub Discussions, StackBlitz online.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Vite overview: build tool, dev server, production bundler. Dev server features: native ESM support, HMR (hot module replacement). Rolldown bundler. Production optimization: highly optimized static assets. Plugin support. Framework integration. Extensibility via Plugin API and JavaScript API with full type support. Learning resources: Features Guide, Plugins Guide, Config Section, Why Vite section, interactive tutorials on Scrimba."
+    },
+    {
+      "index": 1,
+      "manifest": "Browser support during development: modern browser assumed with latest JavaScript/CSS features. Dev target: esnext (Oxc transformer). Runtime injection for dev server functionality. Baseline Newly Available features as of 2026-01-01. Production build targeting: Baseline Widely Available as of 2026-01-01 (browsers released mid-2023). Configurable via build.target. Legacy browser support via @vitejs/plugin-legacy. Browser versions: Chrome, Edge, Firefox, Safari minimum versions specified."
+    },
+    {
+      "index": 2,
+      "manifest": "Try Vite online via StackBlitz at vite.new/. Browser-based Vite build setup. Template selection: vite.new/{template} URL pattern. Supported templates: vanilla, vanilla-ts, vue, vue-ts, react, react-ts, preact, preact-ts, lit, lit-ts, svelte, svelte-ts, solid, solid-ts, qwik, qwik-ts. No local installation required. Identical to local setup experience."
+    },
+    {
+      "index": 3,
+      "manifest": "Scaffolding projects: npm create vite@latest, yarn create vite, pnpm create vite, bun create vite, deno init --npm vite. Interactive prompts guide setup. Node.js compatibility warning: 20.19+, 22.12+ required; some templates require higher version. Command-line options: --template flag (vanilla, vanilla-ts, vue, vue-ts, react, react-compiler, react-ts, react-compiler-ts, preact, preact-ts, lit, lit-ts, svelte, svelte-ts, solid, solid-ts, qwik, qwik-ts). Use . for current directory scaffolding. --no-interactive flag for non-interactive creation. Create-vite documentation and detailed template info."
+    },
+    {
+      "index": 4,
+      "manifest": "Community templates via create-vite. Awesome Vite repository lists community-maintained templates. GitHub StackBlitz integration: https://github.stackblitz.com/user/project (add .stackblitz after github). Tiged tool for scaffolding: npx tiged user/project my-project, install, npm run dev."
+    },
+    {
+      "index": 5,
+      "manifest": "Manual Vite installation: npm install -D vite, yarn add -D vite, pnpm add -D vite, bun add -D vite, deno add -D npm:vite. Create index.html entry point. Dev server commands: npx vite, yarn vite, pnpm vite, bunx vite, deno run -A npm:vite. Default server URL: http://localhost:5173. HTML file required for serving."
+    },
+    {
+      "index": 6,
+      "manifest": "index.html entry point location: front-and-central in project root. Vite treats index.html as source code, part of module graph. Script resolution: <script type=\"module\" src> tags, inline <script type=\"module\"> blocks, <link href> CSS. URL automatic rebasing. Multi-page apps supported. Specifying alternative root: vite serve some/sub/dir. Config file resolution from project root. vite.config.js location affects configuration loading."
+    },
+    {
+      "index": 7,
+      "manifest": "CLI usage: vite binary in npm scripts or npx vite. Default npm scripts: dev (vite dev, vite serve aliases), build (vite build), preview (vite preview). CLI options: --port, --open. Full option list: npx vite --help. Command Line Interface documentation."
+    },
+    {
+      "index": 8,
+      "manifest": "Using unreleased commits from Vite repository. pkg.pr.new service: https://pkg.pr.new/vite@SHA. Package managers: npm, yarn, pnpm, bun. SHA commit references: recent commits only (within last month). Older releases purged. Git clone alternative: clone vite repo, cd vite, pnpm install (pnpm required), cd packages/vite, pnpm run build, pnpm link. Link to local Vite-based project: pnpm link vite. Restart dev server for changes. Release documentation and timing."
+    },
+    {
+      "index": 9,
+      "manifest": "Community support: Discord chat.vite.dev, GitHub Discussions forum. Questions and help resources. Community engagement."
+    }
+  ]
+}

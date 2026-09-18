@@ -1,0 +1,33 @@
+{
+  "page": "Key concepts for Elysia understanding before getting started. Important concepts: encapsulation (lifecycle methods encapsulated to instance), method chaining (required for type safety), dependency (explicit dependency declaration), deduplication (prevent plugin re-execution), global vs explicit dependencies, order of code (lifecycle only applies to routes after registration), type inference (complex type system requires inline functions).\nQuestions: What are key Elysia concepts? Why use method chaining? How do dependencies work?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Encapsulation isolates lifecycle methods to instance only. Lifecycle not shared with other instances by default. To export lifecycle: use scope property with value 'global' in lifecycle method: { as: 'global' }. Global scope exports to every instance. Default behavior similar to JavaScript export - must explicitly declare to make available.\nQuestions: What is encapsulation? How do you export lifecycle globally? What is default scope?"
+    },
+    {
+      "index": 1,
+      "manifest": "Method chaining required for type safety. Each Elysia method returns new type reference with added properties. Without chaining, types not saved. Example: state('build', 1) returns new type with build property. Using chaining: app.state().get() preserves type. Without chaining: app assignment, separate get() - loses type. Critical for accurate type inference.\nQuestions: Why is method chaining important? What happens without it? How does type inference work?"
+    },
+    {
+      "index": 2,
+      "manifest": "Dependency requirement for using other instance services. Instances independent by default - microservice model. Must explicitly declare dependencies via .use(). Example: need Auth service, must .use(auth) before accessing. Similar to Dependency Injection pattern. Enables better tracking and modularity. Prevents implicit global state.\nQuestions: How do dependencies work? Why explicit declaration? What pattern is used?"
+    },
+    {
+      "index": 3,
+      "manifest": "Deduplication prevents plugin re-execution. By default, plugin re-executed every time applying to instance. Prevent via unique identifier using name and optional seed property. Example: `new Elysia({ name: 'ip' })`. Same named instance reused instead of re-executed. Useful when same plugin used multiple times.\nQuestions: What is deduplication? How do you enable it? When is it useful?"
+    },
+    {
+      "index": 4,
+      "manifest": "Global vs Explicit dependency selection. Global plugins: don't add types (cors, compress, helmet), add global lifecycle (tracing, logging). Examples: OpenAPI, OpenTelemetry, logging. Explicit plugins: add types (macro, state, model), add business logic (Auth, Database). Examples: state management, data modeling, auth, features. Use global when no control needed, explicit when instance should interact.\nQuestions: When use global vs explicit? What are examples of each?"
+    },
+    {
+      "index": 5,
+      "manifest": "Order of code importance for lifecycle application. Events apply to routes registered AFTER hook. Hook placed before route - applies. Hook placed after route - doesn't apply. Same applies to plugins - plugin onError placed before plugin, plugin doesn't inherit onError.\nQuestions: Why does order matter? When does lifecycle apply? What happens with wrong order?"
+    },
+    {
+      "index": 6,
+      "manifest": "Type inference requires inline functions. Complex type system requires inline function in route handler. Each method returns new type reference. Separate function loses type. For MVC pattern, destructure properties from inline function to prevent unnecessary type inference. Example: pass body to Controller.greet(body) avoiding separate controller typing.\nQuestions: Why use inline functions? How does destructuring help? What is MVC pattern?"
+    }
+  ]
+}

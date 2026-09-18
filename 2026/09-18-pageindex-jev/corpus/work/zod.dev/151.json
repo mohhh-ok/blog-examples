@@ -1,0 +1,25 @@
+{
+  "page": "Customizing validation error messages in Zod across multiple levels. Error instances, issue arrays with structured metadata, and customization methods. ZodError class with .issues array. Error precedence from check-level to global/locale level. Internationalization with 50+ locales.\n- ZodError class (z.core.$ZodError for Zod Mini, ZodError subclass for Zod)\n- .issues array with human-readable messages and structured metadata\n- Issue properties: code, message, path, expected, input\n- Error param on all z functions and schema methods\n- Params object with error parameter\n- Error maps as functions receiving issue context object\n- Issue properties: code, input, inst, schema, path, and API-specific properties\n- Per-parse error customization via parse method\n- Global error customization with z.config({customError})\n- Error precedence from highest to lowest\n- Internationalization with locales module\n- Available locales: 50+ languages from ar to yo\n- Locale loading with dynamic imports\n- z.locales export for tree-shaking\n- Custom translation functions\n- reportInput flag to include input data in issues\n- How do I customize error messages?\n- What is error precedence in Zod?\n- How do I support multiple languages?\n- What issue codes are available?\n- Can I translate errors at render time?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Error parameter for customizing messages on any Zod API. z.string('Not a string!') passes custom error as first argument. Params object form: z.string({error: 'Not a string!'}). Error function (error map) receives issue context and can customize based on code, input, schema. Advanced issue object properties via iss parameter. Return undefined to defer to next precedence level. Too_big error code example with type checking."
+    },
+    {
+      "index": 1,
+      "manifest": "Per-parse error customization passing error map into parse method: schema.parse(input, {error: fn}). Lower precedence than schema-level custom messages. Issue object as discriminated union of all possible types. Code property for discrimination. Include input in issues with reportInput: true flag."
+    },
+    {
+      "index": 2,
+      "manifest": "Global error customization with z.config({customError: (iss) => ...}). Lower precedence than schema-level or per-parse. Issue object as discriminated union with code property for type discrimination."
+    },
+    {
+      "index": 3,
+      "manifest": "Internationalization support with 50+ built-in locales from zod/locales. Regular zod loads en locale automatically; Zod Mini requires explicit config. Import from zod/locales or z.locales export. Dynamic imports for lazy loading. Lazy load with z.config(locale()). Tree-shaking considerations: avoid 'import z from zod' with esbuild. Render-time translation with t(code, iss). Available locales: ar, az, be, bg, bn, ca, ckb, cs, da, de, el, en, eo, es, fa, fi, fr, frCA, gu, he, hi, hr, hu, hy, id, is, it, ja, ka, km, kn, ko, lt, mk, ms, ne, nl, nn, no, ota, ps, pl, pt, ptBR, ro, ru, sk, sl, sv, ta, tg, th, tk, tr, uk, ur, uz, vi, zhCN, zhTW, yo."
+    },
+    {
+      "index": 4,
+      "manifest": "Error precedence from highest to lowest. Check-level error (on individual check like z.string().min(5, 'Too short!')). Schema-level error (hard-coded on schema definition, fallback for checks without error). Per-parse error (custom map in .parse method). Global error map (z.config customError). Locale error map (z.config with locale)."
+    }
+  ]
+}

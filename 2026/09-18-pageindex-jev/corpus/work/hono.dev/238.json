@@ -1,0 +1,21 @@
+{
+  "page": "- Timeout Middleware: manages request timeouts, letting you set a maximum duration for requests and optionally a custom error response when exceeded\n- Import: `import { Hono } from 'hono'`, `import { timeout } from 'hono/timeout'`\n- Usage: `app.use('/api', timeout(5000))` applies a 5-second timeout; duration is specified in milliseconds\n- Custom exception: pass a factory function or an `HTTPException` instance as the second argument, e.g. `timeout(60000, customTimeoutException)` where `customTimeoutException` returns `new HTTPException(408, { message: ... })`\n- Cannot be used with streaming responses; use `stream.close()` with `setTimeout` instead for SSE (`streamSSE`)\n- Middleware order matters, especially with error-handling or other timing-related middleware\n- Questions answered: How do I set a request timeout in Hono? How do I return a custom error when a request times out? Can I use the Timeout Middleware with streaming responses? How do I timeout an SSE stream in Hono? What unit is the timeout duration in?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- Import statements for Timeout Middleware\n- `import { Hono } from 'hono'`\n- `import { timeout } from 'hono/timeout'`\n- Answers: How do I import the Timeout Middleware?"
+    },
+    {
+      "index": 1,
+      "manifest": "- Default settings: `app.use('/api', timeout(5000))` applies a 5-second (5000ms) timeout to `/api` routes\n- Custom settings: import `HTTPException` from `hono/http-exception`; define `customTimeoutException = (context) => new HTTPException(408, { message: ... })` using `context.req.headers.get('Duration')` in the message\n- A static exception message alternative is shown commented out: `new HTTPException(408, { message: 'Operation timed out. Please try again later.' })`\n- Apply with `app.use('/api/long-process', timeout(60000, customTimeoutException))` for a 1-minute timeout\n- Answers: How do I apply a default timeout to a route? How do I customize the timeout error response and status code? How do I access request headers inside a custom timeout exception factory?"
+    },
+    {
+      "index": 2,
+      "manifest": "- Duration is specified in milliseconds; the middleware rejects the promise and may throw an error when the duration is exceeded\n- Timeout middleware cannot be used with streaming responses (e.g. SSE)\n- For streaming, use `stream.close()` combined with `setTimeout` instead, plus `stream.onAbort()` to clean up the timer on client disconnect\n- Example shows `streamSSE(c, async (stream) => {...})` with a 3000ms `setTimeout` calling `stream.close()`, and `stream.onAbort()` clearing the timer and stopping the loop\n- Answers: Why can't I use the Timeout Middleware with SSE? How do I implement a timeout for a Server-Sent Events stream? How do I clean up a timer when a client disconnects from a stream?"
+    },
+    {
+      "index": 3,
+      "manifest": "- Warns to be cautious about middleware ordering, especially with error-handling or other timing-related middleware, since it may affect the Timeout Middleware's behavior\n- Answers: Does middleware order affect the Timeout Middleware? What should I watch out for when combining Timeout Middleware with other middleware?"
+    }
+  ]
+}

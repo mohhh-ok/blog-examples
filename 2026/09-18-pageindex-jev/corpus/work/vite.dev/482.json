@@ -1,0 +1,13 @@
+{
+  "page": "Vite 6 APIs migration ViteDevServer to DevEnvironment instances for module graph/transforms. Affected scope: Vite plugin authors. Future deprecation: Environment introduced v6.0, deprecation server.moduleGraph/methods planned future major, not recommend moving yet, identify usage: future.removeServerModuleGraph, future.removeServerReloadModule, future.removeServerPluginContainer, future.removeServerHot, future.removeServerTransformRequest, future.removeServerWarmupRequest set 'warn'. Motivation: Vite v5 single dev server two environments (client, ssr). server.moduleGraph mixed modules both. clientImportedModules/ssrImportedModules lists, single importers per node. Transformed module: id + ssr boolean. Boolean passed APIs: server.moduleGraph.getModuleByUrl(url, ssr), server.transformRequest(url, {ssr}). Vite v6: any number custom environments (client, ssr, edge, etc). Single ssr boolean insufficient. Instead changing APIs server.transformRequest(url, {environment}), methods moved environment instance callable without dev server. Migration guide: server.moduleGraph → environment.moduleGraph (separate module graphs), server.reloadModule(module) → environment.reloadModule(module), server.pluginContainer → environment.pluginContainer, server.transformRequest(url, ssr) → environment.transformRequest(url), server.warmupRequest(url, ssr) → environment.warmupRequest(url), server.hot → server.client.environment.hot. Related: Separate Module Graphs.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Motivation: Vite v5 single dev server two environments (client, ssr). server.moduleGraph mixed modules clientImportedModules/ssrImportedModules lists, single importers. Transformed: id + ssr boolean passed APIs: server.moduleGraph.getModuleByUrl(url, ssr), server.transformRequest(url, {ssr}). Vite v6: any number environments (client, ssr, edge, etc), single boolean insufficient. Instead server.transformRequest(url, {environment}), methods moved environment instance callable without dev server."
+    },
+    {
+      "index": 1,
+      "manifest": "Migration guide: server.moduleGraph → environment.moduleGraph (separate module graphs), server.reloadModule(module) → environment.reloadModule(module), server.pluginContainer → environment.pluginContainer, server.transformRequest(url, ssr) → environment.transformRequest(url), server.warmupRequest(url, ssr) → environment.warmupRequest(url), server.hot → server.client.environment.hot. Related: Separate Module Graphs."
+    }
+  ]
+}

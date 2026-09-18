@@ -1,0 +1,77 @@
+{
+  "page": "Context object: instantiated per request, lifetime until response returned. Access HonoRequest (c.req) and Response (c.res). Set HTTP status (default 200), headers, response body. Methods: status(), header(), body(), text(), json(), html(), notFound(), redirect(). Store arbitrary key-value pairs (c.set/c.get) per request. Access Cloudflare Workers ExecutionContext, FetchEvent (Service Worker), environment bindings. Error handling with c.error. Render responses with custom layout via c.render/c.setRenderer. Support ContextVariableMap for global type definitions.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "req: HonoRequest instance providing access to request data and methods. See HonoRequest API documentation."
+    },
+    {
+      "index": 1,
+      "manifest": "status(): set HTTP status code. Default 200 if not specified. Example: c.status(201) for created response."
+    },
+    {
+      "index": 2,
+      "manifest": "header(): set response HTTP headers. Multiple header() calls set individual headers."
+    },
+    {
+      "index": 3,
+      "manifest": "body(): return HTTP response body. Recommend c.text() or c.html() for text/HTML. Can set Content-Type header. Accepts body, status code, header object parameters."
+    },
+    {
+      "index": 4,
+      "manifest": "text(): render text response with Content-Type: text/plain."
+    },
+    {
+      "index": 5,
+      "manifest": "json(): render JSON response with Content-Type: application/json. Pass object as parameter."
+    },
+    {
+      "index": 6,
+      "manifest": "html(): render HTML response with Content-Type: text/html. Pass HTML string as parameter."
+    },
+    {
+      "index": 7,
+      "manifest": "notFound(): return 404 Not Found response. Customizable with app.notFound()."
+    },
+    {
+      "index": 8,
+      "manifest": "redirect(): redirect to specified path. Default status 302, can specify status code (e.g., 301 permanent)."
+    },
+    {
+      "index": 9,
+      "manifest": "res: access Response object that will be returned. Append headers with c.res.headers.append()."
+    },
+    {
+      "index": 10,
+      "manifest": "set() / get(): store and retrieve arbitrary key-value pairs with request lifetime. Enable passing values between middleware and handlers. Types defined in Hono generic: type Variables { key: type }. Values retained only within same request, cannot persist across requests."
+    },
+    {
+      "index": 11,
+      "manifest": "var: access variable values with c.var.name instead of c.get(). Create middleware providing custom methods. Use createMiddleware with Env type. Pass Env generics to Hono constructor for type safety."
+    },
+    {
+      "index": 12,
+      "manifest": "render() / setRenderer(): set layout for responses. Use c.setRenderer() in middleware with custom renderer function. c.render() creates responses within layout. Supports custom arguments with ContextRenderer module augmentation. Example: page layout with header, title, content."
+    },
+    {
+      "index": 13,
+      "manifest": "executionCtx: access Cloudflare Workers ExecutionContext. Use c.executionCtx.waitUntil() for background tasks. Module augmentation for exports field with Cloudflare.Exports type."
+    },
+    {
+      "index": 14,
+      "manifest": "event: access Cloudflare Workers FetchEvent. Used in Service Worker syntax (deprecated). Call c.event.waitUntil() for background operations. Not recommended for new code."
+    },
+    {
+      "index": 15,
+      "manifest": "env: access Cloudflare Workers bindings (variables, secrets, KV namespaces, D1 database, R2 bucket). Define Bindings type with keys. Access as c.env.BINDING_KEY. Always available as global variables."
+    },
+    {
+      "index": 16,
+      "manifest": "error: access error object if Handler throws. Check c.error in middleware after next(). Used for error handling in app.onError."
+    },
+    {
+      "index": 17,
+      "manifest": "ContextVariableMap: augment interface to define context variables globally. Types applied globally regardless of middleware registration. Warning: can hide undefined bugs if variable not guaranteed in all handlers. Use Env's Variables generic for safe per-handler typing instead."
+    }
+  ]
+}

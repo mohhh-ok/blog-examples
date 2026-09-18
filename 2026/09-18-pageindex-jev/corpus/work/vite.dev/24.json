@@ -1,0 +1,69 @@
+{
+  "page": "Vite Features: dev server enhancements over native ESM and build optimizations. npm dependency resolving and pre-bundling: detects bare module imports, pre-bundles for speed (Rolldown), converts CommonJS/UMD to ESM, rewrites imports to valid URLs (/node_modules/.vite/deps/my-dep.js?v=hash). Smart import analysis for named imports from CommonJS. Dependencies strongly cached via HTTP headers (max-age=31536000,immutable). Hot Module Replacement API over native ESM with first-party Vue/React integrations. TypeScript: .ts imports out-of-box, transpilation-only (no type checking, assume IDE/build process handles), Oxc Transformer faster than tsc, HMR <50ms. CSS: @import inlining + rebasing via postcss-import, PostCSS auto-applied, CSS Modules (.module.css), pre-processors (scss, sass, less, styl, stylus). Static assets: imports return resolved public URL, various query parameters (?url, ?raw, ?worker, ?inline). JSON: direct imports + named exports. Glob imports: import.meta.glob() with lazy-loading, eager option, negative patterns, named imports. Dynamic imports with variables. WebAssembly: ESM direct import + async, ?init query for control. Web Workers: new Worker() constructor (recommended), ?worker/?sharedworker suffixes. CSP nonce support via html.cspNonce. License generation: build.license option, .vite/license.md file. Build optimizations: CSS code splitting, preload directives, async chunk loading, chunk import map.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "npm dependency resolving + pre-bundling: bare module imports not supported natively (e.g., import { someMethod } from 'my-dep'). Vite detects bare imports in source files. Pre-bundles via Rolldown (cold start faster than JS bundlers). Converts CommonJS/UMD to ESM. Rewrites imports to valid URLs like /node_modules/.vite/deps/my-dep.js?v=f3sf2ebd. Dependencies strongly cached: HTTP headers, max-age=31536000,immutable. Local edit/debug dependency: disable browser cache, restart server --force, reload page. When does Vite pre-bundle? How to handle bare imports? What's difference between CommonJS/UMD/ESM?"
+    },
+    {
+      "index": 1,
+      "manifest": "HMR (Hot Module Replacement): API over native ESM. Frameworks with HMR support leverage API for instant precise updates without page reload or state loss. First-party integrations: Vue Single File Components (@vitejs/plugin-vue), React Fast Refresh (@vitejs/plugin-react). Official Preact integration: @prefresh/vite. Auto-configured in create-vite templates. What framework uses HMR? How HMR preserves state? Can custom plugins use HMR?"
+    },
+    {
+      "index": 2,
+      "manifest": "TypeScript support: .ts file imports out-of-box. Transpile-only (no type checking during transform). Assumes IDE/build process handles type checking. Oxc Transformer used for transpilation (faster than vanilla tsc). HMR updates reflect in browser <50ms. Type-only imports/exports syntax recommended to avoid bundling issues. tsconfig.json respected: isolatedModules (must be true with Oxc), useDefineForClassFields, target (ignored, use oxc.target dev or build.target prod), emitDecoratorMetadata (partial support), paths (with resolve.tsconfigPaths: true), extends, importsNotUsedAsValues, preserveValueImports, verbatimModuleSyntax, jsx options, experimentalDecorators. Client types via vite/client in compilerOptions.types. Triple-slash directives alternative. vite/client type shims: asset imports, import.meta.env constants, import.meta.hot HMR API. Type override example for SVG React components."
+    },
+    {
+      "index": 3,
+      "manifest": "HTML files: front-and-center entry points for single/multi-page apps. File access: <root>/index.html -> http://localhost:5173/, <root>/about.html -> http://localhost:5173/about.html, <root>/blog/index.html -> http://localhost:5173/blog/index.html. Asset processing: HTML elements with asset attributes processed/bundled. Supported elements: audio, embed, img/srcset, image href/xlink:href, input, link href/imagesrcset, object data, script type=module src, source src/srcset, track, use href/xlink:href, video src/poster, meta content (msapplication-* and og: properties). vite-ignore attribute opts-out HTML processing. External asset/CDN references supported with vite-ignore."
+    },
+    {
+      "index": 4,
+      "manifest": "Framework support: all modern frameworks maintain Vite integrations. Official plugins (Vite org maintained): @vitejs/plugin-vue, @vitejs/plugin-vue-jsx, @vitejs/plugin-react, @vitejs/plugin-react-swc, @vitejs/plugin-rsc (React Server Components). Framework teams maintain other plugins. Plugins Guide reference. Polished framework integrations available."
+    },
+    {
+      "index": 5,
+      "manifest": "JSX support: .jsx, .tsx files out-of-box. Oxc Transformer handles transpilation. Framework plugin configuration: Vue use @vitejs/plugin-vue-jsx for Vue 3 features (HMR, global components, directives, slots). Custom framework jsx: oxc option (jsxFactory, jsxFragment) configurable. Preact example with importSource: 'preact'. jsxInject option injects JSX helpers without manual imports. Oxc Transformer JSX documentation details."
+    },
+    {
+      "index": 6,
+      "manifest": "CSS support: .css imports inject content via <style> tag with HMR. @import inlining + rebasing via postcss-import. Vite aliases respected for CSS @import. URL rebasing automatic even across directories. PostCSS: auto-applied if valid config present (postcss-load-config formats). CSS minification after PostCSS using build.cssTarget. CSS Modules: .module.css files, return module object with class names. localsConvention camelCase (e.g., apply-color -> applyColor) enables named imports. Pre-processors (.scss, .sass, .less, .styl, .stylus): built-in support requires pre-processor installation. Vite improves @import resolving (aliases respected). URL rebasing in different-directory imports automatic. Stylus @import/URL limitations noted. CSS modules + pre-processors via .module.scss. ?inline query disables CSS injection (returns string). Lightning CSS minification default (experimental full processing option). CSS transformer option configuration via css.transformer and css.lightningcss."
+    },
+    {
+      "index": 7,
+      "manifest": "Static assets: imports return resolved public URL when served. Development: /src/img.png. Production: /assets/img.2d8efhg.png (hashed). Behavior similar webpack file-loader. Difference: absolute/relative paths supported. CSS url() handled same way. Vue SFC template asset refs auto-converted to imports. Common filetypes auto-detected as assets (image, media, font). assetsInclude option extends list. Assets included in build graph, get hashed filenames, processed by plugins for optimization. Smaller than assetsInlineLimit inlined as base64 data URLs. Git LFS placeholders excluded from inlining. TypeScript needs vite/client include for static asset import recognition."
+    },
+    {
+      "index": 8,
+      "manifest": "JSON imports: direct .json file imports supported. Named imports also supported for tree-shaking. Import entire object: import json from './example.json'. Import root field as named: import { field } from './example.json'. Tree-shaking benefits when possible."
+    },
+    {
+      "index": 9,
+      "manifest": "Glob import: import.meta.glob(pattern) special function imports multiple modules. Transformed to object with module functions. Iterate keys to access modules. Default lazy-loading via dynamic import, split into chunks. eager: true option imports all directly (no chunking, tree-shaking possible). Multiple patterns via array argument. Negative patterns (prefixed !) exclude files. Named imports: import option extracts specific export (setup, default). Custom queries: query option adds params. base option provides base path. caseSensitive option (false for case-insensitive). Caveats: Vite-only feature (not web/ES standard), patterns must be literal (./relative, /absolute, alias), tinyglobby used for matching, arguments passed as literals (no variables/expressions)."
+    },
+    {
+      "index": 10,
+      "manifest": "Dynamic imports: variables supported via template literals (import(`./dir/${file}.js`)). Variables represent single file level. Multi-level paths fail. Bundling rules enforced: must start ./ or ../ or #, must end file extension, own-directory must specify pattern. Rules prevent accidental non-intended bundling. When bundled dynamic imports work? What bundling rules apply?"
+    },
+    {
+      "index": 11,
+      "manifest": "WebAssembly: two import modes. ESM integration: direct .wasm import (module exports/imports read, instantiated, re-exposed as ES exports). Async module requiring top-level await. Imports resolved from JS (module names as specifiers relative to .wasm). WebAssembly/ES Module Integration proposal. Manual initialization via ?init query: default export initialization function returning Promise<WebAssembly.Instance>. importObject parameter passed to WebAssembly.instantiate(). TypeScript support: allowArbitraryExtensions + {filename}.d.wasm.ts declaration file. <assetsInlineLimit smaller inlined as base64, larger treated as static asset."
+    },
+    {
+      "index": 12,
+      "manifest": "Web Workers: import via new Worker() constructor (recommended, modern standards). new URL('./worker.js', import.meta.url) constructor required directly in new Worker() for detection. Worker options supported (type: 'module' for module workers). Static values enforced for options. Query suffix import: ?worker or ?sharedworker appended creates custom worker constructor. Default export = worker constructor. ESM imports in worker supported dev (browser native) and build (compiled). ?worker&inline inlines as base64. ?worker&url retrieves as URL. Worker Options documentation."
+    },
+    {
+      "index": 13,
+      "manifest": "CSP (Content Security Policy) deployment: certain directives/configs required for Vite internals. nonce-{RANDOM}: html.cspNonce sets nonce on <script>, <style>, <link> tags for stylesheets/module preloading. Meta tag inject (<meta property='csp-nonce' nonce='PLACEHOLDER' />). Meta tag nonce value used by Vite when necessary during dev/after build. Ensure unique per-request to prevent policy bypass. data: scheme: small assets inline as data URIs by default (build). Directive allowance needed (img-src, font-src, etc) or disable via build.assetsInlineLimit: 0. Warning: data: not allowed for script-src (injection vulnerability)."
+    },
+    {
+      "index": 14,
+      "manifest": "License file generation: build.license option generates dependency licenses. Output file: .vite/license.md with dependency list including version/license type (CC0-1.0, MIT, etc). License content included. Custom output path via fileName option. Hosts to display/acknowledge dependencies. build.license documentation reference."
+    },
+    {
+      "index": 15,
+      "manifest": "Build optimizations (auto-applied except experimental chunk import map): CSS code splitting—async chunks extract used CSS into separate files. Link tag auto-loaded when async chunk loaded. CSS guaranteed loaded before evaluation avoiding FOUC. Disable via build.cssCodeSplit: false. Preload directives—auto-generated <link rel='modulepreload'> for entry chunks and direct imports. Async chunk loading—Rollup generates shared common chunks. Combined with dynamic imports creates N+1 round trips (non-optimized). Vite rewrites dynamic imports with preload fetching C in parallel (optimized). Traces all direct imports eliminating multiple roundtrips. Chunk import map (experimental)—import map creates chunk ID mappings avoiding cascading cache invalidation. CSS/assets not currently covered. Enable build.chunkImportMap: true."
+    }
+  ]
+}

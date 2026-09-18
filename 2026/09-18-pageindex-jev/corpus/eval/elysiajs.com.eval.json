@@ -1,0 +1,74 @@
+[
+  {
+    "id": "287",
+    "path": ["elysiajs.com", "Handler&#x20;", "Server Sent Events (SSE)"],
+    "question": "What response header does Elysia automatically set when a handler's yielded value is wrapped in `sse`?",
+    "answer": "`text/event-stream`"
+  },
+  {
+    "id": "798",
+    "path": ["elysiajs.com", "WebSocket", "ws"],
+    "question": "What is the type signature of Elysia's `.ws()` method?",
+    "answer": "`.ws(endpoint: path, options: Partial<WebSocketHandler<Context>>): this`"
+  },
+  {
+    "id": "505",
+    "path": ["elysiajs.com", "OpenAPI&#x20;", "Models"],
+    "question": "What two fields does the `User` model define in Elysia's reference-model OpenAPI example?",
+    "answer": "`id: t.Number()` and `username: t.String()`"
+  },
+  {
+    "id": "159",
+    "path": ["elysiajs.com", "Eden Fetch", "Error Handling"],
+    "question": "In the Eden Fetch example, what does the successful response body look like when posting to `/mirror`?",
+    "answer": "`{ id: 1895, name: 'Skadi' }`"
+  },
+  {
+    "id": "310",
+    "path": ["elysiajs.com", "Integration with AI SDK", "Server-Sent Events"],
+    "question": "Which AI SDK stream method produces a UI Message Stream that Elysia's `sse` function can also wrap?",
+    "answer": "`stream.toUIMessageStream()`"
+  },
+  {
+    "id": "733",
+    "path": ["elysiajs.com", "TypeBox (Elysia.t)", "Boolean to BooleanString"],
+    "question": "Is a `t.Boolean` field inside `body` converted to `t.BooleanString` in Elysia's TypeBox coercion?",
+    "answer": "No — only `params` fields are converted; a `t.Boolean` in `body` is NOT converted to `t.BooleanString`."
+  },
+  {
+    "id": "488",
+    "path": ["elysiajs.com", "OpenAPI", "Type Gen", "Browser Environment"],
+    "question": "Which Node module does Elysia's OpenAPI Type Gen feature require that makes it unavailable in the web playground?",
+    "answer": "The `fs` module"
+  },
+  {
+    "id": "784",
+    "path": ["elysiajs.com", "Validation&#x20;", "Reference Model", "Naming Convention"],
+    "question": "What happens in Elysia if two registered models share the same name?",
+    "answer": "Elysia will throw an error for the duplicate model name."
+  },
+  {
+    "id": "705",
+    "path": ["elysiajs.com", "TypeBox (Elysia.t)", "Primitive Type"],
+    "question": "Where does a request go in Elysia if an incoming body's shape doesn't match its declared `t.String()` schema?",
+    "answer": "It throws an error into the Error Life Cycle (on-error)."
+  },
+  {
+    "id": "113",
+    "path": ["elysiajs.com", "Cookie", "Assignment"],
+    "question": "In the Elysia cookie counter example, what line marks the `visit` cookie as HTTP-only?",
+    "answer": "`visit.httpOnly = true`"
+  },
+  {
+    "id": "487",
+    "path": ["elysiajs.com", "OpenAPI", "Type Gen"],
+    "question": "Which plugin must be applied via `references` before the `openapi` plugin to enable OpenAPI Type Gen?",
+    "answer": "`fromTypes` (used as `references: fromTypes()`)"
+  },
+  {
+    "id": "30",
+    "path": ["elysiajs.com", "Best Practice", "Model", "✅ Do: Use Elysia's validation system"],
+    "question": "What utility type does Elysia provide to extract a TypeScript type from a validation model, as shown in the Best Practice guide?",
+    "answer": "`UnwrapSchema`, e.g. `UnwrapSchema<typeof models.customBody>`"
+  }
+]

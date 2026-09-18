@@ -1,0 +1,21 @@
+{
+  "page": "Benchmarks comparing Hono router performance against other JavaScript frameworks. Routers benchmarked: @medley/router, find-my-way, koa-tree-router, trek-router, express, koa-router. Test routes include static paths, dynamic paths, nested paths, wildcard routes. Requests sent to various endpoint types. Results on Node.js and Bun show performance metrics. Hono fastest on Cloudflare Workers (402,820 ops/sec), Deno (136,112 requests/sec, version 3.0.0), and competitive on Bun.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Router benchmarks: test methods GET/POST on 12 routes including /user, /user/:id, /status, /static/*, nested paths. Tested routers: @medley/router, find-my-way (used in Fastify), koa-tree-router, trek-router, express, koa-router. Machine: Apple MacBook Pro M1 Pro 32GB. Results shown as screenshots on Node.js (8 images) and Bun (8 images)."
+    },
+    {
+      "index": 1,
+      "manifest": "Cloudflare Workers: Hono fastest at 402,820 ops/sec ±4.78% (80 runs). Compared to itty-router 212,598, sunder 297,036, worktop 197,345 ops/sec. Machine: Apple MacBook Pro M1 Pro 32GB. Scripts in benchmarks/handle-event repository."
+    },
+    {
+      "index": 2,
+      "manifest": "Deno framework benchmarks: Hono fastest at 136,112 requests/sec, version 3.0.0. Compared to Fast 4.0.0-beta.1 (103,214), Megalo 0.3.0 (64,597), Faster 5.7 (54,801), oak 10.5.1 (43,326), opine 2.2.0 (30,700) requests/sec. Machine: MacBook Pro M1 Pro 32GB, Deno v1.22.0. Method: bombardier --fasthttp -d 10s -c 100. See denosaurs/bench for alternative results."
+    },
+    {
+      "index": 3,
+      "manifest": "Bun framework benchmarks: Hono one of fastest. Reference: SaltyAom/bun-http-framework-benchmark."
+    }
+  ]
+}

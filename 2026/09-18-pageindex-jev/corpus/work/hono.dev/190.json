@@ -1,0 +1,25 @@
+{
+  "page": "- Logger Middleware for Hono: built-in request/response logging\n- Import: `import { Hono } from 'hono'`, `import { logger } from 'hono/logger'`\n- Usage: `app.use(logger())` registers the middleware for all routes\n- Logs incoming request (HTTP method, path) and outgoing response (method, path, status code, elapsed time)\n- Status codes are color-coded by category for quick visual identification\n- Elapsed time shown in human-readable ms or s\n- `NO_COLOR` environment variable disables status code coloring (see no-color.org)\n- Cloudflare Workers have no `process.env`, so logs default to plaintext (no coloring)\n- Custom `PrintFunc` function can be passed to `logger()` to customize log output and add extra logs\n- Questions answered: How do I log requests/responses in Hono? How do I disable colored log output? Why are my Cloudflare Workers logs not colored? How do I add a custom logger format? What does the Logger Middleware log for each request?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- Shows required imports for Logger Middleware\n- `import { Hono } from 'hono'`\n- `import { logger } from 'hono/logger'`\n- Answers: How do I import the Logger Middleware in Hono?"
+    },
+    {
+      "index": 1,
+      "manifest": "- Basic usage example of Logger Middleware\n- `const app = new Hono()`\n- `app.use(logger())` registers the logger for all routes\n- `app.get('/', (c) => c.text('Hello Hono!'))` example route\n- Answers: How do I enable the Logger Middleware? What does a minimal Logger Middleware setup look like?"
+    },
+    {
+      "index": 2,
+      "manifest": "- Describes what the Logger Middleware logs for each request\n- Incoming Request: logs HTTP method, request path, and the incoming request\n- Outgoing Response: logs HTTP method, request path, response status code, and request/response times\n- Status Code Coloring: response status codes are color-coded by category for visibility\n- Elapsed Time: request/response cycle time logged in a human-readable format (ms or s)\n- Helps monitor request/response flow and identify issues or performance bottlenecks\n- Can be extended via a custom `PrintFunc` function\n- Tip: set the `NO_COLOR` environment variable to disable status code coloring (see https://no-color.org/)\n- Cloudflare Workers do not have a `process.env` object, so logging defaults to plaintext output there\n- Answers: What information does the Logger Middleware log? How are status codes displayed? How is elapsed time formatted? How do I disable log coloring? Why isn't coloring working on Cloudflare Workers?"
+    },
+    {
+      "index": 3,
+      "manifest": "- Introduces the optional `PrintFunc` parameter for Logger Middleware\n- Accepts a custom function to customize logger output and add additional logs\n- Answers: Can I customize the Logger Middleware output? What is PrintFunc used for?"
+    },
+    {
+      "index": 4,
+      "manifest": "- Documents the `fn` option: optional `PrintFunc(str: string, ...rest: string[])`\n- `str`: the message passed by the logger\n- `...rest`: additional string props printed to console\n- Example: define `customLogger = (message, ...rest) => console.log(message, ...rest)` and pass it via `app.use(logger(customLogger))`\n- Example shows calling `customLogger('Blog saved:', ...)` inside a route handler (`app.post('/blog', ...)`) to add custom log lines\n- Sample output format shown: `<-- POST /blog`, `Blog saved: Path: /blog/example, ID: 1`, `--> POST /blog 201 93ms`\n- Answers: How do I write a custom PrintFunc? What parameters does PrintFunc receive? How do I add extra log lines inside a route handler?"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "page": "Deno integration for running Elysia. Built on Web Standard Request/Response, allowing cross-runtime compatibility. Wrap Elysia.fetch in Deno.serve. Syntax: `Deno.serve(app.fetch)`. Run with: deno serve --watch src/index.ts. Minimal setup required for Deno support.\nQuestions: How do you run Elysia on Deno? What Web Standard APIs are used? How do you start the dev server?",
+  "sections": []
+}

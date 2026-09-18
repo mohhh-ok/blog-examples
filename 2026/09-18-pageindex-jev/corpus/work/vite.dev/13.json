@@ -1,0 +1,25 @@
+{
+  "page": "Vite project philosophy: lean, extendable core prioritizing maintainability long-term. Strong primitives and plugin APIs enable diverse use cases. Vite plugin system based on Rollup plugin API superset. Extensible core supports diverse needs via well-maintained plugins (vite-plugin-pwa, registry.vite.dev/plugins). Bundler Rolldown maintains Rollup plugin interface compatibility. Modern web approach: ESM-only source code, web worker modern syntax (new Worker), no Node.js modules in browser. Performance-focused: Oxc toolchain + Rolldown for intensive tasks, JS for flexibility/speed balance. Framework-agnostic core with polished plugins per framework (Vue, React, etc). Support for SSR primitives and framework integration. Backend framework pairing (Ruby Vite, Laravel). Active ecosystem: vite-ecosystem-ci tests major projects on PRs, minimizes regressions, coordinates framework/plugin maintainers, users, Vite team. How should Vite extend while staying lean? What plugins solve common needs? Why framework-agnostic? How does ecosystem testing work? Why Rolldown unifies toolchain?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Lean Extendable Core philosophy: Vite core stays maintainable long-term. Support common patterns out-of-box via strong primitives. Plugin system core responsibility: Rollup plugin API superset enables extensibility. Well-maintained plugins cover diverse needs. Example: vite-plugin-pwa. Plugin registry: registry.vite.dev/plugins. Rolldown (bundler) maintains Rollup plugin interface for cross-tool compatibility. Plugins usable in Vite and plain Rollup projects."
+    },
+    {
+      "index": 1,
+      "manifest": "Pushing modern web: opinionated features encourage modern code patterns. ESM-only source code requirement. Dependencies pre-bundled as ESM (non-ESM deps converted). Modern worker syntax: new Worker constructor follows standards. No Node.js modules in browser environment. Future-proof API creation via modern patterns. May not always be compatible with other build tools. When adding features, modern patterns prioritized."
+    },
+    {
+      "index": 2,
+      "manifest": "Pragmatic performance approach: dev server architecture maintains HMR speed as projects scale. Native tools: Oxc toolchain (parsing, transforming, minifying), Rolldown bundler (intensive tasks in Rust). Rest of code in JavaScript: balance speed with flexibility. Framework plugins tap Babel when needed for user code compilation. Rolldown Rollup plugin compatibility provides wide plugin ecosystem access."
+    },
+    {
+      "index": 3,
+      "manifest": "Building frameworks on Vite: Vite core framework-agnostic. Polished UI framework plugins. JavaScript API for framework authors. SSR primitives support (higher-level tools foundation). Plugin sharing between frameworks. Backend framework integration (Ruby, Laravel). Tailored framework experiences built on Vite."
+    },
+    {
+      "index": 4,
+      "manifest": "Active ecosystem: vite-ecosystem-ci tests major ecosystem projects on Vite PRs. Ecosystem health part of release process (not afterthought). Framework/plugin maintainers, users, Vite team cooperation. Minimize regressions per release. Discord community participation. Early adoption validation. Ecosystem CI gives release status regarding ecosystem compatibility. Projects can update to new versions as soon as released. Ecosystem CI catches compatibility issues early."
+    }
+  ]
+}

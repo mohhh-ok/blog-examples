@@ -1,0 +1,33 @@
+{
+  "page": "Environment API for framework authors: three DevEnvironment communication levels for runtime-agnostic code. RunnableDevEnvironment evaluates modules in Vite server process, returns live exports (functions, instances), runner: ModuleRunner with runner.import(url) method, HMR support, replaces server.ssrLoadModule, use isRunnableDevEnvironment() guard. FetchableDevEnvironment uses Fetch API for communication with runtimes like Cloudflare Workers that can't run Vite directly, standardized Request/Response handling via handleRequest method, dispatchFetch(Request) method, isFetchableDevEnvironment() guard, experimental proposal for feedback. Raw DevEnvironment for custom setups: virtual modules, hot.send for communication, support for Node.js APIs. Environments during build: vite build and vite build --ssr build client/ssr only for backward compatibility. builder option (even {}) enables building all environments in single process, ViteBuilder instance, builder.build(environment) programmatic access. builder.buildApp config option: receives ViteBuilder, controls environment build order. buildApp plugin hook (async, sequential, global scope) with pre/post order hooks, environment.isBuilt check. createBuilder() programmatic equivalent of vite build --app, supersedes standalone build() function. Environment agnostic code: context usually provides environment instance (plugin hooks via this.environment). Feedback: GitHub discussions/18191.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "RunnableDevEnvironment evaluates code in same runtime as Vite server, values cross boundary in-process without serialization. ModuleRunner class with import(url: string): Promise<Record<string, any>> method. Accepts file path, server path, or id relative to root. Returns instantiated module with full HMR support. isRunnableDevEnvironment() type guard. Lazy evaluated runner via runner property access - process.setSourceMapsEnabled called or Error.prepareStackTrace overridden for source map support. SSR middleware example: createServer({server: {middlewareMode: true}, appType: 'custom', environments: {server: {}}}), await serverEnvironment.runner.import('/src/entry-server.js'), render(url) function call. transformIndexHtml(url, template) for HTML transforms including HMR client injection. Vite plugin transforms ESM for Node.js without bundling with full HMR. Add import.meta.hot.accept() in server entry for optimal behavior without full module graph invalidation."
+    },
+    {
+      "index": 1,
+      "manifest": "FetchableDevEnvironment uses Fetch API interface for runtime communication. Supports runtimes that can't run Vite directly (Cloudflare Workers). Request/Response objects only communication method. createFetchableDevEnvironment(name, config, {handleRequest(request: Request): Promise<Response>|Response}). isFetchableDevEnvironment() type guard. dispatchFetch(Request): Promise<Response> method. Vite validates Request is global Request instance and Response is global Response class instance, throws TypeError otherwise. Implementation detail class subject to change. Recommended over RunnableDevEnvironment for broad runtime support. dev: {createEnvironment(name, config) {...}} configuration."
+    },
+    {
+      "index": 2,
+      "manifest": "Raw DevEnvironment for custom communication setups. Virtual module approach if code runs in same runtime as user modules and doesn't rely on Node.js APIs - eliminates Vite APIs dependency. createServer({plugins: [{name: 'virtual-module', /* implementation */}]}), ssrEnvironment.runEntrypoint('virtual:entrypoint'). Plugin resolveId('virtual:index-html'), load returning export default JSON.stringify(html), transformIndexHtml for HTML transforms. Node.js APIs: hot.send('request', serialize({req, uniqueId})), import.meta.hot.on('request', handler), ssrEnvironment.on('response', handler), promise-based response waiting with uniqueId matching. Alternative HTTP request communication: fetch(url, {method: 'POST', body: JSON.stringify(data)}), handleInvoke in NormalizedHotChannel for /invoke endpoint, Response.json() return. HMR requires send/connect methods. HTTP example: ModuleRunner with transport: {async invoke(data) {...}}, hmr: false disabling HMR."
+    },
+    {
+      "index": 3,
+      "manifest": "Environments during build in CLI: vite build (client only), vite build --ssr (ssr only) for backward compatibility. builder option enables full app build: vite build --app or builder: {} in config. ViteBuilder instance for build-time environment control. buildApp method builds all configured environments. Environments built in series by default following environments record order. Custom build order via builder.buildApp config option: (builder: ViteBuilder) => Promise<void>, receives ViteBuilder.environments object."
+    },
+    {
+      "index": 4,
+      "manifest": "buildApp plugin hook type: (this: MinimalPluginContextWithoutEnvironment, builder: ViteBuilder) => Promise<void>. Kind: async, sequential. Scope: global. Participate in app build. Config option and plugin hooks order: pre/null order hooks → builder.buildApp config → post order hooks. environment.isBuilt boolean tells if environment already built, avoid building twice. Within hook context."
+    },
+    {
+      "index": 5,
+      "manifest": "createBuilder() programmatic app build trigger. Resolves config, returns ViteBuilder. buildApp() method builds every configured environment. builder.build(environment) single environment build. Supersedes standalone build() function. build() still works as simple client-only/ssr-only legacy entry point but can't build arbitrary environments. createBuilder() equivalent of vite build --app. Import from vite: createBuilder()."
+    },
+    {
+      "index": 6,
+      "manifest": "Environment agnostic code in most cases: current environment instance available in context code being run. Environment exposed in plugin hooks (this.environment PluginContext). Rare to access via server.environments. Plugin hooks have this.environment for accessing environment-specific information. See Environment API for Plugins guide for environment-aware plugin construction."
+    }
+  ]
+}

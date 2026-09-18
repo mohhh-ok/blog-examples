@@ -1,0 +1,74 @@
+[
+  {
+    "id": "8",
+    "path": ["hono.dev", "Hono", "Lightweight"],
+    "question": "What is the size of Express, cited for comparison on Hono's lightweight page?",
+    "answer": "572KB"
+  },
+  {
+    "id": "235",
+    "path": ["hono.dev", "Secure Headers Middleware", "Setting Content-Security-Policy"],
+    "question": "What value is set for `objectSrc` in the Hono `secureHeaders` CSP example?",
+    "answer": "`[\"'none'\"]`"
+  },
+  {
+    "id": "604",
+    "path": ["hono.dev", "Cloudflare Workers", "Deploy from GitHub Actions"],
+    "question": "What name must the GitHub Actions repository secret have for the Cloudflare API token when deploying a Hono app via CI?",
+    "answer": "`CLOUDFLARE_API_TOKEN`"
+  },
+  {
+    "id": "118",
+    "path": ["hono.dev", "IP Restriction Middleware", "Usage"],
+    "question": "Which two addresses go in the `allowList` to allow only local access in the Hono IP Restriction Bun example?",
+    "answer": "`['127.0.0.1', '::1']`"
+  },
+  {
+    "id": "789",
+    "path": ["hono.dev", "Routing", "Routing with hostname"],
+    "question": "In the Hono hostname-routing example, what does the custom `getPath` function do to `req.url`?",
+    "answer": "It strips the protocol (matching https?://) from the URL via a regex replace, keeping only the host and path so routes like `/www1.example.com/hello` can match."
+  },
+  {
+    "id": "304",
+    "path": ["hono.dev", "css Helper", "Security"],
+    "question": "Which characters do Hono's CSS helpers block from breaking out into HTML, even though they act as a raw sink?",
+    "answer": "Quotes, backslashes, and `</`"
+  },
+  {
+    "id": "787",
+    "path": ["hono.dev", "Routing", "Grouping without changing base"],
+    "question": "After `app.route('/', user)` in the Hono grouping example, what HTTP method and path does `user.post('/', ...)` end up handling?",
+    "answer": "POST /user"
+  },
+  {
+    "id": "711",
+    "path": ["hono.dev", "Hono Stacks", "Sharing the Types"],
+    "question": "What two conditions must be met for RPC to correctly infer routes from an exported Hono endpoint type?",
+    "answer": "All included methods must be chained, and the endpoint or app type must be inferred from a declared variable."
+  },
+  {
+    "id": "589",
+    "path": ["hono.dev", "Cloudflare Workers + Vite", "Bindings"],
+    "question": "What script do you run in a Hono + Cloudflare Workers Vite project to generate the `CloudflareBindings` TypeScript interface?",
+    "answer": "`cf-typegen` (e.g. `npm run cf-typegen`)"
+  },
+  {
+    "id": "365",
+    "path": ["hono.dev", "Route Helper", "`routePath()`", "Using with index parameter"],
+    "question": "What does `routePath(c, -1)` return in the Hono `routePath()` index-parameter example for `/api/users/:id`?",
+    "answer": "`/api/users/:id` — the last matched route."
+  },
+  {
+    "id": "389",
+    "path": ["hono.dev", "SSG Helper", "Plugins", "Hook Types"],
+    "question": "What return value causes Hono's SSG `AfterResponseHook` to skip file generation for a route?",
+    "answer": "Returning `false`"
+  },
+  {
+    "id": "92",
+    "path": ["hono.dev", "CORS Middleware", "Usage"],
+    "question": "What `maxAge` value is set in the Hono CORS middleware example for the `/api2/*` route?",
+    "answer": "600"
+  }
+]

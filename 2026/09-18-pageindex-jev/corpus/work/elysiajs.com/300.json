@@ -1,0 +1,17 @@
+{
+  "page": "HTML Plugin for JSX and HTML support. Installation: `bun add @elysia/html`. Automatically adds `Content-Type: text/html; charset=utf8` header. Adds `<!doctype html>` to responses. Converts to Response object. Based on @kitajs/html for JSX-to-string compilation at compile time with high performance.\nQuestions: How do you use the HTML plugin? How does it handle content types? What JSX compilation approach is used?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "JSX support requiring file names ending with 'x': .jsx or .tsx. TypeScript configuration required in tsconfig.json with properties: jsx: 'react', jsxFactory: 'Html.createElement', jsxFragmentFactory: 'Html.Fragment'. Import statement required: `import { Html } from '@elysia/html'` in uppercase. Using JSX as template engine for dynamic HTML generation.\nQuestions: How do you enable JSX? What tsconfig settings are needed? How do you import JSX utilities?"
+    },
+    {
+      "index": 1,
+      "manifest": "XSS prevention using Kita HTML plugin. Dedicated `safe` attribute sanitizes user values against XSS attacks. Large-scale apps should install @kitajs/ts-html-plugin for type-safe XSS detection. TypeScript configuration adds plugin: @kitajs/ts-html-plugin. Compile-time XSS vulnerability detection.\nQuestions: How do you prevent XSS in Elysia HTML? What tools detect XSS vulnerabilities?"
+    },
+    {
+      "index": 2,
+      "manifest": "Plugin options: contentType (default 'text/html; charset=utf8'), autoDetect (default true - auto-detect HTML content), autoDoctype (default true - adds <!doctype html>, use 'full' for non-plugin responses), isHtml (function to detect HTML - default checks length > 7, starts with <, ends with >). Note: no real HTML validation possible, default is best guess.\nQuestions: What options does HTML plugin support? How does it detect HTML? What is autoDoctype?"
+    }
+  ]
+}

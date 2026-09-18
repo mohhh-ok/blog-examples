@@ -1,0 +1,9 @@
+{
+  "page": "Guard feature for applying multiple hooks and schema to routes. Reduces repetition of hooks across multiple routes. Syntax: `.guard({ beforeHandle: [...], afterResponse, schema })`. Applies hooks and schema to every route after guard is called in same instance. Supports combining multiple hook types in single guard block. Method chaining available.\nQuestions: What is the purpose of guard in Elysia? How do you apply multiple hooks to routes? Can you apply schema validation via guard?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Assignment task: using beforeHandle and afterResponse hooks with guard. Implementation example using status method with return value to short-circuit. Status code 401 for authorization failure. Extracting query parameters and logging with console.log.\nQuestions: How do you short-circuit requests with guard hooks? What status code represents unauthorized access?"
+    }
+  ]
+}

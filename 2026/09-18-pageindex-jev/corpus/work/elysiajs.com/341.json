@@ -1,0 +1,4 @@
+{
+  "page": "Netlify Edge Functions integration for Elysia. Runs on Deno, a supported Elysia runtime. Edge Functions require special directory: default <directory>/netlify/edge-functions. Create function at netlify/edge-functions/hello.ts for /hello endpoint. Export config object with path property. Export default Elysia instance. Set prefix on Elysia matching path.\nQuestions: How do you run Elysia on Netlify Edge Functions? What directory structure is required? How do you configure paths?",
+  "sections": []
+}

@@ -1,0 +1,29 @@
+{
+  "page": "Swagger plugin deprecated, use OpenAPI instead. Generates Swagger endpoint for Elysia server. Install @elysia/swagger. Accessing /swagger shows Scalar UI with documentation. /swagger/json for raw OpenAPI spec. Config: provider default 'scalar', scalar customization, swagger customization, excludeStaticFile default true, path default '/swagger', exclude array of paths. Tags for grouping endpoints. Security configuration with Bearer JWT. Deprecation warning recommend OpenAPI plugin.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Config options. Provider default 'scalar' for UI. Scalar config object for customization. Swagger config for OpenAPI v2. ExcludeStaticFile default true. Path default '/swagger'. Exclude paths string/RegExp/array."
+    },
+    {
+      "index": 1,
+      "manifest": "Common patterns documentation."
+    },
+    {
+      "index": 2,
+      "manifest": "Change Swagger endpoint path. path property in config. /v2/swagger custom endpoint."
+    },
+    {
+      "index": 3,
+      "manifest": "Customize Swagger info. Documentation info object with title, version. Swagger configuration customization."
+    },
+    {
+      "index": 4,
+      "manifest": "Tags for endpoint grouping. Tags array in swagger documentation. Detail tags property for route assignment. Group endpoints by tag categories."
+    },
+    {
+      "index": 5,
+      "manifest": "Security configuration. Bearer JWT scheme. SecuritySchemes definition. Prefix detail property security field. All routes under prefix require JWT."
+    }
+  ]
+}

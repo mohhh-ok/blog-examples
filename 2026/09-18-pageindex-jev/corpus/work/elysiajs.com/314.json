@@ -1,0 +1,9 @@
+{
+  "page": "Astro integration for co-located frontend and backend. Set output to 'server' in astro.config.mjs. Create pages/[...slugs].ts file. Import/create Elysia server. Export handler with HTTP method names (GET, POST, etc). Elysia works normally due to WinterTC compliance. Recommend running Astro on Bun for optimal performance. End-to-end type safety with Eden.\nQuestions: How do you run Elysia with Astro? What is WinterTC? Can you use Eden with Astro?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Prefix configuration for non-root Elysia servers. If Elysia server placed in pages/api/[...slugs].ts, annotate prefix as /api on Elysia server via constructor: `new Elysia({ prefix: '/api' })`. Ensures proper routing regardless of placement location.\nQuestions: When do you need to set prefix? How does prefix affect routing?"
+    }
+  ]
+}

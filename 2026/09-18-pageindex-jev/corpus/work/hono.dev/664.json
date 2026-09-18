@@ -1,0 +1,17 @@
+{
+  "page": "Service Worker runtime for Hono: browser background script handler. Runs Hono apps as FetchEvent handler in Service Worker API. Setup with Vite project, creates index.html and main.ts for registration, sw.ts with Hono app. Key identifiers: navigator.serviceWorker.register(), scope, type: 'module', Service Worker adapter handle() function, fire() helper. Runs dev server on port 5173. Platform support: browser environments with Service Worker API.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Project setup with npm/yarn/pnpm/bun. Creates package.json with vite dev script and type: module. Creates tsconfig.json with target ES2020, module ESNext, lib ES2020/DOM/WebWorker. Installs hono and vite dependencies."
+    },
+    {
+      "index": 1,
+      "manifest": "Hello World example: index.html with script module import, main.ts registers Service Worker with scope '/sw' and type: 'module'. sw.ts imports Hono and handle() from hono/service-worker, creates Hono app with basePath('/sw'), registers GET handler, addEventListener('fetch', handle(app)). Alternative using fire() helper from hono/service-worker automatically calls addEventListener."
+    },
+    {
+      "index": 2,
+      "manifest": "Run development server with npm/yarn/pnpm/bun run dev. Dev server runs on port 5173 by default. Access http://localhost:5173/ to complete Service Worker registration, then /sw to see Hono app response."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "page": "Validation schema for data correctness. Schema types: body, query, params, headers, cookie, response. Provides to route handler. Type inference from schema. OpenAPI documentation. Guard applies schema multiple handlers. Override vs standalone schema type. Schema: 'override' default overrides on collision. Schema: 'standalone' both validated. File validation with t.File, t.Files. Multipart/form-data content type. Standard Schema fileType utility magic number validation. Coercion for query parameters. Array query format: nuqs comma delimiter, HTML form multiple. Headers always string lower-case. Cookie with t.Cookie or t.Object. Error provider for custom messages. Error property on schema. onError event handling. ValidationError from elysia/error. Reference model with .model(). How to validate request parts? What schema types? How to handle validation errors?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Schema type validation. Body HTTP message, query URL, params path, headers request, cookie browser. Each with object schema. Type inferred automatically. When schema provided always validate."
+    },
+    {
+      "index": 1,
+      "manifest": "Guard schema multiple handlers. Override default replaces schema. Standalone co-exists separate. Guard parameters: schema, beforeHandle, response. How to use guard?"
+    },
+    {
+      "index": 2,
+      "manifest": "Body HTTP message validation. POST with JSON body. Form-data file uploads. t.Object for properties. Required by default. GET/HEAD body disabled."
+    },
+    {
+      "index": 3,
+      "manifest": "File upload. t.File single file with format, minSize, maxSize. t.Files multiple files array. Multipart form-data automatic. Standard Schema with fileType magic number validation."
+    },
+    {
+      "index": 4,
+      "manifest": "Query string URL parameters. ?key=value format. Coercion for Number to Numeric. Array format: nuqs with comma, HTML multiple with repeated key. How to use query validation?"
+    },
+    {
+      "index": 5,
+      "manifest": "Headers request metadata. Lower-case keys only. AdditionalProperties true by default. Authorization header example."
+    },
+    {
+      "index": 6,
+      "manifest": "Cookie browser data. t.Cookie or t.Object. AdditionalProperties true. Cookie attributes management."
+    },
+    {
+      "index": 7,
+      "manifest": "Response validation. Return value type check. Status-specific responses. Multiple status codes."
+    },
+    {
+      "index": 8,
+      "manifest": "Error messages custom. Error property on schema. Error function for programmatic messages. ValidationError from elysia/error. Validator TypeCheck. Error.all list all errors. VALIDATION code for validation errors."
+    },
+    {
+      "index": 9,
+      "manifest": "Custom error messages. Error string or function. Type parameter errors, type, validation, value. Error called per field only if invalid."
+    },
+    {
+      "index": 10,
+      "manifest": "Reference model .model() method. Named models with auto-completion. Multiple models. Namespace naming convention. Reusable schema definitions."
+    }
+  ]
+}

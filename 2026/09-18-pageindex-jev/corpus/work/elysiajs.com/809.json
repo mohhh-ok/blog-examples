@@ -1,0 +1,29 @@
+{
+  "page": "Tutorial completion congratulations. Ready to build application with Elysia. llms.txt and llms-full.txt files available. Feed to ChatGPT, Claude, Gemini for interactive experience. Community support: GitHub Discussions, Discord, Twitter. Framework migration from Express, Fastify, Hono. Essential chapter foundations recommended. More patterns exploration. Meta Framework integration: Nextjs, Nuxt, Astro. Integration with popular tools. Next steps after tutorial.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "First steps. llms.txt download option. Interactive LLM experience. Community support channels."
+    },
+    {
+      "index": 1,
+      "manifest": "From another framework. Other framework users: Express, Fastify, Hono. Similar experience with differences."
+    },
+    {
+      "index": 2,
+      "manifest": "Essential chapter. Foundation pages recommended. Before other topics."
+    },
+    {
+      "index": 3,
+      "manifest": "More patterns. Additional feature exploration."
+    },
+    {
+      "index": 4,
+      "manifest": "Meta Framework integration. Nextjs, Nuxt, Astro, etc. Meta framework compatibility."
+    },
+    {
+      "index": 5,
+      "manifest": "Integration with tools. Popular tool integrations available."
+    }
+  ]
+}

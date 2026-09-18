@@ -1,0 +1,25 @@
+{
+  "page": "Routers are most important Hono features. Five routers available: RegExpRouter (fastest using single large regexp), TrieRouter (Trie tree algorithm), SmartRouter (selects best router automatically), LinearRouter (optimized for one-shot, faster registration), PatternRouter (smallest under 15KB). Default SmartRouter uses RegExpRouter+TrieRouter combination. Selection depends on platform and use case.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "RegExpRouter: fastest JavaScript router. Turns route patterns into one large regular expression for single-time matching. Faster than radix-tree methods in most cases. Doesn't support all routing patterns, combined with other routers. Doesn't use linear loops or path-to-regexp."
+    },
+    {
+      "index": 1,
+      "manifest": "TrieRouter: uses Trie-tree algorithm. No linear loops. Not as fast as RegExpRouter but faster than Express router. Supports all routing patterns."
+    },
+    {
+      "index": 2,
+      "manifest": "SmartRouter: selects best router automatically. Hono default uses SmartRouter with RegExpRouter and TrieRouter. When app starts, detects fastest router based on registered routes."
+    },
+    {
+      "index": 3,
+      "manifest": "LinearRouter: optimized for one-shot request initialization. Route registration faster than RegExpRouter (no string compilation). Benchmark: 1.82 µs/iter vs MedleyRouter 4.44, FindMyWay 60.36, KoaTreeRouter 3.81, TrekRouter 5.84 µs/iter. 2.1x faster than KoaTreeRouter, 33.24x faster than FindMyWay."
+    },
+    {
+      "index": 4,
+      "manifest": "PatternRouter: smallest router for resource-limited environments. Application size under 15KB with only PatternRouter. Total upload 14.68 KiB, gzip 5.38 KiB."
+    }
+  ]
+}

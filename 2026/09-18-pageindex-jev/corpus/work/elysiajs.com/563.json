@@ -1,0 +1,9 @@
+{
+  "page": "Plugin system for Elysia. Plug-and-play with other instances using .use() method. All routes from plugin instance available in main instance. Routes combined with plugins applied. Type inference automatic. How to apply plugins? How to use instances together?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Assignment to apply plugin instance. Use .use() method to plug instances. Routes from plugin available in main app. Example: user.get('/profile'), app.use(user). Routes become available after applying."
+    }
+  ]
+}

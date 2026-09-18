@@ -1,0 +1,21 @@
+{
+  "page": "Introduction to core Zod workflow for new users. Covers schema definition, data parsing, error handling, and type inference. Curated one-time walk-through excluding edge cases and carve-outs. Entry point before comprehensive API documentation.\n- Creating object schemas with z.object and primitive types\n- Parsing data with .parse method returning deep clones\n- Async parsing with .parseAsync for async refinements/transforms\n- Error handling with try/catch and ZodError\n- .safeParse for result object with discriminated union (success/error)\n- .safeParseAsync for async error handling\n- .validate for boolean validation without error building (up to 16x faster)\n- .validateAsync for async schemas\n- Type inference with z.infer<typeof schema>\n- Input and output type distinction with z.input<> and z.output<>\n- How do I define a basic Zod schema?\n- How do I validate data against a schema?\n- How do I handle validation errors?\n- How do I extract TypeScript types from Zod schemas?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Schema definition with z.object for object types. Basic example with string and number properties. Zod and Zod Mini imports. z.string, z.number primitive schemas. For complete API reference, see /api page."
+    },
+    {
+      "index": 1,
+      "manifest": "Data parsing with .parse method validating input and returning strongly-typed deep clone. .parseAsync for async refinements/transforms. Note: async schemas require .parseAsync, synchronous .parse throws error."
+    },
+    {
+      "index": 2,
+      "manifest": "Error handling for validation failures. .parse throws ZodError instance. ZodError.issues array with granular information: expected type, code (invalid_type), path, message. .safeParse returns discriminated union {success: false, error: ZodError} or {success: true, data: T}. .safeParseAsync for async error handling. .validate returns boolean (never builds error, up to 16x faster than .safeParse().success). .validateAsync for async schemas with validation."
+    },
+    {
+      "index": 3,
+      "manifest": "Type inference extracting static types from schemas. z.infer<typeof schema> extracts output type. z.input<typeof schema> extracts input type. z.output<typeof schema> equivalent to z.infer. Used for divergent input/output types with transforms. Links to full schema API documentation."
+    }
+  ]
+}

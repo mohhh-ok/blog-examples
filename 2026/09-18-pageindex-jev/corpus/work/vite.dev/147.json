@@ -1,0 +1,33 @@
+{
+  "page": "Environment Variables and Modes: Vite exposes constants via import.meta.env object. Global variables dev, statically replaced build (effective tree-shaking). Built-in constants always available: import.meta.env.MODE (string, current mode), import.meta.env.BASE_URL (string, base url from config, tree-shaken), import.meta.env.PROD (boolean, running production NODE_ENV='production'), import.meta.env.DEV (boolean, running development, opposite PROD), import.meta.env.SSR (boolean, running server). Custom env variables: VITE_-prefixed exposed client-side after bundling (to prevent accidental leakage). Example .env: VITE_SOME_KEY=123 exposed as string \"123\", DB_PASSWORD=foobar not exposed. Parsed values always strings (type conversion needed). Avoid sensitive information (VITE_* bundled source code). .env file loading: dotenv loads files from environment directory. Files: .env (all), .env.local (all, git-ignored), .env.[mode], .env.[mode].local (git-ignored). Mode-specific priority higher. All loads .env + .env.local plus mode file. Environment variables existing when Vite runs highest priority (not overwritten). Files loaded at start (restart needed). Bun users: auto-loads .env before script (interferes Vite). envPrefix config. dotenv-expand auto-expands. TypeScript IntelliSense: vite-env.d.ts ImportMetaEnv augmentation. HTML replacement: %CONST_NAME% syntax in HTML files. Modes: default dev=development, build=production. --mode flag override (vite build --mode staging, .env.staging file). NODE_ENV vs mode different concepts. NODE_ENV affects import.meta.env.PROD/DEV. Mode affects import.meta.env.MODE.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Built-in constants always available: import.meta.env.MODE (string mode), import.meta.env.BASE_URL (string base URL, config base option, deterministic), import.meta.env.PROD (boolean production, NODE_ENV='production'), import.meta.env.DEV (boolean development, opposite PROD), import.meta.env.SSR (boolean server running). All available all cases. What mode applies? How to check environment?"
+    },
+    {
+      "index": 1,
+      "manifest": "Custom env variables: VITE_-prefixed exposed client-side source after bundling. Prevent accidental leakage: avoid prefix for sensitive info. Example .env: VITE_SOME_KEY=123 exposed \"123\" string, DB_PASSWORD=foobar not exposed. Parsing: all values parsed strings (type conversion code required). Tip: string conversion care. Warning: sensitive info never VITE_* (bundled source code, not backend secure). envPrefix config customize prefix."
+    },
+    {
+      "index": 2,
+      "manifest": ".env files loading: dotenv loads from environment directory (configurable envDir). Files: .env (all cases), .env.local (all cases, git-ignored), .env.[mode], .env.[mode].local (specific mode, git-ignored). Mode-specific higher priority generic. All loads .env + .env.local plus mode file. Variables defined generic available if not mode override. Environment vars existing Vite run highest priority (not overwritten). Example: VITE_SOME_KEY=123 vite build. File loading start (restart needed changes). Bun users: pre-loads .env (interferes Vite, issue oven-sh/bun#5515). dotenv-expand auto-expands: $VAR references. Escaping $: \\$ = literal $. Reverse order expansion supported (.env FOO=foo${BAR}, BAR=bar expands FOO=foobar). Not shell/docker compose. Recommended avoid reliance (warnings future). Ignoring local: .env.*.local git-ignored (contain sensitive)."
+    },
+    {
+      "index": 3,
+      "manifest": "TypeScript IntelliSense: vite/client.d.ts provides default type definitions. Custom env variables VITE_ IntelliSense: vite-env.d.ts src directory, augment ImportMetaEnv. Example interface: VITE_APP_TITLE string. Import statements break: no imports vite-env.d.ts (TypeScript modules definition). lib field: DOM/WebWorker types (tsconfig.json lib array)."
+    },
+    {
+      "index": 4,
+      "manifest": "HTML constant replacement: import.meta.env properties usable HTML %CONST_NAME% syntax. Example: <h1>Vite running %MODE%</h1>, <p>%VITE_API_URL%</p>. Non-existent env ignored (vs JS where undefined). Intentionally unopinionated complex replacements (conditionals). Extended via userland plugin or custom transformIndexHtml hook."
+    },
+    {
+      "index": 5,
+      "manifest": "Modes: dev command development mode default, build command production mode default. vite build loads .env.production if exists. .env.production example: VITE_APP_TITLE=My App. App render title import.meta.env.VITE_APP_TITLE. Override default mode: --mode flag (vite build --mode staging). Create .env.staging. Alternative: different mode .env + NODE_ENV=development run development build."
+    },
+    {
+      "index": 6,
+      "manifest": "NODE_ENV vs modes: different concepts. NODE_ENV (process.env.NODE_ENV) affects build mode/optimization. Mode affects import.meta.env. Commands effects: vite build (NODE_ENV=production, mode=production), vite build --mode development (NODE_ENV=production, mode=development), NODE_ENV=development vite build (NODE_ENV=development, mode=production), NODE_ENV=development vite build --mode development (NODE_ENV=development, mode=development). NODE_ENV values (production/development/other) affect import.meta.env.PROD/DEV. Mode values (production/development/staging) affect import.meta.env.MODE. NODE_ENV command benefit: early detection, process.env.NODE_ENV readable config evaluated. Env files: NODE_ENV= .env.[mode] settable. Modes separate concepts (remain)."
+    }
+  ]
+}

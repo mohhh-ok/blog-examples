@@ -1,0 +1,4 @@
+{
+  "page": "Node.js runtime adapter for Elysia. Installation via package manager: bun (bun add), pnpm (pnpm add), npm (npm install), yarn (yarn add). Import: `import { node } from '@elysia/node'`. Apply adapter: `new Elysia({ adapter: node() })`. Minimal setup required.\nQuestions: How do you run Elysia on Node.js? What installation options are available? What does the adapter do?",
+  "sections": []
+}

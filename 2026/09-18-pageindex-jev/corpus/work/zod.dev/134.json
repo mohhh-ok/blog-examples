@@ -1,0 +1,33 @@
+{
+  "page": "Ahead-of-time (AOT) compilation for Zod schemas producing hyperoptimized flat loop-free validators running several times faster than standard parser. Identical results and errors. Compilation of schema into JavaScript snippet via new Function(). 5x-7.8x speedup for container schemas (objects, tuples). Entire test suite runs twice - compiled and uncompiled - for perfect fidelity.\n- z.compile(schema) compiles single schema returning compiled copy\n- import 'zod/compile' global compilation mode (lazy, per-parse)\n- Node.js CLI flags: --import zod/compile (ESM) or --require zod/compile (CommonJS)\n- Compilation produces flat loop-free JavaScript using typeof checks\n- new Function() generates fast-path validator code\n- INVALID symbol signals fallback to uncompiled parser for errors\n- Unsupported: async refinements, z.xor, recursive schemas, z.coerce.*, custom when, .catch callbacks\n- Content Security Policy: z.config({jitless: true}) disables compilation\n- Bundle size: compiler adds 7 KB gzipped (28 KB minified)\n- Speedup ratios: 5-key object 1.8x, 20-key object 5.0x, 50-key object 10.2x\n- How much faster is compiled Zod?\n- When should I use z.compile?\n- What schemas can be compiled?\n- How do I enable global compilation?\n- What is the bundle size impact of compilation?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "z.compile() API for compiling single schema. Methods deriving new schemas (.refine, .extend, .optional, .meta) return uncompiled. Compile final schema, not intermediate results. Original schema unchanged. Returns compiled copy ready to use like normal schema."
+    },
+    {
+      "index": 1,
+      "manifest": "Global compilation via import 'zod/compile' (must precede schema definitions). Enables automatic lazy compilation on first parse. Also works as Node.js CLI flag (--import zod/compile for ESM, --require for CommonJS) guaranteeing execution before modules define schemas. Preload in bunfig.toml or nub.jsonc. For applications only, not libraries."
+    },
+    {
+      "index": 2,
+      "manifest": "How compilation works: walks entire schema producing hyperoptimized flat loop-free JavaScript via new Function(). No interpreter overhead, straight-line typeof checks and property reads. Generated code for Point example and Player schema. Uses INVALID symbol for fast-path validation failure to trigger standard parser fallback. Refinements and transforms execute once on valid input, at most twice on invalid."
+    },
+    {
+      "index": 3,
+      "manifest": "Unsupported schemas and features. Can't compile: async refinements/transforms/checks, z.xor, recursive schemas, z.coerce.*, custom when parameter, .catch with callback (constants compile normally). Inside containers (object/array/tuple/record/intersection), unsupported children fall back to standard parser while structure stays compiled. Union with unsupported member, async anywhere, or .catch callback makes entire schema fall back. Pass strict: true to throw ZodCompileAsyncError or ZodCompileUnsupportedError."
+    },
+    {
+      "index": 4,
+      "manifest": "Content Security Policy and jitless environments. new Function disabled in CSP/no-eval. Global mode respects jitless setting: z.config({jitless: true}). Direct z.compile() call is explicit opt-in attempting generation regardless of jitless (returns uncompiled in restricted environments)."
+    },
+    {
+      "index": 5,
+      "manifest": "Bundle size impact: compiler adds ~7 KB gzipped (28 KB minified). Without z.compile() or 'zod/compile' import, compiler tree-shaken completely. Zod 24.1 KB → 31.1 KB with compiler, Zod Mini 4.6 KB → 13.2 KB with compiler."
+    },
+    {
+      "index": 6,
+      "manifest": "Performance benchmarks for compilation speedup. Single-schema tight loop results: 5-key object 1.8x, 10-key 2.2x, 20-key 5.0x, 50-key 10.2x faster. Tuple: 1-item 2.2x, 3-item 2.5x, 5-item 3.0x, 10-item 3.7x. Moltar benchmark: Zod compiled 47.5M ops/sec (parseSafe), Zod compiled 60.6M (assertLoose)."
+    }
+  ]
+}

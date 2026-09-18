@@ -1,0 +1,57 @@
+{
+  "page": "Routing: flexible and intuitive path matching. HTTP methods: GET/POST/PUT/DELETE/PATCH/all(). Path patterns: static, dynamic :param, optional :param?, regexp :param{pattern}, wildcard *, including slashes. Chaining methods on same path. Grouping routes with route(). Base path prefix. Hostname-based routing. Priority: registration order matters, handlers stop execution. Middleware must come before handlers. Fallback routes at end. Strict mode default true distinguishes /hello and /hello/.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Basic routing: app.get/post/put/delete/patch/query/all(path, handler). Wildcard /wild/*/card. Custom methods app.on('PURGE'). Multiple methods app.on(['PUT','DELETE']). Multiple paths app.on('GET', [paths])."
+    },
+    {
+      "index": 1,
+      "manifest": "Path parameters: app.get('/user/:name', (c) => c.req.param('name')). Get all: c.req.param() returns { name, ... }."
+    },
+    {
+      "index": 2,
+      "manifest": "Optional parameters: :param? matches with and without value. app.get('/api/animal/:type?', ...) matches /api/animal and /api/animal/:type."
+    },
+    {
+      "index": 3,
+      "manifest": "Regexp patterns: :date{[0-9]+}/:title{[a-z]+} for type validation."
+    },
+    {
+      "index": 4,
+      "manifest": "Including slashes: :filename{.+\\.png} for paths containing slashes."
+    },
+    {
+      "index": 5,
+      "manifest": "Chained route: app.get(path, (c) => ...).post((c) => ...).delete((c) => ...) handles same path with multiple methods."
+    },
+    {
+      "index": 6,
+      "manifest": "Grouping: create Hono instance for routes, add to main app with app.route(path, subapp). Enables modular route organization."
+    },
+    {
+      "index": 7,
+      "manifest": "Grouping without changing base: route paths as full paths in subapp, add to main app with app.route('/', subapp). Handles multiple bases."
+    },
+    {
+      "index": 8,
+      "manifest": "Base path: app.basePath('/api') prefix all routes. app.get('/book') becomes GET /api/book."
+    },
+    {
+      "index": 9,
+      "manifest": "Hostname routing: custom getPath function in constructor. Parse URL hostname with regex to route by domain."
+    },
+    {
+      "index": 10,
+      "manifest": "Host header routing: custom getPath function using req.headers.get('host'). Route by host header value, enables User-Agent routing."
+    },
+    {
+      "index": 11,
+      "manifest": "Routing priority: handlers execute in registration order. First match stops execution. Middleware before handler, fallback handler at end. Specific routes before generic patterns."
+    },
+    {
+      "index": 12,
+      "manifest": "Grouping ordering: route() adds stored routing to current app. Correct order required: subapp routes must be registered before main app.route(). Incorrect order returns 404."
+    }
+  ]
+}

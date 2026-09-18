@@ -1,0 +1,5 @@
+node_modules/
+# 他サイトの文書そのもの（scripts/fetch-corpus.sh で取り直せる）と、それを組み替えただけの中間ファイル
+corpus/raw/
+corpus/index/*.tree.json
+corpus/work/*/*.md

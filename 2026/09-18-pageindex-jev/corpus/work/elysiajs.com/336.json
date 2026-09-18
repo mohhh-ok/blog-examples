@@ -1,0 +1,17 @@
+{
+  "page": "Expo integration for API routes in Expo apps. Available from Expo SDK 50 and App Router v3. Create app/[...slugs]+api.ts file. Define Elysia server. Export Elysia.fetch with HTTP method names (GET, POST). Treat as normal Expo API route.\nQuestions: What Expo versions support Elysia? How do you create API routes? What export pattern is used?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Prefix configuration for non-root servers. If Elysia server placed in app/api/[...slugs]+api.ts, annotate prefix as /api. Syntax: `new Elysia({ prefix: '/api' })`. Ensures proper routing regardless of placement.\nQuestions: When do you need prefix? How does it affect routes?"
+    },
+    {
+      "index": 1,
+      "manifest": "Eden Treaty integration for end-to-end type safety similar to tRPC. Export type from Elysia server: `export type app = typeof app`. Create Treaty client: `treaty<app>('localhost:3000/api')`. Use in both server and client components. Type safety from frontend to backend.\nQuestions: How do you set up Eden Treaty? What type must you export?"
+    },
+    {
+      "index": 2,
+      "manifest": "Deployment options: directly use API route with normal Elysia deployment or use experimental Expo server runtime. expo export command creates optimized build at dist/server/_expo/functions/[...slugs]+api.js. Expo Functions treated as Edge functions (no port allocation). Use Expo function adapters: Express, Netlify, Vercel.\nQuestions: How do you deploy Expo Elysia apps? What are Expo Functions?"
+    }
+  ]
+}

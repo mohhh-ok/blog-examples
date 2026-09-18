@@ -1,0 +1,17 @@
+{
+  "page": "Metadata and registries for associating additional information with Zod schemas. Metadata useful for documentation, code generation, AI structured outputs, form validation. Registries are strongly-typed collections of schemas with metadata. Create registry with z.registry<T>(). Global registry z.globalRegistry for JSON Schema generation. GlobalMeta interface: id (unique, throws error if duplicate), title, description, deprecated, and extensible with declaration merging. Methods: .add(), .has(), .get(), .remove(), .clear() on registries. Schema methods: .register() on registry (returns original schema), .meta() to register in globalRegistry and retrieve metadata, .describe() shorthand for description only. Custom registries support type constraints and inferred type references using z.$output and z.$input. Questions: How to store metadata? How to create registries? How to use global registry? How to extend GlobalMeta? How to constrain registry types?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Registries are strongly-typed collections of schemas with metadata. Create with z.registry<{ description: string }>(). Registry methods: add(schema, metadata), has(schema) -> boolean, get(schema) -> metadata, remove(schema), clear(). TypeScript enforces metadata type matching. Special handling for id property - Error thrown if multiple schemas registered with same id across all registries including global. .register() method on schemas to add to registry and return original schema (unique - other Zod methods return new instance). Registry can be created without metadata type to use as generic collection."
+    },
+    {
+      "index": 1,
+      "manifest": "z.globalRegistry provided for convenience. Accepts GlobalMeta interface: id (string, unique), title, description, deprecated (boolean), plus unknown extensible fields. Register metadata with .register(z.globalRegistry, {...}) or .meta({...}). .meta() method without arguments retrieves metadata. .meta() returns new instance (immutable). Metadata associated with specific schema instance - lost when calling other methods like .refine() that return new schema. Augment GlobalMeta globally using TypeScript declaration merging in custom .d.ts file. .describe() method shorthand for registering with only description field."
+    },
+    {
+      "index": 2,
+      "manifest": "Custom registries with advanced patterns. Metadata type can reference inferred schema output type using z.$output symbol (equivalent to z.infer<typeof schema>). Use z.$input for input type references. Example: type MyMeta = { examples: z.$output[] } allows examples field containing schema output values. Second generic parameter to z.registry() constrains schema types - z.registry<Metadata, z.ZodString>() only accepts string schemas. Type checking enforced at compile time."
+    }
+  ]
+}

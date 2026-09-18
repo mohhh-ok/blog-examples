@@ -1,0 +1,25 @@
+{
+  "page": "Trace performance analysis injecting code into lifecycles. Identify performance bottlenecks. Callback listener for lifecycle events. Trace method with callback. Lifecycle events: onRequest, onParse, onTransform, onBeforeHandle, onHandle, onAfterHandle, onMapResponse, onError, onAfterResponse. Trace parameters: id, context, set, store, time, on[Event]. Trace listener: name, begin, end, error, onStop callback. TraceEndDetail: end time, error, elapsed. Child events with onEvent. Not supported with dynamic mode aot:false. Warning requires static functions.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Trace callback listener. Callback for each lifecycle event. onHandle listener for handle event. OnStop callback after lifecycle end. Elapsed time calculation. Begin/end timing."
+    },
+    {
+      "index": 1,
+      "manifest": "Children events. Events except handle have children array. OnEvent listener for each child. Total children count. Elapsed time per child event."
+    },
+    {
+      "index": 2,
+      "manifest": "Trace parameter types. Id random unique per request. Context for Elysia context. Set Context.set shortcut. Store context.store data access. Time request timestamp. On[Event] listeners for lifecycle."
+    },
+    {
+      "index": 3,
+      "manifest": "Trace listener parameters. Name function name or 'anonymous'. Begin start time. End promise resolved time. Error thrown error promise. OnStop callback at end."
+    },
+    {
+      "index": 4,
+      "manifest": "TraceEndDetail parameters. End time when function ended. Error thrown or null. Elapsed end-begin duration. OnStop callback receives detail."
+    }
+  ]
+}

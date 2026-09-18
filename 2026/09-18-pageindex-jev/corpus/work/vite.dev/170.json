@@ -1,0 +1,37 @@
+{
+  "page": "Troubleshooting guide for Vite issues including CLI, config, dev server, HMR, build, optimized dependencies, and performance bottlenecks.\n- CLI error: 'Cannot find module' with & in Windows path - use pnpm/yarn or remove &\n- ESM-only packages: require() fails, use dynamic import() or set 'type': 'module' in package.json\n- File descriptor limits (Linux): ulimit -Sn command for adjustment\n- inotify limits: fs.inotify.max_queued_events, max_user_instances, max_user_watches configuration\n- ENOSPC error: file watcher limit exceeded, increase fs.inotify.max_user_watches to 524288\n- server.watch.ignored and server.watch.usePolling options\n- Self-signed SSL certificates: Chrome ignores caching, use trusted cert\n- 431 Request Header Fields Too Large: Node.js limit, use --max-http-header-size flag\n- server.host: set to 127.0.0.1 for VS Code dev containers\n- HMR file case sensitivity issues\n- WSL2 file watching problems\n- Circular dependencies in HMR\n- CORS errors with file:// protocol\n- Case sensitivity on different filesystems\n- 'Failed to fetch dynamically imported module' error: version skew, network, browser extensions\n- build.rolldownOptions.output.chunkFileNames option\n- Module externalization warnings\n- Strict mode requirements in ESM\n- Browser extension interference\n- Cross drive links on Windows (subst, mklink)\n- Default import from CJS modules\nHow do I fix 'Cannot find module' with & in path? How do I resolve ESM-only package errors? What causes ENOSPC errors? How do I configure inotify limits? How do I fix dynamic import failures?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "CLI troubleshooting.\n- Windows path with &: breaks npm, switch to pnpm/yarn or remove &\n- GitHub Discussions for help\n- Vite Land Discord #help channel\nHow do I fix Windows paths containing & character?"
+    },
+    {
+      "index": 1,
+      "manifest": "Config troubleshooting.\n- ESM-only packages: 'require() of ES Module' error\n- Node.js <=22 limitation with --experimental-require-module flag\n- Solutions: add 'type': 'module' to package.json or rename to .mjs/.mts files\nHow do I handle ESM-only packages in Vite config?"
+    },
+    {
+      "index": 2,
+      "manifest": "Dev server troubleshooting.\n- Requests stalled forever (Linux): file descriptor and inotify limits\n- ulimit -Sn: check and increase file descriptor limit to 10000\n- sysctl fs.inotify: check/set max_queued_events (16384), max_user_instances (8192), max_user_watches (524288)\n- Systemd config: DefaultLimitNOFILE=65536 in /etc/systemd/system.conf or /etc/systemd/user.conf\n- Ubuntu: /etc/security/limits.conf with '* - nofile 65536'\n- Restart required for persistence\n- VS Code dev container: server.host set to 127.0.0.1\n- ENOSPC error: Linux file watcher limit (~8192-10000), solution: increase max_user_watches\n- server.watch.ignored option to exclude directories\n- server.watch.usePolling for file polling (higher CPU)\n- Network requests with self-signed SSL: Chrome ignores caching directives\n- 431 Request Header Fields Too Large: Node.js limit for header size\n- Use --max-http-header-size to change limit\nHow do I fix requests stalling on Linux? What are inotify limits? How do I fix ENOSPC errors? How do I configure for dev containers?"
+    },
+    {
+      "index": 3,
+      "manifest": "HMR troubleshooting.\n- File change not triggering HMR: file case sensitivity (import './Foo.js' vs './foo.js')\n- WSL2 file watching limitations\n- Full reload instead of HMR: HMR not handled by Vite or plugin, or circular dependency\n- vite --debug hmr: log circular dependency paths\nHow do I fix HMR issues? What causes case sensitivity problems?"
+    },
+    {
+      "index": 4,
+      "manifest": "Build troubleshooting.\n- Built file CORS error with file:// protocol: scripts fail to run\n- Solution: use http protocol via 'npx vite preview'\n- Case sensitivity filesystem differences: ENOENT or 'Module not found' errors\n- 'Failed to fetch dynamically imported module' error: version skew, network, browser extensions\n- Version skew: old cached HTML references deleted chunks, deploy new chunks alongside old ones\n- Service worker for asset prefetching\n- build.rolldownOptions.output.chunkFileNames: select different chunk names to avoid extension blocking\nHow do I fix CORS errors in built files? What causes case sensitivity errors? How do I fix dynamic import fetch errors?"
+    },
+    {
+      "index": 5,
+      "manifest": "Optimized dependencies troubleshooting.\n- Outdated pre-bundled deps with linked local packages\n- Hash key depends on: package lock contents, patches, bundling config options\n- npm overrides, pnpm overrides, yarn resolutions supported\n- npm link: not detected, use vite --force to re-optimize\n- Alternative: use npm/pnpm/yarn overrides for dependency replacement\nHow do I update pre-bundled dependencies with local packages?"
+    },
+    {
+      "index": 6,
+      "manifest": "Performance profiling.\n- CPU profiling with vite --profile or vite build --profile\n- Generates vite-profile-0.cpuprofile in root (or --profile <name>.cpuprofile)\n- Upload to https://www.speedscope.app/ for inspection\n- vite-plugin-inspect: inspect intermediate plugin state\n- Works in both dev and build modes\nHow do I profile Vite for performance bottlenecks?"
+    },
+    {
+      "index": 7,
+      "manifest": "Other troubleshooting.\n- Module externalized warning: Node.js modules used in browser code\n- Recommendation: avoid Node.js modules for browser to reduce bundle size\n- Add polyfills manually if needed\n- Report issue to third-party library using Node.js modules\n- Syntax/Type errors in non-strict mode code\n- ESM always uses strict mode, with statements not supported\n- 'Cannot create property on boolean' error\n- patch-package, yarn patch, pnpm patch for workarounds\n- Browser extensions blocking Vite client: white screen without errors\n- Try disabling extensions if 'Failed to fetch dynamically imported module'\n- Cross drive links on Windows: subst command or mklink to different drive\n- Default import returns module.exports for CJS vs module.exports.default\n- 'Element type is invalid' or 'foo is not a function' errors\nHow do I handle Node.js modules in browser? What causes strict mode errors? How do I fix extension-related issues?"
+    }
+  ]
+}

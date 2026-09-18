@@ -1,0 +1,4 @@
+{
+  "page": "Zod is a TypeScript-first schema validation library providing runtime type checking with static type inference. Covers Zod 4 features, API, and usage patterns for validating and transforming data.\n- TypeScript-first schema validation library\n- Static type inference from schemas\n- Zod version 4 documentation\n- Core features and API reference\n- What is Zod and what does it do?\n- Can Zod infer TypeScript types from schemas?\n- What validation capabilities does Zod 4 provide?\n- Is Zod suitable for TypeScript projects?\n- Where is Zod used in web development?\n- What is the relationship between schemas and types in Zod?",
+  "sections": []
+}

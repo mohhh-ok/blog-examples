@@ -1,0 +1,45 @@
+{
+  "page": "Hono primary object: instantiated first, used throughout application lifecycle. Export as default for Cloudflare Workers or Bun. Methods: HTTP_METHOD (get/post/put/delete), all(), on(), use(), route(), basePath(), notFound(), onError(), mount(), fire(), fetch(), request(). Constructor options: strict mode (default true), router selection, generics for type safety. Supports Cloudflare Workers bindings and variables via generic types.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Methods list: app.get/post/put/delete/patch([path], handler/middleware...), app.all([path], handler), app.on(method/method[], path/path[], handler), app.use([path], middleware), app.route(path, [app]), app.basePath(path), app.notFound(handler), app.onError(handler), app.mount(path, app, [options]), app.fire(), app.fetch(request, env, event), app.request(path, options). See routing section for details."
+    },
+    {
+      "index": 1,
+      "manifest": "notFound: customize Not Found response. Takes handler returning custom 404 response. Only called from top-level app. See issue #3465 for nested app behavior."
+    },
+    {
+      "index": 2,
+      "manifest": "onError: handle uncaught errors with custom response. Takes error and context, returns Response. If both parent and route handlers present, route-level priority."
+    },
+    {
+      "index": 3,
+      "manifest": "fire(): deprecated, use fire() from hono/service-worker instead. Automatically adds global fetch event listener. Executes addEventListener('fetch', event handler). Used for Service Worker API environments, not-recommended for module workers."
+    },
+    {
+      "index": 4,
+      "manifest": "fetch: entry point returning Response. Cloudflare Workers: return app.fetch(request, env, ctx). Can export app directly or wrap in fetch handler object. Bun: export object with port and fetch property."
+    },
+    {
+      "index": 5,
+      "manifest": "request: testing method. Pass URL/pathname for GET, returns Response. Pass Request object for custom method/body. Useful for unit tests."
+    },
+    {
+      "index": 6,
+      "manifest": "mount: mount other framework apps. Takes path, app/handler, optional options object. Default creates new Request with mount path removed. replaceRequest option controls Request passed: function for custom logic, false for original unchanged."
+    },
+    {
+      "index": 7,
+      "manifest": "strict mode: default true distinguishes /hello and /hello/. get('/hello') matches only /hello not /hello/. Set strict: false in constructor to treat both equally."
+    },
+    {
+      "index": 8,
+      "manifest": "router option: specify which router to use in constructor. Default SmartRouter. Pass RegExpRouter/TrieRouter/LinearRouter/PatternRouter for specific behavior."
+    },
+    {
+      "index": 9,
+      "manifest": "Generics: pass Bindings and Variables types to Hono<>() for type safety. Bindings for Cloudflare Workers environment bindings (KV, D1, R2). Variables for c.set/c.get values. Enable autocomplete and type checking."
+    }
+  ]
+}

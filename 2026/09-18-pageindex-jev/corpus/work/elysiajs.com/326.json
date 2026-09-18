@@ -1,0 +1,29 @@
+{
+  "page": "Drizzle ORM integration for type-safe database operations. Convert Drizzle schema to Elysia validation models using drizzle-typebox. Installation: `bun add drizzle-orm drizzle-typebox`. Pin @sinclair/typebox version to match Elysia's minimum version to prevent Symbol conflicts. Query via grep: `grep '@sinclair/typebox' node_modules/elysia/package.json`. Use overrides field in package.json to pin version.\nQuestions: How do you integrate Drizzle with Elysia? Why pin @sinclair/typebox? How do you find the correct version?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Drizzle schema definition using pgTable. Example table fields: id (varchar, primaryKey), username (varchar, unique, notNull), password (varchar, notNull), email (varchar, unique, notNull), salt (varchar, length 64, notNull), createdAt (timestamp, defaultNow, notNull). Create cuid using @paralleldrive/cuid2. Export as const object: `export const table = { user } as const`. Export Table type.\nQuestions: How do you define Drizzle tables? What are common field types?"
+    },
+    {
+      "index": 1,
+      "manifest": "drizzle-typebox conversion to TypeBox models. Use createInsertSchema from drizzle-typebox. Override specific fields: email with t.String({ format: 'email' }). Reuse in Elysia validation: body: t.Omit(_createUser, ['id', 'salt', 'createdAt']). Allows schema reuse between database and validation.\nQuestions: How do you convert Drizzle schema to TypeBox? Can you override field types?"
+    },
+    {
+      "index": 2,
+      "manifest": "Type instantiation infinite loop prevention. Occurs when nesting drizzle-typebox types into Elysia schema. Solution: explicitly define variable for drizzle-typebox before using in Elysia. Bad pattern: directly use createInsertSchema in t.Omit(). Good pattern: assign to variable first, then reference. Always use intermediate variable.\nQuestions: What causes type instantiation errors? How do you fix infinite type loops?"
+    },
+    {
+      "index": 3,
+      "manifest": "Utility functions for schema manipulation. Functions spread, spreads for converting Drizzle to plain object. Last modified 2025-02-04. Spread utility converts TObject or Table into plain object. Spreads handles multiple tables. Modes: 'select', 'insert', undefined. Allows picking by property name as plain object rather than t.Pick/t.Omit.\nQuestions: What are spread utility functions? What modes are available? Why use spread over t.Pick?"
+    },
+    {
+      "index": 4,
+      "manifest": "Table singleton pattern for centralized schema access. Create db object with insert/select modes: `db.insert`, `db.select`. Structure: `{ insert: spreads({user}, 'insert'), select: spreads({user}, 'select') }`. Access throughout codebase via singleton import. Example usage: `const { user } = db.insert`.\nQuestions: How do you centralize schema definitions? What is singleton pattern?"
+    },
+    {
+      "index": 5,
+      "manifest": "Schema refinement for custom field types. Use createInsertSchema, createSelectSchema with override object: email: t.String({ format: 'email' }). Refine schema directly in db model definition. Spread utility skips refined schema automatically.\nQuestions: How do you refine schema fields? When should you refine?"
+    }
+  ]
+}

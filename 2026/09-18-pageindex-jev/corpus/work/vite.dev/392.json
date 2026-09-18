@@ -1,0 +1,85 @@
+{
+  "page": "Vite dev server options (unless noted only dev). server.host (string|boolean, default 'localhost'): IP addresses server listens, 0.0.0.0 or true all addresses (LAN public), CLI --host 0.0.0.0 or --host. DNS resolution localhost difference Node.js dns.setDefaultResultOrder behavior, browsers may use different address, Vite prints resolved address if differs. Wildcard hosts (0.0.0.0) lower priority non-wildcard hosts. WSL2 LAN access requires additional config. server.allowedHosts (string[]|true, default []): Vite-allowed response hostnames. localhost and .localhost subdomains and all IPs default allowed. HTTPS skips check. Dot prefix (.example.com) allows without dot and subdomains. true any hosts (security: DNS rebinding attacks download source code content, explicit list recommended). Environment variable __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS comma-separated hosts. server.port (number, default 5173): server port, used port auto-try next available. server.strictPort (boolean): true exit used port instead auto-try next. server.https (https.ServerOptions): TLS+HTTP/2 enable, options @vitejs/plugin-basic-ssl self-signed, recommend own certificates. server.open (boolean|string): auto-open app browser server start, string URL pathname, BROWSER env (firefox), BROWSER_ARGS additional flags (--incognito). .env configure. See open package. Example: open: '/docs/index.html'. server.proxy (Record<string, string|ProxyOptions>): dev server custom proxy, key request path start proxy target, key ^RegExp interpreted, configure access proxy instance, non-proxy requests unchanged. Note base prefix key if relative. Extends http-proxy-3, additional options. Custom middleware: write plugin configureServer function. Example: /foo → http://localhost:4567/foo, /api → http://jsonplaceholder.typicode.com, /fallback/ RegExp, /socket.io WebSocket (rewriteWsOrigin caution CSRF). Origin check WebSocket: Vite no check, proxy target expected, rewriteWsOrigin bypasses origin check. server.cors (boolean|CorsOptions, default {...}): CORS dev server, options object fine-tune, true any origin. SECURITY: true any website request, explicit list recommended. server.headers (OutgoingHttpHeaders): server response headers specify. server.hmr (boolean|{overlay?: boolean}): HMR disable/configure, overlay: false error overlay disable. Deprecated WebSocket options (protocol, host, port, path, clientPort, timeout, server) use server.ws. server.ws (false|{protocol?, host?, port?, number, path?, timeout?, clientPort?, server?}): WebSocket connection options configure, false disable. protocol (ws|wss), host, port, path, clientPort (client-side port override), timeout ms (default 30000), server custom HTTP server. server.ws.server defined: Vite WebSocket via provided server. Middleware mode: existing server WebSocket processing attempt. Self-signed/network expose single port. Example: {protocol: 'wss', host: 'localhost', port: 3001}. Reverse proxy fallback: HMR client fails WebSocket bypass reverse proxies, direct connection. Error message ignorable. Fallback avoid: reverse proxy WebSocket proxy, server.strictPort: true + server.ws.clientPort same server.port, server.ws.port different server.port. server.forwardConsole (boolean|{unhandledErrors?: boolean, logLevels?: string[]}, default auto): browser runtime events forward Vite server console dev. true unhandled errors and console.error/warn logs. unhandledErrors uncaught/unhandled promises. logLevels console.* calls (error, warn, info, log, debug). Vercel @vercel/detect-agent AI agent detection, false otherwise. Auto detect example config. Enhanced formatting unhandled errors: stack trace formatting line numbers context. server.warmup ({clientFiles?, ssrFiles?}): frequently-used files warm up transform cache advance, initial page load improve, transform waterfall prevent. clientFiles client-only, ssrFiles SSR-only, tinyglobby patterns array root relative. Frequently-used only add not overload startup. Example: ./src/components/*.vue, ./src/utils/big-utils.js, ./src/server/modules/*.js. Related: Warm Up Frequently Used Files guide. server.watch (object|null): chokidar file system watcher options. Bundled-dev mode: Rolldown watch options (usePolling, pollInterval, useDebounce, debounceDuration, include, exclude) also accepted, chokidar-only still used outside module graph (config deps, env files). Root watch, skip .git/, node_modules/, test-results/, cacheDir, outDir. File update HMR apply, page update if needed. null: no watch, compatible emitter, add/unwatch no effect. node_modules watch not currently possible - issue #8619. WSL2: file Windows apps edit not watch - WSL2 limitation #4739 Docker WSL2 backend. Fix: WSL2 apps edit recommended, project outside Windows filesystem, {usePolling: true} (high CPU)). server.middlewareMode (boolean|{server: http.Server}, default false): middleware mode Vite server create. WebSocket proxy setup: server provide proxy correct binding. Related: appType, SSR - Setting Up the Dev Server guide. Example: Express app, vite middleware mode, middlewares use. server.fs.strict (boolean, default true since v2.7): workspace root outside files serving restrict. server.fs.allow (string[]): /@fs/ served files restrict. server.fs.strict true: directory list outside 403 results unless imported allowed file. Files/directories both. Workspace root search: package.json workspaces, lerna.json, pnpm-workspace.yaml, fallback project root. Absolute/relative root path custom. searchForWorkspaceRoot() utility workspace root search, workspace auto detection disable server.fs.allow specified. Example: allow: ['..'], custom rules. server.fs.deny (string[], default ['.env', '.env.*', '*.{crt,pem,key,p12,pfx,cer,der}', '.npmrc', '.yarnrc.yml', '**/.git/**']): sensitive files blocklist, higher priority server.fs.allow, picomatch patterns. Public directory: blocklist no apply, files served unfiltered, output copied directly. Deny filter: module id and stripped query parameters, plugin load hook any files read (symlink resolve denied paths), Vite can't guarantee denied inaccessible alternative path. Alternative path: deny list include. server.origin (string): development asset URLs origin define. Example: http://127.0.0.1:8080. server.sourcemapIgnoreList (false|(sourcePath, sourcemapPath) => boolean, default sourcePath includes 'node_modules'): server sourcemap source files ignore, x_google_ignoreList extension populate. Dev: absolute path sourcePath, most modules map source same folder filename relative path. false disable, function full control. Default node_modules exclude. build.rolldownOptions.output.sourcemapIgnoreList equivalent (absolute path dev relative rolldown), independent set.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "server.host type string|boolean default 'localhost'. IP addresses server listen. 0.0.0.0 or true all addresses (LAN public). CLI --host 0.0.0.0 or --host. Note: localhost DNS behavior different browsers vs Vite address, printed when differs. Wildcard (0.0.0.0) lower priority non-wildcard. WSL2 additional config required LAN access."
+    },
+    {
+      "index": 1,
+      "manifest": "server.allowedHosts type string[]|true default []. Hostnames Vite respond. localhost, .localhost, all IPs default. HTTPS skips check. Dot-prefixed (.example.com) allow without dot and subdomains. true any hosts (GHSA-vg6x-rcgg-rjx6 security). __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS env comma-separated. Safe hosts: owned domain IP control. Unsafe: .com TLD anyone purchase."
+    },
+    {
+      "index": 2,
+      "manifest": "server.port type number default 5173. Port specify. Used port auto-try next, may not actual listening port."
+    },
+    {
+      "index": 3,
+      "manifest": "server.strictPort type boolean. true exit used port instead auto-try next."
+    },
+    {
+      "index": 4,
+      "manifest": "server.https type https.ServerOptions. TLS+HTTP/2 enable. Options https.createServer Node.js API. Self-signed: @vitejs/plugin-basic-ssl auto-create cache. Recommend own certificates."
+    },
+    {
+      "index": 5,
+      "manifest": "server.open type boolean|string. Auto-open app browser server start. String URL pathname. BROWSER env (firefox). BROWSER_ARGS flags (--incognito). .env special variables. See open package details. Example: open: '/docs/index.html'."
+    },
+    {
+      "index": 6,
+      "manifest": "server.proxy type Record<string, string|ProxyOptions>. Dev server custom proxy rules. key: options pairs. Request path start key proxy target. key ^ RegExp interpreted. configure access proxy instance. Non-proxy requests unchanged. Note base prefix key relative. http-proxy-3 extends, additional options. Custom middleware: plugin configureServer. Examples: /foo shorthand, /api options target/changeOrigin/rewrite, /fallback RegExp, /socket.io WebSocket rewriteWsOrigin. Origin check WebSocket: Vite no verify before proxy, target expected check, rewriteWsOrigin bypass origin check CSRF risk."
+    },
+    {
+      "index": 7,
+      "manifest": "server.cors type boolean|CorsOptions default {origin: /^https?:\\/\\/...localhost...127\\.0\\.0\\.1...\\[::1\\].*/}. CORS dev server. options object fine-tune ExpressJS cors, true any origin. SECURITY: true any website source code/content risk, explicit list recommended."
+    },
+    {
+      "index": 8,
+      "manifest": "server.headers type OutgoingHttpHeaders. Server response headers specify."
+    },
+    {
+      "index": 9,
+      "manifest": "server.hmr type boolean|{overlay?: boolean}. HMR disable/configure. server.hmr.overlay: false error overlay disable. Deprecated WebSocket options (protocol, host, port, path, clientPort, timeout, server): auto-sync server.ws. Use server.ws instead."
+    },
+    {
+      "index": 10,
+      "manifest": "server.ws type false|{protocol?, host?, port?, path?, timeout?, clientPort?, server?}. WebSocket connection options configure. false disable entirely. protocol (ws|wss), host server, port, path, clientPort client-side port override allow different server port, timeout ms default 30000, server custom HTTP server WebSocket. server.ws.server defined: Vite WebSocket provided server process. Middleware mode: Vite existing server WebSocket attempt. Helpful self-signed/network expose single port. Example: {protocol: 'wss', host: 'localhost', port: 3001}. Note reverse proxy: HMR client fails WebSocket fallback direct Vite HMR server reverse proxies bypass - error ignorable. Avoid: reverse proxy WebSocket proxy, server.strictPort: true + server.ws.clientPort same server.port, server.ws.port different server.port."
+    },
+    {
+      "index": 11,
+      "manifest": "server.forwardConsole type boolean|{unhandledErrors?: boolean, logLevels?: ('error'|'warn'|'info'|'log'|'debug')[]} default auto. Browser runtime events Vite server console forward dev. true unhandled errors, console.error/warn logs. unhandledErrors uncaught exceptions, unhandled promise rejections. logLevels console.* calls forward. Example: {unhandledErrors: true, logLevels: ['warn', 'error']}. @vercel/detect-agent AI agent detection (true auto), false otherwise. Unhandled errors enhanced formatting: error, stack trace, console.log, seed/env, artifact paths (video/screenshot)."
+    },
+    {
+      "index": 12,
+      "manifest": "server.warmup type {clientFiles?: string[], ssrFiles?: string[]}. Related: Warm Up Frequently Used Files guide. Files transform cache advance warm up. clientFiles client-only, ssrFiles SSR-only. tinyglobby patterns array, root relative. Frequently-used only prevent startup overload. Example: ./src/components/*.vue, ./src/utils/big-utils.js, ./src/server/modules/*.js."
+    },
+    {
+      "index": 13,
+      "manifest": "server.watch type object|null. chokidar file system watcher options pass. Bundled-dev: Rolldown watch options (usePolling, pollInterval, useDebounce, debounceDuration, include, exclude) also accepted, chokidar-only outside module graph (config dependencies, env files). Root watch, default skip .git/, node_modules/, test-results/, cacheDir, outDir. File update: HMR apply, page update if needed. null: no watch, compatible emitter, add/unwatch no effect. node_modules watch not possible - workarounds issue #8619. WSL2: Windows apps file edit not watch - WSL2 limitation #4739 Docker WSL2 backend. Fix: WSL2 apps edit recommended, project outside Windows filesystem (slow), {usePolling: true} (high CPU)."
+    },
+    {
+      "index": 14,
+      "manifest": "server.middlewareMode type boolean|{server: http.Server} default false. Related: appType, SSR dev server setup guide. Create Vite middleware mode. Example: Express app createServer({server: {middlewareMode: true}, appType: 'custom'}), app.use(vite.middlewares), custom '*' handler. WebSocket proxy: server provide binding."
+    },
+    {
+      "index": 15,
+      "manifest": "server.fs.strict type boolean default true (since v2.7). Restrict serving files workspace root outside."
+    },
+    {
+      "index": 16,
+      "manifest": "server.fs.allow type string[]. /@fs/ served files restrict. server.fs.strict true: outside directory list 403 unless imported allowed file. Files/directories both. Workspace root: package.json workspaces, lerna.json, pnpm-workspace.yaml, fallback project root. Absolute/relative root path custom. searchForWorkspaceRoot() utility workspace search. Example: allow: ['..'], custom rules, auto detection disable when specified."
+    },
+    {
+      "index": 17,
+      "manifest": "server.fs.deny type string[] default ['.env', '.env.*', '*.{crt,pem,key,p12,pfx,cer,der}', '.npmrc', '.yarnrc.yml', '**/.git/**']. Sensitive files blocklist, higher priority server.fs.allow. picomatch patterns. Public directory: no blocklist apply, files served unfiltered, output copied. Deny filter: module id, stripped query parameters, plugin load any files read (symlink resolve denied), Vite can't guarantee inaccessible alternative. Alternative path: include deny list."
+    },
+    {
+      "index": 18,
+      "manifest": "server.origin type string. Development asset URLs origin define. Example: http://127.0.0.1:8080."
+    },
+    {
+      "index": 19,
+      "manifest": "server.sourcemapIgnoreList type false|(sourcePath, sourcemapPath) => boolean default (sourcePath) => sourcePath.includes('node_modules'). Server sourcemap source files ignore, x_google_ignoreList extension. Dev: absolute path sourcePath, most modules map source same folder filename relative. false disable, function full control. Default node_modules exclude. Related: build.rolldownOptions.output.sourcemapIgnoreList dev equivalent (absolute dev relative rolldown), independent set."
+    }
+  ]
+}

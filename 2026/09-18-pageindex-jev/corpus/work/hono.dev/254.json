@@ -1,0 +1,21 @@
+{
+  "page": "- Trailing Slash Middleware: handles trailing slashes in the URL for GET requests\n- `appendTrailingSlash` redirects to the URL with an added trailing slash when content is not found; `trimTrailingSlash` removes the trailing slash\n- Import: `import { Hono } from 'hono'`, `import { appendTrailingSlash, trimTrailingSlash } from 'hono/trailing-slash'`\n- Usage requires `new Hono({ strict: true })`; examples redirect `/about/me` to `/about/me/` (appendTrailingSlash) and `/about/me/` to `/about/me` (trimTrailingSlash)\n- Options: `alwaysRedirect` (boolean) — by default redirects only on a 404 status; when `true`, redirects before executing handlers, useful for wildcard routes (`*`); available for both middlewares\n- `skip`: `(path: string) => boolean` — determines whether to skip the redirect for a given path, e.g. skip paths with file extensions using `/\\.\\w+$/`; available for both middlewares\n- Note: the middleware is only enabled when the request method is `GET` and the response status is `404`\n- Questions answered: How do I add or remove trailing slashes from URLs in Hono? Why do I need `strict: true` for trailing slash middleware? How do I always redirect on wildcard routes? How do I skip trailing slash redirects for certain paths like files with extensions? When does the trailing slash middleware trigger?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- Import statements for Trailing Slash Middleware\n- `import { Hono } from 'hono'`\n- `import { appendTrailingSlash, trimTrailingSlash } from 'hono/trailing-slash'`\n- Answers: How do I import the Trailing Slash Middleware functions?"
+    },
+    {
+      "index": 1,
+      "manifest": "- Requires `new Hono({ strict: true })`\n- `appendTrailingSlash` example: `app.use(appendTrailingSlash()); app.get('/about/me/', ...)` redirects a GET to `/about/me` -> `/about/me/`\n- `trimTrailingSlash` example: `app.use(trimTrailingSlash()); app.get('/about/me', ...)` redirects a GET to `/about/me/` -> `/about/me`\n- Answers: How do I redirect URLs to add a trailing slash? How do I redirect URLs to remove a trailing slash? Why must strict mode be enabled?"
+    },
+    {
+      "index": 2,
+      "manifest": "- `alwaysRedirect`: `boolean`, optional — by default, trailing slash middleware only redirects when the response status is `404`; when `true`, the middleware redirects before executing handlers; useful for wildcard routes (`*`) where the default behavior doesn't work; example: `app.use(trimTrailingSlash({ alwaysRedirect: true })); app.get('/my-path/*', ...)`; available for both `trimTrailingSlash` and `appendTrailingSlash`\n- `skip`: `(path: string) => boolean`, optional — determines whether the redirect should be skipped based on the request path; returning `true` skips the redirect; useful to exclude paths like file extensions; example: `appendTrailingSlash({ skip: (path) => /\\.\\w+$/.test(path) })`; available for both middlewares\n- Answers: How do I force a redirect on wildcard routes regardless of status code? How do I exclude certain paths (like files with extensions) from trailing slash redirects? What does the `alwaysRedirect` option default to?"
+    },
+    {
+      "index": 3,
+      "manifest": "- The trailing slash middleware is enabled only when the request method is `GET` and the response status is `404`\n- Answers: Under what conditions does the trailing slash middleware activate? Does it work for POST requests?"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "page": "Environment API for plugin authors in Vite 6 (release candidate). Per-environment vs global hooks: global hooks run once per server (config, server setup), per-environment hooks run once per environment with this.environment access. Plugin hooks receive this.environment for accessing environment.config, environment.moduleGraph, environment.transformRequest(). Register new environments in config hook with environments object. configEnvironment hook called for each environment with partially resolved options. hotUpdate hook (async, sequential, per-environment) handles custom HMR updates with type ('create'|'update'|'delete'), file, timestamp, modules array, read() function, server instance. Can filter modules, perform full reload, or send custom events. Per-environment state management using Map<Environment, State> or perEnvironmentState helper. applyToEnvironment hook filters which environments a plugin applies to, returning boolean or replacement plugin. perEnvironmentPlugin helper simplifies per-environment wrapping. environment.hot enables application communication via HMR with vite:client:connect/disconnect events. Build environment handling: plugins receive environment instances during build like dev. Shared plugins during build: Vite 6 builds all environments in single process with shared plugin pipeline. builder.sharedConfigBuild opts into config/plugins sharing. sharedDuringBuild flag marks individual plugins for sharing. perEnvironmentStartEndDuringDev, perEnvironmentWatchChangeDuringDev flags control hook calling. Feedback: GitHub discussions/16358, PR/16471.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Per-environment vs global hooks distinction. Global hooks: config, configResolved, configureServer, resolveVirtualModule, handleHotUpdate - called once independently of environments, this.environment not relevant. Per-environment hooks: Rolldown hooks (resolveId, load, transform, etc), vite-specific module hooks - called once per environment with this.environment access, affect module graph for that environment. buildStart, buildEnd, watchChange call only for client without perEnvironmentStartEndDuringDev flag. Difference between applying transformations to modules vs app-wide setup. Plugin instances shared across environments."
+    },
+    {
+      "index": 1,
+      "manifest": "Accessing current environment in hooks via this.environment. Replace ssr boolean with this.environment.config.consumer === 'server'. this.environment provides: environment.config (resolve conditions, build options), environment.moduleGraph (getModuleByUrl(url) replaces getModuleByUrl(url, {ssr})), environment.transformRequest(url). Vite server has shared plugin pipeline but modules processed in environment context. Accessing environment.config.resolve.conditions in transform hook example. Module runner imported via this.environment.runner.import() for SSR."
+    },
+    {
+      "index": 2,
+      "manifest": "Plugins add new environments in config hook by returning environments object in UserConfig. Example: RSC support creates rsc environment with resolve.conditions including 'react-server'. Empty object registers environment using default values. Environments like client, ssr, custom names supported. Conditional exports handled per environment."
+    },
+    {
+      "index": 3,
+      "manifest": "configEnvironment hook signature: (name: string, config: EnvironmentOptions, env: {mode, command: 'build'|'serve', isSsrBuild?, isPreview?, isSsrTargetWebworker?}) => EnvironmentOptions|null|void. Kind: async, sequential. Scope: per-environment. Called after config hook with partially resolved config including final defaults. Set default values in config hook, per-environment configuration in configEnvironment. Example: add 'workerd' condition to rsc environment."
+    },
+    {
+      "index": 4,
+      "manifest": "hotUpdate hook type: (this: {environment: DevEnvironment}, options: HotUpdateOptions) => Array<EnvironmentModuleNode>|void|Promise<...>. Kind: async, sequential. Scope: per-environment. Handles custom HMR per environment. HotUpdateOptions: type ('create'|'update'|'delete'), file path, timestamp number, modules array (EnvironmentModuleNode), read() async function, server. this.environment is execution environment. modules from current environment only. Can filter modules for accurate HMR, return empty array for full reload, invalidateModule(mod, invalidatedModules, timestamp, true), environment.hot.send({type: 'full-reload'}), send custom events with environment.hot.send({type: 'custom', event: 'special-update', data: {}}), client registers handler with import.meta.hot.on('special-update', handler)."
+    },
+    {
+      "index": 5,
+      "manifest": "Per-environment plugin state management: same plugin instance used for different environments, state keyed with this.environment. Use Map<Environment, State> pattern to keep state separate. Example: Map<Environment, {count: number}> for per-environment module count. Set state in buildStart, access in transform/buildEnd using this.environment key. perEnvironmentStartEndDuringDev flag enables buildStart/buildEnd for each environment. perEnvironmentWatchChangeDuringDev flag for watchChange hook. Flag compatibility for backward compatibility."
+    },
+    {
+      "index": 6,
+      "manifest": "applyToEnvironment hook type: (environment: PartialEnvironment) => boolean|PluginOption|Promise<boolean>. Kind: async, sequential. Scope: per-environment. Define which environments plugin applies to. Return true/false or replacement plugin. If not used, plugin active in all environments. Example: UnoCssPlugin with applyToEnvironment filtering. Simplify with perEnvironmentPlugin helper: perEnvironmentPlugin(name, (environment) => pluginInstance). Plugin returned from applyToEnvironment should not use Vite-specific hooks. Called at config time currently after configResolved, may move before in future."
+    },
+    {
+      "index": 7,
+      "manifest": "Application-plugin communication via environment.hot. Only available for HMR-supporting environments. Managing multiple app instances: vite:client:connect event when connection established, vite:client:disconnect when closed. NormalizedHotChannelClient passed to handlers with send method for specific instance. Keep reference for same connection. Example: server.environments.ssr.hot.on('my:greetings', (data, client) => { client.send('my:foo:reply', ...) }), broadcast with hot.send('my:foo', ...). Application side uses import.meta.hot to send messages to plugin."
+    },
+    {
+      "index": 8,
+      "manifest": "Environment in build hooks: plugin hooks receive environment instance during build replacing ssr boolean. Works for renderChunk, generateBundle, other build-only hooks. Same pattern as dev for module processing based on environment config and instance access."
+    },
+    {
+      "index": 9,
+      "manifest": "Shared plugins during build in Vite 6. Before Vite 6: dev plugins shared, build plugins isolated per environment (separate processes: vite build, vite build --ssr). Vite 6: builds all environments in single process aligning dev/build plugin pipelines. builder.sharedConfigBuild option (default false) enables config/plugin sharing. sharedDuringBuild flag marks plugins for sharing. ResolvedConfig cached at app level like WeakMap<ResolvedConfig, CachedData>. Per-environment ResolvedConfig created by default for backward compatibility. Ecosystem plugins use config.build instead of environment.config.build. Opt-in: set builder.sharedConfigBuild: true in config, or plugin.sharedDuringBuild: true for individual plugins."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "page": "Vite plugin directory covering official, community, and Rolldown plugins. Official Vite plugins: @vitejs/plugin-vue (Vue 3 SFC support), @vitejs/plugin-vue-jsx (Vue 3 JSX via Babel), @vitejs/plugin-react (React Fast Refresh via Oxc Transformer), @vitejs/plugin-react-swc (SWC replaces Oxc dev, SWC+Oxc build with plugins, faster cold start/HMR big projects), @vitejs/plugin-rsc (React Server Components via Environment API, npm create vite --template rsc), @vitejs/plugin-legacy (legacy browser production support). Community plugins: Vite Plugin Registry published npm. Rolldown builtin plugins: used under hood, common use cases, Rolldown Builtin Plugins section. Rolldown/Rollup plugins: Vite plugins extend Rollup interface, Rolldown Plugin Compatibility section.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Official plugins: @vitejs/plugin-vue (Vue 3 SFC), @vitejs/plugin-vue-jsx (Vue 3 JSX Babel), @vitejs/plugin-react (React Fast Refresh Oxc), @vitejs/plugin-react-swc (SWC dev, SWC+Oxc build, faster cold start/HMR big projects), @vitejs/plugin-rsc (React Server Components Environment API, npm create vite --template rsc minimal RSC), @vitejs/plugin-legacy (legacy browser production)."
+    },
+    {
+      "index": 1,
+      "manifest": "Community plugins: Vite Plugin Registry published npm plugins list."
+    },
+    {
+      "index": 2,
+      "manifest": "Rolldown builtin plugins: Vite Rolldown, common use cases, Rolldown Builtin Plugins section."
+    },
+    {
+      "index": 3,
+      "manifest": "Rolldown/Rollup plugins: Vite plugins extend Rollup interface. Rolldown Plugin Compatibility section."
+    }
+  ]
+}

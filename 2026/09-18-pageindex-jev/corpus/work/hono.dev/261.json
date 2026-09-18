@@ -1,0 +1,17 @@
+{
+  "page": "- Accepts Helper: helps handle Accept headers (e.g. Accept-Language, Accept-Encoding) in requests\n- Import: `import { Hono } from 'hono'`, `import { accepts } from 'hono/accepts'`\n- `accepts()` looks at an Accept header and returns the value your app supports that best matches, given a `header`, `supports` list, and `default` value; example uses `Accept-Language` with `supports: ['en', 'ja', 'zh']` and `default: 'en'`\n- `AcceptHeader` type union: `Accept`, `Accept-Charset`, `Accept-Encoding`, `Accept-Language`, `Accept-Patch`, `Accept-Post`, `Accept-Ranges`\n- Options: `header` (required, `AcceptHeader`) the target accept header; `supports` (required, `string[]`) the header values the application supports; `default` (required, `string`) the fallback value; `match` (optional, `(accepts: Accept[], config: acceptsConfig) => string`) a custom match function\n- Questions answered: How do I parse the Accept-Language header in Hono? How do I implement content negotiation for language or encoding? What accept headers does the accepts() function support? How do I provide a custom matching function for accepts?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "- Import statements for Accepts Helper\n- `import { Hono } from 'hono'`\n- `import { accepts } from 'hono/accepts'`\n- Answers: How do I import the Accepts Helper?"
+    },
+    {
+      "index": 1,
+      "manifest": "- `accepts()` looks at the Accept header (such as Accept-Encoding, Accept-Language) and returns the properly matched value\n- Example: `accepts(c, { header: 'Accept-Language', supports: ['en', 'ja', 'zh'], default: 'en' })` used inside `app.get('/', (c) => {...})` to return `c.json({ lang: accept })`\n- `AcceptHeader` type defines the valid header names: `Accept`, `Accept-Charset`, `Accept-Encoding`, `Accept-Language`, `Accept-Patch`, `Accept-Post`, `Accept-Ranges`\n- Answers: How do I use accepts() to negotiate a language from the Accept-Language header? What is the AcceptHeader type? Which Accept-* headers are supported?"
+    },
+    {
+      "index": 2,
+      "manifest": "- `header`: `AcceptHeader`, required — the target accept header\n- `supports`: `string[]`, required — the header values which your application supports\n- `default`: `string`, required — the default value returned when nothing matches\n- `match`: `(accepts: Accept[], config: acceptsConfig) => string`, optional — a custom match function\n- Answers: Which options are required for accepts()? How do I supply a custom match function to accepts()? What happens if no supported value matches?"
+    }
+  ]
+}

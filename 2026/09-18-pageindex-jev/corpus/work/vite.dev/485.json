@@ -1,0 +1,13 @@
+{
+  "page": "Vite SSR API migration from `server.ssrLoadModule` to Module Runner import for arbitrary runtimes. Affected scope: Vite plugin authors. Future deprecation: ModuleRunner introduced v6.0, deprecation server.ssrLoadModule planned future major, identify usage: set future.removeSsrLoadModule 'warn' vite config. Motivation: server.ssrLoadModule(url) imports modules ssr environment only, executes same process as Vite dev server. Apps custom environments each associated ModuleRunner may run separate thread/process. Import modules: moduleRunner.import(url). ModuleRunner modern replacement. Stack traces: server.ssrFixStacktrace/server.ssrRewriteStacktrace not call using Module Runner APIs, stack traces updated unless sourcemapInterceptor false. Migration guide: check Environment API Frameworks Guide. Use environment.runner.import(url) import modules environment. Feedback: GitHub discussions/16358.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Motivation: server.ssrLoadModule(url) imports modules ssr environment only, executes same process Vite server. Apps custom environments each associated ModuleRunner may run separate thread/process. Import modules: moduleRunner.import(url). ModuleRunner modern replacement server.ssrLoadModule."
+    },
+    {
+      "index": 1,
+      "manifest": "Migration guide: check Environment API Frameworks Guide. use environment.runner.import(url) import modules environment. server.ssrFixStacktrace and server.ssrRewriteStacktrace not call using Module Runner APIs, stack traces updated unless sourcemapInterceptor: false."
+    }
+  ]
+}

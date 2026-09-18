@@ -1,0 +1,17 @@
+{
+  "page": "Next.js integration with App Router. Create app/api/[[...slugs]]/route.ts file. Define Elysia server with prefix /api. Export Elysia.fetch with HTTP methods (GET, POST). Works as normal Next.js API route due to WinterTC compliance. Enables co-location of frontend and backend in single repo. Supports end-to-end type safety with Eden and both client-side and server action components.\nQuestions: How do you run Elysia with Next.js? How do you set up prefix? What type safety tools are available?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Prefix configuration for non-root routing. Since Elysia server not in root directory of app router, annotate prefix. Example: app/user/[[...slugs]]/route.ts requires prefix /user via `new Elysia({ prefix: '/user' })`. Ensures proper routing.\nQuestions: Why is prefix needed? How is it configured?"
+    },
+    {
+      "index": 1,
+      "manifest": "Eden integration for end-to-end type safety. Isomorphic fetch pattern for direct server calls and network layer client calls. Export Elysia instance from route.ts. Create Treaty client: check `typeof process !== undefined` for server vs client (avoid `typeof window` which undefined at build time causing hydration error). Works with Incremental Static Regeneration (ISR).\nQuestions: How do you implement isomorphic fetch? Why avoid typeof window? What is ISR?"
+    },
+    {
+      "index": 2,
+      "manifest": "React Query integration for client-side data fetching. Usage: createFileRoute with useQuery hook. getTreaty() call with queryKey and queryFn. Works with React Query features: caching, pagination, infinite queries. Provides type safety with Elysia endpoints.\nQuestions: How do you integrate React Query? What features are supported?"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "page": "Vite release versioning, cycles, supported versions, semantic versioning edge cases. Semantic Versioning: npm package latest stable version. Full changelog: GitHub CHANGELOG.md. Release cycle: no fixed. Patch: as needed (usually weekly), fixes. Minor: new features, beta pre-release (usually 2 months), new features. Major: Node.js EOL alignment, long-term ecosystem discussions, alpha/beta phases (usually yearly). Supported versions: current supported ranges auto-determined. Current Minor: regular fixes. Previous Major/Minor: latest only, important/security patches. Second-to-last Major/Minor: latest only, security patches. Before: unsupported. Recommend: update regularly, check Migration Guides each major, Vite team ecosystem CI (vite-ecosystem-ci project) test new versions pre-release, most projects quickly support new versions. TypeScript definitions edge case: incompatible changes minor versions. TypeScript minor changes require adjust types support, adopt features only newer TypeScript version raise minimum. Lock minor version use semver, manual update new minor Vite. Node.js non-LTS: odd-numbered not CI tested, should work before EOL. Pre-releases: non-fixed beta minor, alpha/beta major. Early adopters/ecosystem integration/stability testing, feedback, not production. Pin exact versions. Deprecations: periodically superseded features minor releases. Deprecated continue work type/logged warning, removed next major. Migration Guide each major list removals, upgrade path. Experimental features: marked released stable. Gather real-world experience influence design. Goal: users feedback production testing. Unstable: only controlled manner, change minors, pin Vite version reliance. GitHub discussion per experimental.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Release cycle no fixed. Patch: as needed usually weekly. Minor: new features, beta pre-release usually 2 months, new features. Major: Node.js EOL align, long-term ecosystem discussions, alpha/beta usually yearly."
+    },
+    {
+      "index": 1,
+      "manifest": "Supported versions: current minor regular fixes, previous major/minor (latest) important/security, second-to-last major/minor (latest) security, before unsupported. Recommend: update regularly, check Migration Guides major, Vite team ecosystem CI (vite-ecosystem-ci) test, most projects quickly support."
+    },
+    {
+      "index": 2,
+      "manifest": "TypeScript definitions edge case: incompatible changes minor. TypeScript minor changes require type adjust support. Adopt features newer TypeScript version raise minimum. Lock minor version semver, manual update new minor Vite. Node.js non-LTS (odd-numbered) not CI tested, should work before EOL."
+    },
+    {
+      "index": 3,
+      "manifest": "Pre-releases: non-fixed beta minor, alpha/beta major. Early adopters/ecosystem integration/stability testing, feedback. Not production. Pin exact versions."
+    },
+    {
+      "index": 4,
+      "manifest": "Deprecations: periodically superseded features minor. Deprecated continue work type/logged warning, removed next major. Migration Guide major list removals, upgrade path."
+    },
+    {
+      "index": 5,
+      "manifest": "Experimental features: marked released stable version. Gather real-world experience influence design. Goal: users feedback production. Unstable: only controlled manner, change minors, pin Vite version. GitHub discussion per."
+    }
+  ]
+}

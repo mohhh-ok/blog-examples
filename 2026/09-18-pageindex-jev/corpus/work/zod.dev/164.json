@@ -1,0 +1,29 @@
+{
+  "page": "Zod introduction page. TypeScript-first validation library by @colinhacks. Define schemas to validate data from simple strings to complex nested objects. Created for Node.js and modern browsers. Zod 4 is stable with release notes and migration guide available. Library features, installation, requirements, ecosystem, sponsors. Zero dependencies, 2kb gzipped core bundle. Immutable API. Works with TypeScript and plain JavaScript. Built-in JSON Schema conversion. MCP server available for agents. llms.txt file provided. Extensive ecosystem of libraries and integrations. Questions: What is Zod? How do I install it? What are the features? What TypeScript version is required? What ecosystem integrations exist?",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Zod is TypeScript-first validation library. Define schemas to validate data from simple strings to complex nested objects. Import with `import * as z from 'zod'`. Create object schemas using z.object(). Use .parse() method for validation with untrusted data. Parsed result is validated and type safe. Example: z.object({ name: z.string() }). Basic usage pattern shown with type inference."
+    },
+    {
+      "index": 1,
+      "manifest": "Zod features: zero external dependencies, works in Node.js and all modern browsers, tiny 2kb core bundle (gzipped), immutable API with methods returning new instances, concise interface, works with TypeScript and plain JavaScript, built-in JSON Schema conversion, extensive ecosystem."
+    },
+    {
+      "index": 2,
+      "manifest": "Installation via npm install zod. Alternative package available as @zod/zod on jsr.io. MCP server provided for agents to search Zod docs - add via instructions at share.inkeep.com/zod/mcp. llms.txt file available at zod.dev/llms.txt for LLM integrations."
+    },
+    {
+      "index": 3,
+      "manifest": "TypeScript v5.5 or later required. Older versions may work but not officially supported. Must enable strict mode in tsconfig.json under compilerOptions - set \"strict\": true. Strict mode is best practice for all TypeScript projects."
+    },
+    {
+      "index": 4,
+      "manifest": "Zod ecosystem includes resources, API libraries, form integrations, Zod to X converters, X to Zod converters, mocking libraries, powered by Zod projects. Notable highlighted projects: tRPC for end-to-end typesafe APIs with Zod schema support; React Hook Form for hook-based form validation with Zod resolver; zshy bundler-free TypeScript library build tool. Ecosystem page links provided for complete list."
+    },
+    {
+      "index": 5,
+      "manifest": "Sponsorship encouraged at any level. Corporate tiers available at github.com/sponsors/colinhacks for products built using Zod. Sponsorship levels: Platinum, Gold, Silver, Bronze."
+    }
+  ]
+}

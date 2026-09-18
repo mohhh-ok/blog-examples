@@ -1,0 +1,57 @@
+{
+  "page": "Server-Side Rendering (SSR) with Vite: front-end frameworks (React, Preact, Vue, Svelte) run Node.js, pre-render HTML, hydrate client. Low-level API for library/framework authors (use higher-level SSR plugins/tools Awesome Vite SSR section). Guide assumes SSR framework experience, Vite-specific details. Example projects: create-vite-extra (Vanilla, Vue, React, Preact, Svelte, Solid SSR). Create-vite scaffold (Others > create-vite-extra). Source structure: index.html (entry point), server.js (main app server), src/ (main.js universal, entry-client.js mounts DOM, entry-server.js renders framework SSR). Index.html references entry-client.js, placeholder <!--ssr-outlet--> server-rendered markup injected. Conditional logic: import.meta.env.SSR detects SSR vs client (tree-shaken branches). Dev server setup: Vite middleware mode (express example), ViteDevServer instance, vite.middlewares Connect instance. Handler implements * route serving rendered HTML. Dev script: node server instead vite. Production build: client build, SSR build (--ssr flag), NODE_ENV check. Package.json: build:client (outDir dist/client), build:server (outDir dist/server --ssr entry). Production server.js uses dist/client/index.html template, dist/server/entry-server.js import. Preload directives: --ssrManifest flag generates .vite/ssr-manifest.json. Module ID mapping client files. Pre-rendering: static HTML generation known routes/data. SSR externals: dependencies externalized by default (speed). Add ssr.noExternal for Vite pipeline transformations. Linked deps not externalized default (HMR advantage). Plugin logic: options ssr property (resolveId, load, transform hooks distinguish client/SSR). SSR target: default Node.js, webworker alternative. SSR bundle: ssr.noExternal=true bundles (all deps, error Node.js builtins). Resolve conditions: default resolve.conditions, customize ssr.resolve.conditions/externalConditions. CLI: vite dev/preview SSR apps, configureServer/configurePreviewServer hooks add middleware.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Example SSR projects: create-vite-extra repository. Available: Vanilla, Vue, React, Preact, Svelte, Solid templates. Scaffold locally: create-vite → Others > create-vite-extra framework option. Examples reference implementations."
+    },
+    {
+      "index": 1,
+      "manifest": "Source structure: index.html (entry point), server.js (main application server), src/ (main.js universal/env-agnostic, entry-client.js mounts DOM element, entry-server.js framework SSR API render). Index.html references <script type='module' src=/src/entry-client.js>, includes <!--ssr-outlet--> placeholder server-rendered markup injection. Any placeholder acceptable if replaceable precisely."
+    },
+    {
+      "index": 2,
+      "manifest": "Conditional logic: import.meta.env.SSR detects SSR vs client. Statically replaced tree-shaking unused branches. Server-only logic conditional via flag."
+    },
+    {
+      "index": 3,
+      "manifest": "Dev server setup: Vite middleware mode + custom server (Express example). Create ViteDevServer middleware mode, appType: 'custom' (Vite HTML serving disabled). app.use(vite.middlewares) integration. App handler asterisk route (*all async request handler). vite.middlewares Connect instance. Create ViteDevServer returns instance. Middleware reference. Handler reads index.html template, applies Vite HTML transforms (HMR injection, plugin HTML transforms), ssrLoadModule loads entry-server, render function called, app-rendered HTML injected template, HTML response sent. Error catching: vite.ssrFixStacktrace maps stack traces to source. Dev script: package.json dev script node server instead vite. SSR-only module updates: updating SSR-only imported modules doesn't reload browser (framework integration usually handles). Low-level custom setup add plugin ssrReload(), hotUpdate hook post-order handler. Environment API moduleGraph tracking. hotUpdate hook details."
+    },
+    {
+      "index": 4,
+      "manifest": "Production build: two builds. Client build: normal vite build --outDir dist/client. SSR build: vite build --outDir dist/server --ssr src/entry-server.js (--ssr flag + entry). Note: --ssr flag indicates SSR build + specifies entry. Package.json scripts example: build:client, build:server. Production server.js: NODE_ENV check. Read dist/client/index.html template (asset links correct). Import dist/server/entry-server.js (build result). Move vite creation + usage behind dev conditional (vite only dev). Add static file middlewares dist/client serving. Example projects working setup reference."
+    },
+    {
+      "index": 5,
+      "manifest": "Generating preload directives: --ssrManifest flag build (vite build --outDir dist/client --ssrManifest). Generates dist/client/.vite/ssr-manifest.json. Manifest mappings module IDs to client chunks/assets. Framework component ID collection during server render. Vue SSR: @vitejs/plugin-vue auto-registers module IDs on Vue SSR context. entry-server.js ctx module set after render. Production server.js read manifest, pass render function. Information render preload directives async routes. 103 Early Hints support. Demo source reference."
+    },
+    {
+      "index": 6,
+      "manifest": "Pre-rendering/SSG: routes/data known ahead pre-render static HTML. Same logic production SSR. Pre-render script example demo. Static-Site Generation (SSG) form."
+    },
+    {
+      "index": 7,
+      "manifest": "SSR externals: dependencies externalized Vite SSR transform by default (speed both dev/build). Dependency needs transform: add ssr.noExternal config. Example: Vite features untranspiled. Linked deps not externalized default (HMR advantage). Undesired: ssr.external add (test deps as-if not linked). Working aliases: redirect package to another, alias actual node_modules packages (npm: prefix Yarn/pnpm). Both Yarn, pnpm alias support."
+    },
+    {
+      "index": 8,
+      "manifest": "SSR-specific plugin logic: frameworks (Vue, Svelte) compile different formats client vs SSR. Conditional transforms: ssr property added plugin hooks options object. Hooks: resolveId, load, transform. Example: options?.ssr check transform. options object optional (load/transform current). Rollup future metadata may extend. Note: Vite 2.7 used positional ssr param (updated major frameworks)."
+    },
+    {
+      "index": 9,
+      "manifest": "SSR target: default Node.js environment. Alternative: Web Worker (ssr.target: 'webworker'). Package entry resolution different per platform. Configure target runtime."
+    },
+    {
+      "index": 10,
+      "manifest": "SSR bundle: webworker runtimes, bundle SSR build single JS file. ssr.noExternal=true enables. Treats all dependencies noExternal, throws error Node.js builtins imported."
+    },
+    {
+      "index": 11,
+      "manifest": "SSR resolve conditions: default resolve.conditions SSR build. ssr.resolve.conditions, ssr.resolve.externalConditions customize behavior."
+    },
+    {
+      "index": 12,
+      "manifest": "Vite CLI SSR apps: vite dev, vite preview usable SSR. configureServer hook adds dev server middlewares. configurePreviewServer hook adds preview server middlewares. Post hook recommended (SSR middleware after Vite's). Note: SSR middleware timing important."
+    }
+  ]
+}

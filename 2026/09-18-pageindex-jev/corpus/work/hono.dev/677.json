@@ -1,0 +1,25 @@
+{
+  "page": "Vercel AI cloud deployment: platform for building, scaling, securing applications. Hono deploys to Vercel with zero-configuration. Starter templates available via create-hono. Requires Vercel CLI for local development. Development server runs on localhost:3000. Deploy command: vercel deploy. Export app as default export from index.ts or src/index.ts.",
+  "sections": [
+    {
+      "index": 0,
+      "manifest": "Project setup with create-hono@latest my-app selecting vercel template. Installation with npm/yarn/pnpm/bun (cd my-app, run install). Install Vercel CLI globally from official documentation."
+    },
+    {
+      "index": 1,
+      "manifest": "Create Hono app in index.ts or src/index.ts as default export. GET / endpoint returns welcome text. If using vercel template, already configured."
+    },
+    {
+      "index": 2,
+      "manifest": "Run development server locally: vercel dev. Access localhost:3000 for text response."
+    },
+    {
+      "index": 3,
+      "manifest": "Deploy to Vercel: vercel deploy or vc deploy command."
+    },
+    {
+      "index": 4,
+      "manifest": "Further reading: Vercel documentation for Hono framework integration."
+    }
+  ]
+}
