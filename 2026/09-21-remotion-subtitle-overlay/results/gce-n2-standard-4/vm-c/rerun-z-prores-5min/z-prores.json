@@ -1,0 +1,35 @@
+{
+ "condition": "Z-prores",
+ "runs": [
+  {
+   "condition": "Z-prores",
+   "phase": "render",
+   "rep": 1,
+   "concurrency": "default",
+   "durationSec": 60,
+   "fps": 30,
+   "width": 1080,
+   "height": 1920,
+   "wallTimeMs": 305435.436935,
+   "outputPath": "z-prores_d60_cdefault_r1.mov",
+   "outputBytes": 269128804,
+   "secondsPerSecond": 5.090590615583333,
+   "timestamp": "2026-09-21T12:49:55.941Z"
+  },
+  {
+   "condition": "Z-prores",
+   "phase": "overlay",
+   "rep": 1,
+   "concurrency": "default",
+   "durationSec": 60,
+   "fps": 30,
+   "width": 1080,
+   "height": 1920,
+   "wallTimeMs": 69811.81664699991,
+   "outputPath": "z-prores_d60_cdefault_r1.mp4",
+   "outputBytes": 16544012,
+   "secondsPerSecond": 1.1635302774499985,
+   "timestamp": "2026-09-21T12:51:05.756Z"
+  }
+ ]
+}

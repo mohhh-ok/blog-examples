@@ -1,0 +1,64 @@
+{
+ "runs": [
+  {
+   "condition": "Y",
+   "longMinutes": 20,
+   "ran": true,
+   "runs": [
+    {
+     "condition": "Y",
+     "phase": "render",
+     "rep": 1,
+     "concurrency": "default",
+     "durationSec": 1200,
+     "fps": 30,
+     "width": 1080,
+     "height": 1920,
+     "wallTimeMs": 8301316.460484,
+     "outputPath": "y_long_20min.mp4",
+     "outputBytes": 489833926,
+     "secondsPerSecond": 6.917763717070001,
+     "timestamp": "2026-09-21T11:01:08.469Z"
+    }
+   ]
+  },
+  {
+   "condition": "Z-vp9",
+   "longMinutes": 20,
+   "ran": false,
+   "reason": "LONG_CONDITIONS で指定されなかったため実行せず",
+   "runs": []
+  },
+  {
+   "condition": "Z-prores",
+   "longMinutes": 20,
+   "ran": true,
+   "runs": [
+    {
+     "condition": "Z-prores",
+     "phase": "render",
+     "rep": 1,
+     "concurrency": "default",
+     "durationSec": 1200,
+     "fps": 30,
+     "width": 1080,
+     "height": 1920,
+     "wallTimeMs": 3498665.0856529996,
+     "outputPath": "z-prores_long_draw.mov",
+     "outputBytes": null,
+     "secondsPerSecond": 2.9155542380441664,
+     "timestamp": "2026-09-21T11:59:27.135Z",
+     "error": "FFmpeg quit with code null (SIGHUP) The FFmpeg output was ffmpeg version n7.1 Copyright (c) 2000-2024 the FFmpeg developers\n  built with gcc 9 (Ubuntu 9.4.0-1ubuntu1~20.04.2)\n  configuration: --prefix ...(truncated)"
+    }
+   ]
+  },
+  {
+   "condition": "X",
+   "longMinutes": 20,
+   "ran": false,
+   "reason": "60秒実測の秒/秒中央値 (8.938) から外挿すると約 178.8 分かかる見込みのため実行しない (1時間超)",
+   "extrapolatedSeconds": 10725.13234232,
+   "runs": []
+  }
+ ]
+}

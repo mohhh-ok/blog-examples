@@ -1,0 +1,35 @@
+{
+ "condition": "X-video",
+ "runs": [
+  {
+   "condition": "X-video",
+   "phase": "render",
+   "rep": 1,
+   "concurrency": 1,
+   "durationSec": 60,
+   "fps": 30,
+   "width": 1080,
+   "height": 1920,
+   "wallTimeMs": 1223900.26663,
+   "outputPath": "x-video_d60_c1_r1.mp4",
+   "outputBytes": 22795883,
+   "secondsPerSecond": 20.398337777166667,
+   "timestamp": "2026-09-21T09:38:06.943Z"
+  },
+  {
+   "condition": "X-video",
+   "phase": "render",
+   "rep": 1,
+   "concurrency": "default",
+   "durationSec": 60,
+   "fps": 30,
+   "width": 1080,
+   "height": 1920,
+   "wallTimeMs": 1069836.15364,
+   "outputPath": "x-video_d60_cdefault_r1.mp4",
+   "outputBytes": 22791204,
+   "secondsPerSecond": 17.830602560666666,
+   "timestamp": "2026-09-21T09:55:56.796Z"
+  }
+ ]
+}

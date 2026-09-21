@@ -1,0 +1,26 @@
+{
+  "name": "remotion-subtitle-overlay",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assets": "bun run scripts/generate-assets.ts",
+    "measure": "bun run scripts/measure.ts",
+    "frames": "bun run scripts/extract-frames.ts",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.459",
+    "@remotion/google-fonts": "4.0.459",
+    "@remotion/media": "4.0.459",
+    "@remotion/renderer": "4.0.459",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.459"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "bun-types": "^1.4.2",
+    "typescript": "^5.9.2"
+  }
+}

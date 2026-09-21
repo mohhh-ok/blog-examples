@@ -1,0 +1,20 @@
+{
+ "condition": "X",
+ "runs": [
+  {
+   "condition": "X",
+   "phase": "render",
+   "rep": 1,
+   "concurrency": 1,
+   "durationSec": 60,
+   "fps": 30,
+   "width": 1080,
+   "height": 1920,
+   "wallTimeMs": 536256.617116,
+   "outputPath": "x_d60_c1_r1.mp4",
+   "outputBytes": 22854854,
+   "secondsPerSecond": 8.937610285266667,
+   "timestamp": "2026-09-21T08:36:11.484Z"
+  }
+ ]
+}

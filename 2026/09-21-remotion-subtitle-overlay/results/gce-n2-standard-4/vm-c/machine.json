@@ -1,0 +1,12 @@
+{
+ "platform": "linux",
+ "arch": "x64",
+ "cpuModel": "Intel(R) Xeon(R) CPU @ 2.80GHz",
+ "cpuCount": 4,
+ "totalMemoryBytes": 16779534336,
+ "macosVersion": "Debian GNU/Linux 12 (bookworm)",
+ "bunVersion": "1.4.2",
+ "nodeVersion": "unavailable (Command failed: node --version\nerror: Missing script to execute. Pass --interactive to start the Node.js-compatible REPL.\n)",
+ "ffmpegVersion": "ffmpeg version 5.1.9-0+deb12u1 Copyright (c) 2000-2026 the FFmpeg developers",
+ "collectedAt": "2026-09-21T08:27:07.322Z"
+}

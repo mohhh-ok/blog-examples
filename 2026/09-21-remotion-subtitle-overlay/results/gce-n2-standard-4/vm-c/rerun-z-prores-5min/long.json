@@ -1,0 +1,62 @@
+{
+ "runs": [
+  {
+   "condition": "Y",
+   "longMinutes": 5,
+   "ran": false,
+   "reason": "LONG_CONDITIONS で指定されなかったため実行せず",
+   "runs": []
+  },
+  {
+   "condition": "Z-vp9",
+   "longMinutes": 5,
+   "ran": false,
+   "reason": "LONG_CONDITIONS で指定されなかったため実行せず",
+   "runs": []
+  },
+  {
+   "condition": "Z-prores",
+   "longMinutes": 5,
+   "ran": true,
+   "runs": [
+    {
+     "condition": "Z-prores",
+     "phase": "render",
+     "rep": 1,
+     "concurrency": "default",
+     "durationSec": 300,
+     "fps": 30,
+     "width": 1080,
+     "height": 1920,
+     "wallTimeMs": 1522034.841455,
+     "outputPath": "z-prores_long_draw.mov",
+     "outputBytes": 1345930443,
+     "secondsPerSecond": 5.073449471516667,
+     "timestamp": "2026-09-21T13:16:28.561Z"
+    },
+    {
+     "condition": "Z-prores",
+     "phase": "overlay",
+     "rep": 1,
+     "concurrency": "default",
+     "durationSec": 300,
+     "fps": 30,
+     "width": 1080,
+     "height": 1920,
+     "wallTimeMs": 347753.41349099996,
+     "outputPath": "z-prores_long.mp4",
+     "outputBytes": 82910217,
+     "secondsPerSecond": 1.1591780449699998,
+     "timestamp": "2026-09-21T13:22:16.315Z"
+    }
+   ]
+  },
+  {
+   "condition": "X",
+   "longMinutes": 5,
+   "ran": false,
+   "reason": "X の 60 秒実測がないため外挿できない (conditions に X を含めて先に実行すること)",
+   "runs": []
+  }
+ ]
+}
