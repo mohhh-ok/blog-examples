@@ -1,0 +1,15 @@
+{"model": "irodori", "tag": "n01", "asr_model": "gpt-4o-transcribe", "katakana": "カイギワチュウヨウジサンジュップンニハジマリマス", "non_katakana_chars": "", "elapsed_s": 1.0}
+{"model": "irodori", "tag": "r032", "asr_model": "gpt-4o-transcribe", "katakana": "カレワフルイヘビノメガサヲサシテアルイテイタ。", "non_katakana_chars": "", "elapsed_s": 0.94}
+{"model": "irodori", "tag": "r087", "asr_model": "gpt-4o-transcribe", "katakana": "テンチノミチというヒョウゲンはコテンにミラレル。", "non_katakana_chars": "いうとには", "elapsed_s": 0.99}
+{"model": "fish", "tag": "n03", "asr_model": "gpt-4o-transcribe", "katakana": "マンドクドハキュウジュウロクテンゴパーセントデシタ", "non_katakana_chars": "", "elapsed_s": 0.93}
+{"model": "fish", "tag": "n04", "asr_model": "gpt-4o-transcribe", "katakana": "アタラシイAPIヲコウカイシマシタ。", "non_katakana_chars": "AIP", "elapsed_s": 0.87}
+{"model": "fish", "tag": "n08", "asr_model": "gpt-4o-transcribe", "katakana": "マイツキセンマンエンノウリアゲガアリマス。", "non_katakana_chars": "", "elapsed_s": 0.81}
+{"model": "fish", "tag": "n09", "asr_model": "gpt-4o-transcribe", "katakana": "ジュウブンゴニモドリマス", "non_katakana_chars": "", "elapsed_s": 0.8}
+{"model": "fish", "tag": "r006", "asr_model": "gpt-4o-transcribe", "katakana": "ソノアンケンニツイテハイッタンホリュトシマス。", "non_katakana_chars": "", "elapsed_s": 0.93}
+{"model": "fish", "tag": "r009", "asr_model": "gpt-4o-transcribe", "katakana": "ニワノシタフヲミジカクカリコム。", "non_katakana_chars": "", "elapsed_s": 0.92}
+{"model": "fish", "tag": "r014", "asr_model": "gpt-4o-transcribe", "katakana": "テントウテキナカズヨヤケンチクノウツクシサニカンドウシタ。", "non_katakana_chars": "", "elapsed_s": 0.93}
+{"model": "fish", "tag": "r028", "asr_model": "gpt-4o-transcribe", "katakana": "コノテイエンハニホンノデントウテキナオモモキガアル", "non_katakana_chars": "", "elapsed_s": 1.01}
+{"model": "fish", "tag": "r032", "asr_model": "gpt-4o-transcribe", "katakana": "カレハフルイヘビノメガサヲサシテアルイテイタ", "non_katakana_chars": "", "elapsed_s": 1.02}
+{"model": "fish", "tag": "r043", "asr_model": "gpt-4o-transcribe", "katakana": "コウジョウカラノハイスイニヨルスイシツオセンガシンコクデス。", "non_katakana_chars": "", "elapsed_s": 0.93}
+{"model": "fish", "tag": "r059", "asr_model": "gpt-4o-transcribe", "katakana": "フルイセキニキザマレタモジハ、レキシヲモノガタッテイル。", "non_katakana_chars": "", "elapsed_s": 1.03}
+{"model": "fish", "tag": "r087", "asr_model": "gpt-4o-transcribe", "katakana": "テンチノミチというヒョウゲンはコテンにミラレル。", "non_katakana_chars": "いうとには", "elapsed_s": 0.87}
