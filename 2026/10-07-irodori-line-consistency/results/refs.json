@@ -1,0 +1,404 @@
+[
+  {
+    "id": "jvs016",
+    "gender": "F",
+    "minf0": 110.0,
+    "maxf0": 340.0,
+    "f0_center": 193.4,
+    "rank_in_gender": "1/51",
+    "voice": "jvs016",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 16.702,
+        "sample_rate": 24000,
+        "peak_db": -6.32,
+        "rms_db": -23.81,
+        "quietest_0.2s_rms_db": -74.81
+      },
+      "quiet": {
+        "seconds": 16.702,
+        "sample_rate": 24000,
+        "peak_db": -31.32,
+        "rms_db": -48.81,
+        "quietest_0.2s_rms_db": -97.93
+      },
+      "noisy": {
+        "seconds": 16.702,
+        "sample_rate": 24000,
+        "peak_db": -6.26,
+        "rms_db": -23.78,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.81
+      }
+    }
+  },
+  {
+    "id": "jvs084",
+    "gender": "F",
+    "minf0": 115.0,
+    "maxf0": 400.0,
+    "f0_center": 214.5,
+    "rank_in_gender": "13/51",
+    "voice": "jvs084",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 23.339,
+        "sample_rate": 24000,
+        "peak_db": -11.6,
+        "rms_db": -29.25,
+        "quietest_0.2s_rms_db": -76.84
+      },
+      "quiet": {
+        "seconds": 23.339,
+        "sample_rate": 24000,
+        "peak_db": -36.59,
+        "rms_db": -54.25,
+        "quietest_0.2s_rms_db": -101.87
+      },
+      "noisy": {
+        "seconds": 23.339,
+        "sample_rate": 24000,
+        "peak_db": -11.41,
+        "rms_db": -29.13,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.75
+      }
+    }
+  },
+  {
+    "id": "jvs063",
+    "gender": "F",
+    "minf0": 130.0,
+    "maxf0": 390.0,
+    "f0_center": 225.2,
+    "rank_in_gender": "26/51",
+    "voice": "jvs063",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 15.975,
+        "sample_rate": 24000,
+        "peak_db": -12.71,
+        "rms_db": -28.79,
+        "quietest_0.2s_rms_db": -74.35
+      },
+      "quiet": {
+        "seconds": 15.975,
+        "sample_rate": 24000,
+        "peak_db": -37.72,
+        "rms_db": -53.79,
+        "quietest_0.2s_rms_db": -97.59
+      },
+      "noisy": {
+        "seconds": 15.975,
+        "sample_rate": 24000,
+        "peak_db": -12.45,
+        "rms_db": -28.68,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.73
+      }
+    }
+  },
+  {
+    "id": "jvs004",
+    "gender": "F",
+    "minf0": 130.0,
+    "maxf0": 430.0,
+    "f0_center": 236.4,
+    "rank_in_gender": "39/51",
+    "voice": "jvs004",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 17.572,
+        "sample_rate": 24000,
+        "peak_db": -7.51,
+        "rms_db": -25.06,
+        "quietest_0.2s_rms_db": -73.96
+      },
+      "quiet": {
+        "seconds": 17.572,
+        "sample_rate": 24000,
+        "peak_db": -32.51,
+        "rms_db": -50.06,
+        "quietest_0.2s_rms_db": -97.64
+      },
+      "noisy": {
+        "seconds": 17.572,
+        "sample_rate": 24000,
+        "peak_db": -7.46,
+        "rms_db": -25.01,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.76
+      }
+    }
+  },
+  {
+    "id": "jvs061",
+    "gender": "F",
+    "minf0": 140.0,
+    "maxf0": 470.0,
+    "f0_center": 256.5,
+    "rank_in_gender": "51/51",
+    "voice": "jvs061",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 17.503,
+        "sample_rate": 24000,
+        "peak_db": -12.14,
+        "rms_db": -31.88,
+        "quietest_0.2s_rms_db": -74.47
+      },
+      "quiet": {
+        "seconds": 17.503,
+        "sample_rate": 24000,
+        "peak_db": -37.15,
+        "rms_db": -56.88,
+        "quietest_0.2s_rms_db": -97.84
+      },
+      "noisy": {
+        "seconds": 17.503,
+        "sample_rate": 24000,
+        "peak_db": -12.14,
+        "rms_db": -31.66,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.82
+      }
+    }
+  },
+  {
+    "id": "jvs006",
+    "gender": "M",
+    "minf0": 70.0,
+    "maxf0": 190.0,
+    "f0_center": 115.3,
+    "rank_in_gender": "1/49",
+    "voice": "jvs006",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 20.201,
+        "sample_rate": 24000,
+        "peak_db": -12.09,
+        "rms_db": -27.64,
+        "quietest_0.2s_rms_db": -74.38
+      },
+      "quiet": {
+        "seconds": 20.201,
+        "sample_rate": 24000,
+        "peak_db": -37.09,
+        "rms_db": -52.64,
+        "quietest_0.2s_rms_db": -97.76
+      },
+      "noisy": {
+        "seconds": 20.201,
+        "sample_rate": 24000,
+        "peak_db": -11.92,
+        "rms_db": -27.56,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.8
+      }
+    }
+  },
+  {
+    "id": "jvs100",
+    "gender": "M",
+    "minf0": 70.0,
+    "maxf0": 240.0,
+    "f0_center": 129.6,
+    "rank_in_gender": "13/49",
+    "voice": "jvs100",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 16.918,
+        "sample_rate": 24000,
+        "peak_db": -9.74,
+        "rms_db": -29.0,
+        "quietest_0.2s_rms_db": -77.23
+      },
+      "quiet": {
+        "seconds": 16.918,
+        "sample_rate": 24000,
+        "peak_db": -34.73,
+        "rms_db": -54.0,
+        "quietest_0.2s_rms_db": -101.81
+      },
+      "noisy": {
+        "seconds": 16.918,
+        "sample_rate": 24000,
+        "peak_db": -9.62,
+        "rms_db": -28.89,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.86
+      }
+    }
+  },
+  {
+    "id": "jvs045",
+    "gender": "M",
+    "minf0": 70.0,
+    "maxf0": 280.0,
+    "f0_center": 140.0,
+    "rank_in_gender": "25/49",
+    "voice": "jvs045",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 16.737,
+        "sample_rate": 24000,
+        "peak_db": -7.0,
+        "rms_db": -24.69,
+        "quietest_0.2s_rms_db": -75.25
+      },
+      "quiet": {
+        "seconds": 16.737,
+        "sample_rate": 24000,
+        "peak_db": -32.0,
+        "rms_db": -49.69,
+        "quietest_0.2s_rms_db": -98.68
+      },
+      "noisy": {
+        "seconds": 16.737,
+        "sample_rate": 24000,
+        "peak_db": -6.91,
+        "rms_db": -24.65,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.8
+      }
+    }
+  },
+  {
+    "id": "jvs041",
+    "gender": "M",
+    "minf0": 70.0,
+    "maxf0": 300.0,
+    "f0_center": 144.9,
+    "rank_in_gender": "37/49",
+    "voice": "jvs041",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 18.888,
+        "sample_rate": 24000,
+        "peak_db": -3.06,
+        "rms_db": -27.53,
+        "quietest_0.2s_rms_db": -76.9
+      },
+      "quiet": {
+        "seconds": 18.888,
+        "sample_rate": 24000,
+        "peak_db": -28.06,
+        "rms_db": -52.53,
+        "quietest_0.2s_rms_db": -102.08
+      },
+      "noisy": {
+        "seconds": 18.888,
+        "sample_rate": 24000,
+        "peak_db": -3.01,
+        "rms_db": -27.45,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.78
+      }
+    }
+  },
+  {
+    "id": "jvs098",
+    "gender": "M",
+    "minf0": 70.0,
+    "maxf0": 340.0,
+    "f0_center": 154.3,
+    "rank_in_gender": "49/49",
+    "voice": "jvs098",
+    "source_utterances": [
+      "VOICEACTRESS100_001",
+      "VOICEACTRESS100_002"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 16.177,
+        "sample_rate": 24000,
+        "peak_db": -9.43,
+        "rms_db": -28.69,
+        "quietest_0.2s_rms_db": -80.56
+      },
+      "quiet": {
+        "seconds": 16.177,
+        "sample_rate": 24000,
+        "peak_db": -34.43,
+        "rms_db": -53.69,
+        "quietest_0.2s_rms_db": -110.49
+      },
+      "noisy": {
+        "seconds": 16.177,
+        "sample_rate": 24000,
+        "peak_db": -9.54,
+        "rms_db": -28.59,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -44.83
+      }
+    }
+  },
+  {
+    "id": "mo",
+    "note": "リポジトリ所有者 (mo) の R10 (08-26 記事の ref.wav)",
+    "voice": "mo",
+    "source_utterances": [
+      "../08-26-fish-voice-clone-consistency/reference/ref.wav"
+    ],
+    "refs": {
+      "clean": {
+        "seconds": 10.159,
+        "sample_rate": 24000,
+        "peak_db": -0.45,
+        "rms_db": -20.2,
+        "quietest_0.2s_rms_db": -46.24
+      },
+      "quiet": {
+        "seconds": 10.159,
+        "sample_rate": 24000,
+        "peak_db": -25.45,
+        "rms_db": -45.2,
+        "quietest_0.2s_rms_db": -71.27
+      },
+      "noisy": {
+        "seconds": 10.159,
+        "sample_rate": 24000,
+        "peak_db": -0.46,
+        "rms_db": -20.19,
+        "quietest_0.2s_rms_db": -45.0,
+        "noise_rms_db": -50.62
+      }
+    }
+  }
+]
