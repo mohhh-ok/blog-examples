@@ -1,0 +1,1458 @@
+[
+  {
+    "id": "k1",
+    "ref": "r10",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "はい",
+    "gen_s": 1.638,
+    "audio_s": 1.56,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=38.7, scale=1.000, using_frames=39 (1.560s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r10",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "はい",
+    "gen_s": 0.993,
+    "audio_s": 1.56,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=38.7, scale=1.000, using_frames=39 (1.560s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "はい",
+    "gen_s": 1.244,
+    "audio_s": 2.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=58.5, scale=1.000, using_frames=59 (2.360s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "はい",
+    "gen_s": 1.187,
+    "audio_s": 2.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=58.5, scale=1.000, using_frames=59 (2.360s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r10",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "ありがとう",
+    "gen_s": 1.054,
+    "audio_s": 1.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.5, scale=1.000, using_frames=42 (1.680s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r10",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "ありがとう",
+    "gen_s": 0.955,
+    "audio_s": 1.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.5, scale=1.000, using_frames=42 (1.680s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "ありがとう",
+    "gen_s": 1.223,
+    "audio_s": 2.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=67.4, scale=1.000, using_frames=67 (2.680s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "ありがとう",
+    "gen_s": 1.171,
+    "audio_s": 2.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=67.4, scale=1.000, using_frames=67 (2.680s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r10",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "金閣寺",
+    "gen_s": 1.027,
+    "audio_s": 1.88,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=46.9, scale=1.000, using_frames=47 (1.880s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r10",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "金閣寺",
+    "gen_s": 0.963,
+    "audio_s": 1.88,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=46.9, scale=1.000, using_frames=47 (1.880s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "金閣寺",
+    "gen_s": 1.398,
+    "audio_s": 2.92,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=73.5, scale=1.000, using_frames=73 (2.920s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "金閣寺",
+    "gen_s": 1.168,
+    "audio_s": 2.92,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=73.5, scale=1.000, using_frames=73 (2.920s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r10",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "嵐山",
+    "gen_s": 0.962,
+    "audio_s": 1.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.2, scale=1.000, using_frames=41 (1.640s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r10",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "嵐山",
+    "gen_s": 0.99,
+    "audio_s": 1.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.2, scale=1.000, using_frames=41 (1.640s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "嵐山",
+    "gen_s": 1.213,
+    "audio_s": 2.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=66.3, scale=1.000, using_frames=66 (2.640s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "嵐山",
+    "gen_s": 1.176,
+    "audio_s": 2.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=66.3, scale=1.000, using_frames=66 (2.640s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r10",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "伏見稲荷大社",
+    "gen_s": 1.017,
+    "audio_s": 2.12,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=53.3, scale=1.000, using_frames=53 (2.120s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r10",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "伏見稲荷大社",
+    "gen_s": 0.979,
+    "audio_s": 2.12,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=53.3, scale=1.000, using_frames=53 (2.120s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "伏見稲荷大社",
+    "gen_s": 1.258,
+    "audio_s": 3.16,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=79.5, scale=1.000, using_frames=79 (3.160s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "伏見稲荷大社",
+    "gen_s": 1.21,
+    "audio_s": 3.16,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=79.5, scale=1.000, using_frames=79 (3.160s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r10",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "こんにちは。",
+    "gen_s": 0.96,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=60.7, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r10",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "こんにちは。",
+    "gen_s": 0.989,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=60.7, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "こんにちは。",
+    "gen_s": 1.267,
+    "audio_s": 3.76,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=94.1, scale=1.000, using_frames=94 (3.760s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "こんにちは。",
+    "gen_s": 1.221,
+    "audio_s": 3.76,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=94.1, scale=1.000, using_frames=94 (3.760s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r10",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "京都へようこそ。",
+    "gen_s": 1.0,
+    "audio_s": 2.28,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=57.2, scale=1.000, using_frames=57 (2.280s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r10",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "京都へようこそ。",
+    "gen_s": 1.033,
+    "audio_s": 2.28,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=57.2, scale=1.000, using_frames=57 (2.280s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "京都へようこそ。",
+    "gen_s": 1.289,
+    "audio_s": 3.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=94.7, scale=1.000, using_frames=95 (3.800s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "京都へようこそ。",
+    "gen_s": 1.248,
+    "audio_s": 3.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=94.7, scale=1.000, using_frames=95 (3.800s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r10",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "次は嵐山です。",
+    "gen_s": 0.981,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=60.8, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r10",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "次は嵐山です。",
+    "gen_s": 0.968,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=60.8, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "次は嵐山です。",
+    "gen_s": 1.256,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=92.9, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "次は嵐山です。",
+    "gen_s": 1.185,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=92.9, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26t15",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "はい",
+    "gen_s": 1.382,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=61.0, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26t15",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "はい",
+    "gen_s": 0.886,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=61.0, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "はい",
+    "gen_s": 0.939,
+    "audio_s": 1.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=34.1, scale=1.000, using_frames=34 (1.360s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "はい",
+    "gen_s": 0.888,
+    "audio_s": 1.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=34.1, scale=1.000, using_frames=34 (1.360s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26t15",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "ありがとう",
+    "gen_s": 0.853,
+    "audio_s": 2.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=69.6, scale=1.000, using_frames=70 (2.800s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26t15",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "ありがとう",
+    "gen_s": 0.817,
+    "audio_s": 2.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=69.6, scale=1.000, using_frames=70 (2.800s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "ありがとう",
+    "gen_s": 0.975,
+    "audio_s": 1.56,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=39.2, scale=1.000, using_frames=39 (1.560s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "ありがとう",
+    "gen_s": 0.903,
+    "audio_s": 1.56,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=39.2, scale=1.000, using_frames=39 (1.560s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26t15",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "金閣寺",
+    "gen_s": 0.96,
+    "audio_s": 2.96,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=74.4, scale=1.000, using_frames=74 (2.960s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26t15",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "金閣寺",
+    "gen_s": 0.822,
+    "audio_s": 2.96,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=74.4, scale=1.000, using_frames=74 (2.960s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "金閣寺",
+    "gen_s": 0.883,
+    "audio_s": 1.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=42.0, scale=1.000, using_frames=42 (1.680s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "金閣寺",
+    "gen_s": 0.923,
+    "audio_s": 1.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=42.0, scale=1.000, using_frames=42 (1.680s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26t15",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "嵐山",
+    "gen_s": 0.82,
+    "audio_s": 2.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=67.1, scale=1.000, using_frames=67 (2.680s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26t15",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "嵐山",
+    "gen_s": 0.779,
+    "audio_s": 2.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=67.1, scale=1.000, using_frames=67 (2.680s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "嵐山",
+    "gen_s": 0.801,
+    "audio_s": 1.6,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=39.8, scale=1.000, using_frames=40 (1.600s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "嵐山",
+    "gen_s": 0.831,
+    "audio_s": 1.6,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=39.8, scale=1.000, using_frames=40 (1.600s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26t15",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "伏見稲荷大社",
+    "gen_s": 0.891,
+    "audio_s": 3.32,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=82.7, scale=1.000, using_frames=83 (3.320s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26t15",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "伏見稲荷大社",
+    "gen_s": 0.837,
+    "audio_s": 3.32,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=82.7, scale=1.000, using_frames=83 (3.320s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "伏見稲荷大社",
+    "gen_s": 0.899,
+    "audio_s": 2.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=58.9, scale=1.000, using_frames=59 (2.360s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "伏見稲荷大社",
+    "gen_s": 0.9,
+    "audio_s": 2.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=58.9, scale=1.000, using_frames=59 (2.360s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26t15",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "こんにちは。",
+    "gen_s": 0.887,
+    "audio_s": 3.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=94.5, scale=1.000, using_frames=95 (3.800s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26t15",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "こんにちは。",
+    "gen_s": 0.901,
+    "audio_s": 3.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=94.5, scale=1.000, using_frames=95 (3.800s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "こんにちは。",
+    "gen_s": 0.974,
+    "audio_s": 2.04,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=50.6, scale=1.000, using_frames=51 (2.040s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "こんにちは。",
+    "gen_s": 0.908,
+    "audio_s": 2.04,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=50.6, scale=1.000, using_frames=51 (2.040s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26t15",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "京都へようこそ。",
+    "gen_s": 0.859,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=93.2, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26t15",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "京都へようこそ。",
+    "gen_s": 0.875,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=93.2, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "京都へようこそ。",
+    "gen_s": 0.897,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=61.1, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "京都へようこそ。",
+    "gen_s": 0.937,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=61.1, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26t15",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "次は嵐山です。",
+    "gen_s": 0.821,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=92.9, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26t15",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "次は嵐山です。",
+    "gen_s": 0.8,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=92.9, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "次は嵐山です。",
+    "gen_s": 0.991,
+    "audio_s": 2.76,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=69.2, scale=1.000, using_frames=69 (2.760s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "次は嵐山です。",
+    "gen_s": 0.85,
+    "audio_s": 2.76,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=69.2, scale=1.000, using_frames=69 (2.760s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26pipe2x",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "はい",
+    "gen_s": 1.456,
+    "audio_s": 1.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=35.6, scale=1.000, using_frames=36 (1.440s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26pipe2x",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "はい",
+    "gen_s": 1.1,
+    "audio_s": 1.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=35.6, scale=1.000, using_frames=36 (1.440s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26pipe2x",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "ありがとう",
+    "gen_s": 1.135,
+    "audio_s": 1.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=40.6, scale=1.000, using_frames=41 (1.640s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26pipe2x",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "ありがとう",
+    "gen_s": 1.146,
+    "audio_s": 1.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=40.6, scale=1.000, using_frames=41 (1.640s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26pipe2x",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "金閣寺",
+    "gen_s": 1.148,
+    "audio_s": 1.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=42.8, scale=1.000, using_frames=43 (1.720s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26pipe2x",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "金閣寺",
+    "gen_s": 1.137,
+    "audio_s": 1.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=42.8, scale=1.000, using_frames=43 (1.720s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26pipe2x",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "嵐山",
+    "gen_s": 1.215,
+    "audio_s": 1.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.5, scale=1.000, using_frames=42 (1.680s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26pipe2x",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "嵐山",
+    "gen_s": 1.116,
+    "audio_s": 1.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.5, scale=1.000, using_frames=42 (1.680s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26pipe2x",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "伏見稲荷大社",
+    "gen_s": 1.225,
+    "audio_s": 2.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=58.8, scale=1.000, using_frames=59 (2.360s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26pipe2x",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "伏見稲荷大社",
+    "gen_s": 1.143,
+    "audio_s": 2.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=58.8, scale=1.000, using_frames=59 (2.360s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26pipe2x",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "こんにちは。",
+    "gen_s": 1.16,
+    "audio_s": 2.04,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=50.8, scale=1.000, using_frames=51 (2.040s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26pipe2x",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "こんにちは。",
+    "gen_s": 1.109,
+    "audio_s": 2.04,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=50.8, scale=1.000, using_frames=51 (2.040s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26pipe2x",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "京都へようこそ。",
+    "gen_s": 1.171,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=61.2, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26pipe2x",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "京都へようこそ。",
+    "gen_s": 1.099,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=61.2, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26pipe2x",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "次は嵐山です。",
+    "gen_s": 1.194,
+    "audio_s": 2.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=69.8, scale=1.000, using_frames=70 (2.800s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26pipe2x",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "次は嵐山です。",
+    "gen_s": 1.145,
+    "audio_s": 2.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=69.8, scale=1.000, using_frames=70 (2.800s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26t1287",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "はい",
+    "gen_s": 1.465,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=61.2, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26t1287",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "はい",
+    "gen_s": 0.995,
+    "audio_s": 2.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=61.2, scale=1.000, using_frames=61 (2.440s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26long-pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "はい",
+    "gen_s": 1.143,
+    "audio_s": 1.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=36.1, scale=1.000, using_frames=36 (1.440s)."
+    ]
+  },
+  {
+    "id": "k1",
+    "ref": "r26long-pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "はい",
+    "gen_s": 1.09,
+    "audio_s": 1.44,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=36.1, scale=1.000, using_frames=36 (1.440s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26t1287",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "ありがとう",
+    "gen_s": 1.023,
+    "audio_s": 2.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=69.6, scale=1.000, using_frames=70 (2.800s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26t1287",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "ありがとう",
+    "gen_s": 1.023,
+    "audio_s": 2.8,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=69.6, scale=1.000, using_frames=70 (2.800s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26long-pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "ありがとう",
+    "gen_s": 1.082,
+    "audio_s": 1.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.5, scale=1.000, using_frames=41 (1.640s)."
+    ]
+  },
+  {
+    "id": "k2",
+    "ref": "r26long-pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "ありがとう",
+    "gen_s": 1.091,
+    "audio_s": 1.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.5, scale=1.000, using_frames=41 (1.640s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26t1287",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "金閣寺",
+    "gen_s": 1.151,
+    "audio_s": 3.04,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=76.4, scale=1.000, using_frames=76 (3.040s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26t1287",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "金閣寺",
+    "gen_s": 0.935,
+    "audio_s": 3.04,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=76.4, scale=1.000, using_frames=76 (3.040s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26long-pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "金閣寺",
+    "gen_s": 1.09,
+    "audio_s": 1.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=43.0, scale=1.000, using_frames=43 (1.720s)."
+    ]
+  },
+  {
+    "id": "k3",
+    "ref": "r26long-pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "金閣寺",
+    "gen_s": 1.106,
+    "audio_s": 1.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=43.0, scale=1.000, using_frames=43 (1.720s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26t1287",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "嵐山",
+    "gen_s": 1.017,
+    "audio_s": 2.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=67.0, scale=1.000, using_frames=67 (2.680s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26t1287",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "嵐山",
+    "gen_s": 0.976,
+    "audio_s": 2.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=67.0, scale=1.000, using_frames=67 (2.680s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26long-pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "嵐山",
+    "gen_s": 1.134,
+    "audio_s": 1.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.4, scale=1.000, using_frames=41 (1.640s)."
+    ]
+  },
+  {
+    "id": "k4",
+    "ref": "r26long-pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "嵐山",
+    "gen_s": 1.107,
+    "audio_s": 1.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=41.4, scale=1.000, using_frames=41 (1.640s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26t1287",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "伏見稲荷大社",
+    "gen_s": 0.987,
+    "audio_s": 3.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=84.1, scale=1.000, using_frames=84 (3.360s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26t1287",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "伏見稲荷大社",
+    "gen_s": 0.994,
+    "audio_s": 3.36,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=84.1, scale=1.000, using_frames=84 (3.360s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26long-pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "伏見稲荷大社",
+    "gen_s": 1.066,
+    "audio_s": 2.32,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=58.5, scale=1.000, using_frames=58 (2.320s)."
+    ]
+  },
+  {
+    "id": "k5",
+    "ref": "r26long-pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "伏見稲荷大社",
+    "gen_s": 1.094,
+    "audio_s": 2.32,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=58.5, scale=1.000, using_frames=58 (2.320s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26t1287",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "こんにちは。",
+    "gen_s": 1.012,
+    "audio_s": 3.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=91.6, scale=1.000, using_frames=92 (3.680s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26t1287",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "こんにちは。",
+    "gen_s": 1.018,
+    "audio_s": 3.68,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=91.6, scale=1.000, using_frames=92 (3.680s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26long-pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "こんにちは。",
+    "gen_s": 1.074,
+    "audio_s": 2.2,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=54.8, scale=1.000, using_frames=55 (2.200s)."
+    ]
+  },
+  {
+    "id": "k6",
+    "ref": "r26long-pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "こんにちは。",
+    "gen_s": 1.084,
+    "audio_s": 2.2,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=54.8, scale=1.000, using_frames=55 (2.200s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26t1287",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "京都へようこそ。",
+    "gen_s": 0.956,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=93.2, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26t1287",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "京都へようこそ。",
+    "gen_s": 0.987,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=93.2, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26long-pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "京都へようこそ。",
+    "gen_s": 1.061,
+    "audio_s": 2.48,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=62.3, scale=1.000, using_frames=62 (2.480s)."
+    ]
+  },
+  {
+    "id": "k7",
+    "ref": "r26long-pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "京都へようこそ。",
+    "gen_s": 1.083,
+    "audio_s": 2.48,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=62.3, scale=1.000, using_frames=62 (2.480s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26t1287",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "次は嵐山です。",
+    "gen_s": 0.96,
+    "audio_s": 3.76,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=93.6, scale=1.000, using_frames=94 (3.760s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26t1287",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "次は嵐山です。",
+    "gen_s": 0.995,
+    "audio_s": 3.76,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=93.6, scale=1.000, using_frames=94 (3.760s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26long-pipe",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "次は嵐山です。",
+    "gen_s": 1.08,
+    "audio_s": 2.76,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=68.9, scale=1.000, using_frames=69 (2.760s)."
+    ]
+  },
+  {
+    "id": "k8",
+    "ref": "r26long-pipe",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "次は嵐山です。",
+    "gen_s": 1.076,
+    "audio_s": 2.76,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=68.9, scale=1.000, using_frames=69 (2.760s)."
+    ]
+  }
+]

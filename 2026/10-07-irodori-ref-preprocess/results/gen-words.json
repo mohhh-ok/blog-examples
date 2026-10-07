@@ -1,0 +1,218 @@
+[
+  {
+    "id": "w1",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "清水寺",
+    "gen_s": 1.206,
+    "audio_s": 2.12,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=52.6, scale=1.000, using_frames=53 (2.120s)."
+    ]
+  },
+  {
+    "id": "w1",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "清水寺",
+    "gen_s": 0.792,
+    "audio_s": 2.12,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=52.6, scale=1.000, using_frames=53 (2.120s)."
+    ]
+  },
+  {
+    "id": "w1",
+    "seed": 3,
+    "used_seed": 3,
+    "text": "清水寺",
+    "gen_s": 0.894,
+    "audio_s": 2.12,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=52.6, scale=1.000, using_frames=53 (2.120s)."
+    ]
+  },
+  {
+    "id": "w2",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "鹿苑寺",
+    "gen_s": 0.786,
+    "audio_s": 1.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=43.4, scale=1.000, using_frames=43 (1.720s)."
+    ]
+  },
+  {
+    "id": "w2",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "鹿苑寺",
+    "gen_s": 0.747,
+    "audio_s": 1.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=43.4, scale=1.000, using_frames=43 (1.720s)."
+    ]
+  },
+  {
+    "id": "w2",
+    "seed": 3,
+    "used_seed": 3,
+    "text": "鹿苑寺",
+    "gen_s": 0.748,
+    "audio_s": 1.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=43.4, scale=1.000, using_frames=43 (1.720s)."
+    ]
+  },
+  {
+    "id": "s1",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "京都の清水寺を訪れました。",
+    "gen_s": 0.905,
+    "audio_s": 3.0,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=74.7, scale=1.000, using_frames=75 (3.000s)."
+    ]
+  },
+  {
+    "id": "s1",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "京都の清水寺を訪れました。",
+    "gen_s": 0.775,
+    "audio_s": 3.0,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=74.7, scale=1.000, using_frames=75 (3.000s)."
+    ]
+  },
+  {
+    "id": "s1",
+    "seed": 3,
+    "used_seed": 3,
+    "text": "京都の清水寺を訪れました。",
+    "gen_s": 0.761,
+    "audio_s": 3.0,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=74.7, scale=1.000, using_frames=75 (3.000s)."
+    ]
+  },
+  {
+    "id": "s2",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "清水寺の舞台から、京都の街を見渡せます。",
+    "gen_s": 0.786,
+    "audio_s": 4.04,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=100.8, scale=1.000, using_frames=101 (4.040s)."
+    ]
+  },
+  {
+    "id": "s2",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "清水寺の舞台から、京都の街を見渡せます。",
+    "gen_s": 0.782,
+    "audio_s": 4.04,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=100.8, scale=1.000, using_frames=101 (4.040s)."
+    ]
+  },
+  {
+    "id": "s2",
+    "seed": 3,
+    "used_seed": 3,
+    "text": "清水寺の舞台から、京都の街を見渡せます。",
+    "gen_s": 0.779,
+    "audio_s": 4.04,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=100.8, scale=1.000, using_frames=101 (4.040s)."
+    ]
+  },
+  {
+    "id": "s3",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "鹿苑寺は、金閣寺の名前で知られています。",
+    "gen_s": 0.788,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=92.9, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "s3",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "鹿苑寺は、金閣寺の名前で知られています。",
+    "gen_s": 0.767,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=92.9, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "s3",
+    "seed": 3,
+    "used_seed": 3,
+    "text": "鹿苑寺は、金閣寺の名前で知られています。",
+    "gen_s": 0.773,
+    "audio_s": 3.72,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=92.9, scale=1.000, using_frames=93 (3.720s)."
+    ]
+  },
+  {
+    "id": "s4",
+    "seed": 1,
+    "used_seed": 1,
+    "text": "次は鹿苑寺へ向かいましょう。",
+    "gen_s": 0.78,
+    "audio_s": 2.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=65.5, scale=1.000, using_frames=66 (2.640s)."
+    ]
+  },
+  {
+    "id": "s4",
+    "seed": 2,
+    "used_seed": 2,
+    "text": "次は鹿苑寺へ向かいましょう。",
+    "gen_s": 0.763,
+    "audio_s": 2.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=65.5, scale=1.000, using_frames=66 (2.640s)."
+    ]
+  },
+  {
+    "id": "s4",
+    "seed": 3,
+    "used_seed": 3,
+    "text": "次は鹿苑寺へ向かいましょう。",
+    "gen_s": 0.788,
+    "audio_s": 2.64,
+    "messages": [
+      "info: reference loudness normalize enabled per clip (target_db=-16.00, includes peak safety scaling).",
+      "info: predicted duration frames=65.5, scale=1.000, using_frames=66 (2.640s)."
+    ]
+  }
+]
