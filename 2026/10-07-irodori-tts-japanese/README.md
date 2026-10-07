@@ -23,4 +23,4 @@
 
 `output/` は記事に載せた 5 文の Irodori / Fish のペア (B の run1、c1、r014、n01、n04)。扱いは `output/LICENSE.md`。
 
-`data/r100.jsonl` は [JKYB-Parakeet](https://huggingface.co/datasets/Parakeet-Inc/joyo-kanji-yomi-benchmark-parakeet) (MIT, Parakeet Inc.) から選んだ行をそのまま含む。
+`data/r100.jsonl` は Joyo Kanji Yomi Benchmark: Parakeet Edition ([parakeet-inc/joyo-kanji-yomi-benchmark-parakeet](https://huggingface.co/datasets/Parakeet-Inc/joyo-kanji-yomi-benchmark-parakeet)) から選んだ行をそのまま含む。MIT License (Copyright (c) 2026 SB Intuitions / Copyright (c) 2026 Parakeet Inc.) で、ライセンス文と NOTICE は `data/LICENSE-jkyb-parakeet` と `data/NOTICE-jkyb-parakeet`。元のベンチマークの論文は [Sarashina2.2-TTS (arXiv 2606.25369)](https://arxiv.org/abs/2606.25369)。

@@ -1,0 +1,15 @@
+Joyo Kanji Yomi Benchmark: Parakeet Edition
+
+This distribution contains data derived from the Joyo Kanji Yomi Benchmark:
+
+  https://huggingface.co/datasets/sbintuitions/joyo-kanji-yomi-benchmark
+  https://github.com/sbintuitions/Joyo-Kanji-Yomi-Benchmark
+
+Original work copyright (c) 2026 SB Intuitions and released under the MIT License.
+The original copyright and permission notice are preserved in LICENSE.
+
+This independently maintained derivative includes corrections, replacement examples,
+additional reading-pair examples, accepted-reading annotations, and public change
+metadata maintained by Parakeet Inc. Modifications, annotations, documentation, and
+additions in this edition are copyright (c) 2026 Parakeet Inc. and released under the
+MIT License. It is not an official SB Intuitions release.
