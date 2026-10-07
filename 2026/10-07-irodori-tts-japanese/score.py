@@ -7,7 +7,7 @@ PYTHONPATH に jkyb-toolkit の src を通して実行する:
   git clone https://github.com/Parakeet-Inc/Joyo-Kanji-Yomi-Benchmark-Parakeet-Edition.git
   PYTHONPATH=Joyo-Kanji-Yomi-Benchmark-Parakeet-Edition/src python score.py
 
-env: OUT_ROOT (既定 /tmp/billionclips/irodori-eval/out)
+env: OUT_ROOT (既定 /tmp/irodori-eval/out)
 入力: {OUT_ROOT}/transcripts.jsonl、任意で {OUT_ROOT}/transcripts-pass2.jsonl (不正解行の 2 回目の書き起こし)
 出力: {OUT_ROOT}/scores.json
 """
@@ -21,7 +21,7 @@ from jkyb_eval.models import BenchmarkRow
 
 import texts
 
-OUT_ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/billionclips/irodori-eval/out"))
+OUT_ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/irodori-eval/out"))
 MODELS = ("irodori", "fish")
 CONTEXT_ERROR_SUSPECT = 0.2
 

@@ -5,7 +5,7 @@
 
 env:
   OPENAI_API_KEY (必須)
-  OUT_ROOT: 生成音声の置き場 (既定 /tmp/billionclips/irodori-eval/out)。{OUT_ROOT}/{irodori,fish}/*.wav と ref を読む
+  OUT_ROOT: 生成音声の置き場 (既定 /tmp/irodori-eval/out)。{OUT_ROOT}/{irodori,fish}/*.wav と ref を読む
   MODELS: カンマ区切り (既定 irodori,fish)
   ONLY: カンマ区切りの model:tag に絞る (不正解行の 2 回目の書き起こし用)
   OUT_NAME: 出力ファイル名 (既定 transcripts.jsonl。2 回目は transcripts-pass2.jsonl)
@@ -25,8 +25,8 @@ from pathlib import Path
 
 import httpx
 
-OUT_ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/billionclips/irodori-eval/out"))
-REF_DIR = Path(os.environ.get("REF_DIR", "/tmp/billionclips/irodori-eval/ref"))
+OUT_ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/irodori-eval/out"))
+REF_DIR = Path(os.environ.get("REF_DIR", "/tmp/irodori-eval/ref"))
 MODELS = os.environ.get("MODELS", "irodori,fish").split(",")
 ONLY = set(os.environ["ONLY"].split(",")) if os.environ.get("ONLY") else None
 OUT_NAME = os.environ.get("OUT_NAME", "transcripts.jsonl")

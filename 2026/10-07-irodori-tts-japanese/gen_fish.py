@@ -4,8 +4,8 @@
 
 env:
   FISH_API_KEY (必須)
-  REF_DIR: r10.wav / r26.wav の置き場 (既定 /tmp/billionclips/irodori-eval/ref)
-  OUT_DIR: 出力先 (既定 /tmp/billionclips/irodori-eval/out/fish)
+  REF_DIR: r10.wav / r26.wav の置き場 (既定 /tmp/irodori-eval/ref)
+  OUT_DIR: 出力先 (既定 /tmp/irodori-eval/out/fish)
   EXPS: カンマ区切りで実験を絞る (既定 B,C,R,N)
 
 usage: python gen_fish.py
@@ -24,8 +24,8 @@ import ormsgpack
 import texts
 
 MODEL = "s2.1-pro"
-REF_DIR = Path(os.environ.get("REF_DIR", "/tmp/billionclips/irodori-eval/ref"))
-OUT_DIR = Path(os.environ.get("OUT_DIR", "/tmp/billionclips/irodori-eval/out/fish"))
+REF_DIR = Path(os.environ.get("REF_DIR", "/tmp/irodori-eval/ref"))
+OUT_DIR = Path(os.environ.get("OUT_DIR", "/tmp/irodori-eval/out/fish"))
 EXPS = os.environ.get("EXPS", "B,C,R,N").split(",")
 
 

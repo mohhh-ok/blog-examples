@@ -1,6 +1,6 @@
 """計測結果を results/ にまとめ、report.md の数値の節を書く。
 
-入力 (OUT_ROOT 既定 /tmp/billionclips/irodori-eval):
+入力 (OUT_ROOT 既定 /tmp/irodori-eval):
   results/{gen_irodori.json, similarity.json, seed_md5.json}  … Pod (eval_irodori.py) の出力
   out/fish/gen_fish.jsonl, out/transcripts.jsonl, out/transcripts-pass2.jsonl, out/scores.json
 出力:
@@ -18,7 +18,7 @@ from pathlib import Path
 
 import texts
 
-ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/billionclips/irodori-eval"))
+ROOT = Path(os.environ.get("OUT_ROOT", "/tmp/irodori-eval"))
 HERE = Path(__file__).parent
 RES = HERE / "results"
 
