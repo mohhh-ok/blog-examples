@@ -1,0 +1,54 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"></head>
+<body style="font:16px sans-serif;padding:40px">diag
+<script>
+// Capacitor の iOS アプリに同梱して開く診断ページ。
+// (1) 同梱の mp3 を fetch したときの status と ok
+// (2) navigator.audioSession.type を "ambient" にした場合としない場合で、AudioContext が running になり時計が進むか
+// を console.log に出す。Capacitor の Debug ビルドでは JS の console がアプリの標準出力に出る。
+//
+// 使い方: アプリの public/index.html をこのファイルに差し替える（シミュレータなら
+// `xcrun simctl get_app_container <UDID> <bundle id>` の中の public/ を直接書き換えれば再ビルド不要）。
+// MODE と MP3 を書き換えてから開く。
+const MODE = "none"; // "none" | "ambient"
+const MP3 = "a.mp3"; // public/ に同梱されている mp3 のファイル名
+const log = (...a) => console.log("[DIAG]", MODE, ...a);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+(async () => {
+  log("audioSession", "audioSession" in navigator ? navigator.audioSession.type : "(none)");
+  if (MODE === "ambient" && navigator.audioSession) navigator.audioSession.type = "ambient";
+
+  let mp3;
+  try {
+    const res = await fetch("/" + MP3);
+    mp3 = await res.arrayBuffer();
+    // iOS の Capacitor では status 0 / ok false になる（中身は取れている）
+    log("fetch mp3 status", res.status, "ok", res.ok, "bytes", mp3.byteLength);
+  } catch (e) {
+    log("fetch mp3 error", String(e));
+  }
+
+  const ctx = new AudioContext();
+  ctx.onstatechange = () => log("statechange", ctx.state, "t", ctx.currentTime.toFixed(3));
+  log("ctx created", ctx.state);
+  if (ctx.state !== "running") await Promise.race([ctx.resume(), sleep(2000)]);
+  log("after resume", ctx.state);
+
+  const buf = await ctx.decodeAudioData(mp3.slice(0));
+  const src = ctx.createBufferSource();
+  src.buffer = buf;
+  // 時計が進むかだけを見るので、音量 0 で鳴らす
+  const g = ctx.createGain();
+  g.gain.value = 0;
+  src.connect(g);
+  g.connect(ctx.destination);
+  src.onended = () => log("ended", "t", ctx.currentTime.toFixed(3));
+  src.start(0);
+
+  for (let i = 1; i <= 4; i++) {
+    await sleep(1000);
+    log("tick", i, ctx.state, "t", ctx.currentTime.toFixed(3));
+  }
+})();
+</script></body></html>
