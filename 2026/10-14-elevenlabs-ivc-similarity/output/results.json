@@ -1,0 +1,420 @@
+{
+  "model": "eleven_v4",
+  "ref": {
+    "file": "ref.wav",
+    "duration_sec": 10.159,
+    "samplerate": 24000,
+    "rms": 0.09776,
+    "f0_mean_hz": 104.38,
+    "f0_median_hz": 103.83
+  },
+  "same_ref": [
+    0.8597,
+    0.8341,
+    0.8451,
+    0.8475,
+    0.8613
+  ],
+  "same_inter": {
+    "trial1-trial2": 0.9811,
+    "trial1-trial3": 0.9789,
+    "trial1-trial4": 0.9781,
+    "trial1-trial5": 0.984,
+    "trial2-trial3": 0.988,
+    "trial2-trial4": 0.9822,
+    "trial2-trial5": 0.9871,
+    "trial3-trial4": 0.984,
+    "trial3-trial5": 0.9836,
+    "trial4-trial5": 0.9783
+  },
+  "varied_ref": [
+    0.8548,
+    0.865,
+    0.8173,
+    0.8281,
+    0.8268
+  ],
+  "varied_inter": {
+    "text1-text2": 0.9646,
+    "text1-text3": 0.9683,
+    "text1-text4": 0.9597,
+    "text1-text5": 0.9731,
+    "text2-text3": 0.9495,
+    "text2-text4": 0.9557,
+    "text2-text5": 0.9693,
+    "text3-text4": 0.9661,
+    "text3-text5": 0.9648,
+    "text4-text5": 0.9684
+  },
+  "same_x_varied": [
+    0.9657,
+    0.9635,
+    0.9466,
+    0.9469,
+    0.9625,
+    0.9617,
+    0.9541,
+    0.9396,
+    0.9534,
+    0.9611,
+    0.9642,
+    0.9598,
+    0.9339,
+    0.9497,
+    0.9658,
+    0.9653,
+    0.9726,
+    0.9414,
+    0.955,
+    0.9635,
+    0.9672,
+    0.9615,
+    0.9456,
+    0.9614,
+    0.9709
+  ],
+  "ml_ref": {
+    "ja": 0.803,
+    "en": 0.7703,
+    "zh": 0.8193,
+    "ko": 0.8286,
+    "fr": 0.7802,
+    "es": 0.8326,
+    "de": 0.8587
+  },
+  "ml_inter": {
+    "ja-en": 0.8439,
+    "ja-zh": 0.9164,
+    "ja-ko": 0.9019,
+    "ja-fr": 0.8991,
+    "ja-es": 0.8992,
+    "ja-de": 0.8802,
+    "en-zh": 0.8558,
+    "en-ko": 0.8629,
+    "en-fr": 0.8676,
+    "en-es": 0.8303,
+    "en-de": 0.9114,
+    "zh-ko": 0.8819,
+    "zh-fr": 0.87,
+    "zh-es": 0.8602,
+    "zh-de": 0.8679,
+    "ko-fr": 0.8697,
+    "ko-es": 0.8977,
+    "ko-de": 0.8975,
+    "fr-es": 0.8537,
+    "fr-de": 0.899,
+    "es-de": 0.8676
+  },
+  "ml_ja_vs_other": {
+    "ja-en": 0.8439,
+    "ja-zh": 0.9164,
+    "ja-ko": 0.9019,
+    "ja-fr": 0.8991,
+    "ja-es": 0.8992,
+    "ja-de": 0.8802
+  },
+  "baseline_other_speaker": {
+    "voice": "Shohei (ElevenLabs library, Japanese male)",
+    "file": "baseline/eleven_v4.wav",
+    "ref_similarity": 0.5317
+  },
+  "stats": {
+    "same_ref": {
+      "n": 5,
+      "mean": 0.8495,
+      "std": 0.0112,
+      "min": 0.8341,
+      "max": 0.8613
+    },
+    "same_inter": {
+      "n": 10,
+      "mean": 0.9825,
+      "std": 0.0035,
+      "min": 0.9781,
+      "max": 0.988
+    },
+    "varied_ref": {
+      "n": 5,
+      "mean": 0.8384,
+      "std": 0.0204,
+      "min": 0.8173,
+      "max": 0.865
+    },
+    "varied_inter": {
+      "n": 10,
+      "mean": 0.9639,
+      "std": 0.0071,
+      "min": 0.9495,
+      "max": 0.9731
+    },
+    "same_x_varied": {
+      "n": 25,
+      "mean": 0.9573,
+      "std": 0.0102,
+      "min": 0.9339,
+      "max": 0.9726
+    },
+    "ml_ref": {
+      "n": 7,
+      "mean": 0.8132,
+      "std": 0.031,
+      "min": 0.7703,
+      "max": 0.8587
+    },
+    "ml_inter": {
+      "n": 21,
+      "mean": 0.8778,
+      "std": 0.0232,
+      "min": 0.8303,
+      "max": 0.9164
+    },
+    "ml_ja_vs_other": {
+      "n": 6,
+      "mean": 0.8901,
+      "std": 0.0254,
+      "min": 0.8439,
+      "max": 0.9164
+    },
+    "same_duration": {
+      "n": 5,
+      "mean": 12.928,
+      "std": 0.1339,
+      "min": 12.72,
+      "max": 13.04
+    },
+    "same_f0_mean": {
+      "n": 5,
+      "mean": 128.278,
+      "std": 2.9384,
+      "min": 124.86,
+      "max": 131.92
+    },
+    "varied_duration": {
+      "n": 5,
+      "mean": 16.16,
+      "std": 0.5851,
+      "min": 15.36,
+      "max": 16.8
+    },
+    "varied_f0_mean": {
+      "n": 5,
+      "mean": 131.1,
+      "std": 3.2994,
+      "min": 126.17,
+      "max": 134.4
+    },
+    "ml_duration": {
+      "n": 7,
+      "mean": 5.6229,
+      "std": 0.5179,
+      "min": 4.88,
+      "max": 6.56
+    },
+    "ml_f0_mean": {
+      "n": 7,
+      "mean": 131.5686,
+      "std": 5.0323,
+      "min": 126.59,
+      "max": 140.89
+    }
+  },
+  "prosody": {
+    "same": [
+      {
+        "file": "trial1.wav",
+        "duration_sec": 12.72,
+        "samplerate": 24000,
+        "rms": 0.10194,
+        "f0_mean_hz": 125.7,
+        "f0_median_hz": 118.58
+      },
+      {
+        "file": "trial2.wav",
+        "duration_sec": 12.88,
+        "samplerate": 24000,
+        "rms": 0.1158,
+        "f0_mean_hz": 131.92,
+        "f0_median_hz": 127.09
+      },
+      {
+        "file": "trial3.wav",
+        "duration_sec": 12.96,
+        "samplerate": 24000,
+        "rms": 0.11285,
+        "f0_mean_hz": 124.86,
+        "f0_median_hz": 119.96
+      },
+      {
+        "file": "trial4.wav",
+        "duration_sec": 13.04,
+        "samplerate": 24000,
+        "rms": 0.11669,
+        "f0_mean_hz": 129.75,
+        "f0_median_hz": 123.47
+      },
+      {
+        "file": "trial5.wav",
+        "duration_sec": 13.04,
+        "samplerate": 24000,
+        "rms": 0.12345,
+        "f0_mean_hz": 129.16,
+        "f0_median_hz": 122.76
+      }
+    ],
+    "varied": [
+      {
+        "file": "text1.wav",
+        "duration_sec": 16.8,
+        "samplerate": 24000,
+        "rms": 0.12133,
+        "f0_mean_hz": 131.89,
+        "f0_median_hz": 124.19
+      },
+      {
+        "file": "text2.wav",
+        "duration_sec": 16.4,
+        "samplerate": 24000,
+        "rms": 0.10805,
+        "f0_mean_hz": 126.17,
+        "f0_median_hz": 117.9
+      },
+      {
+        "file": "text3.wav",
+        "duration_sec": 16.48,
+        "samplerate": 24000,
+        "rms": 0.09465,
+        "f0_mean_hz": 134.4,
+        "f0_median_hz": 124.91
+      },
+      {
+        "file": "text4.wav",
+        "duration_sec": 15.36,
+        "samplerate": 24000,
+        "rms": 0.10271,
+        "f0_mean_hz": 129.6,
+        "f0_median_hz": 122.76
+      },
+      {
+        "file": "text5.wav",
+        "duration_sec": 15.76,
+        "samplerate": 24000,
+        "rms": 0.11261,
+        "f0_mean_hz": 133.44,
+        "f0_median_hz": 120.3
+      }
+    ],
+    "ml": [
+      {
+        "file": "ja.wav",
+        "duration_sec": 6.56,
+        "samplerate": 24000,
+        "rms": 0.118,
+        "f0_mean_hz": 132.86,
+        "f0_median_hz": 122.05
+      },
+      {
+        "file": "en.wav",
+        "duration_sec": 5.6,
+        "samplerate": 24000,
+        "rms": 0.11934,
+        "f0_mean_hz": 130.76,
+        "f0_median_hz": 126.36
+      },
+      {
+        "file": "zh.wav",
+        "duration_sec": 4.88,
+        "samplerate": 24000,
+        "rms": 0.12287,
+        "f0_mean_hz": 126.93,
+        "f0_median_hz": 122.76
+      },
+      {
+        "file": "ko.wav",
+        "duration_sec": 5.36,
+        "samplerate": 24000,
+        "rms": 0.16373,
+        "f0_mean_hz": 140.89,
+        "f0_median_hz": 140.2
+      },
+      {
+        "file": "fr.wav",
+        "duration_sec": 5.52,
+        "samplerate": 24000,
+        "rms": 0.11412,
+        "f0_mean_hz": 134.34,
+        "f0_median_hz": 139.8
+      },
+      {
+        "file": "es.wav",
+        "duration_sec": 5.52,
+        "samplerate": 24000,
+        "rms": 0.10353,
+        "f0_mean_hz": 126.59,
+        "f0_median_hz": 124.19
+      },
+      {
+        "file": "de.wav",
+        "duration_sec": 5.92,
+        "samplerate": 24000,
+        "rms": 0.10413,
+        "f0_mean_hz": 128.61,
+        "f0_median_hz": 119.61
+      }
+    ]
+  },
+  "f0_yin_loud_half": {
+    "ref": 104.64,
+    "same/trial1": 130.81
+  },
+  "language_verification": [
+    {
+      "lang": "ja",
+      "detected_language": "ja",
+      "language_probability": 0.9974,
+      "matches_target": true,
+      "transcript": "みなさん こんにちは 本日は 新しい機能についてご紹介しますどうぞよろしくお願いいたします"
+    },
+    {
+      "lang": "en",
+      "detected_language": "en",
+      "language_probability": 0.9917,
+      "matches_target": true,
+      "transcript": "Hello everyone. Today I'd like to introduce a new feature. Thank you for joining us."
+    },
+    {
+      "lang": "zh",
+      "detected_language": "zh",
+      "language_probability": 0.9987,
+      "matches_target": true,
+      "transcript": "大家好 今天我将为大家介绍一项新功能 感谢您的参与"
+    },
+    {
+      "lang": "ko",
+      "detected_language": "ko",
+      "language_probability": 0.9191,
+      "matches_target": true,
+      "transcript": "여러분 안녕하세요 오늘은 새로운 기능을 소개해 드리겠습니다 잘 부탁드립니다"
+    },
+    {
+      "lang": "fr",
+      "detected_language": "fr",
+      "language_probability": 0.9971,
+      "matches_target": true,
+      "transcript": "Bonjour à tous. Aujourd'hui, je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention."
+    },
+    {
+      "lang": "es",
+      "detected_language": "es",
+      "language_probability": 0.9961,
+      "matches_target": true,
+      "transcript": "Hola a todos, hoy les voy a presentar una nueva función, muchas gracias por su atención."
+    },
+    {
+      "lang": "de",
+      "detected_language": "de",
+      "language_probability": 0.9982,
+      "matches_target": true,
+      "transcript": "Hallo zusammen. Heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit."
+    }
+  ]
+}

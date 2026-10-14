@@ -1,0 +1,14 @@
+{
+  "voice": "Shohei (ElevenLabs library, Japanese male)",
+  "records": [
+    {
+      "file": "baseline/eleven_v4.wav",
+      "text": "本日は晴天に恵まれ、公園には多くの家族連れが訪れています。午後からは気温が上がり、木陰で休む人の姿も見られました。明日も同じような穏やかな天気が続く見込みです。",
+      "latency_sec": 3.144,
+      "duration_sec": 13.52,
+      "samplerate": 24000,
+      "request_id": "xwaWLCF3aqQt53x6Tjki",
+      "ref_similarity": 0.5317
+    }
+  ]
+}

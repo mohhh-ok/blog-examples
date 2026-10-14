@@ -1,0 +1,146 @@
+{
+  "model_id": "eleven_v4",
+  "voice_name": "blogtest-ivc-ref10s",
+  "output_format": "wav_24000",
+  "voice_settings": "not sent (API defaults)",
+  "seed": null,
+  "generated_at": "2026-10-14T12:24:09+0900",
+  "records": [
+    {
+      "file": "eleven_v4/same/trial1.wav",
+      "text": "本日は晴天に恵まれ、公園には多くの家族連れが訪れています。午後からは気温が上がり、木陰で休む人の姿も見られました。明日も同じような穏やかな天気が続く見込みです。",
+      "latency_sec": 5.296,
+      "duration_sec": 12.72,
+      "samplerate": 24000,
+      "request_id": "7EcAu9umXhku8X95p0yo"
+    },
+    {
+      "file": "eleven_v4/same/trial2.wav",
+      "text": "本日は晴天に恵まれ、公園には多くの家族連れが訪れています。午後からは気温が上がり、木陰で休む人の姿も見られました。明日も同じような穏やかな天気が続く見込みです。",
+      "latency_sec": 3.208,
+      "duration_sec": 12.88,
+      "samplerate": 24000,
+      "request_id": "lRLsPeML0GSEiaPMxs1h"
+    },
+    {
+      "file": "eleven_v4/same/trial3.wav",
+      "text": "本日は晴天に恵まれ、公園には多くの家族連れが訪れています。午後からは気温が上がり、木陰で休む人の姿も見られました。明日も同じような穏やかな天気が続く見込みです。",
+      "latency_sec": 3.149,
+      "duration_sec": 12.96,
+      "samplerate": 24000,
+      "request_id": "AqFVEtBDPERl40AlcWq1"
+    },
+    {
+      "file": "eleven_v4/same/trial4.wav",
+      "text": "本日は晴天に恵まれ、公園には多くの家族連れが訪れています。午後からは気温が上がり、木陰で休む人の姿も見られました。明日も同じような穏やかな天気が続く見込みです。",
+      "latency_sec": 3.089,
+      "duration_sec": 13.04,
+      "samplerate": 24000,
+      "request_id": "7UGY4ezDY5oYPoFKK45f"
+    },
+    {
+      "file": "eleven_v4/same/trial5.wav",
+      "text": "本日は晴天に恵まれ、公園には多くの家族連れが訪れています。午後からは気温が上がり、木陰で休む人の姿も見られました。明日も同じような穏やかな天気が続く見込みです。",
+      "latency_sec": 3.834,
+      "duration_sec": 13.04,
+      "samplerate": 24000,
+      "request_id": "PFGyxzytxL6odbKNkgK8"
+    },
+    {
+      "file": "eleven_v4/varied/text1.wav",
+      "text": "駅前の商店街では、朝から新鮮な野菜や果物を求める人々で賑わっています。店主たちは威勢のよい掛け声で客を迎え、通りには活気があふれていました。夕方には特売が始まり、さらに多くの買い物客が訪れる見込みです。",
+      "latency_sec": 3.631,
+      "duration_sec": 16.8,
+      "samplerate": 24000,
+      "request_id": "6MoiVop1zY4nUQhEUoZH"
+    },
+    {
+      "file": "eleven_v4/varied/text2.wav",
+      "text": "新しい図書館は、静かな環境と豊富な蔵書で多くの利用者に親しまれています。窓際の閲覧席からは中庭の緑が眺められ、読書に最適な空間となっています。週末には子ども向けの読み聞かせ会も開かれる予定です。",
+      "latency_sec": 3.342,
+      "duration_sec": 16.4,
+      "samplerate": 24000,
+      "request_id": "pPfr5cla1PWsiueJ4qUW"
+    },
+    {
+      "file": "eleven_v4/varied/text3.wav",
+      "text": "今年の夏祭りは、三年ぶりに花火大会が開催されることになりました。会場周辺では屋台の準備が進み、地元の人々の期待も高まっています。当日は混雑が予想されるため、公共交通機関の利用が呼びかけられています。",
+      "latency_sec": 4.409,
+      "duration_sec": 16.48,
+      "samplerate": 24000,
+      "request_id": "NTRRDlXccvjiDIMC8CCw"
+    },
+    {
+      "file": "eleven_v4/varied/text4.wav",
+      "text": "山頂からの眺めは素晴らしく、遠くの海岸線まではっきりと見渡すことができました。澄んだ空気の中、登山者たちはしばらく景色に見入っていました。下山の際には、足元に十分注意するよう案内が出ています。",
+      "latency_sec": 4.145,
+      "duration_sec": 15.36,
+      "samplerate": 24000,
+      "request_id": "QQo8rTjeXMpUoF66Fy7d"
+    },
+    {
+      "file": "eleven_v4/varied/text5.wav",
+      "text": "料理教室では、旬の食材を使った家庭料理の作り方を学ぶことができます。講師が丁寧に手順を説明し、参加者は和やかな雰囲気で調理を楽しんでいました。来月からは初心者向けの新しいコースも始まるそうです。",
+      "latency_sec": 3.639,
+      "duration_sec": 15.76,
+      "samplerate": 24000,
+      "request_id": "TWXJyvdeGxqfHxqtSqAB"
+    },
+    {
+      "file": "eleven_v4/multilingual/ja.wav",
+      "text": "皆さん、こんにちは。本日は新しい機能についてご紹介します。どうぞよろしくお願いいたします。",
+      "latency_sec": 2.196,
+      "duration_sec": 6.56,
+      "samplerate": 24000,
+      "request_id": "nIDCnNz9L3hBL19W33nJ"
+    },
+    {
+      "file": "eleven_v4/multilingual/en.wav",
+      "text": "Hello everyone. Today, I'd like to introduce a new feature. Thank you for joining us.",
+      "latency_sec": 1.949,
+      "duration_sec": 5.6,
+      "samplerate": 24000,
+      "request_id": "2Kvh5j4KfTNQHOI3Ge0Y"
+    },
+    {
+      "file": "eleven_v4/multilingual/zh.wav",
+      "text": "大家好，今天我将为大家介绍一项新功能，感谢您的参与。",
+      "latency_sec": 1.603,
+      "duration_sec": 4.88,
+      "samplerate": 24000,
+      "request_id": "suOLT99aJFyS8brwkLBU"
+    },
+    {
+      "file": "eleven_v4/multilingual/ko.wav",
+      "text": "여러분 안녕하세요. 오늘은 새로운 기능을 소개해 드리겠습니다. 잘 부탁드립니다.",
+      "latency_sec": 2.009,
+      "duration_sec": 5.36,
+      "samplerate": 24000,
+      "request_id": "w7NMtyClo293KdC1emk3"
+    },
+    {
+      "file": "eleven_v4/multilingual/fr.wav",
+      "text": "Bonjour à tous. Aujourd'hui, je vais vous présenter une nouvelle fonctionnalité. Merci de votre attention.",
+      "latency_sec": 2.238,
+      "duration_sec": 5.52,
+      "samplerate": 24000,
+      "request_id": "rUHC2ZpelgIT22YsmtHe"
+    },
+    {
+      "file": "eleven_v4/multilingual/es.wav",
+      "text": "Hola a todos. Hoy les voy a presentar una nueva función. Muchas gracias por su atención.",
+      "latency_sec": 1.978,
+      "duration_sec": 5.52,
+      "samplerate": 24000,
+      "request_id": "d4K1rSGMx6Br4af4wt7M"
+    },
+    {
+      "file": "eleven_v4/multilingual/de.wav",
+      "text": "Hallo zusammen. Heute stelle ich Ihnen eine neue Funktion vor. Vielen Dank für Ihre Aufmerksamkeit.",
+      "latency_sec": 2.17,
+      "duration_sec": 5.92,
+      "samplerate": 24000,
+      "request_id": "xubRfQAmAgSrnlvyuuXL"
+    }
+  ]
+}
