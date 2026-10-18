@@ -3,6 +3,8 @@
 SB Intuitions の Sarashina3 mini（API）と Anthropic の Claude Opus 5.5 に、同じ日本語の問題 40 問を出して出力を並べ、
 GPT に一対比較で判定させる。書き直し 10 問は筆者本人も盲検で判定する。
 
+記事: [Sarashina3 miniとClaude Opus 5.5に同じ日本語の問題40問を出して比べた](https://mohhh-ok.github.io/blog/posts/2026/10-18-aisarashina3-miniとclaude-opus-55に同じ日本語の問題40問を出して比べた/)
+
 Sarashina は API で使えるのが mini だけなので、Anthropic の最上位に近いモデルと Sarashina の小さいモデルの比較になる。
 
 ## 問題（`data/problems.jsonl`、40 問）

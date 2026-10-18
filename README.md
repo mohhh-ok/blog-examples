@@ -15,6 +15,7 @@
 - [2026/09-21-remotion-subtitle-overlay](./2026/09-21-remotion-subtitle-overlay/) — Remotion で字幕の ON/OFF だけを切り替えるとき、背景+webm+字幕を毎回全部描く（X）か、webm 焼き込み済み動画に字幕だけ重ねる（Y: Remotion 描画 / Z: 透過 webm を ffmpeg overlay）かの速度比較
 - [2026/09-24-gemini-tts-vs-fish-clone](./2026/09-24-gemini-tts-vs-fish-clone/) — 自分の声を参照音声に、Fish Audio s2.1-pro（書き起こしあり／なし）と Gemini 3.8 Flash TTS の voice replication を聴き比べ、読みをカタカナ音写で判定
 - [2026/10-09-capacitor-ios-web-audio](./2026/10-09-capacitor-ios-web-audio/) — Capacitor の iOS アプリで、同梱の mp3 の fetch が status 0 になる件と、画面ロックから戻ると AudioContext が running のまま時計だけ止まる件の診断ページと修正例
+- [2026/10-18-sarashina-opus-japanese](./2026/10-18-sarashina-opus-japanese/) — Sarashina3 mini と Claude Opus 5.5 に同じ日本語の問題 40 問（書き直し・敬語・自由作文・要約・ニュアンス・漢字の読み）を出し、GPT の一対比較（左右入替 2 回）と本人の盲検で判定
 
 ## Secret スキャン
 
