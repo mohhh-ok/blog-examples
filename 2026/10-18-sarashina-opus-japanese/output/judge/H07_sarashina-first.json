@@ -1,0 +1,187 @@
+{
+  "id": "H07",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T06:06:40.281216+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n昨年度に当市が実施した市内在住の六十五歳以上の単身世帯を対象とする生活実態調査の結果を踏まえて新たに設けられた、買い物や通院などの日常的な外出に支障がある高齢者の自宅まで地域のボランティアが車で送迎を行う事業の利用登録の受付を、来月一日から市役所福祉課の窓口と各地区の公民館で開始します。\n\n【回答 1】\nもちろんです。以下のように、わかりやすく自然な表現に書き直してみました：\n\n---\n\n昨年度、本市では65歳以上の一人暮らしの方を対象に、生活の実態を調べるアンケートを行いました。その結果を受け、買い物や病院へ行くといった日常の外出が難しいご高齢の方のために、地域のボランティアが車でご自宅まで送迎する新しいサービスを始めることになりました。このサービスの利用者登録を、来月1日から市役所の福祉課窓口と、各地区にある公民館で受け付けます。\n\n---\n\nこのようにすることで、専門用語を避け、流れもスムーズになり、初めて読む方にも内容が伝わりやすくなると思います。\n\n【回答 2】\n**書き直した文章**\n\n---\n\n**お出かけが難しい高齢者を、ボランティアが車で送り迎えします**\n\n市では、買い物や病院への通院など、ふだんの外出に困っている高齢者のために、新しいサービスを始めます。地域のボランティアが車でご自宅までお迎えに行き、目的地まで送り迎えをするサービスです。\n\nこのサービスは、昨年度に市が行った調査の結果をもとにつくりました。この調査は、市内で一人暮らしをしている65歳以上の方を対象に、暮らしの様子をうかがったものです。\n\nサービスを使うには、事前に利用の登録が必要です。\n\n- **受付開始日**：来月1日から\n- **受付場所**：市役所の福祉課の窓口、または各地区の公民館\n\n---\n\n**書き直しで工夫した点**\n\n- **一文を短く分けました。** 元の文章は一文がとても長く、何の話かが最後まで読まないと分かりませんでした。\n- **大事なことを先に書きました。** 読む人が一番知りたい「どんなサービスか」を最初に置き、事業ができた経緯はその後にしました。\n- **かたい言葉を言いかえました。** 「単身世帯」は「一人暮らし」、「生活実態調査」は「暮らしの様子をうかがった調査」、「日常的な外出に支障がある」は「ふだんの外出に困っている」としました。\n- **手続きの情報を箇条書きにしました。** いつから、どこで申し込めるかがすぐ分かるようにしました。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "調査対象の条件である「市内在住」が抜けています。「本市では」は調査の実施主体を示すだけで、対象者が市内在住であることは伝えていません。また、元の文章では調査方法は示されていませんが、「アンケート」と方法を限定しています。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": "調査の実施時期・主体・対象者、事業の内容、登録受付の開始日と場所が保たれています。自宅への迎えや目的地への送迎、事前の利用登録という補足も、元の文章の意味と矛盾しません。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、まずサービスの内容を説明し、その後に設立の経緯と登録手続きを示しているため、何についての案内かを早い段階で理解できます。回答1も平易ですが、サービスの説明に複数の情報がまとまっており、回答2のほうが一文ごとの内容をつかみやすくなっています。"
+  },
+  "response": {
+    "id": "resp_0d8cc8ea5598b2d5006ad461f06f6887d1b53d55af874748ec",
+    "access_programs": null,
+    "created_at": 1792303600.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0d8cc8ea5598b2d5006ad461f19b9c87d18c24d07c1f4b079f",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GH424gs82pj08GY4bNzzm-MW8HnRJFcgp94-QDl1bv-KiuWdpxNJogMoP_MGHwyE3CFIa-IVx3GO-iFqpGcFf-vtr2n4sutOHpdeuasZXPJnKuukz1HpgKf9Wj39vhLcv33dGJTWD2QNHfaq0bTY9DRzyp7rc-jPHLCDgf8iJJPWXs9Zcy6vS50zdAn3RCctoOtTIMOcnHWpdIOCgk9Fgx1OMVhNIxCcn9JAHdBPEWkaoADhXMufnndE-NnnxwQRVrgFhVD4YKYLzycpvGbHXTGvNCmKXRqwRMsAH1T5-_Ie_wJb1wEWjhYt8JWOf8259mlnzwwxxPsqDFpa4AxNhpUsawAEbW9HbxyzwYBaKW_97_j6IhDjb_vrffXN4Ftt8IrP26W84pcP6lDXGMCAQSnUTg33sxBJv3V50pBYQf91ceBMLKXT9PKvKat0aSExAFVCqsIDVxOuz-ffvp7QeuXa8CjxqGj6VMgYjDVuSOPfCVO4rtjovmrKRW6kbsgDxfw7M8GEJI9UbEedudR3qwyF9wn69fubrjBmDVdKCeIxtckEWbDVfHe-78LtJrRslGe507PcerqI-5TSicL2IMStf1ZYwK-krtbRa6zd-hUBlptvaQoUUjmmkyFVt45dId3Ttz097AvVDr0mNY9SXwqyL-3HfYQkKJe7whzoMFmYyPexEC5wk0wAZcjDKxI1kG7wOyu4j99wdbJRoPEIsfq_1HewwNhLX7h9ooflvce5JjkWCcYwWy5094ez9A7Hv9wdX5Y7FyfyVoY_c-tvAMjFr0xg5SMMoFUNg7VfNfQg7GcB_o0O1F3LB6OfOeZT5xwzyjRUj_mkxm2bqKRKh7oS1g6KSx4nsBNZvkzuSY3f9Ls-l_ZkOjNE2JZktylAwK21MnCxZ8MdV5n5r-m66trnkOWLGNVmzDZTNJjTmOl77IvrQv03d0cKn1zvJVf_FKnr0-_-Dcve3FKia4yaza4z-WWP1mlwjlOmVxyJehETnSOYRNI9wtj5i9XvFdfC_wwA-ECjYcqrPZy9GLs_qbLlCkagPiB8m9QV0-8EQuKh7H6UUzxb8dwrhInwR90eLHn4nwRxzry8ozSlPnpFJUI2QE0ygtFBr1ozUVIrUz9Xfp67119OObx_2MPlmAK2hn9Aej_8i4yzWVb_nimKhx6-hAH9KUZL2-lLyhuKQuEoMUzaFqenV_RB4sUBRqj0BYkzCCCFtvtXReyrGIIvMrtKQ2Y-dMM7kFP5IcdzKbqaCgwCPrDGj3s4sDLk8KrHdcW2yHsLYtGsKkW0s_jLtr1nkPM1zuW7KIP81MUCOPtdKc9uvCzRkDUCliOg_rusdT__j7aZOYQopMcAf6nr4k8Iu1DJUOHAE7XAnSq8uHRgKzQCIvK8oP21oblRK7pjWBgvGW7CfBa-39FLYKEGbfrCQFVPf5bMEefmR6VEUu9PfMNpo1plIgL4xZDKEbjgBfrUVzTpNgcyEUKxK-SoNMg-RGaWX1R8FIC29FOyssOF9EU11kNRXJzSZSO2kSvb-GR64WQhQankn5pVFHur9pdr3xOc7GcaLH3p2lJJMbr8_GdvKai1qumMiibiorzaon1fDBjiuXcejgO2FWdkPYR5A6C7-kwA1GslfMvWLw_bAkxKY0zJ_V8CBV_dzTAJlbTb-7MjlyJR36ybeGPbZq0D0wQitMqilCCmD5Sr3fFhKttWwbpSvRWZxwL6iE5mn9IqX4rzd_Uch5v-djWJbjZye6mqMQHgcp0xNi9GKS1v794kQaIqa6uumMz8Rkw-eTr0UmvdoPfrDxD0G5rSsygFpEobMsJR26GwbLXsvl6ZTjVySVF58ySWchnKe1SFp-On2lwugYAWnfHdxie38xASfPk4oYSWitTbQIT-pR3IlIeJCSBBeFKdZERkPSPAp0yR0y-0iT5m0--zvv2cfIiLT7rgTq_idqKSoR5Z8Lgl6FX49trolokgbYzMbFrjqAkB_1irUyEZ_erEYzsjaX7HIngJzsLzG3LdbnnYKVAeOkbEC20yrsICj7PFOIGZ9XjqC_Rusoq7G-zRael0F9TTwhCd78UZs5314jcfGuTrBdkGQLFNvZ5P4cvVh6hv5poW62LuBWpOuqrGZAKIIB3s36m25JbMOOdmkSjtLo1OywHdEfVBVT63PKREOdJxwsXJMwgyS4LUd9UlTWkliG8XfozQ1AYj9LBcz7o8vQy_uawKIgoB5q45MYmmSjvTVpausjNSoBWmcPUmJxudYv6T3yepzZVZtqehQOhNbzDcsE=",
+        "status": null
+      },
+      {
+        "id": "msg_0d8cc8ea5598b2d5006ad461f3731c87d197da5c61256da1d2",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"調査対象の条件である「市内在住」が抜けています。「本市では」は調査の実施主体を示すだけで、対象者が市内在住であることは伝えていません。また、元の文章では調査方法は示されていませんが、「アンケート」と方法を限定しています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"調査の実施時期・主体・対象者、事業の内容、登録受付の開始日と場所が保たれています。自宅への迎えや目的地への送迎、事前の利用登録という補足も、元の文章の意味と矛盾しません。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、まずサービスの内容を説明し、その後に設立の経緯と登録手続きを示しているため、何についての案内かを早い段階で理解できます。回答1も平易ですが、サービスの説明に複数の情報がまとまっており、回答2のほうが一文ごとの内容をつかみやすくなっています。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303608.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1295,
+      "input_tokens_details": {
+        "cache_write_tokens": 1292,
+        "cached_tokens": 0
+      },
+      "output_tokens": 360,
+      "output_tokens_details": {
+        "reasoning_tokens": 59
+      },
+      "total_tokens": 1655
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

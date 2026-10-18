@@ -1,7 +1,7 @@
 # Sarashina3 mini と Claude Opus 5.5 の日本語比較
 
 SB Intuitions の Sarashina3 mini（API）と Anthropic の Claude Opus 5.5 に、同じ日本語の問題 40 問を出して出力を並べ、
-GPT に一対比較で判定させる。書き直し 10 問は筆者本人も盲検で判定する。
+GPT に一対比較で判定させる。これとは別に、筆者本人が読みやすさを盲検で判定するための書き直しを 10 問作り（H01〜H10）、同じ条件で両モデルに出した。
 
 記事: [Sarashina3 miniとClaude Opus 5.5に同じ日本語の問題40問を出して比べた](https://mohhh-ok.github.io/blog/posts/2026/10-18-aisarashina3-miniとclaude-opus-55に同じ日本語の問題40問を出して比べた/)
 
@@ -23,6 +23,15 @@ Sarashina は API で使えるのが mini だけなので、Anthropic の最上�
 - 漢字の読みに SB Intuitions 製のベンチマーク（JKYB）は使っていない
 - 自作の問題（31 問: 書き直しの悪文 5・敬語 4・自由作文 4・ニュアンス 4・漢字の読み 14）は Claude Opus 5.5 が書いた。Opus に合う問題になっている可能性がある
 - 要約の 4 作品は有名なので、両モデルとも本文を覚えている可能性がある
+
+## 人が読む用の書き直し（`data/problems_h.jsonl`、10 問）
+
+本人の盲検判定をやり直すために作った書き直しの問題。40 問の集計には入れていない。
+
+- 内訳は R01〜R10 と同じで、法令 3（民法 95 条・労働基準法 20 条・特定商取引法 9 条 1 項）・最高裁判決 2・自作の悪文 5。R01〜R10 と同じ条文・判決の箇所・題材は使っていない
+- 指示文は R01〜R10 と同じ
+- 自作の 5 問も Claude Opus 5.5 が書いた
+- `scripts/build_problems_h.py` で作る。判決 PDF の改ページ記号は本文から除いた。古い法令は本文に項番号が無いので、第 2 項以降の行頭に全角の項番号を付けた
 
 ## 条件
 
@@ -57,29 +66,21 @@ Sarashina3 mini は 6 RPM・バースト不可なので、リクエストは逐�
   読みやすくても意味を変えた書き直し（二重否定の読み違えなど）を勝ちにしないため
 - 漢字の読みは GPT 判定もするが、主な指標は機械採点の正答率。回答から空白と句読点・括弧を除き、正解（複数の読みを許す問題は全部）と一致すれば正解
 - 判定役に Claude は使っていない（自己採点の偏りを避けるため）
-- 書き直しは筆者本人も盲検で判定した。A/B の割り当ては問題ごとにランダムで、対応表は `output/blind_key.json`
-  - 本人の判定は読みやすさだけ。本人が意味の正しさは判定できないと明言したため、意味は GPT の判定を使う
-  - 判定したのは 7 問（R01〜R05・R09・R10）。R06〜R08 は判定なしで対象外にした
-  - R01 は、判定の前に AI からの途中報告で Sarashina の書き直しの特徴（2 つの条件を別々の禁止として書いた）を本人が聞いていたため盲検ではない。盲検の集計（6 問）から外し、参考として別に載せる
-  - シートの「判定:」の行を `scripts/import_human.py` で逐語のまま `output/human_judgement.json` に取り込んだ。各行から読み取った「読みやすいとした回答（A / B）」は Claude が文面から読み取ったもの（R09 の「整理されてるのはBかな」は B とした）
-  - `output/results.md` に、本人の判定を GPT の読みやすさの判定（2 回ぶん）・意味の判定と並べた表がある
+- 書き直しは筆者本人も盲検で読みやすさを判定した。本人の判定は読みやすさだけで、意味の正しさは判定していない（本人がそう明言した）。意味は GPT の判定だけを使う
+  - 盲検シートは `scripts/blind_sheet.py` で作る。A/B の割り当ては問題ごとにランダムで、対応表は別ファイルに保存する。各モデルの応答は API の出力を一切加工せずに全文そのまま載せ、シート側の区切りは応答の見出しとぶつからないよう「━━」の行で書く
+  - `--keep-assignment` を付けると、今の対応表の A/B の割り当てのままシートだけを作り直す（`--force` は割り当てから引き直す）
+  - H01〜H10 のシートは `PROBLEMS_FILE=data/problems_h.jsonl BLIND_KEY=output/blind_key_h.json` で作った。対応表は `output/blind_key_h.json`
+  - H01〜H10 で本人が判定したのは 7 問（H01〜H05・H07・H09。判定する問題は本人が選んだ）。シートの「判定:」の行を逐語で `output/human_judgement_h.json` に書いた。各行から読み取った「読みやすいとした回答（A / B）」は Claude が文面から読み取ったもの（H07 の「用途による。文章としてはAで十分だと思うが、チラシなどの場合はBとして構成されていた方がいいかな。」は差なしとした）
+  - 本人は、応答の癖でどちらのモデルか見当はついたが、なるべく流されないように読んだと述べている。Opus が書き直しの後に「補足」の節を付けることも本人は知っていた
+- R01〜R10 の本人の判定（`output/human_judgement.json`、対応表 `output/blind_key.json`）は無効にした。このときのシートは、書き方の癖でモデルが分からないよう両モデルの出力を同じ規則で整えていた（`scripts/blind_format.py`。見出しの `#` と太字の `**` を外すなど）。その結果、Opus の「補足」の節が本文と地続きの 1 行になり、本文が補足とセットで書かれていることが読み取れないまま本人が判定した。判定の記録はそのまま残してある
+- `output/results.md` に、本人の判定を GPT の読みやすさの判定（2 回ぶん）・意味の判定と並べた表がある（R01〜R10 は無効と書いたうえで載せている）
 
 集計の結果は `output/results.md`。
 
 ## 限界
 
 - GPT 判定には出力をそのまま見せている。Sarashina は「もちろんです。」などの前置きを付け、Opus は Markdown の見出しや太字を使うことが多いため、書き方の癖でモデルの見当がつく場合がある
-- 本人用の盲検シートだけは、書き方の癖でモデルが分からないよう、両モデルの出力を同じ規則で整えた（`scripts/blind_format.py`。`output/raw` と記事に載せる出力は加工しない）
-  1. 区切り線（`---` だけの行）で出力を区間に分ける
-  2. 最初の区切り線より前が 1 段落だけで、書き直し作業そのものに触れている（「書き直」「言い換え」を含む）なら、前置きとして削る
-  3. 最後の区切り線より後ろが 1 段落だけで、「このように」で始まるなら、締めの地の文として削る
-  4. 見出し・太字を外すと「書き直した文章」などのラベルだけになる行は削る
-  5. Markdown を外す。区切り線を消し、見出しの `#` と太字の `**` を外し、箇条書きの記号は「・」にする（入れ子は 1 段ごとに全角空白 1 つで字下げ）。行末の改行用の空白 2 つも消す。番号付きの「1.」は残す
-  6. 空行が 2 つ以上続くところは 1 つにする
-  7. 段落の区切りを揃える。空行を除いた各行を 1 段落として扱い、段落の間を空行 1 つにする。ただし箇条書き（・）と番号付き（1.）の行が続くところは 1 つのまとまりとし、その中の改行はそのまま残す。Sarashina は段落の区切りを改行だけで書くことが多く、Opus は空行で書くため
-  - 本文の後ろに付いた補足・解説（Opus の「補足」の節など）は書き直しの一部として残し、Markdown だけを外した
-  - 削った部分は問題・モデルごとに `output/blind_key.json` の `removed` に記録してある。`python3 scripts/blind_sheet.py --keep-assignment` で、今の A/B の割り当てのまま同じ整形を再現できる（`--force` は割り当てから作り直す）
-  - 整形した後も残る手がかりがある。Opus は補足節を付けることが多く、その中に「太字にしています」のように元の書式に触れた文がある（段落の区切り方の違いは規則 7 で揃えた）
+- 本人の盲検シートも応答を無加工で載せたので、同じく書き方の癖でモデルの見当がつく。H01〜H10 の判定はこの前提で読む
 
 ## 再現手順
 
@@ -92,8 +93,15 @@ python3 scripts/build_problems.py      # data/problems.jsonl を作る
 uv run scripts/run_models.py           # output/raw/{sarashina,opus}/<id>.json と output/request_log.jsonl
 uv run scripts/judge.py                # output/judge/<id>_{sarashina,opus}-first.json
 python3 scripts/blind_sheet.py         # 盲検シート（/tmp/sarashina-blog/blind-sheet.md）と output/blind_key.json
-python3 scripts/import_human.py        # 盲検シートの「判定:」の行を output/human_judgement.json に取り込む
-python3 scripts/aggregate.py           # output/results.json と output/results.md（API キー不要）
+python3 scripts/import_human.py        # 盲検シートの「判定:」の行を output/human_judgement.json に取り込む（R01〜R10）
+
+# 人が読む用の書き直し H01〜H10
+python3 scripts/build_problems_h.py    # data/problems_h.jsonl を作る
+PROBLEMS_FILE=data/problems_h.jsonl REQUEST_LOG=output/request_log_h.jsonl uv run scripts/run_models.py
+PROBLEMS_FILE=data/problems_h.jsonl uv run scripts/judge.py
+PROBLEMS_FILE=data/problems_h.jsonl BLIND_SHEET=/tmp/sarashina-blog/blind-sheet-h.md BLIND_KEY=output/blind_key_h.json python3 scripts/blind_sheet.py
+
+python3 scripts/aggregate.py           # output/results.json と output/results.md（H01〜H10 も別の節に入る。API キー不要）
 python3 scripts/render_outputs.py      # outputs.md と outputs/<カテゴリ>.md（全問の問題文・出力・判定。API キー不要）
 ```
 
@@ -101,11 +109,11 @@ python3 scripts/render_outputs.py      # outputs.md と outputs/<カテゴリ>.m
 
 ## 出力
 
-- [`outputs.md`](outputs.md): 全問の問題文、両モデルの出力の全文、GPT の判定 2 回の結果と理由、本人の判定、漢字の正誤を、カテゴリごとの `outputs/<カテゴリ>.md` に読める形で載せた目次。出力は `output/raw` から加工せずに、引用の中に転記している（出力に Markdown の見出しや区切り線が入っているため）
-  - 公開の前に、Sarashina の利用規約 第12条に沿って、全問の両モデルの出力に暴力的・わいせつ・差別的な表現、第三者の著作物、実在の個人を特定できる情報が含まれていないことを確認した（2026-10-18）。要約の出力にある作品の引用は青空文庫の著作権切れ作品だけ。K01 の署名例にあるメールアドレスは、問題で与えた架空の社名から作られたドメインと伏せ字（〇〇・xxxx）で、加工せずに載せている
+- [`outputs.md`](outputs.md): 全問（40 問と H01〜H10）の問題文、両モデルの出力の全文、GPT の判定 2 回の結果と理由、本人の判定、漢字の正誤を、カテゴリごとの `outputs/<カテゴリ>.md` に読める形で載せた目次。出力は `output/raw` から加工せずに、引用の中に転記している（出力に Markdown の見出しや区切り線が入っているため）
+  - 公開の前に、Sarashina の利用規約 第12条に沿って、40 問と H01〜H10 の両モデルの出力に暴力的・わいせつ・差別的な表現、第三者の著作物、実在の個人を特定できる情報が含まれていないことを確認した（2026-10-18）。要約の出力にある作品の引用は青空文庫の著作権切れ作品だけ。K01 の署名例にあるメールアドレスは、問題で与えた架空の社名から作られたドメインと伏せ字（〇〇・xxxx）で、加工せずに載せている
 - `output/raw/<model>/<id>.json`: 送ったリクエスト（モデル名・パラメータ）、送信日時、API のレスポンス JSON をそのまま
-- `output/request_log.jsonl`: 全リクエストの開始・終了時刻と HTTP ステータス（429 なら `retry_after`）
+- `output/request_log.jsonl`: 40 問の全リクエストの開始・終了時刻と HTTP ステータス（429 なら `retry_after`）。H01〜H10 は `output/request_log_h.jsonl`
 - `output/judge/<id>_<回答1に置いたモデル>-first.json`: 判定プロンプト全文、GPT の判定（理由つき）、レスポンス JSON
 - `output/results.json` / `output/results.md`: 集計
-- `output/blind_key.json`: 盲検シートの A/B とモデルの対応表
-- `output/human_judgement.json`: 本人の判定（シートの「判定:」の行を逐語で）
+- `output/blind_key.json` / `output/human_judgement.json`: R01〜R10 の盲検シートの対応表と本人の判定（無効にしたもの）
+- `output/blind_key_h.json` / `output/human_judgement_h.json`: H01〜H10 の盲検シートの対応表と本人の判定（シートの「判定:」の行を逐語で）

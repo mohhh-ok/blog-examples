@@ -1,0 +1,187 @@
+{
+  "id": "H07",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T06:06:48.751410+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n昨年度に当市が実施した市内在住の六十五歳以上の単身世帯を対象とする生活実態調査の結果を踏まえて新たに設けられた、買い物や通院などの日常的な外出に支障がある高齢者の自宅まで地域のボランティアが車で送迎を行う事業の利用登録の受付を、来月一日から市役所福祉課の窓口と各地区の公民館で開始します。\n\n【回答 1】\n**書き直した文章**\n\n---\n\n**お出かけが難しい高齢者を、ボランティアが車で送り迎えします**\n\n市では、買い物や病院への通院など、ふだんの外出に困っている高齢者のために、新しいサービスを始めます。地域のボランティアが車でご自宅までお迎えに行き、目的地まで送り迎えをするサービスです。\n\nこのサービスは、昨年度に市が行った調査の結果をもとにつくりました。この調査は、市内で一人暮らしをしている65歳以上の方を対象に、暮らしの様子をうかがったものです。\n\nサービスを使うには、事前に利用の登録が必要です。\n\n- **受付開始日**：来月1日から\n- **受付場所**：市役所の福祉課の窓口、または各地区の公民館\n\n---\n\n**書き直しで工夫した点**\n\n- **一文を短く分けました。** 元の文章は一文がとても長く、何の話かが最後まで読まないと分かりませんでした。\n- **大事なことを先に書きました。** 読む人が一番知りたい「どんなサービスか」を最初に置き、事業ができた経緯はその後にしました。\n- **かたい言葉を言いかえました。** 「単身世帯」は「一人暮らし」、「生活実態調査」は「暮らしの様子をうかがった調査」、「日常的な外出に支障がある」は「ふだんの外出に困っている」としました。\n- **手続きの情報を箇条書きにしました。** いつから、どこで申し込めるかがすぐ分かるようにしました。\n\n【回答 2】\nもちろんです。以下のように、わかりやすく自然な表現に書き直してみました：\n\n---\n\n昨年度、本市では65歳以上の一人暮らしの方を対象に、生活の実態を調べるアンケートを行いました。その結果を受け、買い物や病院へ行くといった日常の外出が難しいご高齢の方のために、地域のボランティアが車でご自宅まで送迎する新しいサービスを始めることになりました。このサービスの利用者登録を、来月1日から市役所の福祉課窓口と、各地区にある公民館で受け付けます。\n\n---\n\nこのようにすることで、専門用語を避け、流れもスムーズになり、初めて読む方にも内容が伝わりやすくなると思います。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "調査の実施時期・主体・対象、事業の内容、登録受付の開始日と場所が保たれています。自宅への迎えや目的地への送迎という補足も、元の事業内容と矛盾しません。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "元の調査対象の条件である「市内在住」が抜けています。「本市では」は調査の実施主体を示すだけで、対象者の居住地を限定していません。また、元の「生活実態調査」を「アンケート」とし、明示されていない調査方法に限定しています。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、サービスの内容、設立の経緯、登録手続きを短い文に分け、「単身世帯」なども日常的な表現に置き換えているため、一度で理解しやすいです。回答2も自然ですが、調査結果からサービスの対象・内容を説明する文が長く、複数の情報をまとめて読み取る必要があります。"
+  },
+  "response": {
+    "id": "resp_0a2b9bbfe6a94c2f006ad461f91e1887d1abe3af4c612509bc",
+    "access_programs": null,
+    "created_at": 1792303609.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0a2b9bbfe6a94c2f006ad461fa04c487d19cf13f01d8c6eeff",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GICir6D2MFLcaV6nKoeEYx18N9ff7ppgW5QyxYfLgf0doOpIKR2mpg6dsHSoyWD3drsVGqfC2KiIMWlhilKqiwVVGlYlCXk_xlp_tasmcZk2RqdYtblzjLRUdVLxSprmONVMt83DsoLnCWwlcx0X7JSfaSKW2K6pCIvUKkW2YSGzK1lg59837NSnQvycp_CKDNfMvaJAU4r7Ase3wc-xDRu8umnsj7klMuBAHP9h6epOt0vd9syK0JffUF5_raUWBCY6b19fqpGNXx3j_GMT1MpC1u7o6TnlM0-MU1Pw2tqiY4ZZ_P5pnn7s4JHlZ9z43B_-3dB7ggGP5WA7z5g4I-klweUmwgRE0_8VlAOY7xdjIe3IzWkaU35ZLUMsZDXSepOf7MaQhvuqTECn_C45eC6g5G8ohdRxs82E1IFlaSgT_x-LwEJv7jMtb4vXRWWq8C0BvOTzq7Dcb3BjpFT6q7uRv0LqPogzjY-KFfvn1TVfTKaedrwyWQv3GVWhnDmvm6Eve5_VVishBcOdbckjCP_hFkqXZwchDubdeJZYw86rwqd8FsOY8Z5jb3hPwg5q0fHuMSLQJ3xJAA__gRhFsBjuOsV5UNvmgxAxUS-7AXFg5zrax9iZerQt80QXFQ4RQJFvoESHv6VJ3Uw0fYQgNdABILTwnn8GAT5__30fYavAzA8HsiiAXPj_CgjUrn5KG1HChPegUJbPtnE7SxapVCuHcYiX44CyRJyMk-pgGQtWgANrwYdBmaqdx8rimOV7FwIJVPlnoA9QLjSNsnY_apvGldeLarNb24fjCMXjIF7_YAwBfgPShOOrVSdmojq2bzU9ys3NURrt2xlOlBGjHNq-32cv8eJyK_NQjwPi1bVUdPcmK3EjyLEWaKPaR8aNk-jB6PvSqZKyRsaEJsG9k6vdEhbxDDuBEB9YosEqQ-AcoPVfNQU1hkbkBgo1mjtJCjl4fEn7u0Exwm-bZjsMBPQ92h6Lmqs9YjVlIyJWup7Ow0mTr4eKtXULXNP6ZZ-NqZLZFDZ8XAGJJ8D7fm2MYXpqrhuMg6YNt4P2tfeOlH8GumqNTYMHI3ZKYmdLo8bfN1gOGOpnBvYxK9CLzXcDFBva4FMfiu52YOZeObIHZQlq0imQFrS6ReiE1X1bBcnJGO3noVD7wCWIeTbBBaf_xR0YfZ5Q3nxSAfmiGVsvP7K0ldEf9KiE-mGLKrTYmRsjwNJ6R9oQbPni4Q9QnDzHBkKLzR7ksFBUivi7kO5B5evhXkHk6zGIkOB6JH3GfOQlROIcqlv3gbSHM0pPcKuYJSDUoaXuq_NELqPZf46P4h8a1F0hrlm1oi87sahPcFGGRnFJkZUcfzCT2IOA-3R26EZvJfEdiU0L1TabjC0GPREzer2-uKgBjE0nuhbAGhd3yqWrEeJP7uMZYcYj99BzpmS1uMFFIbY-qCuxVbvj29IAEPh9y1TyHkQL_JUHBx3_WkacwePRqz4HAd0iDqCbug95nK2M-1ICdnWeVA3hu7p5TrKLSIGhYZ6rNQO-Hw-0zITdHD-U7cfCoHrXk4KQ8_e7CAkPcCcvlCdnPwWSDn78orlD86Uup9eeBNvjpq1BqjWgPeCInxWtO5WfaAEIIWs4SXR9sN3BGOQ8Uk0ShAVwrn1QMFaLwMD0fT9MwTYVLplyuGuPj-jJvHVc-KXBvN7aMkUFUImu70biOitCEF3E0mxwpsFHDstqD8sX3rhXUQ5dURwT3ykHBwQzKkhRlF3Dx0t9-lt9NNN0209Tfa7bDTdL6d19Dp2htyKJOjw1l9NiYiYgjg06Zw2oLuNAgwjidRiEVeW8evuPK8tzGXEbA2QK9rrE4nW2G2-tKfJ48IWVw7w-mzyhgjllx_wbNVUm05bvGkVhvGlxt-Lts9_mqZuEkTRKdyAfxYvVo5bUvrlqjnbMGG3VuTGeWsihdWM1DyAvAja4iJPUNBrfTOGfwIlUNTAJ0Gv0yvF5D4S78oUbH3axeiaj7tsDRpNzgfcudxcJE2aqMnorS8t9H7wdH9wwjkLiJRkOlAI9YlYuUJ_Vo-R2RxHPDRSJRcLKnlQSP8QI6TJJfhOYmqy17h9kGCYmMVbhmwNb_p-MNijYhCF0IqE_npVSSfDkwnRPIPm0EXR704_9_-oaC72kYGLNmLZaSBXEr6emMeBDfpn2c1XvA-QKtb2LrJ11C0JORUYo13X9WsYGn7HzY6pc47UlxSqY6DnPQ4H7hERxYHZBdAkpppGGMIhhLkGpiipXGVKvN7plXMymkTthohGIBR4Mq_1crDurawANbbcfY1-8WgNdJzPhA7YzgLsOejS_XNgfUQEEmi6vfzqHsgForbVHffhe0aAE7P9EmMY8LY_E5bwQ34j5XfzH2MDBezAaNB1Bu6IkY2z_flFcLY4Ne82fI8PFlQN7M9g6rpPYhUXOOuaDV5DpDCPMoY9eooXPbdOsw==",
+        "status": null
+      },
+      {
+        "id": "msg_0a2b9bbfe6a94c2f006ad461fbfc2887d1b191808511cdbc44",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"調査の実施時期・主体・対象、事業の内容、登録受付の開始日と場所が保たれています。自宅への迎えや目的地への送迎という補足も、元の事業内容と矛盾しません。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"元の調査対象の条件である「市内在住」が抜けています。「本市では」は調査の実施主体を示すだけで、対象者の居住地を限定していません。また、元の「生活実態調査」を「アンケート」とし、明示されていない調査方法に限定しています。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、サービスの内容、設立の経緯、登録手続きを短い文に分け、「単身世帯」なども日常的な表現に置き換えているため、一度で理解しやすいです。回答2も自然ですが、調査結果からサービスの対象・内容を説明する文が長く、複数の情報をまとめて読み取る必要があります。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303617.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1295,
+      "input_tokens_details": {
+        "cache_write_tokens": 1292,
+        "cached_tokens": 0
+      },
+      "output_tokens": 376,
+      "output_tokens_details": {
+        "reasoning_tokens": 75
+      },
+      "total_tokens": 1671
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

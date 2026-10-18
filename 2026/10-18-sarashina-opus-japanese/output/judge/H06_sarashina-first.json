@@ -1,0 +1,187 @@
+{
+  "id": "H06",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T06:05:38.344474+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n本講座の受講料につきましては、開講日の七日前までに書面にてお申し出いただいた場合に限り、事務手数料として千円を差し引いた額を返金しないわけではございませんが、開講日の前日以降のお申し出につきましては、主催者側の都合による中止の場合を除き、いかなる理由であっても返金には応じかねますので、あらかじめご了承ください。\n\n【回答 1】\nもちろんです。以下のように、分かりやすく自然な表現に書き直しました：\n\n---\n\n受講料の返金についてですが、開講日の7日前までに書面でご連絡いただいた場合は、事務手数料として1,000円を引いた金額を返金いたします。ただし、開講日の前日以降のご連絡については、主催者側の都合で講座が中止になった場合を除いて、理由を問わず返金できませんので、何卒ご理解ください。\n\n【回答 2】\n**受講料の返金について**\n\n受講料の返金は、次のとおりです。\n\n**● 返金できる場合**\n開講日の7日前までに、書面でお申し出ください。受講料から事務手数料1,000円を差し引いた金額をお返しします。\n\n**● 返金できない場合**\n開講日の前日以降にお申し出いただいた場合は、理由にかかわらず返金できません。\nただし、主催者の都合で講座が中止になった場合は返金します。\n\nあらかじめご了承ください。\n\n---\n\n**補足:**\n元の文章では、「開講日の6日前から2日前まで」に申し出た場合にどうなるかが書かれていません。書き直しでもその点は加えていませんが、実際に案内する際は、この期間の扱いも明記しておくと、受講者からの問い合わせやトラブルを防げます。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "元の「7日前までに書面で申し出た場合に限り」という限定が、「場合は」に変わり、その条件以外では返金しないという制限が明確でなくなっています。また、「返金しないわけではございません」という返金を否定しない表現を、「返金いたします」という確約に強めています。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "元の「7日前までに書面で申し出た場合に限り」という限定を落とし、補足では「6日前から2日前まで」の扱いが書かれていないと説明していますが、元の限定はこの期間も返金対象から外すものです。また、「返金しないわけではございません」を「お返しします」と確約に強めています。「主催者側の都合による中止」は返金拒否の例外として示されているだけですが、回答では「返金します」と無条件の返金を明言しています。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、返金できる場合とできない場合を分け、条件・返金額・例外を短い文で説明しているため、一度読んで整理しやすい文章です。回答1は、条件や例外が長い文にまとまっており、読み手が関係を追う負担がやや大きくなっています。"
+  },
+  "response": {
+    "id": "resp_03c54d8efbbd43a9006ad461b289b087d19262f14fa978db1d",
+    "access_programs": null,
+    "created_at": 1792303538.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_03c54d8efbbd43a9006ad461b377e887d1a7d765e5594c1749",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GHCZTI7X7G9vzZ2iBgZTAI_Rx10vs6P7K75eNPRQ-yoYhTetHM3UO541CwJfaaz5bqHcVF8AvFP0ieVIeOWHo347tL6hGoCLIAOUf69h2i3dCygQkTGb5C7rfSY-voxovalhQl6JZScCgRuQAJVGzxoqQnSbmjEQzFtLtxWDmF8S87F6boT-dvVp-c0RHSXVYx6_QMAil4eR0eOq_c1NGUzXRYUKA8G3FPFdB3F6eykIx4HrgMLu6_u3xFc3TdpC4skNXOi04gdAgl9kdnsEVo1eU2yQwQ-z0dYZBUrZ2pVNzAPFvnWFJZxhS2-RJ67sXgXrNI9e5p_IHw_Oh3gyGLz7XzeidTQXG9vbooU8HBtcG1sec8CaUGtFBfAiVQ-6qsICTsh4xEQil0Y4gK08bI1tPQrI28IH59qeQvSVEJDDj-U7hqSdGEo2PyYcV220GNIZD_nSCyIJAJR8JpsUuvOoCYity5oUMidqV5LvCPhGYU0p-WQKByAy0bkDpV795QYczbS8EcblwHSxdL_a2jGtWBEE25UVR-huhuF0ulq-K6eBfyYUDeu0iLg_ZiXMeHLCWVKnCvcrHSrtxYrxZCWe1NKs7nh6LxwyUWuBoK7HPRnpL7vhTtQAkNm_x7c8FTdVl-VuXk83sT3OgQk_40v1K9_TY-EecupgjH0VUo5Xs6lFZk3JbSeRHEEotXPfdw7sJ4h74tdbNVwjJxAGZFiojC-enmSe9gmor1Se0R-1krkG6XVcZ2bPdc9C23_5MVSU1YfdyAVUM0TpG0675ij__I0q88fTqH_o1Z--X-YSUhjky4TtnFgSO6cmBZ_Hu_GumLksWpp8XTE4EAIuEh0JvKzurVRs23aR_qc62kbiNhs0HPoCT924-WuUB3SXETVB6lYzbcatJvyQZGNpLuOf18jmnRvV3F_svyfK2j29gCEBF1TMPSWpCQnMONfTQgJ7hj2MnFkk3lB2dv6t3lORruMjrMyGbq_i8ZDiuuLuO0kUYkYsuj6iBo9P3WNfCEKBtmYEyyZsMRga8L3aNeR1vzUx7pM5421zKatFUkyLk5buIURExZggAsVVepqX_OVLl3aKHvav-DuKlPi88QQUxlR9Mj1PqN8UJisVHJxUfhjTFSPidTVGYSnJ3NNS7uteuXjiLzOpwq3caykMzGfIW4Df6kfAS5O3bW8u3G9ITMrljqEVev8ZdxmiFoyBPysmEotgu-leZ0esPYBe8ZN31rB7DQYIAcF4BxnwZgPs8A1kyEPJKlH5FHJGBG01TP3bnmfLeHCSieFVE4pFlpja9xAFYbPa8b4TDO5xe_7TYw0ItImMTJkmcONRYUy1IN58znLuaIvt3vH8mirdm00HjYVoV7UHk5kndtS9A2jlqQQIkjEMpaT6fSHiXdJOvYJQQX-J8uVXnGYTFF8WFAnQ8Tw5UTqJiyN4V38InFxtpZIrNJWwB_3-QsAS2DR-QRK8PBN2fXVBPymH697kdig3a0NGSkhhWtk86wxqROk4WjtwkhP_eAaaBlniKXldq-QomcqBNs4Osec_6AOIBt_a0DzbNN9KBXGEw7z9QwIbIxh1an0Y-1b3i6ESMRvNDzGQ4NpPFpoL7sj_PLTyJ88tfxX2NJAMmdC8gYvraeM4UdU-dwO_yjp6m9Ul4f2DrAyMtufIeiYQ1TS9SVxytBgpJF-jwjky8uN5TQXDvSUCiWI8eVi4gGE6uD0Bq5VuMaMmANJa3aOAV3DEYWaEQZjNLDhMUfgwDZo7UNLYNNGIcGfMgn8DOmgx5tQ_em2KeJm_nbZSzgFxM24IN_EiNQSdaj2i1D8NpgU2kw1s4nQNxryZu14cKLtBpIR8GJmvPd75KZYQQqjylEHp5eD1QbvUqoBJQS2IxLosovBm_c3lrvoHm9Inu1fvbBclT8eZuQDHRcvJc9ZyUBJdRDslaj_xnKrZs64FBcBX39DUSQB5WeIF6SKjnEs7RUrazOZ09Eh5h7R-eUTk2Iw8BjXRDnpx4t-ac9_z7ZYd3fZgcyFo3iHjCcyji59EzOR8YsBoVAYkvRYoutc5Y6ugoSJVaCJu17miwr_hSVI5fGqf47J8PtQ0sS-i06mYw0JyL75yb-hf1CGg40vl-A_7ARe4YZ-fJbgNeNTfVK8O0UU4dFVDSjMVk-Ygx0GGKn15XKskJJmv7GQUi5kkeuQRPKmrLgdnAnHB72EGQZMn2-bcFz_m7uHzej_qNNroWX4UrAxJR2eN_zouQy3byrbftsH4rMYvviWqUvvagHHWdKWyoYsdzeox6fBuBcTW2TxsnMazk3yiK77aPa-SksTrgWEQEOhvxM1-hnHhplS9c1QdMdvgfROUrYSZkp7nCoVRbXBAugpJx_fSSELHhwyCVLKUwt_NFTPXxVepsGCVWPG3yTJhUXb6TK7gAV5Bk-0wu1VT8MM4nmY9BOi72cbRjXUqdJW2vZQn8Daf2lkB0liUokF6hjUyChP1JzHgIgyqR4wTPkF9SgYcJQ9EH1i7jWrljOXrnsrlCIKHfQK4fv8wiPnkjlw1x8CbL3XFSlRq6LrEjs9drIeA18Y4_bMkw_tr2sg8jzXeFzY9IGLQsE_P8I9eWmAJx6CXPk-9ybv6WtUuNhjm8YWfrTpN9BwDG_XMXN5kQHL-z1HCL2-0wvIZL8xGG69uOrXKK9wV-1P82-BUEJml_pf_MAVYe9g8hw2DR5aI-pC1WdU_KtxInPoHQq6fHkPHCm-ORlMCKrR6lTqFetgXruQ_nM_iVCU74IKn4mnAg08ETeqjUeiYGwSIX6RIzRFYUSzwbb7-0AaV5H_zfhzgzWiN4HNWmd69cs-x7mtHpxBSaicZEI76ejS71i-hS24uqGRrsIz1kVDuY0YAtbOpb75ZGqhINRnclFvIjl1hIIqg_DCnSI138Gyq62cmrTibAMbfCebrnZK6NLa20PwE4sP4cobqHBC2iqX9EU8wxOyRq9IBdj05P-D7ExoXf7vAC6SlXG_WQVic6uXclCQCLCpnwuIObo8UBPJSwULr91hXZsexzPWi_ngwN6agHeoSZTR2GX-2eijUm-SAv1ro9fbZ7JNRtKTTOfV615Dpd2ZMDg1I3T5LPTVSTiHiBy-o_RuUouB-FHxkxV7NRXkJLqVpqYAB8B89xlHfeGw-2btXOMR-M47Wn3SPYIWZAqOilEFZNBVfoKW0vcwJXQn6RjIknw7u9-XXBEx5f_IthUEEF-o2Om6LsOHgpPUqFKSkD6CUPadoKsslfuSC028gefP6F_82cuhB05IyL1pxFnJohRd9yIqtkAq9sALMsA9RPGLWtGHENnOdoSu1-9tINbP8IZTK4_8bGBFILH1-HPFx2_lGkAccR14CVlzaZQp3ixZQu7KBoPjXH1PGQ-PNQHR9znqo0x1L6ylDHYgns3rkqfgbcMNnpGAL5q9oWYxHG8X-XBSmMm-mjVysX6vMCxPk3BkcRK6x3pFyekqFAfJPtQqa1LPFb6VY6u1gUrUp_6zbLwR8rDs4jnGY4E8nuS_if3m6WeWIbMuFDs73ooRkkf7gXr1DCYUBljR0PIqyWtOgNFSsAN8a_fDvWLIjMtcCp-C49x8DvpMg0AAH7J9xgTFv-e3lZMmikOWs2yTK1xD038DDkWggkvN7DpTKc0Kqey_GB-QjUFQ40HoZJfweDLjradbqyfKS1FJePLpLK5dK9y9JkP46Ws_N7ZS0PY_Ya8VaG6OHSQzhzNJcBCn3H88MxL8z7O2oF8mpDicqpvJVpx1WboHIHgcy_1Vq80IuU6kt9YAbK3rdDZFmKmAqO4Q8ROYMxCFl1UUJFw5xYFTXFuume7refbkkgHDX-5N5tWTQTg-M7Zx0TJnjj337r3mFMMw-iF9QK4zDT5S47etD_jEfzuoTx7r5CqpdBzJWrBzIfGx6xrXsJy-e1B2aKhKtmd-V9TXJi8RkqMRXcCVx5AvP-9RYKRyCcmhtVoK4ArFzpyFkl36p13gdBsyDgz0yfjkQr2B8tJn9JQKpEK8ddRv-lVzqBMzc-_1CeYAViao5sex7SjWkFhUzycIbT0vYYqFUZw-DQRFpjbIvGS-2wYf5aBaRa6feRcJVxQK1M-mUmNNIFJ7N7g9Ze6Uhz0kk0TbbWM5FDKH9-UWmO6mvGGCTesSqONU101MBC7BPbphZDyeFIJVRl1R6mQ8g55hTrJkD4uPQ3dyWYw6dXIbbUEHx0B1QZNLMGoIc9FDLRtISyonebJqnu6hLRP3YgkNDpGRm3P8GIUcqEFlfLQYkyBoSDvRl60EOgD47jQ3tVusoEPysbz9VQjS43Okzyu2Jf4SATDxZhq7vZkFEEPTd6TahnardhOqgg8_DEygK4UeS7mZ9dambr4zeRtfAznFSUDgh_YI6SXQE3PV4aUYrTHR-h0frlZVqq_zT8UuV0XaanFybvqDJXNj3jHLd2xA8Q39KQWl5OUFUb2wnPFl-fWfheFkHot-TXi0ZSRolwurQICnWcumIB-manlqv1cL8HdjunRwX6jHf4V_ZLTXqmsq7EfhM_gETcz7sk6XPRlikoBFpnF87ltHOE1aicYHMgl4v0-x0xOcsM0TsPMZlvTy2a9shAU051ert5saHRWsHgbc5vNit1drj95g-tSvLlRvnn_qtn7R5qW2ON1dtQ0K5nUgrgJtzwLwMiZTFHgzY6RqyffLa5M7J-46zm57gxHfUxir5L7J5MyH3dUlkPvq_CC8IXUmmTxAd3L72Fa5UE4ULk-0ABf6YHfQhqfj5saB2K9R54tJDpI=",
+        "status": null
+      },
+      {
+        "id": "msg_03c54d8efbbd43a9006ad461bb7c0887d1b68c926bd247023d",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"元の「7日前までに書面で申し出た場合に限り」という限定が、「場合は」に変わり、その条件以外では返金しないという制限が明確でなくなっています。また、「返金しないわけではございません」という返金を否定しない表現を、「返金いたします」という確約に強めています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"元の「7日前までに書面で申し出た場合に限り」という限定を落とし、補足では「6日前から2日前まで」の扱いが書かれていないと説明していますが、元の限定はこの期間も返金対象から外すものです。また、「返金しないわけではございません」を「お返しします」と確約に強めています。「主催者側の都合による中止」は返金拒否の例外として示されているだけですが、回答では「返金します」と無条件の返金を明言しています。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、返金できる場合とできない場合を分け、条件・返金額・例外を短い文で説明しているため、一度読んで整理しやすい文章です。回答1は、条件や例外が長い文にまとまっており、読み手が関係を追う負担がやや大きくなっています。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303554.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1003,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 614,
+      "output_tokens_details": {
+        "reasoning_tokens": 240
+      },
+      "total_tokens": 1617
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "H06",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T06:05:54.874984+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n本講座の受講料につきましては、開講日の七日前までに書面にてお申し出いただいた場合に限り、事務手数料として千円を差し引いた額を返金しないわけではございませんが、開講日の前日以降のお申し出につきましては、主催者側の都合による中止の場合を除き、いかなる理由であっても返金には応じかねますので、あらかじめご了承ください。\n\n【回答 1】\n**受講料の返金について**\n\n受講料の返金は、次のとおりです。\n\n**● 返金できる場合**\n開講日の7日前までに、書面でお申し出ください。受講料から事務手数料1,000円を差し引いた金額をお返しします。\n\n**● 返金できない場合**\n開講日の前日以降にお申し出いただいた場合は、理由にかかわらず返金できません。\nただし、主催者の都合で講座が中止になった場合は返金します。\n\nあらかじめご了承ください。\n\n---\n\n**補足:**\n元の文章では、「開講日の6日前から2日前まで」に申し出た場合にどうなるかが書かれていません。書き直しでもその点は加えていませんが、実際に案内する際は、この期間の扱いも明記しておくと、受講者からの問い合わせやトラブルを防げます。\n\n【回答 2】\nもちろんです。以下のように、分かりやすく自然な表現に書き直しました：\n\n---\n\n受講料の返金についてですが、開講日の7日前までに書面でご連絡いただいた場合は、事務手数料として1,000円を引いた金額を返金いたします。ただし、開講日の前日以降のご連絡については、主催者側の都合で講座が中止になった場合を除いて、理由を問わず返金できませんので、何卒ご理解ください。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文の「7日前までに書面で申し出た場合に限り」という返金条件の限定が落ちています。さらに、補足で「6日前から2日前まで」の扱いは書かれていないとしていますが、原文の「場合に限り」に従えば、この期間の申し出は通常の返金条件を満たしません。また、原文は主催者都合の中止を「前日以降は返金しない」という規定の例外にしているだけですが、回答では「返金します」と返金を明確に約束する表現に強めています。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "原文の「7日前までに書面で申し出た場合に限り」が、単に「7日前までに書面でご連絡いただいた場合は」に変わり、返金対象をその条件に限定する情報が落ちています。そのため、原文では通常の返金条件を満たさない「6日前から2日前まで」の申し出について、返金対象外であることが読み取れなくなっています。主催者都合の中止に関する例外の向きは保たれています。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は返金できる場合とできない場合を分け、期限・手続き・金額を短い文で示しているため、条件を把握しやすくなっています。回答2も自然ですが、一つの段落に複数の条件と例外が続き、特に後半の文が長いため、回答1のほうが一度で理解しやすいです。"
+  },
+  "response": {
+    "id": "resp_05952fae24828b01006ad461c30bec87d18b2e05032a8f2467",
+    "access_programs": null,
+    "created_at": 1792303555.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_05952fae24828b01006ad461c4958887d1937f2205551f3231",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GHwkwQsH9G6lH5pY3NTcSr59W1rakWhrkbqwnyNIVaN_oSq6XQn2IjzQCdn9Gw5hY1IGRiRqxCu4TXAxHrtN7K6vxRTqBEO3U5FCkjxC9dKuxWERQMtADv5s15LcfbgM6lYDpreKfVVgzsDKxURqoWMS8Fwjmt_Q1DFXwWAWmKifKKtAfubqK2IS9LLKrgVrdK9LsB4TqAPIvg5-6G_1nbR75h-pfJybDbYE2l8nTpGjaoPQR9TISOYXbKcAhHOSvHKoEXQ5kwXq5CCYY5IfzwYLkB1dRSwnVWmnsimTbJOx3Rb-9wSlB6ybk18IoGLeOtSZBsc6e6kiC-3uhhWJNu2jvb27BKmIIGyGFNnlAjMieNpnEG1G4wghNTu4I0XJhtciLqYmoAuwTVwtAg8acZt9nf3151Xb0kQwEQ2qXmpC9T8q3JOg8dI77NOf0tmJCwZYmqA13P7EYzR9YqyDejaP7VIAUj1-jBHuFWL-cpGVMS8LChdVhLqN5Ry3LPhkTdGyNHXrbYtmSbCZSn4Q05TsoSaGrIYFrfRBnKz_73o1I-QEpLLIRkw3Jo44MieXPoATOtiF7rBy8emvTxUOfvHIqs-8cg2R455N8C3Tfp5GADLLf85hm99fZXufd5AOHMJT0eG724bcetX7vtDkmwTcPVeQbgGXNYDoqQFM7283JQ0OTb55ZwZ-fJLEhFRGyrr3aW4Ux_skSjpQSS2iTHI_mX0DZI9e-tiMp6A2p2Z-rxoj6p8MAi6BwJ0EVkjbhkH1F85g7HLwYMv4kCusLwvwKepS0Eueo2D1dR3BQ1O_5I2EMzoOGT86sqA1lR14bv9HOutC2ZFPiq0yXQKZ_OFXGXK_nyEe4CeghNQU-Ur1zewDgL94lNg756wvo3wZx9MHpuM9WVQQS03uVnBWZ_Bdimur-rEKpPlaHOz9swVGcdYLcTCxhPjG-RUFC1s2JyhBmuH8dpusqDty677NZdVRX3O4Lw9dWktUAJExZ1x6KdGrdmRhGaPrQpr-3UetluTYlpRH9DVR5lQFAvs5EQvEQLHjed24kNSrDKSQSiZnByhw1NmFSJVxYdFTFnyzJQscrtyhnNDwu9Oh1OcuLez-quJUV91t74sMtAtUpFHj2CH4jxt2g_NYkCNpI-H8ExBNhGTltIdMrkwdRvpep_RWjdYFbzGhPl17-gt5J8H7INw4ZT48bzSNrGjqOyL2f1V3YEEO4Taa4mObbi9_W9K_WSWNBK23AT-a2rqNNQkzadL8GCZMj9mc5YAj58XO0O5R3LKyYSPtDTxqrvSHbIxlDYCpxifWEYo9nyRf9uoOdOP50YBb4eNWmbOOSzmuPn8h5nzfhq4v8B0Q9Kg_YStn4pIHVV96vB-AL-ZwW8B-upQP4F0wrbrkSqeo5NIzXGLD23Hj941WHsQcGWWi13oCEfXSS3rs2nPRjY5btEK2Dwzh8INeDZ4f2Jzl7dzY0b75VuxsfKKv1WqHomsMqB-LdxMEBhL3lfzRRclnobPqLY4YF81mXo_2NBxc4RKxfCN39HbNXnorkvb87YdoC1XiPOpPFUoTX9FqNh1F_alDKhhV7gDTdrE75ZKgg1czjz2QAm5k3je8uZkreGY9A8R5ognm7GuKHSp8YRz519P7sAuUQjbfAQ7-aR0RRswR7Luo2gJtWQeE1e1JdmdgnkWfrpXvvrKMzHDtW7-2TntYzW7nXKsEm18fs-vLLYjN3Ag4CsXJkgULnoJrn9KwMUZbZQ-tnc8MxAoki_4IqFmaORaSAKYTOzDP4RoN5xEctar4Y5uuK4RutHRmghDn9ZA4B92hI--miVP1mxPXRIRq5j5nFO8jTtvFZE5a65JouE8AFIG-ndnbHlM0PhAokBSjiDMNaNCjHuIp7r768BODO_xbLeG-X9rsaH8sn4lIKA2P3AvNK3DJZfjYqOiQ2REajPnrOQjCe5JW5Ry5F3yvEGJU133AeX0z39N-cmydt8XR2M8b7XQZzhABZBW_AtdGGp_wNM6aJoXksZwwt57ANsVitIRJjBg7E0dAPaNXUO275uSt8LhC1UpzJOhE8BooBasBuYGKj62bnIeBGczLhjV7FwErppfBhwgsTvaSk2pdHyDMdvHeTyDjfKSjM0EDjYZwqoPmwzBVSJKb7nO1cVpu6E1JW5gE9iqi0TC3J0FiFkmNDdksdmD687RPqr_BOXm77CLK44cZ_e-eluijwYslcvrYGpuaZd5BZ-ffFfb77XDNo7iE9vqGNkmt4utsRfDUmZ1Kpg9a3g7BqEsd-AgthovTm7jhtqzQCxdFR7yPT03_OIBiLPXN5lptT-PHg-dmumegzzUWVKzf191zwUnSSTqPKv4ru-hBfji_XyMkMD-1G6mBnDvGwINaWyj_EkXwrK-VDh-l13VjPVAg1n3gZa1qAVWx43pMkXZYLvrTCb7myjqQ33ZM_IwDs0ZvXGDDh9f9dbGzJC9X3EeMIn4qLLueKGTUmxSajcKwyChLd4dmYUlr73BBykIzLSuG8xWEkcmcdQH3ZvrZmPni2iJ33HnPeKtxwYEUsGL9W62iBAM24xz-iHpvAFOd7oIdABWCtR4fzjYSv-9PBXOjgCrxdAtUSSlVFWV_ugp056LuAKPsLC4LW70G_qm_muY_KkrZe2xSpyic_wdiY47dm0V7knyKYwe-v6ttgjnN6nDjVt_ehgpyBWu-bUCS2UerMVV3UjLolWt_ZMYoIVJp_tJg9eAAhW84Jqy9IPwgGIQVcPTjkIwIwPXRE-_hU6FNSphow80BzT-CS02lmDoJDweR4hkn6Gd1S-R2MinPIuw0f9-AdTlZCE5i2QpSHMymDPsCapce1B4TjrSlbtr0gtsL6hWqh1oRRrQ9Zw-UU3W1p7WQjktacJPqufafxt4-fBmL7HGXnuYMKUsPUiWLAEGdNTIJrj4w0hHU9TOGGXrp2T3VYPwnz_mLfUS1f4US4GZNRdRgX90Jl1GckOW4SStgxnLnJpvsdivsfvA6jWCF7Q6s8MUqpXM4DbCATEtDBKuUlaaAiis3cyyhaT_Cr0aczBcaHpkOrMYePpkUgR7aKbmrOHy7Z1q0zsNB0KlrObmqZPhsMVyq052grIZbOz3PoGXXPPOXcSti1I3u0o1LU2UsKkCAkiPKKjIPVHPerFWONm21wnzME3WhUvI1URsYHB5eOA6isfaZdUvqTSp7d1iYTXPMj2WMis1jEuiIrBJaYXnBpNC_olDp2LSPRRDEjfwFbov3hNumJ7HuK8PirMKaJJibCdyaICRjcwk5piWYXA4stGT6pcty425i9yx6tHAxhc7nTTcJNFnqPcIdXImvDgkgZyPJ5OQ3jv8-u2Le2SFmLnKFHzj613bur42I6rINBr4MrBrDPGz61BGEgpEXwRcXfZ1MZXyLxYtCRcUw8osH59OGcK5pNehRL6s2VPkBRjyy4k350bvZUfhIzthcmgHTzJIrf4667NbqppGUkQKnmenIXwI4bPmyh3N2zkfEKHTBoxzI4SCQeU_G5UN01QMXLAAOAEzcVovpSt1Mn-svnMObVf2CzPG_l0oC2uaM4t0obFg3wKmvD7Lj13mwAioIPYc0DOiV3O-PzCog0RkF3qvZriE48yfIn6lo90SwlVK0nKOUn7BvBvrLfaFq_3t4MmwCEsZXI1oXyiDaHzqwKgkIX0ibRh1Hd_TnbLlgNjQ1VEpE_pOCRS3xzv8tkZpeaBjFLZIWKs6ipVwdOZJCFrk1_WjkH1l1iGQ8pZoabznW0WcX5QYdHLf02WVuObcwe1dFG7cvQ22yGpbkwrA3wL3-hZu37bXXyozURGRcUxnlL7BGthz7dAVtMjXfnUXEQoilErttAOMVIQx6bck9M7YrV0SrUw3tb28hDazzC-Lrctr0IdK3-P3_DFqH_RCLpRHVtbFjBeTDbbnKKxEqtmbn2VR0V-VNvXcASNCJXSfUwt2b6EFcApGj_oznM_c_jpTOq24ER8QNLyEvGlP8nf5aJMUSWgFltJGCshozdPkg_zcBNmD7AQ0J4EKvSUkZ2aTTZid8xQG47wqt880pX6ZOVQRVKAnh0dUtzYbMzWWkkY0__xJNpwoRLjv700zKS9RHqMGZVhpDZ1-xyQWZ-78EXZNmlR6jVzziyG2bmAiK1zCu05F4wbVLnWX7MgDUVWQxMYiZfibORenMkZ19TIJb66fNX9MfRI6yT7tPsw5oxaJ4fzhtHEzilapVvovpIo9-CqWw-OZj4wndxEMVAgvRZMi00bFlJ4oLC5fgHnJqCqhX8WmCkES6h9S_Hhjp-ZYE0MqXPaS3HsBbdypFkGtwy5LCuEzn68OLvUBYG1rmWCI3usFgxwNIq-APuOk01AysQsi9hMGePtBeAfH_OkkfVlps8rL9PxMZRRKOsnV_RVzQl9fdY2vkcYIxYyY1VS-8sIP1hFNbzQ6xTnTDvofOMgI8UhE77msdcDjPw6CVT_n9-LjudKzOTw8tTs3d3h44U4n4XAy5qY3GPf7bS01O2aCzlDPKFHpoasygCcQ348NCEbxqH41SYAJYsDe1onZDjP-GOC_Z0g9KlS3OV_VPC48JoK1AdNhh58Fgxp5L5wrLzXLOGPwW3bb5scRr0BaKPhC6N3n7_zvg8_Qenl2zlm4wGQN-ecre4FCcVY-nanTvONg8NuGCl_gDFne7hmkEVBP4c1Qk1IebErjOebJ8yifFd4Lb9XoxW88hFl8c7xyjCk9qssJFgXNrOdxaGvSMaE-S41WqmVDICE-vsuioNGI723SUph4Eq7P01AzDGhdm2JaXjN3qq3x8efUFXOqzyUVRZhrxFRDUpPYChyRvwg9yKNGpJXkBvThA3d6Y0L4QEMNH2lICipGdQmi6gbIkIsWJ2VA2A5OTnaHE7_Ib0y45861APgEgPGFuKGa3IcbOOjO9pXNwKHqV9QMibzhJG8Ew7xpFf5mLbTDUOMsdKQn80uuXdMOtx9S9TrjBHLcDyhaf64gFRkqvd33YGeOROxN_o8xKBKQjI8M1Rhpz5y8cqPS4AYVkhXmeAcFJQIKmsnNa4Y8Le7EA9gFsZhodICCSqp-oqqpWngETCmM1f86KO0QfEVn8M7XYvv_EBmiPAafaDr0LuyTI2z6s-le82jExpz2iQhU3u4Gm9jBLpjCRMljLVvQJH34rESV9nPY0B3Ol7sgV_L1-UgioA-yyCnIHhrj9NEHbZKxCuWBwODQHdrTJOfkaQE8C2lg75AiuA-X3lbyx2ntBJvlL5cRfRimRSWO3upY9My8gBjk3zipAZf8gvy1_KgUD7z4JxfGDJyaj2KMPakdEiAh3aUTGhx-MLnUZWNZlOp58bXKcXDeGPy5Tg2oF7d5-BYGyEr-wMeGOFm8157Zto0FTvm0fgjsz-ag98R03nQvV9EV63r6u5yMJjSC59P4oJ_Joi3FKtTbGaUMOSOdxv83w6oYtvMjKAHjl8f_XDi5RVcT5ABTLWvM2jqp71mnCU_rbofD7-fCBeHajjPExHuFEJKRHB-6W8BPce1tXYwqBAqJcANgP7A5mNgYy2ik6h4MkwYknOXqq8edKN-iKzEjG-EZFj2EqLOSrF8v7G0MbDTZDk8RPg-q5sozaBXB0IYSh3zdh-IrGZ360pOz1nN8Z76FNU_2cVn4StBfkKQWOUP2i2Q53anwjmAqQgiz_LQFbsEIoCWyQuNgmS0b_MIbdtOcvxqvtbLT3p-yTN7oDC9Ul2hk_rLOvkNDcWJQrBRZmWLavRo-K8vKWj5GlEHi-FkiqO5ESrYdcvG-Sv77goQ8Q6BXm04W7ZxzeS8-pBM6mzqikEu0h569Za6yC6featwNYfTLIstKLnDD9hSrRX0m7AomNts6BQuJK5_-roUzTLzFiHRPsedM5pH33ciS0xLvCzy6CHmuRmJlIgRdBIWT_D0D8ZmhmNLQJPridapJOonhQVKM3ekoSdQYBSJjAo-4gnl8VTnLWCFzSphFCcW14mlElbMCHFQ=",
+        "status": null
+      },
+      {
+        "id": "msg_05952fae24828b01006ad461dd194087d1a08bdc9e931810fd",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「7日前までに書面で申し出た場合に限り」という返金条件の限定が落ちています。さらに、補足で「6日前から2日前まで」の扱いは書かれていないとしていますが、原文の「場合に限り」に従えば、この期間の申し出は通常の返金条件を満たしません。また、原文は主催者都合の中止を「前日以降は返金しない」という規定の例外にしているだけですが、回答では「返金します」と返金を明確に約束する表現に強めています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「7日前までに書面で申し出た場合に限り」が、単に「7日前までに書面でご連絡いただいた場合は」に変わり、返金対象をその条件に限定する情報が落ちています。そのため、原文では通常の返金条件を満たさない「6日前から2日前まで」の申し出について、返金対象外であることが読み取れなくなっています。主催者都合の中止に関する例外の向きは保たれています。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は返金できる場合とできない場合を分け、期限・手続き・金額を短い文で示しているため、条件を把握しやすくなっています。回答2も自然ですが、一つの段落に複数の条件と例外が続き、特に後半の文が長いため、回答1のほうが一度で理解しやすいです。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303599.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1003,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 768,
+      "output_tokens_details": {
+        "reasoning_tokens": 337
+      },
+      "total_tokens": 1771
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

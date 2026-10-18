@@ -12,6 +12,7 @@ import os
 import sys
 import time
 from datetime import datetime, timezone
+from pathlib import Path
 
 import anthropic
 import requests
@@ -20,7 +21,8 @@ from common import MAX_TOKENS, MODELS, OPUS_EFFORT, OUTPUT, RAW, load_problems
 
 SARASHINA_URL = "https://api.sarashina.ai/v1/chat/completions"
 INTERVAL = float(os.environ.get("SARASHINA_INTERVAL", "12"))
-LOG = OUTPUT / "request_log.jsonl"
+# H01〜H10 は aggregate.py の集計に混ざらないよう REQUEST_LOG で別のファイルに書く
+LOG = Path(os.environ.get("REQUEST_LOG", OUTPUT / "request_log.jsonl"))
 
 
 def now():

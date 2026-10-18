@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "H06",
+  "requested_at": "2026-10-18T06:01:59.725040+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n本講座の受講料につきましては、開講日の七日前までに書面にてお申し出いただいた場合に限り、事務手数料として千円を差し引いた額を返金しないわけではございませんが、開講日の前日以降のお申し出につきましては、主催者側の都合による中止の場合を除き、いかなる理由であっても返金には応じかねますので、あらかじめご了承ください。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-be908bf4b2df9244",
+    "object": "chat.completion",
+    "created": 1792303319,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "もちろんです。以下のように、分かりやすく自然な表現に書き直しました：\n\n---\n\n受講料の返金についてですが、開講日の7日前までに書面でご連絡いただいた場合は、事務手数料として1,000円を引いた金額を返金いたします。ただし、開講日の前日以降のご連絡については、主催者側の都合で講座が中止になった場合を除いて、理由を問わず返金できませんので、何卒ご理解ください。"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 89,
+      "total_tokens": 169,
+      "completion_tokens": 80,
+      "prompt_tokens_details": null
+    }
+  }
+}

@@ -23,7 +23,8 @@ EXCLUDED = {pid: "判定なし（対象外にした）" for pid in ("R06", "R07"
 
 def main():
     text = SHEET.read_text()
-    lines = dict(re.findall(r"^## (R\d+)\n.*?^判定: ?([^\n]*)$", text, re.M | re.S))
+    # 問題の区切りは「## R01」（前の版のシート）か「━━━━ R01 ━━━━」（応答を無加工で載せる版）
+    lines = dict(re.findall(r"^(?:## |━+ )(R\d+)(?: ━+)?\n.*?^判定: ?([^\n]*)$", text, re.M | re.S))
     out = {}
     for pid, line in lines.items():
         rec = {"line": line}

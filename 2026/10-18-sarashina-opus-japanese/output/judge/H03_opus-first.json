@@ -1,0 +1,187 @@
+{
+  "id": "H03",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T06:04:28.006978+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n販売業者若しくは役務提供事業者が営業所等以外の場所において商品若しくは特定権利若しくは役務につき売買契約若しくは役務提供契約の申込みを受けた場合若しくは販売業者若しくは役務提供事業者が営業所等において特定顧客から商品若しくは特定権利若しくは役務につき売買契約若しくは役務提供契約の申込みを受けた場合におけるその申込みをした者又は販売業者若しくは役務提供事業者が営業所等以外の場所において商品若しくは特定権利若しくは役務につき売買契約若しくは役務提供契約を締結した場合（営業所等において申込みを受け、営業所等以外の場所において売買契約又は役務提供契約を締結した場合を除く。）若しくは販売業者若しくは役務提供事業者が営業所等において特定顧客と商品若しくは特定権利若しくは役務につき売買契約若しくは役務提供契約を締結した場合におけるその購入者若しくは役務の提供を受ける者（以下この条から第九条の三までにおいて「申込者等」という。）は、書面又は電磁的記録（電子的方式、磁気的方式その他人の知覚によつては認識することができない方式で作られる記録であつて、電子計算機による情報処理の用に供されるものをいう。以下同じ。）によりその売買契約若しくは役務提供契約の申込みの撤回又はその売買契約若しくは役務提供契約の解除（以下この条において「申込みの撤回等」という。）を行うことができる。ただし、申込者等が第五条第一項又は第二項の書面を受領した日（その日前に第四条第一項の書面を受領した場合にあつては、その書面を受領した日）から起算して八日を経過した場合（申込者等が、販売業者若しくは役務提供事業者が第六条第一項の規定に違反して申込みの撤回等に関する事項につき不実のことを告げる行為をしたことにより当該告げられた内容が事実であるとの誤認をし、又は販売業者若しくは役務提供事業者が同条第三項の規定に違反して威迫したことにより困惑し、これらによつて当該期間を経過するまでに申込みの撤回等を行わなかつた場合には、当該申込者等が、当該販売業者又は当該役務提供事業者が主務省令で定めるところにより当該売買契約又は当該役務提供契約の申込みの撤回等を行うことができる旨を記載して交付した書面を受領した日から起算して八日を経過した場合）においては、この限りでない。\n\n【回答 1】\n# 訪問販売などでの契約の取り消し（クーリング・オフ）\n\n## 1. 取り消しができる人\n\n販売業者やサービス業者（以下「業者」）と、次のどちらかの形で取引をした人は、申し込みや契約を取り消すことができます。対象となる取引は、**商品の購入**、**特定の権利の購入**、**サービスの契約**です。\n\n**① 業者の店舗や事務所など（以下「店舗等」）の外で、申し込みや契約をした人**\n（例：自宅への訪問販売）\n\n**② 店舗等の中であっても、「特定顧客」として申し込みや契約をした人**\n（例：路上で呼び止められて店舗等に連れて行かれた人）\n\n具体的には、次の人が対象です。\n\n- 上の①や②の形で**申し込みをした人**\n- 上の①や②の形で**契約を結んだ人**（購入者やサービスを受ける人）\n\nただし、①のうち「店舗等で申し込みをして、契約だけを店舗等の外で結んだ」場合は、契約を結んだことを理由とする対象からは外れます。\n\n以下、これらの人をまとめて「申込者等」と呼びます。\n\n## 2. 取り消しの方法\n\n申込者等は、次のどちらかの方法で、**申し込みの撤回**または**契約の解除**（以下まとめて「取り消し」）ができます。\n\n- **書面**で行う\n- **電子データ**で行う（例：メールなど。コンピューターで処理できる形の記録を指します）\n\n## 3. 取り消しができる期間\n\n取り消しができるのは、原則として次の書面を受け取った日を1日目として数えて、**8日以内**です。\n\n- 契約内容を記した書面（法第5条の書面）\n- ただし、それより前に申し込み内容を記した書面（法第4条の書面）を受け取っていた場合は、その書面を受け取った日から数えます\n\n8日を過ぎると、原則として取り消しはできません。\n\n## 4. 例外：期間が過ぎても取り消しができる場合\n\n次のような理由で、申込者等が8日以内に取り消しをしなかった場合は、期間が過ぎていても取り消しができます。\n\n- 業者が取り消しについて**うそを言い**、申込者等がそれを本当だと信じてしまった場合\n  （例：「この契約は取り消せません」と言われた）\n- 業者に**脅されて困ってしまった**場合\n\nこの場合は、業者が「取り消しができます」と書いた書面をあらためて渡し、申込者等がそれを受け取った日を1日目として、**8日以内**であれば取り消しができます。この書面は、国が定めるルールに従って作られたものである必要があります。\n\n【回答 2】\nもちろんです。ご提示いただいた文章は、法律の条文特有の難解な表現が多く含まれており、専門知識のない方には理解が難しい部分があります。以下に、**意味を保ちつつ、一般の方でも一度読んで内容が分かるように**、できるだけ平易な言葉で書き直します。\n\n---\n\n訪問販売や電話勧誘など、お店（営業所）以外の場所で商品やサービスの購入を申し込んだ人、あるいは、お店の中で「特定の条件に当てはまるお客様」（たとえば、突然呼び出されて契約した方など）として商品やサービスの購入を申し込んだ人は、その申し込みを後から取り消すことができます。また、お店以外の場所で契約を交わした人（ただし、お店で申し込んで外で契約した場合は除く）、あるいは、お店で「特定の条件に当てはまるお客様」として契約した人も、同様に契約を解除できます。こうした人たちを、ここでは「申込者等」と呼びます。\n\nこの「申し込みの取り消し」や「契約の解除」は、書面（紙）またはメールなどのデジタルデータで行うことができます。ただし、以下の期限内に行わなければなりません。\n\n原則として、**契約書面を受け取った日から数えて8日以内**であれば、取り消せます。もし、業者が法律で定められた重要な説明（たとえば「クーリング・オフができる」という事実）について嘘をついたり、脅したりして、その結果、お客様が正しい判断ができず、8日以内に取り消さなかった場合は、例外として、その後でも取り消せることがあります。その場合でも、業者が「まだ取り消せます」という内容を正しく書いた書面を改めて渡してから、さらに8日以内に手続きを行う必要があります。\n\n---\n\nこのように、法律の趣旨（クーリング・オフ制度）を保ちつつ、専門用語を極力避け、具体例や補足を加えることで、誰でも理解しやすい表現を心がけました。必要に応じて、さらに簡潔にすることも可能です。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "重要な意味の変更や情報の脱落はありません。対象となる取引と人、店舗等で申し込んで店舗等の外で契約した場合の除外、書面または電子データによる手続き、期間の起算日、虚偽説明や威迫による期間の例外が保たれています。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "①対象に含まれる「特定権利」の購入が抜けています。②契約書面より前に第4条第1項の申込書面を受け取っていた場合、その受領日から8日を数える条件が抜けています。③妨害後の期間について、原文は所定の書面を申込者等が「受領した日」から数えるのに対し、「業者が書面を渡してから」としており、起算点が不正確です。また、主務省令に従って交付する書面であるという条件も明確ではありません。④期間の例外について、原文は撤回等に関する虚偽説明を事実と誤認した場合、または威迫により困惑した場合を定めていますが、回答は「重要な説明」についての嘘と「正しい判断ができず」という条件に置き換えており、対象と要件が変わっています。⑤「電話勧誘」を対象の例として挙げていますが、原文の場所や顧客に関する条件を満たすとは限らず、対象範囲を広く受け取らせるおそれがあります。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、対象者・手続き・期間・例外を分け、原則と例外の関係を短い文で説明しているため、必要な条件を追いやすくなっています。回答2は、冒頭の対象者の説明に複数の条件が詰め込まれ、期間の例外も長い段落にまとまっているため、一度読んで整理するには回答1のほうが分かりやすいです。"
+  },
+  "response": {
+    "id": "resp_00373fd38a1f90f0006ad4616c2fb487d1ad4c5c17aa40bfa0",
+    "access_programs": null,
+    "created_at": 1792303468.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_00373fd38a1f90f0006ad4616d2ee887d194d25fb4db12fc8a",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GF6YeGgj-9MqrwR_C2M77Xw8WVMuuXjWhshaO-Lb5JKxNopBbr61akrvGjEQcYPC9btdtiqwW_w5xmi0NVN_YdV3pITylyF-m5tT8xjo5WPz13--Is53slPpcNTCTdDUzjZbFy9xso37adIyZE-aAIpL8B-mpTPLGVmZQpVnE-RDGURuoq2Zo-3b8aWQNG-jGlPVfIM5915IzJqpE4T1NTWw8gFUDTDthttW06l0wK2Xj7FMvRlN_K_FbXGTzFHcMlLjrGaYwmUTGXqQvk5u8bntFc6nSGTgDDZGpIay_Qrnx6iHbnf4rGzROP_OJUbuYX1-QHg98tcK6-uh2Yq0qN9-ZDV88Pb_ngkl9F06Syu-4uRKm3EHen5ruH5pW7UFkLrlT6OybT-ffgm2Thu7t03j999Vqmw2OT0aAJxMKpB1aHF-n9WaeFjDI0yhKdmvIFqPpO6v9liVgEEmMAy7ry8bdIHERgXs8kcas6EUWQkJIQExQ28VEpIWvSml_img7UBkgvVQ8v_CxvPLJmjiK8UxEGkxfOGOYELj8uW9sW6EGW0vujRtoj_fANpLokTnVbwivO9Qs_KtxGlmwa2CR64nvgzMmhIwpDPS9uDlrqc9YYOsH0kWTRrHvF0LkkE63Cyqy86zOXusEqTlfpEr-8y8tKJnt3JU_jIbjYgv-Fi-v4BaX2LlikFwBoyp2hGFEQAshPmO5E4Rbrj2fwAAsz1LeTF6Lwt6STepYBBRLTa74lLuRb6gTz6pet2jhhcBm2W_6kFi4bxEZ4y1xGoneiAIOeV8KkrQqQvU4Rx0B9K0vncA6dgXKN84cdJ16BPx8zH66B5otQU-k9RwsuLJoN5R1f4acE9Ay7irruIyCDetvBWzF5PJ0vW6bIYnuN_Rfh3_c2wvhxX-rqHBWh3sOqqDOhC4Qm5Kt2j3CoH1jloF8ApTIjRrZetN8nBMxCjS-ku5b2MXuwwQgLMnDeQhoMFkd0NZ5EmVvQvB4rjQL_liTTB25eBbR58pEaogsUr0wezbvjm3kC0xgNm0BUKkVxQwFZ9o5uVDgH4IaCKoftIqnN4ralFEaduot5tUP58QqoSaCanK90cq5AAyb2yZjC_fnVDShn7qa5sn3zr18KvrKooVeMUmV9FyouPj66kqm-0zmETEvAjwOY9VUYCvv8i1HdjT7qugE_ZKcVHVLEkQMYXog5y0fGSCB-yqn3P6ztC3AS7aaptvxRgEuktfWNz-P_JIuCz4rl18sYOKev4yw8gpJJb2z_dK6fMIRaxAY5n11xlR_C5MbH9sDi8d-lC2m9fHo-EPBLnEaudUkQLkzhz_MSoEnPY88R_6PWTjuMNAX5Z-rySWPQf5cg_W7ISwdS4Lcr4l3CuwRbao6bYJ2iS1C5zH-1cxtVx2nXpOHkKHiLyKzSKNGbEZ9WZbJTvlEf1-3Euhvvd2w7AWwTXFhvltftRz6U_BeHHc3HNOT5E1YVS7phs6hUTdPLQAtZklXs2K68VPmCf8lVBkI9mMpgMB8S_9DtdaEKZTtKpCU-pOz5mTWftN2-OGKBCHQPyQz_j-qzhITP9m1o7ozzd4WghBdn2ZfkvsCpDxgWJuJA4l3d3Ny-X5GCpBIKB0RZn8hZNjbyULuB9kGc2qs8abdShJkDTUcf-itNxXzGfr2e5nWCEgsSMNHn3oWAfdDugpetEKp2xQvUw885MH1nm8QxrMb-SEZiYEAiyl0084tVkfmxzRBBZBjxYb7RCgXPRrD6W4hoGH3knnFh5WffEOjeQyISRCGXwT7Z5sS64obXWJkm2Xw-mMRElH-ZGuCXtmz_uwVU4S84QHKpaRKgQW7IYTHtDpCxcSrPzbSYKwFK3Y8sITRbQni2J4MG_OvaSUInCaW9Kfhizk9oeRDQh7PF1vJy0q1GWXHHvRCtdJeZcbdrZ4ls6CXV9SQoIp3SQVijPlrttI1v74ArcrWRr18cLul2qGlaYhZoc1G-rvtOk7kf6DVnTehhguM1ElpiA0EN1PX3SRxxvxLTA03QFx2D8U3UYcAS7fmT641dtSzTbEEvoJl_2acBVq-wY1mMl41zRFJ0cHD8so18L8QyAdteWHbPz34uvFZGUR1AD1C_JsO5g-_ePMhJkmWngH3MO0e7EuACocCG5wg70aoDXpqYP99a_-t-9GDWZHBMQr7d4Szkic3KaEEnrmDQxnbaH7lMi0PeeMVtBSt3aLVCRJHZS5ER9GOnprRWpzpyArBCo8oeKSnx34a97WAuaFY0OIfxWIj0G_yGSyfBeE0YhzFGcFjtdhdeFCJLd8kf5QmIjJFebjbYHarLBj9kLbJ3WlLh9XYVwfyX136So-W90hRUHAxwhZ1kruxC0y9MyH8RQkZ1K9mTUG1m-IlJNm46npM9S7RFF342WxM48f0q9SFTgrmieaMLbgzThXi28vA1klRCsKUo2Ychl1fleRNacxZICmkU1bi3nMjWBEGQWbNXy93__SGLfJ2vtrv0-cWoTRB6HVi2CwGrcufllLNai3lN3zRtn3gLmbGQHAw5GSQzPnBLIwrbwdYkzAb8ni_h9oC3Hb8kbICqGZO51LTShpJwcOJj9A65j_1L6aELW2iX4_ULl-WEHSzB46Q81Cr8hVsc-Dp-nCOkB5J5I7mnSTXBcp8Jur4zAWACcKoSMWfISxlt_1x-6YrJsJBKToaUEanXsNppzAZK-iPthLcRgw9Pgf5o7YuKUga7OHGA0pR2X428h2zFuGGdYtv4-mQtu7_1aMicWgfWQxjMYI1FRPd-muJzXvoN-gGQO6XNPQ6gRW9UYudt75e33kSYCT3S1Rq4pRXH37Uk7fbCbIuRrz1IxjvyMUOzrK9nBmTreBUb8_53c9wJyDBbSFi0E4_k9",
+        "status": null
+      },
+      {
+        "id": "msg_00373fd38a1f90f0006ad46170ca3887d1924f9350c053574d",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な意味の変更や情報の脱落はありません。対象となる取引と人、店舗等で申し込んで店舗等の外で契約した場合の除外、書面または電子データによる手続き、期間の起算日、虚偽説明や威迫による期間の例外が保たれています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"①対象に含まれる「特定権利」の購入が抜けています。②契約書面より前に第4条第1項の申込書面を受け取っていた場合、その受領日から8日を数える条件が抜けています。③妨害後の期間について、原文は所定の書面を申込者等が「受領した日」から数えるのに対し、「業者が書面を渡してから」としており、起算点が不正確です。また、主務省令に従って交付する書面であるという条件も明確ではありません。④期間の例外について、原文は撤回等に関する虚偽説明を事実と誤認した場合、または威迫により困惑した場合を定めていますが、回答は「重要な説明」についての嘘と「正しい判断ができず」という条件に置き換えており、対象と要件が変わっています。⑤「電話勧誘」を対象の例として挙げていますが、原文の場所や顧客に関する条件を満たすとは限らず、対象範囲を広く受け取らせるおそれがあります。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、対象者・手続き・期間・例外を分け、原則と例外の関係を短い文で説明しているため、必要な条件を追いやすくなっています。回答2は、冒頭の対象者の説明に複数の条件が詰め込まれ、期間の例外も長い段落にまとまっているため、一度読んで整理するには回答1のほうが分かりやすいです。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303482.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 2649,
+      "input_tokens_details": {
+        "cache_write_tokens": 2646,
+        "cached_tokens": 0
+      },
+      "output_tokens": 657,
+      "output_tokens_details": {
+        "reasoning_tokens": 110
+      },
+      "total_tokens": 3306
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "id": "H08",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T06:06:58.540899+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n予約日の前日の午後五時までにお電話でご連絡いただいた場合は、予約の変更を承りますが、初診の方につきましては、紹介状をお持ちでない場合を除き、変更後の予約日が当初の予約日から一か月を超えるときは、紹介状の有効期限の関係で、改めて紹介元の医療機関で紹介状を発行していただく必要がある場合がございますので、ご注意ください。\n\n【回答 1】\nもちろんです。以下のように、専門知識がなくても一度読んで内容が理解できるように、分かりやすく自然な表現に書き直しました：\n\n---\n\nご予約の変更をご希望の場合は、予約日の前日の午後5時までに電話でご連絡ください。ただし、初めて受診される方で、紹介状をお持ちでない場合、変更後の新しい予約日がもともとの予約日から1か月以上先になるときは、紹介状の有効期限が切れてしまうことがあります。そのような場合は、もう一度、ご紹介いただいた医療機関から新しい紹介状をご用意いただく必要があるかもしれませんので、ご注意ください。\n\n【回答 2】\n## 書き直した文章\n\n**予約の変更について**\n\n予約を変更したい場合は、**予約日の前日の午後5時まで**にお電話ください。\n\n**初めて受診する方で、紹介状をお持ちの方へ**\n\n紹介状には有効期限があります。そのため、新しい予約日が、最初の予約日から**1か月より後**になる場合は、紹介状を書いてもらった病院やクリニックで、紹介状を新しく書き直してもらう必要があるかもしれません。ご注意ください。\n\n---\n\n## 主な変更点\n\n- **長い一文を分けました。** 元の文は条件がいくつも重なった一文でした。「予約変更の受付方法」と「初診の方への注意」に分け、見出しを付けました。\n- **二重否定をなくしました。** 「紹介状をお持ちでない場合を除き」は、「紹介状をお持ちの方」と言い換えました。\n- **専門用語を言い換えました。** 「紹介元の医療機関」は「紹介状を書いてもらった病院やクリニック」に、「初診」は「初めて受診する」に、「紹介状を発行していただく」は「紹介状を書き直してもらう」にしました。\n- **期間の基準をはっきりさせました。** 「一か月を超える」が、どの日から数えて1か月なのか分かるよう、「最初の予約日から1か月より後」と書きました。\n- **大事な条件を太字にしました。** 締め切りと期間がすぐ目に入るようにしました。\n- **「場合がございます」の意味を残しました。** 必ず書き直しが必要とは限らないため、「必要があるかもしれません」としました。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文の「紹介状をお持ちでない場合を除き」は、紹介状を持っている初診の方が対象という意味ですが、回答では「紹介状をお持ちでない場合」となり、対象が逆転しています。また、「一か月を超える」を「1か月以上先」に変えており、ちょうど1か月の場合まで対象に含めています。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。紹介状を持っている初診の方が対象であること、当初の予約日から1か月を超える場合という条件、再発行が必要になる場合があるという不確実性も保たれています。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、予約変更の連絡期限と紹介状に関する注意を分け、対象者を明示しているため、条件の関係を一度で把握しやすくなっています。回答1は「ただし」以降に対象者・期間・有効期限の説明が続き、さらに「そのような場合」と受けているため、条件を追う負担がやや大きいです。"
+  },
+  "response": {
+    "id": "resp_0aeb49ae85d679c4006ad46202b4a487d19ed402b3a3ad5e6f",
+    "access_programs": null,
+    "created_at": 1792303618.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0aeb49ae85d679c4006ad46203e2ac87d18b4bd6f31220ccf8",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「紹介状をお持ちでない場合を除き」は、紹介状を持っている初診の方が対象という意味ですが、回答では「紹介状をお持ちでない場合」となり、対象が逆転しています。また、「一か月を超える」を「1か月以上先」に変えており、ちょうど1か月の場合まで対象に含めています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。紹介状を持っている初診の方が対象であること、当初の予約日から1か月を超える場合という条件、再発行が必要になる場合があるという不確実性も保たれています。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、予約変更の連絡期限と紹介状に関する注意を分け、対象者を明示しているため、条件の関係を一度で把握しやすくなっています。回答1は「ただし」以降に対象者・期間・有効期限の説明が続き、さらに「そのような場合」と受けているため、条件を追う負担がやや大きいです。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303625.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1242,
+      "input_tokens_details": {
+        "cache_write_tokens": 1239,
+        "cached_tokens": 0
+      },
+      "output_tokens": 325,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1567
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

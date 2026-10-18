@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "H04",
+  "requested_at": "2026-10-18T06:01:37.789987+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n日本国籍は，我が国の構成員としての資格であるとともに，我が国において基本的人権の保障，公的資格の付与，公的給付等を受ける上で意味を持つ重要な法的地位でもある。一方，父母の婚姻により嫡出子たる身分を取得するか否かということは，子にとっては自らの意思や努力によっては変えることのできない父母の身分行為に係る事柄である。したがって，このような事柄をもって日本国籍取得の要件に関して区別を生じさせることに合理的な理由があるか否かについては，慎重に検討することが必要である。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg9CD9YhDDSe2Wi8s52b5",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSgwcKEAgSGAI4AUIIdGhpbmtpbmcSDDEJTA72+IRIq1RWoxoMK+8PxSuMLgtUdqTIIjDBOGkTunvgGzq5p77ifBJnWt4tadGgrUTA0hb0Pw4Lmmrfj6QXU8dXJDzBaH+8T2gqoAaKjbp4U8GxMEJboExxIHrrvvuSbIPp7Jy5Iyi3DwzHtuLatmke1C1EKVvOVVa6SlXWAgqe+AXPxUVfmRk7kz4fjrH816ZugHqiEyobvx1lfijXJT0y+vh4k4DOTFgQ9C/bsppVeC76Wf3DKb3MiWfKceJI2YWckGcpHlAzEvBOTWpccF9bH0QetYCmqkKYXPx/kesTdw/JAUoelTqx/6vvtrHxl7xUQAQVaKydc2tB7OiphVXpDe06dYjUj4IdVjB170i8QBeXEe9GOQscasDO9tQcawhGSqze++Lu7Nxh1jAKlSKTDKbGVQ9DXiHKP0SUen3y0Gt/SMQXhJ3m1r657teAj0V97D56/xz+EcsmXapmsfjj5iYqSxprf8fmSMZrOnv9yXVeDfojLbuCls3earSFyqux8jUEfN+i1sbizwoTmrXECMFcKONNJUpJBEPguvW/0ykrOw+goJsJTn7vYpfNl8EssPHNXWGvN8/5Q3/6JcdPSmIx0M9Js9JtMiUsoLpEq7L5CkDT0I5imRYIh4+Laeaqi4EDefTXDDA+9iIYTKaDEs22i8NKWnFL82IXxyfl6Cndh1434CcUvizbhkSmwqK4Pyw4+/BVS/q96qidgXnLrpC/GceLR6y+OlAguyTVybl86QTyqcmbAgQuxUggOb3y59QZBgkWYWsQ+MzslagbBwD2wEzDDII4DTOZ12Z+u1OFQLiPmcOkXV1M4iOVDaf+mhAPmG27R4yYjmU22LokkjMcJiESCXMGE2+eqLJsN8Ps/ifo2/dBmYfB94K4OOeOVToJBZ7xdoVPxP5tncoLCOA6wFGtZDTZ/RawsrCaKGEuRoTblNmEmot0pQHP5FazRR0YRDArnSFmnlmg3zEv2YgbBDhx+r4spMrtptZ2KLJSiGEAgGO7rRPkrGfLm+cnXaqaTXEDDGgDmzdBBH04xtAA06T4YRgTkX4YJuJwAj74OvqsHQ+YPS1g7cC1W7L3zKi3zT2qwpwYkAIGtYnVpyUEDi5FYavFlwC5HQu/jikO4kbBHQpguYdog5sj7eHBZrsYdH7Ejm7DgRgB"
+      },
+      {
+        "type": "text",
+        "text": "日本国籍は、日本という国のメンバーであることを示す資格です。それだけでなく、日本で基本的人権を守ってもらったり、公的な資格を得たり、国からお金やサービスを受けたりするうえでも大切な、法律上の立場です。\n\n一方で、子どもが「結婚している夫婦の子」という立場になれるかどうかは、父と母が結婚するかどうかで決まります。これは親が決めることで、子ども自身の意思や努力では変えられません。\n\nそのため、親が結婚しているかどうかという、子どもにはどうしようもない事情によって、日本国籍を得るための条件に差をつけることに納得できる理由があるのかどうかは、慎重に考えなければなりません。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 250,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 359,
+      "output_tokens_details": {
+        "thinking_tokens": 113
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}

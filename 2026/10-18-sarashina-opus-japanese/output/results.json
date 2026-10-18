@@ -1195,6 +1195,394 @@
         },
         "gpt_final": "sarashina"
       }
+    ],
+    "invalidated": true
+  },
+  "h": {
+    "tally": {
+      "opus": 7,
+      "tie": 3
+    },
+    "meaning_preserved_both_runs": {
+      "opus": 7,
+      "sarashina": 1
+    },
+    "per_problem": [
+      {
+        "id": "H01",
+        "run_winners": [
+          "opus",
+          "opus"
+        ],
+        "final": "opus",
+        "meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "id": "H02",
+        "run_winners": [
+          "opus",
+          "tie"
+        ],
+        "final": "tie",
+        "meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            false
+          ]
+        }
+      },
+      {
+        "id": "H03",
+        "run_winners": [
+          "opus",
+          "opus"
+        ],
+        "final": "opus",
+        "meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "id": "H04",
+        "run_winners": [
+          "opus",
+          "opus"
+        ],
+        "final": "opus",
+        "meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "id": "H05",
+        "run_winners": [
+          "opus",
+          "opus"
+        ],
+        "final": "opus",
+        "meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "id": "H06",
+        "run_winners": [
+          "tie",
+          "tie"
+        ],
+        "final": "tie",
+        "meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            false,
+            false
+          ]
+        }
+      },
+      {
+        "id": "H07",
+        "run_winners": [
+          "opus",
+          "opus"
+        ],
+        "final": "opus",
+        "meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "id": "H08",
+        "run_winners": [
+          "opus",
+          "opus"
+        ],
+        "final": "opus",
+        "meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "id": "H09",
+        "run_winners": [
+          "tie",
+          "tie"
+        ],
+        "final": "tie",
+        "meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            false,
+            false
+          ]
+        }
+      },
+      {
+        "id": "H10",
+        "run_winners": [
+          "opus",
+          "opus"
+        ],
+        "final": "opus",
+        "meaning_preserved": {
+          "sarashina": [
+            true,
+            true
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        }
+      }
+    ]
+  },
+  "human_h": {
+    "blind_problems": [
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H07",
+      "H09"
+    ],
+    "human_readable_count": {
+      "sarashina": 5,
+      "tie": 1,
+      "opus": 1
+    },
+    "gpt_readability_agree_runs": 3,
+    "gpt_readability_agree_both_runs": 1,
+    "rows": [
+      {
+        "id": "H01",
+        "status": "blind",
+        "line": "Aがよみやすい",
+        "human_readable": "sarashina",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          false,
+          false
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "H02",
+        "status": "blind",
+        "line": "Aがすんなりよめる",
+        "human_readable": "sarashina",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          false,
+          false
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            false
+          ]
+        },
+        "gpt_final": "tie"
+      },
+      {
+        "id": "H03",
+        "status": "blind",
+        "line": "A",
+        "human_readable": "sarashina",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          false,
+          false
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "H04",
+        "status": "blind",
+        "line": "Bが読者に寄り添っていて読みやすいと思った",
+        "human_readable": "sarashina",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          false,
+          false
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "H05",
+        "status": "blind",
+        "line": "Bは無駄に伸ばして理解を妨げてる。Aが良い",
+        "human_readable": "sarashina",
+        "gpt_readable": [
+          "opus",
+          "sarashina"
+        ],
+        "gpt_agrees": [
+          false,
+          true
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "H07",
+        "status": "blind",
+        "line": "用途による。文章としてはAで十分だと思うが、チラシなどの場合はBとして構成されていた方がいいかな。",
+        "human_readable": "tie",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          false,
+          false
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "H09",
+        "status": "blind",
+        "line": "Bやな。",
+        "human_readable": "opus",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          true,
+          true
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            false,
+            false
+          ]
+        },
+        "gpt_final": "tie"
+      }
     ]
   }
 }

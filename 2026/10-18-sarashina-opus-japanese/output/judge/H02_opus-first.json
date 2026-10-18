@@ -1,0 +1,187 @@
+{
+  "id": "H02",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T06:03:59.730567+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n使用者は、労働者を解雇しようとする場合においては、少くとも三十日前にその予告をしなければならない。三十日前に予告をしない使用者は、三十日分以上の平均賃金を支払わなければならない。但し、天災事変その他やむを得ない事由のために事業の継続が不可能となつた場合又は労働者の責に帰すべき事由に基いて解雇する場合においては、この限りでない。\n２　前項の予告の日数は、一日について平均賃金を支払つた場合においては、その日数を短縮することができる。\n３　前条第二項の規定は、第一項但書の場合にこれを準用する。\n\n【回答 1】\n# 書き直した文章\n\n**1. 解雇するときは30日前に知らせる**\n\n会社などの雇い主は、働いている人を辞めさせる(解雇する)とき、**遅くとも30日前**にそのことを本人に知らせなければなりません。\n\n30日前に知らせなかった場合は、**30日分以上の給料(平均賃金)** を本人に支払わなければなりません。\n\n**ただし、次のどちらかにあたる場合は、このルールは適用されません。**\n\n- 地震や災害など、どうしようもない理由で事業を続けられなくなった場合\n- 働いている人本人に原因があって解雇する場合\n\n**2. 予告を短くするには給料を払う**\n\n1日分の平均賃金を支払うごとに、知らせる期間を1日ずつ短くできます。\n(例:10日分を支払えば、20日前に知らせればよい)\n\n**3. 例外を使うには国の確認が必要**\n\n上の「ただし」の例外を使うには、雇い主はその理由が本当にあてはまるかどうかについて、国の役所(労働基準監督署)の確認(認定)を受けなければなりません。\n\n---\n\n### 補足\n\n- **平均賃金**:直近3か月の給料をもとに計算した、1日あたりの給料の額です。\n- 原文の第3項は「前条第二項の規定を準用する」とだけ書かれています。これは、直前の条文(第19条第2項)にある「役所の認定を受けなければならない」というルールを、ここでも同じように当てはめるという意味です。この中身が分かるように、上では具体的に書き出しました。\n\n【回答 2】\nもちろんです。以下のように、専門的な表現を避けつつ、元の文の意味を保ったまま、一般の方でも一度読んで理解できるように書き直しました。\n\n---\n\n会社が従業員を辞めさせようとするときは、少なくとも30日前までに伝えなければなりません。  \nもし30日前に伝えられない場合は、その代わりに、30日分以上の給料（平均して計算したもの）を支払う必要があります。  \nただし、大きな災害などで会社を続けることができなくなった場合や、従業員側に明らかな責任がある理由で辞めさせる場合は、この限りではありません。\n\nまた、前もって伝える日数については、1日につき1日分の給料を支払えば、その分だけ短くすることもできます。  \n（たとえば、10日分の給料を支払えば、20日前に伝えても構いません。）\n\nなお、前項のただし書きにあたるケースでは、労働基準監督署の確認を受ける必要があります。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文の「労働者の責に帰すべき事由」を「働いている人本人に原因があって」としており、本人に責任を負わせられる理由であるという条件が不明確になっています。本人が原因に関係していても責任を負うべきではない場合まで、予告・支払いの例外に含むように読めます。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "原文の「労働者の責に帰すべき事由」に「明らかな」という条件を加え、例外の範囲を狭めています。また、予告期間を短縮する際に支払う額を、原文の「平均賃金」ではなく「1日分の給料」としており、通常の給料を払えばよいと誤解されます。「三十日前に予告をしない」を「30日前に伝えられない」とした点も、予告できるのにしなかった場合の支払義務を不明確にしています。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、原則・例外・予告期間の短縮・認定の関係を区切って説明し、「このルールは適用されません」など、日常的な言葉で内容を明示しています。回答2には「この限りではありません」「前項のただし書き」など、専門知識のない人には意味や参照先をつかみにくい表現が残っています。"
+  },
+  "response": {
+    "id": "resp_055bcef748d62b42006ad4614fed8087d1858ec6d65d32e51b",
+    "access_programs": null,
+    "created_at": 1792303439.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_055bcef748d62b42006ad46150dd9887d1a96683bdcba4ad62",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GFd6iSrDA9mF30tLX1itS0xAtHk3AZXHiHap3FggMi_MKthjFbyu-tHwyR4L6CHjFZd51edJPhNg2bUP-9WUKeRqzcntW04IjEQdSFhvq79Ej9ibP3EYDftVINDustKD4TJwjpbAJe4QoAV5Guqga6RGDcqLg40iC7kGSHdEtk72F0FXy-J7k2YZFm0z3opgHHLhcaNa6zu8yO0c-eNj3D8feJJpIm4P6phg3HMqp2wSI288cw_V7rd3Y9n3YDcbNfEYQFuvvsV6Zmnn7hFgdVTxJsKVAJYrS86TBiBk9llu9flxfW55IMYz7E3pEMuRDPsDvSS5_82ekviUnZUEPUwo_KT1fUC28gO9DjnnSWPnJQxBVwKZ-P32Rr1za-Rsm-EVyDN6Hlvmzc-S5wr41UpllSLk_nk1YvE48h5rx5u4y4Mji5LvYncmdrahyrBPshKQrveYTwAcZDQihlSzNMLLkiVpYo1Aa1rP3fRGdobYYf3L7g0jKfzfl7whI60I0avImuPpnQfT2zeLI2X_R10vjhiqqsJ4g_i-R_FUEHWupcXEv_Wc34jvLntvtSFAjzno6h8oGaqMQbiNXMGPJimTlV2mVYPebcxYWZW8efdl_AJCZQAS_SHFTVT9gQba-FI1_wQAXhX_Yq0g97tjtH4Z6tICiTzYmJmE-LAOHYgzMjynLC9Y7gYYi6Ow0xdCuPnLOokm5HIiw-Wa-phq9BBmx7HsH-NsDwLQLCnVwWzRYhzMvVKRVhqu369MhFRt6y2yodchofJUNEdihGdR4fWOXPbyxWsDpsG611g_xLHSgoafZJPFVEAl9T2f_dINlJXwpJhkC7PZqkM74fq0gQh0ppaG9uDiTExwpU5P1NWROQuSXIGTBrwq_eFveI5PUPcIpEDnUOgJDGIgHqj3YSQbUr945wb6BqX1qxfAavIFktlCwasUgXnA4B2ZUZ1Rn7T4AfwS54pByL7B7mvud98Ncy3m1fFAUG4rfzsQPSCJENI4rpEPtXv_0yTA-zwiOhh8L6_swkUemBO2Z1cXfMYuUGQivT-YYwCT7L8L9iPOFi6b3g1ND9odYodzjitryeZDfkco_RbthTEJ9Hk8wRu_OvdvMWNt2XlhUcrOiBZQO5Emtyp7IZ6K4EpbyjcM2VsfqGSaCqWssAw5rPgFa2hnhiP-_FS417S7yp4df8hizotr6AW0yT6fB_p81WElBPIGs4kN-GMIqfG-Gi0tX1TgzCTRHFmhCE9E08U0Q6N41NCs1QSHTKWz46eYS8IOa2RP0Cdz4YLJBmnKxDhf6Cj47pr20O33L9HggKhsKYoRFf0E43scdghjO__kzDoBx3jCS0Qd1h4-krfwyt15ZB5c9muaAd9nBtNLxGm-gKEe11RLrmRczlUWK4MeuggjEBBToxQmH-0RmddWmAbqYMaUnTQcFdKSiL6KDsBrVeTB0Wk15IJ2vBy5_2B3S6xLsszs0i-pet_o2T1N-Hxc-C36aJ6IXiqomH5xL7Op6pWXbabmC1iS4osKvy4FUNeNDLFaZ9TIa-fgHDMvhwLVCDjKKxEcV2m-HU9LQAyVRWKBABtutctwHXhZ9j4ZezbZMenIvVJWBX_2TEeS8Z9ADUWKrpummuxJtcwbSmygOE0n6n8ytzEbdhXh9FE7xx4ChA4AEBoloHZPyLFayLHgjIRsc23woGhh3z8Mved9laLfIJgVDQ7ArrPbmBgxYLQTZxglwvBjDfujZ7j_r-R6Vq_YMwSJMB6AC6kyXhmomNEht_-j4jwZXUgtjq5y9PdjaQ2n9ivUEEQBM-blzZ9pf1w79pT-sJWVwzmPsm7dW5NTdp38AP4hA9_72_OwsjaBnlcR8Tl096rZ9OHnXV-SbgVAjqcM_ozidRO6RvI7QVmxNDu4UZRj8vkCxe-IlvxRWkdy9luNK3lQujGUEyRj97Imfbq5ReQ_IqEHI3t96JbBDUSRB0BFcmy-ZDXiiFDlv4DM9b6YW_WTBWfqam4IeYTvz8pL80EE4jPQM_kvUizcJB8oub2rUAsVC_2lZy0Lav8XkvbeE7VM8ldYRBEeG8WXcEL05F5QD1jIvrAoCeYGeAYtO449YrhSXSVWRzBeyeKds3HVfWh279z-ccXIzeJx3e9NUa3tkOX-gr5Q_n27nob2s52c5vwloNdzsyMDaN2GOeDUVLZ0I12GdUyNimPxlz_b1zRYArlVm8c6UY1hznE5wi4eB7mzLiJLhpZw6LCC-UpLf_uSCPHjmNa6C7QlGJMzdv8JMQ_LzoSxzul9-xQtOZorrps9mXVsz98UNAA83eB5JsBuFqTRZ34bi2J-t-3pOESbFq5BRn55V-kqdaRQmZXLRKEFTIHVNKxlHaAzFOQ_RUq6qj_GUY1pnov5aVklXxKJGptQS2IxoC-7PeFlvm64SzYIDuygTkNYAL9B5JYM0YKC4VYMSlzpFqrTMfnJ9HcTH5wWqH37hHDfopoQcbhnsf6ovmNbvnoGjxhRF7isxqDph3lApgFdjDjjd5OCObGeszcZh6g2kKq6NCD94Q8KznJ0KqqryX1QaEOuuy76sY83yCSGnsplJ-bDnukRcdfus1z-JKh-2o6uLEQOS2vzZoUgyyoymBI-G8HcWRIFxh__yO-iti3hOduhoITrlggB-TokmbRsHc_B54EZ3ccoG4JlnFxtFDrAD_QsOp_aldkm5l55yO_g4eAE_e58NgUzs1zagAjGTNZsD-t9t_nKGaYv3e_xBvCf2Oxq5zvzWNTGWmh3f9J9oxRZ-qk6AFzlRF-aLxExTHbCTpg2jJYaoFpiwmJNXsTWo2p6jorbp-Z1-XJ2vl-aj1GDCTTb2o1qMgKbky-MrP5iUGXjvTPSk1tKV34x-7i0C7VGSr4pU0mxqbsxGKmksM5RO4gMRmYb--PEjj0F3xEugglmIcNoOu3_gmFHc46CC5-5WbF4NPGcrt3A9ohZsk0kSKU7yah5gW8voIyrvlUFpMxeAfyvJoTBzBR3TpCbQN8BbYmwY5OdPn_z43VXVQj1NI5JINVE0NhQisRzRtB2tWAEwIQdLlVLTwdZxznhgKwQe4CusfBhBuxo10SURN61V4gZ-FJzNdVKfdOhFkeHLw-c-4QCvYF16VK0MgimJ3fjRn2BDMctTApFBUBeBnMHnIlnTDMNXNBsxqfk24gfuOp2VSnqcuDYoUbeE3dzlq7mfmsz8Y0Y_XKa292BPYUhYYNS1587DP1q5vSnqD4WqZhi5SzUDgfWosaSnSP-mbobKObLgb32sbPzN5WPsOTTGcPG6V8FMIOgObIKhsOr-qc0rrjJK9ih1Hhuv5-28w9v0Xw0L4rnVnMg-Z4kaafb_ua0A02WPdBviamMZfrx7xPi5i2LVN5nBjGkksZfGMB2vJoO6lvvKpVD2OfJ11VeAlUAX1sCu78O_JFtj9hiGgf6yVv_6OiBWoOVnrnkVQuc0Vbiav-4hJ4EJqKzpt1H8weKvo5dnShFBa9h3JVy2QH2mWAJx-HHcEigKPMmbZRNbaeU9EcZxmHF6lP2BCuwlaE7dYohChGRDj-JXmNoB30-038FeqioQMUmXH-JxUfvxxEtWJVrSM4dFMl2dhHhXTwx4oRATamEWtGHj2dtH0THT1y6UYIoVxjVK7F6dfzYcu3WPD8KEmq6jsWr2cGEjU7L543r4rbZHXk53utjdiIwmhWP-xPFde26Se6Ib2Dhfb7Sh3XF_91hgPP-4NHhVklOB2TEBYKRZON4vNOdPKwH17oJCAj4xPCSmWsnONoyI6MQFABjNorxlUk5md_VG6HBMc1W4pR9lLf_AfQukR5u4vY12VZYptsIaQE63whElOYjK3l5l5VuEo8s9DJtCjt2eOeJZdMdn_cqVRKVAQNQYPXINIe0LPQr67nKCDGz0fAlvSGxdx8fIOKpi_zx9sFvveyJyDTITVnzwqecYFY-E27uu7LfWd6EJr75sy4PjDYKCi3Ajqlh16t1UVVGTcmWaRnRfBVBaWi2bd3_EeMj4dLw4xR1HGMlVuTUcoVElVl9AB6VKKBJx-dBDgw0lgxmwOCH_K6qnwI20k1FOx56ZXNx81O9u8R4hYLF1pQ0FpZrsjyQxCgNz43iRpa5mHxo_VVN4x0bOL_JLmeobgtSxlnM9y0SkJjgz5vKRS42p4fVTd7tCAeXiOQyJWSLUOwEcDArynrOku2hh03JewzyrXBDSfLcxHGoXdhH-_qeJuIYvQ_RJrGC9sDBmb7DYdavR_iLzv_cbaObaYdEIBmUQ2C-ijso86cwelEze3y5g_g19sta5o944LKdoM5F5obMn1innMWv8x-sD2_JgsOENUO-cjRHICBNQLBVYJFdgd7M4NKSTCePRGal8_BBI77mIKVmd1PxyhT5aKTR10AaK6IafSKL1S0PkwZt1QelN-xM1HIG56LWtBIXM8CTsPRxE2BgrvlEL97vFQmL9SM9vKFgjITESfJG31JJtHy0H2Mo6KWZEpQYfGKNKLYl3QFKoWh2BI0mJB7GL53Fcxn9XJxaR1NcpEA-bTr0X8_tB2Vg2T16e1hIgfT3tzKyQlRoZrSRi1B3yebCUHXlyXiQF_oK7yPsiF3RoAF0iJst9aHgwZeoX13sx9DChVfRf8xJw9IpSyagG_VAFxE_4H_ZXk6BqSDWWxDWbcZbYhX052iN-Yt-Yt2rh7DnICp-7TwkhIUd0qq06de-CKG8XePGnK0JJ4hSWl8mNJ-IyvgKdE-Z9MZrbClzUte38lUuYHyxJVIFmEQLPdGB1cblPcvDR8_3NZWBuKinVhISXqmyJPESqwgoe3MEiWbUYIUtjWBCbrATW_0Li-zU8vjWtHkxghFPTnX_odIfpDG_ImPboTT_PMGalmxysq5xhwW-cEsrztkvuyedvEoypURoBedmdJA59Rx39i6snve38KJwxS6l5o7IsE9gLxw8rT6HKUgZiQUK-I5taIdZTAvVKOh4a2m97OgB4yzlYz1BAvNpAoueHuitL3U-Bv6GL9XxRk0DjHMV_gqYI2lS1yRDH3Guw2iEbcGjJ6xoCr9csaw",
+        "status": null
+      },
+      {
+        "id": "msg_055bcef748d62b42006ad46157475c87d1a655ab6892d8a951",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「労働者の責に帰すべき事由」を「働いている人本人に原因があって」としており、本人に責任を負わせられる理由であるという条件が不明確になっています。本人が原因に関係していても責任を負うべきではない場合まで、予告・支払いの例外に含むように読めます。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「労働者の責に帰すべき事由」に「明らかな」という条件を加え、例外の範囲を狭めています。また、予告期間を短縮する際に支払う額を、原文の「平均賃金」ではなく「1日分の給料」としており、通常の給料を払えばよいと誤解されます。「三十日前に予告をしない」を「30日前に伝えられない」とした点も、予告できるのにしなかった場合の支払義務を不明確にしています。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、原則・例外・予告期間の短縮・認定の関係を区切って説明し、「このルールは適用されません」など、日常的な言葉で内容を明示しています。回答2には「この限りではありません」「前項のただし書き」など、専門知識のない人には意味や参照先をつかみにくい表現が残っています。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303453.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1469,
+      "input_tokens_details": {
+        "cache_write_tokens": 1466,
+        "cached_tokens": 0
+      },
+      "output_tokens": 683,
+      "output_tokens_details": {
+        "reasoning_tokens": 278
+      },
+      "total_tokens": 2152
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "H04",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T06:04:55.781792+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n日本国籍は，我が国の構成員としての資格であるとともに，我が国において基本的人権の保障，公的資格の付与，公的給付等を受ける上で意味を持つ重要な法的地位でもある。一方，父母の婚姻により嫡出子たる身分を取得するか否かということは，子にとっては自らの意思や努力によっては変えることのできない父母の身分行為に係る事柄である。したがって，このような事柄をもって日本国籍取得の要件に関して区別を生じさせることに合理的な理由があるか否かについては，慎重に検討することが必要である。\n\n【回答 1】\n日本国籍は、日本という国のメンバーであることを示す資格です。それだけでなく、日本で基本的人権を守ってもらったり、公的な資格を得たり、国からお金やサービスを受けたりするうえでも大切な、法律上の立場です。\n\n一方で、子どもが「結婚している夫婦の子」という立場になれるかどうかは、父と母が結婚するかどうかで決まります。これは親が決めることで、子ども自身の意思や努力では変えられません。\n\nそのため、親が結婚しているかどうかという、子どもにはどうしようもない事情によって、日本国籍を得るための条件に差をつけることに納得できる理由があるのかどうかは、慎重に考えなければなりません。\n\n【回答 2】\nもちろんです。以下のように、専門的な表現を避けつつ、元の文章の意味を保ち、一般の方でも一度読んで理解できるように書き直しました。\n\n---\n\n日本国籍を持つことは、日本の社会の一員として認められることを意味します。また、日本で基本的な権利が守られたり、仕事や身分に関わる資格が与えられたり、さまざまな支援を受けられたりするうえでも、とても大切な立場です。  \n\n一方で、子どもが「両親が結婚しているかどうか」によって、生まれながらの立場（嫡出子かどうか）が決まることがあります。これは子ども自身にはどうしようもできないことで、両親の行動によるものです。  \n\nそのため、両親が結婚しているかどうかといった理由で、日本国籍を取れるかどうかに差をつけることに、本当に納得できる理由があるかどうかを、よく考える必要があります。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。国籍の法的な重要性、父母の婚姻は子ども自身の意思や努力では変えられないこと、その事情による国籍取得条件の区別について慎重な検討が必要であることを保っています。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "原文の「父母の婚姻により嫡出子たる身分を取得するか否か」を「生まれながらの立場（嫡出子かどうか）が決まる」としたことで、出生後の父母の婚姻による身分の取得も含む話を、出生時の立場の話に変えています。また、「日本国籍取得の要件」に関する区別を「日本国籍を取れるかどうか」の差に置き換え、取得条件の違いと取得の可否の違いを同一視しています。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は「嫡出子」を日常的な言葉に置き換え、親の婚姻と子どもの立場の関係を短い文で説明しています。回答2は「生まれながらの立場（嫡出子かどうか）」という抽象的な表現と専門用語が残り、「子どもが……立場が決まる」という文のつながりもやや不自然です。"
+  },
+  "response": {
+    "id": "resp_0e0a29c30ae72417006ad46187f72087d19f6331aac67d400a",
+    "access_programs": null,
+    "created_at": 1792303495.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0e0a29c30ae72417006ad46189326087d1ac3f7aa18eb48935",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GGTRou2wy6W1OWsQJOb7TkElQIst6D5lU02k9zoYGmnPNitkgz01uEId2PvFbXduCLsgpoaYr77nima5xPfoeFzPOEnm_px8fVAzzhHbPLXZGxrC5o82XYMJoYBFdRyaPEW6YBGaHzihFUufojLSC7b7mVCAM8VOCwau8RFu1jq82CxmDQR2KJlA-da1XvO51yte7HC1TY8m3UV6G0MfZefvBvvXb1yOD05a64nmbojV2-8kVhXZda9IiFjwGvugxEE8aN4dxvjgTPBpLMKXNjY0DAaMHkP3YcR650XyR4vF8R89q1y8qBTyAbREFDBiDuFSl5x06g9LFsS2-awRjSv6Px0V0tE8eFzhaudDHuPpRlVNLzgGkZ4s_CSOQBIlX4et067OCxzwIr14eYSYtnc2PJx3skxmqe5_GnTuZjbJhm2JVtfkkXiqguyH0pg10eKf6dFeU6ddvMwJkhhrORYifUsFj_vLesMhgTeXTTs9jAi2_UklfpJoYt6alvAap7sBvC4enc7mWscNfOpvNBhdzZaGnObIWVnspgSbrvWghlj3FwGh6H3xfd2rVf-w1EkLZ87Gf4TGKaqeoeSJJMjrTwbAXaMaU1PkRN_MveYk9wGNg17hQgKTy7FZj69t0vcZWB4X-TsWvS2jr2Els3-nvrf3QYBM55iIPJyDWhMivkO91eqXd9mipZqAoT7EsbUkdNlGIFSwdfcl_Af-612yzv83OADhZ645kg0gmSpTpgHUQT9B6zrVQsU4fOf9L_GcQEVQ9NXQBjwIC22bDywYbm1FrbNvqUIVA8U1gZ1xSikW9Akdt54p-VSgvPtEUbgA_wX9_islyWQILMk0U7661p6lve5kx9rLEciy-Go_8spwr2rotuVgDqfDtiTYm6pf0jphGaiF_4d29fqnoUl0m0Ca3aOHt6qwlxcyflE2ghvURDsAYlPAViKU66lqpB-YO-t6XKMwcY6PhsKOGjzvmNX0KyVnmDp_VHExqbgiPAt0ab1YlS-ZFFQTSnIjQz-lXwihOpGuyHhaPLaikTC5pMkcfIrULgEKtE-r1sXUO-9lISm2PQsylo6QsQcQKxv6-QN8N2HdS-wM2-EAXliKKVYfdYQK9pwDecPz4IwZ31IM1ao2M7bJIdL724SYw4qQodvgP8zXiv_t9AV6KIIYFX9UUMDUTRP4diLgB94CJXutqvSIdgPCaSUz5CdBt7RKCISO1M_m-51SojvFIkhZnylf7nSbc8y7a54lUDOWW61rLccQ7j-zx3CiMiqvHTgknJQo8PgUas9-vLuy8DqlvEV23AcwbISASsP9cXzB5fJdLFDRVd_Pfd4vCjvQ1E2vbpHbkjP-zh1wIyn5ZVSYhC-LnbJFK_uuICLHdUZtq4OXIUxd4pBpfoGheA8ppFVXbQrjTiSgdphECm1cd5MmRgJZHeLh2PmOmdNRPd-m0QQR2xdRpj3m0yZylqaEq9GJuAp743ABLteRlGQixEFOtBcQ6xURwSYNeqTQ2pnwYpxFAJL3PZSqWs6SHGSJVxmS552PAGF72SJ7DPHkKCypBUaYc_j_foEr8J4LOdcqrcFNTev8jT8HYsarhmqruT-824N4V1S_oD8BF91QG_fK5E3nOFQziAnkPMhbPzUjArnDoEgdnJFYkLrU7bjfUfErw5DjSxxKlylH8Q9NfDfU2F6RjbcIiv_1zRD32hAUassdqvq0orx8iAdBGZX-rwcqx9nFqrfFdLpqpz9cwnGk00wZ368YxjVgkOlyTgLqRhEec61onYd_x12kDuP25FuoV7Lbs0ww55QxasiT66Kv43n0MTaRB3T06eAFYT20o7kHbw00sWsjUijdiFe7aopfN4naTjRmxpbaZh_DIeAPUAzjH4IxGdYCaG_-b8TUR7Huup01_gOjdcrNPv89EZrp_m3zpb0kTThzP9ZoCfvn5_-GQhiBQK3UzIIoTYhgX2j_DClc3aWOu5ZhKM_MLYLt3U8Kl9df7cpido9dhtQpTYb9HheuSVSJIzkRqx0voStVvV-pf7L4mESS_e-46AKGhDiENgk9EADeqiWlstX7LiMJJ1yMG5hNhGGUMO4pfsxVVwtpQLeKNdHRxBJdUqMQC8ILAzzfpoaayoZMLAlUTtCx7u02SPj3U74OVXJ20B7-5K97c5zfc6l22v7yNuOFtPz-12bGkF_o8j5LMv9I-jvTaLvJ8lazOflYpWwe81NP5ddAgSmsdbrqnLkFFONcfoy7GbbKAyT1IkNjHeYOJOihkQQrOmCmPy0a02v7nDeFjtqJ_4wq1NN2o_oQTnGkHWrQj900ZvwVI65jlyEFQcec7DpbcVU6-SVdIzez43LQrfSs-BwLkDnP4mfoBG6jWvt7Yo75mBVAd4BLn3VHgYxivih6-YaFaQa3gzJbvS3ijr8TdzojCdky2iVQd0C9CVQGj7n8kOKpodDS9KGqbtVzPnjHWfKJWwr-iBujXAoDAFTJCFhBMEqhg2JWPQWyVgbA69FSfm2PgS81IexubAR0tJ-kYGf86K-5Pe6jaEKPdSNiOiGt6Ibn1pJmoh6k7Q5LTltjPCFCirCSGCX6SARu2B3_RZ5upBwSijyHiKcX4t5FRBTyD3MGJp8CzSklSNTQUUM6QUutgwRALc-OOxHLC-JH2Wkv6zYTtTULYkTMwWFDvai5aRp3DkkjeyBiwK2oI6BfrbGBP9B3fiioQ==",
+        "status": null
+      },
+      {
+        "id": "msg_0e0a29c30ae72417006ad4618c50e487d19c20714135fa981c",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。国籍の法的な重要性、父母の婚姻は子ども自身の意思や努力では変えられないこと、その事情による国籍取得条件の区別について慎重な検討が必要であることを保っています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「父母の婚姻により嫡出子たる身分を取得するか否か」を「生まれながらの立場（嫡出子かどうか）が決まる」としたことで、出生後の父母の婚姻による身分の取得も含む話を、出生時の立場の話に変えています。また、「日本国籍取得の要件」に関する区別を「日本国籍を取れるかどうか」の差に置き換え、取得条件の違いと取得の可否の違いを同一視しています。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は「嫡出子」を日常的な言葉に置き換え、親の婚姻と子どもの立場の関係を短い文で説明しています。回答2は「生まれながらの立場（嫡出子かどうか）」という抽象的な表現と専門用語が残り、「子どもが……立場が決まる」という文のつながりもやや不自然です。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303507.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1178,
+      "input_tokens_details": {
+        "cache_write_tokens": 1175,
+        "cached_tokens": 0
+      },
+      "output_tokens": 484,
+      "output_tokens_details": {
+        "reasoning_tokens": 101
+      },
+      "total_tokens": 1662
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

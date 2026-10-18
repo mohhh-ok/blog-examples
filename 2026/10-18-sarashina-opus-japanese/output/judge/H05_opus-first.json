@@ -1,0 +1,187 @@
+{
+  "id": "H05",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T06:05:21.960539+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n国民の選挙権又はその行使を制限することは原則として許されず，国民の選挙権又はその行使を制限するためには，そのような制限をすることがやむを得ないと認められる事由がなければならないというべきである。そして，そのような制限をすることなしには選挙の公正を確保しつつ選挙権の行使を認めることが事実上不能ないし著しく困難であると認められる場合でない限り，上記のやむを得ない事由があるとはいえず，このような事由なしに国民の選挙権の行使を制限することは，憲法１５条１項及び３項，４３条１項並びに４４条ただし書に違反するといわざるを得ない。\n\n【回答 1】\n# 書き直した文章\n\n国民が選挙で投票する権利(選挙権)は、とても大切なものです。そのため、選挙権そのものを制限することも、実際に投票させないなど権利を使わせないことも、原則として許されません。\n\n例外的に制限できるのは、「そうするしかない」と認められるだけの理由(やむを得ない理由)がある場合だけです。\n\nでは、どのような場合に「やむを得ない理由」があるといえるのでしょうか。それは、**制限をしなければ、選挙の公正さを守りながら国民に投票させることが、事実上できない、またはきわめて難しい場合**に限られます。そうでない場合は、「やむを得ない理由」があるとはいえません。\n\nそして、やむを得ない理由がないのに国民の投票を制限することは、憲法の次の規定に違反します。\n\n- 第15条第1項・第3項\n- 第43条第1項\n- 第44条ただし書\n\n---\n\n### 参考:憲法の各規定の内容(補足)\n\n- **第15条第1項**:公務員を選んだり辞めさせたりすることは、国民が持つ当然の権利である。\n- **第15条第3項**:公務員の選挙では、成年者による普通選挙(財産や身分などで投票資格を差別しない選挙)が保障される。\n- **第43条第1項**:衆議院と参議院は、全国民を代表する選挙で選ばれた議員で構成される。\n- **第44条ただし書**:国会議員や選挙人の資格を、人種・信条・性別・社会的身分・家柄・教育・財産・収入によって差別してはならない。\n\n【回答 2】\nもちろんです。以下のように、専門的な用語や構造をやさしくし、一度読んだだけで意味が分かるように書き直しました：\n\n---\n\n国民が選挙で投票する権利は、基本的に制限されるべきではありません。この権利を制限したり、投票しにくくしたりするには、そうせざるを得ないほどのしっかりとした理由が必要です。  \nさらに、その「やむを得ない理由」とは、たとえば「制限しなければ、公平な選挙がまったくできない、あるいは極めて困難になる」といった、とても厳しい状況に限られます。  \nそのような特別な事情がないのに投票の権利を制限するのは、憲法で保障されている国民の権利に反することになります。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "原則として制限が許されないこと、制限にはやむを得ない理由が必要であること、その理由が認められるための厳しい条件、理由のない制限が違反する憲法の条項が保たれています。補足説明も元の文章と矛盾していません。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "元の文章の条件は「制限なしには、選挙の公正を確保しながら選挙権の行使を認めることが事実上不可能または著しく困難」というものですが、回答では「公平な選挙がまったくできない、あるいは極めて困難になる」となり、公正の確保と選挙権の行使を両立させるという条件が落ちています。また、この条件を「たとえば」と例示にしたため、ほかの種類の事情でも制限できるかのような余地があります。末尾も一般的な権利への抵触という説明にとどまり、憲法15条1項・3項、43条1項、44条ただし書に違反するという具体的な情報が省かれています。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、原則、制限に必要な理由、理由がない場合の結論という流れが直接的で、平易な言葉で続けて読めます。回答1も丁寧ですが、問いかけを挟む説明や条文の補足へと話が展開するため、回答2のほうが主旨を一度で追いやすい構成です。"
+  },
+  "response": {
+    "id": "resp_0fdbbfc584666f40006ad461a21f6887d18b718378fe92a30f",
+    "access_programs": null,
+    "created_at": 1792303522.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0fdbbfc584666f40006ad461a31f9087d1b4f63e7825b123c9",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GGyQMVwO39RmfBtqFQIoFw0aCB-biDugVkm2wC5RJFbfmCdnvYJub1qv3K3E7f8OXA-_fyyUf73IMDNI7MGfpa_u9xFoRYc4hkdR4CYPsoSbgjm8BbRDb_D4ifKHJf4KoZmrr-G27Z8wKdYjvC95K9b57-ZZ-DX_fRHzqDdIJp5RjNiP_5wRUW-BILFiD4GyRJHBrFIG0vVwyW5esr6Imib7O6BM-49myKrpKfcBQGhbHvSVUvCnL5rWanT9Qy5NhgAy-yLn1wo33jJixhweW-AyV2NU6kY4hnEYiiPI5-Vkl91VkSFef_hDSZU7AsmWrGh-doYSbtQfthDiI6HGkjv9NlKRcpDg-u-UuRyiosLL8EXIHoT5vi3EeUZOgljwwL7D78FdbaTt3LSMD1vM_uGQFZvDOa7Jvb24e7oixOI0jurCX7bLorQ5x_BhLkWH3T59rzkVdG-wLgahgGo0ZOBunNVlX-RPkJCQOq9VtgOsLRKpW-CaBWynn05xGKsVivWQYpy3f_Cmf4DVoaDCx3_vCxEBHqf7S2JGSn1h54n2RozmYaP8cJX7ggU8xiXZ6ED670KiMOuzGlHppGz5xDaF3y4wV5v5M10Uykc3rLAnVQMCZ5yNP6uRb_7UZce5RWsnyMwYR9HB1kkVVCFP4u-uNztSlmtyCr3PLa3KqYOSvDkzAKk9u0onqiNuZup7OZlDRuOofS5p7AtWckCpkHwl3FuBdZiG0YOYZe0lEmADt0z8nJbzSdEDlAduMTV-zV1GftO4Fes9W7q9iloGA0rXzg-QlHUxSrgtG7Rv2xgTH4QnB6PLFlT1pwiK2M2FUdTWXXbsDc_kY1J8Nk6F0-2AUSx93DwPfZsy6sXegqvTc0S3t2EZKTPmmXNs7Owg41zUzfpxH-HlJQXw0m9l-zVd9Nm8cspg_QunudhkwT39Yf7yMlDevNKBQjyXmxjB9tfPGlrLDtNqEUhqzQ3fEmTeuM72skOyii7LEwavwyjtpjj30UvHNvFDztTjidBm0nz28STrXHD7HRovxamS4U2pbZBTLNmI2PJ3ZDFbbTHJw79P8QIcu46BTaZdS3fhXZx4Xt7x5bLFcSDTlAFaSmzpux0a-yNAEF2Io8LSmA-c_x4fE3EPlI4OGh0BnxeAHshbB-UKrU4CFld6QXYRg1SqKKdM3xgCuA36oKR1zEHEP3ixLuE5uCcIN1aLpz3vICWUgxwBQqK6N7VO7ezdm7AsNFQ9uIS1GRlJ3tRTcE9mpd1UwdzyQ74xeT2TkYjDxdZkF9-bZpHxpE40k_qmdPTe-LB-zLXndyJL3zwV0JvAUcsFgEKgZ5sOk9YZxSIhcVOStuByNk2ip7vJxLJMWc_O27I6m__xzle1GnCRSUuh9M0J_QgsLHPPHrNFZz9MYiZ1CS1Y2CwBfus7cRFBGh-Xza8xoJvuEY6Xq8thUsBl2AlAfKfi7LX2vsUcANYVbXnK1DFjVlGBB20B2iQJAZ1_7L1z3p8XwErnEOEfkrZwl0BLUUXXov06vqqOrmE6mxr0GDu2y4QcJ1SCug-EH8x14o9k7hPKceCrUOqQVUjIFU9_RN-5PB2q9WaXgW6UYVP3rPKr2pN9r-grF52NxxsAOzfC2wFke4E8f60Lm5Sh8HjPwa2qFDDIWDMVGRAFHFGHDAY_vOjPUVAOBP3DgU7wD0GTzskkulNsEy8xUw248Wh6PsAsWmiJDJ0CI6A2j-koxZF3UBral7KdrF0wu49YWkvsZoFbPjr3Dco6t8SjrJ3Ym7awrPzRzqeciNp9KrpdPxehWp5_S_Ny0vqff24PV_MZPvm3HRq5_H7O3DH84FEaMXgvOt_t7vkfE1g6JhP55z0DYGi2BqwNxRG6O6pVh3pCMmmU0Es8EObCwnNpU8aCA0AWi8ySv0ufDYEk9rMXXnDUJOudzBZ4kJJ9eE9hjUJ0Ci8lMTEafTGkC-hVFQspfrEy8HSAC5RdjbMXqIYPV3z8OPevHV4fueNZ2xAGSKgsiU5wxJy57VKeTIaHs0FnyrMYdnNDQWiXMNymLBCnEY26f7koItpfEt_3bEuRWatQ8hfr0Vue2rzF4kT35wxK61CXMFr0hCPySzRxZCyF06kkok5wROJi4TnnMaKaaE7rR0cpf_R4jdSQDgwsJrgMkSwLbEEcQgld0Q8FJhv1CGvyAjfchD11tiVek3ZUlCtvzmSEx9na4xG6c69U3gljnT88WHc7XGG-OV6ElSshtdBUi2tIUpyg3j_VL2NOtERPYoPEbetmWPjq0mwTaFD9nHKXrvDvWI0Oj4HYikALGd1fMsRhNgjz9jxd8QbE87FO_X7fIJrnwBhRjqmoT3dOtptBfgnS9iOYvb36WT9n1VaNj7n0E5rUGBJRUp2uTpVPQI8Y8Q_eMvz-KEoJ0C-GBTOsApcYBlLDidZ7NBarkaLeYWK3ximhxRA_Hom8Hr2Zsigx-mC_BDLYbNGRdFgwA_zjV0zLj04uuMCeef_5MPWpPUi0uakf9FvN2Yxk5g-LNMg0JGGRF4T0dw-Vke7CM8IDIsDyMJAqiNKU645Ms6KTS94l6TpuDa6lKoeiE-_FrfJ4nwoxKo4Rgpq_PxI3BPkxkGR96ayPblY1HBq2zPUaOYDevHomtuXsRtaUnzRdp2R-vYC6hgkxpBM6FFzO_fKxH3uC4EKXEfDwjmvlhHdAWsW8AJgLSttOSNNnmOqvs-5RMzwum6JMrANb0_ea18DriuTCCqGEMwaSdJHA_-uDyxIjTk4IEkiajT4Ez-exYppkfSCstnE1y3lh1ITkrGYtlhpDk8mP_kWnuQsZK32uKsn9t6MY8AtfanbtIswLDrq2-7TUbZlbmCOR9B8w35A1qJRQsrKfbp3raltEZ7Hp_0iYlEKp7AIeop-N2nKJ-E_fAeH7nuimiPARC7Zj8jXyyaXcI8DkG3-IZA4bz0lauJwLgHF4GYumHCGWEQO7NY1thxTR96SfU05XLKNgZImxrhSIlUDZBJorK5SM7wIt3TwCEKXXvjAJcjo6gKYlKPpzEJeFSe83G2mvfxWduxBH9tM8HPnr-VFtJz74uAvK2EXpL2ZlbpfIMXYLafteVWofhgdJGy4zVIr7CNEmEl8_vPrPwLc3VY-OdsRSo7DZCJ268FNhhVpQdxMU3wqo90eM2i9YwzJFSJFu8jbdgf4C2iiOJb67NmZUB9FRFUhM2VPEC02sfSzRl7LxfKALZTcNyZvdNRs7DkeBIHIBFJHGqXMwMKXjUzdwkJUn7jNPmxtMpyHTuxaW41RCzsu5thdLVkAiXBlghyEUkOy23HX_bpulZs69MaMJ-wKaDpBIaRsdAbwdpbEQ8cwHuIwfQSR1ACCMmSoDik5gCBFp3cAdpPoqJW5CNSltX3NO064IgjaAaJpVM9KlSy_Bq1He7S1FtVhLrbYRb9LycCFXmPnIJFoh-RdXMapFCGYlxWD_ngeKHWnHDVax_KaZYnek_2ndjzBxzFX9GLvHfUIFXiy9NhOcfOVlnTAD5m6iThuC53_qm3b0utyle1TEKKduGhoZrSC_NDtV5GdctZN__KhdELJMq1pCzqq4AbY2mJAH2MEZu6Y6k5bb3oQuoqZzolJp5zEFqy05X45U_YdYoIZWqWIk5cp7GXYhvACEaxVG8K5UEgh_Yy7hOecpzeFffauVdHiTUV7axUCe14=",
+        "status": null
+      },
+      {
+        "id": "msg_0fdbbfc584666f40006ad461a8bdb087d1ac50f58f7b82dc80",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"原則として制限が許されないこと、制限にはやむを得ない理由が必要であること、その理由が認められるための厳しい条件、理由のない制限が違反する憲法の条項が保たれています。補足説明も元の文章と矛盾していません。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"元の文章の条件は「制限なしには、選挙の公正を確保しながら選挙権の行使を認めることが事実上不可能または著しく困難」というものですが、回答では「公平な選挙がまったくできない、あるいは極めて困難になる」となり、公正の確保と選挙権の行使を両立させるという条件が落ちています。また、この条件を「たとえば」と例示にしたため、ほかの種類の事情でも制限できるかのような余地があります。末尾も一般的な権利への抵触という説明にとどまり、憲法15条1項・3項、43条1項、44条ただし書に違反するという具体的な情報が省かれています。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、原則、制限に必要な理由、理由がない場合の結論という流れが直接的で、平易な言葉で続けて読めます。回答1も丁寧ですが、問いかけを挟む説明や条文の補足へと話が展開するため、回答2のほうが主旨を一度で追いやすい構成です。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303537.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1454,
+      "input_tokens_details": {
+        "cache_write_tokens": 1451,
+        "cached_tokens": 0
+      },
+      "output_tokens": 609,
+      "output_tokens_details": {
+        "reasoning_tokens": 171
+      },
+      "total_tokens": 2063
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

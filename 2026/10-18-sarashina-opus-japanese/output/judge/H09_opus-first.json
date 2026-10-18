@@ -1,0 +1,187 @@
+{
+  "id": "H09",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T06:07:29.914148+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n貸出期間の延長は、返却期限日以前であり、かつ当該資料に対する他の利用者による予約がなされていない場合においてのみ、一回に限り認められることとされています。延滞中の資料が一点でも存在する利用者に対しては、すべての資料の新規の貸出および延長の手続きが、当該資料の返却が確認されるまでの間、行われないものとします。なお、すべての資料の延長が可能とされているわけではなく、雑誌の最新号および参考図書は延長の対象とはされていません。\n\n【回答 1】\n**書き直した文章**\n\n---\n\n借りた資料は、1回だけ貸出期間を延長できます。延長できるのは、次の2つの条件を両方満たしているときだけです。\n\n- 返却期限日（当日を含む）までに手続きをすること\n- その資料を、ほかの人が予約していないこと\n\n返却期限を過ぎた資料が1冊でもあると、その資料を返すまで、新しく借りることも、延長することもできません。これは、ほかに借りているすべての資料についても同じです。\n\nまた、次の資料は延長できません。\n\n- 雑誌の最新号\n- 参考図書（辞書・事典など、図書館で調べものに使う本）\n\n---\n\n**主な変更点**\n\n- **条件を箇条書きにした**：「〜であり、かつ〜」と一文に詰め込まれていた条件を分け、両方とも必要だと明記しました。\n- **「以前」の意味を補った**：「返却期限日以前」は期限日当日を含むため、「（当日を含む）までに」としました。\n- **かたい表現を言い換えた**：「当該資料」「〜とされています」「〜ものとします」などを、日常的な言い方に改めました。\n- **結論を先に置いた**：「1回だけ延長できる」を最初に示してから、条件を説明する順にしました。\n- **専門用語に説明を添えた**：「参考図書」になじみのない人のために、簡単な例を加えました。\n\n【回答 2】\nもちろんです。以下に、専門知識のない方でも一度読んで理解できるように、意味を保ちつつ自然な表現に書き直した文章を示します。\n\n---\n\n本の貸し出し期間の延長は、返却期限の前で、しかも次にその本を借りたい人の予約が入っていない場合に限り、1回だけできます。もし1冊でも返却が遅れている本があるときは、その遅れた本を返すまで、新しい本の貸し出しや、借りている本の延長はできません。また、すべての本が延長できるわけではなく、雑誌の最新号や辞書・事典などの参考図書は、延長の対象外です。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文では、新規貸出・延長を停止する期間は、延滞資料の「返却が確認されるまで」です。回答1は「その資料を返すまで」としており、返却後も確認が済むまでは手続きできないという条件が落ちています。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "原文の「返却期限日以前」は期限日当日を含みますが、「返却期限の前」では当日を含まない条件になっています。また、「資料」を「本」に置き換えたため、本以外の資料も含む原文の適用範囲が狭まっています。さらに、「返却が確認されるまで」を「その遅れた本を返すまで」としており、返却の確認が必要という条件が落ちています。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、延長に必要な二つの条件、延滞時の制限、延長できない資料を分けて示しており、それぞれの関係を一度で把握しやすくなっています。回答2も平易ですが、冒頭の一文に複数の条件と回数制限がまとまっており、回答1より情報を整理しながら読む必要があります。"
+  },
+  "response": {
+    "id": "resp_0692c61e7565d994006ad46222ca3487d097dc930a9f6699f0",
+    "access_programs": null,
+    "created_at": 1792303650.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0692c61e7565d994006ad4622409cc87d0a8e5c3bf66c57d19",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GIvm80-_F0y1JkKl6VGeZgRUkhkHA_HbsUf7wAHg4ZGPWuFX9ytNcZVLoTsSTvB8knP3Z6w-opK9c9qdy6hnxGXHG_G6eAhSSOLz5ZZxErjhL-9YuHikKWL8ZJI9acZjAzXglH7ttp26boRmb-Nw0mpHdXn6_G2KV6yrNJh4Bjx9w7sC99egz2pb1q2qcdqGUbbGTvAkS3u7b1Ady6Wyn-ySuBNNbxykXVDCw2xTywVcMy4tugupVNIWm0YhQQ8x8MFT_HH41FaFdnaotc1FZpz3056AuY90aGeeY7j48YuP0yXkHCAl0Pi221EDlbgadxzRWq8nA-O2qg9IHY_creW7YN1HDK9W1X2nBrVRiZ1Bm3rd26uMAzLQlFGC5g-9JZgjexiux_qxtUvjqd8IvLnFbbGllv_EUuGi-sES2boXmX05eFlBXXbzBmlg11TKXgoz1fdKatzjRHK-M2D_p3anmkcDzgp8sZXdlWcA8bDa_iC__xCAXsFQ7tVawVCDa44hlijLoWWP09wuLzZa4pMGWE0r7zS32uFrMaajBPDNKZdfBpaKhHgR-KjPCB1qCFDDu8Ca1_SVFLgFaCpWCuclccR1AZq_kAEWH880jXUo32tcVJc4SMze4MGKGK7dxUIkQSA8cognE1avT9VIbIQ7D1wGWxB5hGaa2bOYNzynQ3G-rgank8wKSYsQjTdUMv-xM3aMYh1LGSf9aG8lDT1rw-sQbNck2SBJCABzAzpA3BD7Rt__hDnYLMkjpY2dPTa-rkSYbWoS7UfATjTVpOOGUOwAqbPrhxFOHKLE1tmVk9BjMFibqTMMNC_Z2DJWOzMlqdO2GN5dzBp32n11rxFlIfBun1B0LSyhoBN9igfis4z7PXwpRF8Im72mS7eLSVpNRMUbgBTaNt9sSIXGKjN_jiz-mU-YL-L5XhopEU5XSpAx_g6SGzID1DJarJL3cYllyt8VO-QOaq5HV79vho7sVqinGdXJn_ElFAajgMSE1XP41t_jJCbZ5bdooJ4vzHKRDTSO7oecAKHQk7fV98jWErRBwHehN7Vmpv9BfWQOu98f-SBKq3eyVtKui0iFLlOM6ilaJKyHEGM8rtk13o-9eBvX_DIu97Dtj2Fe1ErVXwv-Jf8f3-Uik0cc2qJzkOEnVe8StjjJKAklI5IfbxgF-ltM4GTKUz2c-6kPslIr0n7u9B_33u9U0Hx0ApHqSCGNoAzhlweT1xuRAULHSRvi_SMYZUkk7fTAD4xc6Yviv3jOWi-xTyWp5AsNstoVPuOGXNbJPwyxUW4s9oQgwePDLGzsj2aJN-Iib8eCiYeYDXgoo0nP3761dD0_xLINSEhL9pA2O1MphxOn_awSB5rMZQfH6Q2kc51RH1M4vcbA99LyPMnRNLHZ4p62oz07RB7ez1lvEMDUEmaqHSVRwb5LaHbKgqHmlacZ1PWxJTxbmrdSGly3NIWmLpsUQVZ5kEinmS0l62HbyK1LV42T13zVNb5YykxbpkViG6x-mDnag1E8WArOXNAGWYfUvYBNjJ3-DDFOCuP0yGHbxK5Cgvz44M3HFL5OMrlEf08awWbf1ZMnRx82_JYOTFG0aJX2K4yqpnXD8Gsb-9TWeHgUYpwgro7xmLsFaTT9KbHcNVDnaSu7XoQZ4ATc_P0j5yQntM_POTlrenOFBt5VTvtO76nau6tA4al_H4ScyEYhdvF_1xeuhR-tnKnKc-h0VODYxiOOpvT3JqgoSFRXBcWi7mCP3IrL_nnxiGJNr4aXpF_vpOQohH251MusS0DIlBbNRkjNqjK0hlJuSz47we0Uy3o9oJBwMVr7oYpARz0Vv4TlKTXcdBCG3AoEHZCWMdWCub0tUYR5M032IsGIHs6x3o7q4_79RtQwQCEJjAxNO8NzpSbTfKT8dxpKZLdbn3hr9C_jIxTPe063bCS0LboIV6DXdWxUdZQgpBNv-6TZ-yP4d6-Tki7LkOZmcmlracNDasdMHsITf8vg4bZTjhud2bJ77gxisux8KGtmKhfa0y8B4wAroRJeCwTqIyV6PEXFLMK0RlH9gD8oROFZNP0uMi_GOvCKpiYnm3sDbLYvxIMccFFSg6vFBmo6WfRf2vHhZjsNioYoB19cvL9njQnV_5ydNxplIozH1WdJpJQsZ-vh7OYMML2axQeMWxbEc6NpK__p6OJEB7PX2i7rmSfpaM9hRg8NxuFtmxxYWr9Di0_NLHRBQNQcOKPiZIPiGIrGlLjleies6kSh1gfoyJ-HaNrBup8U9AHpS9kD--ipXAmhHI3PDlxmHBMN5NaID6uole1mg9j39P4clpWzCOTiqwBorXdZes-Qz1KdeJK0KjaupVWH3w0DnellJz-vlin2fkznIZDWmWz_e3JC6r7UfjkftX-KQyCS1NOh79MUMLs7kEnN9x7HbY5iqaXajILmDj3O9ur9-TmySFZlsB1zxoSG63IsBVcqcpgeWTT0Y2kBWlOC-Jendvb982NhSwouGHx5UH1cb8nLXS7fAhVG1G9tG2BhxSs9nPvwRMJgcHi-L0FV-pHkrYexG_y5fMA1DJ74OcdQPkRT6rVFZPvDG2ufGMKSsenUaMQf_i4Z7y6RMCse_Ncey1acbYON6__F_QR2waXVqFypgGMckyT9FKuAGEHvseMLIHx_TXkYdntsghMlhMx6a7NPqdXnBTTb_Ggo7MVRHSOwnk69yJG5pUxcRn2kX2CxcQHwaDs9x3pyynE7Vc9oZFfoKwo70fw_4Diev0KSGGPmkxtrtVEeYk4aBKUx1vQCuGIm2i38-yrWUkS-tcUUBG4XjZ6oGVNOJtldZbIVhoRgz3SxNvdtlfjxngfb6WLubyPuLZazgFy9_0Fnd1XrxhnACl5m-07bREEc1l2wLceA2HxvD9oZ3E7HPE0nXI6AYZwE8ESqdzHqVcwiV63FkfLj2KmAfQZY6tiXVTkzJUwWC5XJQ8ou72i28M1O43F1XPey5gniyPBtD-wt6Se3jVGuN1lKmkkM8j4syhfpngrR9m7Si0D8n5RSi_FH0gApxc40bHBzHCHb0IZ2H098UUyBaWwawnCaqyh6m-NdEndeCFcM5cZlOIV77prTVeEsR4DzmvVP5QGqZpjZzBrQaTd4i1U25fQ8dxf4wk2fMHMsmz1e_hSEB6xzmb-JH1ZHAQoHNNDAKVDPXX-bouU9O0u0A0SRo_ixRYsdKIz9Am7NSKUcoa08AkCz48sTZxQMbYpPRwSbwWgGm4=",
+        "status": null
+      },
+      {
+        "id": "msg_0692c61e7565d994006ad46229442c87d0a0ca3972de3965d9",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文では、新規貸出・延長を停止する期間は、延滞資料の「返却が確認されるまで」です。回答1は「その資料を返すまで」としており、返却後も確認が済むまでは手続きできないという条件が落ちています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「返却期限日以前」は期限日当日を含みますが、「返却期限の前」では当日を含まない条件になっています。また、「資料」を「本」に置き換えたため、本以外の資料も含む原文の適用範囲が狭まっています。さらに、「返却が確認されるまで」を「その遅れた本を返すまで」としており、返却の確認が必要という条件が落ちています。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、延長に必要な二つの条件、延滞時の制限、延長できない資料を分けて示しており、それぞれの関係を一度で把握しやすくなっています。回答2も平易ですが、冒頭の一文に複数の条件と回数制限がまとまっており、回答1より情報を整理しながら読む必要があります。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303663.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1273,
+      "input_tokens_details": {
+        "cache_write_tokens": 1270,
+        "cached_tokens": 0
+      },
+      "output_tokens": 476,
+      "output_tokens_details": {
+        "reasoning_tokens": 127
+      },
+      "total_tokens": 1749
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

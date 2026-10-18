@@ -1,0 +1,187 @@
+{
+  "id": "H01",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T06:03:28.823414+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n意思表示は、次に掲げる錯誤に基づくものであって、その錯誤が法律行為の目的及び取引上の社会通念に照らして重要なものであるときは、取り消すことができる。\n一　意思表示に対応する意思を欠く錯誤\n二　表意者が法律行為の基礎とした事情についてのその認識が真実に反する錯誤\n２　前項第二号の規定による意思表示の取消しは、その事情が法律行為の基礎とされていることが表示されていたときに限り、することができる。\n３　錯誤が表意者の重大な過失によるものであった場合には、次に掲げる場合を除き、第一項の規定による意思表示の取消しをすることができない。\n一　相手方が表意者に錯誤があることを知り、又は重大な過失によって知らなかったとき。\n二　相手方が表意者と同一の錯誤に陥っていたとき。\n４　第一項の規定による意思表示の取消しは、善意でかつ過失がない第三者に対抗することができない。\n\n【回答 1】\n# 勘違いで契約などをしてしまったときのルール\n\n## 1. 勘違いによる取り消し\n\n**勘違い**をして、契約の申し込みや承諾などの意思を相手に伝えてしまった場合、次の2つのどちらかに当てはまれば、後から**取り消す**ことができます。\n\n**① 言ったことと、本当に思っていたことが違う勘違い**\n(例:「1万円」と書くつもりで「10万円」と書いてしまった)\n\n**② 判断の前提にしていた事情を、事実と違って思い込んでいた勘違い**\n(例:「この土地の近くに駅ができる」と思い込んで土地を買ったが、そんな計画はなかった)\n\nただし、取り消せるのは、その勘違いが**重要なもの**である場合に限られます。重要かどうかは、その契約などの目的や、世間一般の取引の常識から見て判断します。\n\n## 2. ②の勘違いについての追加条件\n\n②の勘違い(前提にしていた事情の思い込み)で取り消せるのは、**「この事情を前提にしています」ということが相手に示されていた場合だけ**です。\n\n## 3. 本人にひどい不注意があった場合\n\n勘違いの原因が、本人の**ひどい不注意**(少し注意すれば簡単に防げたようなミス)だった場合は、原則として取り消すことができません。\n\nただし、次のどちらかに当てはまる場合は、例外として取り消すことができます。\n\n- 相手が、本人の勘違いに**気づいていた**場合、または相手自身のひどい不注意のせいで**気づかなかった**場合\n- 相手も、本人と**同じ勘違い**をしていた場合\n\n## 4. 関係のない第三者がいる場合\n\n勘違いを理由に取り消しても、そのことを、次の両方に当てはまる第三者に対しては主張できません。\n\n- その勘違いの事情を**知らなかった**\n- 知らなかったことについて**不注意もなかった**\n\n(例:勘違いで売った品物が、事情を知らない別の人にすでに転売されていた場合、その人から品物を取り戻すことはできません)\n\n---\n\n※ 例は分かりやすくするために補ったものです。\n\n【回答 2】\nもちろんです。以下に、ご提示いただいた法律の条文を、専門知識のない方でも一度読んで内容が理解できるように、平易な言葉で書き直した文章を示します。\n\n---\n\nある人が何かを決めたり約束したりするとき（これを「意思表示」といいます）、次のような勘違い（「錯誤」）があった場合、その決定や約束を取り消せることがあります。ただし、その勘違いが、取引の内容や一般的な常識から考えて「とても重要」なものであることが条件です。\n\n1. 自分が本当に何をしたいか、よく分かっていなかった場合  \n2. その決定や約束をするにあたって、「こうだと思っていたこと」が、実は事実と異なっていた場合\n\nただし、2番目の「思っていたことと事実が違う」という勘違いで取り消せるのは、その「思っていたこと」が、相手に対してもはっきりと示されていたときだけです。\n\nまた、その勘違いが、本人の大きな不注意（「重大な過失」）によるものだった場合は、原則として取り消せません。ただし、次の場合は例外的に取り消せます。\n\n- 相手が、その人に勘違いがあることを知っていた、または、ちょっと注意すれば気づけたはずなのに気づかなかった場合  \n- 相手も、その人と同じ勘違いをしていた場合\n\n最後に、このようにして取り消した決定や約束について、何も知らず、かつ不注意でもなかった人（「善意でかつ過失がない第三者」）には、その取り消しの効果を主張できません。\n\n---\n\nこのようにすることで、法律用語をできるだけ日常的な表現に置き換えつつ、原文の意味や構造を損なわないように配慮しました。必要に応じて、さらに具体例を加えることも可能です。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "重要性の判断基準、前提事情が表示されているという条件、重大な過失がある場合の取消し制限とその例外、善意かつ無過失の第三者の保護が、いずれも保たれています。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "第1号の「意思表示に対応する意思を欠く錯誤」を「自分が本当に何をしたいか、よく分かっていなかった場合」としており、表示した内容と本人の意思が対応していないことを、本人の希望が不明確なことに変えています。また、第2項で表示が必要なのは、その事情そのものではなく「その事情を法律行為の基礎としていること」ですが、この条件が明確に残っていません。さらに、相手方についての「重大な過失によって知らなかった」を「ちょっと注意すれば気づけたはずなのに気づかなかった」としており、通常の不注意まで例外に含むように読めるため、本人に重大な過失があっても取り消せる範囲を広げています。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、取り消せる場合、追加条件、本人に不注意がある場合、第三者への影響という関係が明確で、具体例によって勘違いの種類も理解しやすくなっています。回答2も平易ですが、「何かを決めたり約束したり」「こうだと思っていたこと」など抽象的な表現が多く、何を指すのかを一度でつかみにくい部分があります。"
+  },
+  "response": {
+    "id": "resp_00ccceb8f85b6e55006ad4613105d087d181a712d20d16493d",
+    "access_programs": null,
+    "created_at": 1792303409.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_00ccceb8f85b6e55006ad46132057887d1890165ab0a537c6f",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GFCXKqdkhFWfBFfkLQjVrqQ2WKhgy2el4qReNGLoqDuBlt4tItVb1Vf--OcStCQWkRjpt4-OZDB6DvSMfpm5QvZKK6hIOvUoZcSdPnzk0w1eOBz6WDcBrPuEbWb0PO-jxH7Va2S09XFUdod5hN9hOm-dyEJji63_hJTBaRPKfP5rtQKXky_2N8hltITwtrhczEcw_0pNylyXop560VjVRkp_6eGfK5Akx3u-6hh11Dl--_XtavaKmKJGzQRipnjPNN9ors4_yAd9eYBEhdAjQqnYTkuOsjOCWbTDyvroq5vTTRnKqa_QI8NOO70ljTM1CmtiurZ0Wy3oCkCpdmU3TSG3RTmCSccm9wFGiTjsO907A-h7384uNWZm2sb6Dg2eQS9XmXwMpSo2mIGRBlPwM1kBM815FDHh6r3l7v8H3k3qSTbKLBiTnWKJaCjnmKB1qPKqUNCV3FQPugWBVcuwh7rjYkxEHmV_3UVS_HMHUVBtu2QQMKavJLp-au8AyPV9pCJTY651LGLqHTuRCBH9udcb6fLx-BXkobGfW5SOMi__gyxsXqtcHqR3qapEy2AXD__0VKl2Bznmk-D0tR16JcFVicPDA4skZLpY1ctntYpCNpPlTpTWD-6L6uFTk9jCjRqF198Tem714Zi7g_aSh_wgk2Yx5k4l6z9JbvHewawSBhQuQmDySilsNzkDexH84sG6PlylmPw-P8taDOW6oAnyobPcO232SeE1oSkFvPqI4eQZLTmx_hhaK6fHMIvMaGUoMaDAlP3H6lNX9LUTask4Vrr7sibF0SUqXLXkFacVqU9WF2cBySF5WTWEoP-uOzdpjXhpn3UYz1dc2Gp_ZQVNw82oOhYHKdIkK4iIvrqNLAlri8E2ONZjprHkSKbYRmrEB1aGlZV5vWKSVLLDCrYQRuHA8IEbYkEm03CzJsK8xgJs5J16Ua5HZMVm3vVOoXOl3e1_JBG12-wq46pnCMnfgJo4zGmXkqHqXIKYDlC_QHuhGvxcAHVaX0n6vFst2Ks9JXWVNoWJqBn83TWFbAmCLmsmEAibsipu1GOPG9FW4GaiiIluJk9NnnJaYHm_HQMdpJ6zwKbuTwHKXgdtw4gdSlni8eZGs4OWQAPrZmWMcidvU5Zn5h3518U_-WL7e1weBjZW5RyTOtn37b7ZZw9Y2JE6yPbhcYldcdzQX1VKchXPwpzOcNWylJE9H7zIo5RGrEsWUov4y7_ms0PNv5OvnePBVVKE_YYEJz7YZhdR3e5wmkn067OQ9hSZdnbz7W9vSNEs29vWZOsHjiIbmdWPShoAW-Frn36vw_Zy78sFLMio4cfAumnRTAAa9dMk_mS1ABTWi2EVuBpCZCV7KzDrZ3RLEB3fRYdbuke-99x9mSZWGMln6_czVJhOU1h-sNYW4VeuZaW53ou4NlqAS-npYEdT6SJlecXvjRd-mUGZs7p6gres2Bto7DXpbQocE6AjB6cF-coURLNDt3UGjX-eN3EYZLshc6jZhd7hl6nxrCpPjMLy1X081FsCv_hEDLHIZ7dV0H6-fZGqRePqM6zHj_VLtstSKepSvMC5Z8q8Rigqbqr3zHxUGHGkpb-O_6grKN8uTTLR2SeZmdodWba7I99EGl02Nz2iEOjL1QyiyApH4NhOHZsKXVeGfD-ueko6FOLNzJrJQmdzp66-wROE1Ya-gg2jU9t7KVmBG1_EKbLJxjWtxNWwfypeiWEBz_xd1oAKrOwq9hMibCv3SkAabxXw6pR-rLVSSkeT8fLlEBUc0JgMLMNCZZPQoo7nRaG6s9bNOUlhF2Q51IIesBrrVf8miIiTgNS_m2TiTnoqt9vsmSVGoO-ZNgxXmRtbEKLlMzEfNg6KOef05FIg3_AfbugLS4m16hcnPl8kTodNAy52Zuid6-w0Gb2BS-1J4abGvFa8aDRjXRQd9_nxRbSIibgRmxgwFTNwBUx43e9S2Y5iZ-t269PKGXmjGh2UeLOC7EwdwL8t_J08HlLy-Glcwdx-upd4BM6rW8xYuHdL027bmv8X11axHJvo8xHHcKUY4Oe3guVAXGjjgQikOPw991CoO1q_RpGdA4X3J-Mgoc-BNNPWj5XvhjdZEkN2nbbjuYEjGbZozMtnKcMsThKVOOyGG9YMtJflsMi9YXylGhYe-AjJCVzkjAOK1bKfrI6ppinoWELRo7CYrIHmNv1nqy0-jFSFTBTzlUkmmalN3BtAKqBIPP0MC95SBap-qlzXIspR1mBdIrKgQtmHao7CCECBhY9vzc8a1OHGmDFsIBfykKD5tOTPEh2-1vM6x5Jo1Z5SmNqyjrvTehErGKs4IwVy24bLSfOUkK-ljiHOM7hgNYf6cxdkVCs3iSBOOiGsIJ8pfPqVb9OoblikVlPSHNe2r7FqdL1DpVXzspwiqoeyDrK2cAk-vQLnkVmoTqGupfWnv18zETix8dG1rBjr-zd3h7Nv9GNieeF40R5oK4B2xJ3wUnc9wF-75N50HtleqtdJn5TYCgHlGtoUITrcEE6TKh27FjvqY973NFx5fNGN4bvp1q9SlY1OyVXtZezfqb4iuLXWdTjCKothhs7nyZotCuqdGqT0T458YeX2INDWuSbuTVXj8r9AXfdB7xwGc34bMwDGmkSN_Ej605nvXAgy4boqu78sUWrUaHK19S1_KxYgj8_c-Qa6tcH_4uNkhuYVJu1uRzQZAyjGTYV4usVMN1C1O_4ZZ5cjtxPlpEHQr2NVWajMK0qTRz2nm6IyCm2Fgtk5XR3pLEWHEV8_Ow7x-tKf9ydklWlYdTD7Arlx5BxUR3Gq0qqB8nmlAOPHiV5FNTX6EDcCUWbaaJy4xvXyPUU6xsQ99oktdT895e5Pmi025yqWo3At6Z0wxLlz0eue59LsjFg6qjR6wMG6-vvfJqOZW2s7LFjc53UVpmm1tj3bFLRCpCSlQh0MJ5LloVsTkXR9cp9Qyt0pT1b4Q9imulyZ5rMTG5SHjhNLyjYB2UEg9rnSLPBoNTkI7no-OeXZa3ue7UEhcEeNk9T35mCfLmKNPexdTuxBpC8WCb_wB1a_vOWQLrW3o9dkK0SKdQtHpPOC5MD0-15w-20rmurb8eoEgulzOk-NE3_q6tTssaz9TcSuEJjS2WceUE58VaiZCmGAuVK98MnedcmZxrJoOI35Tl9DdFL4nYXVrXlDXCkhZnX7WZsBBMjtakBSDsuVoFcqZYSb_8K3UTMwTls4aboqNv3DB-jHFj6N2yXhQ4aCIpmZr9HgLoaAHxcrWMyiRkXSHOEzPjKFdm9bOl6gDFSwAM_Wgoj8wRJsw5w2kXG7ml9lPTtStnwpVTeEKFF1iCa_vzcfV05QJzCLRLCRwXOH-D_b2WYxlk8EXNILcy3Fs8EzqyGkCXy9Fug0U14A17loPEv1a490kyaIEAFOf93NZUrDTkZPBsE6GfRdir8IEZ8ZReRpGrH812cz2ROItfasPFEsXPaglpyTVdCgCwDK56wkbA9J52jzRrfjCRtSZp_LjJ6td7b2zGDxlDmZxsqLc2SKphZuaquzGxXgwpWVzR0HyxorGzGRtLZxAssGJzd2TbcX6kLlSQLMPuuDb4MhVDaxX0nX8LqqSCWAK5s6ZrzNqBb9kECGp1iLGHD0TDh45RllI1zYhGFF5ElilYNZF8Q8XY7fnp6HqYFcRmou1gc_jYIg-JWj1M4pRDzQKOOX91Ws-xJPfMeGd3y9lkWaGnmS5oQReXgDJ0phqcSdj3MSCoVVHlNcCIAjVL1oNJUQyZ_NG_pddvTeIFwg4aO6Dh6jXrAmnelvE8dbytJZevgrNq6EoI1g9UB8rc8-4JJV7_uLU4hRZzl3hAhqGqNO1G4LIweeoo7EQ==",
+        "status": null
+      },
+      {
+        "id": "msg_00ccceb8f85b6e55006ad46138da8487d1938dc70ca1e2199a",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要性の判断基準、前提事情が表示されているという条件、重大な過失がある場合の取消し制限とその例外、善意かつ無過失の第三者の保護が、いずれも保たれています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"第1号の「意思表示に対応する意思を欠く錯誤」を「自分が本当に何をしたいか、よく分かっていなかった場合」としており、表示した内容と本人の意思が対応していないことを、本人の希望が不明確なことに変えています。また、第2項で表示が必要なのは、その事情そのものではなく「その事情を法律行為の基礎としていること」ですが、この条件が明確に残っていません。さらに、相手方についての「重大な過失によって知らなかった」を「ちょっと注意すれば気づけたはずなのに気づかなかった」としており、通常の不注意まで例外に含むように読めるため、本人に重大な過失があっても取り消せる範囲を広げています。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、取り消せる場合、追加条件、本人に不注意がある場合、第三者への影響という関係が明確で、具体例によって勘違いの種類も理解しやすくなっています。回答2も平易ですが、「何かを決めたり約束したり」「こうだと思っていたこと」など抽象的な表現が多く、何を指すのかを一度でつかみにくい部分があります。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303426.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1951,
+      "input_tokens_details": {
+        "cache_write_tokens": 1948,
+        "cached_tokens": 0
+      },
+      "output_tokens": 612,
+      "output_tokens_details": {
+        "reasoning_tokens": 176
+      },
+      "total_tokens": 2563
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "H10",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T06:07:54.905726+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n来週の金曜日の夜からメールのシステムが新しいものに切り替わるんですが、切り替え後に初めてログインするときはパスワードの変更を求められるので、その際は前のパスワードと同じものは使えないのと、八文字以上で英字と数字を両方含めないと登録できないので注意してください。あと、切り替え前に送受信したメールはすべて自動で移されるわけではなくて、受信トレイにあるものだけが移されて、自分で作ったフォルダに入れているものは移されないので、必要なものは木曜日中に受信トレイに戻しておいてもらえると助かります。\n\n【回答 1】\n**メールシステム切り替えのお知らせ**\n\n来週の金曜日の夜から、メールのシステムが新しくなります。\n次の2点にご注意ください。\n\n**1. 木曜日までに：残したいメールを「受信トレイ」に戻してください**\n\n新しいシステムに自動で移されるのは、「受信トレイ」に入っているメールだけです。\nご自分で作ったフォルダに入れたメールは移されません。\n\n残しておきたいメールは、**木曜日のうちに**「受信トレイ」に戻しておいてください。\n\n**2. 切り替え後に初めてログインするとき：パスワードの変更が必要です**\n\n新しいシステムに初めてログインすると、パスワードの変更を求められます。\n新しいパスワードは、次の条件をすべて満たす必要があります。\n\n- 今までのパスワードとは違うものにする\n- 8文字以上にする\n- 英字（a〜z など）と数字（0〜9）を両方使う\n\nこの条件を満たさないと、パスワードを登録できません。\n\n---\n\n**書き直しで工夫した点**\n- 長い一文を短い文に分けました。\n- 2つの注意点に分け、ユーザーが行う順番（木曜日の作業 → 切り替え後のログイン）に並べ替えました。\n- パスワードの条件を箇条書きにして、一つずつ確認できるようにしました。\n- 「いつ・何をすればよいか」を見出しで先に示しました。\n\n【回答 2】\nもちろんです。以下のように、分かりやすく自然な表現に書き直しました：\n\n---\n\n来週の金曜日の夜から、メールのシステムが新しいものに変わります。新しいシステムで初めてログインするときには、パスワードの変更が必要になります。その際、以前使っていたパスワードは使えませんのでご注意ください。また、新しいパスワードは、8文字以上で、アルファベットと数字の両方を含むものにする必要があります。\n\nなお、システムの切り替え前に送受信したメールは、すべて自動的に新しい環境に移行されるわけではありません。受信トレイに入っているメールは移行されますが、ご自身で作成したフォルダーに保存しているメールは移行されません。そのため、残しておきたいメールがある場合は、木曜日までに受信トレイに戻しておいてくださいますようお願いいたします。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。切り替え時期、初回ログイン時のパスワード変更と各条件、受信トレイのメールだけが移されること、必要なメールを木曜日中に戻すことが保たれています。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。パスワードの条件や、すべてのメールが自動で移されるわけではないという制限も正しく伝えています。「木曜日までに」も、元の「木曜日中に」と矛盾しません。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、利用者が行う順番に沿って説明し、いつ何をする必要があるかを明確にしています。パスワードの条件も個別に確認でき、一度で理解しやすい文章です。回答2も明瞭ですが、「新しい環境に移行」「戻しておいてくださいますよう」など、やや硬い表現があります。"
+  },
+  "response": {
+    "id": "resp_020ab0c6f09042d8006ad4623b18dc87d08fcc103575ac00f7",
+    "access_programs": null,
+    "created_at": 1792303675.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_020ab0c6f09042d8006ad4623c846887d0ba06efb339118fed",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GJDSw9YooSZJ2B5nMQyEbIFvJHk1sDAibvT4_kWaMasO6_AGlN4cfJtsR7m0uUrbdrhgD1kuU8ADzcuMxK_xabE-FBDK3O_9mKLR642U5iXyUt8gXlXn7wQuyC9ew_cEbbVsHIZXp0rxH7zgmVhz4VwSmnj4kZgIzaBihVcSfSyLcU6Pk2fdVW8P9Lq3r7IlC3gUl5qEafoUX3GfwILJcp77G9ZJQSThvH93FcqLSMbF7CyCcb2gIgylq8L353CxCz4s1FLb-oTB8vbAskIYlbcG76fK9ERPTmXUJIeqNkibmSkt-tPfqoiEptz0a4SesP8vOmK7jOhEfKVe_9sBPu76k-BXL9giBhdA0hHRkgXXYrVToiaYh5AL3zFvPkGIbHv5VXJHkZy70tMnirX0ck_qDIKvF2WAZFc72LgiVNeBi1bp8tFx05pTLzoJsispDrLJra705PBGLq5ykKogmd2VxmslkXy1mPwkFyMA_Vgg22I7DUWPZ2sFy_DU-FkJOUGgjtUPLl5Og1w7JvdpTesJOu8KpGeQ0qOrepi1I5ml0bSXi9LzRM4HwJVRV95HtusPs4H-u7mRVMho-vdLEhbaHjQs10CILRBxPmcjbnvREmGF7G36miPRi8HBrDiGDsM_L33A9ffQVMW09P1937Fr0HkTGGM5JEPzeaZmo5IMbQVFJBBleXigeqrZJAF0FyaNnJ5Ybqo3zZlPITIactf0LTHKwsExMJ66X3_uAgNCqUwgjz_yl_u7pEx6SmupHclvMC42EKxrsATX94XmooAkCPSAuv2Uv3DZ4Zy0GI7eWLwsQQDVTcuK9AVGrwSS_WevOpnY_ej6slY2dXppwhkt3aZJZBxN6Rgem-M2c2dM588XNC_YuFSrtQ5MhsFCBFdm4kLxQiLQmoe3acuWkgW3Y6B0sVCvFxjt7R9fIDq_1n9r71UeFXddiiZbNiSjTeHs2e500oE8ql3IVA4HQpJFyU0UXtrUcyVPGHlb8W81ZVm67oX345SADm1-dhb9wDz-wZuUhUn9dAvV42w0Dt2isNSKmuJ75boGYq1J3j3H72eMg2tguI9mBQC45yiEd7xOWTQZ2K55W6AEfdKXMoy_RMwh5kzD0fkYFUYIl8Yu8Y0uydwa6IWBPH7JisCBhaaeBWdB8KmfwpuHfN5oTkaod_MTJddSZKQ-NtzYtpxeyTOOrs73NIcw-MvwdcfCUth8zhX-IB-xnWEFY4zO9TfpMg2wTEXsdTFWRHzvNmflPt9YdqNyBxiet9qMh7n_eC5Bp-N00Nft08DDmBXOeYfEcPV9-D4_XOPg67zaeWT017tnzxAZih2PcVdNCKBscixWWKfldxziirARteUeQZpa0bu3LELEJXhvBZQLe6xC96l2B3kDSCWW2FikHWYBphkVcpn6_-g41MXn7pSdhMJVLi_iW8PcYfvsv5NNNZ3tcItLD1JE-B9pHZEN8vvbjja4ZK3TCXZGTU98fvDHJjnpRifGI2Av9xqC6zEH-kgd7i5_OTmVgL8lEE_uJx476FgeCkwur_3fefoAusW8bsJeBiPbrmiBZALNMuLIMf593L8dBkGpcs-OBn8u__T1n1zb_JkocroE6aTHDokPqr66Fe8hlYNlIF0-7TQKee9dW89baey1Cr5Jj5gDzlNnY4wZ4r_Czh-HQnteTJas4FSqBORg8hRSCQmzZ66t82EBPrN-tbWcCzL_6B5b3efFuxqjEWvgdbp3-ulyr9BqEH2ARDsmXWzYC0jX1HHIyN-FYFF2FYfIcw4FBjcJx0kZuFAaax_u0uXwXtgeonCXxlfDYd3_2pGgkssRaKt6N4lygYdi88ExB9rPN741XAA24BlCMw2l46Ad8nZPocI4Xs0xF04eB8ZzIQdWRLL9Bibb668vZX00IIlii6odqAcTKVfL0HUnYQAtHQiVtSHFoYQ74RcysdHBWVT4lV45ZgNvgSm-aTsp2iwwbJQZYo7-e42eSslTcaNabZnAZjZoEnSP5ff3Iw8pxqZgY-W0tkwLn8dgyX-M_ybMsFo-w_vIIK8KC1XOvDOWfBVFjozn2Kp0C7JNrSwSp0_Z3XM1GOBQALnhyPtjGx_fqFUsd97iSk5QkY2dRDl1dcR-BuT35Tdlz6CRt7TMPCvd2cad7_POk0yXWKnFRav1riz76gjxDuoZa9TUsq4D8xAia9EMTPBFvQQkWDKQKiFyLJUhmiVMuyfybelQLchYV0UjtLl3Fufqune3Ut7O3x8X_F67NC3CBe1wr48VqgAAXdGxhQmSBM=",
+        "status": null
+      },
+      {
+        "id": "msg_020ab0c6f09042d8006ad4623e880487d09bf8b47a63c63e1e",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。切り替え時期、初回ログイン時のパスワード変更と各条件、受信トレイのメールだけが移されること、必要なメールを木曜日中に戻すことが保たれています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。パスワードの条件や、すべてのメールが自動で移されるわけではないという制限も正しく伝えています。「木曜日までに」も、元の「木曜日中に」と矛盾しません。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、利用者が行う順番に沿って説明し、いつ何をする必要があるかを明確にしています。パスワードの条件も個別に確認でき、一度で理解しやすい文章です。回答2も明瞭ですが、「新しい環境に移行」「戻しておいてくださいますよう」など、やや硬い表現があります。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303683.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1349,
+      "input_tokens_details": {
+        "cache_write_tokens": 1346,
+        "cached_tokens": 0
+      },
+      "output_tokens": 359,
+      "output_tokens_details": {
+        "reasoning_tokens": 62
+      },
+      "total_tokens": 1708
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

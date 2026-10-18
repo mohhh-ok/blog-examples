@@ -1,0 +1,66 @@
+{
+  "H01": {
+    "line": "Aがよみやすい",
+    "readable": "A",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind",
+    "readable_model": "sarashina"
+  },
+  "H02": {
+    "line": "Aがすんなりよめる",
+    "readable": "A",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind",
+    "readable_model": "sarashina"
+  },
+  "H03": {
+    "line": "A",
+    "readable": "A",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind",
+    "readable_model": "sarashina"
+  },
+  "H04": {
+    "line": "Bが読者に寄り添っていて読みやすいと思った",
+    "readable": "B",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind",
+    "readable_model": "sarashina"
+  },
+  "H05": {
+    "line": "Bは無駄に伸ばして理解を妨げてる。Aが良い",
+    "readable": "A",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind",
+    "readable_model": "sarashina"
+  },
+  "H06": {
+    "line": "",
+    "status": "excluded",
+    "reason": "判定なし（本人が判定する問題を選んだ）"
+  },
+  "H07": {
+    "line": "用途による。文章としてはAで十分だと思うが、チラシなどの場合はBとして構成されていた方がいいかな。",
+    "readable": "引き分け",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind",
+    "note": "「用途による。文章としてはAで十分…チラシなどの場合はB」を Claude が引き分けと読んだ"
+  },
+  "H08": {
+    "line": "",
+    "status": "excluded",
+    "reason": "判定なし（本人が判定する問題を選んだ）"
+  },
+  "H09": {
+    "line": "Bやな。",
+    "readable": "B",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind",
+    "readable_model": "opus"
+  },
+  "H10": {
+    "line": "",
+    "status": "excluded",
+    "reason": "判定なし（本人が判定する問題を選んだ）"
+  }
+}

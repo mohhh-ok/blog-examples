@@ -1,0 +1,187 @@
+{
+  "id": "H10",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T06:07:43.952708+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n来週の金曜日の夜からメールのシステムが新しいものに切り替わるんですが、切り替え後に初めてログインするときはパスワードの変更を求められるので、その際は前のパスワードと同じものは使えないのと、八文字以上で英字と数字を両方含めないと登録できないので注意してください。あと、切り替え前に送受信したメールはすべて自動で移されるわけではなくて、受信トレイにあるものだけが移されて、自分で作ったフォルダに入れているものは移されないので、必要なものは木曜日中に受信トレイに戻しておいてもらえると助かります。\n\n【回答 1】\nもちろんです。以下のように、分かりやすく自然な表現に書き直しました：\n\n---\n\n来週の金曜日の夜から、メールのシステムが新しいものに変わります。新しいシステムで初めてログインするときには、パスワードの変更が必要になります。その際、以前使っていたパスワードは使えませんのでご注意ください。また、新しいパスワードは、8文字以上で、アルファベットと数字の両方を含むものにする必要があります。\n\nなお、システムの切り替え前に送受信したメールは、すべて自動的に新しい環境に移行されるわけではありません。受信トレイに入っているメールは移行されますが、ご自身で作成したフォルダーに保存しているメールは移行されません。そのため、残しておきたいメールがある場合は、木曜日までに受信トレイに戻しておいてくださいますようお願いいたします。\n\n【回答 2】\n**メールシステム切り替えのお知らせ**\n\n来週の金曜日の夜から、メールのシステムが新しくなります。\n次の2点にご注意ください。\n\n**1. 木曜日までに：残したいメールを「受信トレイ」に戻してください**\n\n新しいシステムに自動で移されるのは、「受信トレイ」に入っているメールだけです。\nご自分で作ったフォルダに入れたメールは移されません。\n\n残しておきたいメールは、**木曜日のうちに**「受信トレイ」に戻しておいてください。\n\n**2. 切り替え後に初めてログインするとき：パスワードの変更が必要です**\n\n新しいシステムに初めてログインすると、パスワードの変更を求められます。\n新しいパスワードは、次の条件をすべて満たす必要があります。\n\n- 今までのパスワードとは違うものにする\n- 8文字以上にする\n- 英字（a〜z など）と数字（0〜9）を両方使う\n\nこの条件を満たさないと、パスワードを登録できません。\n\n---\n\n**書き直しで工夫した点**\n- 長い一文を短い文に分けました。\n- 2つの注意点に分け、ユーザーが行う順番（木曜日の作業 → 切り替え後のログイン）に並べ替えました。\n- パスワードの条件を箇条書きにして、一つずつ確認できるようにしました。\n- 「いつ・何をすればよいか」を見出しで先に示しました。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。切り替えの時期、初回ログイン時のパスワード変更と各条件、受信トレイのメールのみが移されること、木曜日までに必要なメールを戻すことが保たれています。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。メール移行の対象と対象外、木曜日中という期限、パスワード変更のタイミングと登録条件が正しく保たれています。"
+    },
+    "readability_better": "2",
+    "readability_reason": "作業する順番に説明されており、いつ何をすればよいかを把握しやすくなっています。また、パスワードの条件が一つずつ明示され、短い文と平易な言葉で説明されているため、一度読んで理解しやすい文章です。回答1も明確ですが、「移行」「新しい環境」など、やや事務的な表現が使われています。"
+  },
+  "response": {
+    "id": "resp_05ce7bca813ea2bb006ad46230310887d09408405f0dcaad7a",
+    "access_programs": null,
+    "created_at": 1792303664.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_05ce7bca813ea2bb006ad46232298087d09b30689070c1f215",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GI6Pi5uXL2EQJgbquP4KLr79KXEZnbz8KEgcodr7uT6kIM90yXdDW_0ieRi-01fMGuZqud1CORJHMzLUk7G26-CzUV0ayGaPQxnEiC1GGasIdNa9-r-LSBME7bx0pD-HAA9PslvooklaPL7wcwncsAJFMzuuZBChCnzOQWFGZVk9ZJtdbPAFT-5p6ErsB9JnQu4ZBGspy1QsT2SNzhhh-ErQzt8UhEYLh47nq_f3JMANHMRt_YOS6b4csP5MIEDxbQDtKdGT9Yyg_wgsrDCzzBAb1c0G2qUX2K-1S1cSsavzweBfJavW1v9jQS1sRuhxNhMM85rNs7uFR8YIFOufGF57QMKu4pPCEfWLcaW1ULD2EldBcJha-URA_SCaMTNsmXi7lcHftGhaltafd4PDvWQJEoVGX5mDBdDghuCxS5_uqj8XwOUnnx0kHeA5Kk0bog2KVkFR0iR_7yFv40noq3RmcsS5qHY9B0E11WY-v8hDq-XcJv1j5WLHiL7uHmdUlQoUO4PW1FWEjcPtt4zn6dtsEKZqAvGVkOmatpil4f0VnThb25YB1PKz0-mtGI9rMXdPQhqeedZwqBsMBjRGcELWWv_YuGtINDT_RR0XmoRqcC8T0uQlD7JAOrUwJ8iiMJQ1Az8fOv3rcVrj52RMgZcKemAil-Zt-b34Uy531JBUnGKja8Yte6xWVzLM4U-9Uf_Uwxw95JOp51Lwv-liS1K3QChXycRHo6TT0l4K-jmbY9u1NCJnBUenvpxG0pUE38D1RcvJaiGOXtcGhrtl7-5cjlakRzZpfU6MgaOl_MEDRGbR7CXEO52LWOSealjjd1SAkUyS2FS4bjNFgevieJal0IqUTSPnZXdndLLoO6PoQH6F6yzDCeUyidQfcVBs-o71eBAP1v2jBHU6GUgE_8EupxRCl1rumX2_kzrLFhrhSibeUncgYmzz89iwUFdlvbPqoEOCTLVOiaOQRkWpvx6AXRRigquNokuswjfqskW_gJvOomPVwHoePjWuqBkmr0gAfVRcFFdxy0PPojQwhEUglHtf4UAviuYNh4-JvxBgj0FfTU9eY6dvZrR27W07Wple-FWsJNHL-kY_0TLzVMPiA-wovJgBW2gYN55bwECzFjsRUGYlOH_Z1RdsJer8E7Z_bZH-ciqz7eqy2RDShcwm0gEJ8p2bvYcnM5DzsoZPso51OTg3U2qFZbe-64cDRd2AY3urfwYKQNGELKtelbSV7aGA_05b9iA182tthpEGdawfHmRnV-GvjLJU4ho43Z7ZoymdDBxj4KORSkTw1G7jx_HgSq0E7Qjr2XZKmTxYwyW96M2dbkiKjTxjTKZ3V4f6Ee2GXJzxMyMDY_nm62n75pVuqRXmUDJOWst4UU-yOmS4AmPgq3evh2_cJO6KGuSHfaXaGud9GlOMkQuAumx53Zt8qBt0J34EI13fPvXXGalccDJaCPU_XIa8BHFjciQbdtgfKxTrd7YA_DYiD1LgiiXn9G5D2fEQfMgw2Eh0opU5xXvOIOLkjOb16GhmcQssvyS7JP5222CrZBCPHcEsvn7ZH8xWh-NwrXGedHRZ6WfwNV8IpGrsnFcZgLBfggTqPnzKA5Peh2GteJaOOCs2qndMY9SrScujDYtl1Ot_qRtErarAvcTe0ZO7XvfCDoqiyWS6WZ7oMsv6rKwVfgOqwnkoMeG29A3GeG0kF1mB3YTuG8AQTNJOhtLI3QUAuL1rYtQOM33BVlR1ETNXaNJTVesZ_BjUQMyvcBWlPgD1oWwXmB8y_0FE-RgpTq9VEPemzfz4eaxSwgfonQUWzik-11TmC2h_VB-J6kDEisl9yfPlnelxFAXGZ1dhI_5M0flCyLuMNnlMwl1g2xk3har4-wLBSvcFi2n0cvCGHkJb6G644LDe7eXmeU46F-CNnpKf_sEePKJUA1XpqdTt8Kw3SF_vAwPncYjU-OtEuX2VrPqbeOziOt86cRUBAsfbeWCGj0USnkDau6cegohKKDxnliUNmbKghjKHd2usdPIzxd53ebV2eVK_QTQjMTnzijdTss0STn1GFLSWarJYAndTAVRpqzk3RuEiI8AWJ6iHOte5PnTbVPgp8lA5evPxwM73XIodCaRH6vbugDlZArAdXrPBCsLrB0sJC7VL56bmlAy-0GjthSdTppwIVPooilEf0VbFXWkZlcR-9C_WW83Orf5DYZlQKde3NkhHauJxlxz8eGZYYSvyRaAK0urhQi_vTPK3EVtyWWJ2HhiY5hMG_vsAFUNOoW1JvDPvuc3JS_Vbznc5IbB0oQ38qGvsAQ8PCvpd7PFNfE9Zz2KxOlZK-yL_7MV1IBEgzN_4quETf6wQZMQLb9mkEj9PFEepacg2wLHAFFsI2hN0RNYrpcZB4S86UnHacv_P6RpwgDCuN-dYaOImuwBCTj212JCDy-P1U7K_7SnMsX9NTcgPDSaCq5rMo5lpmcyzzEOcnbGn3tTtRQsV2TdTlDqK_Mr_Lqa0p_xiP3iicn2i-1xjOkkLg0nYpqugLokjEVgyc_zdKSTEJJt1etT4QECC90uTvQ90lFiQzGC6Sd_IcSMNtVVIhbpoK0VmaL5f2mshO5oFsbGxrPbut4eidk4wtKsamm1ni8Rzb5wD2ZsUXMAIPkXB94O5u2w_7Igp50LE9N8AmuI5QwLEDobXxmgwUyANk6hxjWuw9iu3tvG6UYem4ClrY7np16O77vc_HV9cwPDcJn-gXR10wIst_bLSOROhVcCpScMlROHqL_H77RqYE11Ywb84sjVpdBGiyAFsqUBHAbsrqR2dCfzs89vK4BTdP1OLnA9MXDLMmyC9wGYfKTMvXDckVnD_U7cQksVkGseDe6qGnpkGrGvaXm1PBlJiTeTB8-pdu0nbIqw43JnXAJ_oX16thIj5rEpFA5UI65z16nHOHnFQLMsOYIQ_OGJZdsbAeJCBGTnus39Lzfg-ArOX1agOadzpY0x6RlWObc02UWnmDKbFR8bOhBMsO82FBRrJjRYtFjykpuWO2ObUrT9y5MsjRudMwziEFwop3gBoec3eP0mUDfi1htOVt3RpR-3-PEf6ShOXiaSMdTflPszxEzk6PJf7ZBoB-3FS-Wgv_7YwO-gztBwYeBeUKVmcLzC",
+        "status": null
+      },
+      {
+        "id": "msg_05ce7bca813ea2bb006ad4623530bc87d0b52a70dd0fda9de6",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。切り替えの時期、初回ログイン時のパスワード変更と各条件、受信トレイのメールのみが移されること、木曜日までに必要なメールを戻すことが保たれています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。メール移行の対象と対象外、木曜日中という期限、パスワード変更のタイミングと登録条件が正しく保たれています。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"作業する順番に説明されており、いつ何をすればよいかを把握しやすくなっています。また、パスワードの条件が一つずつ明示され、短い文と平易な言葉で説明されているため、一度読んで理解しやすい文章です。回答1も明確ですが、「移行」「新しい環境」など、やや事務的な表現が使われています。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303674.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1349,
+      "input_tokens_details": {
+        "cache_write_tokens": 1346,
+        "cached_tokens": 0
+      },
+      "output_tokens": 417,
+      "output_tokens_details": {
+        "reasoning_tokens": 124
+      },
+      "total_tokens": 1766
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

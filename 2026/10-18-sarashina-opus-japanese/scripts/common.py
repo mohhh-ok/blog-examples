@@ -1,8 +1,11 @@
 import json
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PROBLEMS = ROOT / "data" / "problems.jsonl"
+# 書き直しの追加 10 問（H01〜H10）は PROBLEMS_FILE=data/problems_h.jsonl で回す
+PROBLEMS = Path(os.environ.get("PROBLEMS_FILE", ROOT / "data" / "problems.jsonl"))
+PROBLEMS_H = ROOT / "data" / "problems_h.jsonl"
 OUTPUT = ROOT / "output"
 RAW = OUTPUT / "raw"
 JUDGE = OUTPUT / "judge"
@@ -14,8 +17,8 @@ OPUS_EFFORT = "low"
 JUDGE_MODEL = "gpt-6.1-sol"
 
 
-def load_problems():
-    return [json.loads(line) for line in PROBLEMS.read_text().splitlines()]
+def load_problems(path=None):
+    return [json.loads(line) for line in (path or PROBLEMS).read_text().splitlines()]
 
 
 def answer_text(model_key, pid):

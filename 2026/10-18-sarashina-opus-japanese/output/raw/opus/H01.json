@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "H01",
+  "requested_at": "2026-10-18T06:00:52.324679+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n意思表示は、次に掲げる錯誤に基づくものであって、その錯誤が法律行為の目的及び取引上の社会通念に照らして重要なものであるときは、取り消すことができる。\n一　意思表示に対応する意思を欠く錯誤\n二　表意者が法律行為の基礎とした事情についてのその認識が真実に反する錯誤\n２　前項第二号の規定による意思表示の取消しは、その事情が法律行為の基礎とされていることが表示されていたときに限り、することができる。\n３　錯誤が表意者の重大な過失によるものであった場合には、次に掲げる場合を除き、第一項の規定による意思表示の取消しをすることができない。\n一　相手方が表意者に錯誤があることを知り、又は重大な過失によって知らなかったとき。\n二　相手方が表意者と同一の錯誤に陥っていたとき。\n４　第一項の規定による意思表示の取消しは、善意でかつ過失がない第三者に対抗することができない。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg9C9pcpWufVCQxBA1b9t",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "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"
+      },
+      {
+        "type": "text",
+        "text": "# 勘違いで契約などをしてしまったときのルール\n\n## 1. 勘違いによる取り消し\n\n**勘違い**をして、契約の申し込みや承諾などの意思を相手に伝えてしまった場合、次の2つのどちらかに当てはまれば、後から**取り消す**ことができます。\n\n**① 言ったことと、本当に思っていたことが違う勘違い**\n(例:「1万円」と書くつもりで「10万円」と書いてしまった)\n\n**② 判断の前提にしていた事情を、事実と違って思い込んでいた勘違い**\n(例:「この土地の近くに駅ができる」と思い込んで土地を買ったが、そんな計画はなかった)\n\nただし、取り消せるのは、その勘違いが**重要なもの**である場合に限られます。重要かどうかは、その契約などの目的や、世間一般の取引の常識から見て判断します。\n\n## 2. ②の勘違いについての追加条件\n\n②の勘違い(前提にしていた事情の思い込み)で取り消せるのは、**「この事情を前提にしています」ということが相手に示されていた場合だけ**です。\n\n## 3. 本人にひどい不注意があった場合\n\n勘違いの原因が、本人の**ひどい不注意**(少し注意すれば簡単に防げたようなミス)だった場合は、原則として取り消すことができません。\n\nただし、次のどちらかに当てはまる場合は、例外として取り消すことができます。\n\n- 相手が、本人の勘違いに**気づいていた**場合、または相手自身のひどい不注意のせいで**気づかなかった**場合\n- 相手も、本人と**同じ勘違い**をしていた場合\n\n## 4. 関係のない第三者がいる場合\n\n勘違いを理由に取り消しても、そのことを、次の両方に当てはまる第三者に対しては主張できません。\n\n- その勘違いの事情を**知らなかった**\n- 知らなかったことについて**不注意もなかった**\n\n(例:勘違いで売った品物が、事情を知らない別の人にすでに転売されていた場合、その人から品物を取り戻すことはできません)\n\n---\n\n※ 例は分かりやすくするために補ったものです。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 392,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1071,
+      "output_tokens_details": {
+        "thinking_tokens": 328
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}

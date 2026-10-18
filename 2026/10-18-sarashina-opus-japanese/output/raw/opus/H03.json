@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "H03",
+  "requested_at": "2026-10-18T06:01:22.055360+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n販売業者若しくは役務提供事業者が営業所等以外の場所において商品若しくは特定権利若しくは役務につき売買契約若しくは役務提供契約の申込みを受けた場合若しくは販売業者若しくは役務提供事業者が営業所等において特定顧客から商品若しくは特定権利若しくは役務につき売買契約若しくは役務提供契約の申込みを受けた場合におけるその申込みをした者又は販売業者若しくは役務提供事業者が営業所等以外の場所において商品若しくは特定権利若しくは役務につき売買契約若しくは役務提供契約を締結した場合（営業所等において申込みを受け、営業所等以外の場所において売買契約又は役務提供契約を締結した場合を除く。）若しくは販売業者若しくは役務提供事業者が営業所等において特定顧客と商品若しくは特定権利若しくは役務につき売買契約若しくは役務提供契約を締結した場合におけるその購入者若しくは役務の提供を受ける者（以下この条から第九条の三までにおいて「申込者等」という。）は、書面又は電磁的記録（電子的方式、磁気的方式その他人の知覚によつては認識することができない方式で作られる記録であつて、電子計算機による情報処理の用に供されるものをいう。以下同じ。）によりその売買契約若しくは役務提供契約の申込みの撤回又はその売買契約若しくは役務提供契約の解除（以下この条において「申込みの撤回等」という。）を行うことができる。ただし、申込者等が第五条第一項又は第二項の書面を受領した日（その日前に第四条第一項の書面を受領した場合にあつては、その書面を受領した日）から起算して八日を経過した場合（申込者等が、販売業者若しくは役務提供事業者が第六条第一項の規定に違反して申込みの撤回等に関する事項につき不実のことを告げる行為をしたことにより当該告げられた内容が事実であるとの誤認をし、又は販売業者若しくは役務提供事業者が同条第三項の規定に違反して威迫したことにより困惑し、これらによつて当該期間を経過するまでに申込みの撤回等を行わなかつた場合には、当該申込者等が、当該販売業者又は当該役務提供事業者が主務省令で定めるところにより当該売買契約又は当該役務提供契約の申込みの撤回等を行うことができる旨を記載して交付した書面を受領した日から起算して八日を経過した場合）においては、この限りでない。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg9CBzXCKrvfhdjg6EbKM",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSqQsKEAgSGAI4AUIIdGhpbmtpbmcSDGcgBdbFT20KFfzjvxoMrAR3W8da/6iPvbR4IjDd2/Cd9RkQYG9pjBxU0+GOAM80BWLvgBzjHxpzSGGx74UxxzcU1Uf9b7FsdhwinvQqxgrOq9vbOgwsVvsuplliyNorpAC5tYHx8gwGyeC3dDjlJt+BPwldDveUnezrD1KdIc+hUs9wHebunklSyzmnwP7J85Qo32vACt+1hJ4BVOKNtWZV6tNUiwT+49w+g5OkplqfaFvASjR9mLaJJSrYTBSSU7auXBqwsDoOFvs5bn9Hv6NkquI3bTAFvya2ucfPfZ0PNv11rEkHeVt21Mw4/8A4WAUSQq2MzhaOAVmRA+2fN6nRUUI1lXX0ADuu2gLcp4CdfptP+XWI1XH3Rn3/rleAPqAONHhNTzExMmyIz3IMmm9rdHCjG1K1LpdJNuS2k0sjHY3KfIj+SMUArrqLv1fva1lgJ4N01CtsJo8wI8UB8PgwozYEiwKVx0H11Muzh+S32sJ/b/4+fP0E0kxCDZt+EP0QzZXmtopvgoSKe+hx/vBR+kDnj++XY6CCcaeycrv5SAzzCi9uZb1R8JmymiIEqHL87eWCX9cT3P91ex0C5jQ3dPC+rBBYD040Xgf6mKqZ7dROojZ3v+2BWp5FAo8SazYNt1g68gS2sk3p1oK/N5kNOLR1L0Ok9lTW+wHph4ralyQpy+Lxg0NCR/xdPlIWpf8IVe2/0e2eKLCVptfaS6MriVjx6WMFqZPflSg3U0QOSk2VQ9Rx/EYBVcXUjx7/Fwdhfebeg7tPIs83gdFaH/5Gqx4vnK3CW+yJ1/23X94q0WKFzIIuNBA5V66SgL4kdWqsbDFsO14AOX9jZNal4lHleJYxK5lmDkRKijCfS4gmjiN3rgJvgvbQah9uCo/HbOu/GEKf/Wsdg5zQ8o/jbO5hTkomM4CUKxKGeoahNzfxEGsh3UACXpkleBhZxsN4n2WBKZjSXXH7CewqtLa5kpwA4NIUx2k0iibet98Yz4kIlBRxJ039gGBa69JGOfYAy6LUkg7xgccB4oTVR2DVVg6lJ64nsyI49A0gBgBjpnRI7SsrNY/N871zjCYoHvCJ48L9k4yHEZcUxQo6DQc92/cUnixZsWOzQoXdjuhNaay19W1qwXczv4f3tNYoCnokI2uk0ZRFtmGK+7aGlf1a23wwCWxuUwzx4P9rkANYMEavksDaCWCt/mvLZN3e0dT0Wz0XvsCGBSEmVcPksj0nqkN0lmfhwKvJnIqCa1kcBvHRuzMsxQS7ZJuCgLtj63O2g6ZQ/mL73G9t+fwsvTUkOF6tG6jwqjHF2vZKXrDYuj8odnspXw+QzxPiCCHo/yQ2emaSX42GzJBt0UQznYhvUmkHefFlxVzWOtjIoraXAXt2IK9j2O2DZL7NtQyy/KWba3VKfvuCITxic3GoB8bsdJwHmXRu61tT5O3EZTyqgmVbyQ7FTDFgTibsRc6UoJXMgeMO7EtgJoFtfgMegNmBN6TtRsBDoqrphjLMB6FRDOMzv91Spyq3iC5uJoRhH21ZRlQgQtzfpY46lyhrUm4dzUrcTmfJ/9x8v6IjI/HTI2x2mL6Qxvt33oItc4Auhl6vMbr7G3YRDhY+CL5+6GK/C8//XR/SGRrNItACPrD7AxoByvf1zP7dhkN6HebEkMq1/esQuZCNZyqUygIDXpmGDCHDSpOty+6Mf3nRzifu4dzJ2UBiyo+/3GKQqCR3itcBaCU+pvY+ebsP9LsZtVXebfK1lS6G9dpfbkue+gHVednfwH+p81EBUgdgSyT+GrZXh4PPNwNSOe/lB5QgqWRGgN4n9NVFf2Ew9Dy8UitB0ONJrLed5/uOa9St14XHip1Dk8QoxPWVGcThQjb4XITbP8c1rPaGGAewCl6cGQBjsKLA4ldM/DQYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "# 訪問販売などでの契約の取り消し（クーリング・オフ）\n\n## 1. 取り消しができる人\n\n販売業者やサービス業者（以下「業者」）と、次のどちらかの形で取引をした人は、申し込みや契約を取り消すことができます。対象となる取引は、**商品の購入**、**特定の権利の購入**、**サービスの契約**です。\n\n**① 業者の店舗や事務所など（以下「店舗等」）の外で、申し込みや契約をした人**\n（例：自宅への訪問販売）\n\n**② 店舗等の中であっても、「特定顧客」として申し込みや契約をした人**\n（例：路上で呼び止められて店舗等に連れて行かれた人）\n\n具体的には、次の人が対象です。\n\n- 上の①や②の形で**申し込みをした人**\n- 上の①や②の形で**契約を結んだ人**（購入者やサービスを受ける人）\n\nただし、①のうち「店舗等で申し込みをして、契約だけを店舗等の外で結んだ」場合は、契約を結んだことを理由とする対象からは外れます。\n\n以下、これらの人をまとめて「申込者等」と呼びます。\n\n## 2. 取り消しの方法\n\n申込者等は、次のどちらかの方法で、**申し込みの撤回**または**契約の解除**（以下まとめて「取り消し」）ができます。\n\n- **書面**で行う\n- **電子データ**で行う（例：メールなど。コンピューターで処理できる形の記録を指します）\n\n## 3. 取り消しができる期間\n\n取り消しができるのは、原則として次の書面を受け取った日を1日目として数えて、**8日以内**です。\n\n- 契約内容を記した書面（法第5条の書面）\n- ただし、それより前に申し込み内容を記した書面（法第4条の書面）を受け取っていた場合は、その書面を受け取った日から数えます\n\n8日を過ぎると、原則として取り消しはできません。\n\n## 4. 例外：期間が過ぎても取り消しができる場合\n\n次のような理由で、申込者等が8日以内に取り消しをしなかった場合は、期間が過ぎていても取り消しができます。\n\n- 業者が取り消しについて**うそを言い**、申込者等がそれを本当だと信じてしまった場合\n  （例：「この契約は取り消せません」と言われた）\n- 業者に**脅されて困ってしまった**場合\n\nこの場合は、業者が「取り消しができます」と書いた書面をあらためて渡し、申込者等がそれを受け取った日を1日目として、**8日以内**であれば取り消しができます。この書面は、国が定めるルールに従って作られたものである必要があります。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 924,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1206,
+      "output_tokens_details": {
+        "thinking_tokens": 295
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}

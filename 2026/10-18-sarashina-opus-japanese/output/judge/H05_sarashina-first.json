@@ -1,0 +1,187 @@
+{
+  "id": "H05",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T06:05:08.131555+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n国民の選挙権又はその行使を制限することは原則として許されず，国民の選挙権又はその行使を制限するためには，そのような制限をすることがやむを得ないと認められる事由がなければならないというべきである。そして，そのような制限をすることなしには選挙の公正を確保しつつ選挙権の行使を認めることが事実上不能ないし著しく困難であると認められる場合でない限り，上記のやむを得ない事由があるとはいえず，このような事由なしに国民の選挙権の行使を制限することは，憲法１５条１項及び３項，４３条１項並びに４４条ただし書に違反するといわざるを得ない。\n\n【回答 1】\nもちろんです。以下のように、専門的な用語や構造をやさしくし、一度読んだだけで意味が分かるように書き直しました：\n\n---\n\n国民が選挙で投票する権利は、基本的に制限されるべきではありません。この権利を制限したり、投票しにくくしたりするには、そうせざるを得ないほどのしっかりとした理由が必要です。  \nさらに、その「やむを得ない理由」とは、たとえば「制限しなければ、公平な選挙がまったくできない、あるいは極めて困難になる」といった、とても厳しい状況に限られます。  \nそのような特別な事情がないのに投票の権利を制限するのは、憲法で保障されている国民の権利に反することになります。\n\n【回答 2】\n# 書き直した文章\n\n国民が選挙で投票する権利(選挙権)は、とても大切なものです。そのため、選挙権そのものを制限することも、実際に投票させないなど権利を使わせないことも、原則として許されません。\n\n例外的に制限できるのは、「そうするしかない」と認められるだけの理由(やむを得ない理由)がある場合だけです。\n\nでは、どのような場合に「やむを得ない理由」があるといえるのでしょうか。それは、**制限をしなければ、選挙の公正さを守りながら国民に投票させることが、事実上できない、またはきわめて難しい場合**に限られます。そうでない場合は、「やむを得ない理由」があるとはいえません。\n\nそして、やむを得ない理由がないのに国民の投票を制限することは、憲法の次の規定に違反します。\n\n- 第15条第1項・第3項\n- 第43条第1項\n- 第44条ただし書\n\n---\n\n### 参考:憲法の各規定の内容(補足)\n\n- **第15条第1項**:公務員を選んだり辞めさせたりすることは、国民が持つ当然の権利である。\n- **第15条第3項**:公務員の選挙では、成年者による普通選挙(財産や身分などで投票資格を差別しない選挙)が保障される。\n- **第43条第1項**:衆議院と参議院は、全国民を代表する選挙で選ばれた議員で構成される。\n- **第44条ただし書**:国会議員や選挙人の資格を、人種・信条・性別・社会的身分・家柄・教育・財産・収入によって差別してはならない。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文が「やむを得ない事由」の必要条件としているのは、「制限なしでは、選挙の公正を確保しながら選挙権の行使を認めることが事実上不可能か、著しく困難であること」です。回答ではこれを「たとえば」と例示にしており、それ以外の理由でも制限が認められるように読めます。また、「公平な選挙がまったくできない」として、「公正を確保しつつ選挙権の行使を認める」という条件を正確に伝えていません。さらに、違反する憲法の具体的な条項（15条1項・3項、43条1項、44条ただし書）が省かれています。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。選挙権そのものとその行使の制限を区別し、原則と例外、やむを得ない理由が認められるための必要条件、該当する憲法の条項を保っています。補足説明も原文の意味と矛盾しません。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、権利そのものの制限と実際の投票の制限を具体的に説明し、原則、例外、例外の条件、違反する規定という順に話を進めています。問いかけを挟んで条件を説明しているため、専門知識がなくても論理を追いやすい文章です。回答1も平易ですが、「しっかりとした理由」「とても厳しい状況」など抽象的な表現があり、何を指すかがやや曖昧です。"
+  },
+  "response": {
+    "id": "resp_0823c55690145b48006ad461944be087d1bee69c0728bf5bb1",
+    "access_programs": null,
+    "created_at": 1792303508.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0823c55690145b48006ad461954d0887d1b4e35da4a27f002b",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1GGhxPLgo2YF_Sk05SMWFp-Jk3dMhHo2NRPSVh1rp6g-u_g4ApRq0rMq_cdhdO446cxTTZ7G6-fBGeIy6xKY294TbqWBsLJn-qD6Y4WuVbLHxHDNzLqM8RfZIDaR5dSaB8YW17uIwPVWEbse8ERS0wqr-LomxB6_0uLAitF3RNfwIYUcxhXpNnZiFjmW_RFqauX8GOQs4KBlHZMOHTYjet5jA2A_uRCxPvlxKzprO79oljhHgmQENhY11XIbHz4VkNY2ti7m12a2JF6t-d1_jbVrTi-2GwC6vHKXyU5Mh7zxfy1U32ZkpOAesuynOdwHitCobFXXfLOoBGwgeg5IrX5Gnd35zmX3e2lVwqpzNNVN9Iswn7ociKgC0gSMfSBpp-UQZSV6G-d3-tzLbm4YAk4bRE59bqtye6ECDBUmcImjCvlj4OMyz8T7wDcbUUQbFfcWAY0M5zSXGBj2mDho1VgT9SyBVqRDB0vFrGnaMSiKEYRRfpvxSenTtonbTdKleJRvjBY4fl0_yl2BOxKLsj88A2yUikdauG7fmSBZXi2907FLdbVtHv92zDpSbXL2qAo8thTCHMyaE8Ar8_IX9VzDW7ZQQB-Vwmyr4LRSFJlJHqrbBbL29uzRRU-5PvqoBmTq5o-yKtoKr-gd51lGPU4BPKvH2mzz_F-PXUh-sVNUkmQxHBW68nzFG9w8Vm4lFwKVUpM_YfHuFrVU5wl_HyzvzYP4wKHu0HFsKL3l1RSHD4GFzPBNlJfZ4EsIvP-HbuStKRZRz-YoJWKrOapENs5xHlbKqP1sz4PXWw7Ymtf7RVcgcEY4B2G0oGKB5UJJFqMlvoAPe0nsrlYCi5qED85Lu5MiFcO3vfHCXm6uhinS5blInXiPoKLDsxGha2VhYDiyfQdBKWcuvKyQyHD0qCJYyj9j134WdOlIbUhmSNnb5YGXiu4korf4R0xk4fkCtjbhCa-GAfy8H0r3pEASQY9V5GlAFsD6iPOLw8yDqUqoL2OgJMi9zv5DGzW_fBzP3ak9nlxEMAH3U0dJNQJrep2sh5YwTsliYDA2L2v-PAnZnrbqXC-zuMO4z0_JjRMWGlIKHzKD_lebEQl9MI0dHLheQPh7FTZO2oxYuN7ogvzTvDNy1enZSQQLh6inM3yhVmgAHm4kYlXnyDIXDuulFBr9uqOjnVMY0zfbiZGsex9LB8D4P_OVKZiC6oVUAvn1VFtdux9RtB2T0n2Kc3cHQPVyBmfg6oSS03GtPMhRzQrIVed39h1W6LF-ga4uKFBVtKPt1nlfAyK_0pWugvKkHQOo0yTSGJBOUQjTMAuVz8HxLTA5mQ41DPnZbi3PoMsST0x3BnUlBZwembRad2fbrugqV59jBs_bA9gMOUH9wMJyBwyrvXa1gJUCmlxLYO0UIG7dE4kKELV1QRVLqmzFt0J4-0Qgh3s7QTSKldFd-nBcnuLT3SjTqaMYI8k9TpFyydmTj3UWxZlX04314nN5FJMHoFbluPLbDnk_vItWs1Pnlrer5RdyeKzt9PAXTl_oVzfvZUoo0c1MhW-RPrSjsgIiDSFZhS-qJzmauSJ_ZD2HdpgQkPIu_BlOfeNeVu5U2Zomt28zRAul7yRr9RCE0Odb4x0C_Xsg19yhUtNvtVSuZX1qLH_jyxJ6Eo5oiTUGR4gJtkqRzF7kq95neQTCn8lnoTnsqG6oiBujSS63yP5_tMnAlJWRd3R_ULK3AzSNPCbPxg7p8ssDH6uaPhbymjcJCBAtfwoYxwRmAVz2tVc8EiYbWlyZ-nU69Nj9Czt6CHRBKtEzQFSrZdvLwJM9-l409KW2QmjwRYPkuzAhv8cGYxrHK5w7fmY1i5QeXC_EqdWo9tfE7h6gi4eWfxQbgnmS6p5YDkJgHnzWLAz7i8WOrGoK7ihqdAAZ1kcEizJcZNfFmk_I54bs3eX-wkRez_Cjk-DBkvZE2PCPovIbt1oQcHASW3cle4W0Z0J3h8lWbuJDFXWgbx8FSJN9v5dMa_xxHWXMOYYZsQA-wU6w76JeqqYieBHECAZs0Twcw-uQrXd5EpbB7Y9xQljeYlwr7Nb-D3zQWHddarO_vO6DHq1eR5gEefgRkN1cA77T6mjr8ionH-SgPRfZoSQxRKN74bC9pe7fwWvx96DPi5SXoHcrLAvGOgviea_DfYHl9h-ZILl4M0_5hEJ5M5pZ5mvYIVUT0-IuLUbD5t9kyXr5J4b0TEQKXYW6hV4qxQlcwOzMaqxdDLqzKo7NY6H9mrXmAvWxUPNt8LcsTcemxthZaNRBf0DzCvQ_Agw0-L6m4fIE1rzhiNGRIAx9po2TUhfFFvJL8iMZx_FDLW7iGyL1YaI6CHhv1h71mQqRxufuia-hCju87ExkWvZJ97xQjTvm-soaAH7_pkMwM9BoFsffL2dZK24-C0vQPD31Q-W-HUIrjOMl",
+        "status": null
+      },
+      {
+        "id": "msg_0823c55690145b48006ad461979cbc87d18eaa3b5dd6f06a73",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文が「やむを得ない事由」の必要条件としているのは、「制限なしでは、選挙の公正を確保しながら選挙権の行使を認めることが事実上不可能か、著しく困難であること」です。回答ではこれを「たとえば」と例示にしており、それ以外の理由でも制限が認められるように読めます。また、「公平な選挙がまったくできない」として、「公正を確保しつつ選挙権の行使を認める」という条件を正確に伝えていません。さらに、違反する憲法の具体的な条項（15条1項・3項、43条1項、44条ただし書）が省かれています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。選挙権そのものとその行使の制限を区別し、原則と例外、やむを得ない理由が認められるための必要条件、該当する憲法の条項を保っています。補足説明も原文の意味と矛盾しません。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、権利そのものの制限と実際の投票の制限を具体的に説明し、原則、例外、例外の条件、違反する規定という順に話を進めています。問いかけを挟んで条件を説明しているため、専門知識がなくても論理を追いやすい文章です。回答1も平易ですが、「しっかりとした理由」「とても厳しい状況」など抽象的な表現があり、何を指すかがやや曖昧です。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792303521.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1454,
+      "input_tokens_details": {
+        "cache_write_tokens": 1451,
+        "cached_tokens": 0
+      },
+      "output_tokens": 551,
+      "output_tokens_details": {
+        "reasoning_tokens": 78
+      },
+      "total_tokens": 2005
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

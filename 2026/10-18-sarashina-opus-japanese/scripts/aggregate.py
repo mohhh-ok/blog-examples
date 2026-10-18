@@ -5,13 +5,17 @@
   両方とも意味が変わっていれば引き分け
 - それ以外: GPT の winner をそのまま使う
 - 左右を入れ替えた 2 回の判定で勝者が同じならその勝ち、食い違えば引き分け
+
+本人の盲検判定（読みやすさのみ）は 2 組ある。R01〜R10 の判定（human_judgement.json）は、シートの整形で
+補足の位置づけが読み取れなかったため無効にした。人が読む用に別に作った H01〜H10（problems_h.jsonl）で判定し直し、
+その結果（human_judgement_h.json）を H の節に載せる。H は 40 問の集計には入れない。
 """
 import json
 import re
 from collections import Counter, defaultdict
 from datetime import datetime
 
-from common import JUDGE, OUTPUT, RAW, answer_text, load_problems
+from common import JUDGE, OUTPUT, PROBLEMS_H, RAW, answer_text, load_problems
 
 CATEGORIES = ["書き直し", "敬語", "自由作文", "要約", "ニュアンス", "漢字の読み"]
 
@@ -56,21 +60,28 @@ def max_requests_per_minute(starts):
 NAMES = {"sarashina": "Sarashina3 mini", "opus": "Claude Opus 5.5", "tie": "差なし"}
 
 
-def human_section(human, key):
+def final_winner(pid):
+    runs = [json.loads((JUDGE / f"{pid}_{first}-first.json").read_text()) for first in ("sarashina", "opus")]
+    winners = [run_winner(r) for r in runs]
+    return runs, winners, winners[0] if winners[0] == winners[1] else "tie"
+
+
+def human_section(human, key, heading, notes):
     """本人の読みやすさの判定（盲検シート）を、GPT の読みやすさ・意味の判定と並べる。"""
     rows = []
     for pid, h in human.items():
         if h["status"] == "excluded":
             continue
-        picked = key[pid][h["readable"]]
-        runs = [json.loads((JUDGE / f"{pid}_{first}-first.json").read_text()) for first in ("sarashina", "opus")]
+        # 「引き分け」と読んだ判定は A/B のどちらでもない
+        picked = key[pid].get(h["readable"], "tie")
+        runs, _, final = final_winner(pid)
         gpt_read = [{"1": r["answer1_model"], "2": r["answer2_model"], "tie": "tie"}[r["judgement"]["readability_better"]]
                     for r in runs]
         flags = [meaning_flags(r) for r in runs]
         rows.append({"id": pid, "status": h["status"], "line": h["line"], "human_readable": picked,
                      "gpt_readable": gpt_read, "gpt_agrees": [g == picked for g in gpt_read],
                      "gpt_meaning_preserved": {m: [f[m] for f in flags] for m in ("sarashina", "opus")},
-                     "gpt_final": run_winner(runs[0]) if run_winner(runs[0]) == run_winner(runs[1]) else "tie"})
+                     "gpt_final": final})
     blind = [r for r in rows if r["status"] == "blind"]
     count = Counter(r["human_readable"] for r in blind)
     agree_runs = sum(sum(r["gpt_agrees"]) for r in blind)
@@ -79,15 +90,15 @@ def human_section(human, key):
                "gpt_readability_agree_runs": agree_runs, "gpt_readability_agree_both_runs": agree_both, "rows": rows}
 
     yn = lambda b: "○" if b else "×"
-    md = ["", "## 本人の判定（書き直し、読みやすさのみ）", "",
-          "本人は意味の正しさは判定できないと明言したため、本人の判定は読みやすさだけ。意味は GPT の判定を使う。",
-          "R06〜R08 は判定なし（対象外）。R01 は盲検でないため参考として別に載せる。", "",
+    md = ["", heading, "", *notes, "",
           f"盲検 {len(blind)} 問（{'・'.join(r['id'] for r in blind)}）で本人が読みやすいとしたモデル:", "",
-          f"- Sarashina3 mini: {count['sarashina']}", f"- Claude Opus 5.5: {count['opus']}", "",
-          f"GPT の読みやすさの判定（各問 2 回、計 {2 * len(blind)} 回）が本人と一致した回数: {agree_runs}。"
-          f"2 回とも一致した問題: {agree_both} / {len(blind)}", "",
-          "| id | 盲検 | 本人の判定（逐語） | 本人が読みやすいとしたモデル | GPT 読みやすさ 判定1 / 判定2 | 本人と一致 | GPT 意味保持 Sarashina | GPT 意味保持 Opus | GPT の最終結果 |",
-          "|---|---|---|---|---|---|---|---|---|"]
+          f"- Sarashina3 mini: {count['sarashina']}", f"- Claude Opus 5.5: {count['opus']}"]
+    if count["tie"]:
+        md.append(f"- 差なし: {count['tie']}")
+    md += ["", f"GPT の読みやすさの判定（各問 2 回、計 {2 * len(blind)} 回）が本人と一致した回数: {agree_runs}。"
+           f"2 回とも一致した問題: {agree_both} / {len(blind)}", "",
+           "| id | 盲検 | 本人の判定（逐語） | 本人が読みやすいとしたモデル | GPT 読みやすさ 判定1 / 判定2 | 本人と一致 | GPT 意味保持 Sarashina | GPT 意味保持 Opus | GPT の最終結果 |",
+           "|---|---|---|---|---|---|---|---|---|"]
     for r in sorted(rows, key=lambda r: (r["status"] != "blind", r["id"])):
         md.append(f"| {r['id']} | {'○' if r['status'] == 'blind' else '×（参考）'} | {r['line']} | {NAMES[r['human_readable']]} | "
                   f"{NAMES[r['gpt_readable'][0]]} / {NAMES[r['gpt_readable'][1]]} | {' / '.join(yn(a) for a in r['gpt_agrees'])} | "
@@ -95,6 +106,31 @@ def human_section(human, key):
                   f"{' / '.join(yn(b) for b in r['gpt_meaning_preserved']['opus'])} | {NAMES[r['gpt_final']]} |")
     md += ["", "判定1 は Sarashina を回答 1、判定2 は Opus を回答 1 に置いた判定。GPT の最終結果は、意味の判定を優先して決めた勝敗（引き分けは「差なし」）。"]
     return summary, md
+
+
+def h_gpt_section(problems):
+    """H01〜H10 の GPT の判定（10 問全部）。"""
+    rows, tally, meaning_kept = [], Counter(), Counter()
+    yn = lambda b: "○" if b else "×"
+    md = ["", "## 人が読む用の書き直し H01〜H10（GPT 判定）", "",
+          "R01〜R10 とは別の法令 3・最高裁判決 2・自作の悪文 5。指示文は R01〜R10 と同じ。40 問の集計には入れていない。", "",
+          "| id | 素材 | GPT 意味保持 Sarashina | GPT 意味保持 Opus | 判定1 | 判定2 | 結果 |", "|---|---|---|---|---|---|---|"]
+    for p in problems:
+        runs, winners, final = final_winner(p["id"])
+        flags = [meaning_flags(r) for r in runs]
+        kept = {m: [f[m] for f in flags] for m in ("sarashina", "opus")}
+        tally[final] += 1
+        for m in ("sarashina", "opus"):
+            if all(kept[m]):
+                meaning_kept[m] += 1
+        rows.append({"id": p["id"], "run_winners": winners, "final": final, "meaning_preserved": kept})
+        md.append(f"| {p['id']} | {p['source']['type']} / {p['source'].get('title', '')} | "
+                  f"{' / '.join(yn(b) for b in kept['sarashina'])} | {' / '.join(yn(b) for b in kept['opus'])} | "
+                  f"{winners[0]} | {winners[1]} | {final} |")
+    md += ["", f"- 結果: Sarashina3 mini {tally['sarashina']}、Claude Opus 5.5 {tally['opus']}、引き分け {tally['tie']}",
+           f"- 2 回とも「意味が保たれている」: Sarashina3 mini {meaning_kept['sarashina']} / {len(problems)}、"
+           f"Claude Opus 5.5 {meaning_kept['opus']} / {len(problems)}"]
+    return {"tally": dict(tally), "meaning_preserved_both_runs": dict(meaning_kept), "per_problem": rows}, md
 
 
 def main():
@@ -181,10 +217,28 @@ def main():
            f"- Opus の thinking tokens 合計: {results['opus_thinking_tokens_total']}"]
     human_path = OUTPUT / "human_judgement.json"
     if human_path.exists():
-        human, md_h = human_section(json.loads(human_path.read_text()), json.loads((OUTPUT / "blind_key.json").read_text()))
+        human, md_h = human_section(
+            json.loads(human_path.read_text()), json.loads((OUTPUT / "blind_key.json").read_text()),
+            "## 本人の判定 R01〜R10（無効）",
+            ["この判定は無効にした。盲検シートの整形（Markdown の見出しと太字を外した）で、Opus の「補足」の節が本文と地続きになり、"
+             "本文が補足とセットで書かれていることが読み取れないまま判定したため。判定し直した結果は「本人の判定 H01〜H10」の節。",
+             "本人の判定は読みやすさだけ。R06〜R08 は判定なし（対象外）。R01 は盲検でないため参考として別に載せる。"])
+        human["invalidated"] = True
         results["human"] = human
-        (OUTPUT / "results.json").write_text(json.dumps(results, ensure_ascii=False, indent=2))
         md += md_h
+    if PROBLEMS_H.exists():
+        problems_h = load_problems(PROBLEMS_H)
+        results["h"], md_g = h_gpt_section(problems_h)
+        md += md_g
+        human_h_path = OUTPUT / "human_judgement_h.json"
+        if human_h_path.exists():
+            results["human_h"], md_hh = human_section(
+                json.loads(human_h_path.read_text()), json.loads((OUTPUT / "blind_key_h.json").read_text()),
+                "## 本人の判定 H01〜H10（読みやすさのみ）",
+                ["本人の判定は読みやすさだけで、意味の正しさは判定していない。意味は GPT の判定だけ。",
+                 "判定する問題は本人が選んだ（H06・H08・H10 は判定なし）。H07 の判定は Claude が「差なし」と読んだ。"])
+            md += md_hh
+    (OUTPUT / "results.json").write_text(json.dumps(results, ensure_ascii=False, indent=2))
     (OUTPUT / "results.md").write_text("\n".join(md) + "\n")
     print("\n".join(md[:14]))
 

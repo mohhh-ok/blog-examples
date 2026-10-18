@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "H02",
+  "requested_at": "2026-10-18T06:01:07.763425+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n使用者は、労働者を解雇しようとする場合においては、少くとも三十日前にその予告をしなければならない。三十日前に予告をしない使用者は、三十日分以上の平均賃金を支払わなければならない。但し、天災事変その他やむを得ない事由のために事業の継続が不可能となつた場合又は労働者の責に帰すべき事由に基いて解雇する場合においては、この限りでない。\n２　前項の予告の日数は、一日について平均賃金を支払つた場合においては、その日数を短縮することができる。\n３　前条第二項の規定は、第一項但書の場合にこれを準用する。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg9CAw9GEkZuf4TAjPv25",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS5QkKEAgSGAI4AUIIdGhpbmtpbmcSDPAMoagwLlJeSS/FLRoMqGkEYSr11dIeHVOKIjBAbanFsTu1F+NNMp8EkRYeC5dPA1V/8WjbOCO7wmF8pOc4y3v8JDmUN/avij1oUMYqgglNaa3Sdr/sRu7SEDnFVP+dMiQ9mt6ugXRBZxVm855SKHz2nlogwBWE0sOcV9FXouT005+Fl5xk2gOLrT5TsFhs4f+NOn5cwhd8aoMuCSq35KygmRO4vJ9FnT+dqyB8W5JB9T5zXQoiEPfmG+iOWc1H1j/6Y+dykTCJ0bO9zYeGqA4oTn0XNIznWoa0qiCWbMHeYIOOR6jbl1uic9qB9QUNMb45kUQEVT6SdvBVWe+z2PGl8ZgO3OLWXUy33VZ1WBhO6zsdHa3F9LwXIMsmsI7o+Hy3mPd5AD8TWksZPBkgLXkrplMrYOn2aDvvx6QYmjWmuyWem1R8r6NPBzYeOKPy1Iq3EJLBFIHu7G4okddKiopbv0mj9Cf2SV6DYdfA0N/4ZinzelFxXTruIecsl62OgluT2P8KNjJF/SLwiwVPd5qJtvNFUo3wDjBuGBWoY0FvQmISn+NW4k31gEVbt665RKetAIWYi0k75hvJDl1GSP3D9x/DalrqLKVrWc7WeTL+Q5yXeKSFbmYUGFDcoxGqFjC6OvaFNqGMttt8v7p6KzHG6aMr1N3VRPu8o970BBp+y5bxR28q9dPFhWyps4Iri6hkuwvxApD8SSyJL/2n+nkhx1XqLl4Vv4yBaOe1slGi/qv+pvmemuPWZRRgxqVuVzXTvLVG8/Epx+p5Z9WEW0w1c6qM1I4wjAbwn49GTViVMTFEFVx/3L7kyrRJoQvWhyzRbjtweaUwCchy8xHsIEpwEN83fED+rDPLvDj7jyoMOHNGwub8kXIXl81B5awzxgaOuTex2M0TuHqwKyLn37fV7ePC0y1mxMyLylbxZVwOcXchRrxSOWZ/6C0Fb4bIXM+1mxXLxLB+DGKKWy2mX4lg0EircQSesqvt2pP0AZrIs/g+nHyYI//bGVQaf2ByjziSEglSnosFGlp6i8INdElUJLLDLQ1CcZ8ElAc+9xPKaCdtoxH5F7dWF3EFLb07pswPXHcok7WXtn4xUTegoqC8qu7u7yqDjM/RDTpOpek8zHm5f9bxBSY1+ZZnPxuec8r5IK2KLtb4HxKEn2nPDHVQ/zfYTCBJVyP4ZS2YJ1PrSL0igKP2VfNeqYM+Yiqa8g2pDrk28GS/jm7FAxPZgDAcgfdteC1+Cad9GWlmXukUW2Pow66DZDV+YrQEEHlXpZtsibpxvvKjp1itfcmtqVZtv+OpFWzW+Cy1SLBJ9cESD7wozrH2N3wPGK8ivvYhcXNoLYB+gbBFzPLDfJXqSizt5K9XH612Q58YxzILGuhHJM34pqfIahugZQUXuLRE9pBOojt76bxy+E1r0J1lJBhGkppE1KpnKch1wW9f8LvmOlkJh5bnPQpDZUyoCvMPv3Pa//alZ8YHlwy7llS5t1EGqOd5dP4w/y1ZWqTWsaRx6bVcBPbmSVXLRAodthpdcOQnCrrZ34cIauruvODI/Xi0ZC2gfvt2UX5ph7oiMSDTFC284Gk4C7N6Dz3B31zYLQqzvoi86P2jmpGtnHRCRd4q3UeUK8TUTQGAV3bocs773hgB"
+      },
+      {
+        "type": "text",
+        "text": "# 書き直した文章\n\n**1. 解雇するときは30日前に知らせる**\n\n会社などの雇い主は、働いている人を辞めさせる(解雇する)とき、**遅くとも30日前**にそのことを本人に知らせなければなりません。\n\n30日前に知らせなかった場合は、**30日分以上の給料(平均賃金)** を本人に支払わなければなりません。\n\n**ただし、次のどちらかにあたる場合は、このルールは適用されません。**\n\n- 地震や災害など、どうしようもない理由で事業を続けられなくなった場合\n- 働いている人本人に原因があって解雇する場合\n\n**2. 予告を短くするには給料を払う**\n\n1日分の平均賃金を支払うごとに、知らせる期間を1日ずつ短くできます。\n(例:10日分を支払えば、20日前に知らせればよい)\n\n**3. 例外を使うには国の確認が必要**\n\n上の「ただし」の例外を使うには、雇い主はその理由が本当にあてはまるかどうかについて、国の役所(労働基準監督署)の確認(認定)を受けなければなりません。\n\n---\n\n### 補足\n\n- **平均賃金**:直近3か月の給料をもとに計算した、1日あたりの給料の額です。\n- 原文の第3項は「前条第二項の規定を準用する」とだけ書かれています。これは、直前の条文(第19条第2項)にある「役所の認定を受けなければならない」というルールを、ここでも同じように当てはめるという意味です。この中身が分かるように、上では具体的に書き出しました。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 264,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 754,
+      "output_tokens_details": {
+        "thinking_tokens": 221
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}
