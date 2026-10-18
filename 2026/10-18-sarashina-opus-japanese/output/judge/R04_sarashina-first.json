@@ -1,0 +1,187 @@
+{
+  "id": "R04",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T03:34:16.542014+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\nしかし、教職員に対する時間外勤務命令が行政庁の積極的な意思発動を意味するものであることは所論のとおりであるとしても、そこには、一定の形式によらなければならない特段の要請があるわけではないから、右命令は、常に明示的になされなければならないものではなく、ことに、すでになされた時間外の勤務に対して、時間外勤務手当を支給すべきか否かが問題とされる場合には、それが右命令に基づくものであるかどうかを確認することができれば足りるのである。もつとも、給与規則二七条は、別表第九に基づく時間外勤務命令簿により時間外勤務命令をなすべきものとしているけれども、それは、右命令の有無およびこれに基づいてなされた時間外勤務の内容等を明確にしておくためのものにすぎないと解するのが相当であ\fる。\n\n【回答 1】\nもちろんです。以下に、ご提示いただいた文章を、専門知識のない方でも一度読んで理解できるように、意味を保ちつつ分かりやすく書き直したバージョンを示します。\n\n---\n\n確かに、先生たちに残業を指示することは、学校や教育委員会などがはっきりと判断し、行動した結果であることは事実です。しかし、そのような指示には、必ず決まった手続きや形式を踏まなければならないという特別なルールがあるわけではありません。そのため、残業の指示は、必ずしも言葉ではっきりと伝えなければならないわけではなく、特に、すでに行われた残業に対して残業代を支払うべきかどうかが問題になる場合は、その残業が指示されたものかどうかを確認できれば十分です。\n\nなお、学校の給与に関するルールでは、残業の指示は「時間外勤務命令簿」という記録を使って行うことになっていますが、これは、残業の指示があったかどうかや、実際にどんな残業が行われたかを明確にしておくためのものにすぎません。\n\n---\n\nこのように、法律や行政の用語を日常的な表現に置き換え、文の流れを自然にすることで、内容が伝わりやすくなるように配慮しました。必要に応じて、さらに調整することも可能です。\n\n【回答 2】\n## 書き直した文章\n\n教職員に残業を命じることは、学校の設置者などの役所が「残業をしなさい」とはっきり意思を示す行為です。この点は、上告した側の主張するとおりです。\n\nしかし、残業の命令は、決まった形式で出さなければならないとはされていません。そのため、いつも言葉や書面ではっきり命じる必要はありません。\n\n特に、すでに行われた残業について残業代を払うべきかどうかが争われている場面では、その残業が命令に基づいて行われたものだと確かめられれば、それで十分です。\n\nたしかに、給与規則の27条には、残業を命じるときは「時間外勤務命令簿」(規則の別表第9で定められた記録用の帳簿)を使うように書かれています。しかし、この帳簿は、命令があったかどうかや、どんな残業をしたかを記録して、はっきりさせておくためのものにすぎません。帳簿への記入がなければ命令が成り立たない、という意味ではないと考えるのが妥当です。\n\n---\n\n### 補足(言葉の言い換え)\n- **時間外勤務命令** → 残業の命令\n- **時間外勤務手当** → 残業代\n- **行政庁の積極的な意思発動** → 役所がはっきり意思を示す行為\n- **所論のとおり** → 上告した側の主張するとおり\n- **明示的に** → 言葉や書面ではっきりと\n- **〜と解するのが相当である** → 〜と考えるのが妥当である\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文の「教職員」を「先生たち」としており、教員以外の職員も含む対象範囲が狭まっています。また、「給与規則二七条」「別表第九」という規定・様式の特定情報が省かれています。「一定の形式」が不要という説明を「決まった手続きや形式」が不要と言い換えた点も、形式だけでなく手続き一般まで不要と読める広がりがあります。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "原文は、すでに行われた時間外勤務について、命令に基づくもの「であるかどうか」を確認できれば足りるとしています。回答では「命令に基づいて行われたものだと確かめられれば」となり、命令に基づくか否かを確認するという説明が、命令に基づくことを肯定的に確認するという説明に変わっています。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、命令の性質、形式の要否、すでに行われた残業の場合、給与規則の位置づけという論点のつながりが明確です。命令簿が何のためのものかも具体的に説明されています。回答1には「ことは……ことは」という重複や「はっきりと判断し、行動した結果」といった抽象的な表現があり、回答2のほうが一度で理解しやすい文章です。"
+  },
+  "response": {
+    "id": "resp_0eaf638a3fe4cbfb006ad43e38ef6c87d0b2e2da178dca7aaa",
+    "access_programs": null,
+    "created_at": 1792294456.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0eaf638a3fe4cbfb006ad43e39bc3c87d0a7bf43165c90a287",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D5MarN4xm3ZA85o_Ta3Zv12zkBRSAknDRcdR6I8qOeXnDLYMKCWY86tiItGqZwpDkDEgfSKX3_NE-Rj5qEAb2OpBW19300_7JH3V-_xW2ykVvG4iYTNRcrtBnf3vz5_3bhpq4PFbkx3kJsYzCx8LLYufgzwVbQcUSDj71AZJP3kpJowjaklhzJx3JOcWMjgsjPZEsA_OB6gna2CipNCEMzIwPpMS_uZkOH6kJh_XkbvlWtA5grmpnBBkU11jqyy5LjIyhjRR-rcg2LRUIhcG9Ikz6DUWmiEZSg9C4E_NO38UdLRlD6nYOKm4Rc9rGuJMRVaVW6X063c-JnwHkzKWgMEMKKx1ZFogfGeMlVcbGYYEh5ee14DkZbpgz3RQntnV0npX-xD6q5MYDK3mu4aWcB9t1xpPWUqAqI5XO3_0EcPKNRY1Im5N4gBeZ3Ryf3iLcIF2p0pKF3b_tjSI45hvS3TlLTkNcSBUbyAriV9ecmBYdWGF98Bp_p6DaG_GQDHlkmw7ZR1A4D5UPsHNRSHAtsbNoM3YRr0RrYYw6aR7WGKUYaDktFl2h007bs87NA9M3bTSj6eKRJytcRnMUE74M5yynN81KMzO-7eOT-dG5YqkiK_Sh9DnOk1Sirfqk_9K1uuJ7HBEDrOMZKscl0kiH--F_O1BN_z1vN3FjvLno29YutH0ZQov6hQVr_OgymBZTEIcwUPuLVxk4v-w9lHv_wdCZP_OPPARTQpH6qbMPU0Rz_0Byqk3cvS0BPfO7AwRqfr4ic_HilwLdcqHgOYJ4vPsVc1z5_hA38AoL41jjgUKryKDHg12ZtKxBrTOJVNn0Z_8sx9bXU0DxcQUpub2qAA5FVpLjlMH4XS0LQ03YxmIzrHWAZ7UxDOKuZLAv7o9IB74H_7lLUezTLAncgwqz-wfe5f74zW3uXNYyAfBjWu9VhA0W3mN432LnQFPfW5wllpW6IMHhhs2Tgc2ZXfS-PTJ_0rZV3yvj2V2dnyTsC_C1CORQ3web-RtS2V9UiFHggNw74eGvEJVQHbIu1Hj6IrpXQ5AJmMoA3QJKrqiHZm1X88hJm-zqCqid_EvucHQxNpZYF1KDhqxtUuUaktR-T_WJwF3LXN1g_s3gE3UC_lCmmhEUaxFAtgMEA9ykW6M4qCuUADRYLDdyMBkB3FZ-C48qp3_AtALjYf1bkiEeb6J6nXJ00hZFEeuA75E2W2LW6vFjC3QtoSpTvOygR1SRS-1UhMazVF6g5yBio-ZehP0Hlb7LTgFSWEBiuOG8FvJHCZH9CzO0INHDv2-M9s1oUTNLWm_Q1jPSFy9nrqDJpG0afO1qLmuuBOLFepMDcsSCxNyeTHX_TuMs8yic-SjqAf7G0y0xxfbEUAgEEVXYNlT4FQZEP07t4dW40MpGqcSvKe7eifBax8SLDHWi5e9LnK2BYoF6zz-yCgvnZdxLMJ6g1oxxokX4I5-IfI5k81ytI1HtPd0aOETly-O_5Iumq8UqPEu6eNTyWabdycxa6SeeHHo_kuhOL2anlnq3B6sPDtOeYPANySWJF-H0Ny1uQ1x4EEeqX7fHBIENHWiTovr9yyK1GCT2UxeR34RWRf4hcOvo7ITOtqdtErnac3BA088FJT7kQvUeH3n_dPwT-a7srXvdTAmoKBR38H4e5ZLyQyUdC3XYqtswTgKhoc6Kdsv9pnXVBQ9XuPxgIRq0v6F1VST_8063fmMuUG23i445glu0xGWBdLZh1K8zrOFHAB2WyxaYJ6NoQXwKw9K8Z1GWKDW7frzyG2cTgifG_7n5iWpYziMYP16LddXCkFKyP317e3t_kPWzEhXzfKOoW2Q7YPkXqfWuB6v1onl_vMMLYcQXJo50MsQWx3nx0gX8glbY3FY9oPZXT-lljZWqIFgfkLB8ANksDBHsrZ1dLFgV7WfxLRO55kd7M3U5mQiXrvI6MROY2VVuI7IKEahWOHI0rO7rdj4wkkFE5fDOwLG2kJdF6wkrfCpLWzByQCGh0byIRGoooB97IcSADxTQXwop-DxdOAAmdM4mRg9haWLbZWuX-Diy8Bd5mp1r5SJg34GCXtQcoWcWJPuc2uzrRWKkx9exM_4tfL_KeL1EwOB2HjWBKUGhpkTduXqcjkfX2FQhlnD0qWeXzUNisppkNZQ_RmFlOBezfp2ImgGKz_pRPrQJ394rl0cvCVB7fhYeMEdHUz4a5ItdGTdC2LbPeWr2T4G87zizTSqhBMweuMjEEQjgiHmKyTGJ2VxnSEO1ab3Yk2Ulb9Z5PVxY5G-fseaYOu-eTb0p2pr8DdCxpvCb48sMIKsVlEneR6cIvM2gY9LporcL8VFSsUeMc5ux9TdwNOl56H0EepK6a7NCNIzpPF0reTzEEiaby4_mXyVpOn19-QloLFN2kpfyujB-pmj5UiEt6B3oqEFz5h3SuGUgcAvv7FG39MTB8bpYG6seLeEgVwrSfLBa_dWly1VMDHSkXBsScKy6s_cOMwDcKKrTKs6dcTGCyVu-BXmkkxji1gDvqW3M1rRgBlkzDG24D69ChPH9Z95Zzb_wJow3yw5QbgC5BmbOjaQZLNZRRwePaYFMxk8GD3Ho76dfBTSUq9bmFU4p5pF37AeO0ybXKfmTKvfwdAynpyjXngwkDvLW0Xqu8K7YipcM1UiLFVV0N8b9nt70QxEDGSAGh_gVwujXG52L9SEjGvP5HBCSl9Q-RXX7fhdQ9C-ry4P5JSyfo_zsv2JzlsP9tiQXnw9PhKJeQcCewRuhnRDMPJ6KALEO5LFbKoJ0x_jtL0-jfeITIO0UWaniH0XRbXOrvYXhrJGicv63HMwTWTP9VSj1N4o9gcek84hkoYv1dmAd4z4I-cazzEgyzrlwQZGym87yqpV_JEgZ8AbsiiMyzIDT17CnmwMu28NmhbEoAb2oRfhFybPwlMpsUCPX44vnJTkUVahJk83J6sMFVgx4G5voCiToZ13TaXSly8CVNmD17YSyeLfniBKLIAhE0mQJtP_ks5oGjKxqUH_G0MNTqjIl6dCVs__LdxOCE-Xb0cP4-SFr9S6WmZ7eY4CB2vY7ioKWSH54ssNQB87gSb_-bMSTapyTYvf2k1hYwIETLSgMSr7mAYgXiA6RsxsOnscoL8yPCdfxeJoVIl0rLRJkTRccxXCwWBuuAj4EfTwiVau-wOV9Lo1fTltAcDJjXwwLzJoSXKxhUoIODF0pjcKtp2Lbj4wzme1O_z_jwG2v3EXGSCgiXj0QHqDiynpKTgvXifPdBGpJ2GzwruVE385sof3APka2PAJVVkSog_WKLW2GLG6jQRnhg0xEHMxvKHDTyUTdp-844VFLGgq_Zt6jw_meNAaOy8p_bAh7scFApAnwjtwDLA_VapBVvTyeb9k6LOsdrN2bPX_tyTd8KMk_1RPT8OtQ6oboaTohE09-3FCze_Xr4sy-mRWaAGJAODjqqTsjrXYV1OroRTJLuTXSOxPTkEr1fQnuvX54YF5vXMAkLnEgfwr1tJpaCj4fBpQB3XZwiym97Is2PG6AEiooDTA4qjkBZQz6uZwvTP41ae5xhkz-eu4uk0XWAWh2lTQ8ng7OAe-YlmDKysBy5y-8HCsBk35PNNTsJDDMgSXRWRetk6XHqN2gZh1r0esDpOb7Stcg_FNwoudftN4VmlCFKzJ3SIBHACrBIBapU3W3qOwRYJXJ2ZWhtiyoySE8lEsBLSqNTUZtjFijByZtZjnZRtpHaIikPmUr_LqZ43PxLo2Bf_U8L8D5m5nP47Bwq_54q0k19Yb4Xu01hN8j5jzP8yuYmM0XeU7TlqL4Pvt7bXBFdKPvw27Yc59AI5rmsWU804FYeeOwE5ILc9t5JqsnRO0DD4h9vzXxQ6ikEWOcw5FnbzF73IJKLBlXVVq5NpNRejutnuRyd6jc0AamPmxigTYyCMSDgJHNeAsLqj_8RNJdHf-ZKa-Sk8r9W2n2Q-0ydm6ExGLQh8JyUm7F7hujGLfdXkAPMG_iAM_nCJvn6A7LQcjOBe8u7meA_BSrDQmbegWHP4n0f6vPIoE9u3duAvcVClTtKiFKf79JJCuUT0n8qzwajUgMLJs9DD2ODhf26n9nD1claYF1ZaFMk3UIapIfvXIQ5tekLxeKrPtOivHsNoMoQr9PwipN4xIRkqTN6HxWKzeYpglW3bGmFvY-8cmxCm9W04fl_02Cm22qsznoC3dtlVaBVdlaqi7XxWhToEwzLBwy_9L38DLOWYfff2xAfwVyW20v3NMfW6giZo7N-3Nr4kDNxiiWYf53IhfuBw5mw7ox6Zl6g8eDvzQugrQM2Gysecms1nhZYqiVc5ClhAQOUK_0AZH0ouJdCc8R9h2EyKHexFeMI9Kh8nfjTqEdCrL2QPLc1j5rWVKuFy0MJe0BaL2oQohIaVNSG1cYsEpO089xH7wPvZGaRE3JxMHW4oaRBiAWgmZ7FKKwVJIPsilER8glxF8_Nvjmdt8STDt3XELa9dLkSOhyl570w0MNcbUxP4-CNifdSpLdQIvv5hzQXpM5DtZqQjDsnCpGQAbiJEXAsFKvZMcAIRut74SMRH6C9DDhWWY6AJZRTCfFmconA4KOHJ72TpfT36Sp-GXzkMxSda4iJ78s-P7__o7rWba1dHIf2j91BnYZSFJoIVpDcxZI-DSDSbqChjJzo07lrX9L31CY0tgFDe7t_5d9jINYtRkRwnAKft7O2iip8vO0_oCKQ8EDdfiVqQq9On46jJYfGI5nTzEafi_0vnv4AX2DSnzRooDv25h04AWVa7nURBJeVCTKQgtvQ-ZUDbMhjKdrt-40ywCp57e_ry9t4QYPDWy55Rgr8uNuJbLgBKa8TjyKeHq-M3hPJ2hWQWPdmAVNgLyl6oh6no61v3pBafqrAsZNNEe9yRwSh8Y0msh3Mpay2vFxIQ3dnZgRt5p71qDDu7qd6Kgx7zyJ7djdL07EzwSHX8oet4kAns3jmzInC5wtnmb7RiaoTNNYSwndAzP6v8CbxuoEk6ou_2pBKDo9R9VCeTP7UmwpJT2QGgMiRucBwvlSkwDoclBbZo-wpoHPdfppFAWpedLDAQEzQNySz9gz5K6I9-DNyFR3r09eBvblMFDVDx84MbFPk_wcD3oW1NWWQa9aJTCEhSpYYTt_39nkK7TuI3p1MlnAAL8MTqPPM6x8xt0PJRM-V_orSebEJkGPRpZg5AhJ8oXC_7VD7F80BDb41PGlwCGF0kz9nD7DIKM_yLWUc1KGBTw4WcqOTjO3SMZH8kzmv-bknCzFtwQITNxitnx3Buav7Xi86CT_LX4EYsxuA9-WEe-E8ANhke7EomT-ZgIKsXvSBGHd2ZN8bLBMtyRMEzHjjwVkbDRc44XcCWby_rtmJ8fySbLWoXWx8d0X1lnQ0Pq77D7uByspENRYwwBNRqVPznO20iH23T637xPmSn8xLip0AlEPfWzX-lrEKX9azXYz-pPO0WdYAA7bkdz-vPUVyoFXrVqLqetVDfztHoKMBIyPC6jrvt36MI90gl2T7IR2ON9q5Rmg7mdg4Fo4qC9EvG0hlZDwnfxImK5ct_p-jNl95tl2hTidBxJDtGYBIDS8v2AMdYpWI03eT8QbpaA3DMSsO0o5C56--bjcWFG2ILbdwre7xeeZzlz8A87k8gTf-KdSlgL333stqVPrydzT8yUwpGDW43FeVKzrdA5aNNgpXzeFf7elaHDfY6PmSM_h3BDJU9JQ53i5RQPPGj7_pKiZ6cXRRCV6U5gl1aTEjEESUsRlE38xM99B0QLfIbIoJdwIaKK-w3jQx5fhGOpMjgh24hSRE=",
+        "status": null
+      },
+      {
+        "id": "msg_0eaf638a3fe4cbfb006ad43e43d4e087d0b278eea3fb65dad5",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「教職員」を「先生たち」としており、教員以外の職員も含む対象範囲が狭まっています。また、「給与規則二七条」「別表第九」という規定・様式の特定情報が省かれています。「一定の形式」が不要という説明を「決まった手続きや形式」が不要と言い換えた点も、形式だけでなく手続き一般まで不要と読める広がりがあります。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文は、すでに行われた時間外勤務について、命令に基づくもの「であるかどうか」を確認できれば足りるとしています。回答では「命令に基づいて行われたものだと確かめられれば」となり、命令に基づくか否かを確認するという説明が、命令に基づくことを肯定的に確認するという説明に変わっています。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、命令の性質、形式の要否、すでに行われた残業の場合、給与規則の位置づけという論点のつながりが明確です。命令簿が何のためのものかも具体的に説明されています。回答1には「ことは……ことは」という重複や「はっきりと判断し、行動した結果」といった抽象的な表現があり、回答2のほうが一度で理解しやすい文章です。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294476.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1608,
+      "input_tokens_details": {
+        "cache_write_tokens": 1605,
+        "cached_tokens": 0
+      },
+      "output_tokens": 730,
+      "output_tokens_details": {
+        "reasoning_tokens": 327
+      },
+      "total_tokens": 2338
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

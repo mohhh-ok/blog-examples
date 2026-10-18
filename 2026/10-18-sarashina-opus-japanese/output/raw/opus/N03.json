@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "N03",
+  "requested_at": "2026-10-18T03:27:16.192847+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "小学3年生に「どうして空は青いの？」と聞かれました。その子に向けた答えを200字程度で書いてください。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg8zSSsx44NCTbcQ93D2z",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSxwoKEAgSGAI4AUIIdGhpbmtpbmcSDDtheYb8F96Y4OroaxoMbv1P3MF3YCpHyDLTIjCFD5VuZSj3JyCOvpUk8VwhX9FKjiaUSfcnwRyTLJo86ixbdmffq6n9R2rEm3A2sX4q5Am8WN+y0WYw+PJBVpFWgP+8hEZll1fMRK4pujgpc7sRXGftdUzoSULHINj+7sz2wWB7n00foo0KtHHjVVkg3+WqzGboTZ4noe/I7ptEY3hlr/3fqT5eyFALJFAalj9t+h6Xwx93tGzbb3eXnQWiDsyZS+EtLslh5zANfa38btoamcQQA4qZOrDONB44ynN4CSmTwm26yolJXPWgOZ27FYDTfUm91SHtIjWaWGfc3WZGLJlZIxjbluvriPA6uNckwkGcETOUDSZwgh0gAicIX6a03V0eWZu73jrgRwKau87pLdYAr+HsN1nCTzE0DO69nCjE4YFbsYKRlvBpu+Egx5+cTpiY2204naUaR9nBxhQX2jTOUnZZzBtD2eBP7/gOkQmR6zKCs8EMT4WJTQyH9y/AOyJ4i59fUZ8/RXrkUmuYXczHN58NGb3o+iVUaxhuoUwPRTltHHj5v3Xi4VKpQ+/YG5vRnse7PHqd1bkdkV8J/3dNOEtXTrBZKCNSBbve4ac5SEEUH6AsPVfnQ1J6PaPr2WjEYbIA54dQGrhoS8bKgQm3Lx9n8OcLIwM1hxlEPyPEtQacWzi2yxKPfV1hziFLZ42ta1U6uoApZZ8xi/T7dlkxi7zeI9tTQ9tZ4ZyPdhVRYAgFQ/5QLBfPUvwbTupUJkMF2az76zR2Je8/rsdAC7C/qeqfBk5SHbPNemZ1O7rGF+pTGR6+bhyCv2StXBASyWqUJvlO1HJWJscgCk9GQyG0PBrKs3/7YAb6Bm93UrtPqkrq3YkpTpn6SHY6NjNR9L0izo8lepu9mBSbdK86YTvpmNYrqZ+uYhPDAwQG7UtJhYST4az4wlJpgSqVf9oqu1QMZ3PMr2NtJ/Uqfp337QH+wi80/AGVxdKIxDtkOiH5p09BbjphCT+2VccyW2CLtGUDgE+SoErJpMnWIgJOd4Z/v2iUSWL32es+RZoZkvyW6NmVg3IJkHcoz1SwN4mR9VsDc+gZHoCCNK+undlt2V8PPSEmNcWhM5lrIpcigF76uB/EdVPRUCsnIXLgnbNC7M46h7BDuslCRv8UiC9DqIzLuSXHbEMDIRNCQVzlpOVDSOeTBUXZksC6EEm/zfle2eVYfP1FyUUAgoks67zPEI73f2kogMbwrMgEvys73SmWvBfmIguKuyvMquIS6zh/f48Ar8+B65X1JnA+xeK0DslI7uV6xXfg1oS2DVknPStxiSV9vdV44vfcRR7+qNXa1KQAv3phgJOTUCEh8RMd69k6XBlp7x65xG1VXfZ/ePamIoDFgMg+TWL6u1lejhhDmgSLHy8sRSu3xzErWMFle21d9HTmeNbj4LIQnjoON2YSkCdJxGdtuLiIiRT2XeRc4E1BNGo9azpYg0nmK2bvBy1SQa+8AFWGdFh0tGIPsdEEvt6OIJjNju9aIcIfoMUtB2Szp1c+6D68zhwW9OQRbSUIRvUZn8maGiqUjResmB+FOs3nKmKyKHq4oR8QfR3tpd8MZVVW7A1qtJYfAV6jD6rVi6Eh0agmQRSFjfRwyI6Q3xeThLvNELTfk7nAgoSj/NhJ4+kM/hq9FuqWt6t3ZbroOW9OESlUOtLygM5ZepS+C6hliy2lZ9KLJdD9RxyOAJPI45txoJyDv6zVlkOOo53Y6074IfBK5KVoM9QiJC2+vFiYGAE="
+      },
+      {
+        "type": "text",
+        "text": "お日さまの光は白っぽく見えるけど、じつは赤や青、黄色など、いろいろな色がまざっているんだよ。その光が空気の中を通るとき、空気の小さなつぶにぶつかって、あちこちにはね返るんだ。とくに青い光は、ほかの色よりもたくさんはね返って、空いっぱいに広がるんだよ。だから、どこを見ても空が青く見えるんだね。\n\n夕方に空が赤くなるのは、光が長いきょりを通るうちに青い光がちってしまって、赤い光がのこるからなんだよ。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 51,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 475,
+      "output_tokens_details": {
+        "thinking_tokens": 271
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}

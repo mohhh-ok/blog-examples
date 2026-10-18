@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "K03",
+  "requested_at": "2026-10-18T03:26:26.074287+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "あなたは会社の受付です。社外のお客様から、上司の佐藤部長あてに電話がありました。佐藤部長は外出中で、午後3時に戻る予定です。お客様への応答を、電話で実際に話す言葉として書いてください。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-9e0a6fb274948eca",
+    "object": "chat.completion",
+    "created": 1792293986,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "はい、かしこまりました。  \n私、受付の〇〇と申します。  \n\n佐藤部長ですね、あいにくただ今外出しておりまして、午後3時に帰社の予定でございます。  \nご用件を承っておきますか？  \nもしくは、戻り次第、折り返しご連絡差し上げるようにいたしましょうか？  \n\nご都合のよろしい方法をお聞かせいただけますと幸いです。"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 45,
+      "total_tokens": 122,
+      "completion_tokens": 77,
+      "prompt_tokens_details": null
+    }
+  }
+}

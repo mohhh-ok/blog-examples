@@ -1,0 +1,187 @@
+{
+  "id": "R04",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:34:36.358868+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\nしかし、教職員に対する時間外勤務命令が行政庁の積極的な意思発動を意味するものであることは所論のとおりであるとしても、そこには、一定の形式によらなければならない特段の要請があるわけではないから、右命令は、常に明示的になされなければならないものではなく、ことに、すでになされた時間外の勤務に対して、時間外勤務手当を支給すべきか否かが問題とされる場合には、それが右命令に基づくものであるかどうかを確認することができれば足りるのである。もつとも、給与規則二七条は、別表第九に基づく時間外勤務命令簿により時間外勤務命令をなすべきものとしているけれども、それは、右命令の有無およびこれに基づいてなされた時間外勤務の内容等を明確にしておくためのものにすぎないと解するのが相当であ\fる。\n\n【回答 1】\n## 書き直した文章\n\n教職員に残業を命じることは、学校の設置者などの役所が「残業をしなさい」とはっきり意思を示す行為です。この点は、上告した側の主張するとおりです。\n\nしかし、残業の命令は、決まった形式で出さなければならないとはされていません。そのため、いつも言葉や書面ではっきり命じる必要はありません。\n\n特に、すでに行われた残業について残業代を払うべきかどうかが争われている場面では、その残業が命令に基づいて行われたものだと確かめられれば、それで十分です。\n\nたしかに、給与規則の27条には、残業を命じるときは「時間外勤務命令簿」(規則の別表第9で定められた記録用の帳簿)を使うように書かれています。しかし、この帳簿は、命令があったかどうかや、どんな残業をしたかを記録して、はっきりさせておくためのものにすぎません。帳簿への記入がなければ命令が成り立たない、という意味ではないと考えるのが妥当です。\n\n---\n\n### 補足(言葉の言い換え)\n- **時間外勤務命令** → 残業の命令\n- **時間外勤務手当** → 残業代\n- **行政庁の積極的な意思発動** → 役所がはっきり意思を示す行為\n- **所論のとおり** → 上告した側の主張するとおり\n- **明示的に** → 言葉や書面ではっきりと\n- **〜と解するのが相当である** → 〜と考えるのが妥当である\n\n【回答 2】\nもちろんです。以下に、ご提示いただいた文章を、専門知識のない方でも一度読んで理解できるように、意味を保ちつつ分かりやすく書き直したバージョンを示します。\n\n---\n\n確かに、先生たちに残業を指示することは、学校や教育委員会などがはっきりと判断し、行動した結果であることは事実です。しかし、そのような指示には、必ず決まった手続きや形式を踏まなければならないという特別なルールがあるわけではありません。そのため、残業の指示は、必ずしも言葉ではっきりと伝えなければならないわけではなく、特に、すでに行われた残業に対して残業代を支払うべきかどうかが問題になる場合は、その残業が指示されたものかどうかを確認できれば十分です。\n\nなお、学校の給与に関するルールでは、残業の指示は「時間外勤務命令簿」という記録を使って行うことになっていますが、これは、残業の指示があったかどうかや、実際にどんな残業が行われたかを明確にしておくためのものにすぎません。\n\n---\n\nこのように、法律や行政の用語を日常的な表現に置き換え、文の流れを自然にすることで、内容が伝わりやすくなるように配慮しました。必要に応じて、さらに調整することも可能です。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "重要な意味や情報は保たれています。「はっきり意思を示す」という表現には明示的な命令を連想させる余地がありますが、続けて、言葉や書面ではっきり命じる必要はないと説明しており、全体として原文の区別は保たれています。帳簿への記入が命令成立の必須条件ではないという補足も、原文の趣旨と矛盾しません。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "原文の対象は「教職員」ですが、「先生たち」としたことで、教員以外の職員が対象から抜けています。また、「給与規則二七条」「別表第九」という規定の特定情報が省かれています。さらに、原文は一定の「形式」を必須とする特段の要請がないと述べていますが、「決まった手続きや形式」を必要とする特別なルールがないとし、手続き一般にまで説明を広げています。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、命令の性質、形式が必須ではないこと、残業代を判断する際の条件、命令簿の役割を、短い文で順に説明しています。回答2は最初の段落に複数の論点が長い文で詰め込まれており、条件と結論の関係を一度で追うには回答1のほうが読みやすいです。"
+  },
+  "response": {
+    "id": "resp_01d11c20884d3bf8006ad43e4c820087d0900784eed335dfcc",
+    "access_programs": null,
+    "created_at": 1792294476.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_01d11c20884d3bf8006ad43e4d766c87d0831dd37e9311f6d9",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D5ewIZZxnwNEcc6-qACeoSfE4LrxnGZdGQb-_QVw3bE-aes9X9Cg21IYPFPYOX1NoI6vBpy_j09Aun7RDcfFr4fxh4ucLdqAEOvZPa4TGv5Vjl3BpdOGrXd6yEWqSxRiy9SBAaICDRIZUMN1kLOE4pty5dmTdGumz22dSJuwGNlBCtog-gXX7Lns20YMstDpfin4IB-Zt9ynddR04bkCyMEdgqUBBmhoDv6UMWtbYf7ezGTsCN-C51sVFwRE-o6nZquxvCXEksgZ9zaf-LFA6tWv3ENaB4AptuilJmT7jaqtprEKTxqboEQsY2m8n_xi1KoHix-BmHVZR6r7vAxb6Ly-GZCS1XP1ml8U86BbgAOB6yAurLy3IrJpoJMH0RnerPepWiNOJ0v-AOwaWtfBrUMdDLeVovNV9FnmCroIbjTEgqsi08dH_f5sXSv_-U8nZvMab_glrJYD3Z1H_DhFpf5GZpudrrdNDICE0qqt1GVlGuC3ci4jyforgH8Hvsjc45cbbBiOUUUBdbtLZnIqMP8HWAx-eAZPyG6FVuz_YVWC2C0bH8ZKDsnvnGAYNI-8slC0lkkAmiKS3Us0aqbg8dOxvMkvIwhgvEWSAkUdgeF8nZ-B5W6bUei3XGUED3LcCdfmrt2CHpMLQDyVCGQMz9jlq25S-pHi0horroZaYueCppFPLiBTJCc5Hqxxoy8TIGQ65eBqsvTVn1s_TSgiibk4jjKRmzODEOT2ywJOhFZ_AXaWN9tWd4VB94L_Tru-qFlCdRE9MBOy6BxdrzFMHEBEFeuqspCyiUSF-Pd84_bHkTVlGDWNkM6_pttRkbA9vvm1-pOV9Yfsr4yN7XJca0UWyN3uLYB-LZkdSW81VXIIAiPcM8Vk8f2paj9F5fk67whQRi2aUZOfL3EeHhuMD8ERWyHKbMlc5hmV3BOAPpqaQVFeNxp3z7wJ0Y4Cbr7PSoGjv62HvVs-I6m2PLpyCStkbbo5XTSFRD6hcKW2T8fEoVNpocJpl3wmMBGZZqx0CiN_QAxSsIP_SVvQcn-QeMGqKaEkN3fKOyrizeAXlYA0M202eBuf_sbEZa6X3bDiMbYIrWRdHrUzrgDANqhiHypnq8f6p7kJOIDjs_PYsNA8itAzOQl0VtymAA22WlaQ_2BaSP-3t55UaL4L0St8Ir8glEGNcJB5ywCsKPLtjmbeyQ-OM8eA6NRKloLntTg3P5wdmX5gxt-GtptNrn2eAXapmTgparwp4xb0E9HCea5gZGKp9rncJM6G-HNI70GE_WhQRrgBxtwVOSTtNzpmZTm3yNlz-DON_eiOnmcboICM9jRx7eNeEUQTZUwmKvmI7-UYExm-rBr8hMlMTCSsQszGJtAytNmFZf18J-owlTVvTdU3EPhsNdp85x2psFBwjhAq51rZWwk9lriBjfQwwcFca1V_xPpyxM3XYOAJixOWBUahJHkYd0EbFnSa6EFTmvfNM3jockDrTa28AjQI4sSlZfQ5umma-QvAIsgSykTdv21GsVzf8LI4dXP4yHZyMTjs8TEPIcndUThrpumlCb6f2O7fJnytnsDhJZ8zrrFvlN08aWNoU0lxyRw5U4v2xoJD8-EKwal3r0bgLb5MaCz8LKR0U09zecSaBiSUMOwgrK-FI5J07ueInElreWlhKxaXJx8ytm4i41Wla50VPwpiQ8cVNsYqED4otXl2SWAtMnEJo1ZbGzOGcdpD597USdDKa0VxOkTwGl4kP9sko9mNsMTbP9vg9EInGEqd7bl4a1LGJ1lOCttEdDIM5tNmoXhrwvW9uARX3Uki1Rtqfk0N-4LbYMC3ozvcaL5O2qUiTzW1lQVEEi7BdSX_4hychHYKWoXJpMV4p34ydZ5CR1Gl630NRr1zRVui8EdfBQ7NgBkM-WeZdNYIyMR_8XCNUiil_fIEbgLzvX9j_CgHWrq6JPECvsRO7FIC2g4bjVf74xns3GZUAJf9-7x2n3pF2rxUynnXfmq0DnfyH8q761zQM0pysyFRNVb6OPsAsT2DE6TVAboI3v6MxESRu36ptUO8jWHoHcetWuVVp5fkMHH73h63Rs_srOZCflM015jrxocZzYf8mqcPZ6FyRt-wPr9GgnSCfRsvItQZzP1V9CrTiUuRy5RBo6xBg6QdNPfZEG-NsysMhWPSokRbo-SKWfOmUs2jvUv98nqEf1cv1553pZeNVZbJ7_REDlS2sexeCJX-wxLece_lejheLHb_IJKRrvwzn6TRUqigkJBOC_O42fvRpQE3h03BGnORXBV2I7oCRFjznKdz6Z8cfC7ww0208iurzJZnZEboEN4q7-XHU-pFmTJgEDWtrTeuJm97Y-n02wtbLDFsYjvnbAt9qYxnaaK-GXcILkf5Lyb2W7m0OtUxKnEourgrgNHS_AK22OH1PW3hK68RiR5Rs0zLn4Jf2LhOFgaygM0ZvIaKM67jlMf8vk42KKv9uAaI9KPbJLt3pCO7P4DXXZPfQeHNyjptyQNegxVfRyp3pBp2ywuk-xqY09uWTeyqu4XyjyKb4R8O5Wnx2iwL5tFo9swoIGnJVwX06pm5v-wxJFsEC16jn_yuRAt2ZWABs720J1RgEEmtWfb_orjYszXhjapczYFsQGNA8SGIUarCcTpLXrde1L39W7WeBgKGKjZ8zmnrxpUQ-CpjiUFEoelm005RWDB06ohEveY2jH4uoJRGkZ2RzsJ_ML6d03AjNxG8e4qGNiLmuQzG6h7NcxfhDWNOTxfKLYjn424ZhgypxjGjEknRmJyP7MwSjC1iiIPaCecsxxzG5_eAYFHbLHn9FOKz4LeNku-mvp8xpVy1vqeu0-UQLUfjY3a0DxY9yxy4QjXLxoDyv0pCmFO4-Tw1vUCS9YLPbnEqE4PYLzxqMvIxgiJo_CUP8dImd3sNyFsJXEPYJUBl2kACEzqE6kXQgg5izXPXLrj2_wcPCQuUB2Kj_eXniTpt5zAnrH3qBZ56OM6Bgg-N4P35NSkg7hrO0uv2xsgPl4F0hN2Qkyphld03TdN67uzwkXMf-spN_-fB9CvF0Tvp7Tm2jdohjnpcjIJmRiaA8obUn2xSUl8Wmt9TOXfdAv-SdYIYFUIh52RyOl2r46L-7Pnht0t1RdihCQ4bPe--9RgVMCdttqcX9E_Sh1iQY59PKedhI8vdUZzXqr5QpsFBK0arKSqrcr3mL5IRDLsyclzOcRCwzSaKNkLOcgZdjPLowdlLTFBVbdZcWWsKJ7jjrY6Iq9-GRbiJENTGwp93-Qyn7OHmTPWHyFCabm1VUAllA8QNzDj2OaTI4XG4N_BQQ_Zvn7JG9pOCDdkB4zmGmjRQtWQ8OzM2-T3ozjoQiIH1iSCIe6L218tD1RzKS9ON8ETPUIR4TpNOS8Y7EPBzi8K7ZaVzEcUVWh_JeYSZ1IbGjQBtITAIbpf_ukDQND7y0SQEJOtCbqxujd_DGNC_O4XVav9w-zJtpwsI0hQEVKKgOFcucvgOllP53UT1FjHUI6sOlqOPzxCEqLJlHmVnxRYwgqDEzkKxALgBT8WDZfAPFthj_Z9yAn5eIVK7f54Qwn2YfUI2Uh6cFinCQybyJcCTObpuH_Cb2B41yxQRjLE0j6wQflQhI0nofc1EUhyTZpWJ0z3gfPhecyTUqcP9LR0MM8Jmtjt6v6mzxv7VRe73vosdQJI1k8q9E-Q_pU3kOefXTHhoZImUZH429rlagJD5sFQ3ohOZhR2pE3Ph8MvPo65UUathHUvjt3UHgfUyJK32V6V4NwEpEbyA98IZQMGExCnQXKu46IUT_ZNGU2POAwtAKWVIvMb3Y-vOxuDC3jJ9KpTESoozUNZrjVkZY4VQMfOKDQWG1wr75I8huSqGLlAiQBpvVVkrWKMC5j1gBp-x7H0Bj2M8VjgKJ6wU7MaYfUco75mfzQBX_lEIwgjKkxNs3gadin9XAMA9hFs5Cqb7wAPyMhf9UXKpTjtKgI0KOV_MUPprGUkvxz0wqVG2k57CXp-VgbqjBLGT4lRw4h3OPVszmmNL1M8yXkye1cncY-4XVsaECG4tPXoU1hpyZUTs5WD1HNthweMiegXxHHNJfYuyaEOm8s_NunzPAdIhCB1MSBO-0iPrmaUp2edoWRNfImx7Z65L1SZoRaMT8XyumY7v26aAbLmhKmI610A7MIykgRh0mWh3a78ARJmZRoHVxUv8w2uffmhrr97V5oNkmknTDIsht24yH52LDzFJPX11zOGX7d7QGMExNONGKhkNX3l3EQxZhK5aTXlaQDt1NI8Nf9T_uOwDOeM1Ns9SBIzVJfs_ACI2hLWzYDzArzj4TT0HrMbUNmStw9_X5URhSW2ruNA1_744zZ26hCDkXvpGQUK5ZIqXvlvFGptCjwQH_-gE1F9qs9AGKOIbbVV0ARGQwVLYsR-lj1VO7UEiSDUSletFipwC5EAb3qOy8vheAeQMXpkY6oDGMPSnSfQEXfFUHBWrvuEP5cIkd4wT0As015vLtsKFeLJniXBlExp7W2KAPXDAww4nemztiQ0iCAXUYNn6DE47JdK3p_uE7FaIF1fjvUtN7yozD1L4H9ziXBITrVD2q_HPFUhJAAaLGV18hTEdGtWOutoFuoQ9nA_A5_uqGAr4J89mTBS3ZOkYeJdSfABL_n0XdaZihGqnhcEJKSoTXwRAn_xcv2tRlh9oZY-fUHE915RQYAImS2qmAylvN48kP8_bl5nLGomzCKKXoxFplZfaoUfm1id7GnfMZvAHfIr04i8_TkQTT0D2mIhLVfYqmmS9b2D-XFVJsWFsBPWXqH5cGdj_t9PxtFZ6-zeFzRyUC3Aft-dQjVONhPBjXUST5M5wcVEjoPE21ht-BkeSXZ5mqNL30qwjm55lHqNMFvwfwrlwebdIqtYZSAAMmk8bmfQaV5jVbfKr1u7M8-DnU4HajMqfVhaxf7lYCylnQVIWrA8qLvB1e7aWf57UJJuNm-LDW3dl0aqLJuWGhTPe2dVGDZOdcC0C0zi7CTb-ecEnuWwaI2ayLp0ft0B_dptZMmFiU-DELfkffoDZEViWFsXajyWXVnjZsf7EXlUJ_tc80-LQ3JmBvc1isVAWuvUzUR0mXUkoHRvCSq3enaguULREvRcAyaC13BRd1WlaekjIHx8YOBbtgtyD4gtCl9Ga-XruWSUDVqpDYpJGd11MfTyzX1wTDvEA7_ZULXYLJBoz2eENG4o5iuHxrd7nwJwvxPUO9jlXBBflDr-_q9Po9Wk6XOhVpJvi6y4LgSzW5RE1tnM6W6jtGMDdaMvjZAcmgkGwIMuUV4JpyXmoOVa8SD7yAo4Pbx15t3NX6dW2hnpI1ArDayHDFlnEm5jSiwyOBtWqoUJMktvXVR4-y3bNMUNcWz6b4rn8Ju1b6nnCMTPUltUWDsTMnW2wDeO29hB6Lubcl0DdRT8v5VYOWoZjtv5auiDBriFYGAXGqM3q3lmo_mNxhZsVSZooigazQNO6YsLrx1u0Qsq3gn5DAbf1MiReZMSSINB1vkq1yuDHQeGmo9JXsIj7gx6XmwdP6LJV8yP2nzZ0nQRLd6ZMS4lC_8D-1YpiyoxkSfQaHqrMewD9JjbdPSvlwa3nQfSTtTgM2Uaeh6wJ7xgehkAevTz-N8u75lpSLqp9KZSsSgpbg8gzO9FNnoK4IGVdCwsPPgu4XESzM-KxlWmxS2KXKjNypntA_n3dnHP1IwAn5NWcK30-1kfc2dpio4HWKQ4uutxc1x1ftxCdFtjxs4OPF9llwDjqV2Zn1FSvm1uk-9pZPi8GYq0XTvca7l5F9hcXTdQKdVKK-sktKfghF3F7uR-loA_JWRplH5EhyEUQ83dsOfFwq13ZU9HM3dF_H_o_JPc_EptV-EOTcfVJ04X356XmO3rnlmP8WWJxVMfQkx0tlt44jmFL3D_f2xxqZ16Ax-A3t6M1QIJ2u4w4a3ob2BJXk-wXlxpwWBk8OpGaIfEUJwRO380G1cw3RA-S86RI6Sg0oLL_Q7BTAheDzat-0ZLhtHWsRkQzwLQAB1VFKLn-cbPPKvlY27Zr4zbeNNvW-yPYJ6SiAShBUmPJXq--gNdBgkZgR8Bh70ulTR1F61f777kgLZp3qeiDUy54bdRU2TGWZFT108AKFwNQnGfFa6Q5X2NtEiJ7WKgi5VCwpIjo8UXk8j8xhSzmcjP8whDfnDGcASm0k_OGqeeRK683u5X2Bo0dk4a57kFLt6IeCo8AX0gYkhaTKeVq0Oco9iNCXkPvNCJ1NGZOKSv3om-OGNg7twCUKSn",
+        "status": null
+      },
+      {
+        "id": "msg_01d11c20884d3bf8006ad43e56f5c487d0a7c4c1b7f58d571d",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な意味や情報は保たれています。「はっきり意思を示す」という表現には明示的な命令を連想させる余地がありますが、続けて、言葉や書面ではっきり命じる必要はないと説明しており、全体として原文の区別は保たれています。帳簿への記入が命令成立の必須条件ではないという補足も、原文の趣旨と矛盾しません。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の対象は「教職員」ですが、「先生たち」としたことで、教員以外の職員が対象から抜けています。また、「給与規則二七条」「別表第九」という規定の特定情報が省かれています。さらに、原文は一定の「形式」を必須とする特段の要請がないと述べていますが、「決まった手続きや形式」を必要とする特別なルールがないとし、手続き一般にまで説明を広げています。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、命令の性質、形式が必須ではないこと、残業代を判断する際の条件、命令簿の役割を、短い文で順に説明しています。回答2は最初の段落に複数の論点が長い文で詰め込まれており、条件と結論の関係を一度で追うには回答1のほうが読みやすいです。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294494.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1608,
+      "input_tokens_details": {
+        "cache_write_tokens": 1605,
+        "cached_tokens": 0
+      },
+      "output_tokens": 785,
+      "output_tokens_details": {
+        "reasoning_tokens": 379
+      },
+      "total_tokens": 2393
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

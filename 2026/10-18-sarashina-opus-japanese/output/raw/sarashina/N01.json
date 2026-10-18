@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "N01",
+  "requested_at": "2026-10-18T03:26:50.830173+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "秋の夕方の商店街の様子を、200字程度の文章で描写してください。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-b62b0e6d1e68da00",
+    "object": "chat.completion",
+    "created": 1792294010,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "秋の夕方、商店街は柔らかな夕日に照らされ、橙色の灯りが一つ、また一つと灯り始める。店先の提灯が風に揺れ、八百屋の軒先には柿や栗が色鮮やかに並ぶ。子どもたちの笑い声と、遠くで鳴る豆腐屋の笛が混ざり合い、主婦たちの足取りはどこか急ぎつつも穏やかだ。通りを抜ける風には金木犀の香りが漂い、季節の移ろいを感じさせる。忙しない日常の中に、ひとときの安らぎが広がる光景である。"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 19,
+      "total_tokens": 122,
+      "completion_tokens": 103,
+      "prompt_tokens_details": null
+    }
+  }
+}

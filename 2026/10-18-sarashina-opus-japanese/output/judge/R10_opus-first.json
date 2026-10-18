@@ -1,0 +1,187 @@
+{
+  "id": "R10",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:37:12.461456+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n平素より自治会活動にご理解ご協力を賜り、誠にありがとうございます。さて、例年実施させていただいております地域一斉清掃につきまして、本年度におきましても十一月第二日曜日に実施させていただく運びとなりましたことをご報告させていただきますとともに、ご参加いただける方につきましては、当日の朝八時半までに公民館前にお集まりいただきたく、軍手やごみ袋等につきましては自治会のほうでご用意させていただく予定ではございますが、数に限りがございますことから、可能な方におかれましてはご持参いただけますと幸いでございます。なお、雨天の際の対応につきましては、前日の夕方までに改めてご連絡させていただく予定となっております。\n\n【回答 1】\nいつも自治会の活動にご協力いただき、ありがとうございます。\n\n今年も、毎年行っている地域の一斉清掃を行います。\n\n- **日にち**：11月の第2日曜日\n- **集合**：朝8時30分までに、公民館の前に集まってください。\n- **持ち物**：軍手とごみ袋は自治会で用意します。ただし、数に限りがあります。お持ちの方は、できるだけご自分で持ってきてください。\n- **雨の場合**：実施するかどうかは、前日の夕方までにお知らせします。\n\nご参加をお待ちしています。\n\n【回答 2】\nもちろんです。以下のように、分かりやすく自然な表現に書き直してみました。\n\n---\n\nいつも自治会の活動にご理解とご協力をいただき、ありがとうございます。  \n今年も例年通り、地域の一斉清掃を実施することとなりましたので、ご案内申し上げます。  \n\n日時は、**11月の第2日曜日**（今年は〇月〇日）です。  \nご参加いただける方は、**午前8時30分までに公民館前**にお集まりください。  \n\n軍手やごみ袋は自治会で用意いたしますが、数が限られておりますので、可能であれば各自でご持参いただけると助かります。  \n\nなお、雨天の場合は、**前日の夕方までにご連絡**いたしますので、どうぞよろしくお願いいたします。  \n\n何かご不明な点がございましたら、遠慮なくお知らせください。  \n皆さまのご参加を、心よりお待ちしております。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文では雨天時の「対応」を連絡するとしていますが、回答では「実施するかどうか」を知らせると限定しています。原文には、延期や集合方法の変更などを連絡する可能性も含まれます。また、持参の依頼対象が「可能な方」から「お持ちの方」に変わっており、持参できるかどうかではなく、所有しているかどうかが条件になっています。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": "重要な情報や条件は保たれています。ただし、「今年は〇月〇日」は原文にない未記入の補足であり、そのまま案内文として使う場合は削除または記入が必要です。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、日付・集合・持ち物・雨の場合について、短く直接的な表現で説明しており、必要な情報を一度で理解しやすくなっています。回答2も理解できますが、「実施することとなりましたので、ご案内申し上げます」などの改まった表現や、未記入の日付の補足があり、回答1より読み進める際の負担があります。"
+  },
+  "response": {
+    "id": "resp_06427720afcc7859006ad43ee89e5887d084d44a805218f1ae",
+    "access_programs": null,
+    "created_at": 1792294632.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_06427720afcc7859006ad43ee9aa2087d09dbd823a3cbfbe1e",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D732Q0mNX_6UJ1Y1fVP7ZhOQhuv92q_hF0TQ4o8HvqRYyEucCV22i1yLGi1Q2Xw0j_aLHqAjWavtckz7n8ajd3fOqAUAclvShpLRYOHzSFyFI0dKQLbrvSTdbg4d7sRSFW0fU4eJWNx6WWvT5lSF_qn7QjhoxuzrL_6YiBHMFlXDQu9EBIjT20BpwPJbDpySJtMTpg2HvaDvikGVIXfo9fScpNAOf07dN75QAyqVLOIUh5cKtJnzbGdr7a5Mq_kxIAdDZELlELIgt025ZisJ_Uv93IR31jNfOsYoWEQQEKDpi9CKfL3j69zlGLN56PEaHLQr-KmO4u5VisKsrDlmY81bKwacTgXufF5r1Zc2KSmFOkHfK4MbxLCbucA35pxJMNE5BepuvPLPHZVVPVVsD_uuF7FUozah1PZXIiW04yyuU0HTlm_LSkfiRlDnnBreuHG5zAldiohmWZNVCmBglYfDoqftaP-8c_QecmPOLWiGBeb9eTtGRTWiSAdyEnY1gIaxuXXbinyeGs2mUXMuukn0FJXFXhtehdMbNzjDhyqGSCkMY5fjmw0VFMsTxA6nUWPcPoWx8EiPfmhD6iRHHQ1DDBv1f-CNiIZeAaHIsiwlndmIFpK5eMooy-Pzxlr3gf3OdLVxA4vrAQMRjx6SFHqvzM8prmz8Pg29yTeTITkrkeCc2KU3r3gMCtocH9UWFL_DxgGa91trei8D7C_j8-F-CZiEhL_7R7twpxDfEQyzATGkuMXBs-2VPFPNuiHJbMWXqDrVLr18k4WJZF1ZOKKWpe-mdLCHcikllz5qw1ZAHsUNB9exJUzxjY_mbrKPqfeZ2qAvSOCxehCozY2yNwQHgpinpj7osxUa1rMGqUAbB3YGPlv_NrTPLLddmsexNEkUM8P8wCzIVxisHtxAhekmqnf7Gwco9Aci-V1OfLguMnasF0d3tYuzFSQct8JwsmhGAmxNx0ZJ2HTumIBNWrOtqdHVi5dO1dXSxOLZz5ubf9D1M9sCkBiLZ1qPR-hx82aFnVk6KyoDNr2tO__xI7eX6-VpGBGtuMGP8yR_npN588nGnopy4IchFjeN3dq47wBgnbT44wiuDAdrnn3vlIYhexTquEBjhocgr-pri7l7BJChMlrIixQEJvuKS8t1zJEouN5v3visDcBCRwp0rrA83-TUYF8uerKbVXRm7oHRHr_lvleM8LoQCtnhDkeG8o3ct_dCguybx5G1F1jtoiUG47edmZv-jQtM6R1b4jc8ja1eqKHCMbxum6ax6FXiQet6_xU16tosKhBC5cKOS-P1BTAftNf5nUEJ6nvHKUzei4klqWIxvtjmYB2v7fF7Q-PjJxaVYZVcGLHOT8T4lL_PNDNverj3Ql9lgahJEzh0l4_LuNorSFUvVnPyu_lCym7sXTVfHO1PWJjclRw0vpQWPngz_rKRGvL30WqF4Hsmulyd-k2c1eicNxrCFnCr8cvnMc9fwCLBjo1F2LPLvGKjj0hAINgAuWTpOzvwCurC1jAk_86JUkv6N6iqsLpPya5dOyC-ZmoFXPQ8x1Aqus1xwlNDq_7ln-XzdcgK4r0Jf0_2oT-j2TDphbzdjbwnGyBinfjxGnTIzMIfy7z-jvIOCjaSS6UTnZUb6BpF6FmERggcCjCkHtlCDBAb1o9ky76guGOt166PFZK6Y7_uR0MN4gVgLzL1MJM1wlugl9ssnYrDPubSo6Wk2sJKn_kD5PM9g73vjnt--1mTeCfcDYptIlzaq_bnwSxDnx9uZ_oTrzD5h6l9s-3qmsDMWHxc3Qt6GPivIwiMX1PEC-WyX526IY50gGFD4BUNghx_xlXJT4y3gG4ylsdiwbPciHgiw-cQ9UP-UNnwGrChAeeKrE1G6cd3mrlvtFidxyjqQUvqDE66RCNMi0ecfgBg2IBBtGOwUWbUCwQQdpzKqa71U0098JnCZQKP2T-3qLi1zDH1gkZZXYkpbqObJ6w0v5wTlrWEDsZL_TDCiSgu4OJ7k16CUWYdgMmsA3PVqs8Ot4RI1_0wYt-U4JKrf5t_j4Eb4j4grEJhwt8SUfHLm9AdqcLCFHSnvOdbbrbBB8QGrnODP6ChcI9WGmuGIHEg2c1ugxc7v5jRWBkg1UK4LhEbUUectYsDc316e6ZTKHGeDzc3Ib1BT9xjHwlA5ewGXym8cUhYAeRtwVhCZiaFw9zXFqn7oVfEF5kfgaibj-lRkxRYZj3IXk6A0O6uIHx7WN_i8htj-jJzQVMiHL-6Gv5qPpEEuC4ZCwsVRsDhrpWOBZ0KXmBxLweWQi3d-CvuVczdhvWz2wXriLF7aMO5m6IYodXSBNocOOaweWTtbZqQT5_3lMr0-2O2-xMy44vbAZhrENpAEr7BqGKdh5L6Rw-s_AOTJOyQbz_IzDqGt5un2KC3rChTd-5IUoXw-pzBD_Mw_0Q4QzFEQtNznU0-Rl3k3sLBz9B8Hb9dlOjLW6-1UDaEKLnXXjILj7h4zXDk9moYVPhmwxJa2cyppuG9Fq1eIUxv_dZ1-hh1EdCvNgCVwk9mUy5YlEelJ9glVnHbkPHGb9hwcShFbgfe_LyX3W8nrpBGWHHiclHRCeUVkcFwj1_BzGmw-_vSt4PYokLx9RBvpIpdP-7qYAVwEswh6XVavRkRIpXufMHUd55HaCaE-VSiBhM4izp9uoudyz-aQ8JE-PEEYM99GxJasb3I7a9esdQj3lwqQxSF5vlrfrRlTJ6rwU9EkEPHii9BQl00gG5R2L134qTlOTbsNG6mlmvUGZBVaKO8ARg2UMEZSegg4TjgML0wj8ku5VxpQPSGKDd2Z8CZfdbzTEp70SowG7eCmB-yTXhT1fydapQImQU0S_ijwOCdokxQbfcShZOfsvCENA9DAbkqsWgCbw95dvXcI7YeTfBXpdx6etQaPvYYRIW6l5YmqgL--xGe-7Uudj8O51w9h1PiR6Ck7FNHNX4ksI8hTAa3dl98fHgOLxgMLPb3fujOEqhTQ_A6i6sYz4kDlq3EIW-LMPZy02GKB86wboEcD3WgmgTnxw70jTsw-gVTkZMLqDK1PH4lYAqwl3E56-NW99xRB0Ulm9tcsayxIQNIdkZ2aHxRLEqxQhcb7_4BJ-ee9Or4qLNc2MX-Vkhi-RCclJM9TUA3fzDbte3IjE8aS9scSQBQFaqIzHMFtDhA7FqR-dkPkxdoCQQU80G5n9C4VFWTu8Czjy8JR6nuuh9t1HNd6IDgVwRA8qh2V5gWclLn5iLVS7zDwi2MbO83Ienui580qKc07Mc37vIQWzWHff8KWK34i3TKOQmNUHuYkDcWM4vDo_L6LdwrL_jy7AZP-wDh39MsG0GGe2S1auXu87BeBg01V7XpLGlg4UjP_kokimkI9IGL8jk-bpNqo7QlptVReFNqk7ppYeGIxKc0y3RV7gc8kjSDW4jNb3dErHNh3w_zW2muisETv-g_WNpV_CVV0SHJ2tqiWvg3yKNcKsFlzsyyTiP3zcOUep_EY6jIqBP6TwrAZj27UndNIZ3v9mrr3HwEFDRTFsi_3jrGPDyEri8LOC4u_yff6_x6R4Fbx07B45h-gh97WeY0syLDhvrhEb6AIsOEcxNKQFhUdKM86TnRhlw7E9So-6XtOrgzFVGCpdWhPr18w-ZZp-2WxTRSyaK_TWIUr6GatKMLdkhG2RkGxIUfG84kfXc7EajMvLo-0inauaYQHiTaC_0v79bjMX9XkO6E2Ri0m9hmQ==",
+        "status": null
+      },
+      {
+        "id": "msg_06427720afcc7859006ad43eefc7ac87d0bd90012ef2bf44d6",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文では雨天時の「対応」を連絡するとしていますが、回答では「実施するかどうか」を知らせると限定しています。原文には、延期や集合方法の変更などを連絡する可能性も含まれます。また、持参の依頼対象が「可能な方」から「お持ちの方」に変わっており、持参できるかどうかではなく、所有しているかどうかが条件になっています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報や条件は保たれています。ただし、「今年は〇月〇日」は原文にない未記入の補足であり、そのまま案内文として使う場合は削除または記入が必要です。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、日付・集合・持ち物・雨の場合について、短く直接的な表現で説明しており、必要な情報を一度で理解しやすくなっています。回答2も理解できますが、「実施することとなりましたので、ご案内申し上げます」などの改まった表現や、未記入の日付の補足があり、回答1より読み進める際の負担があります。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294647.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1134,
+      "input_tokens_details": {
+        "cache_write_tokens": 1131,
+        "cached_tokens": 0
+      },
+      "output_tokens": 498,
+      "output_tokens_details": {
+        "reasoning_tokens": 168
+      },
+      "total_tokens": 1632
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

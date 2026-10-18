@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "R10",
+  "requested_at": "2026-10-18T03:25:39.447604+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n平素より自治会活動にご理解ご協力を賜り、誠にありがとうございます。さて、例年実施させていただいております地域一斉清掃につきまして、本年度におきましても十一月第二日曜日に実施させていただく運びとなりましたことをご報告させていただきますとともに、ご参加いただける方につきましては、当日の朝八時半までに公民館前にお集まりいただきたく、軍手やごみ袋等につきましては自治会のほうでご用意させていただく予定ではございますが、数に限りがございますことから、可能な方におかれましてはご持参いただけますと幸いでございます。なお、雨天の際の対応につきましては、前日の夕方までに改めてご連絡させていただく予定となっております。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg8zKJwmM3ytPPPU5iTQa",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSmgUKEAgSGAI4AUIIdGhpbmtpbmcSDGtmRhhGtNsiTw9J9xoMaJpjUd5/+3u3q4HaIjAuuVGKAMpM8iKch+CknKEwmJg5U4ldxwbQR1HzQSJJ8Qk+eL8lcovPcGqS+A4SF5UqtwRjRJgx5qmD16iCKmI+0bTWiaNdz+IFhlM40HfrW/+WkAM/Yvsp4cjor6ipq/8yp9dq2vSI6NJLdiz3MGoa8NLIXxu416wZ5+4l0ba3C7ECsqVeJIXKiWLg8V5iD0VW+JEgsGW+qfAZ1tVl9bfKvdJ89+JtOy3eQLcRyF4Q+KNvyY20LeN2ce1iUcs6HAzj8obWFtWZxoSCcNoT4bfcD8W/C1KIkPhhvblx8a2QOhXwGWTqJWINkb6Roj6JAdqM46mps/A6O6Pchy5FysSp+WwJ3uGAeAeS3OVcjfzYVI1uw094AxhJwVlmo/MO30XDzZPzAyO721kUPF7sI4LJarBGnLLb40Nv7hmn4uL6MVj0pBkM1ATjp4aYw7agYL54ST11b0mpm36VdA+sG+pL6r8kTBzeneNv5m8Fs4UR85b1F8rvbyy/+P5Q4ISjo3tdtfF2PTaCmtRhypfJtBsnhtvjxokbfi4mPPxQ5g4wkYWK1mlpfbmYfqun8mSX9xfhRwuW0aB4Tw7TUeDlEchh0Rj2D08uz1gRIXQ+9feBGVRlYDmxUmf4Lb4KTrR4evsMqC3vqAUSMjvVyRdCKvKQrZa0j9CKfj8yCoxcExSvWVoXVKo95aaLy9qwsKGk/PKBFyonCxoHn+omrw2kBnNpQ54Lj7wsHdm5GaYvFrqKqZXYzpAM5leRqnzyK2ZHVZeqBENjvalGJYdxSUe8oBmvpG3T64PSCX07nNWVHrfi5dl0Te4UKlh0ylgYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "いつも自治会の活動にご協力いただき、ありがとうございます。\n\n今年も、毎年行っている地域の一斉清掃を行います。\n\n- **日にち**：11月の第2日曜日\n- **集合**：朝8時30分までに、公民館の前に集まってください。\n- **持ち物**：軍手とごみ袋は自治会で用意します。ただし、数に限りがあります。お持ちの方は、できるだけご自分で持ってきてください。\n- **雨の場合**：実施するかどうかは、前日の夕方までにお知らせします。\n\nご参加をお待ちしています。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 300,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 233,
+      "output_tokens_details": {
+        "thinking_tokens": 30
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}

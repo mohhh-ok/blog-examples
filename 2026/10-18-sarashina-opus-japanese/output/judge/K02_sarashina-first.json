@@ -1,0 +1,145 @@
+{
+  "id": "K02",
+  "category": "敬語",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T03:37:50.856915+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 敬語が正しく使われているか、場面と相手にふさわしいか、タスクで指示された内容がすべて含まれているか\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文には敬語の誤りが含まれています。誤りをすべて指摘し、正しい形に直した文と、それぞれの理由を書いてください。\n\n---\n先日お送りした資料は、もうご拝見になられましたでしょうか。部長がおっしゃられていたとおり、今回の価格はお求めやすくなっております。ご不明な点がございましたら、受付の者にお伺いください。\n\n【回答 1】\nご質問の文章について、敬語の誤りを一つずつ確認し、正しい表現に修正したうえで、その理由をご説明いたします。\n\n---\n\n**原文**  \n「先日お送りした資料は、もうご拝見になられましたでしょうか。部長がおっしゃられていたとおり、今回の価格はお求めやすくなっております。ご不明な点がございましたら、受付の者にお伺いください。」\n\n---\n\n### 1. 「ご拝見になられましたでしょうか」\n- **誤りの理由**：  \n  「拝見」は謙譲語であり、相手（聞き手）の動作に使うのは不適切です。また、「ご～になる」という尊敬語の形に「拝見」を組み合わせると、二重敬語（過剰敬語）になります。「拝見」は「見る」の謙譲語なので、相手の行為を表す場合は「御覧になる」「見られる」などの尊敬語を使うべきです。\n\n- **正しい形**：  \n  「御覧になりましたでしょうか」または「ご覧いただきましたでしょうか」\n\n- **理由の詳細**：  \n  「拝見」は自分や自分の側の人間が「見る」ことを表す謙譲語です。相手の行為に対しては「御覧になる」（「見る」の尊敬語）を用います。「ご拝見になる」は「ご～になる」＋「拝見」という構造で、謙譲語と尊敬語が混在し、さらに「～られる」を付けることで二重敬語になっています。\n\n---\n\n### 2. 「おっしゃられていた」\n- **誤りの理由**：  \n  「おっしゃる」はすでに「言う」の尊敬語です。そこに「～られる」を付けると二重敬語になります。「おっしゃられる」は誤りで、「おっしゃる」または「言われた」が正しい形です。\n\n- **正しい形**：  \n  「おっしゃっていた」または「言われた」\n\n- **理由の詳細**：  \n  「おっしゃる」は「言う」の尊敬語です。「～られる」は尊敬の意味を加える助動詞ですが、「おっしゃる」にさらに「られる」を付けると、尊敬の意味が重複し、不自然な表現になります。\n\n---\n\n### 3. 「受付の者にお伺いください」\n- **誤りの理由**：  \n  「伺う」は「聞く」「尋ねる」の謙譲語で、話し手が相手に対して使う表現です。ここでは「受付の者」が「聞く」主体になるため、「伺う」を使うと、受付の者を低めることになり、相手に対して失礼になります。相手の行為を表す場合は「お尋ねください」などの尊敬語を用いるべきです。\n\n- **正しい形**：  \n  「受付の者にお尋ねください」または「受付の者にお聞きください」\n\n- **理由の詳細**：  \n  「伺う」は謙譲語であり、自分や自分の側の人間が「聞く」ことを表す際に使います。相手の行為に対しては「お尋ねになる」「お聞きになる」などの尊敬語を用います。\n\n---\n\n### 修正後の文\n「先日お送りした資料は、もう御覧になりましたでしょうか。部長がおっしゃっていたとおり、今回の価格はお求めやすくなっております。ご不明な点がございましたら、受付の者にお尋ねください。」\n\n---\n\n以上が、敬語の誤りの指摘と修正、およびその根拠です。何か他にご質問がございましたら、どうぞお知らせください。\n\n【回答 2】\n# 敬語の誤りと訂正\n\n## 訂正後の文\n\n> 先日お送りした資料は、もう**ご覧になりました**でしょうか。部長の〇〇が**申しておりました**とおり、今回の価格は**お求めになりやすく**なっております。ご不明な点がございましたら、受付の者に**お尋ねください**。\n\n## 誤りの指摘と理由\n\n### ① 「ご拝見になられました」→「ご覧になりました」\n\n- **謙譲語の誤用**:「拝見する」は自分が見ることをへりくだる謙譲語です。相手の行為に使うと、相手を低めることになります。相手が見る場合は尊敬語の「ご覧になる」を使います。\n- **二重敬語**:「ご〜になる」に尊敬の助動詞「れる」を重ねた「ご〜になられる」は二重敬語です。\n- 別の言い方として「ご覧いただけましたでしょうか」も適切です。\n\n※「〜ましたでしょうか」は「ます」と「です」が重なっていますが、慣用的に広く使われているため許容範囲とされます。気になる場合は「ご覧になりましたか」とします。\n\n### ② 「おっしゃられていた」→「申しておりました」\n\n- **二重敬語**:「おっしゃる」はそれだけで尊敬語です。さらに「られる」を付けると二重敬語になります。社内の会話なら「おっしゃっていた」で正しくなります。\n- **身内敬語の誤り**:この文は資料を送った相手、つまり社外の顧客に向けた文章だと考えられます。社外の人に対して自社の部長の行為に尊敬語を使うのは誤りです。謙譲語の「申す」を使い、「部長の〇〇が申しておりました」とします。\n\n### ③ 「お求めやすく」→「お求めになりやすく」\n\n- 尊敬語の正しい形は「お〜になる」です。「求める」は「お求めになる」となり、そこに「やすい」が付いて「お求めになりやすい」となります。\n- 「お求めやすい」は「お〜になる」の「になる」が抜けた形で、文法的には誤りとされます。\n- 広告などで慣用的に定着しているため、許容する見方もあります。ただし、改まった文書では避けるのが無難です。\n\n### ④ 「お伺いください」→「お尋ねください」\n\n- **謙譲語の誤用**:「伺う」は「聞く・尋ねる」の謙譲語です。相手(顧客)の行為に使うと、相手を低めることになります。\n- さらに、謙譲語は動作の向かう先を高めるため、この文では身内である「受付の者」を高めてしまいます。\n- 相手の行為には尊敬語を使い、「お尋ねください」「お聞きください」とします。\n",
+  "judgement": {
+    "winner": "2",
+    "reason": "回答2のほうが、誤りの指摘と理由が具体的で、場面への配慮もあります。「ご拝見になられました」の謙譲語の誤用と二重敬語、「おっしゃられていた」の二重敬語を区別して説明し、社外の顧客に向けた文と考える場合の身内敬語にも言及しています。また、「お伺いください」について、尋ねる主体は相手であり、謙譲語では身内の受付担当者を高めてしまう点を正しく説明しています。回答1には、ここで『受付の者』が聞く主体になるという明確な読み違いがあります。ただし、回答2にも留保は必要で、社外向けという設定は原文で確定しておらず、『お求めやすい』を文法的な誤りと断定する説明も、慣用や許容の幅を踏まえると強すぎます。それでも、説明の正確さと指摘の網羅性では回答2が優れています。"
+  },
+  "response": {
+    "id": "resp_0d15c5bff6950d8a006ad43f0f41c087d08849e8f7c8aff51c",
+    "access_programs": null,
+    "created_at": 1792294671.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0d15c5bff6950d8a006ad43f1017d087d0911a3f3fdf337d24",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D8aiTdvQ-tZ_vhKi3qYYsGP9oMfj18bcTU_wRGImKdwvjaGOSKnnlePoXD8u-nEdPkdyn1JQTFqdInb7joZ-WpB_x6Z0brg1cIMb9uv-YqCIm-PGVIzX583bOgbWNLF0X0vFtI28vDWE06nxVI3iSKm14mTfgm4yGKr7Q1rUDCsFNr3dVkJ6enfE1gBn4xwV_6W_ud_u40_tNnqR40IbuDm5j1tXkkV2tJd91AzchRBbW1ELNpeEDxmqvWSC0LNuzoCo3m2gwkssGBdtRUoJ-V_Q4JnnK8H8-31SvO289HLc3q9tPhebfFpmTX5hVrtwCHaTAFxStc1mJSszCVNAfXeAZJsr4cf2geNV0dLkj8OVrp1JHIXAzReFWghlTXQYlpmIshTa6aNQlW1WJZBbOD_5FdNIXByz6JnzXbEFdHGdjORUp1eWQtAgg-Gj9bazxXcMjt01o1BVPCJjXAQy8Q4cPcBbqdazBhEPNxObs7hRxgRCrDp1U6apgsIlH_PK0WMGiTYNoNP1ba4lo-BksOuoJzcDPq7Ljnnug6dGb7l-pFvuciMV5WNko7rCgCLGn_52GX8w_gqtAuxnRj_DhS2DVSlxrsllhd0CttG8gMPGvi2xOXZL_1EXhGLe-XwlhvOCc4O60q_OeDH8RZ97JZ0c2XKgc5l5mW78HtzSiCrh2vX-Zd_dQWWRP0zfGKLtMSxWsFHhfZcAS1MjNuDrGr6Z_UORol_L4AatMNI4eIAPA9CDWKhV08vupmZ23lF1ttmqFoA6XiWtI6q0VWP9LWovQ-2adxVOev-eVUGQzEiqLjB2exyqrcTV9-kyP--FBy4zwf0HRfwIcYLg0WgKhqv7M4vNtO3ul5dDNp_Hx7MlIu4nGeMr6Xuq_ivGhsjN_AvxbokaItKaSz1RuQM8gPxzwqAwcsOfUG9PNedZgTJfJ4Pr6pKkZT7IS0iHwtJ4TewqYv0zxjxVdKDe8yDVK0Mr3liAmNMZ_J76osW7LJ5RYqMl5TbvHFa4IJXXcUclyPNZiGkDBAgREuHiX-XhquSsAzSsB-zpMC5xINiRfveQAY8ANgXzt51Gt70NOSzYILo33TDH6LoXKYc7luvpWr4qAn52Wqja-_PzJyNq_P1IPaRV39luSYEUolq1p_HZHLzW7hF_cir169wvEWEqIpNIfG2DetXt8vD9BQLCDHAC4AoyJnAixWkKuARSe1Ze4tn5CClaR2lO8tF8Dqt0rFzW44KDNpF0LYz1Ph7gg430ijzQn3O42vx5S9iewSHksG6-7Z9i3d7SREAl0_Lq8WepY-Ut57_Y77t4RrK8k-zQ3WePoDRDJ8NwCrHzJx9DqNzfU5w-HvGOPeFFgzrYuJdZbfvEglRxluBJARdNvHcLy-cqolWINxW_cq11d943GqeNlynBDqH_QbXCCxrKD_IowQL9qsbLSBspi0yELXxeU2F9F03q2VzleRVFTlFCx-wK5vddkSGsVy8hh7BjVTbMsbuDEm8yxMPnNMh3cuZSMTHjvF7EZcSZsniTWqUw-wEsAZuHj9OC5xGl5yrpwcu2Gk_n2ge2vtuTDQwIoGFRdkFenfbL5lZizsaWh0Tge8afYWIpLiDKcFoFg2mqRFSuHB-UGKZdNWHvXQ-gnOuiqztqwvf0uQtI2wkqroR-wsHQmG1mDcbjGBkUq4izeh2uuJYSu7XMzAeKsfxgiTUtBML_RjeAKtYW1p8ubkdoxj8o_M0hwr0LEncygsZV5Cp7-f8tDdQJNDmjt6l9DRxecnyosrVFTCWZDkh1zm7gBO71qzVmtEw2cTl4dAzbp4n5sOjqrr5PokUcdwLlzZTlebikiFoX8QFgR9fdSs_pfUI0unsIYVu__E2cOoWnBa1RtmDlho9tilQx3LqnS_Jou1dtvvoXsl76dpOslIj2NHdOEVn_IDhAbjrZDN-pHvXtQOk2opw9J58Tr-5GOeCpXGH_GXpIqkW3n7r7hhrdrJ8kNeRsJWzIXaX9LK2PXQwlIErqN42ls_IbYKjYfxw7T_o3n5W_UR40-RWD2M-3JL_EBcGzglK1aECdpPwQ7aAdsvoXnkwVNY5mp-yWjpXYDhdcL9ypDq41c-XClosjP7bWdv5fLuwBxy9K3cBPk6bkdgsZPdiMBK66nxM7ECkQjedxPx-qMdf28qaJWVoGh5PXxbtV2fV1vlMOlRLodCpAkRgxBKaaM_i4eTVFe45oVqzreCCgQr72uUQ-2FjW_7ekA_oX3MNxplGWKIaaCviWE1ZfOt_NUwNCWcdYuA-99-ec5gmGegiuQVYrh7wYdbljVGzk6GC-0jSkS3NSo6cWhzkoLcfGoMbH5kVaQ2QEOFehX3YB-9RsxqCzLZXgT8ECCbHo7pGBUMq1w0QdYrNJ7t5hi-2AsAU-oT4c9HWRhr01O_1O4CKJJG4Aol31LyH2PUXTgMOPfcSiqRp9k4jL_zUBcIcrc8btMD4dKCCFftG-yOg1jNluYmQbnG1e53cX0Od0rKjHDJl0NIEmH2Uh4BdjQAGvz9TYozquk7a5SCGqa697lgZqCsQg-Ie-r3MGA-gklmbwi7ENAL7OlByFUMMVo6Q9Egc1XkrDOx8r23bRjjyGGQXkCxWFIyqKLMrMDVrZGbc3gosVO-n1muLEPz4-9XYVcjC0E9VNAAxaFzMNR30LiQ71ci4ewXf8vzc_dx2AZur4GSDkdjYSO04fSHYOsCXKJyfqd8I3j9tGit9WbfPIJut-6mG1yIw0vLor4Deph92JRpdJKOpPW91zWV8Zt5HpPjv9nbk8_ExmWuVE15v7yf0C7vFkBMsFIl17ZHHipYiWbauubuPN-p2BkoVH4F58ycmrjaBIW8BPXosIhmGI9s7vwDcBXzzQNDQJ8w5xvuv5cN8jv_u-q59DYNQVVcuzarXTR31P9KAmoLgk7hlT8QdjrT2TFSkRl85",
+        "status": null
+      },
+      {
+        "id": "msg_0d15c5bff6950d8a006ad43f140a2c87d08cc7ff111b4d5d37",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"2\",\"reason\":\"回答2のほうが、誤りの指摘と理由が具体的で、場面への配慮もあります。「ご拝見になられました」の謙譲語の誤用と二重敬語、「おっしゃられていた」の二重敬語を区別して説明し、社外の顧客に向けた文と考える場合の身内敬語にも言及しています。また、「お伺いください」について、尋ねる主体は相手であり、謙譲語では身内の受付担当者を高めてしまう点を正しく説明しています。回答1には、ここで『受付の者』が聞く主体になるという明確な読み違いがあります。ただし、回答2にも留保は必要で、社外向けという設定は原文で確定しておらず、『お求めやすい』を文法的な誤りと断定する説明も、慣用や許容の幅を踏まえると強すぎます。それでも、説明の正確さと指摘の網羅性では回答2が優れています。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294682.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 2043,
+      "input_tokens_details": {
+        "cache_write_tokens": 2040,
+        "cached_tokens": 0
+      },
+      "output_tokens": 398,
+      "output_tokens_details": {
+        "reasoning_tokens": 125
+      },
+      "total_tokens": 2441
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

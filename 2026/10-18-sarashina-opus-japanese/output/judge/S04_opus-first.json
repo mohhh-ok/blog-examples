@@ -1,0 +1,145 @@
+{
+  "id": "S04",
+  "category": "要約",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:41:09.293595+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 原文の要点を正確に押さえているか（原文にない内容や事実の誤りがないか）、字数の指示に合っているか、日本語として自然か\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を200字程度で要約してください。\n\n---\nよだかは、実にみにくい鳥です。\n　顔は、ところどころ、味噌をつけたようにまだらで、くちばしは、ひらたくて、耳までさけています。\n　足は、まるでよぼよぼで、一間とも歩けません。\n　ほかの鳥は、もう、よだかの顔を見ただけでも、いやになってしまうという工合でした。\n　たとえば、ひばりも、あまり美しい鳥ではありませんが、よだかよりは、ずっと上だと思っていましたので、夕方など、よだかにあうと、さもさもいやそうに、しんねりと目をつぶりながら、首をそっ方へ向けるのでした。もっとちいさなおしゃべりの鳥などは、いつでもよだかのまっこうから悪口をしました。\n「ヘン。又出て来たね。まあ、あのざまをごらん。ほんとうに、鳥の仲間のつらよごしだよ。」\n「ね、まあ、あのくちのおおきいことさ。きっと、かえるの親類か何かなんだよ。」\n　こんな調子です。おお、よだかでないただのたかならば、こんな生はんかのちいさい鳥は、もう名前を聞いただけでも、ぶるぶるふるえて、顔色を変えて、からだをちぢめて、木の葉のかげにでもかくれたでしょう。ところが夜だかは、ほんとうは鷹の兄弟でも親類でもありませんでした。かえって、よだかは、あの美しいかわせみや、鳥の中の宝石のような蜂すずめの兄さんでした。蜂すずめは花の蜜をたべ、かわせみはお魚を食べ、夜だかは羽虫をとってたべるのでした。それによだかには、するどい爪もするどいくちばしもありませんでしたから、どんなに弱い鳥でも、よだかをこわがる筈はなかったのです。\n　それなら、たかという名のついたことは不思議なようですが、これは、一つはよだかのはねが無暗に強くて、風を切って翔けるときなどは、まるで鷹のように見えたことと、も一つはなきごえがするどくて、やはりどこか鷹に似ていた為です。もちろん、鷹は、これをひじょうに気にかけて、いやがっていました。それですから、よだかの顔さえ見ると、肩をいからせて、早く名前をあらためろ、名前をあらためろと、いうのでした。\n　ある夕方、とうとう、鷹がよだかのうちへやって参りました。\n「おい。居るかい。まだお前は名前をかえないのか。ずいぶんお前も恥知らずだな。お前とおれでは、よっぽど人格がちがうんだよ。たとえばおれは、青いそらをどこまででも飛んで行く。おまえは、曇ってうすぐらい日か、夜でなくちゃ、出て来ない。それから、おれのくちばしやつめを見ろ。そして、よくお前のとくらべて見るがいい。」\n「鷹さん。それはあんまり無理です。私の名前は私が勝手につけたのではありません。神さまから下さったのです。」\n「いいや。おれの名なら、神さまから貰ったのだと云ってもよかろうが、お前のは、云わば、おれと夜と、両方から借りてあるんだ。さあ返せ。」\n「鷹さん。それは無理です。」\n「無理じゃない。おれがいい名を教えてやろう。市蔵というんだ。市蔵とな。いい名だろう。そこで、名前を変えるには、改名の披露というものをしないといけない。いいか。それはな、首へ市蔵と書いたふだをぶらさげて、私は以来市蔵と申しますと、口上を云って、みんなの所をおじぎしてまわるのだ。」\n「そんなことはとても出来ません。」\n「いいや。出来る。そうしろ。もしあさっての朝までに、お前がそうしなかったら、もうすぐ、つかみ殺すぞ。つかみ殺してしまうから、そう思え。おれはあさっての朝早く、鳥のうちを一軒ずつまわって、お前が来たかどうかを聞いてあるく。一軒でも来なかったという家があったら、もう貴様もその時がおしまいだぞ。」\n「だってそれはあんまり無理じゃありませんか。そんなことをする位なら、私はもう死んだ方がましです。今すぐ殺して下さい。」\n「まあ、よく、あとで考えてごらん。市蔵なんてそんなにわるい名じゃないよ。」鷹は大きなはねを一杯にひろげて、自分の巣の方へ飛んで帰って行きました。\n　よだかは、じっと目をつぶって考えました。\n（一たい僕は、なぜこうみんなにいやがられるのだろう。僕の顔は、味噌をつけたようで、口は裂けてるからなあ。それだって、僕は今まで、なんにも悪いことをしたことがない。赤ん坊のめじろが巣から落ちていたときは、助けて巣へ連れて行ってやった。そしたらめじろは、赤ん坊をまるでぬす人からでもとりかえすように僕からひきはなしたんだなあ。それからひどく僕を笑ったっけ。それにああ、今度は市蔵だなんて、首へふだをかけるなんて、つらいはなしだなあ。）\n　あたりは、もううすくらくなっていました。夜だかは巣から飛び出しました。雲が意地悪く光って、低くたれています。夜だかはまるで雲とすれすれになって、音なく空を飛びまわりました。\n　それからにわかによだかは口を大きくひらいて、はねをまっすぐに張って、まるで矢のようにそらをよこぎりました。小さな羽虫が幾匹も幾匹もその咽喉にはいりました。\n　からだがつちにつくかつかないうちに、よだかはひらりとまたそらへはねあがりました。もう雲は鼠色になり、向うの山には山焼けの火がまっ赤です。\n　夜だかが思い切って飛ぶときは、そらがまるで二つに切れたように思われます。一疋の甲虫が、夜だかの咽喉にはいって、ひどくもがきました。よだかはすぐそれを呑みこみましたが、その時何だかせなかがぞっとしたように思いました。\n　雲はもうまっくろく、東の方だけ山やけの火が赤くうつって、恐ろしいようです。よだかはむねがつかえたように思いながら、又そらへのぼりました。\n　また一疋の甲虫が、夜だかののどに、はいりました。そしてまるでよだかの咽喉をひっかいてばたばたしました。よだかはそれを無理にのみこんでしまいましたが、その時、急に胸がどきっとして、夜だかは大声をあげて泣き出しました。泣きながらぐるぐるぐるぐる空をめぐったのです。\n（ああ、かぶとむしや、たくさんの羽虫が、毎晩僕に殺される。そしてそのただ一つの僕がこんどは鷹に殺される。それがこんなにつらいのだ。ああ、つらい、つらい。僕はもう虫をたべないで餓えて死のう。いやその前にもう鷹が僕を殺すだろう。いや、その前に、僕は遠くの遠くの空の向うに行ってしまおう。）\n　山焼けの火は、だんだん水のように流れてひろがり、雲も赤く燃えているようです。\n　よだかはまっすぐに、弟の川せみの所へ飛んで行きました。きれいな川せみも、丁度起きて遠くの山火事を見ていた所でした。そしてよだかの降りて来たのを見て云いました。\n「兄さん。今晩は。何か急のご用ですか。」\n「いいや、僕は今度遠い所へ行くからね、その前一寸お前に遭いに来たよ。」\n「兄さん。行っちゃいけませんよ。蜂雀もあんな遠くにいるんですし、僕ひとりぼっちになってしまうじゃありませんか。」\n「それはね。どうも仕方ないのだ。もう今日は何も云わないで呉れ。そしてお前もね、どうしてもとらなければならない時のほかはいたずらにお魚を取ったりしないようにして呉れ。ね、さよなら。」\n「兄さん。どうしたんです。まあもう一寸お待ちなさい。」\n「いや、いつまで居てもおんなじだ。はちすずめへ、あとでよろしく云ってやって呉れ。さよなら。もうあわないよ。さよなら。」\n　よだかは泣きながら自分のお家へ帰って参りました。みじかい夏の夜はもうあけかかっていました。\n　羊歯の葉は、よあけの霧を吸って、青くつめたくゆれました。よだかは高くきしきしきしと鳴きました。そして巣の中をきちんとかたづけ、きれいにからだ中のはねや毛をそろえて、また巣から飛び出しました。\n　霧がはれて、お日さまが丁度東からのぼりました。夜だかはぐらぐらするほどまぶしいのをこらえて、矢のように、そっちへ飛んで行きました。\n「お日さん、お日さん。どうぞ私をあなたの所へ連れてって下さい。灼けて死んでもかまいません。私のようなみにくいからだでも灼けるときには小さなひかりを出すでしょう。どうか私を連れてって下さい。」\n　行っても行っても、お日さまは近くなりませんでした。かえってだんだん小さく遠くなりながらお日さまが云いました。\n「お前はよだかだな。なるほど、ずいぶんつらかろう。今夜そらを飛んで、星にそうたのんでごらん。お前はひるの鳥ではないのだからな。」\n　夜だかはおじぎを一つしたと思いましたが、急にぐらぐらしてとうとう野原の草の上に落ちてしまいました。そしてまるで夢を見ているようでした。からだがずうっと赤や黄の星のあいだをのぼって行ったり、どこまでも風に飛ばされたり、又鷹が来てからだをつかんだりしたようでした。\n　つめたいものがにわかに顔に落ちました。よだかは眼をひらきました。一本の若いすすきの葉から露がしたたったのでした。もうすっかり夜になって、空は青ぐろく、一面の星がまたたいていました。よだかはそらへ飛びあがりました。今夜も山やけの火はまっかです。よだかはその火のかすかな照りと、つめたいほしあかりの中をとびめぐりました。それからもう一ぺん飛びめぐりました。そして思い切って西のそらのあの美しいオリオンの星の方に、まっすぐに飛びながら叫びました。\n「お星さん。西の青じろいお星さん。どうか私をあなたのところへ連れてって下さい。灼けて死んでもかまいません。」\n　オリオンは勇ましい歌をつづけながらよだかなどはてんで相手にしませんでした。よだかは泣きそうになって、よろよろと落ちて、それからやっとふみとまって、もう一ぺんとびめぐりました。それから、南の大犬座の方へまっすぐに飛びながら叫びました。\n「お星さん。南の青いお星さん。どうか私をあなたの所へつれてって下さい。やけて死んでもかまいません。」\n　大犬は青や紫や黄やうつくしくせわしくまたたきながら云いました。\n「馬鹿を云うな。おまえなんか一体どんなものだい。たかが鳥じゃないか。おまえのはねでここまで来るには、億年兆年億兆年だ。」そしてまた別の方を向きました。\n　よだかはがっかりして、よろよろ落ちて、それから又二へん飛びめぐりました。それから又思い切って北の大熊星の方へまっすぐに飛びながら叫びました。\n「北の青いお星さま、あなたの所へどうか私を連れてって下さい。」\n　大熊星はしずかに云いました。\n「余計なことを考えるものではない。少し頭をひやして来なさい。そう云うときは、氷山の浮いている海の中へ飛び込むか、近くに海がなかったら、氷をうかべたコップの水の中へ飛び込むのが一等だ。」\n　よだかはがっかりして、よろよろ落ちて、それから又、四へんそらをめぐりました。そしてもう一度、東から今のぼった天の川の向う岸の鷲の星に叫びました。\n「東の白いお星さま、どうか私をあなたの所へ連れてって下さい。やけて死んでもかまいません。」\n　鷲は大風に云いました。\n「いいや、とてもとても、話にも何にもならん。星になるには、それ相応の身分でなくちゃいかん。又よほど金もいるのだ。」\n　よだかはもうすっかり力を落してしまって、はねを閉じて、地に落ちて行きました。そしてもう一尺で地面にその弱い足がつくというとき、よだかは俄かにのろしのようにそらへとびあがりました。そらのなかほどへ来て、よだかはまるで鷲が熊を襲うときするように、ぶるっとからだをゆすって毛をさかだてました。\n　それからキシキシキシキシキシッと高く高く叫びました。その声はまるで鷹でした。野原や林にねむっていたほかのとりは、みんな目をさまして、ぶるぶるふるえながら、いぶかしそうにほしぞらを見あげました。\n　夜だかは、どこまでも、どこまでも、まっすぐに空へのぼって行きました。もう山焼けの火はたばこの吸殻のくらいにしか見えません。よだかはのぼってのぼって行きました。\n　寒さにいきはむねに白く凍りました。空気がうすくなった為に、はねをそれはそれはせわしくうごかさなければなりませんでした。\n　それだのに、ほしの大きさは、さっきと少しも変りません。つくいきはふいごのようです。寒さや霜がまるで剣のようによだかを刺しました。よだかははねがすっかりしびれてしまいました。そしてなみだぐんだ目をあげてもう一ぺんそらを見ました。そうです。これがよだかの最後でした。もうよだかは落ちているのか、のぼっているのか、さかさになっているのか、上を向いているのかも、わかりませんでした。ただこころもちはやすらかに、その血のついた大きなくちばしは、横にまがっては居ましたが、たしかに少しわらって居りました。\n　それからしばらくたってよだかははっきりまなこをひらきました。そして自分のからだがいま燐の火のような青い美しい光になって、しずかに燃えているのを見ました。\n　すぐとなりは、カシオピア座でした。天の川の青じろいひかりが、すぐうしろになっていました。\n　そしてよだかの星は燃えつづけました。いつまでもいつまでも燃えつづけました。\n　今でもまだ燃えています。\n\n【回答 1】\nみにくい姿のよだかは、ほかの鳥たちから嫌われ、鷹からは「市蔵」と改名しなければ殺すと脅される。思い悩むよだかは、自分もまた毎晩たくさんの虫の命を奪って生きていることに気づいて苦しみ、遠い空の向こうへ行こうと決意する。弟のかわせみに別れを告げ、太陽や星々に自分を連れて行ってほしいと願うが、どれにも相手にされない。それでもよだかは力の限り空高く昇り続け、ついに青く美しい光を放つ星となり、今も燃え続けている。\n\n【回答 2】\nよだかは外見ゆえに周囲から疎外され、鷹に改名を強要される屈辱を受ける。自己の存在に悩む中、弟のかわせみに別れを告げ、太陽や星々に「連れて行ってほしい」と懇願するが拒まれる。絶望の中で空へ舞い上がり、最期に美しい青い光となって永遠に燃え続ける——それが彼の選んだ尊厳ある結末だった。（200字）\n",
+  "judgement": {
+    "winner": "1",
+    "reason": "回答1は、外見による疎外や鷹の改名要求に加え、よだか自身も虫の命を奪って生きていることへの苦悩を押さえ、星になる結末までを200字程度で自然にまとめている。回答2は、この重要な苦悩を省き、原文に明示されていない「彼の選んだ尊厳ある結末」という評価を加えている。また、「（200字）」と記しているが、本文は約140字と短めである。なお、回答1の「どれにも相手にされない」も、太陽は星に頼むよう助言しているため厳密には不正確だが、全体としては回答1のほうが原文の要点をよく捉えている。"
+  },
+  "response": {
+    "id": "resp_0dfe8412b9e1e287006ad43fd573e887d09946176a1c65b737",
+    "access_programs": null,
+    "created_at": 1792294869.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0dfe8412b9e1e287006ad43fd656fc87d09991679dd13874ea",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D_drd72_iU0klPOmreRCDoR58tj_2uGo66p8prhsWXqfrUuGkgcrvuydmZScTYjNwNP0TWMDc7OuaUFj76RaOmvWUEFqpZwFHfcuGft1Zo681uuwGtdOP1M-JIDxzqX6kYYEcqWDAPdJGopZH9NLCm2K_7zVO-9YvXRmW4iC-UF11wMvvzR-EhWsgz84-2ncFZuyxerMXeryxYOc5tymMJheUSClh0xc03l-lb_mJarkME3bTOPcG0gjISsLJfPTLf3xvwCtWkV87XW2TzCV258gJjY7R0w8ljNGrws5lyHtmj9kYY6x68WbGV3gzls8rsmkAcxB5dkInKk5eMQMSIrypzbxEts2TULdwfJMTMkYBFScpg8uRDwTbuHrQaz9TpWBeMW6mPY1hhADpFU_K7k6SFE0bk7sdbpDjHsBgnN9LbJqcWocgHNI_IkIt6Mi-dhEzA2ZxESaomIEoV4MiDqCdK9Bmntt_UE19uG7JV7_7YjUfUwl00UmE8tBVFAry1bw7C87wxuMfKEJBRjUZfGP-G0w9RySbFi3XRkRm5b6HHKze8hClMggdCgCU9imaGb-5pt8MpMyxZAI9oonpzW6XmmBVo53HgttLm2Z7REBaqfnX78IsJLkMBApIsWqKpayWpZmD3FP4l8EQ6uDBaqzPtejlPPWKcnOk7Nl109VG4qdzzb5NuKPj6gl-O_qNFGe1aabppTKn4h3wBsUKwrkluQSFy7i7HXipUK77DBCUgDlT7rjI9CW9SMVdhbycCc0ojaphHG1Msw_5QfhOlMXfS29oa4VsTvk2RPGcNWlkRKa_YagePy1FtZnkjDXaK5MYYG5I6NbqE7XPrnhjMr9I_AeurYpEHpD1wVKXwkSJFvHpWWcjbp2UmyD4KJwx73ioZDu7tLZrwSRZ8pdXxfMO2AD3GSA69lKvGSbv1sJfO5YnKxfafeYMpzncTJkqiBSonuXxqOdp6Ds9H0ITSpMxaj8Cjn1EYYroqAfP9lucr-fUPS366LS91YgHAhgQZZcieW3Yg4zuXXJzGK23q41uzmLAi8-5W4DGdiUkVpnNd55jJCw_E7zV-no9StQqXqvgFoYgumAKjFas6BDKUdOIevTZjDavsoNiBBHSnz83qp1was1Few1UGv2NRGipIXxKgZtTjHcRowuFChwYC3Q1Ox3yTAWeFrymWW7luX3qZPMA8gmn0w-IWeuzbb3SUJmjnVu9bKqPFkvcZP05Re73OHpbvfx3zrtwzPksvJpT_oddcdzkVqGYRh3kwj4H0l6oFAIxi9bcki6fW1nDZrjnomecFj_Hb0EnYXMePbWvgbXAdsWQqhRKEpD08s2bdIzLZus6rmaK7fvjdCNjc64p9ljWyZRgrww8a5t51x17Nv--yQUoyp8z7UZJd85xYmglJldLM4uQPgGxJoHQzgcPuL3mO8UFLifxeztt9525NBfeWMoz_4YDJ8arlbwTJ5wyVNVUYactOpybdA0c2fpOKzhp_YKXyBrcO6fpO8-PI1UeltXM9tnOMuZVfbaoG0ZSYwNvDwCmFCp922AAlvhflq680auswo4Li9nHFwt7EpfOk_qdFzlk3Vxcp_zsnZwookeDo5zPhmPF7NtoBfHSdVFOc3FxbYhXgnByeW6utt-mi69zdhKuOYpH_WybUJsRrAsFhqdF5mB3OyHuHHrs7klZv1ruG8qhotr3akCl-L6xybhcWrLNL6Pen9QxqsYDfbiNFWuRLl0Ndl4U3tMtJVSGYafw5HwF7NreQh5H2O5WHGyVkkPoXF1r_Oom-2LQFS4fffIjCyYp91iwp3M93DcyQ6tgBkSYsJ6OOtjtsaFADGYhvnvJ3MCGf5gA2gf3klU4-SURCIsT74Fi1zuYzNN-XgqBP-LcK7WKYf_7auxE12J-kRts_oiHUrXzXFt4M40IOfeAmFoNsRLQgv95qvyltF17if-Xf75BGEl_mcTavzoQyhWTbst9KNmPy0SHQZIoBMv7KyxDzeEBijwPomKgn1QdapLyxv6CLZLEDvHw8v4tR4dXN7jd-xX5XVnvqVm7HbwgWHrUvTiyZ1Z3qRFOGw2bn6vbwmuCrEutyFAYY_3lE5DKhI0YvnnWXkyUNCsjxPjocCSsYnSZXjG1hPDpLCLEnjUwi2nR3s5_mdHWWNF0GmxIFeZI4cET9N85aHKapUJzvEv2iNsI2kV5c4mEkFjIWTDGqPWUDFdXD8LRohV9DKqMlk1qTyBuP45SE5jA5HKzbssSGw8hjPtB0SAdOSZgEGKg4mDmESaM9D60rqbk4saqAlypaKmMtoGgVpl4eDhJ8ieiioIMfyXgvByFNWczgpsKmqd7lNjNWIexwDs7hScFDE6NoVqoxCmiP42zPTn2cOgJa5zbtcey0kK8cWFmBIA1tnCRBbdC9_6qjXRS1rTkgQsz7LQDjZc6ds687-JxERqP_XTtTT9Ds_6W_yQMtMFF53zhVJykibRcnk5sHkUzBoXPWHF7R-t03x8COih91RXxoqk9VX_OK1l0ivWvvjabL5Y9hzabKtFvnGM7uthuFXyyvWh4RH4nOhqYsgippLOyaQAlwSdYbgTOq7jJe-47hL1k65xR79nidi81ocnyiuCjglxYJdv0BxMV_pjNf66PJUz0IhGRMu6Te9j6POWJLSnKcVGDFTWj97TeB7kVJP7w3-060uw0Q1YBKcse4Dja3a0ixL3qFtKCdG2WSpfpaPPVuCb91zoNgvR04P6KRlOPVo17D8VkThNXDbOJDuJONA_xKGK8AQwdaAmldAKXiIRnyMAbWoxBNFZlE91HdIJ3kpcManDweoh0sOPCK4a9qfXFt75KG7g6tuRz6CcNUdj9-LQQURDswDo3f3p3mAH3HnFlgzNpL-Y56WcVF3f9kQ8xM1LlKL9JMSGrpD0jevx_qEKKHLtDCx9M9iyCnBYZessdO279Ew-DADgNF-AuqgCqSea9ZGOMUqGJtJZrhOjK-UrI-Nhk7DjRNS7xgu1fvcTHoW",
+        "status": null
+      },
+      {
+        "id": "msg_0dfe8412b9e1e287006ad43fd9f0fc87d0a26162d545b92dee",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"1\",\"reason\":\"回答1は、外見による疎外や鷹の改名要求に加え、よだか自身も虫の命を奪って生きていることへの苦悩を押さえ、星になる結末までを200字程度で自然にまとめている。回答2は、この重要な苦悩を省き、原文に明示されていない「彼の選んだ尊厳ある結末」という評価を加えている。また、「（200字）」と記しているが、本文は約140字と短めである。なお、回答1の「どれにも相手にされない」も、太陽は星に頼むよう助言しているため厳密には不正確だが、全体としては回答1のほうが原文の要点をよく捉えている。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294877.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 4776,
+      "input_tokens_details": {
+        "cache_write_tokens": 4773,
+        "cached_tokens": 0
+      },
+      "output_tokens": 353,
+      "output_tokens_details": {
+        "reasoning_tokens": 144
+      },
+      "total_tokens": 5129
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

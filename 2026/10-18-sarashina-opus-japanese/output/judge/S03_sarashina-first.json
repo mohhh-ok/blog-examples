@@ -1,0 +1,145 @@
+{
+  "id": "S03",
+  "category": "要約",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T03:40:44.219597+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 原文の要点を正確に押さえているか（原文にない内容や事実の誤りがないか）、字数の指示に合っているか、日本語として自然か\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を200字程度で要約してください。\n\n---\n第一夜\n　こんな夢を見た。\n　腕組をして枕元に坐っていると、仰向に寝た女が、静かな声でもう死にますと云う。女は長い髪を枕に敷いて、輪郭の柔らかな瓜実顔をその中に横たえている。真白な頬の底に温かい血の色がほどよく差して、唇の色は無論赤い。とうてい死にそうには見えない。しかし女は静かな声で、もう死にますと判然云った。自分も確にこれは死ぬなと思った。そこで、そうかね、もう死ぬのかね、と上から覗き込むようにして聞いて見た。死にますとも、と云いながら、女はぱっちりと眼を開けた。大きな潤のある眼で、長い睫に包まれた中は、ただ一面に真黒であった。その真黒な眸の奥に、自分の姿が鮮に浮かんでいる。\n　自分は透き徹るほど深く見えるこの黒眼の色沢を眺めて、これでも死ぬのかと思った。それで、ねんごろに枕の傍へ口を付けて、死ぬんじゃなかろうね、大丈夫だろうね、とまた聞き返した。すると女は黒い眼を眠そうに睜たまま、やっぱり静かな声で、でも、死ぬんですもの、仕方がないわと云った。\n　じゃ、私の顔が見えるかいと一心に聞くと、見えるかいって、そら、そこに、写ってるじゃありませんかと、にこりと笑って見せた。自分は黙って、顔を枕から離した。腕組をしながら、どうしても死ぬのかなと思った。\n　しばらくして、女がまたこう云った。\n「死んだら、埋めて下さい。大きな真珠貝で穴を掘って。そうして天から落ちて来る星の破片を墓標に置いて下さい。そうして墓の傍に待っていて下さい。また逢いに来ますから」\n　自分は、いつ逢いに来るかねと聞いた。\n「日が出るでしょう。それから日が沈むでしょう。それからまた出るでしょう、そうしてまた沈むでしょう。――赤い日が東から西へ、東から西へと落ちて行くうちに、――あなた、待っていられますか」\n　自分は黙って首肯いた。女は静かな調子を一段張り上げて、\n「百年待っていて下さい」と思い切った声で云った。\n「百年、私の墓の傍に坐って待っていて下さい。きっと逢いに来ますから」\n　自分はただ待っていると答えた。すると、黒い眸のなかに鮮に見えた自分の姿が、ぼうっと崩れて来た。静かな水が動いて写る影を乱したように、流れ出したと思ったら、女の眼がぱちりと閉じた。長い睫の間から涙が頬へ垂れた。――もう死んでいた。\n　自分はそれから庭へ下りて、真珠貝で穴を掘った。真珠貝は大きな滑かな縁の鋭どい貝であった。土をすくうたびに、貝の裏に月の光が差してきらきらした。湿った土の匂もした。穴はしばらくして掘れた。女をその中に入れた。そうして柔らかい土を、上からそっと掛けた。掛けるたびに真珠貝の裏に月の光が差した。\n　それから星の破片の落ちたのを拾って来て、かろく土の上へ乗せた。星の破片は丸かった。長い間大空を落ちている間に、角が取れて滑かになったんだろうと思った。抱き上げて土の上へ置くうちに、自分の胸と手が少し暖くなった。\n　自分は苔の上に坐った。これから百年の間こうして待っているんだなと考えながら、腕組をして、丸い墓石を眺めていた。そのうちに、女の云った通り日が東から出た。大きな赤い日であった。それがまた女の云った通り、やがて西へ落ちた。赤いまんまでのっと落ちて行った。一つと自分は勘定した。\n　しばらくするとまた唐紅の天道がのそりと上って来た。そうして黙って沈んでしまった。二つとまた勘定した。\n　自分はこう云う風に一つ二つと勘定して行くうちに、赤い日をいくつ見たか分らない。勘定しても、勘定しても、しつくせないほど赤い日が頭の上を通り越して行った。それでも百年がまだ来ない。しまいには、苔の生えた丸い石を眺めて、自分は女に欺されたのではなかろうかと思い出した。\n　すると石の下から斜に自分の方へ向いて青い茎が伸びて来た。見る間に長くなってちょうど自分の胸のあたりまで来て留まった。と思うと、すらりと揺ぐ茎の頂に、心持首を傾けていた細長い一輪の蕾が、ふっくらと弁を開いた。真白な百合が鼻の先で骨に徹えるほど匂った。そこへ遥の上から、ぽたりと露が落ちたので、花は自分の重みでふらふらと動いた。自分は首を前へ出して冷たい露の滴る、白い花弁に接吻した。自分が百合から顔を離す拍子に思わず、遠い空を見たら、暁の星がたった一つ瞬いていた。\n「百年はもう来ていたんだな」とこの時始めて気がついた。\n\n【回答 1】\n夢の中で、死を告げた女の言葉に従い、百年を待つ男。日の巡りを数え、疑念を抱くも、白百合の香りと共に訪れた露の瞬間、静かに悟る——百年は既に過ぎていた。幻想と現実が交錯する、短くも深い物語。\n\n【回答 2】\n夏目漱石『夢十夜』の「第一夜」の要約です。\n\n夢の中で、「自分」は死を告げる美しい女の枕元に坐っている。女は「死んだら真珠貝で穴を掘って埋め、天から落ちた星の破片を墓標にして、百年墓の傍で待っていてほしい。きっと逢いに来る」と頼み、涙を流して息を引き取る。自分は言われた通りに女を葬り、日の出と日の入りを数えながら待ち続けるが、やがて女に欺されたのではないかと疑い始める。すると墓石の下から茎が伸び、真白な百合が咲く。その花弁に接吻し、暁の星を見たとき、自分は百年がすでに来ていたことに気づく。\n",
+  "judgement": {
+    "winner": "2",
+    "reason": "回答2は、女の埋葬方法と百年後の再会の約束、待ち続けるうちの疑念、墓石の下から咲いた百合への接吻、百年の経過への気づきという主要な展開を正確に押さえている。200字程度としてはやや長いが、回答1は約100字と短く、埋葬や再会の約束など重要な内容を省いている。また、回答1の「幻想と現実が交錯する」は原文の出来事というより独自の評言であり、「露の瞬間」という表現も経緯を曖昧にしている。日本語の明確さと要約の忠実さで回答2が優れている。"
+  },
+  "response": {
+    "id": "resp_04b3cc25db0510e3006ad43fbc5e0087d09f576c54a0962e92",
+    "access_programs": null,
+    "created_at": 1792294844.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_04b3cc25db0510e3006ad43fbd3b3487d08decb46c55a8c068",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D_D-dbh4LJT3G5N5yv6aUrzmSD4DOZOq4ugxpt4CNNOTIdu1PWZTBrKoas2N6X0K9uMtdLZV_n2zmHACNRPeQfqDXn83QtMahz0uPi9R6lOxz3xP2ASsmVfV2HpuiCY3dBJXJU1tWLKMj5uXluTsP202BlJpufxg6hMj3sKdTQ57XDSbMUyFiyLIF9Luhg9M7aKx0OsLVh5eUn5b0Lf6ZlHJQVaAl_TomqOI1AJsBJkYIUp3Zlpg83_nhYzqDq1w9tL7DVPVkc4_lSmm-j9O7a_tm7i5exiw8ePKkzVkG5OyfvLCf6twrSzGXH63oxXqKfI-EcLcrnH7ZFT5CS7pewzOAym4xFqKbXUzlvjpJYWL4G8SWJsA2cwINidPYKr1YZB6_1DtENy1Vzu6547UCci9_9lfgR4ZnAyPKbOxAD3-y522gXvpkZ0u5n9nnBPNOOwVx8IxeueqjxdkrDbujA24cOYcgm3EilTh9s_YNOkkk5m80XA6014GxRX8-mFq_E1Kj2SGKOPG0h4nfYeHYKO1IIrHQ2rq2TixiWOxCM5CnEkC-XfrNjsdx9IlKODz3CMmfR1I6U8Pf3YwRczlnP4O9BykKydrBF8VLWpF5D2QxR2HxSOkNKETQ-LtaWAJ0G_es5Ari_Q3Ql-Th6vY35UFEo_Dg4Kn56Ta7-LHq-yQUmwuLKzJrptD-4LPQydT9WaE5G6pfoVNz8xeC9SrmpdLjmgEfcy0omEoHr1NM_E-H0V9uwafK0kZOCXoLYIBlBOengbPQ2732zMAp5GRhZ1wwOzDrW8KojwlVNjVTGXE8dZ3k93P0lSjZSDZ5ZUjYg1V4I5ut2RQcPZg4HA7MODjC7fLW8SSG3cZxIMKfr0nUXS8_J0g-BQUMusHesdf-bLIIvbXen1SIwYvF57pHwpyGNrd-wC04aRAs-6qQS1m5Zbl0IE5EOKHeeIiBZAwMeCLD3s3mKC3wO4h8WHP-xsH0057qdy5bCb-bFjT68-zdPGB5Irwg_YwzbCZPB3uPyw47i9XGcKZ7RqM3MwCu-6C0JFL2UFnKexuNy-DcqeFw-jpjJyT04DJBFZMiw5Vg8_USJ5JSBhAQdSxwZlhXKfW15oX6r2zIX0D0pxnJEZpLe09nSzdaMwEydxHnOCT3Xc3ImAaHlV-VPpppV0jklErLs95zbaFh1U_MZMbUr4OQWgxHsRnyvFpa_H4XSugCKpaKbNrzq9kmISqdIhX3OhVgSLPv0wHHiG0XokEdP0aTm0ettHzUWpcas66kNikYQOqkIBSe4X1KfTrVEDzk27WR7Z0AumRR6noKBRZt2w5XMFiXF3OxruoiOCMfl3yUODELu9R1GrYzUSkBh_71_TPBY_59VSlDGahhbA0i8kVhpxQgnQDxTrQKthct_OdTn9kQqkaapC0w0UdKPaC_djayOvQdHXbeCixXR_VXeA5_vKyu6nbaKJfEp3OVApHk8r4Lg3NaBW3imEUsFwNeOz3VHX_x6w3_rV8orThdA1o1ErV8MtBN6NzLFlYWG4rzFYlK77g5FImc3Ey3kEGF7AubM1YeAGGsBfVVFN2RXZ8iTNOyp9DL0xRTlyvSh6QT7PXR5aQR572IBUuQ_0BL_xzHLB8nTrTaCyD7qTlrEIfekXe0mytLunlp6E8Bzj2gDKVQNl0iX8F9EOJmTM1T4LZ6IHlbLEoCLzRSlKfi5gA9lUd17tuFSJve1jxcYlmHa6uHYiCd5xZvhMCXsJb_0am1w7UebqtBA6mcbnSEcMxUv2il00K-Wiwq8al5b2kErYB2u0yjBv1PmvLL5QKvASpfxA6yGGIB51374MWboA5Bs9gUlJiIp5EGMXPcL-JEByf5az0vJs_SnvXp3A_6KaxHWshHAFwrRmnZnB_OD4E6Q3IWb-x_PGZGmcHXcQsoysTqnKgEz2RO_sszlpethw6ELJrYvOJA82OaoMzzFdrAkG_H1-Sxl71qlfgmCbFXVUhKtRD0SueZeJXIJ5Lnakg0Aw5o_B5wupnVJhYAbdCMcsUvFmVqiq1PIXS9ppVgW8i7kwuLkjC1aXLla2xEBUvTC_4mTakn34OZ_IuV8Atr27HKrJsNCE6OjRKd7ytnea85Ofo8Ja3_nWkUjKzlc7-VF7caQ9yQgnAd325t-mklCm92oe2oInb-tDMoFVcC5thl54aIJn22eEmZmdypO_xWoHpbF7FbKYxmyuwrv69DpXKuZ0WObSGytqYVGbFnmy_2NjtyqFXgd-tXo5omQPAA==",
+        "status": null
+      },
+      {
+        "id": "msg_04b3cc25db0510e3006ad43fbf4fec87d0b42649b47e0bd3bf",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"2\",\"reason\":\"回答2は、女の埋葬方法と百年後の再会の約束、待ち続けるうちの疑念、墓石の下から咲いた百合への接吻、百年の経過への気づきという主要な展開を正確に押さえている。200字程度としてはやや長いが、回答1は約100字と短く、埋葬や再会の約束など重要な内容を省いている。また、回答1の「幻想と現実が交錯する」は原文の出来事というより独自の評言であり、「露の瞬間」という表現も経緯を曖昧にしている。日本語の明確さと要約の忠実さで回答2が優れている。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294851.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 2111,
+      "input_tokens_details": {
+        "cache_write_tokens": 2108,
+        "cached_tokens": 0
+      },
+      "output_tokens": 270,
+      "output_tokens_details": {
+        "reasoning_tokens": 72
+      },
+      "total_tokens": 2381
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "R01",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:32:37.768703+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n消費者の不作為をもって当該消費者が新たな消費者契約の申込み又はその承諾の意思表示をしたものとみなす条項その他の法令中の公の秩序に関しない規定の適用による場合に比して消費者の権利を制限し又は消費者の義務を加重する消費者契約の条項であって、民法第一条第二項に規定する基本原則に反して消費者の利益を一方的に害するものは、無効とする。\n\n【回答 1】\n## 書き直した文章\n\n事業者と消費者が結ぶ契約(消費者契約)の中に、次の**2つの条件を両方とも満たす**決まり(条項)がある場合、その条項は**無効**になります。\n\n**条件1:法律の標準ルールよりも、消費者に不利であること**\n\n法律には、「契約で特に決めていなければ、このルールが当てはまる」という標準的なルールがあります。契約の条項によって、この標準ルールが当てはまる場合と比べて、消費者の権利が狭められたり、消費者の負担が重くなったりしていることが、1つ目の条件です。\n\nたとえば、「消費者が何もしなければ(断らなければ)、新しい契約を申し込んだ、または承諾したものとみなす」という条項がこれに当たります。\n\n**条件2:信義誠実の原則に反して、消費者の利益を一方的に損なうこと**\n\n民法には、「権利を使うときも義務を果たすときも、相手の信頼を裏切らないよう誠実にふるまわなければならない」という基本原則があります(民法第1条第2項。「信義誠実の原則」と呼ばれます)。この原則に反して、消費者の利益を一方的に損なっていることが、2つ目の条件です。\n\n---\n\n## 補足\n\n- 消費者に不利な条項が**すべて**無効になるわけではありません。条件1に加えて、条件2(誠実さに反し、一方的に消費者を損なうこと)も満たす場合に限り、無効になります。\n- 「何もしなければ契約したものとみなす」という条項は、条件1に当たる代表例として挙げられています。このような条項でも、条件2を満たさなければ無効にはなりません。\n\n【回答 2】\nもちろんです。以下は、ご提示いただいた文章を、専門知識のない方が一度読んでも理解できるように、意味を保ちつつやさしく言い換えたものです。\n\n---\n\nこの法律は、消費者が何もしないこと（たとえば、契約書に返事をしないなど）を、新しい契約に同意したとみなすようなルールを禁止しています。また、法律で決められているわけではないけれど、普通に考えると消費者にとって不利になるような契約内容（たとえば、普通の契約よりも消費者の権利を減らしたり、義務を増やしたりするもの）も、認められません。特に、社会の基本的なルールに反して、消費者の利益を一方的に損なうようなものは、そもそも無効になります。\n\n---\n\nこのようにすることで、法律の趣旨やポイントが、一般の方にも伝わりやすくなると思います。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。無効になるには2つの条件をともに満たす必要があること、比較対象が契約で別の定めを置ける法律の標準ルールであること、不作為を申込みや承諾とみなす条項が例として挙げられていることを保っています。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "原文は、消費者の権利を制限したり義務を重くしたりする条項のうち、民法の信義誠実の原則に反して消費者の利益を一方的に害するものを無効としています。回答2は、不作為を同意とみなすルールを一律に「禁止」、不利な契約内容も「認められません」として、無効になる範囲を広げています。また、比較対象である「法令中の公の秩序に関しない規定」を「普通の契約」などに置き換え、判断基準を変えています。「民法第一条第二項」の基本原則も、信義誠実ではなく漠然とした「社会の基本的なルール」に変わっています。不作為を新たな契約の「申込み」とみなす場合も明示されていません。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、結論を先に示し、2つの条件と具体例の関係を明確にしているため、判断の流れを追いやすくなっています。専門用語にもその場で説明があります。回答2は平易な言葉を使っていますが、「また」「特に」でつながる各説明の関係や、「法律で決められているわけではないけれど」という表現の意図がつかみにくくなっています。"
+  },
+  "response": {
+    "id": "resp_0263875d772b7da6006ad43dd5f4e487d0bc72335a37d207e5",
+    "access_programs": null,
+    "created_at": 1792294357.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0263875d772b7da6006ad43dd7dcb087d09f61ecc265f9e73b",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D38EkSYf9reNHOrEIDOhZdUK1zBCT4aPdnBWKMLH2ZKXjzlZT-LDNckbuje7v0XamjS0UjTajhYKVVWNl7HRUJgi5AjfhMdD6OxewMFCrJaIpWqKJwZbSJaIY8rls4tr6dmWbDMSE8ZWPgNMbcFK8LmLW3hFP4WXV6_m03oubJoG7kFl7AdTJQgUuCpcas_Hm6wWxbW2plk8muaIOL5m-e2Hp8kQd5qppaYTY4EdQw4SSc78N6x1PPZFLhCrKYVbGsopk5UsSURi0w9IKBRl9tG2R_fqsnK310XtT1Ma6qJbzgluSe0haQyITXsBdL0QZhZazaJRxqE0p_q9sobljrDQf4cGht1WdxMBA31VOF2NFJ5--lPEOFfyuZaQ6-QEYz2vAeSACCDuoZG7_dR_Fs_-Bh6GIPelprZsk-XZZH251-S696-C-WcSRz1gS58N5O59-odaDQnSxffdpGhuMhESevqag8z8fw4UoAncA-KBJa7vRD3Wc5aFULmv6f013vVLdIGp-pGiB4v2inFs7iCgS-P4q9f0RRvmpJrBTvvLW9ulmnxiBUnnBCUcapyFnqOM7sfEheXRNvVwc0syMAjHrOCwv63EJ4PLGNvh2maJD4Vpe-ZVgRRK22YUk1ToSmO9O5m2VwI15r9RvcwMFdHuHbejIr4wNNuJUKYhlX_bcfrGrvlNu7oUazT2CBJGnYekwwcz4CRB-P6XDpCM5t7XQo8UdwvVyL_pp0cDfwjOfnmMhgBFhgwG5adVB1D-BcOTe6b6IbbuRvGbcNhRrDJMm4DYXGOOrVCjS0DLWTjuxHE_zhrh-q2U9rNuOHmqyD7HN5HcildHC1FaO5CUXNXXG0PQnI1NOBym_QxK81dkne62BmTJridIBe9WACQIpgrGLrhyTCDWnPJu80aQznM3g1x--ealsn2NfaZ8GVTaNap4wf5gO-W3bOFpFHi7myJs4H2LT9N-xBVTLdOTCTURdmKzCVFZ83GLXdYpp4CBUYfyX2tcmHzmL7iW04TbntuScTOm8fLgxIqVYb6_qYe3_wnY88RVujby8i7RNt4hObT5fv2R-sawwIh_50IAyPr-8swVd5M_RWmrzy8YqcXzwmeaV2IbvN-bQfvZ1oB3mgMryPVEWob_kNXcyYsSGmfVy_I44WnLvqt7gnuNWPVZfKckN_olnP5eytdOEwfzMGMWTWwSE7oSJS6rmAIKKX1emrNY3RFYDAqA6nBhb_2cDHJ3X5evVn6b3chL_KFFdD4gbucg0oZLPpc5VNq2ZQNo6OA2x6ueUtxUa7dM390ELYR4Ybn_nseGpSw424fo7AW0ILLRHVzfagutHwM5mlx3svYWqfONM2fZsmZuWSrpV_ns_RhUZngX-G9YFFLJSgaRrQ38uJgh2381n4-MtIBtY5SAGGq95xOKgezw-_3bvZhWTXibfofAqXdtDZA9L_3BSWUm89DVPBbBISpcBNxuQl02YTqElDHwsPx_xs6KiXuBhJmuvTK2kxDPrYGc07kVAtBwhQ9yc7DiuMfWTE5nfjQ0N9iHc0XQcYQLvHeWJrRLPkOI0Zhn6bdhsWoE-7CfdGbZPKLrONy1Yiaa9AZgKjpqOzjUyPP5Z-NTqi4N59TS6s0HglbhEv3bWA3v3yX1KTC-PD-TBOPVwlPblNjIPH9Iw2xRYgTLAO4K9APTFW-W9qKDAjvFA6utwkYCLjFX3O1y0T--FuWwTcREa8Tau_fGZ3ZXvtJyDA6EY1TRayF6FCypRd-7PPrKTr1eSI4XvtAaucD-KrmF4EjkGTDAQ9w0BwEkorPeSEExaG7pMRlEz0XPJDM2_xz8xWRy8m8ruad94wBjGbjqx9meXIvX4JJWB6LsB2kPIqWIjSnpCdnXUXJImTcx43cGfluyHbMYSePGdGEVOqDcEeJbjMhCW4UGEaWG3kr0bR_2cp3Fevt9iUOJEJVyfStwKAemFr8sSZlwn1ID94ymQWPDSeJdCgUJodzXWDYgpWCZLYsRfl7KNX12aGltFaC0PQm4uyBp9h1f1hbAStmix4g4bR7Joe6oQGh6kGhNxNBNh66SEBGAvEx1UKs1cY995eXyen60ZEWyri5MrXJ0A9lt_LhYjMT12Aih6MVgxXWqouZsV9L02Th8juGFx-vmtPh16GKGwofUdPaPE5eargN_uc6_A1o0rkRhTtzBYJrhqQYdcEhttFacR41P_sJVRZX3FbvAVCsE_pcYYQMutG5Cb4yZ9mpgBRFP-LBdri3ObeARW6IIjgle92IGMX8J4zIjb9xAqtJj44Pvly3YNo_rNpL71z7fWlfQGZ1hrnGNadM4WZFHNTbUy448kwkSEHCFMn8kEEl15zQfPMxwPc-Bb9E348vtge7Bj641ZFvcJmvbi9I-hP_Lv7ti9Z0fDEfgAq7o9GWhjSXHdXckkRr8zAwq4NnkALo8I_dq8WKb_o9CyJJ2oK6ZN-2ismCPnfa3HCsHhHw3bpGNYX_Mose8Wdy1jKDqSNT_KuXVzG0n7-gW22_Kqm-HPFYiFGwMVy0ZLzw8SN8ObMEpSLRNoP4btl13gFdJqu4KR52M6kQBo2ga-0IVjtJcFKmJRr3oxihRcFMVmplL1G-nbeGBu17IoZfB_9AAZt-kDRm1i_Mvu8VjQnwLcO1OVrir85MXthfbdzcN36WHf4s5xE9v27ymVL1lBAM4kvzLKHKf4RxGvVnRzLNQWgs93vZXEQn1NNyN5lr9S27beGlJsNLBkjS5yawmziZmhVXe_YnHN6KmCrcQVio2JpHqk45nuJMn10Rcw8SujGTDO0HlT1EgdDddc8Wfr3HvAjfTaOIg5KOjHAglGPYPnvdMyP5lcjUY0lofTZYyta8zFN2iAFaWbX0sP2mmZif3irWid8jikr_MhjngBfszd7iRs_2j8KLVUIQWthJm8yX0rEKxmPiVNsYlzMkcwBx4PvhJMZzDhRzWU3hSUgrfWS0E4Yi6bLP7wH2G8r8S7anGzX-yXbAbqdmOOw8tuoe5XH1uTvzZa7tg2rRt4QYE4WYK0o34dU_I_r9M5ktzoggxBEDDcGsTuqDnq6yEvZ1qyxoLYGI-ayK0Oq9pHBBwSXp1G7jWhL1hZWFfSVfzZ_rNYD06i2MhqTeqmqxE5fTZhSaQrwNRcga1HzG9jsmF-sxkW0rRVPVK0CJH30wv9ZNQ9aZr5phaypnrl29GfWs7cEg2vnJq9WdlVXG3kJed-q46BomIgGODG413j9wHi0K-Wkk6t6byObLa09_cqBBrOlYGx90nZyx2hmbJol1eELU0QJ5pTwZK-IACm8LwutTe0oIrlSNjHGXZjOB1XvTkmaePcql0MAbwCoCRxa9MR22h8yJIO9FNlAQRFjWmMrA2z0zxOAYW05gwYw1D5J8WSLlrQIM8Whw05q65OdT1Ip6PhkEAYUSTbckKEuaqbu9CSqc9bwW4D4ElRgk-PTOwqfQYfCF55KXBWyFredZjl95KPvxQNfezIPsPvkNiU72nAEJoMlolllY8wkMomxTbg03zhgOyTbw_SZOtm2uJqSLuIVjv4hfxh5yOSAnc-CD-FL6Zv7WEtTHb5M4m_GUs1NGp5v75Mw2yvYHZIFme7hYFyrBnNEJWOjzU3xIr_W3G18QKSFw35hrlsXP_k0esA-QqMoUculpC66ycw==",
+        "status": null
+      },
+      {
+        "id": "msg_0263875d772b7da6006ad43de6108c87d09b5ed9da5bd0c92a",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。無効になるには2つの条件をともに満たす必要があること、比較対象が契約で別の定めを置ける法律の標準ルールであること、不作為を申込みや承諾とみなす条項が例として挙げられていることを保っています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文は、消費者の権利を制限したり義務を重くしたりする条項のうち、民法の信義誠実の原則に反して消費者の利益を一方的に害するものを無効としています。回答2は、不作為を同意とみなすルールを一律に「禁止」、不利な契約内容も「認められません」として、無効になる範囲を広げています。また、比較対象である「法令中の公の秩序に関しない規定」を「普通の契約」などに置き換え、判断基準を変えています。「民法第一条第二項」の基本原則も、信義誠実ではなく漠然とした「社会の基本的なルール」に変わっています。不作為を新たな契約の「申込み」とみなす場合も明示されていません。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、結論を先に示し、2つの条件と具体例の関係を明確にしているため、判断の流れを追いやすくなっています。専門用語にもその場で説明があります。回答2は平易な言葉を使っていますが、「また」「特に」でつながる各説明の関係や、「法律で決められているわけではないけれど」という表現の意図がつかみにくくなっています。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294395.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1430,
+      "input_tokens_details": {
+        "cache_write_tokens": 1427,
+        "cached_tokens": 0
+      },
+      "output_tokens": 651,
+      "output_tokens_details": {
+        "reasoning_tokens": 166
+      },
+      "total_tokens": 2081
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "id": "R01",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T03:32:08.050526+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n消費者の不作為をもって当該消費者が新たな消費者契約の申込み又はその承諾の意思表示をしたものとみなす条項その他の法令中の公の秩序に関しない規定の適用による場合に比して消費者の権利を制限し又は消費者の義務を加重する消費者契約の条項であって、民法第一条第二項に規定する基本原則に反して消費者の利益を一方的に害するものは、無効とする。\n\n【回答 1】\nもちろんです。以下は、ご提示いただいた文章を、専門知識のない方が一度読んでも理解できるように、意味を保ちつつやさしく言い換えたものです。\n\n---\n\nこの法律は、消費者が何もしないこと（たとえば、契約書に返事をしないなど）を、新しい契約に同意したとみなすようなルールを禁止しています。また、法律で決められているわけではないけれど、普通に考えると消費者にとって不利になるような契約内容（たとえば、普通の契約よりも消費者の権利を減らしたり、義務を増やしたりするもの）も、認められません。特に、社会の基本的なルールに反して、消費者の利益を一方的に損なうようなものは、そもそも無効になります。\n\n---\n\nこのようにすることで、法律の趣旨やポイントが、一般の方にも伝わりやすくなると思います。\n\n【回答 2】\n## 書き直した文章\n\n事業者と消費者が結ぶ契約(消費者契約)の中に、次の**2つの条件を両方とも満たす**決まり(条項)がある場合、その条項は**無効**になります。\n\n**条件1:法律の標準ルールよりも、消費者に不利であること**\n\n法律には、「契約で特に決めていなければ、このルールが当てはまる」という標準的なルールがあります。契約の条項によって、この標準ルールが当てはまる場合と比べて、消費者の権利が狭められたり、消費者の負担が重くなったりしていることが、1つ目の条件です。\n\nたとえば、「消費者が何もしなければ(断らなければ)、新しい契約を申し込んだ、または承諾したものとみなす」という条項がこれに当たります。\n\n**条件2:信義誠実の原則に反して、消費者の利益を一方的に損なうこと**\n\n民法には、「権利を使うときも義務を果たすときも、相手の信頼を裏切らないよう誠実にふるまわなければならない」という基本原則があります(民法第1条第2項。「信義誠実の原則」と呼ばれます)。この原則に反して、消費者の利益を一方的に損なっていることが、2つ目の条件です。\n\n---\n\n## 補足\n\n- 消費者に不利な条項が**すべて**無効になるわけではありません。条件1に加えて、条件2(誠実さに反し、一方的に消費者を損なうこと)も満たす場合に限り、無効になります。\n- 「何もしなければ契約したものとみなす」という条項は、条件1に当たる代表例として挙げられています。このような条項でも、条件2を満たさなければ無効にはなりません。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文は、消費者の権利を制限したり義務を加重したりする条項が、さらに民法の信義誠実の原則に反して消費者の利益を一方的に害する場合に無効になるとしています。回答1は、不作為を契約への同意とみなす条項を一律に「禁止」、不利な契約内容もそれだけで「認められません」としており、無効になる条件を広げています。また、比較対象である「法令中の公の秩序に関しない規定」を「法律で決められているわけではない」「普通の契約」と言い換えており、法令の任意規定を適用した場合との比較という意味が失われています。「申込み又はその承諾」も「同意」にまとめられ、申込みをしたものとみなす場合が明示されていません。さらに、民法第1条第2項の基本原則を単に「社会の基本的なルール」としており、基準が不明確になっています。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。法令の任意規定を適用した場合より消費者に不利であることと、信義誠実の原則に反して消費者の利益を一方的に害することが、両方必要だと明確に示しています。不作為を申込みまたは承諾とみなす条項についても、無条件に無効になるわけではないことを正しく説明しています。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、判断に必要な二つの条件を分け、それぞれの意味と例を説明しているため、専門知識がなくても関係を追いやすくなっています。回答1は文自体は平易ですが、「禁止」「認められません」「特に」「無効」の関係や、「法律で決められているわけではないけれど」の意味が曖昧で、一度読んだだけでは判断の仕組みを理解しにくい文章です。"
+  },
+  "response": {
+    "id": "resp_0b6828c9fd9eadaf006ad43db8a43c87d0af07547a4e1a3b10",
+    "access_programs": null,
+    "created_at": 1792294328.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0b6828c9fd9eadaf006ad43dbbd05887d09a2dd3540c7df288",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文は、消費者の権利を制限したり義務を加重したりする条項が、さらに民法の信義誠実の原則に反して消費者の利益を一方的に害する場合に無効になるとしています。回答1は、不作為を契約への同意とみなす条項を一律に「禁止」、不利な契約内容もそれだけで「認められません」としており、無効になる条件を広げています。また、比較対象である「法令中の公の秩序に関しない規定」を「法律で決められているわけではない」「普通の契約」と言い換えており、法令の任意規定を適用した場合との比較という意味が失われています。「申込み又はその承諾」も「同意」にまとめられ、申込みをしたものとみなす場合が明示されていません。さらに、民法第1条第2項の基本原則を単に「社会の基本的なルール」としており、基準が不明確になっています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。法令の任意規定を適用した場合より消費者に不利であることと、信義誠実の原則に反して消費者の利益を一方的に害することが、両方必要だと明確に示しています。不作為を申込みまたは承諾とみなす条項についても、無条件に無効になるわけではないことを正しく説明しています。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、判断に必要な二つの条件を分け、それぞれの意味と例を説明しているため、専門知識がなくても関係を追いやすくなっています。回答1は文自体は平易ですが、「禁止」「認められません」「特に」「無効」の関係や、「法律で決められているわけではないけれど」の意味が曖昧で、一度読んだだけでは判断の仕組みを理解しにくい文章です。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294357.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1430,
+      "input_tokens_details": {
+        "cache_write_tokens": 1427,
+        "cached_tokens": 0
+      },
+      "output_tokens": 560,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1990
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

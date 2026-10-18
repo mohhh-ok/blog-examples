@@ -1,0 +1,187 @@
+{
+  "id": "R03",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:34:00.551304+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n個人情報取扱事業者は、次に掲げる場合を除くほか、あらかじめ本人の同意を得ないで、個人データを第三者に提供してはならない。\n一　法令に基づく場合\n二　人の生命、身体又は財産の保護のために必要がある場合であって、本人の同意を得ることが困難であるとき。\n三　公衆衛生の向上又は児童の健全な育成の推進のために特に必要がある場合であって、本人の同意を得ることが困難であるとき。\n四　国の機関若しくは地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき。\n五　当該個人情報取扱事業者が学術研究機関等である場合であって、当該個人データの提供が学術研究の成果の公表又は教授のためやむを得ないとき（個人の権利利益を不当に侵害するおそれがある場合を除く。）。\n六　当該個人情報取扱事業者が学術研究機関等である場合であって、当該個人データを学術研究目的で提供する必要があるとき（当該個人データを提供する目的の一部が学術研究目的である場合を含み、個人の権利利益を不当に侵害するおそれがある場合を除く。）（当該個人情報取扱事業者と当該第三者が共同して学術研究を行う場合に限る。）。\n七　当該第三者が学術研究機関等である場合であって、当該第三者が当該個人データを学術研究目的で取り扱う必要があるとき（当該個人データを取り扱う目的の一部が学術研究目的である場合を含み、個人の権利利益を不当に侵害するおそれがある場合を除く。）。\n\n【回答 1】\n# 書き直した文章\n\n**個人情報を扱う事業者は、原則として、本人の同意を事前に得ずに、個人データを他の人や組織（第三者）に渡してはいけません。**\n\nただし、次のどれかに当てはまる場合は、本人の同意がなくても渡すことができます。\n\n**1. 法律などで決められている場合**\n\n**2. 人の命・体・財産を守るために必要で、本人の同意を得るのが難しい場合**\n\n**3. 社会全体の健康を良くするため、または子どもの健やかな成長を支えるために特に必要で、本人の同意を得るのが難しい場合**\n\n**4. 国や地方自治体（またはそこから仕事を任された人や組織）が法律に定められた仕事をするのに協力する必要があり、本人に同意を求めると、その仕事に支障が出るおそれがある場合**\n\n**5. 渡す側の事業者が大学などの研究機関で、研究成果の発表や教育のために、どうしても個人データを渡す必要がある場合**\n　※ただし、個人の権利や利益を不当に傷つけるおそれがある場合は除きます。\n\n**6. 渡す側の事業者が大学などの研究機関で、受け取る側と一緒に研究をしており、研究のために個人データを渡す必要がある場合**\n　※渡す目的の一部だけが研究目的である場合も含みます。\n　※ただし、個人の権利や利益を不当に傷つけるおそれがある場合は除きます。\n\n**7. 受け取る側が大学などの研究機関で、研究のためにその個人データを使う必要がある場合**\n　※使う目的の一部だけが研究目的である場合も含みます。\n　※ただし、個人の権利や利益を不当に傷つけるおそれがある場合は除きます。\n\n---\n\n## 用語の補足\n\n- **個人データ**：名前や住所などの個人情報のうち、検索しやすいように整理された状態（データベースなど）で管理されているもの。\n- **第三者**：本人と、データを持っている事業者以外の人や組織。\n- **大学などの研究機関**：法律上の「学術研究機関等」のこと。大学のほか、研究を主な目的とする団体などを含みます。\n\n【回答 2】\nもちろんです。以下に、ご提示いただいた文章を、専門知識のない方が一度読んだだけで内容を理解できるよう、分かりやすく言い換えたものを示します。\n\n---\n\n個人情報を扱う事業者は、原則として、本人の同意なしにその情報を第三者に渡すことはできません。ただし、次のような場合は例外として、同意がなくても提供が認められます。\n\n1. 法律で定められているとき。  \n2. 人の命や体、あるいは財産を守るために必要で、しかも本人の同意を得るのが難しい場合。  \n3. 公共の健康を守ったり、子どもの成長を支援したりする上で特に必要があり、本人の同意を得るのが難しい場合。  \n4. 国や地方自治体、またはそれらの委託を受けた機関が、法律に基づいた業務を進めるために協力が必要で、本人の同意を得るとその業務がうまくいかなくなる恐れがある場合。  \n5. 事業者が大学などの研究機関であり、研究成果の発表や教育のために情報を提供することがどうしても必要な場合（ただし、個人の権利や利益を不当に損なう恐れがあるときは除きます）。  \n6. 事業者が研究機関であり、学術的な研究のために情報を提供する必要がある場合（研究目的が一部含まれていれば可。ただし、個人の権利や利益を不当に損なう恐れがあるときは除き、また、提供する相手と共同研究を行う場合に限られます）。  \n7. 提供先の相手が研究機関であり、その相手が学術研究のために情報を使う必要がある場合（研究目的が一部含まれていれば可。ただし、個人の権利や利益を不当に損なう恐れがあるときは除きます）。\n\n---\n\nこのようにすることで、法律用語をできるだけ平易な表現に置き換え、各項目の意図が明確に伝わるように配慮しました。必要に応じて、さらに補足や具体例を加えることも可能です。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "重要な条件や例外は保たれています。特に、5〜7の権利利益に関する除外条件、6の共同研究に限る条件、6・7の研究目的が一部の場合も含む点が明記されており、否定や例外の向きも変わっていません。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "冒頭の「個人データ」が「その情報」に変わり、個人情報全般の第三者提供を禁止するように読めるため、対象範囲が広がっています。また、本人の同意を「あらかじめ」得るという時点の指定が明示されていません。1の「法令」を「法律」としたことで、政令・省令なども含む元の範囲が狭まっています。4では、国などから委託を受けた「者」を「機関」に限定しており、個人なども含む元の主体の範囲を十分に保てていません。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、渡す側と受け取る側を明示しているため、研究に関する各例外の違いが分かりやすくなっています。また、条件が重なる6・7でも、本文と補足を分けて順に説明しています。回答2は、特に6で複数の条件を長い括弧内に詰め込んでおり、一度で関係を把握しにくい書き方です。"
+  },
+  "response": {
+    "id": "resp_04c68a6e795a3fa2006ad43e28b2d887d09e484eff7f06721b",
+    "access_programs": null,
+    "created_at": 1792294440.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_04c68a6e795a3fa2006ad43e299d4c87d082e5a3953ca12bcd",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D44AgiUYECCYC7bJ89fz2cJfwyMjCFpaWvvaff6l7B5QrsLxk2MdR6q2ZioMfuCtyersGbWYty4aI7juSYiP9BdluQ1K2QqSapao2bwsfR6Ep1vmGK2ujQC2g4_35Ukhyap_Q1KkFz_dpC0sPuz96njeofwQ2zkLLeBhAp_pGwJ4IKEb2QauR_j8FfD00pAB_yjyx5u_rRQfPpoUq9QSy2H2tXB-a4EVZpLhqjo00JyjxJ1FG6vsrt_5ubHynrBzU77YFYFTzk7FsuyUCvDI2K3wjGxVYO5uNx7QOE2K9QnnpjQTnCqiVOy6x5mAv3_pa7Ii52308BSwM1ajIyhMNgnq-y8d-eJlXTgoX74lRSAStY8iUeuEVAKVnQ6VA6TO6FFu_1GxVCMNAkSvJ-R2uXDiffKP5DfUK7vT4P_RdPrjkR-gpkPAkHFkWxb23rtqwXJXrVtxuSfYuRXf7jybE8b_U0-6Y2pt-PphFQJp_bih4QfPmiXxYadR9b07YJj9xi5Kj1Gy8Yun55r4gWDH9xXh4jHkc5cTsi3O_7_eWbMeNVQXPl78IPiAHVQctW4hCuYfhZs0WXQRUj40h94LNXg5FZO2E_qBcz9ruokhJZ1DqxuzBeLN8Q78GG8n0NXqod7exKQYQ3WNns9_IG8Mm8LU4FzP_uUaN1GkdVu16yJgmSlOyd5hppvIRwmIUA21ffkm_pmEE2qy4xCUfqF35gTezOo2-qSM4xj25CxJdvF6DvMjfMk2d0yQ6ZcqKAsrOo9Bsne1wfqQih5SC0nUSQHOVbOa599z1CaptZOap1VGMzOnVRhn__IuB4xjGRWYWF4nkKR1HahOQmCNYkkG5WLDFwvYHkwzU9CcR_sCm1YWl7bS5GoGvMnH-3PfMWj7nPmQedJED6UEMo6aMAse7ZyRS5xYk-aoV1EHJ3AuqizRQchmrGUd_UiZ_OFLwpEvIWDReI1_4pf5T-AftJgz276_sFZfl5JVsk67liFajzKB2UHhnjUOuTxk8l8mdl_GGUVDAj6rLzBjr3nnWvnJa4YELbI0MIp0-FWUrhbc-GsMlPgpL33-F73NmcPO2Lwwzqt6SF9U9S6_iukcRsMHL5TwRr2t3LpAvQHY-LUJYQ09G2saOGHpFVsnH9YDR8QVScfmAVSZy3M1O5oo-Qs2jX9gLivQsvL2Kb3mwXCD0HjxcTiGpWXAjxi2M6EmrKGnNcCIy_1fysJwmo_Kv8IMMZhbzlGF_wxB2r6Hilz1wGHadI4M9Srzioxd7A6Y5HhWT1obhX2ae3o-rrn7yljYpFrdNPBWM1-nPfKlnprAqbNlQwLF74-lQU07myKFW0gOjt7t70EWs1I2-4Ku4p9bjgMvR9sHBnB-QMosPkjbXWgE4bxOxTLHMcfFUWA7LdTu038bZjadm5zYxhHTf5OQgOCJt7obfEujdyfX0RBsZOZApxU08Xc_MEScHdPdnwkt0zGaGU1uJiEaUSVwzMyR9tbBTUQ3SfxxWHq6bnoyupGrSOoCka6YgoF2MunoQs9ZVr2xOL-pvmuc-E3XMd6BNDV1Ya_1PvrLQxQ3Zhi2v1mCa2AC2qDx6fQAY27bAFrGdQmOjIor607ZTHasghtUY_3q0iQcHBs1qNAmmHEb0JVUbaGrqRxmjCBjofPqkKCz9mRcSQUWrC_Ik40S-xvB9dx2nht1z0UCqyvLYdZS3HY6YNW_1HBEKjuqj7VADNXbZuZmqHa1RFk7Gep5CyTn1B7KtuJpqwYKuuxf6j6s4meptU29lxFsOOl68n1Yboouh0O4VObjB4iUQXWVQ6St1Aqzpd3klgg_LafjlakRUpJKE7wJMCwGJ5Q1J8XQe4yMEVg91Ce46dQIlBRSJ32_hMcANWmFh1dBqwx3V3ofsXut5ujmgX5XzeRtrSUYdLp2rWFS555_GmFP_6BrQMBEldHyt108s3IEX4LRxGzAuXdRu-C_-nu55RoIdueNQlqKWlRczNu94hkD1-AbRaScH-K7WiiWenncroUE_TnYLkWUCX9SVC0Cul6j6nGMI1aBE4tst6ABFjV-51zn5Q5YH4YonChFsIcw0Djdd4RlM5x1Dp53rlOuBVrNE3rqe3bJUFFM-QVw1KKxcbAaUdyvg9lseBAH2kmEcEuSwPdZuy3O7HHT7hlTiGNs-Npjn5GZwEtv9FARqXYbOrNiGzpI795nxoKcioOlqlfB1KCACwGVpDcrbTXRi1YLUQFhSkDikSTAghTVs9JdmdjtXpi3S5RMLZ8pbWO6BNgdvGQK1xu7lD9_1p1F116VylqAIy8xPIgAlNimAPFnVeTWFXa6wfg6w2QzAhfpdBjXYeHyWtto5T5pkkamMMNnu80Wgft9z3RYLVZpGoocWbT8SUHPWTrBXDnMPKpT1Cmdup8ClFzzOhpjnZ143oUkbGFYkq_Amw1fNeCvhDDp1mPXVB64S6rlWFTImpGAdyxbXUt34EgY6Y0MG8Codq_NFG83Fa9HddZEXJ_s31Z2RXvN_mc7oxjlDDQbgMSL402IntNEQUOGLEq4Oq5JLh7VOCdwNNS4hMhKblH6e2MnQGmW_2fKkPP2D14t2sRfaVZx7JSDrmlXfCrfClQ_0MwRbnjqs1a8eJHqnOc2QCHgLq_qMQNCrSS465OK7GgAUAgrYrXNwJJGSCG3wlZStNg_tLkPSjyPj8jvoaW_TqrtevicjYqo6h3QTF014miV6kGCF1UJxMJWTSRp1Ja5_90OqtIovHJXUH_jtd7DU1WDP-Igbwf0YGpQO5nZqqxW8hvihDCNEUIoS665lr0-cc7mf-XhAOtTFPdmNZxUueOonXcIXQ5SgTfR7hho_5GpyXT7gmjC9ycJrjDuESlhvdY3fbimbDBESVndHDCXe8fWodrdLYIA8r0ECawDAv8RBnMRJJ7OWdR1MoVhzMATwY7B5tsSJ7oyCFUEiVeEVyMsUvS0AShPPq1TTeNViFUTS_zNwQONFce2NuUfQaYf3dBGInFbtDT6Jgr7cD4qp42ftYExK3WOj2BncLpdU1NScDRPD83P4lIvLyr2Wib4AeFF_S8vU_LXScAHpByAjpN6PiW1Z-saFlhH8WmpCNNYnh8PG3dks_C7KrOCAHYyEp8hZvfYlKLKMfvg3ab_BL_664fM5MnDs29Rab4fc7_y-eL9kTYVL7GHNL3g8BsoD7RNcooc6Ejx-vHPzG1bvVXWr64hpsZn-HGJCpHGTDcGDCTf6KQT6eFSE6-OCNqcJV6sGQNAGhCE5Dx8UfjV0VkWK0wG28lw0LzvrpPtNdHxhOoTfNtRlHcGMkUAyfePCSPzIVUaITwtemofreCbPYgkvYjNrfvLuBbJnv6-qXfVnX4mfM7ko2fTr7qc0_jCBzN0YYJ9mpmFE7K-v5L8_nsch0vh_lQhNXdZxdRx0s6EBz1R0vwRO_0FuPLl3noGJH1eOKXz_G6ezVvTKoWThuiVf6Ee1y6BjQeZLcm7JZcMDtY-2SaJsSwpzp0lLIUIbRyvL247RxaNpRTHhBk4djbcOMbZfzqNXL-PpylKhMdJtHiJ3WGWCyauLqo7Y0iAkEnKj6T-gYKua_RFQGx-CPY0ZvwUL3YC12SHffeBLOQDzoowhGLBXsjovbkAiAfe6DgI-TTj6Y_BN3qIvVOQ55c0E4Z6BWPLVVrU7ztGjR62A9UlqA4KfvEH_o44XQHjSMDPdmao3toiEHdgeOg52F9EZ4QXlZhbnlYhmNPZuAFILkZrL9RV4QEKeaAAj3HKj4xI50GFUC3c05SadwWMOVHGclW5T5__uRxM2a_9EifLZidukxTE-9Oz1DfONSCCYs1bm9Khs1gTobSth2JNIoH_i5lDNuV-y2d2iMvV9nkHjg1EM5bOv22sC4BKWzNCpXkIJcKvUIwSd11ilrxwHzipGCGdmYvSAL0E69GtihuVYvd4CoS0vu5SK75qWh5yMEsOwIrTtZV6CkTZh93z0FPvGFekH147ab4TVTqkKkSzI2_BIIv-T337Za7mXUjyFVB9ZaMGE_CX1JWgkZASDokjkgpMc222utQbbMBdZ-o9ngUzYXvY3gpVS4M_kC8a9RBlUuULQ5PgveU22jIyTtICGCG2B9ZNvnx314AkkCwyG0rQkzA6MleUy-NFPRvf8eZ7DyFW02CCLQm86phDKscaC8NtGyEo9FB4wTQqR7cYwYzbqGRmlaowjSeQD3d7FvLp1-PM8HGCLC6VucCRnKvXPfFY7QRVy3mr8zcBBw-ftXORgqJDZJQquvbfCS3tbS39kZNmDArx0jZfMRIH_kLtkUP1xMeQ8RjI6NLYx7x-CYxQdI7xoxrgpGz-5G14VVbT795hrFtfaCO",
+        "status": null
+      },
+      {
+        "id": "msg_04c68a6e795a3fa2006ad43e3083d487d0be4fbe94fb7f0622",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な条件や例外は保たれています。特に、5〜7の権利利益に関する除外条件、6の共同研究に限る条件、6・7の研究目的が一部の場合も含む点が明記されており、否定や例外の向きも変わっていません。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"冒頭の「個人データ」が「その情報」に変わり、個人情報全般の第三者提供を禁止するように読めるため、対象範囲が広がっています。また、本人の同意を「あらかじめ」得るという時点の指定が明示されていません。1の「法令」を「法律」としたことで、政令・省令なども含む元の範囲が狭まっています。4では、国などから委託を受けた「者」を「機関」に限定しており、個人なども含む元の主体の範囲を十分に保てていません。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、渡す側と受け取る側を明示しているため、研究に関する各例外の違いが分かりやすくなっています。また、条件が重なる6・7でも、本文と補足を分けて順に説明しています。回答2は、特に6で複数の条件を長い括弧内に詰め込んでおり、一度で関係を把握しにくい書き方です。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294456.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 2283,
+      "input_tokens_details": {
+        "cache_write_tokens": 2280,
+        "cached_tokens": 0
+      },
+      "output_tokens": 636,
+      "output_tokens_details": {
+        "reasoning_tokens": 227
+      },
+      "total_tokens": 2919
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

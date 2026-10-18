@@ -1,0 +1,145 @@
+{
+  "id": "K02",
+  "category": "敬語",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:38:02.942576+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 敬語が正しく使われているか、場面と相手にふさわしいか、タスクで指示された内容がすべて含まれているか\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文には敬語の誤りが含まれています。誤りをすべて指摘し、正しい形に直した文と、それぞれの理由を書いてください。\n\n---\n先日お送りした資料は、もうご拝見になられましたでしょうか。部長がおっしゃられていたとおり、今回の価格はお求めやすくなっております。ご不明な点がございましたら、受付の者にお伺いください。\n\n【回答 1】\n# 敬語の誤りと訂正\n\n## 訂正後の文\n\n> 先日お送りした資料は、もう**ご覧になりました**でしょうか。部長の〇〇が**申しておりました**とおり、今回の価格は**お求めになりやすく**なっております。ご不明な点がございましたら、受付の者に**お尋ねください**。\n\n## 誤りの指摘と理由\n\n### ① 「ご拝見になられました」→「ご覧になりました」\n\n- **謙譲語の誤用**:「拝見する」は自分が見ることをへりくだる謙譲語です。相手の行為に使うと、相手を低めることになります。相手が見る場合は尊敬語の「ご覧になる」を使います。\n- **二重敬語**:「ご〜になる」に尊敬の助動詞「れる」を重ねた「ご〜になられる」は二重敬語です。\n- 別の言い方として「ご覧いただけましたでしょうか」も適切です。\n\n※「〜ましたでしょうか」は「ます」と「です」が重なっていますが、慣用的に広く使われているため許容範囲とされます。気になる場合は「ご覧になりましたか」とします。\n\n### ② 「おっしゃられていた」→「申しておりました」\n\n- **二重敬語**:「おっしゃる」はそれだけで尊敬語です。さらに「られる」を付けると二重敬語になります。社内の会話なら「おっしゃっていた」で正しくなります。\n- **身内敬語の誤り**:この文は資料を送った相手、つまり社外の顧客に向けた文章だと考えられます。社外の人に対して自社の部長の行為に尊敬語を使うのは誤りです。謙譲語の「申す」を使い、「部長の〇〇が申しておりました」とします。\n\n### ③ 「お求めやすく」→「お求めになりやすく」\n\n- 尊敬語の正しい形は「お〜になる」です。「求める」は「お求めになる」となり、そこに「やすい」が付いて「お求めになりやすい」となります。\n- 「お求めやすい」は「お〜になる」の「になる」が抜けた形で、文法的には誤りとされます。\n- 広告などで慣用的に定着しているため、許容する見方もあります。ただし、改まった文書では避けるのが無難です。\n\n### ④ 「お伺いください」→「お尋ねください」\n\n- **謙譲語の誤用**:「伺う」は「聞く・尋ねる」の謙譲語です。相手(顧客)の行為に使うと、相手を低めることになります。\n- さらに、謙譲語は動作の向かう先を高めるため、この文では身内である「受付の者」を高めてしまいます。\n- 相手の行為には尊敬語を使い、「お尋ねください」「お聞きください」とします。\n\n【回答 2】\nご質問の文章について、敬語の誤りを一つずつ確認し、正しい表現に修正したうえで、その理由をご説明いたします。\n\n---\n\n**原文**  \n「先日お送りした資料は、もうご拝見になられましたでしょうか。部長がおっしゃられていたとおり、今回の価格はお求めやすくなっております。ご不明な点がございましたら、受付の者にお伺いください。」\n\n---\n\n### 1. 「ご拝見になられましたでしょうか」\n- **誤りの理由**：  \n  「拝見」は謙譲語であり、相手（聞き手）の動作に使うのは不適切です。また、「ご～になる」という尊敬語の形に「拝見」を組み合わせると、二重敬語（過剰敬語）になります。「拝見」は「見る」の謙譲語なので、相手の行為を表す場合は「御覧になる」「見られる」などの尊敬語を使うべきです。\n\n- **正しい形**：  \n  「御覧になりましたでしょうか」または「ご覧いただきましたでしょうか」\n\n- **理由の詳細**：  \n  「拝見」は自分や自分の側の人間が「見る」ことを表す謙譲語です。相手の行為に対しては「御覧になる」（「見る」の尊敬語）を用います。「ご拝見になる」は「ご～になる」＋「拝見」という構造で、謙譲語と尊敬語が混在し、さらに「～られる」を付けることで二重敬語になっています。\n\n---\n\n### 2. 「おっしゃられていた」\n- **誤りの理由**：  \n  「おっしゃる」はすでに「言う」の尊敬語です。そこに「～られる」を付けると二重敬語になります。「おっしゃられる」は誤りで、「おっしゃる」または「言われた」が正しい形です。\n\n- **正しい形**：  \n  「おっしゃっていた」または「言われた」\n\n- **理由の詳細**：  \n  「おっしゃる」は「言う」の尊敬語です。「～られる」は尊敬の意味を加える助動詞ですが、「おっしゃる」にさらに「られる」を付けると、尊敬の意味が重複し、不自然な表現になります。\n\n---\n\n### 3. 「受付の者にお伺いください」\n- **誤りの理由**：  \n  「伺う」は「聞く」「尋ねる」の謙譲語で、話し手が相手に対して使う表現です。ここでは「受付の者」が「聞く」主体になるため、「伺う」を使うと、受付の者を低めることになり、相手に対して失礼になります。相手の行為を表す場合は「お尋ねください」などの尊敬語を用いるべきです。\n\n- **正しい形**：  \n  「受付の者にお尋ねください」または「受付の者にお聞きください」\n\n- **理由の詳細**：  \n  「伺う」は謙譲語であり、自分や自分の側の人間が「聞く」ことを表す際に使います。相手の行為に対しては「お尋ねになる」「お聞きになる」などの尊敬語を用います。\n\n---\n\n### 修正後の文\n「先日お送りした資料は、もう御覧になりましたでしょうか。部長がおっしゃっていたとおり、今回の価格はお求めやすくなっております。ご不明な点がございましたら、受付の者にお尋ねください。」\n\n---\n\n以上が、敬語の誤りの指摘と修正、およびその根拠です。何か他にご質問がございましたら、どうぞお知らせください。\n",
+  "judgement": {
+    "winner": "1",
+    "reason": "回答1は、「拝見」「伺う」を相手の動作に使っている問題と、尊敬表現の重複を適切に説明しています。特に回答2は、「受付の者」が「聞く」主体だと説明していますが、実際の主体は呼びかけられている相手であり、誤用の理由に明確な誤りがあります。また、回答1は社外の顧客に向けた文という想定を示し、自社の部長には「申しておりました」を使うという場面に応じた修正も提示しています。ただし、原文だけでは部長の所属や相手との関係は確定せず、「お求めやすい」を一律に文法的誤りとする説明にも断定の強さが残ります。それでも、誤用の理由の正確さと、場面に応じた使い分けの説明では回答1が優れています。"
+  },
+  "response": {
+    "id": "resp_039a0fd14e109978006ad43f1b17a087d0999c070454c20454",
+    "access_programs": null,
+    "created_at": 1792294683.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_039a0fd14e109978006ad43f1c01c487d089666f0f9804432b",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D8lk1BZ_IKPjKlsg2POOA_jRNcHi5nSgmG3dIPGbym8NUKy7I8K2llUoj-_2TZ0Sm7KNbrhD3pZOe4ywD07jkbGwaOV0b3qnihRmquwe9Q1aCeo3VOtbdf2bgD88qCV88Xf5BjS05JRWFFR2ba_SQ8rz4G1SbLJH1UO7VW50tOx-ujSkFAJp7OnDZ8UttQgKfZw1PDpZz-dD_4J1iaPahmAiOP-80poLhMwi2Y9nasVps6pNNEo5s22II-qgWUrHwa29FDouIzwxppZc5xZLsTLIig_1ziGbPfpPjvSXaLhnfvmFNUHTNp9BvAsp42bImIH53mz7YczSxydl7dudkFFFwvAzhVod0FrbT-UvZwFy9eNjSHlDHphMsqt8dFnfa90RpQF1INkmTAi_GAWt3aQwwOdzVNjuSC2aTHGI5HSEDQK04QWKFIgG6BmSyRu5yb9HK8NdNuO_q3cvMk3eiEUs-5I_ztI0RZg2M-uTYItu6Yd9ufL-tTrMzcPx5RuEuHl8V0BdXF9iHS5YkfqN899Ei89awI0vbhPuzl3GYhKTUQ0ccXvpJD5auFYbUNMJQDWTY4Eq7Yx2yZWoJE4ejFQczdA__CSGc7hfduhw0h91EIbp-Itxf05jyR4KzWcIUaTWSrRwyjAnB5wX94-ZmPHNUFPTLDKS5vddwovE4bIAVEwFvfhKh8XUJYvKuHGLmS_y_hsfgh_kFkdTR-7SuNY8I4oZ4ywS-mgNBHaYh_iaCNQUYQVLDAmZyF5TnZIrkF7SL6rhBtc_-vnln-8AXyQSls545PIydgXgATEzt_pUk6gynvRg65KsdL8Rakf1dhiwhmj24gudbX5qeBtOCPjvIcdeF62xp3_hE90LdRr6cP0SN53kCKDIOe9AWO_KYpOCTExay1dr3y1EeQjetD3iMZ-E5WFnbm72XD7GuMXkwu8oLNScVqh4Rce4FEJ4JYV62voxKwUkEwIx16KrUW6fjtCpNCcWRwpiRLpK_QXcjaX8fcYLmVcdWQlMXGYj_fwDNCKWrfoxBwHUS_m3JGWJJDzGIKG-wjFjs3DTr-o1y2NJtWvrLLb3a9n7yd9JQ96MXUI9ohXYGe9JfP0wx9Fu29n41yJZ2UfiUFYyKTEQSVXZf6hvFLT7ebgzYK3161UUTWYoV7Da7tZ2wMAsaa_9eTa_a8JOheO2ZzDIEautk8u8jDsqbUFdJdBaZeTDtOOYu-T99h6v5kvHdhY9qc9PDoAwzrDC09Hs3twbrb7JVzJuFgDEV2pQrczgzsMPGBiUemG2kl0jVWUPJqwtY8EnxGZiXD3Ps_wkxrnSgQaHI1MUKAeUb9eASvlAa1nGFeJuSZwtlqFIGGvKiyZfNVEQjXD-Uu4ORC34sVRw5Fvyuro9ERXBnBCwcHqorvt29e3skUogDjTV23XpPdUbl0iXHyHfeCLbyLSMgeol4HTGi9BUy7JuqMUu9Iv12LBZRV-g0_pUWGE_A80IBJIQO-mSxf75sM4YN1UXzihMn233Apq34KzyM6-5r3SQP2qkHWZOaPn1x01L5_KZE4bTx-Z1F4fuM5YkZoM0M36WPZRldtRjEwQqBkyWYCX9zdny1I6aKtLwiftvy7k3xN5waqCfY4GfpMhUFPe0PV2LIcQV2ZUBPMxzkgSA04uL_bZ6jMf1w6BYx5kS9039BNp_2cLFakQ5DjpVch4lv2f-qDvNDU3VvzEveuyuwdYRxPwR-8ehXuh_Orbl7k6Og-nePUbBXuiAWozjvsOcsPQwUZjq17AsR31wYDW6ZB1EVmtxoh6jT-V9ZKcps-qEWsz8PkZqUNF_En7NjqDIcFKoFC3R0Q0qBt9gshxTImP7BEa1XgU_PKhUZ9Knq61ZORQY5z4anq681aSlV4-aLmS6SkQIFxTlo2FCq-I_No3z-5uqQLygn93r9j2NFLsnu2HkM86o2yatbBjeW9Ig5CGcjwnBnwGWGnuEzyAKzJLjnbkoIx9A02QS1U1jrxG1Zqzrcv2JKbIvw1jjgCL3x-ws9DKUuu45nO0hIRCDdVclT95JKUwhsNSM0FCX-tIgrm-jT0BlxfCOiVMySookmpNJyVy32moR9kJFD5_zPQhXO4hodz7TZQPZ4TIMihqFyn6QZjfT5X0MHnT4nhuSrFHXMbDd8BOuuO4cNpYRCkKPS7W3d-KxNmtuALfzg6mAsoE066h1oouG9hrMBRGo5WTycdzPxFBtkmBOuJPVIAV8uEHPjWxs_q0kzqXQjh_MdHqnXsWuH-XBU50yuY9VPWgBrDCWH0_b2E3Rz6F1jx0PeftbPTTHSNETCLjwfrn6YMF5MSk3zXlN9nwteiYG3NDgKbW44kKcWCCfD10Dk9Qemes0Ig3oELpWtgiGvw5bwoKNdOueBLX4YRJngJgTLKeiJjosCFYQ98qy3gsMd4Vk-bB0PVxLkePp5mmO1XT_Sa3n49S3t2djD1_H_hQxWb1IjAmNtN2I8DsoX3xmlKqdrClCwK_n4GhJwtUMhELlzK8pkSIw8f0M3RsT5nnVoxUdSpayDF5-TjHtNWV1MFfMzCiF-fqPNbpLKJsDudjZ6R_lj_ZbfSconVIpUpwljoG5sNquyGXc2Sms-lA28UIgRGCOaNT6EtdXrh7vkHUpVxvXytkbllZJq_YJHLaPGWRcOmPZzsXoRy2BhMf3hQYqOk1-H-BpnFTjT8_9qzEHiBjc5dYQMKPrNq__0zC7rChLKJoQ0K1K80l1Fi0BPIeTfa5h8JOxCkuUj15Ml5pA5CNMG-ZUfFHZSdFY7Qf1bLlRq-YEhWDdG63yZQ8ypPx5jSZ707BBNfsgORWJK6chb6JujXTac8b6b9Q70PHpYd2fgzdKw_DhGpX3N1U8O6--qgNzCm7fy89DkW-CeCneifKK1gOzTcd1ndC1vv5ZIXr48N-WvrOC4Mt827Uci0_h7FXMxsPfDxQbzV5M16zKi7dEqKFd4_pWDAf7evIbG1XRwRs1Cde1jD1bVSaeXNRR9u9HdRlFiMStVQTy0Nms5XlLCnJdBFTe4Rm3VbgEwRQMFR2DvExvoMPaTaGUQ611JtfFs-NM3EIk0N-3hXDSqFeJdsXUthhnMjAktpfSt7goatlpZYYKAxt_tX1bJ7YpCirYbOyxdZxEMoFtZ7gHrta-yrhWb1d8yeGbvbBu_vc1I5ymQHRePup55047sDBUXXvVGW0d-WXBaVa6WxBVxTtA7maALeOSYn-MrggfsUsud2aTHs-BiTdz3AIn_EFrL_tr_EJxYGDmDOXo5k6rS6Y10QAJg==",
+        "status": null
+      },
+      {
+        "id": "msg_039a0fd14e109978006ad43f20542c87d0868e9c41a3c87ec1",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"1\",\"reason\":\"回答1は、「拝見」「伺う」を相手の動作に使っている問題と、尊敬表現の重複を適切に説明しています。特に回答2は、「受付の者」が「聞く」主体だと説明していますが、実際の主体は呼びかけられている相手であり、誤用の理由に明確な誤りがあります。また、回答1は社外の顧客に向けた文という想定を示し、自社の部長には「申しておりました」を使うという場面に応じた修正も提示しています。ただし、原文だけでは部長の所属や相手との関係は確定せず、「お求めやすい」を一律に文法的誤りとする説明にも断定の強さが残ります。それでも、誤用の理由の正確さと、場面に応じた使い分けの説明では回答1が優れています。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294693.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 2043,
+      "input_tokens_details": {
+        "cache_write_tokens": 2040,
+        "cached_tokens": 0
+      },
+      "output_tokens": 383,
+      "output_tokens_details": {
+        "reasoning_tokens": 142
+      },
+      "total_tokens": 2426
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

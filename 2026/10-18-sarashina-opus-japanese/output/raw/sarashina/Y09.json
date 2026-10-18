@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "Y09",
+  "requested_at": "2026-10-18T03:30:53.777507+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文の【】内の語の読みを、ひらがなだけで答えてください。答え以外は書かないでください。\n\n【人気】のない夜道を一人で歩くのは怖い。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-92ae67071d76d2af",
+    "object": "chat.completion",
+    "created": 1792294253,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "ひとけ"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 36,
+      "total_tokens": 39,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null
+    }
+  }
+}

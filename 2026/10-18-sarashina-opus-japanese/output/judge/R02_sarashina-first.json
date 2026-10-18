@@ -1,0 +1,187 @@
+{
+  "id": "R02",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T03:33:16.236232+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n前条の異議は、借地権設定者及び借地権者（転借地権者を含む。以下この条において同じ。）が土地の使用を必要とする事情のほか、借地に関する従前の経過及び土地の利用状況並びに借地権設定者が土地の明渡しの条件として又は土地の明渡しと引換えに借地権者に対して財産上の給付をする旨の申出をした場合におけるその申出を考慮して、正当の事由があると認められる場合でなければ、述べることができない。\n\n【回答 1】\nもちろんです。以下に、ご提示いただいた文章を、専門知識のない方でも一度読んで理解できるように、意味を保ちつつやさしく言い換えたものを示します。\n\n---\n\n土地を貸している人や借りている人（また、その土地をさらに借りている人も含む）が「土地の使い方を変えたい」といった理由で反対する場合、単に自分たちの都合だけではなく、次のような点を総合的に考えて、本当にやむを得ない理由（正当な理由）があると認められなければ、その反対はできません。  \nたとえば、  \n- 当事者双方が土地をどう使う必要があるのか、  \n- これまでの土地の貸し借りの経緯や、現在の土地の使い方、  \n- そして、土地を返してもらう代わりに、貸している人が何らかの補償（お金など）を支払うと提案しているかどうか  \nといった事情が考慮されます。\n\n---\n\nこのようにすることで、法律用語をできるだけ避け、具体的な状況を想像しやすい表現にしています。必要に応じてさらに調整いたします。\n\n【回答 2】\n## 書き直した文章\n\n地主は、土地の貸し借りの契約更新に反対（異議）するには、**「正当な理由」が必要**です。正当な理由がなければ、更新に反対することはできません。\n\n正当な理由があるかどうかは、次の点を総合的に考えて判断されます。\n\n1. **地主と借りている人のそれぞれが、どのくらいその土地を使う必要があるか**\n   （「借りている人」には、借りた人からさらに又借りしている人も含みます）\n2. **これまでの貸し借りの経緯**\n3. **土地が現在どのように使われているか**\n4. **地主が、土地を返してもらう条件として、または返してもらうのと引き換えに、お金など（いわゆる立退料）を支払うと申し出ているかどうか**（申し出ている場合は、その内容）\n\n---\n\n### 補足\n\n- **「前条の異議」とは**：この文章は借地借家法第6条で、その前の第5条を受けています。第5条では、契約期間が終わるときに借りている人が更新を求めた場合や、期間が終わった後も土地を使い続けている場合、地主がすぐに反対しなければ契約は更新されたものとみなす、と定めています。ここでいう「異議」とは、このときの**地主による更新への反対**のことです。\n- **立退料の位置づけ**：立退料はあくまで判断材料の一つです。お金を払えば必ず正当な理由が認められるわけではなく、1〜3の事情と合わせて考慮されます。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文の「前条の異議」を、貸している人も借りている人も「土地の使い方を変えたい」といった理由で行う反対に変えており、異議の主体と対象を誤って広げています。また、「正当の事由」を「本当にやむを得ない理由」とすることで、必要な理由の程度を強めています。財産上の給付についても、原文は申出があった場合にその申出の内容を考慮する趣旨ですが、回答では主に提案の有無に置き換わっています。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": "原文の異議を地主による更新への反対として説明し、正当な理由が必要であること、双方の土地使用の必要性、従前の経過、利用状況、財産上の給付の申出とその内容を考慮することを保っています。転借地権者を含む点や、明渡しの条件としての給付と引換えの給付も明記されています。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、誰が何をするためにどのような理由が必要なのかを冒頭で明示し、その後に判断材料を順序立てて説明しています。回答1は冒頭の一文に主体・反対の理由・判断の条件を詰め込んでおり、「その反対」が何を指すのかもつかみにくくなっています。"
+  },
+  "response": {
+    "id": "resp_07647eba740df744006ad43dfc9bec87d08d7f470c1f798861",
+    "access_programs": null,
+    "created_at": 1792294396.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_07647eba740df744006ad43dfd697c87d0b1ed240b679510ac",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D4KlPhaVMDXVyIk_lZtO33nrEqKugs9x-XtfB-xSzjMPoyv4oExlQ--9CjZT69KXbAstvDRkA2FtHHhYpBlyu-bTw3TXneWIBj_XqQTBEft0U72QJmN1rlR3GEnUur4L9FIX3jh9159nG7VCZxmioVN-pFZ728osrPMp20dY9bMHVBwMKkShl5Zn9dEFYMpt4zr-xUP4iOwh5jXzN2CrWik3no4sLgJ0xDWUllX-9W0VeNbfPG91tAY5Mc0xam-6t4GGBRSp47rmccYgzQwd9-w9wHQJ9TmcSr9yIe75GKp_weKka6Na-nNLNYISW2sJzp_j3WdtaxhX9l_ib-L5Q_jN5Hj3X5sxWmLVb9d0rT6VodFs5ns9g7gR2FqfMcCVNg6TTiAbL3t1Lyt_U4wa8mS8amPJ1l6aB0vipytaTBqyWHN2M1Fcpz3T7jPIds7fRgt5SQMeN_iSUdVuedxM58x_iQYMo10PvWxLjgy8I06ooT0Uyn2gGZTTfJFXXKlp6wFM2GGKpSNr2_qTwZVXmE4g1NZXee-fHuFgh5Fj4j7wc7MzDyRe1Aj2kwUMTyVgr-i5R37Er6W4x9QQBEGm26It69E6oYTAt96R0bA1AWJaAOrmoegvIDpt0vqJO0UglgGCaIPXzBMuv_TDxua0SSuEEfdAeKsu3UP_jL4-RQ0VDRtOzAznzYRkJWw7vUKtlzEqw49at47hYBFO4nOz6WgJnpxUYn5CHhj_YW8HRNBiS7AjosGjL-jg_iEowTixE_AlbWmTXG7lc3_WWoVFrqzdc6F3-VG5_3OAm2ViVX6DOAXef3R1SpSA71u01SXNkQ1gvSCguoVyBgZNjDpPzWi4bwZqGcELBdRuuJvyn8PudC9O1TtN-p_DVjm2DPgCo6suj9Ry1EH-H5QCrZbplwJJ0gUXaa-uHGsU4OQ_lpYY2GaGYg_sJzie_l5Be0CnSXH8QOegE9NfeExm44mAvJJxexToXyiNFQcRTJAAc2NqutWNPT4ntXmyqKz3xAqnN5D7tLgwCbbmMo4ieODu1S9E5wY46GtOhCq8Hok6sBCjkzzawKKZFqbRGaJUO3PbHIDHMb3u3IL81mjiiG4uzGp407OVtJyixBJOvoXppJLKkICQTVBGbAIMnVOtkg9TubtsPWlk9_mxhKhciTGLUCQJr9Lj16QpqisBNh3p5xce7JtGJ75nQBhi9Oi5raE4Sxk6I-6UYNUoIkAz3Q7YuML3N0A8iavv4geccV1Tvxg--8J5SZZDyuqRfdd8QF1DwfEBZ3u6YOC_gSSnWz5fJGQJLOhH42IaJGfKyTf4cjJAFMNEf8LEP6yPA-RoTK7Fr4R9lB9K_mbkaSVQQrSg127nymbN17R-0_cePM0I9a4YeMXiwJh3mSvViuUC8g3ExAxyehyX9RKgfC4LNqRPUj3Q8uO244EcHU2qOElGQUax3QtXyug0U48ynOhTNM554PDjkckXVwn120XbDCPUApxYOJEnY6yL9ICj6BaCr04a0Yd7SQUmFFgXD4YtCaDNabNQufDP_c1XO3ApUR_-ciKGn6lz4Dlg7zdnVu5z2RNxCkUVW-2XZiOWMU8r-Pj91pHTSUER9x404VApC-wyro-7qWFA1oMEemnoDiXqqkdwVfS-bi3lA9BeA2INtVVLbFX63J9dWjM7TlsxzOsuq6xzxNoxsI5t0tiQc8UOuJZoeIEitiWUjkJmWip7dAanNZ9j4RHJD0BQzU1NUYNSwUSClVIrwLEztnuM-lEWXNJtjx6D0XwL1nOR_H99USJipc6mYDUk_BSBbiihWrhlE3Vtu3-yQOZjMeD3_F9ZrL_4PxB2UiluTcul2dMLxkIwJOs1zypX4y8ajR7SiYEf9FjHhLVTJZ9_Z3nhkLUbxPB-eLtUTyyipQsw-NOZkqQdzV9z5YsCchOySavyHFoUTx9z9rp9KOeEepYeBynBgJfriSojODlDKlYFRrYXyeKirqqbMB3iuq8_oUH0amg1wZegcCiZCSUH7F6Njj2dl45SM5OBNrit2EVqPSouUaAOr2bC3W_kOuAzhVmubuizAgGI8mzqz3rqGt37wed5Z8R1vbyQab1bxQiVQVvVth3hwhra7cH_O9j4B15uVbuxX1PYDGkG10J3xb7A-hPeHgnojyuvVLzC30tGT5BMr5malDxIdShRw2LuSqdfazRzlHmUACz1I8yuH70jXIa3ivG51xX3gjRt403Qq6IfAXgcKsg0Bf7jB6AZc0PruPv3JFCC7by64ye9UNSDAJcZvxIqDQSTI2F6np304MEQ5twSefbdCfUxzZHqhF6oFdCTH0X6H5sX9W5DpT6Qd-7-SLGkhPIBlm1oSDtMrEZP5r75fniBrA8m8fg2TlU-DuH4jaaIQASKUcCFJyCyPXacjDZbseku-LVuDYVmANYXqYnLmhkGbVnufhTh-nPETjUrvM0lSVIp0xdT3nRdf2Rufx457GJyjs7UvD_uumA1sUUblhkdNVGP79X4Gj009uTEUuqYsQ7ethjbrBILZ42ffX12Q6njvhbIPhYRDZ6c53msWKd6HBV-DsH0Z5nbQIkpJaG4d4g0XfutWgI1VL-llOlCq3c2k5LELl3-gotQagvnF4HcNya6c2q3rzRl2Lixh7UYKi9IKzYg4UtkKHTTINGVp9Em00L7WeL3WVd2AjVMXcZRH1VxnwPq10POaOBZY7I4Db4VjYLuxmG8GuEfT82xKExNSayfRZ8X8AVQgrMntBiyPyQ744LRTQBQ2eolEPR6EPkgl7QOP-vnmxPyOCdLwbjxK_MZweWsqpD6QWZbW12CQfHoJ2fcGZcmei7EuEEm2TyqEgPfQeIOo_Dy_4PajNNgwxmiwtl1ZWTiIzMiZYsrZB77oBmCEfPB9eLx2QBMvVAqmQqhg-boibb66gMRJ3DD4LyIVnLlQjX-aiBhf7PR5v1LE9AN16z8lazLbStxQ7ZDqHH-uXECqhyxkl2pLDwzs6fWulBCJykY-LaK9MevrxAQmOwLpjYYSvE5jGFrWYQ8MM5ai6OBbn_6IcLYk5ibdHgUcdL8TYADlzOIJ6pZ_zwTgwQZzFVpt815UzJNpUCGZhwps4weyw1S5Po50bsylWlcBWGX68942sCxWZlvpaQSZVQo8z0uZexByi6MrOFq8oDmdOFxLFfnuI36YlSLg2DfW97nh7WY4QJtyKmnwSTZd9YAvvqXFYtuxwjVx-kWwo73KsvqRC6lcpUaMLHpD0ioJQqUVfdJbomQQ29xhg5ZS27qKrBNGygbOrFW9YStdbHXUK8tVNT0_4Hp-QF3gVUvbQGesPjKh9MWYEofrR8zR04Wva5Q3l85UPPc9IO5aFakb6vbDnk_f2ITKAJcGEHojH7oX7-djPLgVhQWjpoun7UCUkwmYSFkDct02Mh-ab5qJ6XfrlWgg8S9elPbEfOjeuatYlfY2__edvJjpLuxj0Ba4qGUKqpzpMwI9_-GEznSncovMNi5fLa5K3C6uMR0WqZWUztMwWfC_RwlGRjGs6zLDkkM9hzYEpZuzopFRME5X9v49HyO6N_QK6BCGXVdvDPsPrb97jRhSHYUOp3dBF_K_dC5i8VOiTTZmFtv3nTHfZ_aMa--m8U2qTfkT37r6jq9CDxKw7tD4gD-s5JOhj9QFziM8OHoiL6xD2_kq6jrPepDkeUEssX_eGXmcUgKJQMxwCTs_lTPfyyYYZppB9jfAfziMWmt6p4DStwmKsfIPfM063sJUwpfnJAb1Q-g3D0g5gJC6Rwrt4kEon2tsG8WFYNx_qaaqGFG0A0KjE50zuXVVzMYv07-xFJNoDbCz86a91FgykACQv-bPwctSRTt1GHLAvkgEv0ONiKXYs5Efbo_n1fhaBnMcJNEBS55h3fVXK8yhAfCW7U8vqF8CGbWZBgMFIGAql5aQ==",
+        "status": null
+      },
+      {
+        "id": "msg_07647eba740df744006ad43e02894487d0a239a2a88813bb19",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「前条の異議」を、貸している人も借りている人も「土地の使い方を変えたい」といった理由で行う反対に変えており、異議の主体と対象を誤って広げています。また、「正当の事由」を「本当にやむを得ない理由」とすることで、必要な理由の程度を強めています。財産上の給付についても、原文は申出があった場合にその申出の内容を考慮する趣旨ですが、回答では主に提案の有無に置き換わっています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"原文の異議を地主による更新への反対として説明し、正当な理由が必要であること、双方の土地使用の必要性、従前の経過、利用状況、財産上の給付の申出とその内容を考慮することを保っています。転借地権者を含む点や、明渡しの条件としての給付と引換えの給付も明記されています。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、誰が何をするためにどのような理由が必要なのかを冒頭で明示し、その後に判断材料を順序立てて説明しています。回答1は冒頭の一文に主体・反対の理由・判断の条件を詰め込んでおり、「その反対」が何を指すのかもつかみにくくなっています。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294410.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1441,
+      "input_tokens_details": {
+        "cache_write_tokens": 1438,
+        "cached_tokens": 0
+      },
+      "output_tokens": 592,
+      "output_tokens_details": {
+        "reasoning_tokens": 188
+      },
+      "total_tokens": 2033
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

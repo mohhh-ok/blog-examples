@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "R01",
+  "requested_at": "2026-10-18T03:23:47.366621+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n消費者の不作為をもって当該消費者が新たな消費者契約の申込み又はその承諾の意思表示をしたものとみなす条項その他の法令中の公の秩序に関しない規定の適用による場合に比して消費者の権利を制限し又は消費者の義務を加重する消費者契約の条項であって、民法第一条第二項に規定する基本原則に反して消費者の利益を一方的に害するものは、無効とする。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg8zB3b4XknXzqyXkn36S",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQS/wgKEAgSGAI4AUIIdGhpbmtpbmcSDIYiqVO6NHIcbb87exoMZiUYaslAzcoyPgyqIjAd53ZV7z33IU2do1P6kJZs8LBUOOIJEkOMpSgxgm8Qx3dE8AKdiYsloyblmeRtVSIqnAhWHNcmhq6ZcGoXssxPpgo4JcxqpVyh7nAB52E35HSv+VEQbt2YAGgwQaxkHYSTodBtfQmuAFDb//TLEvOsWI+Hrf95CWlJp5CltJnWQMWSTS4Cgu3Pj8fySt1r4tppuyhPPfD72gNPEN0ACzChM/U+TekakpQYH5uFJiAYaUdyGYFKVbhCzXGHLsaNMpG5F6R8xxg1Bj1+6x/iePN1W/6MV470obBNrJaTrXFT1cJYHTDbxYOJ0Y+PRpl4Ba/zrqfdrtE7byeGe2NjazOaPCZoIzQyIlRyveC2fN8Ksh6InDNykZIMfKYHQRsSUNGFCejL3jGbLuPXfF5JB3q4iiMD5cyOgGSVd1BnZpkV9DfPoQ1hFiaB33eLNb7EGfF9jqceAJuVM2UqvbEPpiGMMMDBAankZTeGAdtv+ITe5KTQfdGM2+yo1jhTTE9gMzAhe/wqyGMJHfGa7GWWWFXgTAf+hbu26jMSAEMQuX7p6eXQnq488rOxGpmOnMSigOh4EP7ZCxS+ONs7DwI3fqyQT4B9GVcAHDSiZ7h0UMC1aMgp/pd3WPd8hoEC8ekKZ6TDBcPK8dAO6tefXv597+YfDTmxkB2KynzTLyZefTFYMmGf+5TU2eLwS3pmG25HexYjZmOevNbdV4Vltr9ja4oYo3FrkxulVskr+25j3Qj/o4fphAl1HaBUj1+gfmPiapWrVGxS7ZQxbXQo2kELf1i5KNdUQKh809VkHAB/CBjj6MAOwQYFNKusrUcnZ3cOclsKwsYzJurHqZ/xGGXsFB/926gb6JOFCY0/12Ir3tM/ae+WIGrcuvGaxd3LEa4fbpCdoF3Jqh5fqjFkfKpyhWrW0bXcPQTZsKk36k8XTEq+hC5tj1p1fbJvqn2aWXkc39WxTdReXb1xNqr+odXwdaP8D4JQ7m4IPZYyIdMxFgerztoA41rOYq68r03Ga6Yqf1Up0F+R6FLZT3A83xpan87/XlXF4QgG+Oy8yNCqVdC9C7foK2E1PUPzimxuizCYb0XXqSKuWsj7lyVhCzsGYl6UZ00vyKJyq70M9GIHQw5lTLeRODPvix+woSotnAwImlq+R8LBmNpPN0NLCwj7FAcrC6KYe+CzwPsY4u1e86EkNT4cEqdtOaPhfuNgsC7FDzYGMUT8Gtz1Utm+eJv42rPYdNkiXcBQu3j97fxTMMTQFUq8YcRRtKPuXRSLWRC/vYc2uX3XZ8YXRr0XkAGlmVpN9W3PFKPpkcOmdWZ7IG7LedZNnfHekxVJurFoUKjfZepBuuQiRKAcn7OsEfRHzd4BZ/PuUirBsPtCdCkCWnj5lYbW0MC738InySvRaXugK4XP1ObIgDZ03FOy+lg8/trg8OfFEw7pxCi5i66Y8hW3YOrtssPXTdoDhQa0z7XiBxgB"
+      },
+      {
+        "type": "text",
+        "text": "## 書き直した文章\n\n事業者と消費者が結ぶ契約(消費者契約)の中に、次の**2つの条件を両方とも満たす**決まり(条項)がある場合、その条項は**無効**になります。\n\n**条件1:法律の標準ルールよりも、消費者に不利であること**\n\n法律には、「契約で特に決めていなければ、このルールが当てはまる」という標準的なルールがあります。契約の条項によって、この標準ルールが当てはまる場合と比べて、消費者の権利が狭められたり、消費者の負担が重くなったりしていることが、1つ目の条件です。\n\nたとえば、「消費者が何もしなければ(断らなければ)、新しい契約を申し込んだ、または承諾したものとみなす」という条項がこれに当たります。\n\n**条件2:信義誠実の原則に反して、消費者の利益を一方的に損なうこと**\n\n民法には、「権利を使うときも義務を果たすときも、相手の信頼を裏切らないよう誠実にふるまわなければならない」という基本原則があります(民法第1条第2項。「信義誠実の原則」と呼ばれます)。この原則に反して、消費者の利益を一方的に損なっていることが、2つ目の条件です。\n\n---\n\n## 補足\n\n- 消費者に不利な条項が**すべて**無効になるわけではありません。条件1に加えて、条件2(誠実さに反し、一方的に消費者を損なうこと)も満たす場合に限り、無効になります。\n- 「何もしなければ契約したものとみなす」という条項は、条件1に当たる代表例として挙げられています。このような条項でも、条件2を満たさなければ無効にはなりません。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 199,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 763,
+      "output_tokens_details": {
+        "thinking_tokens": 190
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}

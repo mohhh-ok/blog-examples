@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "Y07",
+  "requested_at": "2026-10-18T03:30:29.758909+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文の【】内の語の読みを、ひらがなだけで答えてください。答え以外は書かないでください。\n\n【長閑】な田園風景が広がっている。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-8eefe41f17388084",
+    "object": "chat.completion",
+    "created": 1792294229,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "のどか"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 34,
+      "total_tokens": 37,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null
+    }
+  }
+}

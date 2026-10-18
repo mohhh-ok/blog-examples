@@ -1,0 +1,137 @@
+{
+  "id": "Y03",
+  "category": "漢字の読み",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:42:24.334496+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 読みが正しいか、タスクの指示（ひらがなだけ・答えのみ）に従っているか\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文の【】内の語の読みを、ひらがなだけで答えてください。答え以外は書かないでください。\n\n資金が集まらず、計画は【頓挫】した。\n\n【回答 1】\nとんざ\n\n【回答 2】\nとんざ\n",
+  "judgement": {
+    "winner": "tie",
+    "reason": "両方とも「頓挫」の正しい読みである「とんざ」と答えており、ひらがなだけ・答えのみという指示にも従っているため、優劣はありません。"
+  },
+  "response": {
+    "id": "resp_0111a360bfa4d241006ad44020818487d08c7ed6fac34eb5d1",
+    "access_programs": null,
+    "created_at": 1792294944.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "msg_0111a360bfa4d241006ad44021c9fc87d09ae086e8e0bb8359",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"tie\",\"reason\":\"両方とも「頓挫」の正しい読みである「とんざ」と答えており、ひらがなだけ・答えのみという指示にも従っているため、優劣はありません。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294947.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 295,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 66,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 361
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "K04",
+  "category": "敬語",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:38:34.599767+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 敬語が正しく使われているか、場面と相手にふさわしいか、タスクで指示された内容がすべて含まれているか\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文を、大学時代の恩師に送る手紙の文面に書き換えてください。\n\n---\n先生、この前は推薦状書いてくれてほんとにありがとう！おかげで第一志望の会社に受かったよ。4月から働くけど、落ち着いたらまたゼミのみんなで会いに行くね。先生も体に気をつけてね。\n\n【回答 1】\n# 恩師への手紙(書き換え例)\n\n---\n\n拝啓\n\n春暖の候、先生におかれましてはますますご清祥のこととお喜び申し上げます。\n\nさて、先日はご多忙の折にもかかわらず、推薦状をご執筆いただき、誠にありがとうございました。おかげさまで、このたび第一志望の株式会社〇〇より内定をいただくことができました。これもひとえに、在学中から温かくご指導くださった先生のおかげと、心より感謝申し上げます。\n\n四月からは社会人として新たな一歩を踏み出します。先生から学んだことを糧に、精一杯励んでまいる所存です。\n\n仕事が落ち着きましたら、ゼミの皆とともに改めてご挨拶に伺いたいと存じます。その折には、どうぞよろしくお願いいたします。\n\n末筆ながら、季節の変わり目でございますので、くれぐれもご自愛ください。\n\n敬具\n\n令和〇年〇月〇日\n\n〇〇 〇〇(自分の氏名)\n\n〇〇 〇〇 先生\n\n---\n\n### 書き換えのポイント\n- **頭語と結語**:「拝啓」で始めて「敬具」で締めると、正式な手紙の形になります。\n- **時候の挨拶**:送る時期に合わせて変えてください(例:1月「厳寒の候」、2月「余寒の候」、3月「早春の候」、4月「春暖の候」)。\n- **敬語表現**:\n  - 「書いてくれて」→「ご執筆いただき」\n  - 「受かった」→「内定をいただく」\n  - 「会いに行く」→「ご挨拶に伺う」\n  - 「体に気をつけて」→「ご自愛ください」\n- **感謝の気持ちの補足**:合格を先生の指導のおかげとする一文を加えると、より気持ちが伝わります。\n- 「〇〇」の部分は、会社名・日付・氏名に置き換えてください。\n\n【回答 2】\nもちろんです。以下のように、恩師への手紙として丁寧で温かみのある文面に整えました。\n\n---\n\n先生  \n\nこの度は、ご多忙のところ私のために推薦状をご執筆いただき、誠にありがとうございました。先生のお力添えのおかげをもちまして、無事に第一志望の企業から内定をいただくことができました。心より感謝申し上げます。\n\n四月から新たな環境で働くこととなり、まだ少し緊張もございますが、先生やゼミの皆様からいただいた教えを胸に、一歩ずつ頑張ってまいりたいと思います。落ち着いた折には、ぜひゼミの仲間たちとご一緒に、研究室へご挨拶に伺えればと願っております。\n\nどうか先生もお体を大切にされ、ますますお元気でお過ごしください。またお会いできる日を楽しみにしております。\n\n敬具\n\n（あなたの氏名）  \n\n--- \n\n必要に応じて、お名前や日付を加えるとより自然な仕上がりになります。\n",
+  "judgement": {
+    "winner": "1",
+    "reason": "両回答とも、推薦状へのお礼、第一志望企業への内定、四月からの就職、落ち着いた後のゼミ仲間との訪問、先生の健康への気遣いを含んでいます。回答1は「ご執筆いただき」「ご挨拶に伺いたいと存じます」「ご自愛ください」など、恩師に対する敬語が適切で、頭語「拝啓」と結語「敬具」も対応しています。回答2もおおむね丁寧ですが、頭語がないまま「敬具」で結んでいる点が手紙の形式として不整合です。また、「ゼミの仲間たちとご一緒に」より、回答1の「ゼミの皆とともに」のほうが、この場面では自然です。回答1の時候の挨拶は送付時期に合わせた調整が必要ですが、その注意も明記されており、総合的に回答1が適切です。"
+  },
+  "response": {
+    "id": "resp_0ad1a1d10fea97a2006ad43f3ac3a487d099fc3ef17ac7ead3",
+    "access_programs": null,
+    "created_at": 1792294714.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0ad1a1d10fea97a2006ad43f3bc02887d08c13b6bb4b03b0b7",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D9EXA_wWW64PXD5RK22LDuz0VkBQGhih2l-AZAE2Yq9hYKvPeJfRkNGg5i7sY1qsNkGBQ__0Y46VOGP8NsdeOXQq2X2x-WgakcRQjuxCFbILPa1DGc_kR0G8arKW4LDYw97lApMhvDVfTWrBrkQfKT2n_DJKBKuzPrTp02UNNPehn5szsidjHAIw6OX_4js5klVk1vNmq53rK0WqygxjnaJHA_xEz2bnMZQNN3213xFLwVpE1Gcal3DeANAFflAMB5C1gnRIGtmLt5JO_pQZVtcMnQVQuHx1GAkwNXhi2s2zf2b1nUkdp06x5hqQ7ChtW1xRpFORO3o-dpTktpyEkxe8DXIUEI7YaTrxOZYSG1jmVX2Cz57UC7Stmc1d21mcht2kr2PyJiWH9tsjW9bPkMzNnqDKyvIdGQ0QqC9bWtAS1Xo8EAxKuAnoTqEBtxkVUfeI_7xpXClHHpceOQLprFCZzsGmlBFWN34vhmpgk2G_RDGD00Ctqbl83T5mUEn7rE6gU4ErEVrcp_wZLuIMxBgmOSiJJMatNpsDj3d9Y7ZEOZARSHPuiW5oY1yAyPo6qmmxBiIoVvA8qxU9YGoMtAX8UN7GNLQCjNWoV-K6YC8DOns5Eanzdb1jQwoJYUbs9XT1Aq0zf7GaXAF7UF26IukoLrMhv4DWKFI6lAkgPrHejBqS93p0WSA4awKdJoihOIx614v45iI4AJhAJ8ZEkrym0y6b2XOuo5B7G-ekqKKoP0cEqn4F2PHpSLZ2O8IoJnZiDd5piDLI1jTbG2FXBthnyEAgppLt4D2bMMhMSph07wxkVE8gfdL37vyhvsO3qB3EmqBe4f7cxCreyKbZqhNgD7NU7PQC_6vd_LrEX_RWAtETblY2W_ax4iC6sRpgmjf4EzVo5nB-XBI6YC4wL_wig9m0F7K_G0sV2ADUtLuqvZzQ33fm1gdF5dWtM3O-YFYi8jw1SR8i9ClglXx2h77Ea1d4M9raiYR2mc2YAX-N1wrfyiOIEFCQN6I1pULrxtOSCCkrQ6CW2u8p1d0CfqBprkXOAj2iu5uaO74qe8fo9vfdotILxFf17XYPiLcbd9szkJBmlGhMVhs5VGd1MhkL4Iu5rG5c4IsSk_yuaBnVpcCRh5b03qzRh9NbZB8J-VfUKHr-NIMlz7gC2mtwz9ArpruZe3vju_7UYUSQYtpEh6WXIsg0MqK1_8odaooheOA4ckRlHlKAbJ26FAFcrlwdCgqpWM7du782Uv-psC9YM_IH-f_tKpAcUNf-mUtTdrkxL1it4iCHov3qkEIBTvYQjeKHvY7Q3-HyQlvzxKq-C9bUitq8DReLONQqE6ysDnOhQU9ptlqVrlj0ZmkbUZOXDGVZYoLbWLmZXMDGxovr43Eiktub9r8gTfEmhwEgUZearSZXrl0ScBcjc2FX0jFVXWhdl8-uAM11u_ZjbIo03UttKNQWT6eRhiYyefaycmu6pqfwvMFGMK52x5_ADejrgtYVIV5VbZHjUkeRwjk9Jrp3wgA75kuiY3vOSzPzRLJ0s5Z0AiZK1Gj_XmEGSoaFNzKmsRakEv4OIWQ5vZvoKL3nLspv6Ic2c1PwZ_f9BAU0KWXQIX6fY8WxEhl7oQTkMjlZhaodw6gBrQgx2bFOBqRzUPysw90QWuCwgfJBD22FeiOaSm6ic0xpX_ycZhskgu26wETnm5WdrMfu21pin1nTzKcJkWiVS0mfzDEi8YqxzlcBcSUbTnuAzXiAk8TpGzkjtQjmYmH4x6726KK_ArXythNifIQhz9WNASLHGaqnAXRttwYkGXv_hcj5Vmpmf3xZHb5JK6JWbXcYoVxpuJFI7Nz6-GtW1Gsl2E9O0C9sJKHAge9kRfy1IaB7lgcp1_h3XYItJW90PC_GtTOfORq58Xy4b3GeG1NrZTTrfjQua5EwRnb3kS7g2UScxMYWhQlr0UpDOnACx0x3pcemLoflsBpo16OLawUKFfBn2eV3J8k89sGGI-Ydl6Gh9l5U9cDdgumMG4mVLqZjR9z139kEY_lDto2EI4CYgZ6w92SOCGbSHysq6tLl3hlQTnv-r2x8iT2kQC0bWTVkVLiD4tDHfcPo2d8vvPJDd_ff_zVEeJf1j6E5Q-6V1NB6GzkXB95TwQR3YsDu5koQQOwaWu92jJd9bqrqPmqupmtuigEeN60s74kA3pj5KLeCljIWd3Lcu-cKg3JvA1zTlHyAMHU78zwwlMzhJ65ui25UvPHr_RD7AuxHHLhEMES8eBGWjdvgz7LCLZfXDtwubfIPDScRBvEnQbk3mbgBqsyzXS094-8-7ORGCt5EEWCbZj7222oPXfKy5HFgRbhuZhzB95lGxQiapZQyxKVymXZU_EkUcGL04-IvvHUwWj052He3mquRr1Zmg3tHlhuAZY-9ML5fnkpxCt2cHfwsJNvEymVV2bUVwnepLOoIQOcB8hNatWXmW9M_bEd-zZf0ZDX4v2J04cGqYR1iRR4aL8RC4vSLPXwFBzRsjg2vI-R9C9m-GC3RrHVraD97O_zwkAHrFWBwXE_euXYD1Gt-6Z5m4uAx1LNAW6N4fZ_Q_KXU422dS3z5Azxm4g6PC_Q2DW8oCzY2z3w_o37kYRySXAdEFR8ozwMIFfWVEnrNUxM57M8aHnZiXYMpMXebvJ35MZMCOP5XH843rBIkBTRbrEnDgsH",
+        "status": null
+      },
+      {
+        "id": "msg_0ad1a1d10fea97a2006ad43f3f86c487d08bf8b1e7f0bc7ee3",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"1\",\"reason\":\"両回答とも、推薦状へのお礼、第一志望企業への内定、四月からの就職、落ち着いた後のゼミ仲間との訪問、先生の健康への気遣いを含んでいます。回答1は「ご執筆いただき」「ご挨拶に伺いたいと存じます」「ご自愛ください」など、恩師に対する敬語が適切で、頭語「拝啓」と結語「敬具」も対応しています。回答2もおおむね丁寧ですが、頭語がないまま「敬具」で結んでいる点が手紙の形式として不整合です。また、「ゼミの仲間たちとご一緒に」より、回答1の「ゼミの皆とともに」のほうが、この場面では自然です。回答1の時候の挨拶は送付時期に合わせた調整が必要ですが、その注意も明記されており、総合的に回答1が適切です。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294723.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1128,
+      "input_tokens_details": {
+        "cache_write_tokens": 1125,
+        "cached_tokens": 0
+      },
+      "output_tokens": 355,
+      "output_tokens_details": {
+        "reasoning_tokens": 101
+      },
+      "total_tokens": 1483
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "Y01",
+  "requested_at": "2026-10-18T03:23:19.640396+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文の【】内の語の読みを、ひらがなだけで答えてください。答え以外は書かないでください。\n\n貸し借りを【相殺】して、残りはゼロになった。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg8z92hgLkC5Fzwn1amLw",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSrwUKEAgSGAI4AUIIdGhpbmtpbmcSDDZh8CaKqOR06ooKtBoM3PNZZIpABn4BiCncIjCh2gtJHq6R4iTZqlTJ35SiBWACYQwyX69SKVtJ78iFT1aZPoZudiE09hCrd41qW+cqzASc5r15whwKyGkOO4mBkOrtKRaXPf94GG1Nm79Fw/MH3zeDlyjKmanOT5fsypWaprrS7SRsUE6H8h8AXm6HZPyVUWQ2sPHHY9eZZzOWpQSn26jZNdjYipAh03j+4ju+JcyDcaij1oxFC1AxwnfzFp7U1cnVS3d/SlS1OWJ+hd5xJfHiNkwKvSIjBU7dyQp8ZIPkKffE0uUD6w4eR8P89pxukptaHhqddf7rOxqbUYSaCM5EPhRw8J6jqCqfzz2o+eXF11a1lqUm5+8z15a6XUZ0sYQe3BTuJqjwazTC5HmKUUUuLrWy7nhQtVWHDqgObfCkX5UKYADdAiT0yASnzyHopyQmMOYXxmh8VCIuJ7dX+dDrPxWRB04218TPNFTGIrdPaNPX7oaTvK/fd9LUBeRS24lPDX3VMP2qWNMNSLDNE+AvcO5jtNtqsLdSLupt9E2oAFZYH8Tkr7bX7r7cfxsNdEq4OaMPQOM0EwoZW3rPh7VXje6at+8dMIRmj/bCAZx+6DaKuPf/UE93lYkIcu4yOojT6o7zXaEMqu1+rloEu2wp5TPMOZ9zCZeJW1E4Xi09HmOwC83DMEOtN9qPqZIJZVbxoEIHVn/zg8OkmAUhmsvDxVZV1AlE0VR482IZz48PdBv+I9pS07634+IZzfKEnWUt/gKGELLFnGRr9CxyKiK2IwS/WKwr0y1zWeMTPYMzxztg2JNgAc1mgRfbUjSenNiB2Ft0luhBsykyRY7fRx9Slhg43cMiUgojwHXDx6bvqFvNlpaMiz4ASHYYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "そうさい"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 69,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 41,
+      "output_tokens_details": {
+        "thinking_tokens": 35
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "K01",
+  "category": "敬語",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:37:43.235314+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 敬語が正しく使われているか、場面と相手にふさわしいか、タスクで指示された内容がすべて含まれているか\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\nあなたは部品メーカー「株式会社みどり製作所」の営業担当です。取引先の購買担当の山本様に、注文を受けた部品500個の納品が、材料の入荷遅れのため10月20日から10月23日に遅れることを伝えるメールを書いてください。\n\n【回答 1】\n件名：【お詫び】ご注文品（部品500個）納期遅延のお知らせ\n\n○○株式会社\n購買部　山本様\n\nいつも大変お世話になっております。\n株式会社みどり製作所 営業部の〇〇でございます。\n\nこのたびはご注文をいただき、誠にありがとうございます。\nご注文いただきました部品の納期につきまして、お詫びとご連絡を申し上げます。\n\n当初10月20日にお届けする予定でしたが、材料の入荷が遅れたため、納品日を**10月23日**に変更させていただきたく存じます。\n\nご迷惑をおかけしますことを、心よりお詫び申し上げます。\n\n■ 対象のご注文\n・品名／品番：〇〇〇〇（品番：〇〇〇〇）\n・数量：500個\n・注文番号：〇〇〇〇\n・当初の納期：10月20日\n・変更後の納期：10月23日\n\n材料の入荷時期は仕入先に確認済みです。入荷後はただちに生産を進め、納期を必ず守れるよう、社内で進捗を管理してまいります。\nまた、一部を先にお届けする分割納品をご希望の場合は、できる限り対応いたしますので、お申し付けください。\n\n貴社の生産計画にご迷惑をおかけし、誠に申し訳ございません。\n今後は材料の在庫管理と仕入先との連携を強め、再発防止に努めてまいります。\n\n本来であればお伺いしてお詫びすべきところ、メールでのご連絡となりましたことをお許しください。\nご不明な点やご要望がございましたら、遠慮なくお申し付けください。\n\n何卒よろしくお願い申し上げます。\n\n――――――――――――――――――\n株式会社みどり製作所\n営業部　〇〇 〇〇\nTEL：000-0000-0000\nE-mail：xxxx@midori-ss.co.jp\n――――――――――――――――――\n\n---\n\n**補足**\n- 品番、注文番号、担当者名などの「〇〇」部分は、実際の情報に置き換えてください。\n- 取引先への影響が大きい場合は、メールの前後に電話でもご連絡すると、より誠意が伝わります。\n- 分割納品の提案は、対応できない場合は削除してください。\n\n【回答 2】\nもちろんです。以下に、山本様へお送りするメールの文面をご提案いたします。ビジネスメールとして丁寧かつ状況を明確に伝える内容を心がけました。\n\n---\n\n件名：ご注文品（500個）納品日変更のご連絡\n\n山本 様\n\nいつも大変お世話になっております。  \n株式会社みどり製作所の〇〇（あなたの名前）です。\n\nこの度は、ご注文いただいております部品（500個）につきまして、納品予定日の変更が生じましたことをご報告申し上げます。\n\n当初、10月20日（火）を納品予定日としてご案内しておりましたが、誠に遺憾ながら、使用材料の入荷遅延が発生したため、生産スケジュールに影響が出ております。  \n現在、鋭意対応を進めておりますが、現時点での確実な納品日は**10月23日（金）** となる見込みです。\n\n山本様をはじめ、貴社ご担当者様には多大なるご迷惑とご心配をおかけいたしますこと、心よりお詫び申し上げます。  \n今後このような事態が生じぬよう、調達体制の見直しを含め、再発防止に努めてまいります。\n\n新しい納品日が確定次第、改めてご連絡をさせていただきます。  \nまた、本件についてご質問やご要望がございましたら、どうぞ遠慮なくお申し付けください。\n\n取り急ぎ、納品日変更のご連絡まで。\n\n何卒ご理解とご協力を賜りますよう、お願い申し上げます。\n\n敬具\n\n株式会社みどり製作所  \n営業部　〇〇 〇〇（あなたの名前）  \n電話：〇〇〇〇-〇〇-〇〇〇〇  \nメール：〇〇@midori-seisakusyo.co.jp\n\n---\n\n必要に応じて、担当者名や連絡先などをご調整ください。また、より柔らかいトーンや簡潔な表現をご希望の場合は、その旨お知らせいただければ調整いたします。\n",
+  "judgement": {
+    "winner": "1",
+    "reason": "回答1は、部品500個、材料の入荷遅れという原因、当初の納期10月20日、変更後の納期10月23日という必要事項を明確に伝え、謝罪の敬語も取引先に対して適切です。回答2も必要事項には触れていますが、「確実な納品日」と「見込み」を併用し、さらに「新しい納品日が確定次第」と続けているため、10月23日に変更されるのか未確定なのかが曖昧です。また、謝罪の場面での「誠に遺憾ながら」「取り急ぎ、納品日変更のご連絡まで」は、相手への配慮という点で回答1に劣ります。ただし、回答1にも、仕入先への確認済みという説明や分割納品の提案など、タスクにない事実・対応を追加している点には注意が必要です。"
+  },
+  "response": {
+    "id": "resp_0f8b0581934155c8006ad43f07655887d0a5ce5005dd1c6855",
+    "access_programs": null,
+    "created_at": 1792294663.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0f8b0581934155c8006ad43f08599487d0b824c607a02580f7",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D8OYQjyolCbProrcniCgBkMl-jvpK8B-pVzL3HScev2oI7F_uw1rABKGpxvRceQtDPi1l1POWRB6E_9iUL3tA1h3RgsBMZWaMfEBd8uDJJrrtpjm_oCFkJ4bB65v2wLVzvZCf0Z_LR2JJirXQJdCcpahOp77ObML4IC_c4wxiLIDTWn67uP9SEEwkyePMAOHaEelYrDpBUbmKvcMZwoYfpowqkgoTqY9-YJL14lgbGq9sltIqla4EI62UrZnC5xYpciWvoxNWwLDcye9zyTwXm-r-Ac7lfF6xK9FjvtvY1av7h13AGouth3PvR9X5tjmKp73PDkDS6F9eyeGvVyvuVPxws6ItKT2lvGP1bGHKtJ3TbehJLjSzujtdFNY52JXK4qW366dghDh5i2zdtLbm5wVwuaOCghYnGPML1zps0X9MJYA0-_KIbGU5r_mvO0lLMoe9KhaAI-6XK5vi9sl4m4iASTMvAKbyUizyT7m2vWCqxQxsTrn1epbG2XMmSm44hZEv5khnUc7nSZm936LM6_kbgmyOsKYT_DwJ8IArNPHy-sXXZ8wR8l_z4lUb7PPc0HEaP7fKXZrz_cUJgy3V44zs1Z9q7WRVyWYq0DYUKUSrmApNYkS-1iASlq-SImLU-rXLd5ncZTUq8C4GXOviNCj7K6eFZ7tuKiJJdqz76W9ciXXb4_fTIdgTb1S-90T4O_3znqfsOGW9G_mqCnftjaA2HdqLDDUeuQPP4_ROa3LeEwkYP4pezX-85qzvzZ6oY6SornRJ7APQLx1c0C5uwb79BJzqhIbu2JA8y4bEsql4e-E0W41UiuWuW1rOOoylmEWGlOPB6u78AHu7izK43SXDbmv1BUgoMCP8_9VoZFtCuvFm9QM_h1nsirjz_bXyncu3W-KA5uKx7vvkGkjI7xk9cdDLwv1QplK22P_bipkRgEpFArsm16dv2A2Ps2msTGGJ-697pbXSnlFPYbqnyqg92luCF4Whcosu8CSo2t5HL74nUhpQDlFCd2w0dXjIm_DY03Ta3fsSEXHSUrzQeHUJgWTWDZCW8QUrzAj7ISfhrr9fhWJrvExmqcA_bwAGgl4LdBGIoNP_pBdSZIOJXuZeGShxOtDqyRXZr1iRqSj8tlIkPSZZwk4GDnuEdyO6Ibd-Be7C1saXoUf9w4bqzIA6QVhgW0a708PIKG3jXMF2lLTCXhntVQzMfJkBREi2nBrXcUp-fhWp_Gp6yd1zMP0Ae_k9cg3aQMv-Ov-pyhVr-SmkJLSbFKJJBXuBRVC1xBct9fFUaAzqhoMXar4Ii-PfNCPSC9pOdAAWO0cElvxdULeIpDJhHm_O5CxyBNGFA6l8-CT7NbCCcsaZOhxh1xJ17Ey-ClNsEp8nNU81JP0C8ngD5KGDDNmuKy9RNHwPJWhuwkJ24GEM4W6qJ1NdK2DU8Hm5zGI7G0WhdelVUGMpIX6jphvrJASRGUiBKpYQak81vXAaEdhMyWbH71Co5mbPw5dtFsXJ-EijYu4EvDIa09aXZVKm5ua1CUI6N_-MYqpU3xi0xAv1GtLHkp9O0EYGg5EhDMvCNJB7OFdo89O0j05_jq0o7eqeDQOQOW2ricEOqAk9FepTGuhIAWxq-9jnmr-VTomxVI4rsIOeKOx3YNxXcNeqydKivL1qcOLbOUyLxaEOyuiplQjUSeqG1a2tf7v25T45cnF9tC4ZUsDF2jRHiYCfUNrY1M950I-S7otkLMkeJ-NVHLjCnefPz4IF99HyjFt1ZHgZZ8ojudSpNlhOI3mWgfoLcWec0_rcJuMLYNUKOriN9zeQWH1G68pTRY-Cu0Ton27fZuAI67k75jiXJ6oj3aAbFsLwnKcAUm",
+        "status": null
+      },
+      {
+        "id": "msg_0f8b0581934155c8006ad43f092f9087d0a827082ce6e9e70a",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"1\",\"reason\":\"回答1は、部品500個、材料の入荷遅れという原因、当初の納期10月20日、変更後の納期10月23日という必要事項を明確に伝え、謝罪の敬語も取引先に対して適切です。回答2も必要事項には触れていますが、「確実な納品日」と「見込み」を併用し、さらに「新しい納品日が確定次第」と続けているため、10月23日に変更されるのか未確定なのかが曖昧です。また、謝罪の場面での「誠に遺憾ながら」「取り急ぎ、納品日変更のご連絡まで」は、相手への配慮という点で回答1に劣ります。ただし、回答1にも、仕入先への確認済みという説明や分割納品の提案など、タスクにない事実・対応を追加している点には注意が必要です。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294670.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1432,
+      "input_tokens_details": {
+        "cache_write_tokens": 1429,
+        "cached_tokens": 0
+      },
+      "output_tokens": 274,
+      "output_tokens_details": {
+        "reasoning_tokens": 31
+      },
+      "total_tokens": 1706
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

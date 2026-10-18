@@ -1,0 +1,187 @@
+{
+  "id": "R05",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T03:34:54.306970+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\nこれに対し，原判決は，本件規定の立法目的は父性の推定の重複を回避し，父子関係をめぐる紛争の発生を未然に防ぐことにあると解されるところ，その立法目的には合理性があり，これを達成するために再婚禁止期間を具体的にどの程度の期間とするかは，上記立法目的と女性の婚姻の自由との調整を図りつつ国会において決定されるべき問題であるから，これを６箇月とした本件規定が直ちに過剰な制約であるとはいえず，本件立法不作為は国家賠償法１条１項の適用上違法の評価を\f受けるものではないと判断して，上告人の請求を棄却すべきものとした。\n\n【回答 1】\nもちろんです。以下が、専門的な用語を避け、一般の方でも一度読んで内容が理解できるように書き直した文章です。\n\n---\n\n元の裁判では、法律で定められた「再婚禁止期間」（離婚後、女性がすぐに再婚できない期間）について争われました。裁判所は、この法律の目的が「誰が子どもの父親か」という争いを防ぎ、家族関係を安定させることにあると考えました。その目的自体は納得できるものであり、どのくらいの期間を禁止すればよいかは、国会が「家族の秩序」と「女性の結婚の自由」の両方を考えて決めるべきだとしました。そのため、禁止期間を6か月とした今の法律が、必ずしも行き過ぎているとは言えず、国が法律を改正しなかったことも、違法とは言えないと判断しました。その結果、訴えた人の請求は認められませんでした。\n\n【回答 2】\n# 書き直した文章\n\nこれに対して、前の裁判所（高等裁判所）の判決は、次のように考えて、最高裁判所に訴えを起こした女性の請求を認めませんでした。\n\n1. **この法律の規定の目的**\n   女性は離婚してから6か月間は再婚できない、という民法の規定があります。この規定の目的は、生まれた子どもの父親が「前の夫」とも「今の夫」とも推定されてしまう重なりを避けることにあります。そうすることで、子どもの父親が誰かをめぐる争いを、起きる前に防ごうとしているのです。\n\n2. **目的は筋が通っている**\n   この目的には十分な理由がある、と高等裁判所は考えました。\n\n3. **期間の長さは国会が決めること**\n   再婚できない期間を具体的に何か月にするかは、この目的と「女性が自由に結婚できること」とのバランスを考えながら、国会が決めるべき問題です。\n\n4. **6か月が行き過ぎとまではいえない**\n   ですから、その期間を6か月とした今の規定が、すぐに「必要以上に女性の自由を制限している」とはいえません。\n\n5. **国に賠償させる理由はない**\n   国家賠償法という法律では、国の違法な行為によって損害を受けた人は、国に損害の賠償を求めることができます。しかし、国会がこの規定を改めずにそのままにしてきたことは、この法律でいう「違法」には当たりません。\n\n---\n\n# 補足：言葉の説明\n\n- **原判決**：今回の裁判の一つ前の段階で、高等裁判所が出した判決のことです。\n- **上告人**：高等裁判所の判決に納得できず、最高裁判所に訴えた人のことです。\n- **父性の推定**：法律では、結婚中や離婚後しばらくの間に生まれた子どもは、その夫（または前の夫）の子どもとみなされます。離婚後すぐに再婚すると、子どもが「前の夫の子」とも「今の夫の子」ともみなされる場合が出てきます。\n- **立法不作為**：国会が、法律を変えたりなくしたりすべきだったのに、何もしなかったことを指します。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文の立法目的のうち「父性の推定の重複を回避すること」が抜け、「家族関係を安定させる」「家族の秩序」という、より広い目的に置き換わっています。また、原文は立法不作為が「国家賠償法1条1項の適用上」違法ではないと判断したのに対し、回答は単に「違法とは言えない」としており、違法性を否定する範囲が広がっています。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": ""
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、「前の夫」と「今の夫」の両方が父親と推定されるという具体的な説明があり、法律の目的を専門知識なしでも理解できます。また、目的の合理性、国会による期間の決定、6か月という期間への評価、賠償請求についての結論が順に示され、判断の筋道を追いやすくなっています。"
+  },
+  "response": {
+    "id": "resp_054565979b43f876006ad43e5e783087d092c10a65ef531a48",
+    "access_programs": null,
+    "created_at": 1792294494.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_054565979b43f876006ad43e5f51bc87d092a9a8ec231db1a9",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D5sUvnL01osGQKioMwzzD6oy6KM_rin-g3HTcpTXbV66m3LRDldB3QIq_8qjjIi4XQwvzF2mq0IZs0eUCBfzH3FwpyOm--hpuUbSs64YAtNsVI_BywuYPUJUtvy4evuS746yCFXiwvxDPN2ZI0_LW334ZTkw5BMddeCWVTK5ZxZpKqp06FkoUTn8qnjwGArjQAfLYo16pjjP_f7tqyipgYZEuLd2_NwcCTnjYy1PPlq1-xjBJieyoO9ixkSf2P-BzW-st8FQ8Jboj4T5UrqvJ48Nh6kOr0wDZkDUwKngcT2yTU-otwKBAbM_6lYBdCvsmfEn8iiSzS48Dj_439pmyu3MiOxBj6QJgyhi4yFDF-utmOQ0NZA1Jy6tvibf0zZffBbI7JjCHBwSsHAnhUYeqlQPP_rYDUGj_JmxYG2ES9ZNKmnUClvbZel9SG72rbuScI2F_lfgtT4s385Jqynn8UwMSkpLUHKujRCzvfLWpInBVW5XREujiA3k6eNUtQCaijgO9XCG7keTaM1NIrmiF49EdiHL1kaR_So9rQ__H9sL_8iV-sm76Ne_-74X2-oQw7vMfqE91y7TofOjx4GHd6PdqPugVrH1Guhr4jy8CAwm99NArgOIOYdrrtX0IZHyDizXVajcenup6s8ZSUlrzUxap54o0ire3mzjJ75zKyx7hJ3Yj_yctb4qRLLjZZr-LhATiiJR0Q70QPmXfhkA0AhJLgvZwUg58CUtPUHH7QO5Vrm7Hj28ROGBctjlovC2vALQOVx_8gw5A0q2urmLP_NOq_XtAmjh5Z7WZcLUPKEZZySjSHoc4p1-nuHZJaApalZwRTB6FzBUOzLh_QUPajohtAzzXypgKtq_orxj2AQoWqD1Z510U5EdelwLc_jYfEHoi1NnP_qvgqii0z36bmOVWo0fzJhFYY0ffb4j5tk_Y0oQ967ih4lPjnDhBqqbHKMmdgyuKMm26z4qubLLXPIW4qIZFL5JCYlWpyZXM-W1DWZRkt8J0fp9SaghHWAOXh6LlRHLnYYypHjSMKRKKqP7Hlck5plujzqkB5pK7XdiT4BS_RVaiAhv3WdTKSlLyG33glrDdwBJbbPvMD151qoNAONPK5jdmAGJMBk5ZOCPoW7US9wFZUnnB-IzeflOaTDWQGXy2Ynun65Zn9cEJIstaOKOx_bzCzv0QflouYj5CuOSnua_IAob2ZsvB7EriVYDvooRTleZfGnF4r69yFYLni2lu-T7YiVa3PFdLF-QKrKdkcycQ8Z-5PT_4_4r1RJzMC1rESK0UOWQM2TH9rtqpAaqOYzyTRUuUHO7hHKUZOTeLb4uxWDsudTLBpi_jXifVCPmNqK0DZd4aonosUsiY1YRXFCNBpbex7ZoEFalwWwIsTwJgWgpOOzw7_GNrk5gvcmPldkuHpRFBTUb_RwtR5J7-fXyoi6JkwPEVljmyWDFtBDDMg1UpXv7V94kTZOXngnPRc6CrwIqXXwTZYMGTBsVra3wuYaCjWIgCIF5Cz3FrpyZ4zMJadQFFTdE9sRoOPh1BrNU7Wr5UpfXKbouHPtcVuM1UzQgk9fz3Lva1cAWe21ocZkI6QA5knyLU1VoW7uZRn0dyFq0RQ5cYRzjPLScjKJ_YhYD4dEOQ2jzw_gJKch5ZWyYJjcrtXO7QeH4GY-P8AnUJ6XNtE6CvM-SPIU-seiBuh3y4uE_wdgXVaTQRtovM00PRLFAFl-MlNUS2Q3TndmDGuYFXqny4hefgoNKgfOLdr1Kfadt6h_imhyza6vZUgU3U07d3BD4K4CIyOOxEf8dgkRui18GIrVoNwuv0hUkyiDV1IBeTbbLsP1JiUTBDkos1B8X4IzQfyTAEFraT218yJC7Pz0yeyBwgz9JhOwI8SO3uq8F_RW0Ru1j-UR3BCgHhnFaKLYJv03N5Xbux4jyIWDlPWJyowC_9YfeO5nMjhCIJ5RoGWy-pYq4KUu5VaU1aDd7935jnBwGa_A4nndmUHx-NXlL8VPDxvBv53tUJJsJ1PgDyBthzlcal-dFFVWDz4kgBkfiUUwWn0tPV45G67z3_HRsz_ohxG9TIDfPP3Pz0NgfRAocf36pLMb5DfVmdaK87yrnlvSM34zSZ0C1VRt8azlRxeeBwOB-WKUd4TgfC8V056h21IjFFglkwdU1TqdYBj71VQsrYdy5soGEYyz7qsNwppdiJlmzuon2XssZQWwjZP7ZGyj6j_5-2fSJwuVcQgS0HVn5PP6er4fvPKZpbOJaFEZF2fL1o1-AWt_EJ62iqQRTV4rN0kdt1DcNJ2ALaE5ZzGo7yPvWX-6ysZtC8D5jx_fturcduR_8UfSQov7uvTBHQxxm4EwCuB9vAdAYEWlVopl3Fh5AfKpsEmDPwAPzZ_KoWm5yR8hw2cpmo2DrRltTySoUJFMxX2hN_84AhjoJmvXrVjvPftUECCRE16JO8Iq3YDGMdarEMTEg9acTdw8fXim363FEZiqv2SlKId5RDMgrOhVII_KIOPhTdpNt0bnn_nBlpfn_Iy1y79w4yaqqqejaZnsLXTkJDoDVrEQFacsnMCgIvOIHK3p9Gzqrb_Om5WXxdkv7wp6x57WiQAHtpPG7Qc4SkxFy42puJPA72eD8NEVZJpWhDRHnnhJXqo0cyWTlHzop6RmzeDnDndy7__72Vb54I66nOaOBBiRJU2Aha1IsV6ZtAm4uDIXp3393VJZlTnmrVvXiRo_V7uslWd7u_vheA4dfaIGn9YsZyKdN0Jat82FZxOxAM6Hcz6mxMAbvFcjcRsUnDSK5hlikc-Tf6BXSMjyponJ7G96vthG696qwmq2Y8Cp-1sX8vk-QvsuMDvZ3XoCndcBDkqUPfTW1jqhOuy89Qgano8oN3wBwwilamR3rz9N1_OOWoiMNNDPFmbT63y15ln2a9_5tnDF_34jwXnYVuOMuDLQDoI78L11u-EApj4HkG9ntqkgtZTApF_rZYWKlnAzx_XgvR0twMso-ZwCfG9S_ZCfOObsqb6MSPDvfvXxzC1F5wWAX_tp4RG-aaIVHZie1dHSCVtqJ73bMLgOGcd3lokBJKUqINf83UJZ3uLlVYdj68MWld4du7lnTF_d3f0tKdc_XA7-BnxMz0Qb1De4ftIMJuTDtzu6MEH52j9jS0Z72TKWJNmsSxanDVBcS_h32eav3lffyzEpjMk4n8tpfQMcwbMZ6XdnyYpfH945oB3CtfUk3F6826QucZ4tm-nHIR8HIRZzI6N7IpssGTe9iWCXHYcbj-GjGmz-GBlY96SjFXMj9h_bM3kTjHHgml7CFhEzM0wmBItNALyibs3pVS6KeU5bpMMkcA2im0_DSdDyhS8FUOeCMQNbdxl_b7MCLSgvAskvQ323Rt4XXo-ARCXvg-cZFGdkA2SeOJiLvQpbHhBchRzUUfl-fqQKvL04Z6MnXmetGt3T2XXBw7lkZhHu6dOiYINlg814X5fqKvUerV_jh5P61Y_x8ZNDFHsveqobymztlSUNXT-woIQ8NJEusB-oEe6ByzAU7bG82XESB_4Bk2NXunwxO_4lNvEJMNMNvMiWeCTN2z1Uo0TGOTHAZDMLOvVSOAJDxPaCiU7VxJDVTkSiKrAdnuQOPV2Y7pr1_2iCijW57spN4o1RGzZjN4oCV3wItWuhT5OAFA6NHpjHVYtYHS9kVpMEg-8RGVIdiGzd1IlcL52k0o-W4Y3kCXRfPRFul449kzBFOF8xcUUnR4n7CJgmJprLQsYGrNZQUDPqze1cEQpgySBjMibR-WhaGsMgXUstMElVPWlZ_1vvyhX1BatD6fCv3i3eX9k4PoG9NoG9k-3OEgW-je9U3YQLZ8usEKPsJXtLAYZpZru9mlNbHPo9qh7Ox666o-KuXc8ydZQ60WFtNbOMnPgv9A2353X69fl6_iP3JPKiy3g6RBGek17sgMLtyprV5k-oJXlVNHmj7y6fp7MsWnlk9xK24Hx98oy3m90_7zPG1JIUACFkjpxR1X52kpXC7lqIoF_4_jogNgbx6L9MC6vsQ1buN6bAOxr6zygMvhGghOg9edf8CMxCDuOPy4-zsxUMeuISAWbjmAg7DMYHQsKT1boe7orQUdObiMGEKEnY1_aX8uGJzVdmn84AywqeY-eLEKwJwVndhDzUF9Ub8yCtRRmUygVwdo8br4K4OsYubtg0kx9JMfugb7oBHkGJO4sAWNqDDD492-oCOK3kupvs47B8h7f7AklmeTZ3REN7oQOg7HNwPgGS4zBLCb_sm3MIv_l-4sJvc9hNocAyaEoH2fI4eE5KRALD_FKV8WC7pzXcqLo74qTWVq8V3zdc-9umGZC_1XIYVJV2svf7wKDigX5XSYQXmTWlT7vs64ahE1ITktgNccaQwMLvi2qzA7omZlRpJL1BF5daYC2udxLoun1XRgciCBMO2FZs2kXL6STANQ2nIA_1AHZZHTGr04XIOCtnaTEDxssFD3FZni4Vh12FzgwbjuFBDNPdaYZ5byQs6RgmwQYfSarXHVMbcssBRifAX4SO3trSJqxbzeyKku9ttAOcXocDk36Oa10Y4x0_qkBZsK6_AZbATVHCdkSaVB5GZri_Lo3lS8kkrEmm6xstlwcBq6gcDvZxnhZR4-X8CzqebGmDYjHmKTZzvhn3Ezt9_dgT1HNRuY6r_rE4ph2GlqjNp1xsJ850Erbn6aqNzdcnKIvfyrJn0hACucVxdX_1A5nOQl8m2aobDAVKggcA0uzy-tqrmbha_mkZ8i_2a6LFAIQQzd2TfG3wEVX5BexqFPDubYE-SHPR2W12LhkgOWJVnPL6gmTWvanl8Gs0KOKfV5ORoWU-RdgwPPuCJ8TSH73ymwMPkDQDiAHeto3Hx0k4AUWbDvf9OqSh8PzSLLTAnPL0fU2yDQvXPV0mP9XDqStITCmh7XzOFeDyUWf4",
+        "status": null
+      },
+      {
+        "id": "msg_054565979b43f876006ad43e6735e887d0a9ea4f38bf3f62df",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の立法目的のうち「父性の推定の重複を回避すること」が抜け、「家族関係を安定させる」「家族の秩序」という、より広い目的に置き換わっています。また、原文は立法不作為が「国家賠償法1条1項の適用上」違法ではないと判断したのに対し、回答は単に「違法とは言えない」としており、違法性を否定する範囲が広がっています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、「前の夫」と「今の夫」の両方が父親と推定されるという具体的な説明があり、法律の目的を専門知識なしでも理解できます。また、目的の合理性、国会による期間の決定、6か月という期間への評価、賠償請求についての結論が順に示され、判断の筋道を追いやすくなっています。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294507.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1636,
+      "input_tokens_details": {
+        "cache_write_tokens": 1633,
+        "cached_tokens": 0
+      },
+      "output_tokens": 546,
+      "output_tokens_details": {
+        "reasoning_tokens": 251
+      },
+      "total_tokens": 2182
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

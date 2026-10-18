@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "R07",
+  "requested_at": "2026-10-18T03:25:03.383294+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n給水管更新工事に伴い、下記の日程において断水を実施いたしますが、当日は工事の進捗状況により断水時間が前後する可能性があるほか、断水終了後しばらくの間は濁り水が出ることがございますので、その場合は透明になるまで水を流していただくようお願いするとともに、断水中に蛇口を開けたまま外出されますと、再開時に漏水の原因となるおそれがありますので、蛇口が閉まっていることを必ずご確認のうえ外出していただくようお願いいたします。なお、日程は十一月十二日午前九時から午後三時までを予定しておりますが、雨天の場合は翌日に順延となり、順延の有無については当日午前七時までに掲示板にてお知らせいたします。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg8zGejZJD7n35T5Cz3bj",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSnQYKEAgSGAI4AUIIdGhpbmtpbmcSDE9TnjklvTW/yEoL6hoMLlKlxb4pb2kB3/2HIjC1l/32NOqqDS4AXe8DR5o/808dnETMjhYCgfYoJKD/E5GD9OwpWNbNMOwjhCxUDNcqugWEzlUSCAM27rJq6xZOVroasS+sok299je7YiQK/Xjw2p1NcLCIfhYdoP9sGRxp6RUots8ThwspvV1dp/9A5LTqDqf5KUOquQUKA9xL3qwb/6vEzdwVYPxANtuZgw9wKAIpzYn0+1NLKZLROj6AZAY9JBYhMWpLDGKEGw89Wn7BMK2wvWSpiWBj6QAvqR3FxrE5bOj1zMYhIV0kMATrtYFSQ1Ly3JUneXNG6E5YZkPz1SVo+ZJT5J5oAQtbIuNbknHHVRs/cVUv3y5UKMeTGLOYAFz/zOaoYg4oPpOCKSOWRTaQGvjKvQkBNjWHn9l0Nwc4A74txCgg+83hnwu/XiYj7mMsSH0haXmfFMF0a3c3QpiNMsvZ807Sx8Wkk4zuZZETN9m6z6YM2naXofce5QAYv2VtlEsB7rux5CRdV1h3pf8k3ReZplTXXLiiFRTpDRceSaFhzbtnTt4Mff9/BGhKOcwh0fDvum/wpPWCZO2ozB/qW8ySyyq5LirVco8hwd4QmuvCuUhi6y0zSo13yA7Jc0fRLa0HvyaxuBUnVdlKZTRZSISxtUnAbOFp1uWCglR+PulNjjY2+W49k9mCTW6EGpmqX/A5qV1v5cttw3+IDsR3eUDiI2r7ytcKGBR2vq4jPxqu+tY3w2Sk9to3IAlf03wFC8uUWyydxzjnaTHGGaTpjAodP+6fV0LuvLTS0OwQ+u8V1f2AywH8g/FHzYGuEfjQJZeMz3W/iJTmeAE3A/tOpK3JoVx7D3UTc/G0EE+nbVBQSi3Qt9fPvxsoCMst8M9izsS1FyYXFwTR33KF3IUNDDSnulWW0QBqfsaYuiDe59QOj8rA/sCv7mF6hh8sUGDApHrZfzLXBIuZIBX9V0iAw2EbVdNfQEfdgPzZMuSu0KkEtZjUhSqQfCbdodXe5Um0zqIsawL9uhgB"
+      },
+      {
+        "type": "text",
+        "text": "# 断水のお知らせ\n\n水道管を新しくする工事のため、水道が止まります(断水)。\n\n## 断水の日時\n\n**11月12日 午前9時〜午後3時(予定)**\n\n- 工事の進み具合によって、断水の始まりと終わりの時間が早まったり遅れたりすることがあります。\n- **雨の場合は、翌日に延期**します。\n- 延期するかどうかは、**当日の午前7時までに掲示板**でお知らせします。\n\n## お願い\n\n**1. 外出するときは、蛇口が閉まっていることを必ず確認してください**\n断水中に蛇口を開けたまま出かけると、水が再び出たときに水があふれる原因になることがあります。\n\n**2. 濁った水が出たら、透明になるまで流してください**\n断水が終わってからしばらくの間、濁った水が出ることがあります。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 307,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 365,
+      "output_tokens_details": {
+        "thinking_tokens": 75
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "S02",
+  "category": "要約",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T03:40:09.817572+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 原文の要点を正確に押さえているか（原文にない内容や事実の誤りがないか）、字数の指示に合っているか、日本語として自然か\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を200字程度で要約してください。\n\n---\n寒い冬が北方から、狐の親子の棲んでいる森へもやって来ました。\n　或朝洞穴から子供の狐が出ようとしましたが、\n「あっ」と叫んで眼を抑えながら母さん狐のところへころげて来ました。\n「母ちゃん、眼に何か刺さった、ぬいて頂戴早く早く」と言いました。\n　母さん狐がびっくりして、あわてふためきながら、眼を抑えている子供の手を恐る恐るとりのけて見ましたが、何も刺さってはいませんでした。母さん狐は洞穴の入口から外へ出て始めてわけが解りました。昨夜のうちに、真白な雪がどっさり降ったのです。その雪の上からお陽さまがキラキラと照していたので、雪は眩しいほど反射していたのです。雪を知らなかった子供の狐は、あまり強い反射をうけたので、眼に何か刺さったと思ったのでした。\n　子供の狐は遊びに行きました。真綿のように柔かい雪の上を駈け廻ると、雪の粉が、しぶきのように飛び散って小さい虹がすっと映るのでした。\n　すると突然、うしろで、\n「どたどた、ざーっ」と物凄い音がして、パン粉のような粉雪が、ふわーっと子狐におっかぶさって来ました。子狐はびっくりして、雪の中にころがるようにして十米も向こうへ逃げました。何だろうと思ってふり返って見ましたが何もいませんでした。それは樅の枝から雪がなだれ落ちたのでした。まだ枝と枝の間から白い絹糸のように雪がこぼれていました。\n　間もなく洞穴へ帰って来た子狐は、\n「お母ちゃん、お手々が冷たい、お手々がちんちんする」と言って、濡れて牡丹色になった両手を母さん狐の前にさしだしました。母さん狐は、その手に、は――っと息をふっかけて、ぬくとい母さんの手でやんわり包んでやりながら、\n「もうすぐ暖くなるよ、雪をさわると、すぐ暖くなるもんだよ」といいましたが、かあいい坊やの手に霜焼ができてはかわいそうだから、夜になったら、町まで行って、坊やのお手々にあうような毛糸の手袋を買ってやろうと思いました。\n　暗い暗い夜が風呂敷のような影をひろげて野原や森を包みにやって来ましたが、雪はあまり白いので、包んでも包んでも白く浮びあがっていました。\n　親子の銀狐は洞穴から出ました。子供の方はお母さんのお腹の下へはいりこんで、そこからまんまるな眼をぱちぱちさせながら、あっちやこっちを見ながら歩いて行きました。\n　やがて、行手にぽっつりあかりが一つ見え始めました。それを子供の狐が見つけて、\n「母ちゃん、お星さまは、あんな低いところにも落ちてるのねえ」とききました。\n「あれはお星さまじゃないのよ」と言って、その時母さん狐の足はすくんでしまいました。\n「あれは町の灯なんだよ」\n　その町の灯を見た時、母さん狐は、ある時町へお友達と出かけて行って、とんだめにあったことを思出しました。およしなさいっていうのもきかないで、お友達の狐が、或る家の家鴨を盗もうとしたので、お百姓に見つかって、さんざ追いまくられて、命からがら逃げたことでした。\n「母ちゃん何してんの、早く行こうよ」と子供の狐がお腹の下から言うのでしたが、母さん狐はどうしても足がすすまないのでした。そこで、しかたがないので、坊やだけを一人で町まで行かせることになりました。\n「坊やお手々を片方お出し」とお母さん狐がいいました。その手を、母さん狐はしばらく握っている間に、可愛いい人間の子供の手にしてしまいました。坊やの狐はその手をひろげたり握ったり、抓って見たり、嗅いで見たりしました。\n「何だか変だな母ちゃん、これなあに？」と言って、雪あかりに、またその、人間の手に変えられてしまった自分の手をしげしげと見つめました。\n「それは人間の手よ。いいかい坊や、町へ行ったらね、たくさん人間の家があるからね、まず表に円いシャッポの看板のかかっている家を探すんだよ。それが見つかったらね、トントンと戸を叩いて、今晩はって言うんだよ。そうするとね、中から人間が、すこうし戸をあけるからね、その戸の隙間から、こっちの手、ほらこの人間の手をさし入れてね、この手にちょうどいい手袋頂戴って言うんだよ、わかったね、決して、こっちのお手々を出しちゃ駄目よ」と母さん狐は言いきかせました。\n「どうして？」と坊やの狐はききかえしました。\n「人間はね、相手が狐だと解ると、手袋を売ってくれないんだよ、それどころか、掴まえて檻の中へ入れちゃうんだよ、人間ってほんとに恐いものなんだよ」\n「ふーん」\n「決して、こっちの手を出しちゃいけないよ、こっちの方、ほら人間の手の方をさしだすんだよ」と言って、母さんの狐は、持って来た二つの白銅貨を、人間の手の方へ握らせてやりました。\n　子供の狐は、町の灯を目あてに、雪あかりの野原をよちよちやって行きました。始めのうちは一つきりだった灯が二つになり三つになり、はては十にもふえました。狐の子供はそれを見て、灯には、星と同じように、赤いのや黄いのや青いのがあるんだなと思いました。やがて町にはいりましたが通りの家々はもうみんな戸を閉めてしまって、高い窓から暖かそうな光が、道の雪の上に落ちているばかりでした。\n　けれど表の看板の上には大てい小さな電燈がともっていましたので、狐の子は、それを見ながら、帽子屋を探して行きました。自転車の看板や、眼鏡の看板やその他いろんな看板が、あるものは、新しいペンキで画かれ、或るものは、古い壁のようにはげていましたが、町に始めて出て来た子狐にはそれらのものがいったい何であるか分らないのでした。\n　とうとう帽子屋がみつかりました。お母さんが道々よく教えてくれた、黒い大きなシルクハットの帽子の看板が、青い電燈に照されてかかっていました。\n　子狐は教えられた通り、トントンと戸を叩きました。\n「今晩は」\n　すると、中では何かことこと音がしていましたがやがて、戸が一寸ほどゴロリとあいて、光の帯が道の白い雪の上に長く伸びました。\n　子狐はその光がまばゆかったので、めんくらって、まちがった方の手を、――お母さまが出しちゃいけないと言ってよく聞かせた方の手をすきまからさしこんでしまいました。\n「このお手々にちょうどいい手袋下さい」\n　すると帽子屋さんは、おやおやと思いました。狐の手です。狐の手が手袋をくれと言うのです。これはきっと木の葉で買いに来たんだなと思いました。そこで、\n「先にお金を下さい」と言いました。子狐はすなおに、握って来た白銅貨を二つ帽子屋さんに渡しました。帽子屋さんはそれを人差指のさきにのっけて、カチ合せて見ると、チンチンとよい音がしましたので、これは木の葉じゃない、ほんとのお金だと思いましたので、棚から子供用の毛糸の手袋をとり出して来て子狐の手に持たせてやりました。子狐は、お礼を言ってまた、もと来た道を帰り始めました。\n「お母さんは、人間は恐ろしいものだって仰有ったがちっとも恐ろしくないや。だって僕の手を見てもどうもしなかったもの」と思いました。けれど子狐はいったい人間なんてどんなものか見たいと思いました。\n　ある窓の下を通りかかると、人間の声がしていました。何というやさしい、何という美しい、何と言うおっとりした声なんでしょう。\n「ねむれ　ねむれ\n母の胸に、\nねむれ　ねむれ\n母の手に――」\n　子狐はその唄声は、きっと人間のお母さんの声にちがいないと思いました。だって、子狐が眠る時にも、やっぱり母さん狐は、あんなやさしい声でゆすぶってくれるからです。\n　するとこんどは、子供の声がしました。\n「母ちゃん、こんな寒い夜は、森の子狐は寒い寒いって啼いてるでしょうね」\n　すると母さんの声が、\n「森の子狐もお母さん狐のお唄をきいて、洞穴の中で眠ろうとしているでしょうね。さあ坊やも早くねんねしなさい。森の子狐と坊やとどっちが早くねんねするか、きっと坊やの方が早くねんねしますよ」\n　それをきくと子狐は急にお母さんが恋しくなって、お母さん狐の待っている方へ跳んで行きました。\n　お母さん狐は、心配しながら、坊やの狐の帰って来るのを、今か今かとふるえながら待っていましたので、坊やが来ると、暖い胸に抱きしめて泣きたいほどよろこびました。\n　二匹の狐は森の方へ帰って行きました。月が出たので、狐の毛なみが銀色に光り、その足あとには、コバルトの影がたまりました。\n「母ちゃん、人間ってちっとも恐かないや」\n「どうして？」\n「坊、間違えてほんとうのお手々出しちゃったの。でも帽子屋さん、掴まえやしなかったもの。ちゃんとこんないい暖い手袋くれたもの」\nと言って手袋のはまった両手をパンパンやって見せました。お母さん狐は、\n「まあ！」とあきれましたが、「ほんとうに人間はいいものかしら。ほんとうに人間はいいものかしら」とつぶやきました。\n\n【回答 1】\n寒い冬、雪に覆われた森で、母狐は子狐に人間の怖さを教え、町で手袋を買うよう送り出す。子狐は誤って狐の手を出すが、帽子屋はお金を確認し、手袋を渡す。帰路、子狐は人間の優しい歌声を聞き、母狐の待つ巣へ駆け戻る。母狐は安堵しつつ、「本当に人間はいいものかしら」と呟く。（約200字）\n\n【回答 2】\n雪の降った冬の朝、初めて雪で遊んだ子狐は、冷たくなった手を母狐に見せる。母狐は手袋を買ってやろうと夜に町へ向かうが、昔人間に追われた記憶から足がすくむ。そこで子狐の片手を人間の手に変え、一人で帽子屋へ行かせる。子狐は誤って狐の手を差し出してしまうが、本物のお金を払ったため手袋を売ってもらえた。帰り道、人間の母子の優しい会話を聞いて母が恋しくなり、急いで戻る。人間は怖くないと話す子狐に、母狐は「ほんとうに人間はいいものかしら」とつぶやく。\n",
+  "judgement": {
+    "winner": "2",
+    "reason": "回答2は、手袋が必要になった理由、母狐が町へ行けない事情、片手を人間の手に変える工夫、子狐の体験と母狐の最後の疑問まで、物語の因果関係を正確にまとめている。200字程度という指定にもおおむね沿い、日本語も自然である。回答1は本文が約130字と短めで、重要な経緯が抜けているうえ、「母狐の待つ巣へ駆け戻る」は不正確。母狐は町へ向かう途中で子狐を待っており、再会後に二匹で森へ帰っている。"
+  },
+  "response": {
+    "id": "resp_06a8e01d0773d186006ad43f99f8d087d09902ed053a3d5c77",
+    "access_programs": null,
+    "created_at": 1792294810.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_06a8e01d0773d186006ad43f9ae79487d083c3cdab68e5a8e2",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D-np5g-u4bvMwxw_vftm4qE0-bheXJGIjl6zukAfHeUTMa6yHFRzsaVuXqotmGCp3LKO_PI-YaTNgVHPgzF8PmUQ7XC27v9A9_Nc1BtcuMR5sLq-B__c6HY5EFwElCEk6oCSKgupj3T7XszMNPZLxZhbJZ7RjeBMIJZjkyZ-dLI9t3v5O3VNvttH1W3iE3YsNpQkMz-fp-VeN3P3i_Fb4SoCE5E4bT7K11IoXD1m4Olu4nEaJS6MNQUaQaV3KyOr7HPSvO_4b_q5lz_Q3ENMmdtixw9UhvQADsB77lRc-Dk4odcp9wUTKoAsaegFvtmrMP0b0l6HelWKLNwd-bkXAOhvrsj2AVi3LRbodlR-PFGrdTNvnYFrNMWTPSKoqO4mnB-udjd745EuUvNVZoKoOJvzFr25fhznGKhIUvbx5JuoOQrR1uyaRVK_GbRlcsj-Oel8cY4u9bLN0sdJgSKuueC-nBmlNH9--jUEMhV2eJDv540WVKWJLfk7wpy4_VUnDzrdpHzFAUEJq4zgZoPjXQ5xG1MvC9Wsj4Kv7Kg21kx2OMZLOyCGXZ6lIE2YiNxTMzrk3eSKMYY6Xm68HprDD734B51vekRFRHDeGYzfNVdDXHKXPR6hcbs5Lg8lAQTwdX0XBeo6qQCaR3tQ0yyHK15tNZD-zb_yIdNtVxTwXn3GaeWvVKa_A3XA_Sr3UcKKo9MYBEd9ceFAhmrOkHgiVP3PjmKI41PAreGEk9jxlX4luNR3ruVEpECxWVjMUBnw26Z9SLi_fPCPoqXOvH83j9MDMbx09vEubqOS7WzhyDLu__YRZHPJNQZEFPy2hNY0s-IOQfVR4bX5KlEIAIJVB_rjjfIpeLgFi5ybVumqoHfUXe1S5O1wBYJfDK1SbFAjdCB_JyE7jf6cyC_oR6ye72DnRnyEdI0BqukB285NEB4CBA2_c-s7sAMffy_uOTuA4jstcSAdLOgSjfIDoCtZ5RExAXgtP-ZM1vtUEUi1d3gBNahJ6ppgLacvLCG1mEEcbR5zbqnJQM7brwCTSd6Z7lb81TISczXRRdttvGXzYnvwvj4BBNcDffhgzjToqXmIAHiVPZZHeY_4OBF_9SdHFqKsuscLZRzx7LiObbeTCGkb_zAhthf1Ekj42krfWelrlyW_MrR8CSkl-ByySY3wxQkYm2bX0A4YpQsY8J3NJam2WGLTvxT5KMym_GrzsdJaK0foiyf3RySjDioYeVBXVrVv5i81TIId_X0Y6Idwr3GDg6RoyvQFSnfPn3Lz6I2yt7VnhUHxh8i4UP1KV9-82D1Ikkl6KqZDqFgXUZBobQKA87tqFqpHi_jJECpRkLmNaOQKbNiVaFo8im6eNVrTsaAxt_57A2FPbO3lPUC-hKPLMy2tDXd7h2Zc5b5xZA2l4gXS_Xj7gh8Vze9hIpjMOrpp2fp5Pzh67981oVgJYK8td59Ma3g1jP664q9hweGjZZmLRH0XKqo6aj3-qoAtjlHFkJYa6Lvk5NSO6HQ1GLFbQ2u3mRff2Bwc13cmarxdliJNUlUTY32a4yFxK2rMQtHyeNxflm1EyCPdNs-Z7rYqzsdmG7LGUIPa7pCkC5cYuEfHGDZsPeiZP5dfFQ47aEm_6EQCmNhotPTISCoHe3nrvH6YgMWfOsFbn_4iSh_zEXPk6B8h_WDgxdNmAZtLUpfFrtOyP8fnKdHwtRl80qDyPQymGRys-rFvfNZsMkCw1q9HJ3lTqqBBQwR3jEpvmQBs9by0f3s4ii_JUBFGTaeHg5s49ZNZvbLolge8CDBf20-FgAj2h7Cp9WHUs32oDp9FivfmoPIZkt-i15HSHaYUdIY8JUz72d6Rhdl9tB-MMxfSyKMr6gzWVLjeSL2s4K2jD7j_spD-55COAf_dsf3QqFponyLk_YAAkDg1niJHdCG3Wslmm1BsyBizlzsZ6cHb4bHDJc0XzogOQkA5ivJ4BG8ptEh8Hs_VcnESvFHBN0PEeTATULpw3dMhC-2oWCnuGizvOSdOuYkiz1-BmlH8moQXMWOE3MQzXpGyYkB7VM2Ol4LcMUk03JI3bt_XmiMflSluqAdaNEh5xBfOGVlPLipBxgfGaoZQyf5X5Xu1jpD4KS9MfKim8asyWCrvq3ZqbagBdN8jOcQEgW94hGdgWMx51PkGZYMy8mrL0NxZXKSaGz2BxozeaK46BN8lBhtq5_W7vNUyZ4-Nq2pFeZwqFyqjvkeP8S6O_rLISzFO7NDLGUdu-a4hZoLdOQWLUA9Ts6ALk9Y7KGOohb4bNwxUcJstNSAy9siSPGsTqY8oNp26ea_I6FKKKjE25vPiaFiGjAKPmYwFr_Jvph3xDRzQkUkWpB26tzDG737n8o1vr9MyAC5pbFdt7nPXeLeGZnOKn8j2asVGdaOr7TiSba_j2TvmDORCU-RQv1J6K5kpANbRvFSDi2sK8pShacNY75_HtlKUVoD1JuRwN3Psljdp_qEo6LXsp0Xh7BMHViB20J4zGSwoucTo_BpgVAMWlndsnSgPOfNNURaphG83XRVD8IrhCH2kw--SQpX7kWm0AMEObylx2XghbrMDOlCNOSIRpFVb9Z55N-ZcRvWMC_fijSgpViXaMaoEmvFVaP8TTD0Qq35vKDxEDUyKfQ_LH1xwj9ODLEbUsDd70duZatXArQjDsh8A0SI_PleLahIECByrmLsu7zTtNVEUFILG2lnUDW5mzKACbln8jqPAWp_ZOmFkOVT3eY7310-PmE8OchTwbpBiYiCXCEXcT0HqO89w1hE8jri-e9yS0PiRkf8ydtlPLlM587-ZN1SVuIMM035L1xT_lYm58Gn-fNUD7LMlmUtIcF0-QKcYyzmeRg9RDLYEUDQ83HS0WMgRM9zQ_tydAAc7liYwlXN6jW7nArPDO3IqZgE_2t6_syqZxj4tz3k1QQW4R78lu19tpPcUEg85ur_HFFEyVOUEbFDS_NDyaPe-iQj0zxHbwIi6NamNsK_QcsOnkqaj1Tk9T3l7zK4-z5QhH1GpsKhPLqofwdW7ri91U708IHkF808vh-HjVF0L-xzT-UlEDkZF-a6g7exWR_NEsG9hz7Wghs1FJrWmXqu2mnVrBkNHX45o5NjSDvXEuC5FjLYgZYczmMXvXT6CDCFpzjAB35ihIK7HdV4WvGdEa0k3xs9ube2S5Ej53kRA7wo2veeqB6qqy2zjgcLiz6chuPclTsU81A5FP3K2NDSmdGUctYlmk43zAFdhnC6L_zECWdx8Xlwly7Bf3f0yuhhmbBmRPS2YvqNezZJTZRjETiXvyoF8sCQQJpXQ0xwIIhzn8P-hcg0Gr67oDuHhTK3wworT87qM4GYJlCHLDOFUWfkmANtaAbT84vvnj2r3U6oRWBQ8SIVbmCaq5ca-bwXJUkyxgwPLuL4Js7RiqWW7B5G6jWyntOp1P-jI9_63f1ANLspdLw1g-hhvz6pacZtG_Bpk2ojWkWywRhJZbQOlXhN0_2kiCrxETMW1HW_dwp55d0YR1puyTqC6VjRlGUG0NdtPeBOFTUCqv5pzZupmipRunfMHAYnlaMnviRRkwfyCGcyzhM3XQGd_335aG5rFTIgpvHz-c5vUF9oVnT_ZjgsElhyuTgG3PCjgj1B36Q5xhANTGiGtmisOEWNDCo1wr1vL4VITRbrehs25G46ejvrMLr1srCAx2ksbDwBG6U4ZvtRb8Rr8GG8YGn1m6j2O1jQq_CmaHjd3C4LRRDBikMOr3dBBE9rIWnVZtuL0EDvekBaOitwI0mhK-sp0ss-C2VurSC90pVzag6D1gWEP406P-BMmcPHZcCVi4uA12IukkpysNMhczu1I6lL4wluffYf6tgFyrQ3Qry_sSWAZDwFFeUidPbdn0L5NHJkJuVYFj8HBOGPUN8DCMBVk-gyqHZh6YEIRf_yKVdwf5ZxdZ4J8GrsciMUH48FbmYLzbczdSvxQhSn2bB0yAsPEp0Tv8SsX-iVFmqJEdpNb1dF03L9am8t5u_hlf3ifsQU_sESHgVxj0HCsKF-0QAUv8qaWRKacWmZqWJT0t0MLjpX0e8s7FjEDmXUACrk-uJM4qs65n3RKXA8ZA-hQ0kTYEDzU-ScdJFXrqc4zQGYp_uUKx78bt-v0HYeVNp1giECQqpBlHjN9GN6mQIOI8mUIxjtaY3hSCv4Kd93icNs8kTgTWiA3EHOzX3tjiY6sidjsDuSbnKI6bDS0GR3POUCBMZZqvkXodOhv9uv_RSJrlfa8srKZ-vqrfzlW_KCFOlhshwENzJjIyWosECQmnpG7av6F9v0kfS7Ay66VPxe1smiFry9Hl6OE04e_fH3J2MsWRKgqtjd8fLR8Rlj4QjTR4Qxw5uAQxMizjpO_hcYxoc7jZZW-n9r0f5zq7KrduC28Yq--mYhDODUMUTafNu6T-vLDKHutu_O4orSBzNvHc5LiDkELbTODxarJj0OSbc4nYOypfexsCmrqKER4wS5-bEtUh8sUeSBxSmlGwbHaI--gEXF4PN2tlg8mva5BZS8oengxXwYUyKyZNgR96VZ6gD2hKpC9apRx4lBq-lKTN4m2DAhbJWap8WkHMxjfg47R_y9OkxQ6ZVek73ZFSgrzpVwE3e3sPyLluEA1ePRvqeC77SxpF8E75xAlgTmlS_2meNpnwYhbgH6vNAXmHf-tzEy56GvqVrQjQPXtuLQf3gj5Ld-f4gdQfbHkHE84WUv35AOiJMd1yVsw03F3S8ketUjKsFhFG9po_4ls3txcuL1SZwnYlZ18DvGTqXhGxfn4jfRjjlBQWVMJEfr5XLcMnj3VWf7lcu99oHURQ7Gd8Ix7bwrCH6PpdzgmYPgqJk-v2zsNTR-7aNI2K2-mxtnIJ9HQSZW5EjJg6OEYJ7OagpHfXK_oDnjFV6r6OIlF-IYA3vGH3g1Ct4UTZAXgvnp68oXQYxXfjhaBF4RG1LkXvT26vKDWe_2Ip-zzkc0CIma2HCT9SK6zolI81k4TZMvYU2kYLlMu6zdFz3rj-wQbQ==",
+        "status": null
+      },
+      {
+        "id": "msg_06a8e01d0773d186006ad43fa2950c87d0880e7beff39e9574",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"2\",\"reason\":\"回答2は、手袋が必要になった理由、母狐が町へ行けない事情、片手を人間の手に変える工夫、子狐の体験と母狐の最後の疑問まで、物語の因果関係を正確にまとめている。200字程度という指定にもおおむね沿い、日本語も自然である。回答1は本文が約130字と短めで、重要な経緯が抜けているうえ、「母狐の待つ巣へ駆け戻る」は不正確。母狐は町へ向かう途中で子狐を待っており、再会後に二匹で森へ帰っている。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294823.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 3397,
+      "input_tokens_details": {
+        "cache_write_tokens": 3394,
+        "cached_tokens": 0
+      },
+      "output_tokens": 494,
+      "output_tokens_details": {
+        "reasoning_tokens": 317
+      },
+      "total_tokens": 3891
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "Y10",
+  "requested_at": "2026-10-18T03:31:05.782170+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文の【】内の語の読みを、ひらがなだけで答えてください。答え以外は書かないでください。\n\n新しい定期券は来月【一日】から使える。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-8ea9e9bb2b3cc12d",
+    "object": "chat.completion",
+    "created": 1792294266,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "ついたち"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 35,
+      "total_tokens": 38,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null
+    }
+  }
+}

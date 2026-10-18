@@ -1,0 +1,187 @@
+{
+  "id": "R05",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:35:08.157981+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\nこれに対し，原判決は，本件規定の立法目的は父性の推定の重複を回避し，父子関係をめぐる紛争の発生を未然に防ぐことにあると解されるところ，その立法目的には合理性があり，これを達成するために再婚禁止期間を具体的にどの程度の期間とするかは，上記立法目的と女性の婚姻の自由との調整を図りつつ国会において決定されるべき問題であるから，これを６箇月とした本件規定が直ちに過剰な制約であるとはいえず，本件立法不作為は国家賠償法１条１項の適用上違法の評価を\f受けるものではないと判断して，上告人の請求を棄却すべきものとした。\n\n【回答 1】\n# 書き直した文章\n\nこれに対して、前の裁判所（高等裁判所）の判決は、次のように考えて、最高裁判所に訴えを起こした女性の請求を認めませんでした。\n\n1. **この法律の規定の目的**\n   女性は離婚してから6か月間は再婚できない、という民法の規定があります。この規定の目的は、生まれた子どもの父親が「前の夫」とも「今の夫」とも推定されてしまう重なりを避けることにあります。そうすることで、子どもの父親が誰かをめぐる争いを、起きる前に防ごうとしているのです。\n\n2. **目的は筋が通っている**\n   この目的には十分な理由がある、と高等裁判所は考えました。\n\n3. **期間の長さは国会が決めること**\n   再婚できない期間を具体的に何か月にするかは、この目的と「女性が自由に結婚できること」とのバランスを考えながら、国会が決めるべき問題です。\n\n4. **6か月が行き過ぎとまではいえない**\n   ですから、その期間を6か月とした今の規定が、すぐに「必要以上に女性の自由を制限している」とはいえません。\n\n5. **国に賠償させる理由はない**\n   国家賠償法という法律では、国の違法な行為によって損害を受けた人は、国に損害の賠償を求めることができます。しかし、国会がこの規定を改めずにそのままにしてきたことは、この法律でいう「違法」には当たりません。\n\n---\n\n# 補足：言葉の説明\n\n- **原判決**：今回の裁判の一つ前の段階で、高等裁判所が出した判決のことです。\n- **上告人**：高等裁判所の判決に納得できず、最高裁判所に訴えた人のことです。\n- **父性の推定**：法律では、結婚中や離婚後しばらくの間に生まれた子どもは、その夫（または前の夫）の子どもとみなされます。離婚後すぐに再婚すると、子どもが「前の夫の子」とも「今の夫の子」ともみなされる場合が出てきます。\n- **立法不作為**：国会が、法律を変えたりなくしたりすべきだったのに、何もしなかったことを指します。\n\n【回答 2】\nもちろんです。以下が、専門的な用語を避け、一般の方でも一度読んで内容が理解できるように書き直した文章です。\n\n---\n\n元の裁判では、法律で定められた「再婚禁止期間」（離婚後、女性がすぐに再婚できない期間）について争われました。裁判所は、この法律の目的が「誰が子どもの父親か」という争いを防ぎ、家族関係を安定させることにあると考えました。その目的自体は納得できるものであり、どのくらいの期間を禁止すればよいかは、国会が「家族の秩序」と「女性の結婚の自由」の両方を考えて決めるべきだとしました。そのため、禁止期間を6か月とした今の法律が、必ずしも行き過ぎているとは言えず、国が法律を改正しなかったことも、違法とは言えないと判断しました。その結果、訴えた人の請求は認められませんでした。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "実質的な意味の変更や重要な情報の脱落はありません。父親についての推定の重複を避ける目的、国会が女性の婚姻の自由との調整を図ること、6か月という期間が直ちに過剰とはいえないこと、国家賠償法上は立法不作為が違法と評価されないこと、請求を認めないという結論が保たれています。条文番号は省略されていますが、違法性の判断が国家賠償法におけるものだという限定は残っています。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "元の文章が立法目的として挙げる「父性の推定の重複を回避すること」が抜けています。また、国会が調整すべき対象を、元の「上記立法目的」と女性の婚姻の自由から、「家族の秩序」と女性の結婚の自由に置き換えており、より広い別の目的に変えています。さらに、元の違法性判断は「国家賠償法1条1項の適用上」という限定付きですが、回答では単に「違法とは言えない」としており、一般的に違法性を否定したように読めます。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は、裁判の対象、法律の目的、期間を決める主体、裁判所の判断、結論が一続きの流れで示され、平易な言葉で読み進められます。回答1も説明は丁寧ですが、本文と補足で同じ内容を繰り返す部分があり、全体の論理を一度でつかむ点では回答2のほうが読みやすいです。"
+  },
+  "response": {
+    "id": "resp_076f6aeca3c39bc2006ad43e6c584087d0932c8e8d4d0b8086",
+    "access_programs": null,
+    "created_at": 1792294508.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_076f6aeca3c39bc2006ad43e6d58e487d088f5e4f18428c28a",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D57W2VsXZOIWWBBVialyv0HTV6w5-2urLxWO5jm5GwtK04PM2oSpVCuIyvBUgPqauYuW12mtEcxE8zfyMckEqJjj5bmdY4M7T-XJ1GtbZdgQfKIsaNaENde6WCOUJbnr86oYvDm9P4lbOc4rkvMsQKKqV1v64JKoc2_uMQkW1UaLhImPJHkWRUe6Yow3e_hzfPSkuH1_bEIhi1r4J_luNdPrl8oldQNzv7gi-Lok8vZdq6wJNs-LUkz-Uk3Mt-eFBuJtnOfChswYUzbiGm3asjaZHjA3qnVI5-2ln0jrkPerlvPRXsEYZnMjGTxs0H4C5jxLgcZlf6Cx1iLV2ZAkjMZkj90LkhCsQbi1IrkodrbL1LbI6tvPUXG4LeKZxqnziz2gVPU1FVeV93L3LBHt_nB-XbxTUg_mcTNoLZZFUZn-PtscK87rptO5OUbo2IkPhDtSNvEhwBbGYyFY34DuBKTOZyItes_kz-6eATD41c56oJr56OuAO8mlEPEfbFb8SwLgr4Jz7SiPFHjNbCBN_6j0vCDStqdVTQU8cUyHiX7MBhUE7XfZC41GgwjPvix5W8StBbPSGz-qQQAjgOgFcexOs9Wmtpf7HrBuL8PvUECuBnMoC75kW3PxVC9TQ9Tsq-4Ed09Ngw0i7KtT2zpgZtBfP7ykLJqaNEkK4SyhlKe6kiSxdubyb0yT_o3URn1OEzJekKYOB-Z-tWQzsdU8LVMJ6VHa21gWyu-u0nUSIH7vx6zHuTT3IJBzraUXH4mX3AFCgn4Q27mSo-qJvyq6ZgXqi9hsquWpyre6tVuv8AdHZTbuQiRpC29gr48vZkDzlLExMxNt2EyMIRasxx2laAYwT5zsXJihqHgPXWyKLlAY9SUxAcazLs4K1yBWsuIEfl7YC7CBOdh79AdqiDNqH_W6_6yIZSwNmfSsdMbhGNSxXdxtq9zMxr9-6PZ54Iqes_1aKMJPYES50SPEi9sroV9kO48Nrr15GRx5pOni6aSCCpgWK5CsSyJuOW_8moZtuRTul9ml3zgvK8E6rN2cs6xdoPixAhQyRJ7iO2c52JbwJNO1BJRaz15PZ22MepZgy29-Bn3T0kD_QNRr_j0-AHLwn7emOkcFZE65fCB6axzdmIQtatTTXrBgnNH0SvNfar5VrLUitLQCx4xhj5IhQIKGk3-IdOYrIIo3SXMQnjBqkTrPet3OYJPVXCQ7AMVjKVIytGQH8GHRYKOwRnpxD7XiSujPtkQf9l3SV2pYOhzr7u8lYc8GU3JOoHbRtjkCmUKpBI_FmpClvU8w6Vvu-YHka4Blot-j4koZ3gpoW1GRCZ9w3Qbawl7EcPzsAhwQqYrw8RiMd540EuOvH0W2pxw7I2NThU4ctQmgntWrX2najw90LJIlmXH_vzOeCZoUU88L8KCpz0QYY4Scu7WKG-mMRTLamFhkh0SUuo6QdPQDxGYiaFh0PfD1BorbiLyh471_8mXcTKk8nK7GcvbvFupgS7rci_7Tuh7F9Ba7Wz4CVYMucyFOc81mvam_kGQ5BLRE979u6qJmk30HThpy7Wc67S-ghk6k3EZE1mjd0tvgCu7ntgWzK0D-5DQIqDmpwFLYeWYSveUTGg5QjLg1z-GA-QR_sa5gggN_TH1v6Zm42EEWQHRqW1nu-zHVLK-OhyW0j-y4JM_-de9TShe5fP9PrH8UpyuuYCJyHl0ZvDdMxgP0qL6N7rJZMl1aq2qDTvIMKoW-4zRsEtyrWmDkvtzYGdnHJmJL9tNtD8xnHNTWy3Fwze5FyMR3YX1yVPLgeIdqa6OWft3cSOe0KTS8N5NbskzQUyrs5FfRu2COoSm8qjUp7H0jYYU0RMhER91HNreOJldz8WPeXrTkYGuAVCfPSd0z_vV03bsJVrLd7ATcZXFtLyw_qzKo1wSieTsOOochTAyEclDHqiFGMaHHZ3ZFURv54DSfdO6hdrfY4wFiu3icAniy4pGEMRSJWJYPqY-TrGEwmlDhgibXCWJglsS-lOO3jmcLcwk_VLjf-lQMZLAEQf76lNJ1ud0__N9qGPaYf5_wlwSmz1nYlqjsRJK4MRnao6n8I1zkKI517rnLM90pEKiaRURpSn7zc5vwu1QKI7O4FGPz747mwDyoQt_htJQJwiDOBYV6Rs4-3p8rBh-aJNl53WBYepfI_PXEe5LLqCSno7-iqhpKgOmZQlUPYgc9w169v0mi0yEvkwfW353KY6JcFVcW8LFBvR9bb5B5IJCYp4nAyYZ-yQxwDtFW-9Z4o5X9vbVOIPX8LOztjmvmIT1Gli0rtjUc9uopuQaySvHgCVJ6o3v6pv0a_wimtORcqRmtf3eOF6eyq9LalHlA9bcZg-P9Jyq4FXO2G8JRUyI0_kwh7cu6aCa4M6NP3PMUwi-53iIU1Ki2kpQP5VOAhzVHXHHBSu0lLiF5pcUWs7194I2gDzNvzXx4vj1PMU_NtKv551T-uH3vs_DGQw60c8mpr09m1NWKiV_idXbdNAgr72G7JUQ-er0jeXWFq-HwnOSjkOl2oHp7wX6cf3iaE-9RrllUyyDPbxMekx6N20uO7japNE7_rMoy3pB3CbHvpdEIDuiUzlNKs4pPYd_cWizedXreXqxofv2HeoVmEPByP0KWT0Y9MupXana7jItKeOmSM5pFfwV1PWff0mQXYnN07EDW_C95MHXWjL9HbjKe_XIoidDExYPwGjhjKEeqltj3ctG9UdFAjMGgS9ydAaJvaNNmrzHYAhNsov3S06weP_1kfL0hCI_tr42Efu1MM2Ce2tcxGuHOYW9_nOBqWMdnSUc5zvTF_ELGnZgT0c2WG11xPzrMF5M67Eag2VEGTl7EaqrZg3mBMUigzk9YXXc8U9Y0SZ_tI1DTphdzi5jJf3ZfV8vw0iXnEvQIGIl2Hz7mw10_ZUnRx8t7PTP-rkhyX9l1D7lfaBL-QrafkkMfHj6YDvrUroPawDRx_iZ2lyCgbjZZTPebV9cnbtwQ0ZqMdHMHEvI2XZ9ieJ8qOCXH3Su8BF1rPYYHp5y9vC1ORItQI94q3lcPLkvPiqjE_gK3nthfgwXsm3GLtJb2glpXaivy51Z6s5wDI95nLZA6zxNE-uGbqy8kXn48AGyVhdTW_prlY083dkOvXO7M4xlUmUVONZVQmjiMafMIAQD7wZbG3Vnz9aRl0MsWalSgaYbExUCMvKMs6_7P-6ucNU8XdkDjesC4G1KIG3rXslgiejt0UdmjupGxUkUVhmM_8Qonhk8v4w5szi1Nw_Ibf2IEUsKYSBYKahkDFwHyo_j-i1NJmcUbFtsNiBPQsZQt0Pc98qspfssn2HS3y6pSc1DI-h5HkR8b-MgQDnioM7MmajFEdJBybGIKgaUAInFblm2SLsE6Iv97ASSp9C0GUFuwJHNEZpZ1f7AaWO1Wm5u7Qhps6dJ9GLEbxFSOwxQKsfnBjvFygIi0vBjkdRt7bQ_iTPq0bwXTkw3_F4ulmCDggETjUqKCMWfVp9vBj3uO3ErP7XOOjSy6wYEPwaRc_CPlJAbwArY9y-p86kKi9QEyetmB8VdB7yMZoArEem14wKO-AINIEzimoO5XUQ266tSkd93mtQG4GIOoNoX_bDn3is6xxUXQAculgJyQMXqluaPlMX1K9JQp9_99rNyvkjCYlXTBm98CMa-14MsBIXMc4jA9hsr0nCoITmXFICtqH1rTJvWK3LDkdhcefU-A_7A4vRtGdnVjwSYdWdumFb3bvvrwHVZnBIhaFd-nNsCv9npVN3DO97M7c8E-duZ",
+        "status": null
+      },
+      {
+        "id": "msg_076f6aeca3c39bc2006ad43e7325f487d0bfc42bb348309122",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"実質的な意味の変更や重要な情報の脱落はありません。父親についての推定の重複を避ける目的、国会が女性の婚姻の自由との調整を図ること、6か月という期間が直ちに過剰とはいえないこと、国家賠償法上は立法不作為が違法と評価されないこと、請求を認めないという結論が保たれています。条文番号は省略されていますが、違法性の判断が国家賠償法におけるものだという限定は残っています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"元の文章が立法目的として挙げる「父性の推定の重複を回避すること」が抜けています。また、国会が調整すべき対象を、元の「上記立法目的」と女性の婚姻の自由から、「家族の秩序」と女性の結婚の自由に置き換えており、より広い別の目的に変えています。さらに、元の違法性判断は「国家賠償法1条1項の適用上」という限定付きですが、回答では単に「違法とは言えない」としており、一般的に違法性を否定したように読めます。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は、裁判の対象、法律の目的、期間を決める主体、裁判所の判断、結論が一続きの流れで示され、平易な言葉で読み進められます。回答1も説明は丁寧ですが、本文と補足で同じ内容を繰り返す部分があり、全体の論理を一度でつかむ点では回答2のほうが読みやすいです。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294523.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1636,
+      "input_tokens_details": {
+        "cache_write_tokens": 1633,
+        "cached_tokens": 0
+      },
+      "output_tokens": 650,
+      "output_tokens_details": {
+        "reasoning_tokens": 176
+      },
+      "total_tokens": 2286
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

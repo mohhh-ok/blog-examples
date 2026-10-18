@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "R05",
+  "requested_at": "2026-10-18T03:24:37.246806+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\nこれに対し，原判決は，本件規定の立法目的は父性の推定の重複を回避し，父子関係をめぐる紛争の発生を未然に防ぐことにあると解されるところ，その立法目的には合理性があり，これを達成するために再婚禁止期間を具体的にどの程度の期間とするかは，上記立法目的と女性の婚姻の自由との調整を図りつつ国会において決定されるべき問題であるから，これを６箇月とした本件規定が直ちに過剰な制約であるとはいえず，本件立法不作為は国家賠償法１条１項の適用上違法の評価を\f受けるものではないと判断して，上告人の請求を棄却すべきものとした。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg8zEiaBaV3KZrs3zymzf",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSjgsKEAgSGAI4AUIIdGhpbmtpbmcSDH6sWIHYgkzWmIUJORoM2jWph9ZlPT4csPDLIjBw3Q+5Pd80ntgeU7Ewk6RKW77x9ffXRpX+RhuSKMaf1g23xXrWvokfct6pUHs83dcqqwq+cMgHX0WJklLHGpt/aDPhPqAG7e3hgDGWo4TTgtwM3jwfWWgSSN03jipa33uBnNn6LJPvWdtXf9wyxOY1VHE+47dD5MQmaOsfGvs+A1WDtLCrJx1zXT4Lk7XDrVCacZTN+LXoXcK3qLXCO419+6ZqUR6DYC1c3ATeMHGdkFUdqGZ7OeUMP+zrGcZmHPoi/X1/zNO9A4ev6HWvplXv0p4NQYK6KdU24804hp3ONut6kleqwzzaeLZ2SylHEY4grMf036ceP8gQVRhgqsCz94C6ryf4Nvj4yIYXt9ipe1hU5cwxP/6w5W5s0MkcNVFgDcTSIfAd4QwauNEZYhvehqVNpbOLLK8EVF0PROaYd2CvVSZQkDAsJknyB4PeqzZ7PFS8f61wR9v7vaATZn6QTlgIIaNbcydwoB+QDz/cVDjct4o5hS6D/aNVU43qGcX4rtu9N/tsDrXbGLnahV0iKFXdpuMs+kjcGxEV5rIbrnpLRtroK12y4E/Ea1C7RXQXooBxyBQyeTDHZvfsldl5hOqPxRhZxUV+tTfMSEmqS3RDY4slFQil7RVHW7qxlz/7MGOvLRhnCHrVtSam8xvgYswvwWe25Av0E426+XPt0Mqx69RfqcVPOnTgwAU7wTMwwyXIU5mgaCFIVosEFtzUK3+aDJlezy4KGFXJXuYVkjsAyxRevMecf+a1kwDbIZXFQi7BzYaLaTRzaaw/azsXyZDpAMBkn6Ew6fc194rd1iya7XyCReErL+AT/7f6ObR7MDKs3Jb4RMyKdSJnXKTVMIY6h207pp6YUTa1FTXn2Uy0UUFAg/jHg2aVLO9YUUMuI9Tdnh8DtoTmGakxQbg/iYX9lYCGoQpicV8dCTFZGhuD4oDTlUJNPp3adpKIV24s+j98uw3PMnYdLCmak0KWK88qN1pzpynfdR3j9XjcHtO7jAIF0ZoI5RmjuYYkRHFFP8Zi7htt3z04zPLk2Te8wP9qHJWA8vsAYQMDpEOX50N94sQfTdo+vsK+DqnWPM8T3Xu+FFP8EuSpaJ68/U92DCU+2meGxqwddRfUeJUtuTY6YFatQMgt4YumnslP9oKbodHKNpCxYC404L2/+MQ2VcpWa9QJAIs7D8ilI8n0GsEAKLGjzMBw6QxfYExDpN2ZO/j3+DcsnbRLd2wbkrQ27e2uB0DOwoP1jJRJo4Iwk5kKjP41jxjE66un+7cV4t39hYHlh/HBCe4SzGvTDl51qwzPUbsgawKKaVBM9OgT6ei1OEi3zaoNj29GACSRKC0Yk1rf5p8DJWfZjq9e2NTp769zWPFXW8YIHNw26P0phUYohKAOee9bxaBMl51SVtjEpFXF2X8EUJ9U0Io9BfNlryUS+z9kUoTTHTlMaHtz6wvqybace2ibargK+vSEsv4PRHa1539KTpbIt3G9QO+I8Q1CyHCmx9XjUlCOGBUWn+MecpCm6wkSH2sVMSjnrT5fcQ5zEIpNyTTtueoOZcftXK9UhEHHGo+bPTZf7Ys9MfZndAVLyMAPu3Z+dAcAJBsiO68O3N2/OwSucXUuUTquFP9lLPSDwSsMLa9wdPgv27rueBmSa0fWuqyaICTJq6vRhliSQFMYuGg3/PTqAM5BNtjZnsWP46/06sTR5Hv5fuNMK5yaPUq37VW+erqHGJcBHZanphDCAPSGoBewaUQOdpMrvtXGs8zNb8/wwKwN7uRNsyKm4k7FYzCoTaAlaNBRUbYC+n1hDPLH9gWv/eGQKbCIPwhHGZTZCRwul0oYAQ=="
+      },
+      {
+        "type": "text",
+        "text": "# 書き直した文章\n\nこれに対して、前の裁判所（高等裁判所）の判決は、次のように考えて、最高裁判所に訴えを起こした女性の請求を認めませんでした。\n\n1. **この法律の規定の目的**\n   女性は離婚してから6か月間は再婚できない、という民法の規定があります。この規定の目的は、生まれた子どもの父親が「前の夫」とも「今の夫」とも推定されてしまう重なりを避けることにあります。そうすることで、子どもの父親が誰かをめぐる争いを、起きる前に防ごうとしているのです。\n\n2. **目的は筋が通っている**\n   この目的には十分な理由がある、と高等裁判所は考えました。\n\n3. **期間の長さは国会が決めること**\n   再婚できない期間を具体的に何か月にするかは、この目的と「女性が自由に結婚できること」とのバランスを考えながら、国会が決めるべき問題です。\n\n4. **6か月が行き過ぎとまではいえない**\n   ですから、その期間を6か月とした今の規定が、すぐに「必要以上に女性の自由を制限している」とはいえません。\n\n5. **国に賠償させる理由はない**\n   国家賠償法という法律では、国の違法な行為によって損害を受けた人は、国に損害の賠償を求めることができます。しかし、国会がこの規定を改めずにそのままにしてきたことは、この法律でいう「違法」には当たりません。\n\n---\n\n# 補足：言葉の説明\n\n- **原判決**：今回の裁判の一つ前の段階で、高等裁判所が出した判決のことです。\n- **上告人**：高等裁判所の判決に納得できず、最高裁判所に訴えた人のことです。\n- **父性の推定**：法律では、結婚中や離婚後しばらくの間に生まれた子どもは、その夫（または前の夫）の子どもとみなされます。離婚後すぐに再婚すると、子どもが「前の夫の子」とも「今の夫の子」ともみなされる場合が出てきます。\n- **立法不作為**：国会が、法律を変えたりなくしたりすべきだったのに、何もしなかったことを指します。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 287,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 1069,
+      "output_tokens_details": {
+        "thinking_tokens": 325
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}

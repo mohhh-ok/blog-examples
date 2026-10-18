@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "Y01",
+  "requested_at": "2026-10-18T03:23:17.623179+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文の【】内の語の読みを、ひらがなだけで答えてください。答え以外は書かないでください。\n\n貸し借りを【相殺】して、残りはゼロになった。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-8a05a7f0976b4a0d",
+    "object": "chat.completion",
+    "created": 1792293799,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "そうさい"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 38,
+      "total_tokens": 41,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "N03",
+  "requested_at": "2026-10-18T03:27:14.832749+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "小学3年生に「どうして空は青いの？」と聞かれました。その子に向けた答えを200字程度で書いてください。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-97f4e7300936e12f",
+    "object": "chat.completion",
+    "created": 1792294035,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "空が青く見えるのは、太陽の光が空気の中の小さな粒に当たって、青い光だけがたくさん散らばっているからなんだよ。太陽の光は白に見えるけど、実は赤や青などいろんな色が混ざっているんだ。その中で青い光は空気の中で広がりやすく、私たちの目に届いて空が青く見えるんだね。夕方は赤くなるけど、それはまた違う理由で、光の通る道が長くなるからなんだ。"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 30,
+      "total_tokens": 111,
+      "completion_tokens": 81,
+      "prompt_tokens_details": null
+    }
+  }
+}

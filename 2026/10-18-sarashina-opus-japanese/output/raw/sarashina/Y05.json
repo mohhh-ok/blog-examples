@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "Y05",
+  "requested_at": "2026-10-18T03:30:05.748953+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文の【】内の語の読みを、ひらがなだけで答えてください。答え以外は書かないでください。\n\n彼の言い分も【強ち】間違いとは言えない。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-a63758ab872e8328",
+    "object": "chat.completion",
+    "created": 1792294205,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "あながち"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 36,
+      "total_tokens": 39,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null
+    }
+  }
+}

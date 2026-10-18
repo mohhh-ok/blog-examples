@@ -1,0 +1,1200 @@
+{
+  "tally": {
+    "書き直し": {
+      "opus": 7,
+      "tie": 2,
+      "sarashina": 1
+    },
+    "敬語": {
+      "opus": 4
+    },
+    "自由作文": {
+      "opus": 4
+    },
+    "要約": {
+      "opus": 4
+    },
+    "ニュアンス": {
+      "opus": 4
+    },
+    "漢字の読み": {
+      "tie": 10,
+      "sarashina": 1,
+      "opus": 3
+    }
+  },
+  "rewrite_meaning_changed_both_runs": {
+    "sarashina": 8,
+    "opus": 2
+  },
+  "reading_correct": {
+    "sarashina": 11,
+    "opus": 13
+  },
+  "reading_total": 14,
+  "opus_thinking_tokens_total": 3982,
+  "requests": {
+    "sarashina_requests": 40,
+    "sarashina_429": [],
+    "sarashina_max_requests_in_60s": 5,
+    "statuses": {
+      "sarashina:200": 40,
+      "opus:200": 40
+    }
+  },
+  "per_problem": [
+    {
+      "id": "R01",
+      "category": "書き直し",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "meaning_preserved": {
+        "sarashina": [
+          false,
+          false
+        ],
+        "opus": [
+          true,
+          true
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 763,
+        "thinking_tokens": 190,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 135,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "R02",
+      "category": "書き直し",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "meaning_preserved": {
+        "sarashina": [
+          false,
+          false
+        ],
+        "opus": [
+          true,
+          true
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 668,
+        "thinking_tokens": 161,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 176,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "R03",
+      "category": "書き直し",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "meaning_preserved": {
+        "sarashina": [
+          false,
+          false
+        ],
+        "opus": [
+          true,
+          true
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 873,
+        "thinking_tokens": 128,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 325,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "R04",
+      "category": "書き直し",
+      "run_winners": [
+        "tie",
+        "opus"
+      ],
+      "final": "tie",
+      "meaning_preserved": {
+        "sarashina": [
+          false,
+          false
+        ],
+        "opus": [
+          false,
+          true
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 777,
+        "thinking_tokens": 270,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 196,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "R05",
+      "category": "書き直し",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "meaning_preserved": {
+        "sarashina": [
+          false,
+          false
+        ],
+        "opus": [
+          true,
+          true
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 1069,
+        "thinking_tokens": 325,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 147,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "R06",
+      "category": "書き直し",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "meaning_preserved": {
+        "sarashina": [
+          false,
+          false
+        ],
+        "opus": [
+          false,
+          false
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 555,
+        "thinking_tokens": 224,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 168,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "R07",
+      "category": "書き直し",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "meaning_preserved": {
+        "sarashina": [
+          false,
+          false
+        ],
+        "opus": [
+          true,
+          true
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 365,
+        "thinking_tokens": 75,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 196,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "R08",
+      "category": "書き直し",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "meaning_preserved": {
+        "sarashina": [
+          false,
+          false
+        ],
+        "opus": [
+          true,
+          true
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 463,
+        "thinking_tokens": 15,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 144,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "R09",
+      "category": "書き直し",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "meaning_preserved": {
+        "sarashina": [
+          true,
+          false
+        ],
+        "opus": [
+          true,
+          true
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 614,
+        "thinking_tokens": 251,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 171,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "R10",
+      "category": "書き直し",
+      "run_winners": [
+        "sarashina",
+        "sarashina"
+      ],
+      "final": "sarashina",
+      "meaning_preserved": {
+        "sarashina": [
+          true,
+          true
+        ],
+        "opus": [
+          false,
+          false
+        ]
+      },
+      "opus_usage": {
+        "output_tokens": 233,
+        "thinking_tokens": 30,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 153,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "K01",
+      "category": "敬語",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 807,
+        "thinking_tokens": 41,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 343,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "K02",
+      "category": "敬語",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 1375,
+        "thinking_tokens": 427,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 635,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "K03",
+      "category": "敬語",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 728,
+        "thinking_tokens": 65,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 77,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "K04",
+      "category": "敬語",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 747,
+        "thinking_tokens": 79,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 162,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "N01",
+      "category": "自由作文",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 261,
+        "thinking_tokens": 26,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 103,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "N02",
+      "category": "自由作文",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 473,
+        "thinking_tokens": 67,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 151,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "N03",
+      "category": "自由作文",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 475,
+        "thinking_tokens": 271,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 81,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "N04",
+      "category": "自由作文",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 345,
+        "thinking_tokens": 108,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 120,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "S01",
+      "category": "要約",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 647,
+        "thinking_tokens": 378,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 148,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "S02",
+      "category": "要約",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 533,
+        "thinking_tokens": 287,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 87,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "S03",
+      "category": "要約",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 261,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 54,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "S04",
+      "category": "要約",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 480,
+        "thinking_tokens": 264,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 77,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "U01",
+      "category": "ニュアンス",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 581,
+        "thinking_tokens": 26,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 308,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "U02",
+      "category": "ニュアンス",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 1151,
+        "thinking_tokens": 28,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 558,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "U03",
+      "category": "ニュアンス",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 516,
+        "thinking_tokens": 31,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 369,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "U04",
+      "category": "ニュアンス",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "opus_usage": {
+        "output_tokens": 791,
+        "thinking_tokens": 26,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 374,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y01",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "そうさい",
+          "correct": true
+        },
+        "opus": {
+          "output": "そうさい",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 41,
+        "thinking_tokens": 35,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y02",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "ぜいじゃく",
+          "correct": true
+        },
+        "opus": {
+          "output": "ぜいじゃく",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 10,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 4,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y03",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "とんざ",
+          "correct": true
+        },
+        "opus": {
+          "output": "とんざ",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 6,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y04",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "ようやく",
+          "correct": true
+        },
+        "opus": {
+          "output": "ようやく",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 6,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 2,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y05",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "あながち",
+          "correct": true
+        },
+        "opus": {
+          "output": "あながち",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 5,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y06",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "とつとつ",
+          "correct": true
+        },
+        "opus": {
+          "output": "とつとつ",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 7,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 5,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y07",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "のどか",
+          "correct": true
+        },
+        "opus": {
+          "output": "のどか",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 5,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y08",
+      "category": "漢字の読み",
+      "run_winners": [
+        "sarashina",
+        "sarashina"
+      ],
+      "final": "sarashina",
+      "reading": {
+        "sarashina": {
+          "output": "ないがしろ",
+          "correct": true
+        },
+        "opus": {
+          "output": "なおざり",
+          "correct": false
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 6,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 4,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y09",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "ひとけ",
+          "correct": true
+        },
+        "opus": {
+          "output": "ひとけ",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 43,
+        "thinking_tokens": 36,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y10",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "ついたち",
+          "correct": true
+        },
+        "opus": {
+          "output": "ついたち",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 6,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y11",
+      "category": "漢字の読み",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "reading": {
+        "sarashina": {
+          "output": "せいぶつ",
+          "correct": false
+        },
+        "opus": {
+          "output": "なまもの",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 23,
+        "thinking_tokens": 17,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y12",
+      "category": "漢字の読み",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "reading": {
+        "sarashina": {
+          "output": "しじょう",
+          "correct": false
+        },
+        "opus": {
+          "output": "いちば",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 50,
+        "thinking_tokens": 45,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y13",
+      "category": "漢字の読み",
+      "run_winners": [
+        "opus",
+        "opus"
+      ],
+      "final": "opus",
+      "reading": {
+        "sarashina": {
+          "output": "だいじ",
+          "correct": false
+        },
+        "opus": {
+          "output": "おおごと",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 62,
+        "thinking_tokens": 56,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    },
+    {
+      "id": "Y14",
+      "category": "漢字の読み",
+      "run_winners": [
+        "tie",
+        "tie"
+      ],
+      "final": "tie",
+      "reading": {
+        "sarashina": {
+          "output": "うわて",
+          "correct": true
+        },
+        "opus": {
+          "output": "うわて",
+          "correct": true
+        }
+      },
+      "opus_usage": {
+        "output_tokens": 5,
+        "thinking_tokens": 0,
+        "stop_reason": "end_turn"
+      },
+      "sarashina_usage": {
+        "completion_tokens": 3,
+        "finish_reason": "stop"
+      }
+    }
+  ],
+  "human": {
+    "blind_problems": [
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R09",
+      "R10"
+    ],
+    "human_readable_count": {
+      "opus": 4,
+      "sarashina": 2
+    },
+    "gpt_readability_agree_runs": 9,
+    "gpt_readability_agree_both_runs": 4,
+    "rows": [
+      {
+        "id": "R01",
+        "status": "not_blind",
+        "line": "aがよみやすい。ただしいみのただしさはしょうじきわからない（元の文章が複雑すぎて判定する気になれない）",
+        "human_readable": "sarashina",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          false,
+          false
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "R02",
+        "status": "blind",
+        "line": "bがよみやすい。ただし意味の判定はできない",
+        "human_readable": "opus",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          true,
+          true
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "R03",
+        "status": "blind",
+        "line": "aがよみやすい。これいぜんもこれいこうも、意味の正しさの判定はできない",
+        "human_readable": "sarashina",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          false,
+          false
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "R04",
+        "status": "blind",
+        "line": "bがよみやすい",
+        "human_readable": "opus",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          true,
+          true
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            false,
+            true
+          ]
+        },
+        "gpt_final": "tie"
+      },
+      {
+        "id": "R05",
+        "status": "blind",
+        "line": "bがよみやすい",
+        "human_readable": "sarashina",
+        "gpt_readable": [
+          "opus",
+          "sarashina"
+        ],
+        "gpt_agrees": [
+          false,
+          true
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            false,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "R09",
+        "status": "blind",
+        "line": "どっちもよみにくいなぁ。整理されてるのはBかな",
+        "human_readable": "opus",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          true,
+          true
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            true,
+            false
+          ],
+          "opus": [
+            true,
+            true
+          ]
+        },
+        "gpt_final": "opus"
+      },
+      {
+        "id": "R10",
+        "status": "blind",
+        "line": "Aがいいなぁ。わかりやすい",
+        "human_readable": "opus",
+        "gpt_readable": [
+          "opus",
+          "opus"
+        ],
+        "gpt_agrees": [
+          true,
+          true
+        ],
+        "gpt_meaning_preserved": {
+          "sarashina": [
+            true,
+            true
+          ],
+          "opus": [
+            false,
+            false
+          ]
+        },
+        "gpt_final": "sarashina"
+      }
+    ]
+  }
+}

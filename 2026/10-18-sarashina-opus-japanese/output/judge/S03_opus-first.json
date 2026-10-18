@@ -1,0 +1,145 @@
+{
+  "id": "S03",
+  "category": "要約",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:40:51.451189+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 原文の要点を正確に押さえているか（原文にない内容や事実の誤りがないか）、字数の指示に合っているか、日本語として自然か\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を200字程度で要約してください。\n\n---\n第一夜\n　こんな夢を見た。\n　腕組をして枕元に坐っていると、仰向に寝た女が、静かな声でもう死にますと云う。女は長い髪を枕に敷いて、輪郭の柔らかな瓜実顔をその中に横たえている。真白な頬の底に温かい血の色がほどよく差して、唇の色は無論赤い。とうてい死にそうには見えない。しかし女は静かな声で、もう死にますと判然云った。自分も確にこれは死ぬなと思った。そこで、そうかね、もう死ぬのかね、と上から覗き込むようにして聞いて見た。死にますとも、と云いながら、女はぱっちりと眼を開けた。大きな潤のある眼で、長い睫に包まれた中は、ただ一面に真黒であった。その真黒な眸の奥に、自分の姿が鮮に浮かんでいる。\n　自分は透き徹るほど深く見えるこの黒眼の色沢を眺めて、これでも死ぬのかと思った。それで、ねんごろに枕の傍へ口を付けて、死ぬんじゃなかろうね、大丈夫だろうね、とまた聞き返した。すると女は黒い眼を眠そうに睜たまま、やっぱり静かな声で、でも、死ぬんですもの、仕方がないわと云った。\n　じゃ、私の顔が見えるかいと一心に聞くと、見えるかいって、そら、そこに、写ってるじゃありませんかと、にこりと笑って見せた。自分は黙って、顔を枕から離した。腕組をしながら、どうしても死ぬのかなと思った。\n　しばらくして、女がまたこう云った。\n「死んだら、埋めて下さい。大きな真珠貝で穴を掘って。そうして天から落ちて来る星の破片を墓標に置いて下さい。そうして墓の傍に待っていて下さい。また逢いに来ますから」\n　自分は、いつ逢いに来るかねと聞いた。\n「日が出るでしょう。それから日が沈むでしょう。それからまた出るでしょう、そうしてまた沈むでしょう。――赤い日が東から西へ、東から西へと落ちて行くうちに、――あなた、待っていられますか」\n　自分は黙って首肯いた。女は静かな調子を一段張り上げて、\n「百年待っていて下さい」と思い切った声で云った。\n「百年、私の墓の傍に坐って待っていて下さい。きっと逢いに来ますから」\n　自分はただ待っていると答えた。すると、黒い眸のなかに鮮に見えた自分の姿が、ぼうっと崩れて来た。静かな水が動いて写る影を乱したように、流れ出したと思ったら、女の眼がぱちりと閉じた。長い睫の間から涙が頬へ垂れた。――もう死んでいた。\n　自分はそれから庭へ下りて、真珠貝で穴を掘った。真珠貝は大きな滑かな縁の鋭どい貝であった。土をすくうたびに、貝の裏に月の光が差してきらきらした。湿った土の匂もした。穴はしばらくして掘れた。女をその中に入れた。そうして柔らかい土を、上からそっと掛けた。掛けるたびに真珠貝の裏に月の光が差した。\n　それから星の破片の落ちたのを拾って来て、かろく土の上へ乗せた。星の破片は丸かった。長い間大空を落ちている間に、角が取れて滑かになったんだろうと思った。抱き上げて土の上へ置くうちに、自分の胸と手が少し暖くなった。\n　自分は苔の上に坐った。これから百年の間こうして待っているんだなと考えながら、腕組をして、丸い墓石を眺めていた。そのうちに、女の云った通り日が東から出た。大きな赤い日であった。それがまた女の云った通り、やがて西へ落ちた。赤いまんまでのっと落ちて行った。一つと自分は勘定した。\n　しばらくするとまた唐紅の天道がのそりと上って来た。そうして黙って沈んでしまった。二つとまた勘定した。\n　自分はこう云う風に一つ二つと勘定して行くうちに、赤い日をいくつ見たか分らない。勘定しても、勘定しても、しつくせないほど赤い日が頭の上を通り越して行った。それでも百年がまだ来ない。しまいには、苔の生えた丸い石を眺めて、自分は女に欺されたのではなかろうかと思い出した。\n　すると石の下から斜に自分の方へ向いて青い茎が伸びて来た。見る間に長くなってちょうど自分の胸のあたりまで来て留まった。と思うと、すらりと揺ぐ茎の頂に、心持首を傾けていた細長い一輪の蕾が、ふっくらと弁を開いた。真白な百合が鼻の先で骨に徹えるほど匂った。そこへ遥の上から、ぽたりと露が落ちたので、花は自分の重みでふらふらと動いた。自分は首を前へ出して冷たい露の滴る、白い花弁に接吻した。自分が百合から顔を離す拍子に思わず、遠い空を見たら、暁の星がたった一つ瞬いていた。\n「百年はもう来ていたんだな」とこの時始めて気がついた。\n\n【回答 1】\n夏目漱石『夢十夜』の「第一夜」の要約です。\n\n夢の中で、「自分」は死を告げる美しい女の枕元に坐っている。女は「死んだら真珠貝で穴を掘って埋め、天から落ちた星の破片を墓標にして、百年墓の傍で待っていてほしい。きっと逢いに来る」と頼み、涙を流して息を引き取る。自分は言われた通りに女を葬り、日の出と日の入りを数えながら待ち続けるが、やがて女に欺されたのではないかと疑い始める。すると墓石の下から茎が伸び、真白な百合が咲く。その花弁に接吻し、暁の星を見たとき、自分は百年がすでに来ていたことに気づく。\n\n【回答 2】\n夢の中で、死を告げた女の言葉に従い、百年を待つ男。日の巡りを数え、疑念を抱くも、白百合の香りと共に訪れた露の瞬間、静かに悟る——百年は既に過ぎていた。幻想と現実が交錯する、短くも深い物語。\n",
+  "judgement": {
+    "winner": "1",
+    "reason": "回答1は、女が百年後の再会を約束すること、真珠貝で埋葬して星の破片を墓標にすること、待ち続けて疑いを抱くこと、白百合への接吻と暁の星を経て百年の経過に気づくことを、原文に沿って押さえている。前置きが不要で200字程度としてはやや長いものの、回答2は約100字と短く、埋葬や再会の約束、接吻、暁の星といった重要な要素を省いている。また、回答2の「幻想と現実が交錯する」「短くも深い物語」は原文の出来事の要約ではなく評価的な付け足しである。日本語は双方おおむね自然だが、要点の正確さと充実度で回答1が優れている。"
+  },
+  "response": {
+    "id": "resp_06493651c0643a3a006ad43fc39b3087d098a1c7d2e6a48cac",
+    "access_programs": null,
+    "created_at": 1792294851.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_06493651c0643a3a006ad43fc46e5487d0936da159fa824381",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D_LxLIeDSrZxETMGAGek_Ri0jWQzKhPJxOTH3kMFoB7CVOGReY-fCZ-UtgnCfcay9kWDo0Wt6IJEtCEgwMoWBQcqu7q0kn3p95UmA3tIGH8p_yGCF1n910u-v24PVaenVKkHCMj8YE2OerbBKeDXIYcFJ1BJcwmG442ED13UmOTdNkr5UlAmxNzHaHfV0pb3WzJacq7mDsyyV7HtIqluAfvcO754O_nFzV9BGVZ5KMleisR5hn9eFI-vpJlk398Ak2pLCgLSPgLr5e2sITNUAtQHbTXxPB4ax0BEKbkiptk-TXNKc_-SDAd0rhA1X29oH2y2S39AcGcUoXXsF4kEr4Q3Tz5STtsdqKn8Rb8IX-bIGWMWAU7uSAKkXJzxQ0BstcC0c2-61j6yIb5_IgKBJMNkGNb8ROVLxBJH0ULYDph2XD-hyUy37PK2YY2uNa92nQUNv1AYJ2N--6Y44XAa1ftHKjVmHNXB53w86XlRMFnEP0r533mkvTzIlh4TD6aAsWW7gxNj3evDVk_qHTyUihb5vy4inNL_wiuwHUcskbNYYY6uSHLGvLU6SduVTzQAvglcbCE8C4NOwq3kpLDLc-JlnlWlk3qN2F-FmZFjbjzKddluIDmKAbJM3tn4-nSmFN1Xjb6GUVwUk202M9gvneJDXpWd3VwoWaBtkTJDIst4aq7W9pVQ0yRu4fYhwChPLoQ0Qleqp4QdBOjskcbGVkanFrD3ruKEPvTo-86tC3yKnUuSKhb_VqqBzkUCbC9y00HtkHt4d7U1BXkls-6Gr9I3bii9JSivX0ApCtQLldsMCqx0b0-ADfCEdz3r80h_3-k2gd-62if0Ov-HdvY_y5lklAvsj80sMAAalJuplFY0qeXbR5ha5qWxX-fIGDkPwPgTxkvtKojNXSXQn2mVVcJQyFGQakXQTCUZXtaLs4j1i38FNbtsWp4cTynOCaPG5XThJyXQazpXxC9u_SOT9-WE09FCTuNmp3uruM0X2FqaDwDbBXjv4vtLNVOFwTufV6UNEMSVrSeS7IQkqa_vW1xU8qITx3IW1WQ8CE0Z5LnuBKPvDZZA_de6QoNP_O8HWpwj4vVkOVG5lH-eYPWOMjvo656BA5FJ4NORsVnlWYWpa603WIn9YSqXwlOK5CEG2XNlQfr8YaGazE5mUuyAvH8_sCuZMlwLUOqnuoBgn2H0kA-hDDvCkHDEAp6CFDgM30S80_8A9EALvvk8YC0SRSp4HQ0v6YT9A5-vWHl4bAtRGg2U4-xPO45ujOZvt7xrdKDqZNHUhQLU7401pCtZWRijXltNQpVPAHHZFmQ32R5T2pG_QTlg-oGMPoCpUOf26NjVp7UsLkezCITeNwXHIEnVqTWmXKScbDyL4Zft5uvCNd7lclLPDxeFE8wJ2rlXJMxG14pT-mjyDG39Nnfx0VsvNscjQyr-zw5om_myX9QH2TYvhstSdHS8LN0poiGGPTnI4WTUaFlqcdThvru0m1pAMQ8ufRPjlQJ1hJZ-7SnQOMsHOsH1FpHxVUISQAThAJCGh7vh954ho9S6nE-KNXbIYt5fjmFZUmlXbjYrMhGw6GQ7RT664xRAioyK3tuRLcuGcQACZrEfZ47ixz-K_TAm5AaYom0RQJpxvuNCFntWb3EnlKuKsKRsBK5d6uZxVS61JlMmaCgZVWts1e9oadLcmvOtK-HGqObWnAfZwG-xbsmLWQSZf7GWldO9FgcnBldBaoIfGQT2DSGf68Oct19uh-IeG3hYIaB4CG0atC56v47rFpdZWleeoZ8ineFVaIR8Y3ub554F0VjJS11k9-wjQrD-JSfQ5syE3g1wjzEI5H2gz4_oP6_Nx9M6vBR3pppvFMaQWENC449o9__uX3tqkxFBugeQwXmJpyc3rdZ-88lKxQRcAI_zxpXtYYmmzamx0zJzXdPpZbWQlefHvGKRC1SDYPgsmu4AZpQ80mxcgWgQlk3l3_RkAkkNfgO0VdTfx0VxfLxmlAzgr_i_LfVdC2E53P6RlvP9a25_1-PEN60enybP6nwIc9DR5jvIW89ZHoSd5H8t9zXTm3_xY0UqYsidLIZzow0aPXNdvnQGGItJ78dJZVCCHZBTCeGN3vOnALX9sLT6IaScNxMi7IQAm7JpqILqN0ce0nPmISBZlcSmYQjTCzZDIGiiWSbvP1l2kcmKvDq4tvnS8HjGTkGM3At_iXkLfOS-qGQz9f9Eg1T6GtvDgzQku0DRREi_Ft0I-2sohoL0LYy1rRKJXBEUpBI1Zk0sqkIYB-UzFObui57w4gcbgBZPxm5bW5mO3wHKYwgEz29zuFsZ_XGAonni0TgfZ2a0EFeuKKb5EIC3PRnStanBW_iBQMzWBNYir1vp4o4BPTG5sQcS3hJUMQW8C0pmTq1QXhU8mnhVmWObPXgt3-9IqAJB91CTC_cqLZ55zEPDIfWHd2iu5nNUyS1x19G9zvk4OmAtw90IEoAVCPtsJPMfElY5n6tbkFnoL_pG6doGVCAtpGWYRDRriAoj3n42hTbO6K9BzQb6lAFBOP6kl7_yA5k0-wubV5_CtZs54fnZKGeKSV52E-b43qpjGe1ZOxtjUle5iszeMhpY9I=",
+        "status": null
+      },
+      {
+        "id": "msg_06493651c0643a3a006ad43fc7585487d091b0533a67d62279",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"1\",\"reason\":\"回答1は、女が百年後の再会を約束すること、真珠貝で埋葬して星の破片を墓標にすること、待ち続けて疑いを抱くこと、白百合への接吻と暁の星を経て百年の経過に気づくことを、原文に沿って押さえている。前置きが不要で200字程度としてはやや長いものの、回答2は約100字と短く、埋葬や再会の約束、接吻、暁の星といった重要な要素を省いている。また、回答2の「幻想と現実が交錯する」「短くも深い物語」は原文の出来事の要約ではなく評価的な付け足しである。日本語は双方おおむね自然だが、要点の正確さと充実度で回答1が優れている。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294859.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 2111,
+      "input_tokens_details": {
+        "cache_write_tokens": 2108,
+        "cached_tokens": 0
+      },
+      "output_tokens": 335,
+      "output_tokens_details": {
+        "reasoning_tokens": 100
+      },
+      "total_tokens": 2446
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

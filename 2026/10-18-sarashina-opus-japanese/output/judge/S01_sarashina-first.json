@@ -1,0 +1,145 @@
+{
+  "id": "S01",
+  "category": "要約",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T03:39:45.578318+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の観点で 2 つの回答を比べ、よいほうを winner に \"1\" か \"2\" で、優劣がつけられなければ \"tie\" で書いてください。判断の理由を reason に具体的に書いてください。\n\n観点: 原文の要点を正確に押さえているか（原文にない内容や事実の誤りがないか）、字数の指示に合っているか、日本語として自然か\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を200字程度で要約してください。\n\n---\n一\n　ある日の事でございます。御釈迦様は極楽の蓮池のふちを、独りでぶらぶら御歩きになっていらっしゃいました。池の中に咲いている蓮の花は、みんな玉のようにまっ白で、そのまん中にある金色の蕊からは、何とも云えない好い匂が、絶間なくあたりへ溢れて居ります。極楽は丁度朝なのでございましょう。\n　やがて御釈迦様はその池のふちに御佇みになって、水の面を蔽っている蓮の葉の間から、ふと下の容子を御覧になりました。この極楽の蓮池の下は、丁度地獄の底に当って居りますから、水晶のような水を透き徹して、三途の河や針の山の景色が、丁度覗き眼鏡を見るように、はっきりと見えるのでございます。\n　するとその地獄の底に、犍陀多と云う男が一人、ほかの罪人と一しょに蠢いている姿が、御眼に止まりました。この犍陀多と云う男は、人を殺したり家に火をつけたり、いろいろ悪事を働いた大泥坊でございますが、それでもたった一つ、善い事を致した覚えがございます。と申しますのは、ある時この男が深い林の中を通りますと、小さな蜘蛛が一匹、路ばたを這って行くのが見えました。そこで犍陀多は早速足を挙げて、踏み殺そうと致しましたが、「いや、いや、これも小さいながら、命のあるものに違いない。その命を無暗にとると云う事は、いくら何でも可哀そうだ。」と、こう急に思い返して、とうとうその蜘蛛を殺さずに助けてやったからでございます。\n　御釈迦様は地獄の容子を御覧になりながら、この犍陀多には蜘蛛を助けた事があるのを御思い出しになりました。そうしてそれだけの善い事をした報には、出来るなら、この男を地獄から救い出してやろうと御考えになりました。幸い、側を見ますと、翡翠のような色をした蓮の葉の上に、極楽の蜘蛛が一匹、美しい銀色の糸をかけて居ります。御釈迦様はその蜘蛛の糸をそっと御手に御取りになって、玉のような白蓮の間から、遥か下にある地獄の底へ、まっすぐにそれを御下しなさいました。\n二\n　こちらは地獄の底の血の池で、ほかの罪人と一しょに、浮いたり沈んだりしていた犍陀多でございます。何しろどちらを見ても、まっ暗で、たまにそのくら暗からぼんやり浮き上っているものがあると思いますと、それは恐しい針の山の針が光るのでございますから、その心細さと云ったらございません。その上あたりは墓の中のようにしんと静まり返って、たまに聞えるものと云っては、ただ罪人がつく微な嘆息ばかりでございます。これはここへ落ちて来るほどの人間は、もうさまざまな地獄の責苦に疲れはてて、泣声を出す力さえなくなっているのでございましょう。ですからさすが大泥坊の犍陀多も、やはり血の池の血に咽びながら、まるで死にかかった蛙のように、ただもがいてばかり居りました。\n　ところがある時の事でございます。何気なく犍陀多が頭を挙げて、血の池の空を眺めますと、そのひっそりとした暗の中を、遠い遠い天上から、銀色の蜘蛛の糸が、まるで人目にかかるのを恐れるように、一すじ細く光りながら、するすると自分の上へ垂れて参るのではございませんか。犍陀多はこれを見ると、思わず手を拍って喜びました。この糸に縋りついて、どこまでものぼって行けば、きっと地獄からぬけ出せるのに相違ございません。いや、うまく行くと、極楽へはいる事さえも出来ましょう。そうすれば、もう針の山へ追い上げられる事もなくなれば、血の池に沈められる事もある筈はございません。\n　こう思いましたから犍陀多は、早速その蜘蛛の糸を両手でしっかりとつかみながら、一生懸命に上へ上へとたぐりのぼり始めました。元より大泥坊の事でございますから、こう云う事には昔から、慣れ切っているのでございます。\n　しかし地獄と極楽との間は、何万里となくございますから、いくら焦って見た所で、容易に上へは出られません。ややしばらくのぼる中に、とうとう犍陀多もくたびれて、もう一たぐりも上の方へはのぼれなくなってしまいました。そこで仕方がございませんから、まず一休み休むつもりで、糸の中途にぶら下りながら、遥かに目の下を見下しました。\n　すると、一生懸命にのぼった甲斐があって、さっきまで自分がいた血の池は、今ではもう暗の底にいつの間にかかくれて居ります。それからあのぼんやり光っている恐しい針の山も、足の下になってしまいました。この分でのぼって行けば、地獄からぬけ出すのも、存外わけがないかも知れません。犍陀多は両手を蜘蛛の糸にからみながら、ここへ来てから何年にも出した事のない声で、「しめた。しめた。」と笑いました。ところがふと気がつきますと、蜘蛛の糸の下の方には、数限もない罪人たちが、自分ののぼった後をつけて、まるで蟻の行列のように、やはり上へ上へ一心によじのぼって来るではございませんか。犍陀多はこれを見ると、驚いたのと恐しいのとで、しばらくはただ、莫迦のように大きな口を開いたまま、眼ばかり動かして居りました。自分一人でさえ断れそうな、この細い蜘蛛の糸が、どうしてあれだけの人数の重みに堪える事が出来ましょう。もし万一途中で断れたと致しましたら、折角ここへまでのぼって来たこの肝腎な自分までも、元の地獄へ逆落しに落ちてしまわなければなりません。そんな事があったら、大変でございます。が、そう云う中にも、罪人たちは何百となく何千となく、まっ暗な血の池の底から、うようよと這い上って、細く光っている蜘蛛の糸を、一列になりながら、せっせとのぼって参ります。今の中にどうかしなければ、糸はまん中から二つに断れて、落ちてしまうのに違いありません。\n　そこで犍陀多は大きな声を出して、「こら、罪人ども。この蜘蛛の糸は己のものだぞ。お前たちは一体誰に尋いて、のぼって来た。下りろ。下りろ。」と喚きました。\n　その途端でございます。今まで何ともなかった蜘蛛の糸が、急に犍陀多のぶら下っている所から、ぷつりと音を立てて断れました。ですから犍陀多もたまりません。あっと云う間もなく風を切って、独楽のようにくるくるまわりながら、見る見る中に暗の底へ、まっさかさまに落ちてしまいました。\n　後にはただ極楽の蜘蛛の糸が、きらきらと細く光りながら、月も星もない空の中途に、短く垂れているばかりでございます。\n三\n　御釈迦様は極楽の蓮池のふちに立って、この一部始終をじっと見ていらっしゃいましたが、やがて犍陀多が血の池の底へ石のように沈んでしまいますと、悲しそうな御顔をなさりながら、またぶらぶら御歩きになり始めました。自分ばかり地獄からぬけ出そうとする、犍陀多の無慈悲な心が、そうしてその心相当な罰をうけて、元の地獄へ落ちてしまったのが、御釈迦様の御目から見ると、浅間しく思召されたのでございましょう。\n　しかし極楽の蓮池の蓮は、少しもそんな事には頓着致しません。その玉のような白い花は、御釈迦様の御足のまわりに、ゆらゆら萼を動かして、そのまん中にある金色の蕊からは、何とも云えない好い匂が、絶間なくあたりへ溢れて居ります。極楽ももう午に近くなったのでございましょう。\n（大正七年四月十六日）\n\n【回答 1】\nこの物語は、極楽の釈迦が地獄の犍陀多（かんだた）を救うため、蜘蛛の糸を垂らす場面から始まります。犍陀多は生前、一度だけ蜘蛛を救った善行があり、その報いとして救済の機会が与えられました。彼は糸を登り、地獄から抜け出そうとしますが、途中、他の罪人たちが続いて登ってくるのを見て、自分だけ助かろうとする利己的な叫びを上げます。その瞬間、糸は切れ、彼は再び地獄へ転落します。釈迦はその無慈悲な心を悲しみ、静かに歩み去ります。一方、極楽の蓮は変わらず清らかに咲き、芳香を放っています。この作品は、自己中心的な欲望が招く因果と、真の救済に必要な慈悲の心を象徴的に描いています。\n\n【回答 2】\n極楽の蓮池のほとりを歩いていた御釈迦様は、地獄の底で苦しむ大泥棒・犍陀多の姿を目にする。彼が生前に一匹の蜘蛛を助けたことを思い出した御釈迦様は、救いの手として蜘蛛の糸を地獄へ垂らした。犍陀多は喜んで糸をのぼるが、下から無数の罪人が続いてくるのを見て、「この糸は己のものだ、下りろ」と叫ぶ。その途端に糸は切れ、犍陀多は再び地獄へ落ちた。自分だけ助かろうとする無慈悲な心を御釈迦様は悲しげに見届けたが、極楽の蓮は変わらず美しく咲き匂っていた。\n",
+  "judgement": {
+    "winner": "2",
+    "reason": "回答2は、蜘蛛を助けた善行、釈迦による救済の機会、犍陀多の独占的な叫びと転落、釈迦の悲しみという主要な展開を正確に押さえ、200字程度という指定にもおおむね沿っています。日本語も自然です。回答1も筋は捉えていますが、指定より長く、末尾の「真の救済に必要な慈悲の心」など、原文の要約を超える解釈が加わっています。また、「蜘蛛の糸を垂らす場面から始まります」は、実際の冒頭の展開を正確に表していません。"
+  },
+  "response": {
+    "id": "resp_06ba9f6574e4a4c2006ad43f81bbb087d0916edcca759b49c0",
+    "access_programs": null,
+    "created_at": 1792294786.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_06ba9f6574e4a4c2006ad43f831d7487d0b2d12bf7c86e7033",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D-K67O4KZunzTr7m7ddsSStEDdU9oIs3qPAob0hwptUszXwKEprZgwozTWp7Wv6moUkCy1pC1YnYr-0h5obfeP0e0XImFXrqefkntpWswnUW7K3FAuqjcYUSI55t3EFVJPBQo-cgd7SCXosaaViLm3LvXiQkazp2C4X8x7kbfom-QSbUwzGD29VmIl_qa7xMEGXfodogZQWTgZ7PUb6p1TnSC1ML8eR7FSOWYXEI3VZZAZOlVHMgTtOdL9kP_VVP0Hfrd3tC5u9sjZJjKz0oj-rdRX0IOFEYrFs2Kicxp2vzi6qWKktal0Dnwb1-bErMIEB-aZfUcmP7fIjCjP9Mz43Ea-fSRamLxNBgb4dDLqYFYre-nSOUSpKLbW7khibSm17my1Pjbs480tup3-CMTctiLg_21K5O5glsF6i1iuIKIf4n-45Jltmypvatfn9lyXTA4BCNVt8hZ1q2pIv-eR2i69GtNxUY4PuWCZqRZg5PbmOrUOJ8APjlyGs34NrAOtB3eJxeVstSJoWq3vzQcXUlANSgZ_JRbQQziaybbQTZLJODsJCw44y5DAwm81Vcfd4kPKtY-uf-ZLREDsxYv9o4h9UR-muIMFyOi9Kuq1MefW7EjOTCyZgexIcLQ4tdvUrNrxjg0LK-v-AQzHMzq4rEfeE6Kfw9RTJQtRI8MlhLkSm8TtiAwcUU86Xe_BGN5oH2Mh4XZtbguzZS_5ReNNrSfBvApLdmURAUKebgaTryLK2Zwy2r1K1z9Q4UxzBse-2rq4u_c91-22r-TM_FYHahk_Q8Ng_ozW-vQaQsKkI5lPIGnjKFjShPI2Gg0MCt4l2ISro27ozC2gYekxl7XevDmbbduIbjmWgb95sd4odUtsKodrMM8usi4TCc2kjchhVxVIoi4-Af8dwFwpVlWU60_XVDUT0TD7O8qbmbt5leZfWAIuFF9g9NMlX7FSCqQ6FyGvMo-n2q05myNkPUtennZUsV3Lxzm3_ykLy7KFonVZfirKFH_ylF5u3-JNtx1Fr2l1DKNVKTS0eCc-BkDwwocITavq_ohj83b9qFUu5Z7M3ISzTbDaxlbDfH03QvHJPqsKT8omEXiMZ-kOujqUET847fjmgjLoEE3Dr9jhe9FBrm1celiXQNjfefbaGazw2Ii-p7b1FV7eWxF4FnmgrrKZmmscIa5ewVMHHkJ5OQbAgShvK5lnSRmfP0FtNIFVExRRl1t5i_qRWmJKl2g8exrhR1F6jtcc4XGjmv1Cg85jXbiVjqU3tUquBFh_kKFXE2QChQ7h-jAOIBy9kKr6ZR61OxeLigwjF3GXNnb4Mz-gK5oTEzFlGcKsiqRzeJmRHM2yhIZwGrYfJAPpn3TJ3EhTSMmAhhJ9xbGUBQtzigSsOW8t6X0setRI3yFu6FtFKRjP54gFHgWrkmuGIG7vTx-Byltnicwt0wWJBrlsRBS9vhkP0duBj4eVtOx6jt4NogVeJ3PdtCQ45gWJfaOD48qq5-W_e0O3kITfgZ5cMd4XqgUZP0cYtG759KiO50f3xz-nvROxBiivQfoFMjU00Jhs4R87E-Ams6uos3LaMFUHaGXgK_FGKHsF3_0cupgcT5rfv6M2xowTvgOXkMD_zBwkmyXL0RPtictudd_vdMFjcliJ-s6tfeNU1DP_PVPpIi8ub9F3IjF4azfqLRz81Ph7jMRvbHEJg0A9-zz3BI9SWdzyWklZIhgRVt_yTh2xifCybo3RoVIrz-bE1U7oPsGEKBi7mBZ7oQumHAwZ2TB9HtJSoQQnGqjLJplV-A6hVzEDmZAqO0ko7LQDdNon0u7uO-wc48QzZk8N4pAi3I_6PhZJSlbdEZzWoRKKGvWf9gTlBavWIO3_IXLg3ly6mLghYW1tcLSkiw_ZuIs7F-pfDYgeCXSP0XH3MEp2q3o7CGgePCYfOPO6dxZS0oNqHPwSWkkUCUqX31s3KXX06-7qkGse2QlCaBT3Qeii1HiUISu_Y-yPY09CqsGMK7StXVA4n6vStwsgTlN2MybR559LubSDElBr95Ulrv7ulNUDl5s9Qf4ffvbYEF3bm-gpm8j10ijgDq9LXo8osL4zSrHA23kKaKWKTLmp2GDIxpZlFC3ts__MqpgbOGswJnFGiih3yc20_BhGKt6qfRbQyMAbLTLv6WRZz0WATcetJosVHbBDdIDvRWF8phKNRj8MQ5YY_bHkn4goj_zCOYvViE0PVO3EEcMNnJ9ADVQ-D4F6FbAbjzdgzPmkeSU-S3KmpCAcClRwFKlAK2kYwzuPY6ArzJ3wEqArPVuxdhRKDXGRDmxYLIOjaJyJFA9QwvFyE9E-sj2ikDpkudDJO5i8za8JvNGVJEp2EuHiKq08uqP_z8PfK-DuAIz3x2pHON3FAY3UuTxB3uY_kNN3CQzpKXiNbsm__WLzDCBa1UIRbG1KuoXEKvVXzsYtpC4XkRiasl3b3Le-F3uh9Qd_grYB1YdkExDiMPY7nNZiVCkNAbwiaPv3CBLNqWeJ_42x4L87QYnvd4r2nTgc5Ysba8ovOhrcvG5sTUnG09l0vF1W70yX8MHtxPJ_e-LfLaPN0o_FquczANP0KwG28MjME_PsPM_WP53exuq2wsw7UC-_FKhK9O_IEVhq38xtNLl_bJj1R_tRFNg2xnVZdDEM27UplJ4DecdGeojt7vdP5XwCGnl29hZmpBXT6P4wQCkB1C0_Hjd8cO5zlKyY_cJufpfUbhNss_oygS-7lkhIWwT2YrrGWFaeTMdamP1hhL1d-lwWhFMGmi8JArreAuJOksZdU6a0H7xdhD8JMh80U4LaJ2DbsSB1OfS-8Q4XBFgjG8jorgbeuhqsPboSga_pQSTgR9y5A2MTc-ZFfunSUBI0DLJCTbykzAeCHXnM5q-wKQJb79_CshoqUxLOufOfcICsXcfg=",
+        "status": null
+      },
+      {
+        "id": "msg_06ba9f6574e4a4c2006ad43f8701d487d0a321862c657c25d8",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\"winner\":\"2\",\"reason\":\"回答2は、蜘蛛を助けた善行、釈迦による救済の機会、犍陀多の独占的な叫びと転落、釈迦の悲しみという主要な展開を正確に押さえ、200字程度という指定にもおおむね沿っています。日本語も自然です。回答1も筋は捉えていますが、指定より長く、末尾の「真の救済に必要な慈悲の心」など、原文の要約を超える解釈が加わっています。また、「蜘蛛の糸を垂らす場面から始まります」は、実際の冒頭の展開を正確に表していません。\"}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294794.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "winner": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "winner",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 3123,
+      "input_tokens_details": {
+        "cache_write_tokens": 3120,
+        "cached_tokens": 0
+      },
+      "output_tokens": 316,
+      "output_tokens_details": {
+        "reasoning_tokens": 133
+      },
+      "total_tokens": 3439
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "R02",
+  "category": "書き直し",
+  "answer1_model": "opus",
+  "answer2_model": "sarashina",
+  "requested_at": "2026-10-18T03:33:30.981807+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n前条の異議は、借地権設定者及び借地権者（転借地権者を含む。以下この条において同じ。）が土地の使用を必要とする事情のほか、借地に関する従前の経過及び土地の利用状況並びに借地権設定者が土地の明渡しの条件として又は土地の明渡しと引換えに借地権者に対して財産上の給付をする旨の申出をした場合におけるその申出を考慮して、正当の事由があると認められる場合でなければ、述べることができない。\n\n【回答 1】\n## 書き直した文章\n\n地主は、土地の貸し借りの契約更新に反対（異議）するには、**「正当な理由」が必要**です。正当な理由がなければ、更新に反対することはできません。\n\n正当な理由があるかどうかは、次の点を総合的に考えて判断されます。\n\n1. **地主と借りている人のそれぞれが、どのくらいその土地を使う必要があるか**\n   （「借りている人」には、借りた人からさらに又借りしている人も含みます）\n2. **これまでの貸し借りの経緯**\n3. **土地が現在どのように使われているか**\n4. **地主が、土地を返してもらう条件として、または返してもらうのと引き換えに、お金など（いわゆる立退料）を支払うと申し出ているかどうか**（申し出ている場合は、その内容）\n\n---\n\n### 補足\n\n- **「前条の異議」とは**：この文章は借地借家法第6条で、その前の第5条を受けています。第5条では、契約期間が終わるときに借りている人が更新を求めた場合や、期間が終わった後も土地を使い続けている場合、地主がすぐに反対しなければ契約は更新されたものとみなす、と定めています。ここでいう「異議」とは、このときの**地主による更新への反対**のことです。\n- **立退料の位置づけ**：立退料はあくまで判断材料の一つです。お金を払えば必ず正当な理由が認められるわけではなく、1〜3の事情と合わせて考慮されます。\n\n【回答 2】\nもちろんです。以下に、ご提示いただいた文章を、専門知識のない方でも一度読んで理解できるように、意味を保ちつつやさしく言い換えたものを示します。\n\n---\n\n土地を貸している人や借りている人（また、その土地をさらに借りている人も含む）が「土地の使い方を変えたい」といった理由で反対する場合、単に自分たちの都合だけではなく、次のような点を総合的に考えて、本当にやむを得ない理由（正当な理由）があると認められなければ、その反対はできません。  \nたとえば、  \n- 当事者双方が土地をどう使う必要があるのか、  \n- これまでの土地の貸し借りの経緯や、現在の土地の使い方、  \n- そして、土地を返してもらう代わりに、貸している人が何らかの補償（お金など）を支払うと提案しているかどうか  \nといった事情が考慮されます。\n\n---\n\nこのようにすることで、法律用語をできるだけ避け、具体的な状況を想像しやすい表現にしています。必要に応じてさらに調整いたします。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。異議には正当な理由が必要であること、双方の土地使用の必要性、従前の経過、利用状況、財産上の給付の申出を考慮することが保たれています。転借地権者を含むことや、給付が明渡しの条件または引換えとして申し出られることも明示されています。"
+    },
+    "answer2": {
+      "meaning_preserved": false,
+      "issues": "原文の「前条の異議」は土地を貸している側による更新への異議ですが、回答では「土地を貸している人や借りている人……が……反対する」となり、借り手や転借人も異議を述べる主体に変わっています。また、原文にない「土地の使い方を変えたい」という反対理由を持ち込み、何に対する異議かも不明確になっています。「正当の事由」を「本当にやむを得ない理由」とする表現は、避けられない事情まで必要であるかのように要件を強めています。財産上の給付についても、「明渡しの条件として又は明渡しと引換えに」のうち、条件としての申出が明示されていません。"
+    },
+    "readability_better": "1",
+    "readability_reason": "回答1は、最初に「誰が何に反対するのか」と結論を示し、その後に判断材料を分けて説明しているため、話の筋を追いやすくなっています。回答2は冒頭の一文に主体、反対理由、判断方法、結論が詰め込まれ、「反対」の対象も示されないため、一度で理解するには回答1のほうが読みやすいです。"
+  },
+  "response": {
+    "id": "resp_0c559cef7b5d71f5006ad43e0b224487d090515d24285c4efd",
+    "access_programs": null,
+    "created_at": 1792294411.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0c559cef7b5d71f5006ad43e0c251c87d09dd821dc496d5045",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D4YGxQDCNO5y5g1hBzyoPBgAgDTp5iO74MXPD2ADt_fYXteGfqdh8RYSbo9afi83fRdiESbcIT8vaj5iWLutOYW6FPzaA92gWAp4yiC_iFZXgD33vu1eElQTUgDbxToeky_RL0yCPA3hPrKPQgG1lNXO0xV3GDCg2cQyRT78ZmBYGb_Sk_ePKAJYqtNeOR6uYrsCsqx6MilC1p6Rnh_IfGilCsXbhOULw-cdombMzLhyAYVwXX953rqOkVPiF9WQ1Xf-yA93xaG2Zsfuwdt7WUqkmoSGsm3gB022oAh1pKuTRof0hbmcC3JHnaNCAp_m22gWcZJOVSzAS66qT_rHuRU81YPBeDH34s7LLO19o_SSraOKds3ZGZIO9pgcL5H-Yh1d0QU75lQ7GVf2YWdu_CFK5765_KRCqsPFQu1v6qh45bT28SjJmybQdIg4ARADeZA3-sifjufuNlprPzzVHYNrTistUehzwkdarJQi8ULPBoT17HC4Ls9qQQ8yGBPIb5ueRk6zsMY_gu5Zt-Nuvw9G3GJ4CPB3tQ4tm4Nmk6DpxgM88kRc7RATCUraY4O2zNqZ8J9FxyCDazSNF7rJfQpPg_BwPXav66OTxjADqvxrjnD1tczxhGZV4giUqo_OaJJY7H4EnOcxrU0yh_HZWCuPyNjtITaBED1azysIMXhUD-MuKFyU5E86nFVJRc-kSDCp2Lm8FmZoRgsAoIKnrxNIa8v4gy-TlXcv-KSrdaafnkuhIoISbVUhp42nrYENL_NWj2DbzVA4dRGKgEeyrk4LzTPjJ14sT5-ZtSiamCSnRAeB_fm9LtsHVy7TJwYSyDkk-TG_8jIN2y5VFdDtvRAlAxtxEAuUAKevuu-FtZKiUckft3DSsbEHgRZRNYnYr7Ncp8-YUAi-SkHk-U1gKuAg-Xo8P8E-qfXEJDZ1h4wonnMHvXnof6eITZtv9yf-P6kAuXP7PHyxIUY88M4li5MFPcFyab65Rso8MUklgRCuvCvq5Aux3W1ylGEhxRKUqKZbFptX2iynakNrzxrEQJOuJeTlaABR1szWxb7GkIHGy25BsSnTKWGsinA9MvCoP2nhfd0HRXUCERJK80uPK_InWOIUJtZPn_NSVuz9mnAODacnF8rdfKw1ryAAq9Si46YeBUZeuDZug0y7mmXmyWMdItVJOXfHhbBxH4ZyGFScS4XZFH8t2uVZRZxIZPQDawzhSpQ1l12_2yn9o2DNOuYSs1rG27kQtxtXEitQcZS95ITxv47pbTtl8Hr5NH13brz9W54DEI7mPdrntifnEzXaw-Zwxq4am_DXZEZOpoxtUejbqjBAOd0oWmIg0RL1oZLHSWO-sKEGsq8N03N7-rFFor_Q0l_BDAbzH3kB8PNLGlJJzZETJ75E7_uT1ySbWd9ca7vZm2GhrDD07MrerlkSqlAZmUY3_0xmZ6Rw92M9wqqFrJs1wBmar8t-vYpoN1fi2NyhhtvJwbWCcMJImSrwmFLpRaYbwf_vft9fLoFa8jCBk324Ho97OdE_1k4jeFVEer0X0vQwZJGeZ5IBiHhCIEs4lxHBj1f9mXmvp8qeZ8cBNkYeTxMIBliXGiTpSQ6QqJTGX7Mk9_0OxnsPSa6WCPSMDcdnSO8vA8RNNwaU9nsECxkEwTyO_riyLHDDfS7OQ74LczpAZG9iDT3Y79cWcwv-4UNUt1sx42KuqN0saujkqQSMewC5JrYS7O5WFi42p2Jx9w7wPzEbLbGU3kPvd1_SDsWeMBrXXdgEjsx_XKw6yNszzJJmaVYsTgMN3NTafBVeE2-j5NkjoJ4Nvc0vu7uX5hy5NmvANn2QvNPicvBf-31I_XG7mnIQDFZF56jl0WpA3Gc6D0VR9rybOCqk-M50VH7j_xgSdHSgNWaqYNw4dpe-5wumGJCh2v0ZG5ZJuosRfgb7fF-R6_aGdcna0k1KJQ4M4vty-tpoBC-h7C-F6224BFY4Wl02Bt_zTQvswKEHoOWvUNLl2xnRPIAf6sEYWYV4SkzxhTA9ByX9g1u1VyY8uF2o27ZWkOrH4QTmyfsv-lnqQap2Ajj62BmZyq6kWM_zH0R-0whC7Pz8A-w3Q6aLnhanH9se-SpqIs6R24v2lPtrJbsMTuio8elDDJ9nfGUlX7n1AdCWxVFp7tqwXESYcb3b6m-VbDpYN5C6N3phD873CMC6hjnRMueVAWaaENsmQ3lOQYVoE4HQcYjR9NFARWrBr2-QLjinmGqihSGvq0_zulCdyigkcFzM69ZrLPdU8IOvj5Oi1scN43NWzwEDE70LO8WIsmMuN221cU2yOIeKHgsKV68YIn_4oACUPS_iGCkc8CDd29x1IM=",
+        "status": null
+      },
+      {
+        "id": "msg_0c559cef7b5d71f5006ad43e0ed79c87d09bad69f0512ddef2",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。異議には正当な理由が必要であること、双方の土地使用の必要性、従前の経過、利用状況、財産上の給付の申出を考慮することが保たれています。転借地権者を含むことや、給付が明渡しの条件または引換えとして申し出られることも明示されています。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文の「前条の異議」は土地を貸している側による更新への異議ですが、回答では「土地を貸している人や借りている人……が……反対する」となり、借り手や転借人も異議を述べる主体に変わっています。また、原文にない「土地の使い方を変えたい」という反対理由を持ち込み、何に対する異議かも不明確になっています。「正当の事由」を「本当にやむを得ない理由」とする表現は、避けられない事情まで必要であるかのように要件を強めています。財産上の給付についても、「明渡しの条件として又は明渡しと引換えに」のうち、条件としての申出が明示されていません。\"\n  },\n  \"readability_better\": \"1\",\n  \"readability_reason\": \"回答1は、最初に「誰が何に反対するのか」と結論を示し、その後に判断材料を分けて説明しているため、話の筋を追いやすくなっています。回答2は冒頭の一文に主体、反対理由、判断方法、結論が詰め込まれ、「反対」の対象も示されないため、一度で理解するには回答1のほうが読みやすいです。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294424.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1441,
+      "input_tokens_details": {
+        "cache_write_tokens": 1438,
+        "cached_tokens": 0
+      },
+      "output_tokens": 538,
+      "output_tokens_details": {
+        "reasoning_tokens": 68
+      },
+      "total_tokens": 1979
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

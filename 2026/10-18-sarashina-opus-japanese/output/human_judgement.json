@@ -1,0 +1,60 @@
+{
+  "R01": {
+    "line": "aがよみやすい。ただしいみのただしさはしょうじきわからない（元の文章が複雑すぎて判定する気になれない）",
+    "readable": "A",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "not_blind",
+    "reason": "判定の前に、AI からの途中報告で Sarashina の書き直しの特徴（2 つの条件を別々の禁止として書いた）を本人が聞いていたため盲検ではない。参考として別に載せる"
+  },
+  "R02": {
+    "line": "bがよみやすい。ただし意味の判定はできない",
+    "readable": "B",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind"
+  },
+  "R03": {
+    "line": "aがよみやすい。これいぜんもこれいこうも、意味の正しさの判定はできない",
+    "readable": "A",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind"
+  },
+  "R04": {
+    "line": "bがよみやすい",
+    "readable": "B",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind"
+  },
+  "R05": {
+    "line": "bがよみやすい",
+    "readable": "B",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind"
+  },
+  "R06": {
+    "line": "",
+    "status": "excluded",
+    "reason": "判定なし（対象外にした）"
+  },
+  "R07": {
+    "line": "",
+    "status": "excluded",
+    "reason": "判定なし（対象外にした）"
+  },
+  "R08": {
+    "line": "",
+    "status": "excluded",
+    "reason": "判定なし（対象外にした）"
+  },
+  "R09": {
+    "line": "どっちもよみにくいなぁ。整理されてるのはBかな",
+    "readable": "B",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind"
+  },
+  "R10": {
+    "line": "Aがいいなぁ。わかりやすい",
+    "readable": "A",
+    "readable_read_by": "Claude（判定の文面から読み取り）",
+    "status": "blind"
+  }
+}

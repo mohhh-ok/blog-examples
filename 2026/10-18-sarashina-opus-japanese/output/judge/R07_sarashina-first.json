@@ -1,0 +1,187 @@
+{
+  "id": "R07",
+  "category": "書き直し",
+  "answer1_model": "sarashina",
+  "answer2_model": "opus",
+  "requested_at": "2026-10-18T03:35:54.917197+00:00",
+  "judge_model": "gpt-6.1-sol",
+  "prompt": "あなたは日本語の文章の審査員です。以下は、【タスク】に示した文章の書き直しに対する 2 つの回答です。回答がどのモデルのものかは伏せてあります。\n\n次の順に判定してください。\n\n1. 回答 1・回答 2 のそれぞれについて、元の文章の意味が変わっていないか、元の文章にある情報（条件・例外・期限・主体・数値・否定の向きなど）が落ちていないかを判定してください。\n   - 意味が変わっている、または重要な情報が落ちている場合は meaning_preserved を false にし、元の文章のどこがどう変わったかを issues に具体的に書いてください。\n   - 二重否定や例外の書き方を読み違えて、意味を逆にしたり強めたりしていないかを特に確かめてください。\n   - 書き直しで補った説明は、元の意味と矛盾しない限り問題にしません。\n2. 次に、2 つの回答の読みやすさ（専門知識のない人が一度読んで分かるか、文の長さ、構成、日本語として自然か）を比べ、読みやすいほうを readability_better に \"1\" か \"2\" で、差がなければ \"tie\" で書いてください。この比較では意味の正しさは考えず、読みやすさだけを見てください。\n\n回答の長さや、箇条書きなどの見た目の整え方だけで有利・不利にしないでください。\n\n【タスク】\n次の文章を、意味を変えずに、専門知識のない人が一度読んで分かる文章に書き直してください。\n\n---\n給水管更新工事に伴い、下記の日程において断水を実施いたしますが、当日は工事の進捗状況により断水時間が前後する可能性があるほか、断水終了後しばらくの間は濁り水が出ることがございますので、その場合は透明になるまで水を流していただくようお願いするとともに、断水中に蛇口を開けたまま外出されますと、再開時に漏水の原因となるおそれがありますので、蛇口が閉まっていることを必ずご確認のうえ外出していただくようお願いいたします。なお、日程は十一月十二日午前九時から午後三時までを予定しておりますが、雨天の場合は翌日に順延となり、順延の有無については当日午前七時までに掲示板にてお知らせいたします。\n\n【回答 1】\nもちろんです。以下のように、専門知識がなくても一度読んで内容が分かるように、やさしく自然な表現に書き直しました。\n\n---\n\nこのたび、水道管の交換工事を行うため、以下の日程で一時的に水が使えなくなります。  \n工事の進み具合によって、水が止まる時間が多少前後することがありますので、あらかじめご了承ください。  \nまた、工事が終わって水が使えるようになったあと、少しのあいだ水が濁る（にごる）ことがあります。その場合は、透明な水になるまでしばらく流しっぱなしにしていただければ大丈夫です。\n\nなお、水が止まっている間に蛇口を開けたまま外出されると、水が出たときに漏れてしまう恐れがあります。そのため、外出される際は必ずすべての蛇口が閉まっていることを確認していただけますようお願いします。\n\n工事の予定日は**11月12日（火）午前9時から午後3時まで**です。  \nもし当日が雨の場合は、工事を翌日に変更します。そのお知らせは、**当日の朝7時までに掲示板**でご案内しますので、ご確認ください。\n\nご不便をおかけしますが、どうぞよろしくお願いいたします。\n\n【回答 2】\n# 断水のお知らせ\n\n水道管を新しくする工事のため、水道が止まります(断水)。\n\n## 断水の日時\n\n**11月12日 午前9時〜午後3時(予定)**\n\n- 工事の進み具合によって、断水の始まりと終わりの時間が早まったり遅れたりすることがあります。\n- **雨の場合は、翌日に延期**します。\n- 延期するかどうかは、**当日の午前7時までに掲示板**でお知らせします。\n\n## お願い\n\n**1. 外出するときは、蛇口が閉まっていることを必ず確認してください**\n断水中に蛇口を開けたまま出かけると、水が再び出たときに水があふれる原因になることがあります。\n\n**2. 濁った水が出たら、透明になるまで流してください**\n断水が終わってからしばらくの間、濁った水が出ることがあります。\n",
+  "judgement": {
+    "answer1": {
+      "meaning_preserved": false,
+      "issues": "原文にない曜日「（火）」を追加しています。年が示されていないため、11月12日が火曜日とは断定できません。また、原文は順延する場合もしない場合も、その有無を当日午前7時までに知らせるとしていますが、回答では雨による変更の説明に続けて「そのお知らせ」としており、順延しない場合も告知するという情報が明確に保たれていません。"
+    },
+    "answer2": {
+      "meaning_preserved": true,
+      "issues": "重要な情報の欠落や意味の変更はありません。断水の予定日時、時間が前後する可能性、雨天時の翌日への延期、延期の有無の告知期限・場所、濁り水への対応、外出時の蛇口の確認が保たれています。"
+    },
+    "readability_better": "2",
+    "readability_reason": "回答2は「断水の日時」と利用者が行う対応を整理し、短い文で直接伝えています。「延期するかどうか」などの表現も明確です。回答1も平易ですが、前置きや「確認していただけますようお願いします」などの回りくどい表現があり、回答2のほうが一度で要点をつかみやすくなっています。"
+  },
+  "response": {
+    "id": "resp_0648444e82f1f462006ad43e9b132087d094fff4fb456ad126",
+    "access_programs": null,
+    "created_at": 1792294555.0,
+    "error": null,
+    "incomplete_details": null,
+    "instructions": null,
+    "metadata": {},
+    "model": "gpt-6.1-sol",
+    "object": "response",
+    "output": [
+      {
+        "id": "rs_0648444e82f1f462006ad43e9be2b487d083e90006746381a9",
+        "summary": [],
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABq1D6knbdGOz0vCsfmRZo1edw7LvGL_Z_jSjjCrtYPBz2cuc6bCmwdAQnSEZI_htHOYzNvy4pLTWTPrh3HNW8T0nMHxiICJ2GocKtxECLeYkd5Jt4w5N2j2yvYvr_Dag49aqKxYY4O_MGoED2x9StZVKpNov4G1oe0gk4vBkNjiGx75GJkQ5Cg44bOaCqfkgmAx_anu8MxIX-yoBqYVe9FhkPAiJMTaJUjH16zkxWtyu2JzypiB_u2MLW3Aeg-6q5YrizP-3jrgGNLbyGUU4uPjDclul4ow7-QmTgY_HsnidlSUsXPEf1mLP8UvbE_gEfi1hq73VOIRCbv_lP6-r6GU95uQ7szn2D8HN_HkzcP_BfzOrGyw_SegJ6LCL0N0Hk139k9ZWlyfWjCHzFoZgoRms4VTvwcPlnaNfAVJ8gOWo0EKYkrnlxHBNKuu0jQWm0cXRmN_XOuOwYmMu5Uj_jiXMB7_pB7W8kBUMWFJviDmVVoJtib9q0GlOjYSRwkj2aWYOcw9FvPnGpJHqBJmD2lON0Fy8mseTP2_mLhQqifpyiKl-cT7bxzYmHlf4YAInEtmUH0YH-PVQjf-AMFEN2n-_FQxTi6ZaLvDakys3PVNHXcQYDorWwVqratBpnfmblK-w0IfywUPIz9FQGCcKlUuLQ3LkzEv3n9LXLMKvZlMtIORhF_SVdaV-06sO4UZDdVKr33FmdCa0pBBE86SiJG6Vv6TKMnBqLJTMcu1ed3B-0KILmtStNwtEfpPFGkEOjU4_4wOyhSO7eWccTwi1051FdlDZoPuN-LNldN4hRBefe5Ur9eSbLhjQcqQMLsiIiEQ4c-mMHYKrQIYd4Pnhuwhh0T8AgJuvxjM7ztbBkhIAnoqDk9qKXrwQqktdRONx3aL1s34U2KSaXU4c80uC4Jrav-qaNMdfcH9VDUPxcMNwom3Me9FiRQXfLOvngYb1mjcUewHVis21lspoG6Eu0ZPRpz_ZAZHjxaGz51rr7b73yn_ogC5oIZelWzFmGixx7giZVsGJzUEWEMGtvJSnggiYcEGyaPrAkyn4wy7MaXrzs-uJHx_FGUdKGJ4_UZMH6qTDjhE4EuiAdoWAhjO1DQcBP9Z54fuUD0Uecl26SaGMCsM0DC8DTLC1PTFbXvvFR86Ij4Nw9DpI-BBBjqpzGFsDZWdWxQTYOBa1BvedWf8GeOjdbVTkNRfOX9AsoUdBeSO9ofBRgPspW2ePUMvgUOOdsT1QofJskHGwQwNAgABTnkWGq7dCuSJ7ECePRuULVehIftspBVMJ7VoyqsKLgMBY8OPtvnDUZLhtYsOBJWQmLaYAktqE521ER0Ko82aTePux5zPm0bgguq_7UEvHOnsEQCgew1ILJ9Hs1dgjn4_2BfkY3hEV0-snpDbhDE3JcDHDat0gWB7RBwL3J2oI1WHlEOgWw2gkW1tuT7zoN1j6w2-ofaxHuN3PPCE0Fz4NP1lrO3DnX8EIvhRdU6IEKIarxQQEgeD7ZBJYwWA0Vxjo6tpHkk0TUJCno8SLsN561UQLVsco4e5ugzjIKn77stXhhKep1V2a42C63DirDhT5BUQEF0Y9oicl4j1vHuOw6A2whWXrTbnsCP8n3GOVSzk4sgechISQc4FW6kPywTnuRMHofnicKKgoozzXXfYytijN0HJ4E0T1atJ3cHKmYbNBuVtJ3Rus7aGzyNK4DDZf80RKOJnNW1JIaLRRCRZf7Epl6yYZ6ph31uTmIRW6QfSlpSvJlwlTdB1cmaqXImXq0sNFBkkkKED6zZPL5dhDZwrW7frB1CxS0dTefi_PZb0ECk43ido0-KBHrSMp8vyw-vdCRDvtTH8r3-LqVwsSxAPalyRveykaOZPNIkRkCYirveHObRF9Gtev3j5Otf_nBvNwB3Y_wBOYGFcparSEUF_QmYcW2F3BSE0X-hB0ciE-NcBs03QC4Ctpj0OKjpQr-OByIeQi-jaYAR6sF5XAfmQBH8Hj8GBA9fQWdR9ScpTyJvQrDTOIPsYgPPN3s-Ia2Xi_H_UWUh1-J1R7t7jvKCym-i9lnPAePHN8MWT_FGFe-5YidC-n5ENFdvxLZ42TG2aQd6V1MYTB6knGvFs1B4czFicm6txp3TBXpgJ8XUqjbjCXPMp-kRcQdu0rlVOo_V_QrYVXynhpP562GHQZA4i1cRHUFt0-sQasA09viWvW_TKxO_xJU0dNmkH1AP0HJnzparwd5684cxJEPA7dnZFcbb4Y0wQ0z4oyLq4HjXSjEvfi8Hz1tTyTJDCjM8Ainse1VOgop-pbGo2pZuNud_EEwiWX5r5-UnsY-u0OYNlsciR5RkenJZPMVcgh8LQGSRrYj_xGbZm76puNYF7qkadaAT_QocWNzGxcRsSZq4Ec31BeebBL05R_L4nFyOielOesKxm4vsZfGC3Zcerd_mfHJdQpN5fc9AZwVZ5n1i1INFwJZyi2By7d8wkFoIrUxJNNbXahFyLOK36-tNZtIL7wz1XOroBppHFOwsmenACLq5W8qMU9g540j9SkexKSMiytc=",
+        "status": null
+      },
+      {
+        "id": "msg_0648444e82f1f462006ad43e9dcaec87d09121cb450819d518",
+        "content": [
+          {
+            "annotations": [],
+            "text": "{\n  \"answer1\": {\n    \"meaning_preserved\": false,\n    \"issues\": \"原文にない曜日「（火）」を追加しています。年が示されていないため、11月12日が火曜日とは断定できません。また、原文は順延する場合もしない場合も、その有無を当日午前7時までに知らせるとしていますが、回答では雨による変更の説明に続けて「そのお知らせ」としており、順延しない場合も告知するという情報が明確に保たれていません。\"\n  },\n  \"answer2\": {\n    \"meaning_preserved\": true,\n    \"issues\": \"重要な情報の欠落や意味の変更はありません。断水の予定日時、時間が前後する可能性、雨天時の翌日への延期、延期の有無の告知期限・場所、濁り水への対応、外出時の蛇口の確認が保たれています。\"\n  },\n  \"readability_better\": \"2\",\n  \"readability_reason\": \"回答2は「断水の日時」と利用者が行う対応を整理し、短い文で直接伝えています。「延期するかどうか」などの表現も明確です。回答1も平易ですが、前置きや「確認していただけますようお願いします」などの回りくどい表現があり、回答2のほうが一度で要点をつかみやすくなっています。\"\n}",
+            "type": "output_text",
+            "logprobs": []
+          }
+        ],
+        "role": "assistant",
+        "status": "completed",
+        "type": "message",
+        "phase": "final_answer"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "temperature": 1.0,
+    "tool_choice": "auto",
+    "tools": [],
+    "top_p": 0.98,
+    "background": false,
+    "completed_at": 1792294563.0,
+    "conversation": null,
+    "max_output_tokens": null,
+    "max_tool_calls": null,
+    "moderation": null,
+    "previous_response_id": null,
+    "prompt": null,
+    "prompt_cache_diagnostics": null,
+    "prompt_cache_key": null,
+    "prompt_cache_options": null,
+    "prompt_cache_retention": "24h",
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "medium",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "text": {
+      "format": {
+        "name": "judgement",
+        "schema_": {
+          "type": "object",
+          "properties": {
+            "answer1": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "answer2": {
+              "type": "object",
+              "properties": {
+                "meaning_preserved": {
+                  "type": "boolean"
+                },
+                "issues": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "meaning_preserved",
+                "issues"
+              ],
+              "additionalProperties": false
+            },
+            "readability_better": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "tie"
+              ]
+            },
+            "readability_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "answer1",
+            "answer2",
+            "readability_better",
+            "readability_reason"
+          ],
+          "additionalProperties": false
+        },
+        "type": "json_schema",
+        "description": null,
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "top_logprobs": 0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1299,
+      "input_tokens_details": {
+        "cache_write_tokens": 1296,
+        "cached_tokens": 0
+      },
+      "output_tokens": 429,
+      "output_tokens_details": {
+        "reasoning_tokens": 84
+      },
+      "total_tokens": 1728
+    },
+    "user": null,
+    "billing": {
+      "payer": "developer"
+    },
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "store": true,
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "model_key": "sarashina",
+  "id": "Y03",
+  "requested_at": "2026-10-18T03:29:41.734126+00:00",
+  "request": {
+    "model": "sarashina3-mini",
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文の【】内の語の読みを、ひらがなだけで答えてください。答え以外は書かないでください。\n\n資金が集まらず、計画は【頓挫】した。"
+      }
+    ],
+    "max_completion_tokens": 8000
+  },
+  "response": {
+    "id": "chatcmpl-8b9624a8e0c1e9b6",
+    "object": "chat.completion",
+    "created": 1792294181,
+    "model": "sarashina3-mini",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "とんざ"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 36,
+      "total_tokens": 39,
+      "completion_tokens": 3,
+      "prompt_tokens_details": null
+    }
+  }
+}

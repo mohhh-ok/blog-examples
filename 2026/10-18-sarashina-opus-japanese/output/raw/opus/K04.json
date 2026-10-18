@@ -1,0 +1,56 @@
+{
+  "model_key": "opus",
+  "id": "K04",
+  "requested_at": "2026-10-18T03:26:40.495011+00:00",
+  "request": {
+    "model": "claude-opus-5-5",
+    "max_tokens": 8000,
+    "output_config": {
+      "effort": "low"
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "次の文を、大学時代の恩師に送る手紙の文面に書き換えてください。\n\n---\n先生、この前は推薦状書いてくれてほんとにありがとう！おかげで第一志望の会社に受かったよ。4月から働くけど、落ち着いたらまたゼミのみんなで会いに行くね。先生も体に気をつけてね。"
+      }
+    ]
+  },
+  "response": {
+    "model": "claude-opus-5-5",
+    "id": "msg_011Cg8zPoYahagxeF1rhJPfC",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "",
+        "signature": "CAQSqAYKEAgSGAI4AUIIdGhpbmtpbmcSDHjdCWKIrGHR1hucLxoM2twRB87FpQiAYRcMIjAaV9gi1LF/U24Z+R9XfRjiQZ4pSVnEC4Ry9pQZy2c1Nrf+SaglbEuP3SWnY7w/hqIqxQUqpwIbEwJ/0Fws8kjBV1PpxiLgIB+Y5iSF5lEFnlLT3dMCWHpGKrQwUcDKF0M4P9Y6znRaXxjdR4znvtLnS6eI7nHHSotMWlTsTCvjrgPyWV6EX838QB8gvysd3PuTL/4nO0bY8lDeFuw6jJEG/4mka0QTBztKSI5wjUnrVvlQCbrSJ7M252bBeByEXSOfFiq1Pd189lTTnaaVblxns/bl822X6SN8+O2oDY8HDuD40fd+VKWoWRRTsoqcFNdNIleuyYbk4XvpzU34bDzbWqgC0XcRnFj1UJPsk71a69sD4JQU6QWG5wIgFCLSYQk6ZYCbSBPMrFKGOZYXWTx6PW7GOJ4zSoILUxwWmiWTzx+o4se30fYfhoms+xGepjofJC54yZabE5MufTafiorK95t34UR0aIZ0SSmkwbJgVyqSRR0GbThwKAptwyDM7q8MZkhYEUXXTHKOMbpwZ3KZeu6+hrI5tLeCVulazs4dhNc/JocM6/++/Y5SyyfrQALab+Ko/Xq3QRukfZC6a05X4fbunXqcCPozvf6a/SnZQM9nrWpO0VXRCMDJHacYJZLXa4IuOaJCCRqrEyvif4XH0bxHMHNPjte9P8zc3UK468TOMkQhww1Ktke7lcUmNuEwPylOX0dqsVxEIe79sej3PQkhAtj82KuL0wEoLKnNoOP6ZhivDOtNwnCGk1oAxKh+CDT7uiOHkQYE38F38dbaGoJ4TiogWFdNHWi5o7Wbj6LEDv0+ztNzOWYbqRMBU706hC70vondXMvCk+ndXMDRzi52az1bbN2dDxjzUArwQvBgkfr0+638eMSHbRa+Rdi47ofIzQv8s1Ciy6n3jA8tKiQRJUrnrpPqfnfuyhZp345x2NkxwhDMGWS73OV9IdrIAbK3YHdc991zgYGyR/QXxmL6b78BYLWHjVUhdnLoBFWBYgzCEdkjGAE="
+      },
+      {
+        "type": "text",
+        "text": "# 恩師への手紙(書き換え例)\n\n---\n\n拝啓\n\n春暖の候、先生におかれましてはますますご清祥のこととお喜び申し上げます。\n\nさて、先日はご多忙の折にもかかわらず、推薦状をご執筆いただき、誠にありがとうございました。おかげさまで、このたび第一志望の株式会社〇〇より内定をいただくことができました。これもひとえに、在学中から温かくご指導くださった先生のおかげと、心より感謝申し上げます。\n\n四月からは社会人として新たな一歩を踏み出します。先生から学んだことを糧に、精一杯励んでまいる所存です。\n\n仕事が落ち着きましたら、ゼミの皆とともに改めてご挨拶に伺いたいと存じます。その折には、どうぞよろしくお願いいたします。\n\n末筆ながら、季節の変わり目でございますので、くれぐれもご自愛ください。\n\n敬具\n\n令和〇年〇月〇日\n\n〇〇 〇〇(自分の氏名)\n\n〇〇 〇〇 先生\n\n---\n\n### 書き換えのポイント\n- **頭語と結語**:「拝啓」で始めて「敬具」で締めると、正式な手紙の形になります。\n- **時候の挨拶**:送る時期に合わせて変えてください(例:1月「厳寒の候」、2月「余寒の候」、3月「早春の候」、4月「春暖の候」)。\n- **敬語表現**:\n  - 「書いてくれて」→「ご執筆いただき」\n  - 「受かった」→「内定をいただく」\n  - 「会いに行く」→「ご挨拶に伺う」\n  - 「体に気をつけて」→「ご自愛ください」\n- **感謝の気持ちの補足**:合格を先生の指導のおかげとする一文を加えると、より気持ちが伝わります。\n- 「〇〇」の部分は、会社名・日付・氏名に置き換えてください。"
+      }
+    ],
+    "container": null,
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 128,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 747,
+      "output_tokens_details": {
+        "thinking_tokens": 79
+      },
+      "service_tier": "standard",
+      "inference_geo": "global",
+      "speed": "standard"
+    },
+    "diagnostics": null
+  }
+}
