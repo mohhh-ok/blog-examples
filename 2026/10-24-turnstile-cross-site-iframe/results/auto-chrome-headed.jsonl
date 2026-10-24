@@ -1,0 +1,4 @@
+{"browser":"chromium-chrome-headed","case":"Y_direct","url":"https://widget.example.com:4719/direct.html","gotToken":false,"tokenLen":null,"clicked":true,"error":"600010","messageOrigin":null,"siteverify":null}
+{"browser":"chromium-chrome-headed","case":"X_iframe_Y","url":"http://lvh.me:4718/embed.html","gotToken":false,"tokenLen":null,"clicked":true,"error":"600010","messageOrigin":"https://widget.example.com:4719","siteverify":null}
+{"browser":"chromium-chrome-headed","case":"X_direct_lvh","url":"http://lvh.me:4718/direct.html","gotToken":false,"tokenLen":null,"clicked":false,"error":"110200","messageOrigin":null,"siteverify":null}
+{"browser":"chromium-chrome-headed","case":"X_direct_localhost","url":"http://localhost:4718/direct.html","gotToken":false,"tokenLen":null,"clicked":false,"error":"110200","messageOrigin":null,"siteverify":null}

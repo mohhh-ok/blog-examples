@@ -1,0 +1,8 @@
+{
+  "name": "turnstile-cross-site-iframe",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "playwright": "1.59.1"
+  }
+}

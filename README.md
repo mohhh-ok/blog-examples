@@ -17,6 +17,7 @@
 - [2026/10-09-capacitor-ios-web-audio](./2026/10-09-capacitor-ios-web-audio/) — Capacitor の iOS アプリで、同梱の mp3 の fetch が status 0 になる件と、画面ロックから戻ると AudioContext が running のまま時計だけ止まる件の診断ページと修正例
 - [2026/10-18-sarashina-opus-japanese](./2026/10-18-sarashina-opus-japanese/) — Sarashina3 mini と Claude Opus 5.5 に同じ日本語の問題 40 問（書き直し・敬語・自由作文・要約・ニュアンス・漢字の読み）を出し、GPT の一対比較（左右入替 2 回）と本人の盲検で判定
 - [2026/10-21-stt-realtime-japanese](./2026/10-21-stt-realtime-japanese/) — FLEURS の日本語 40 本を ElevenLabs Scribe v2 Realtime と Soniox stt-rt-v5（max_endpoint_delay_ms 500 / 2000）に実時間で流し、文字誤り率・文の途中での区切れ・話し終わりから確定までの時間を比較
+- [2026/10-24-turnstile-cross-site-iframe](./2026/10-24-turnstile-cross-site-iframe/) — 他社サイト（lvh.me）に置いた自前ドメインの iframe の中で Cloudflare Turnstile を描画し、Chrome 156・Safari 27 で token の取得と Siteverify の hostname（iframe 側になる）を確認。設置先に直接出すと 110200、Playwright で動かすと 600010
 
 ## Secret スキャン
 
