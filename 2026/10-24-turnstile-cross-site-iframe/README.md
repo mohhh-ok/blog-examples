@@ -10,7 +10,8 @@
 - `src/servers.ts`: Y (https) と X (http) のサーバー。届いた token ごとに Siteverify を投げ、jsonl に 1 行ずつ書く。token と secret は書かない
 - `src/manual.ts`: 手で押す版。普段使いのブラウザで 3 ページを開いて押す
 - `src/auto.ts`: Playwright 版。手元では token が取れなかった (600010)
-- `results/`: 2026-10-24 に流した結果。Y のホスト名は `widget.example.com` に置き換えてある
+- `src/protect.ts`: 対策の計測版。curl で Origin と `Sec-Fetch-Dest` を偽装して送り、Playwright の Chromium と WebKit で、登録サイトの中・登録外サイトの中・直接開く、の 3 通りに iframe のページが描画されるかを見る
+- `results/`: 2026-10-24 に流した結果。Y のホスト名は `widget.example.com` に置き換えてある。`protect-*.jsonl` が `src/protect.ts` の結果
 
 ## 必要なもの
 
@@ -40,6 +41,23 @@ TURNSTILE_SITE_KEY=... TURNSTILE_SECRET_KEY=... node src/auto.ts \
 3. `http://lvh.me:4718/direct.html`: X に直接 (対照)。押さずにエラー番号を見る
 
 ポートは `--widget-port` (既定 4719)・`--embed-port` (既定 4718) で変えられる。
+
+## 対策の計測 (`src/protect.ts`)
+
+```sh
+# secret は偽の token を Siteverify に送るのに使う。sitekey はテスト用 (1x000...) を中で使う
+TURNSTILE_SECRET_KEY=... node src/protect.ts \
+  --widget-host widget.example.com --cert <証明書.pem> --key <鍵.pem> \
+  --out /tmp/turnstile-iframe/protect.jsonl --browsers chromium,webkit
+```
+
+Y のサーバーは次のように振る舞う。
+
+- `GET /widget.html?key=site-a`: `Sec-Fetch-Dest` が `iframe` でなければ 403。`iframe` なら、`Content-Security-Policy: frame-ancestors <その key に登録したオリジン>` を付けて返す
+- `POST /session-origin-only`: `Origin` が key に登録したオリジンなら 200。public key と Origin だけを確かめる口
+- `POST /session`: `Origin` の確認に加えて、Turnstile の token を Siteverify に送り、`success` と `cdata` (= key) を確かめる
+
+登録サイトは `http://lvh.me:4718`、登録外サイトは `http://localhost:4718` (同じサーバーが返す)。
 
 ## 計測のときとの違い
 
