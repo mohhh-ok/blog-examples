@@ -8,6 +8,8 @@ test.each([
   ["あした ひま？あそぼう。", "あした ひま? あそぼう。"],
   ["すし、好き?", "すし、好き?"],
   ["こんにちは。", "こんにちは。"],
+  ["「ひま？」って", "「ひま?」って"],
+  ["なに？！", "なに?！"],
 ])("%s → %s", (input, expected) => {
   expect(toHalfWidthQuestionMarks(input)).toBe(expected);
 });
